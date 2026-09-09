@@ -30,3 +30,10 @@ npm run build
 `app/` 是界面，`lib/town/` 是玩法和渲染，`public/models/` 是已压缩、含内嵌贴图的游戏模型。Godot 与 Blender 工程见仓库 Releases。
 
 源码、共建入口与资产下载：[frank_worlds](https://github.com/frankfanyiming/frank_worlds)。许可与原作来源见 [CREDITS.md](CREDITS.md)。
+
+
+## GitHub Pages
+
+线上地址：https://frankfanyiming.github.io/frank_worlds/
+
+运行 `npm ci` 后执行 `npm run build:pages`。将 `dist-pages` 发布到 GitHub Pages。子目录资源路径自动使用 `/frank_worlds/`。

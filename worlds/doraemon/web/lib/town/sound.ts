@@ -1,10 +1,11 @@
+import {assetPath} from './asset-path';
 export type AudioState={enabled:boolean;music:number;ambience:number;track:string;error:string};
 export const INITIAL_AUDIO:AudioState={enabled:false,music:.28,ambience:.45,track:'原创 · 夏日口袋散步',error:''};
 // Playback starts only from a deliberate user gesture. All audio stays local.
 export class TownSound {
  state={...INITIAL_AUDIO};tracks=new Map<string,HTMLAudioElement>();customUrl='';
  constructor(){try{const p=JSON.parse(localStorage.getItem('town-audio-v1')??'{}');for(const k of ['music','ambience'] as const)if(typeof p[k]==='number')this.state[k]=Math.max(0,Math.min(1,p[k]));}catch{}}
- get(id:string,loop=false){let a=this.tracks.get(id);if(!a){a=new Audio('/audio/'+id+'.m4a');a.loop=loop;a.preload='none';this.tracks.set(id,a);}return a;}
+ get(id:string,loop=false){let a=this.tracks.get(id);if(!a){a=new Audio(assetPath('/audio/'+id+'.m4a'));a.loop=loop;a.preload='none';this.tracks.set(id,a);}return a;}
  async enable(value=true){this.state.enabled=value;this.state.error='';if(!value){this.tracks.forEach(a=>a.pause());return;}
   // Unlock the environmental layers in the same activation as music.
   let played=0;await Promise.all(['music','wind','birds','cicadas','crickets','bamboo'].map(async id=>{const a=this.get(id,true);a.volume=id==='music'?this.state.music:0;try{await a.play();played++;}catch{this.state.error='部分声音未开始，可关闭后重新开启。';}}));if(!played){this.state.enabled=false;this.state.error='声音未开始，请点开启重试。';}
