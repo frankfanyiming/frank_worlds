@@ -1,0 +1,311 @@
+{
+  "godot": {
+    "archive": "doraemon-godot-v1.0.0.tar.gz",
+    "size": 1361106751,
+    "sha256": "104c9b89c0a86398f28dce2f21ec6088abed5359810eb82585774d4da532d181",
+    "parts": [
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.001",
+        "size": 33554432,
+        "sha256": "00c5b987ba63cfdad6590d314eba323f4223f8340bf031c49695707d9c9b9de1"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.002",
+        "size": 33554432,
+        "sha256": "6de162e5d6b34cf43fe10e428bd91211f477c8359c8b1f92767d1eb724ca5131"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.003",
+        "size": 33554432,
+        "sha256": "e6d1997f2d2115a64e9be5a0757f0b464c1b1df3afabe60125efa8911862ba94"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.004",
+        "size": 33554432,
+        "sha256": "774bec21c1aa152661cd5ae7bb442a8ee4c6c88a811260e489220a95ce04f73e"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.005",
+        "size": 33554432,
+        "sha256": "e2699acd7153b78d876ccb1995d32654d29094a53cc49b1ce527b748c12ae963"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.006",
+        "size": 33554432,
+        "sha256": "90a10e45b69fc1d90988d43335a30c30ecde84f23e99e4b6a4f3b3503aad18dc"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.007",
+        "size": 33554432,
+        "sha256": "b894fc384636a5c7a88d05ec5a9538bd556daa951fa8e717ae14e66f7ec17bfc"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.008",
+        "size": 33554432,
+        "sha256": "dc57a6e07754f0459c1ad2ec1139ef316eb8e040a2fd30364e4b3d40c88aa5d5"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.009",
+        "size": 33554432,
+        "sha256": "3bea60a51d63eda6c45206e931625b87272ec0b8859dcb94853674a064f9703b"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.010",
+        "size": 33554432,
+        "sha256": "e99ceef0cd8693898925e9140e2bf6d466b74959aa7e70d5b3a6995835f3b3bb"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.011",
+        "size": 33554432,
+        "sha256": "ef43fcb25f85e731bdaa59f2506324bab09df3b963868fb763fb0a3a4e8a7883"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.012",
+        "size": 33554432,
+        "sha256": "871b7b7dfc8824f2acd6efac82956d7b8837a30de42594e53a8861e3bae953c2"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.013",
+        "size": 33554432,
+        "sha256": "496f8b148bf69d4be453da09341672623b0cb19bd0a28d04636389e70e43d7ec"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.014",
+        "size": 33554432,
+        "sha256": "d1c185da279af562bf096fbf2c0c94bd13f8a064d82c9db69367084f26ffe797"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.015",
+        "size": 33554432,
+        "sha256": "614bd97fca5931b688c2bb728d871034fc69ea6eb0a1d47b3c56ec589d5852e1"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.016",
+        "size": 33554432,
+        "sha256": "bc1702c9b7b34bf486c8e4102940838c4b9ca6bba93cf48a29b86ae5084696b1"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.017",
+        "size": 33554432,
+        "sha256": "7171c8a2f0b28e765114e080645f67a196e4faffbfab23d062408132ea229173"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.018",
+        "size": 33554432,
+        "sha256": "d1dee652b9950817f3daebcb4399b8e9f94d2989057a42c1a5fd307c6aebe4b2"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.019",
+        "size": 33554432,
+        "sha256": "d06c1f23daff4c347462dd16798a7fb62f28e0ff04a8102d9e39be8d3f61a118"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.020",
+        "size": 33554432,
+        "sha256": "758ca369c7044807d1c5853ef0387cad251bad238678eb98008fe19202ee8f8d"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.021",
+        "size": 33554432,
+        "sha256": "e185786aa510eb1cd48e34dad13679be6f43fea131b262db5cf067ff03a8c672"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.022",
+        "size": 33554432,
+        "sha256": "9a71f03827f360aabf9f553d98c017080ef3aaa604142a445f05b41966fbb752"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.023",
+        "size": 33554432,
+        "sha256": "ea91c0ae1f3d7d6b91b4cdc2c8e2a9ef27f570001d04a4bdfd2cb50ff5a68216"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.024",
+        "size": 33554432,
+        "sha256": "7b403ad3970e2a54c25b5673fa89f4cd4b7707e6eb6f3f03637a79e8d4b54dda"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.025",
+        "size": 33554432,
+        "sha256": "9a11e1c0e0b296357b369f3e7efab5db608d0610500b46616d67867478a14281"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.026",
+        "size": 33554432,
+        "sha256": "2a4b8d896a153c537c4a2910f38a97ad671533d50568f06756684b628bcb0cd9"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.027",
+        "size": 33554432,
+        "sha256": "77ca48a1b4050548b2eb46b186c70f01b0a4c947bb8fe42ee7c97554f628a08a"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.028",
+        "size": 33554432,
+        "sha256": "997dcfd9c6a0bfa65e9a59a89cdc058aced04be613ab1921efe1eeacc7a8eb68"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.029",
+        "size": 33554432,
+        "sha256": "553adbb32dedd3f2bd969935c5afe757e15b668936e649a3411e8a4653d85eeb"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.030",
+        "size": 33554432,
+        "sha256": "56353c8576943243d0eb451d563d7503e17c5fc2ca8467539ccf778fcf673720"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.031",
+        "size": 33554432,
+        "sha256": "5f6c2a6af52dfcc708ce1daf8c6ba123abbe9b71211880ec94b11ed4a4cb2cf7"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.032",
+        "size": 33554432,
+        "sha256": "5ab218b5978e46aa0be74300fba0752526c7e6035256e5a5900ab8d0b68ae1b0"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.033",
+        "size": 33554432,
+        "sha256": "6f590ffe8c45b333082213ae01b5e5f1724aa85712ef12d72dd7afed9f0f5c9e"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.034",
+        "size": 33554432,
+        "sha256": "89a3d8f74fd37e1a64aa2e07aff2687386c7b0a25abd15f1f9040ec37ec8be11"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.035",
+        "size": 33554432,
+        "sha256": "64b8b3461a50050ce3c76159430ed72499de7fb3d2b9f1e7cab758a2f80ac4fa"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.036",
+        "size": 33554432,
+        "sha256": "bf3a114178494d2362e57b48af7b7a116921e3ce5ed31fb5aab3acadff2fb107"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.037",
+        "size": 33554432,
+        "sha256": "b1daa6e2bc03741e8eb8ea4d1cefe0607be61152a99647b8c6243f4ef50c9afb"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.038",
+        "size": 33554432,
+        "sha256": "10544c8f6e3e1d60a25ac7934a83915b5f30f9680e79c3d232c676244c88cbd7"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.039",
+        "size": 33554432,
+        "sha256": "bbb8a38a4b13f7a5e9ca985aa054e0c76cd24fe6bea10c02a388cf8fad7bb1d3"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.040",
+        "size": 33554432,
+        "sha256": "50b94dffaf28c68273f2b464fadbe6e7171d92edf32be84b5f3ec9f64c121fec"
+      },
+      {
+        "name": "doraemon-godot-v1.0.0.tar.gz.041",
+        "size": 18929471,
+        "sha256": "977eb212f68d2231758d5575782573114a4138fcbd2277864a0ad7a75912c464"
+      }
+    ]
+  },
+  "blender": {
+    "archive": "doraemon-blender-v1.0.0.tar.gz",
+    "size": 573100636,
+    "sha256": "47c590c4e73bc32408468973625ed9646a886637e40022c02bc0f1c5779979db",
+    "parts": [
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.001",
+        "size": 33554432,
+        "sha256": "c27f7c14209f2e731c67e2c05fbb2f22b7fef7e1b465609f2e50a5fa1abb5bc4"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.002",
+        "size": 33554432,
+        "sha256": "b1388d2274a20d91993dbc70e6f71c597d2719f6ba67a618b8a1c2837b416557"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.003",
+        "size": 33554432,
+        "sha256": "bb78401e9420cade424ba85c739ae27362bf76681e33584f0c4810686079b669"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.004",
+        "size": 33554432,
+        "sha256": "3069832eb1b424d35fbbff5f85e42f544cfdae9166fcf9f73468d8c7757c2a62"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.005",
+        "size": 33554432,
+        "sha256": "f32f186b52dd92f5c98a3221d3b762f056a11b11cf20a64913fb682d0f34fb15"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.006",
+        "size": 33554432,
+        "sha256": "c4e707ff1f23de9c99ad19a7e77624fb864c9874d242c25c5612ba1d189f50e2"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.007",
+        "size": 33554432,
+        "sha256": "6425fbd6b5a0c85722ed7fb987530ad80abffcb511221de3e6ca0d2334490533"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.008",
+        "size": 33554432,
+        "sha256": "b456be6f528ad89182e26aef7daeac35930adf174e5b6ca1cb2cae504ca1c01b"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.009",
+        "size": 33554432,
+        "sha256": "3d279536a62ee892dd6ca6bb71a1664a747c20f51d9b67f27740cd9308b6e38e"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.010",
+        "size": 33554432,
+        "sha256": "b09cc911046974641a0b197bf0599108b2e5acf6c0d66fefdea49ef596cea1a0"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.011",
+        "size": 33554432,
+        "sha256": "84572b2c516fa3f317c0b32d22cc4c53f84f351e520e1ed8860af5b10a1568d2"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.012",
+        "size": 33554432,
+        "sha256": "3a783a3d4ad8524aec6e3eae157ddcf18f14d95bd7ccc0f4f527bbdf3580dc43"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.013",
+        "size": 33554432,
+        "sha256": "97059ccf545b5f73bf03f07e661bee27dd91f3302b3f59047cc463321aa8f4cb"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.014",
+        "size": 33554432,
+        "sha256": "4272415fe309b0a3f47b432a077fbf7713656e42e12d88cb2cd45d85091e4621"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.015",
+        "size": 33554432,
+        "sha256": "0f570c07b92a53ab69877f9672ecc695477519a4823319b5d0097fded3983a29"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.016",
+        "size": 33554432,
+        "sha256": "46fae9af2347fbf41292c1866c3b2c2fd18172e1a509f4ab2630004dea65d9cd"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.017",
+        "size": 33554432,
+        "sha256": "71b3a5387bbc9b3e4b7aa99a4ef0a379146a45fcaae749b13049a6f19e5d3b51"
+      },
+      {
+        "name": "doraemon-blender-v1.0.0.tar.gz.018",
+        "size": 2675292,
+        "sha256": "272bbe3a04e8430ae4e77a7ccfccece657ccd62b323983feb932877d436054bb"
+      }
+    ]
+  }
+}

@@ -6,7 +6,14 @@
 
 **那个夏天 · 哆啦A梦小镇**：网页源码和游戏模型位于 [`worlds/doraemon/web`](worlds/doraemon/web)，可直接本地运行。**[点击直接游玩 →](https://frankfanyiming.github.io/frank_worlds/)** 无需安装或登录，首次会加载模型。
 
-[下载 Godot 完整工程和 Blender 源资产](https://github.com/frankfanyiming/frank_worlds/releases/tag/doraemon-v1.0.0)。Godot 包已排除编辑器缓存，第一次打开需要导入资源。
+[下载 Godot 完整工程和 Blender 源资产](https://github.com/frankfanyiming/frank_worlds/releases/tag/doraemon-v1.0.0)。Godot 包已排除编辑器缓存，第一次打开需要导入资源。完整源工程使用 32 MiB 分卷，下载脚本会自动获取、拼接、校验并解包：
+
+```sh
+python3 tools/download-source-assets.py godot
+python3 tools/download-source-assets.py blender
+```
+
+需要 Python 3.12 或更新版本。网页试玩无需下载这些源工程。
 
 ```sh
 cd worlds/doraemon/web
