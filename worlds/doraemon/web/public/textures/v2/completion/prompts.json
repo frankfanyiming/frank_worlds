@@ -1,0 +1,215 @@
+[
+  {
+    "key": "plaster",
+    "filename": "warm_exterior_plaster_basecolor.png",
+    "reference": "/var/folders/73/1163qlpd5nj65p1mmmvfdyfc0000gn/T/codex-clipboard-3a6dfbb3-b878-49b2-9962-cb0bbd01540a.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: Single seamless UV diffuse base-color/albedo map for the exterior plaster walls of a detailed Japanese Showa 3D neighborhood.\nReference image role: The supplied four-quadrant material image is a STYLE REFERENCE ONLY. Take appearance guidance ONLY from its upper-left warm plaster quadrant. Output ONE continuous plaster material filling the whole square. Do not reproduce the reference collage or any other material.\nPrimary request: Create one square 2048x2048 tileable light warm exterior lime/stucco plaster albedo. Pale warm cream with a little light sand beige and restrained peach warmth, natural fine mineral speckle. Subtle aged wall surface with only a few sparse delicate hairline cracks, very thin low-contrast beige-gray crack lines occupying little surface area; most of the field is intact quiet plaster. Very modest old-wall mottling, no large stains or chunks missing.\nProjection/lighting: Straight-on orthographic 2D material scan, entirely flat unlit intrinsic color. Uniform brightness across the image, no directional lighting, shadows, highlights, cast shadow, ambient occlusion, vignette or perspective. Cracks are narrow color lines only, no deep shaded fissures.\nTiling: Opposite edges should connect continuously for seamless two-axis UV repetition, no frame or edge darkening, no centered composition.\nAvoid: many dense cracks, dramatic crack networks, black fissures, brick, panels, edges, whole building, objects, strong relief shading, text, watermarks. This is a base-color map, not a rendered wall photograph.",
+    "mode": "built-in image_gen",
+    "source_path": "/Users/frank/.codex/generated_images/01a077fb-68c7-71e2-a405-cf169422ffc4/exec-7e5ac3de-cac2-4ea4-976e-84f6bdb1d765.png",
+    "final_path": "/Users/frank/Documents/Codex/2026-09-07/a-1-6-7-7-8/work/completion-textures/warm_exterior_plaster_basecolor.png",
+    "qa": {
+      "file": "warm_exterior_plaster_basecolor.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "opposite_32px_strip_delta_rgb255": [
+        0.23,
+        0.242
+      ]
+    },
+    "color_space": "sRGB",
+    "usage": "Connect to Base Color. Macro edge color was checked; microscopic seamless continuity is not guaranteed."
+  },
+  {
+    "key": "asphalt",
+    "filename": "fine_grey_asphalt_basecolor.png",
+    "reference": "/var/folders/73/1163qlpd5nj65p1mmmvfdyfc0000gn/T/codex-clipboard-3a6dfbb3-b878-49b2-9962-cb0bbd01540a.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: Single seamless UV diffuse base-color/albedo map for a fine-grained gray neighborhood asphalt road in a detailed Japanese Showa 3D scene.\nReference image role: The supplied four-quadrant material image is a STYLE REFERENCE ONLY. Take muted gray stone/asphalt color guidance ONLY from its lower-right quadrant, but make all aggregate much smaller and lower contrast. Output ONE continuous asphalt material filling the whole square, not a collage.\nPrimary request: Create one square 2048x2048 seamless uniform surface of weathered fine gray asphalt. Medium muted neutral gray with a hint of warm gray, many tiny densely packed mineral grains and subtle fine pores. Show about two meters by two meters so the aggregate is tiny at image scale. Low contrast, restrained small gray flecks, no large stones and no conspicuous bright speckle. Natural fine asphalt that recedes at normal scene distance.\nProjection/lighting: Straight-on orthographic 2D scan, pure diffuse albedo only. Intrinsic material color with perfectly even illumination and brightness across the image. No shadows, highlights, ambient occlusion, specular reflection, directionality, vignette or perspective.\nTiling: Seamless two-axis repeat with matching opposite edge appearance and uninterrupted fine aggregate throughout.\nAvoid: large rocks, pebbles, gravel, cracks, road paint, road markings, tire tracks, curbs, footprints, oil, stains, leaves, debris, objects, text, watermarks, panels or borders. Only a quiet fine-grained gray asphalt base-color texture.",
+    "mode": "built-in image_gen",
+    "source_path": "/Users/frank/.codex/generated_images/01a077fb-68c7-71e2-a405-cf169422ffc4/exec-ec8c1f3e-e855-4798-9c83-b93a701be942.png",
+    "final_path": "/Users/frank/Documents/Codex/2026-09-07/a-1-6-7-7-8/work/completion-textures/fine_grey_asphalt_basecolor.png",
+    "qa": {
+      "file": "fine_grey_asphalt_basecolor.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "opposite_32px_strip_delta_rgb255": [
+        0.418,
+        0.615
+      ]
+    },
+    "color_space": "sRGB",
+    "usage": "Connect to Base Color. Macro edge color was checked; microscopic seamless continuity is not guaranteed."
+  },
+  {
+    "key": "ceramic",
+    "filename": "blue_grey_ceramic_basecolor.png",
+    "reference": "/var/folders/73/1163qlpd5nj65p1mmmvfdyfc0000gn/T/codex-clipboard-3a6dfbb3-b878-49b2-9962-cb0bbd01540a.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: Single seamless UV diffuse base-color/albedo material to apply to individually modeled roof-tile geometry in Blender.\nReference image role: The supplied four-quadrant image is a color/material reference. Sample the quiet blue-gray ceramic appearance from the UPPER-RIGHT quadrant ONLY. Ignore its roof-tile shapes, contours, rows, joints and shadows entirely. The output must NOT contain recognizable roof tiles.\nPrimary request: Create one square 2048x2048 seamless continuous flat field of aged blue-gray glazed ceramic surface, filling the entire canvas. Muted slate blue-gray with a restrained soft blue-green note like the reference glaze, fine subtle mineral variation, a few delicate worn speckles and very small intrinsic color variations. Calm realistic glazed kiln-fired ceramic base color, lightly aged rather than heavily distressed. Smooth, low-contrast material character.\nCritical geometry constraint: No tile rows, no individual tiles, no tile boundaries, no overlap lines, no seams, no grout, no ridges, no waves, no curved tile shapes or edge strips. All actual roof tiles will be real 3D geometry created separately; this image only supplies their surface color.\nProjection/lighting: Straight-on orthographic 2D material scan, pure albedo only. Although the real material is glazed, do NOT bake glaze reflectance into this color image: no glossy highlights, reflections, shadows, ambient occlusion, lighting gradients, vignette or perspective. Entire square has uniform low-frequency brightness.\nTiling: Seamlessly matching opposite edges for two-axis repeating UV use. No border, text, watermark, collage, objects, buildings or decorative motifs.",
+    "mode": "built-in image_gen",
+    "source_path": "/Users/frank/.codex/generated_images/01a077fb-68c7-71e2-a405-cf169422ffc4/exec-861004a0-6f1c-4f8f-9e23-994dc49fa42c.png",
+    "final_path": "/Users/frank/Documents/Codex/2026-09-07/a-1-6-7-7-8/work/completion-textures/blue_grey_ceramic_basecolor.png",
+    "qa": {
+      "file": "blue_grey_ceramic_basecolor.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "opposite_32px_strip_delta_rgb255": [
+        0.101,
+        0.759
+      ]
+    },
+    "color_space": "sRGB",
+    "usage": "Connect to Base Color. Macro edge color was checked; microscopic seamless continuity is not guaranteed."
+  },
+  {
+    "key": "clothing",
+    "filename": "character_cotton_2x2_atlas.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: Actual four-color UV base-color cotton fabric texture ATLAS for 3D character clothing. It is a flat material atlas, not a contact sheet of garments.\nPrimary request: Generate one perfectly square 2048x2048 image divided EXACTLY at 50 percent width and 50 percent height into four equally sized square quadrants, with ZERO gaps, ZERO margins and ZERO borders. Each quadrant is filled edge-to-edge by only one uniform cotton fabric surface. Crisp straight color boundaries exactly through the center. No visible separator line.\nColor positions, mandatory: TOP LEFT = warm cheerful medium yellow cotton for a boy's shirt, approximately #DDAE40. TOP RIGHT = deep navy blue cotton for shorts, approximately #24364B. BOTTOM LEFT = gentle pastel pink cotton, approximately #D79EAD. BOTTOM RIGHT = warm muted orange cotton, approximately #D6803F. Keep all colors recognizable, natural and moderately saturated, not neon. Preserve this exact layout.\nMaterial in every quadrant: The same fine tightly woven matte cotton, extremely tiny dense fibers, subtle micro-weave and narrow low-contrast thread-color variation. Quiet clean soft clothing fabric, no large weave, no heavy canvas, no burlap, no twill stripes. Each quadrant is an independent seamless tile whose opposite edges should match within that quadrant; the different colors must stay strictly within their own exact quarter of the atlas.\nProjection/lighting: Orthographic straight-on 2D flat texture, pure diffuse albedo. Perfectly even brightness and consistent color within every quadrant, no highlights, shadows, lighting gradients, ambient occlusion, gloss, vignette or perspective.\nAvoid: Any garments, collar, pockets, seams, stitches, folds, wrinkles, buttons, text, labels, numbers, icons, objects, watermark, swatch gaps or frame. Four equal plain fine-cotton material squares only, filling one exact 2x2 UV atlas.",
+    "mode": "built-in image_gen",
+    "source_path": "/Users/frank/.codex/generated_images/01a077fb-68c7-71e2-a405-cf169422ffc4/exec-5b975a12-3c99-43c3-9e24-de93f7b36cbe.png",
+    "final_path": "/Users/frank/Documents/Codex/2026-09-07/a-1-6-7-7-8/work/completion-textures/character_cotton_2x2_atlas.png",
+    "qa": {
+      "file": "character_cotton_2x2_atlas.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "quadrants": {
+        "yellow": {
+          "image_pixel_box": [
+            0,
+            0,
+            627,
+            627
+          ],
+          "mean_rgb": [
+            232.77,
+            166.69,
+            46.38
+          ],
+          "opposite_32px_strip_delta_rgb255": [
+            0.552,
+            0.693
+          ]
+        },
+        "navy": {
+          "image_pixel_box": [
+            627,
+            0,
+            1254,
+            627
+          ],
+          "mean_rgb": [
+            24.79,
+            43.08,
+            72.25
+          ],
+          "opposite_32px_strip_delta_rgb255": [
+            1.947,
+            0.419
+          ]
+        },
+        "pink": {
+          "image_pixel_box": [
+            0,
+            627,
+            627,
+            1254
+          ],
+          "mean_rgb": [
+            221.3,
+            142.1,
+            149.4
+          ],
+          "opposite_32px_strip_delta_rgb255": [
+            0.465,
+            0.659
+          ]
+        },
+        "orange": {
+          "image_pixel_box": [
+            627,
+            627,
+            1254,
+            1254
+          ],
+          "mean_rgb": [
+            217.79,
+            103.48,
+            42.58
+          ],
+          "opposite_32px_strip_delta_rgb255": [
+            0.936,
+            1.555
+          ]
+        }
+      },
+      "color_boundary_x_top": 627,
+      "color_boundary_y_left": 627
+    },
+    "color_space": "sRGB",
+    "usage": "Map clothing UVs into its selected color quadrant, preferably using the 4px-inset rectangle to avoid interpolation across color boundaries. Rectangles are [u_min,v_min,u_max,v_max], with Blender UV origin at bottom left. Each quadrant is a separate material patch; do not repeat the full atlas across a single-color garment.",
+    "atlas_layout_image_origin_top_left": {
+      "top_left": "yellow",
+      "top_right": "navy",
+      "bottom_left": "pink",
+      "bottom_right": "orange"
+    },
+    "atlas_uv_rectangles_origin_bottom_left": {
+      "yellow": [
+        0,
+        0.5,
+        0.5,
+        1
+      ],
+      "navy": [
+        0.5,
+        0.5,
+        1,
+        1
+      ],
+      "pink": [
+        0,
+        0,
+        0.5,
+        0.5
+      ],
+      "orange": [
+        0.5,
+        0,
+        1,
+        0.5
+      ]
+    },
+    "atlas_uv_interior_rectangles_4px_inset": {
+      "yellow": [
+        0.003189792663476874,
+        0.5031897926634769,
+        0.49681020733652315,
+        0.9968102073365231
+      ],
+      "navy": [
+        0.5031897926634769,
+        0.5031897926634769,
+        0.9968102073365231,
+        0.9968102073365231
+      ],
+      "pink": [
+        0.003189792663476874,
+        0.003189792663476874,
+        0.49681020733652315,
+        0.49681020733652315
+      ],
+      "orange": [
+        0.5031897926634769,
+        0.003189792663476874,
+        0.9968102073365231,
+        0.49681020733652315
+      ]
+    }
+  }
+]

@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.godot/
+.wrangler/
+.vinext/
+.next/
+.env*
+*.tsbuildinfo
+.DS_Store
+*.log

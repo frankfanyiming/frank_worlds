@@ -1,0 +1,71 @@
+[
+  {
+    "key": "wood",
+    "filename": "muted_grey_brown_wood_basecolor.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: Actual UV-ready diffuse base-color / albedo texture map for Showa Japanese old furniture in a detailed 3D bedroom.\nPrimary request: Generate one square 2048x2048 seamless tileable texture of quiet, subtly aged walnut/oak wood, showing a continuous material field covering approximately 2 meters by 2 meters. This must be a restrained base-color texture, NOT a styled wood photograph or a rendered object.\nColor: Desaturated medium gray-brown, neutral warm taupe wood, approximately #8A8071 overall. Very little orange or red; no golden honey saturation. All visible pattern stays close in value to the medium gray-brown base.\nSurface: Fine longitudinal grain running vertically, very subtle thin pores and tiny organic fiber variation, smooth sanded old furniture timber with gentle even aging. Grain should be understated and relatively fine at the stated 2-meter scale. Very low contrast, subtle natural color variation, no prominent knots, no dramatic cathedral grain, no black grain lines.\nProjection and lighting: Exact orthographic straight-on flat 2D material scan; unlit albedo only. Perfectly uniform brightness and color distribution from center to all edges. No baked directional illumination, cast shadow, ambient occlusion, gloss, reflectance, specular highlights, vignette or perspective.\nTiling: Design continuous matching left/right and top/bottom edges for repetition in both axes. Edge-to-edge material only.\nAvoid: planks, board seams, divisions, strips, cracks, strong streaks, heavy weathering, stains, scratches, embossing, borders, text, watermarks, objects. The image should read as quiet, fine-grained real gray-brown furniture wood rather than a dramatic texture.",
+    "mode": "built-in image_gen",
+    "source_path": "/Users/frank/.codex/generated_images/01a077fb-68c7-71e2-a405-cf169422ffc4/exec-1bcc4ea9-ba0a-4448-a043-0617a2dfa67f.png",
+    "final_path": "/Users/frank/Documents/Codex/2026-09-07/a-1-6-7-7-8/work/rebuild-textures/muted_grey_brown_wood_basecolor.png",
+    "selected": true,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "qa": {
+      "mean_opposite_32px_strip_difference_rgb255": [
+        0.27,
+        0.599
+      ],
+      "visual_review": "Fine texture, restrained color, no object, no border, no large lighting gradient. Macro edge colors are well matched. Exact microscopic pattern continuity is not guaranteed."
+    }
+  },
+  {
+    "key": "tatami",
+    "filename": "muted_olive_tatami_basecolor.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: Actual UV-ready diffuse base-color / albedo texture map for Japanese tatami in a detailed 3D Showa bedroom.\nPrimary request: Generate one square 2048x2048 seamless tileable single uniform surface of very finely and tightly woven Japanese igusa rush. This is ONLY the inner unbordered tatami material, a restrained base-color texture map, NOT a photo of a complete mat.\nColor: Pale muted gray-green and light olive, approximately #929B83, low saturation, fresh subtle straw green without yellow coloration. No golden straw, no tan bands, no orange or warm-yellow cast.\nSurface detail and scale: Countless very thin closely packed parallel rush fibers with microscopic cross-binding almost invisible. Extremely fine dense weave, subtle natural fiber color variation in a narrow value range, no large stitches or rope. Show enough surface area that the weave is fine and tiny rather than oversized. Even calm texture that recedes at normal camera distance. The surface must NOT form a checkerboard, squares, rectangular grid or coarse stripe pattern. No dominant recurring cross-strips or thick horizontal ribs.\nProjection and lighting: Exact orthographic straight-on flat 2D material scan. Unlit albedo only, uniform exposure and color across the entire square. Any fiber detail is subtle intrinsic color, not dark grooves or highlights. No shadows, ambient occlusion, embossed relief lighting, directional illumination, specular reflections or vignette.\nTiling: Continuous matching opposite edges for repeating seamlessly in both axes; entire canvas one continuous inner rush weave.\nAvoid: mat borders, fabric edging, seams, separate tiles, grids, checkers, thick bands, coarse stripes, folds, objects, text, watermarks, stains, perspective. Restrained realism suitable for a large UV-mapped floor.",
+    "mode": "built-in image_gen",
+    "source_path": "/Users/frank/.codex/generated_images/01a077fb-68c7-71e2-a405-cf169422ffc4/exec-462b3c9a-6d8a-49e5-9009-d91061cb7816.png",
+    "final_path": "/Users/frank/Documents/Codex/2026-09-07/a-1-6-7-7-8/work/rebuild-textures/muted_olive_tatami_basecolor.png",
+    "selected": true,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "qa": {
+      "mean_opposite_32px_strip_difference_rgb255": [
+        0.549,
+        1.189
+      ],
+      "visual_review": "Fine texture, restrained color, no object, no border, no large lighting gradient. Macro edge colors are well matched. Exact microscopic pattern continuity is not guaranteed."
+    }
+  },
+  {
+    "key": "fabric",
+    "filename": "muted_sage_linen_basecolor.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: Actual UV-ready diffuse base-color / albedo texture map for a Showa vintage office chair upholstered in muted sage-green linen cloth.\nPrimary request: Generate one square 2048x2048 seamless tileable field of fine tiny woven linen fibers, matte muted gray-sage green. Material texture only, NOT an upholstered furniture image.\nColor: Desaturated medium-light sage gray-green, approximately #7E8C7B overall, very restrained tiny thread-to-thread color variation. Quiet natural fabric with a narrow value range; no yellow-green, bright emerald or blue cast.\nSurface: Fine tightly woven natural linen upholstery cloth, delicate tiny warp and weft, slightly irregular but extremely subtle fiber character. Show enough cloth area that individual threads are small, dense, and quiet. Matte unlit intrinsic fiber color only. No coarse burlap, chunky twill, strong crosshatch or oversized weave.\nProjection and lighting: Exact orthographic straight-on flat 2D swatch covering all pixels. Pure albedo with uniform flat color and brightness, no baked illumination or relief shading. No shadows, light source, highlights, ambient occlusion, vignette, reflections, gradients, perspective or depth of field.\nTiling: Continuous matching left/right and top/bottom edges for seamless two-axis UV repetition.\nAvoid: folds, wrinkles, seams, stitching, piping, cushions, furniture, objects, borders, logos, text, watermark, holes, stains, strong texture contrast. The result should be a calm realistic neutral sage cloth base color suitable for repeated chair UV mapping.",
+    "mode": "built-in image_gen",
+    "source_path": "/Users/frank/.codex/generated_images/01a077fb-68c7-71e2-a405-cf169422ffc4/exec-3d4947e1-f8ee-4ca0-9f59-0c72406465a7.png",
+    "final_path": "/Users/frank/Documents/Codex/2026-09-07/a-1-6-7-7-8/work/rebuild-textures/muted_sage_linen_basecolor.png",
+    "selected": true,
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "qa": {
+      "mean_opposite_32px_strip_difference_rgb255": [
+        0.321,
+        0.727
+      ],
+      "visual_review": "Fine texture, restrained color, no object, no border, no large lighting gradient. Macro edge colors are well matched. Exact microscopic pattern continuity is not guaranteed."
+    },
+    "revision_attempts": [
+      {
+        "prompt": "Use case: precise-object-edit\nAsset type: Seamless UV base-color texture correction for a 3D chair upholstery material.\nEdit target: The supplied square sage linen texture.\nChange only: Correct the uneven broad-scale brightness and color so the LEFT and RIGHT edges, and TOP and BOTTOM edges, connect without a visible seam when tiled. The supplied image's right edge is too bright compared to its left edge. Remove that broad lighting difference, as well as any broad center shading, to make all regions have the same low-frequency muted gray-sage base color around #7E8C7B. All four edges must share this same color distribution. Make the texture truly seamless in both axes.\nKeep unchanged: The square aspect ratio, fine tiny natural woven linen structure, dense matte fabric character, small weave scale, restrained sage hue, realistic continuous cloth surface and no objects or folds. Preserve tiny fiber variation while evening the broad color.\nRendering requirements: Unlit diffuse albedo only. Flat equal brightness across the entire image, edge-to-edge fine fiber pattern, no illumination or shading, no light source, no shadows, no ambient occlusion, no reflections, no highlights, no gradient, no vignette, no folds, no seams, no stitches, no text or borders. Do not enlarge the weave or add coarse texture. Output one square 2048x2048 corrected texture map only.",
+        "source_path": "/Users/frank/.codex/generated_images/01a077fb-68c7-71e2-a405-cf169422ffc4/exec-55ae2785-278c-4161-9bd4-f3f1479b01ff.png",
+        "final_path": "/Users/frank/Documents/Codex/2026-09-07/a-1-6-7-7-8/work/rebuild-textures/muted_sage_linen_basecolor_v2.png",
+        "selected": false,
+        "note": "Revision retained for provenance. Original selected: lower mean 16px opposite-edge band difference. A single-pixel edge comparison was influenced by woven-fiber phase; 16px to 64px edge-band measurements show low overall color drift in both original and revision."
+      }
+    ]
+  }
+]

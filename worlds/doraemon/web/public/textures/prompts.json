@@ -1,0 +1,32 @@
+[
+  {
+    "key": "wood",
+    "filename": "wood_basecolor.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: 3D game modeling base-color texture map for a warm realistic nostalgic Japanese Showa neighborhood.\nPrimary request: Generate one crisp square 2048 by 2048 seamless tileable honey-warm natural oak/cypress wood texture, filling the entire image.\nMaterials/textures: Clear predominantly vertical wood grain, small organic knots, very subtle worn varnish, softly weathered warm wooden desk character. A single continuous field of wood grain without separate planks, dividers, or board joins.\nComposition/framing: Orthographic straight-on macro surface texture, square, edge-to-edge material, consistent grain scale.\nLighting/mood: Uniform flat albedo only; intrinsic material color without baked illumination.\nColor palette: warm honey tan and restrained natural brown grain.\nConstraints: Match opposite edges for tiling; no highlights, shadows, lighting gradient, ambient occlusion, vignette, perspective, objects, plank seams, text, logos, or watermark. Texture map only.",
+    "generator": "built-in image_gen",
+    "actual_dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "key": "tatami",
+    "filename": "tatami_basecolor.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: 3D game modeling base-color texture map for a warm realistic nostalgic Japanese Showa bedroom.\nPrimary request: Generate one crisp square 2048 by 2048 seamless tileable finely woven Japanese igusa rush tatami surface texture, filling the entire image.\nMaterials/textures: Dense horizontal straw weave with fine cross-thread, natural small fiber variation, tightly regular but organic woven rush, subtly aged natural material.\nComposition/framing: Orthographic straight-on macro surface texture, square, edge-to-edge weave, consistent weave scale.\nLighting/mood: Uniform flat albedo only; intrinsic material color without baked illumination.\nColor palette: Muted olive and straw green with warm yellow flecks.\nConstraints: Match opposite edges for tiling; no edges, borders, decorative cloth trim, mat seams, shadows, highlights, lighting gradients, vignette, perspective, objects, text, logos, or watermark. Texture map only.",
+    "generator": "built-in image_gen",
+    "actual_dimensions": [
+      1254,
+      1254
+    ]
+  },
+  {
+    "key": "plaster",
+    "filename": "plaster_basecolor.png",
+    "prompt": "Use case: photorealistic-natural\nAsset type: 3D game modeling base-color texture map for a warm realistic nostalgic Japanese Showa bedroom.\nPrimary request: Generate one crisp square 2048 by 2048 seamless tileable Japanese lime plaster surface, filling the entire image.\nMaterials/textures: Warm cream ivory plaster with subtle fine mineral speckle and restrained softly mottled age, fine natural surface character, softly weathered but clean. Low contrast suitable for the wall infill between brown timber framing.\nComposition/framing: Orthographic straight-on macro surface texture, square, edge-to-edge continuous plaster, consistent fine texture scale.\nLighting/mood: Uniform flat albedo only; intrinsic material color without baked illumination.\nColor palette: warm cream and ivory with barely visible beige mineral variation.\nConstraints: Match opposite edges for tiling; no cracks, scratches, marks, large stains, timber, vignette, objects, perspective, shadows, highlights, lighting gradients, text, logos, or watermark. Texture map only.",
+    "generator": "built-in image_gen",
+    "actual_dimensions": [
+      1254,
+      1254
+    ]
+  }
+]

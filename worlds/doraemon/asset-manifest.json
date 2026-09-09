@@ -1,0 +1,335 @@
+{
+  "author": "Frank",
+  "web_files": [
+    {
+      "path": "public/audio/bamboo.m4a",
+      "bytes": 105186,
+      "sha256": "1ee63a9ee3d94086ac089c810eaea8005d03f81d47c07f0bfbb4bbe0122c9665"
+    },
+    {
+      "path": "public/audio/baseball.m4a",
+      "bytes": 7755,
+      "sha256": "03709272f42935ae591306afae4bf12cb5a3fe1a95c320ce25839a6f7d4275f3"
+    },
+    {
+      "path": "public/audio/birds.m4a",
+      "bytes": 93424,
+      "sha256": "e8e326e0d15cfacd0a69bc1338ea08b127e8030f59e86d07ae660ea8b78ddbb0"
+    },
+    {
+      "path": "public/audio/cicadas.m4a",
+      "bytes": 502862,
+      "sha256": "3ed69321b8cc69ef69ce4603cdca00f708cba98b045feb74c2eec8b9fdc1e351"
+    },
+    {
+      "path": "public/audio/crickets.m4a",
+      "bytes": 128200,
+      "sha256": "0a4fd452aa5433789376b47d21a57ed4bf09fd3ac956db04794bf82f9394acfd"
+    },
+    {
+      "path": "public/audio/music.m4a",
+      "bytes": 777469,
+      "sha256": "baed2424cb01c9f5d1f93ab312c1d43ba1eb980d2fcde4a1cd9814968849504c"
+    },
+    {
+      "path": "public/audio/portal.m4a",
+      "bytes": 41447,
+      "sha256": "9e87258d2018667a75d2df781f0bef034f74515e442531239f07e48e8aeb68a7"
+    },
+    {
+      "path": "public/audio/treasure.m4a",
+      "bytes": 24759,
+      "sha256": "5f085d2d737f310815c385cc90d5bb19a0dd4d879b58b331589d924cd22a7196"
+    },
+    {
+      "path": "public/audio/wind.m4a",
+      "bytes": 579019,
+      "sha256": "d5333c215ba28f529ebccac1c3f15e6d3f76344543b6be7f2cadd46bd6196d0e"
+    },
+    {
+      "path": "public/draco/draco_decoder.js",
+      "bytes": 512465,
+      "sha256": "8625489da79a805f4f2a7d511c3e52d8b4085608a9d2a4d5f4f9de5db0aea04f"
+    },
+    {
+      "path": "public/draco/draco_decoder.wasm",
+      "bytes": 192420,
+      "sha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac"
+    },
+    {
+      "path": "public/draco/draco_wasm_wrapper.js",
+      "bytes": 58456,
+      "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6"
+    },
+    {
+      "path": "public/favicon.svg",
+      "bytes": 712,
+      "sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7"
+    },
+    {
+      "path": "public/models/actors/doraemon.glb",
+      "bytes": 2372292,
+      "sha256": "906b36ea448c77994618372ee01550ccb68ac2ed2b352d0153b518760d289885"
+    },
+    {
+      "path": "public/models/actors/gian.glb",
+      "bytes": 2467500,
+      "sha256": "08f7ce385c12a378fb52b0fa521f44a134f390e4dcbe5ad5cab6c766c837867e"
+    },
+    {
+      "path": "public/models/actors/nobisuke.glb",
+      "bytes": 6354124,
+      "sha256": "aea382be0358f8bc5cbb615cb3b0f02737acb5f1118e72ed37b4b769c42f496a"
+    },
+    {
+      "path": "public/models/actors/nobita.glb",
+      "bytes": 2535140,
+      "sha256": "52388f43565a77b600cb2e6afab313058d25bfe77d00ca23f527edf8a97da084"
+    },
+    {
+      "path": "public/models/actors/shizuka.glb",
+      "bytes": 2254588,
+      "sha256": "9274dbb69e3e549bec00dc0a1d8a250798b1a12ff5d5cfeea8d2997511331210"
+    },
+    {
+      "path": "public/models/actors/suneo.glb",
+      "bytes": 2449096,
+      "sha256": "f102c505e68af60d322df15143719ea0f5b978bda43440d01d5da3f6610c3a58"
+    },
+    {
+      "path": "public/models/actors/tamako.glb",
+      "bytes": 6672212,
+      "sha256": "425a144bb83d3d13c14de7d677c313a71e973d7ae5010d679b91240d41836209"
+    },
+    {
+      "path": "public/models/details/connector-v9.glb",
+      "bytes": 15169256,
+      "sha256": "a1765f1efcca9a3567a2ee8a728ec90976bf424352b84df5b5e877c2e279459e"
+    },
+    {
+      "path": "public/models/details/house-v10.glb",
+      "bytes": 7610296,
+      "sha256": "00aea14c5d28a711ae3f09fbdfa1fb0928151ae3d92722e02d021c34cadf092d"
+    },
+    {
+      "path": "public/models/details/life-v10.glb",
+      "bytes": 2237672,
+      "sha256": "4d1211697ba040c586f7aab685f42a2377b2c32bf8165965e11913d6db4d1364"
+    },
+    {
+      "path": "public/models/details/stairs-support-v10.glb",
+      "bytes": 658084,
+      "sha256": "65003b965f379d65b8698444f0fa9daa4858b8309e36c1243f951ff240e729a3"
+    },
+    {
+      "path": "public/models/expansion/expansion-groundcover.glb",
+      "bytes": 1969252,
+      "sha256": "fe09fcb6aa0f16f92e3c976e490f165e23b89a754260f687cba2d6250717ce85"
+    },
+    {
+      "path": "public/models/expansion/expansion-river-bridge.glb",
+      "bytes": 1363108,
+      "sha256": "592ba7d3b4a849dd7976b7968e94525bc4e3251ef0688626e877d01d3feb4637"
+    },
+    {
+      "path": "public/models/expansion/expansion-terrain.glb",
+      "bytes": 15468532,
+      "sha256": "59846966b2cdc155ddbe159475bb85f35bedc39dd42f4aab6d695f639b803f8c"
+    },
+    {
+      "path": "public/models/expansion/expansion-trees-east.glb",
+      "bytes": 16802772,
+      "sha256": "e8994b17b6225d1592530b39f8929b22efe03aa704f6b3eae8803f262e278b1a"
+    },
+    {
+      "path": "public/models/expansion/expansion-trees-west.glb",
+      "bytes": 16799168,
+      "sha256": "6da8c3d77e6cec7849bb087164b9a527aee21bb20e8f01640ec6c24129b3b6ad"
+    },
+    {
+      "path": "public/models/fauna/cat.glb",
+      "bytes": 2467860,
+      "sha256": "55c20ffdfeaed393c1985ed53edea879b16113d99295399c52ffb90cfa6269ba"
+    },
+    {
+      "path": "public/models/fauna/sparrow.glb",
+      "bytes": 1171960,
+      "sha256": "d944ddd8969713f855d69fc9bf0aec28faa5c47b447122e82e8d6076b2304f97"
+    },
+    {
+      "path": "public/models/fauna/sparrow_ash.glb",
+      "bytes": 1166580,
+      "sha256": "a216cf2663eb03dc1ef89a80800d42f3f0e0cc3a1450df9cf7f63f822a935541"
+    },
+    {
+      "path": "public/models/furniture-ground-v10.glb",
+      "bytes": 9039432,
+      "sha256": "cff4a9983bebee86809e5b1e9fab3702919e4fbe8378282eb4a947c2dca5b6a5"
+    },
+    {
+      "path": "public/models/furniture-upper-v10.glb",
+      "bytes": 24635344,
+      "sha256": "0cc96b78b83e57edb9163efe01406a113374cf4fb14c69384b6345faa580f9f5"
+    },
+    {
+      "path": "public/models/gadgets/bamboo.glb",
+      "bytes": 668720,
+      "sha256": "b3f9df55db7729a854344c1d8b97001d1a65b52acef93bf7e8b6625ad76336c8"
+    },
+    {
+      "path": "public/models/gadgets/door.glb",
+      "bytes": 1337084,
+      "sha256": "21f00838fd66da9ecf94089e61e5930bfc2187cd8e4b267ca4aa50c73ea8ab06"
+    },
+    {
+      "path": "public/models/gadgets/drawer.glb",
+      "bytes": 2698116,
+      "sha256": "ccffd6f09c02cd0b53a0cc13638440b5bec153c38b425acd6df259e95a504cd9"
+    },
+    {
+      "path": "public/models/gadgets/season-extras.glb",
+      "bytes": 423296,
+      "sha256": "dc1e63f3b429e44c4c2fb1f8e385331bbdf473fe4080f11ba4a9a8e7e1614762"
+    },
+    {
+      "path": "public/models/gadgets/time-machine.glb",
+      "bytes": 3922332,
+      "sha256": "3371ce6e80492b87312e971a5a1eb957e0d745399a3290b714c6041c8f581a3f"
+    },
+    {
+      "path": "public/models/interiors-v3.glb",
+      "bytes": 5857288,
+      "sha256": "06e7d4e87081358670005cae73e90af81a920578eca5bf06a3a003542048a42c"
+    },
+    {
+      "path": "public/models/nature/natural-grass-east.glb",
+      "bytes": 16807160,
+      "sha256": "8aaa6deca893daf5b48487c4fbda6858afafbfd86afc5745b689022f22309535"
+    },
+    {
+      "path": "public/models/nature/natural-grass-walls.glb",
+      "bytes": 2960948,
+      "sha256": "fbff8fb6336dc87e6c05c44c2371742ed00e722a146828063325b17575a4018e"
+    },
+    {
+      "path": "public/models/nature/natural-grass-west.glb",
+      "bytes": 16994516,
+      "sha256": "9f29fc1168189510e032054f384e02156b6a309c8e1a9f20046eec36f1238b4c"
+    },
+    {
+      "path": "public/models/streets-v7.glb",
+      "bytes": 5815760,
+      "sha256": "5161429ae3c1d0be06e5a3502dd8e60995b1a707f7ffa9938ae6631cd40f0e08"
+    },
+    {
+      "path": "public/models/surface-v7.glb",
+      "bytes": 12002448,
+      "sha256": "9008df2d540b22f207d49423b2effa563c21c9dd1d22697862af06555a97f81d"
+    },
+    {
+      "path": "public/models/terrain-v6.glb",
+      "bytes": 11572692,
+      "sha256": "a4fa83e4bda15bb53917069bf07399900e781bc8a20753a9fe26527150b3e954"
+    },
+    {
+      "path": "public/models/vegetation-v3.glb",
+      "bytes": 13567116,
+      "sha256": "65d700aab7bfc918ada15d680a764b0797ef3cac70af019ace850537e0b3d521"
+    },
+    {
+      "path": "public/models/vehicles/kei_hatchback.glb",
+      "bytes": 13957500,
+      "sha256": "de5af247615d4d1d7d5936be938e37522488853654e56ec24da0165e1845eb86"
+    },
+    {
+      "path": "public/models/vehicles/kei_truck.glb",
+      "bytes": 14954836,
+      "sha256": "ee97e4e60956f18b619228025bfd3cf3d0d9f7a2dffa021c429e515472b05cec"
+    },
+    {
+      "path": "public/models/world-v3.glb",
+      "bytes": 16562876,
+      "sha256": "4c5afa7593b26e0a975bb20c15d14745f1596a4832776bb1bc9c372980e249bd"
+    },
+    {
+      "path": "public/models/world.json",
+      "bytes": 866219,
+      "sha256": "ad3f94c4fd37490df9fdd39772d40fa58b12386d813334b8492065b85193be7c"
+    },
+    {
+      "path": "public/textures/plaster_basecolor.png",
+      "bytes": 2687849,
+      "sha256": "882dbce45e96b4187e5d1bd310770b0fa4bd88c2bf7ea40d6a3cf0d37b392e05"
+    },
+    {
+      "path": "public/textures/prompts.json",
+      "bytes": 3601,
+      "sha256": "2b691c97661d9b02522bc6892f1565c35ec5f9a538fe053229c6c9e712376c7d"
+    },
+    {
+      "path": "public/textures/reference/exterior-atlas.png",
+      "bytes": 3756110,
+      "sha256": "3fc76f0f73719b8f5067ff8e8c6f13efa10507875e4532b88f296e3bd63b1199"
+    },
+    {
+      "path": "public/textures/reference/interior-atlas.png",
+      "bytes": 2565969,
+      "sha256": "5db0cb25516114fa7082e9832d4c7c164886b2c5827f241834412f0de8567d61"
+    },
+    {
+      "path": "public/textures/tatami_basecolor.png",
+      "bytes": 2705816,
+      "sha256": "d439b21e3543e455e01dd63a4af17613dd2af4ba1b15a73eb1846ab692d795b1"
+    },
+    {
+      "path": "public/textures/v2/completion/blue_grey_ceramic_basecolor.png",
+      "bytes": 2287039,
+      "sha256": "1b35b7fa5d2f431677eedc78e565012c8dc3e10994fa97386b87efba5f2a1cf9"
+    },
+    {
+      "path": "public/textures/v2/completion/character_cotton_2x2_atlas.png",
+      "bytes": 2926313,
+      "sha256": "3651cda657eb644a6fb7846785929431b881aa82497ac47d06c639cfc024be76"
+    },
+    {
+      "path": "public/textures/v2/completion/fine_grey_asphalt_basecolor.png",
+      "bytes": 3353758,
+      "sha256": "2033b70cdde2f8fc940cda5eba1a0d566014cf37ed2225ae4ea1bc90a14c4f44"
+    },
+    {
+      "path": "public/textures/v2/completion/prompts.json",
+      "bytes": 12926,
+      "sha256": "0af5a198943deec6adfbf46a914261a7b085a5591ca79ed827fff40e5d5e9021"
+    },
+    {
+      "path": "public/textures/v2/completion/warm_exterior_plaster_basecolor.png",
+      "bytes": 2695838,
+      "sha256": "a3b2e8b43bce6882149d77133b80bb36ead699c3fbd8e5ecd9bb779c0702d7fa"
+    },
+    {
+      "path": "public/textures/v2/muted_grey_brown_wood_basecolor.png",
+      "bytes": 2210177,
+      "sha256": "7def3cc522b79f7660e2c573704c04e502ed9d795d665afdbd2eb48f91d8c6cb"
+    },
+    {
+      "path": "public/textures/v2/muted_olive_tatami_basecolor.png",
+      "bytes": 2265763,
+      "sha256": "4c9c773c2a68596dd5b1689f6db2251c755bcd353ae593cfc5c4f1322e2b4321"
+    },
+    {
+      "path": "public/textures/v2/muted_sage_linen_basecolor.png",
+      "bytes": 3295239,
+      "sha256": "ad3cc53dc8f6c0ae907226848956ece4d1a048753aff556956fe92bb75e8a093"
+    },
+    {
+      "path": "public/textures/v2/prompts.json",
+      "bytes": 9589,
+      "sha256": "e6fce1a2f49d757e5cf40bb2926058e9519ae72e705e01d1409b98ca1271f9e2"
+    },
+    {
+      "path": "public/textures/wood_basecolor.png",
+      "bytes": 2683531,
+      "sha256": "e02e825ea9aa5621b0a9354faeb44cc11e470f475b36fd7214d542858068e0e0"
+    }
+  ]
+}
