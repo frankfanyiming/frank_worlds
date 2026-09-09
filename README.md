@@ -4,7 +4,7 @@
 
 ## 已开放
 
-**那个夏天 · 哆啦A梦小镇**：网页源码和游戏模型位于 [`worlds/doraemon/web`](worlds/doraemon/web)，可直接本地运行。公开游玩地址将在本次发布完成后记录到此处。
+**那个夏天 · 哆啦A梦小镇**：网页源码和游戏模型位于 [`worlds/doraemon/web`](worlds/doraemon/web)，可直接本地运行。**[点击直接游玩 →](https://frankfanyiming.github.io/frank_worlds/)** 无需安装或登录，首次会加载模型。
 
 [下载 Godot 完整工程和 Blender 源资产](https://github.com/frankfanyiming/frank_worlds/releases/tag/doraemon-v1.0.0)。Godot 包已排除编辑器缓存，第一次打开需要导入资源。
 
