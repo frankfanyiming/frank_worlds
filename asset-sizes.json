@@ -1,13 +1,19 @@
 {
-  "totalModelBytes": 28754736,
+  "totalModelBytes": 76659986,
+  "roomMaterialBytes": 211105656,
+  "totalModelAndMaterialBytes": 287765642,
   "models": [
     {
       "name": "world-v11.glb",
       "bytes": 2300524
     },
     {
-      "name": "neighborhood-v11.glb",
-      "bytes": 1685628
+      "name": "neighborhood-v12.glb",
+      "bytes": 1523872
+    },
+    {
+      "name": "bedroom-v12.glb",
+      "bytes": 48063076
     },
     {
       "name": "vegetation-v3-lite.glb",
@@ -123,7 +129,7 @@
     },
     {
       "name": "world.json",
-      "bytes": 844748
+      "bytes": 848678
     }
   ]
 }

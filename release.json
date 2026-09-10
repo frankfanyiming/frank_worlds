@@ -1,1 +1,7 @@
-{"sourceCommit": "4732f812200b421f9984e36079602a2f14be78d9", "revision": 11, "date": "2026-09-10"}
+{
+  "sourceCommit": "0f826436745ed92d568be116f5cd33947fe4f34f",
+  "revision": 12,
+  "assetRevision": 12,
+  "date": "2026-09-10",
+  "summary": "Restore original detailed Nobita bedroom, high resolution material maps, window lighting and staircase connection"
+}
