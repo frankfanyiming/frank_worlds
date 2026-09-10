@@ -1,0 +1,69 @@
+{
+  "totalBytes": 149519372,
+  "sha256": "7f5c7191b7de3557dc469c17b249b4d15c119691632c81aa976b56a6b103b0ff",
+  "chunks": [
+    {
+      "file": "world-000.bin.gz",
+      "offset": 0,
+      "rawBytes": 16777216,
+      "bytes": 16375036,
+      "sha256": "5f5eacd321ae1eda26f5e2a8ab1eeb1c51ba94132c1672949aaea9c194ccd7dd"
+    },
+    {
+      "file": "world-001.bin.gz",
+      "offset": 16777216,
+      "rawBytes": 16777216,
+      "bytes": 16352127,
+      "sha256": "339fe585a7a183eae37f1de3789411ef4f2ba05cbf3e74153921c93739473537"
+    },
+    {
+      "file": "world-002.bin.gz",
+      "offset": 33554432,
+      "rawBytes": 16777216,
+      "bytes": 16581512,
+      "sha256": "6d14c3f7f3cd564251804646279511e75545bb48ee0207bb12e095ccda43ea5c"
+    },
+    {
+      "file": "world-003.bin.gz",
+      "offset": 50331648,
+      "rawBytes": 16777216,
+      "bytes": 16333218,
+      "sha256": "c8a8717cc78ff5452409e28088e2c566ebada8740b9f97ee39ba55e0171be9f0"
+    },
+    {
+      "file": "world-004.bin.gz",
+      "offset": 67108864,
+      "rawBytes": 16777216,
+      "bytes": 16309794,
+      "sha256": "6f9ece588d29f02a91b6f07283ff44f81cca699d450b3b4e8b3193f5e46ed409"
+    },
+    {
+      "file": "world-005.bin.gz",
+      "offset": 83886080,
+      "rawBytes": 16777216,
+      "bytes": 16469202,
+      "sha256": "2214db1f602716e6312b8ec484f232e2ad6ec0c654eec5e3a2443df363b47164"
+    },
+    {
+      "file": "world-006.bin.gz",
+      "offset": 100663296,
+      "rawBytes": 16777216,
+      "bytes": 16597646,
+      "sha256": "d186f04584e2e74c987297e5ea37ab5c06957722b1849c1cce495357bd4f0e7e"
+    },
+    {
+      "file": "world-007.bin.gz",
+      "offset": 117440512,
+      "rawBytes": 16777216,
+      "bytes": 16356770,
+      "sha256": "c0115b303212837400c93c4736a85acc1ce795581dbdb0df4c656d4e1d9eba88"
+    },
+    {
+      "file": "world-008.bin.gz",
+      "offset": 134217728,
+      "rawBytes": 15301644,
+      "bytes": 15140069,
+      "sha256": "725b551077b64c0b634d8cec8304cde558cf2e897356aa03403317836d215da7"
+    }
+  ]
+}

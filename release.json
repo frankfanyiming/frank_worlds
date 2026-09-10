@@ -1,7 +1,13 @@
 {
-  "sourceCommit": "d79931c8e5282a982bb163cf944aafde5f9049fe",
-  "revision": 13,
-  "assetRevision": 12,
-  "date": "2026-09-10",
-  "summary": "Open town before the full-quality bedroom; cache versioned assets for repeat visits; safe room entry and retry"
+  "sourceCommit": "dd7bfc02c8cc4c354a03edb6f1a7c171fffa755b",
+  "revision": 14,
+  "assetRevision": 13,
+  "date": "2026-09-11",
+  "summary": "XLands: three worlds, guestbook and versioned co-creation",
+  "worlds": [
+    "doraemon",
+    "frog",
+    "conan"
+  ],
+  "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site"
 }
