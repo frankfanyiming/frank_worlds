@@ -1,0 +1,129 @@
+{
+  "totalModelBytes": 28754736,
+  "models": [
+    {
+      "name": "world-v11.glb",
+      "bytes": 2300524
+    },
+    {
+      "name": "neighborhood-v11.glb",
+      "bytes": 1685628
+    },
+    {
+      "name": "vegetation-v3-lite.glb",
+      "bytes": 2792712
+    },
+    {
+      "name": "terrain-v6.glb",
+      "bytes": 404008
+    },
+    {
+      "name": "streets-v7-lite.glb",
+      "bytes": 1243572
+    },
+    {
+      "name": "surface-v11-lite.glb",
+      "bytes": 2914880
+    },
+    {
+      "name": "details/house-v11.glb",
+      "bytes": 1088516
+    },
+    {
+      "name": "details/connector-v9-lite.glb",
+      "bytes": 414152
+    },
+    {
+      "name": "expansion/expansion-terrain.glb",
+      "bytes": 657444
+    },
+    {
+      "name": "expansion/expansion-river-bridge.glb",
+      "bytes": 297596
+    },
+    {
+      "name": "expansion/expansion-trees-west.glb",
+      "bytes": 883456
+    },
+    {
+      "name": "expansion/expansion-trees-east.glb",
+      "bytes": 887060
+    },
+    {
+      "name": "expansion/expansion-groundcover-lite.glb",
+      "bytes": 1083528
+    },
+    {
+      "name": "actors/nobita.glb",
+      "bytes": 782340
+    },
+    {
+      "name": "actors/doraemon-v11.glb",
+      "bytes": 753512
+    },
+    {
+      "name": "actors/shizuka.glb",
+      "bytes": 729324
+    },
+    {
+      "name": "actors/gian.glb",
+      "bytes": 796396
+    },
+    {
+      "name": "actors/suneo.glb",
+      "bytes": 760824
+    },
+    {
+      "name": "actors/tamako.glb",
+      "bytes": 510832
+    },
+    {
+      "name": "actors/nobisuke.glb",
+      "bytes": 508316
+    },
+    {
+      "name": "fauna/cat.glb",
+      "bytes": 1885716
+    },
+    {
+      "name": "fauna/sparrow.glb",
+      "bytes": 1047032
+    },
+    {
+      "name": "fauna/sparrow_ash.glb",
+      "bytes": 1046684
+    },
+    {
+      "name": "vehicles/kei_hatchback-v11.glb",
+      "bytes": 362584
+    },
+    {
+      "name": "vehicles/kei_truck-v11.glb",
+      "bytes": 383608
+    },
+    {
+      "name": "gadgets/bamboo.glb",
+      "bytes": 100212
+    },
+    {
+      "name": "gadgets/door.glb",
+      "bytes": 183712
+    },
+    {
+      "name": "gadgets/drawer.glb",
+      "bytes": 252376
+    },
+    {
+      "name": "gadgets/time-machine.glb",
+      "bytes": 825524
+    },
+    {
+      "name": "gadgets/season-extras.glb",
+      "bytes": 327920
+    },
+    {
+      "name": "world.json",
+      "bytes": 844748
+    }
+  ]
+}
