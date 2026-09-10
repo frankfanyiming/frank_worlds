@@ -46,7 +46,7 @@ export class TownTraffic {
    if(phase.EW!=='green'&&toLine>=-.10){clearance=Math.max(0,toLine-.22);car.waiting='signal';}
    for(const p of pedestrians){
     const ahead=(p.x-front)*d;
-    if(Math.abs(p.y-.133)<1.6&&Math.abs(-p.z-car.lane)<car.width/2+.45&&ahead>-car.length-.4&&ahead<clearance+.75){clearance=Math.max(0,ahead-.75);car.waiting='pedestrian';}
+    if(Math.abs(p.y-.133)<1.6&&Math.abs(-p.z-car.lane)<car.width/2+.62&&ahead>-car.length-.4&&ahead<clearance+.75){clearance=Math.max(0,ahead-.85);car.waiting='pedestrian';}
    }
    const cruise=car.root.name.includes('truck')?1.85:2.3;
    const target=Math.min(cruise,Math.sqrt(2*1.8*Math.max(0,clearance-.12)));
@@ -59,6 +59,6 @@ export class TownTraffic {
    car.root.visible=Math.abs(car.root.position.x)<43;
   }
  }
- collides(x:number,y:number,z:number,radius=.19){return z<1.7&&this.cars.some(c=>c.root.visible&&Math.abs(x-c.root.position.x)<c.length/2+radius&&Math.abs(y+c.root.position.z)<c.width/2+radius);}
+ collides(x:number,y:number,z:number,radius=.30){return z<1.7&&this.cars.some(c=>c.root.visible&&Math.abs(x-c.root.position.x)<c.length/2+radius&&Math.abs(y+c.root.position.z)<c.width/2+radius);}
  snapshot(){return{leftHandTraffic:true,phase:signalPhase(this.time),signalHeads:4,signalMaterials:this.signals.length,cars:this.cars.map(c=>({name:c.root.name,parked:c.parked,visible:c.root.visible,position:{x:c.root.position.x,y:-c.root.position.z,height:c.root.position.y},dimensions:{length:c.length,width:c.width},speed:c.speed,distanceTravelled:c.distance,waiting:c.waiting,wheelPivots:c.wheels.length}))};}
 }

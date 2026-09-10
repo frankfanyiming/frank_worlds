@@ -4,17 +4,17 @@ export type Point={x:number;y:number};
 export type Routine={id:string;speed:number;stops:Point[];wait:number;zone:'outside'|'kitchen'|'living'};
 const p=(x:number,y:number)=>({x,y});
 export const ROUTINES:Routine[]=[
- {id:'doraemon',speed:.28,wait:4,zone:'outside',stops:[p(-11,-6.5),p(-15,-6.5),p(-18,-7.7),p(-10,-7.8),p(-8.3,-6.6)]},
+ {id:'doraemon',speed:.28,wait:4,zone:'outside',stops:[p(-10.5,-3.8),p(-13,-3.7),p(-11,-3.1),p(-9.0,-2.0),p(-9.5,-3.8)]},
  {id:'shizuka',speed:.52,wait:7,zone:'outside',stops:[p(-9,-24),p(-13,-24),p(-16,-24),p(-15,-23),p(-10,-23.6)]},
  {id:'gian',speed:.57,wait:3,zone:'outside',stops:[p(17,2),p(19,4),p(21,1),p(19,-1),p(16,-1)]},
  {id:'suneo',speed:.51,wait:6,zone:'outside',stops:[p(13,1),p(15,-1),p(18,-2),p(17,1),p(12,3)]},
- {id:'tamako',speed:.55,wait:8,zone:'kitchen',stops:[p(-12.05,6.05),p(-12.4,7.05),p(-11.2,7.45),p(-9.5,7.3),p(-9.55,6.1)]},
+ {id:'tamako',speed:.55,wait:8,zone:'kitchen',stops:[p(-12.05,6.35),p(-12.2,7.0),p(-13,7.1),p(-15.7,7.1),p(-15.8,6.0)]},
  {id:'nobisuke',speed:.55,wait:11,zone:'living',stops:[p(-16.4,2.2),p(-16.45,2.65),p(-14.1,2.6),p(-14.1,1.1),p(-15.5,.8)]},
 ];
 export function allowed(p:Point,r:Routine,cs:Collider[],surfaces:GroundSurface[]){
  const z=groundHeight(p.x,p.y,.48,surfaces);
  if(r.zone==='outside'&&insideHouse(p.x,p.y))return false;
- if(r.zone==='kitchen'&&(p.x< -12.5||p.x> -9.35||p.y<5.9||p.y>7.6))return false;
+ if(r.zone==='kitchen'&&(p.x< -16.5||p.x> -11.0||p.y<5.9||p.y>7.6))return false;
  if(r.zone==='living'&&(p.x< -16.65||p.x> -13.85||p.y<.68||p.y>2.8))return false;
  return !collides(p.x,p.y,z,cs,.23);
 }

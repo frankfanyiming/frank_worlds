@@ -31,3 +31,19 @@
 @media(max-width:720px){.map-dialog-grid{grid-template-columns:1fr}.map-large svg{max-height:30vh}.place-list{max-height:38vh}}
 
 .brand .creator-signature{display:inline-block;font-size:12px;letter-spacing:1.2px;text-decoration:none;color:#365e4f}.creator-signature:hover{text-decoration:underline}.creator-signature:focus-visible{outline:2px solid #b87831;outline-offset:4px}
+
+/* Unobstructed play surface and accessible loading motion. */
+.topbar{justify-content:flex-end}.camera-switch{position:static;transform:none;margin-right:auto}
+.loading-orbit{width:116px;height:116px;display:grid;place-items:center;position:relative;margin-bottom:30px;border:2px solid #a8c5bd;border-radius:50%}
+.loading-orbit img{width:80px;height:80px;object-fit:contain;animation:dora-spin 3.6s linear infinite}
+@keyframes dora-spin{to{transform:rotate(360deg)}}
+.loading-screen h2{font-size:clamp(22px,4.6vw,34px);max-width:92vw;line-height:1.5;letter-spacing:.02em}
+.loading-screen p{max-width:520px;line-height:1.7;padding:0 20px}.recovery-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.loading-screen .text-action{margin-top:26px;font-size:14px}.load-percent{font-variant-numeric:tabular-nums}
+@media(prefers-reduced-motion:reduce){.loading-orbit img{animation:none}.load-progress *{transition:none!important}}
+@media(max-width:650px){.topbar{gap:10px;padding:14px}.camera-switch{position:static;margin:0}.side-tools{top:100px}.loading-screen h2{max-width:290px}.day-chip{margin-left:auto}}
+
+/* Keep room controls in distinct rows at every viewport. */
+.drawer-action{top:206px}@media(max-width:1050px){.drawer-action{top:214px}}@media(max-width:720px){.drawer-action{top:214px;max-width:calc(100vw - 95px);font-size:12px;padding:10px}}
+
+@media(max-width:720px){.sound-toggle{left:20px;right:auto;top:auto;bottom:24px}}

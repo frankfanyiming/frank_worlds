@@ -39,3 +39,7 @@ next-env.d.ts
 *.tsbuildinfo
 
 /dist-pages/
+
+.test-build/
+work/
+*.tsbuildinfo

@@ -7,6 +7,7 @@ type Resident={routine:Routine;root:THREE.Object3D;stop:number;wait:number;path:
 type Animal={id:string;root:THREE.Object3D;home:Point;target:Point;start:Point;phase:number;wait:number;flight:boolean;kind:'cat'|'bird';mixer:THREE.AnimationMixer;actions:Map<string,THREE.AnimationAction>;current:string;route:Point[]};
 const UP=new THREE.Vector3(0,1,0);
 export class TownEcosystem {
+ obstacle:(x:number,y:number,z:number,radius:number)=>boolean=()=>false;
  residents:Resident[]=[];animals:Animal[]=[];held=new Set<string>();companion:string|null=null;companionRepath=0;
  constructor(public colliders:Collider[],public surfaces:GroundSurface[],public play:(id:string,clip:string)=>void){}
  addResidents(world:THREE.Group){
@@ -40,7 +41,7 @@ export class TownEcosystem {
    const target=r.path[0],dx=target.x-here.x,dy=target.y-here.y,dist=Math.hypot(dx,dy),step=Math.min(dist,(this.companion===r.routine.id?1.15:r.routine.speed)*dt);
    if(dist<.06){r.path.shift();if(!r.path.length){r.wait=r.routine.wait+2*(.5+.5*Math.sin(time+here.x));this.play(r.routine.id,'Idle');}continue;}
    const nx=here.x+dx/dist*step,ny=here.y+dy/dist*step;
-   const occupied=(Math.abs(player.y-r.root.position.y)<.65&&Math.hypot(nx-player.x,ny+player.z)<.65)||this.residents.some(o=>o!==r&&Math.abs(o.root.position.y-r.root.position.y)<.6&&Math.hypot(nx-o.root.position.x,ny+o.root.position.z)<.48);
+   const occupied=this.obstacle(nx,ny,r.root.position.y,r.routine.id==='doraemon'?.55:.32)||(Math.abs(player.y-r.root.position.y)<.65&&Math.hypot(nx-player.x,ny+player.z)<.65)||this.residents.some(o=>o!==r&&Math.abs(o.root.position.y-r.root.position.y)<.6&&Math.hypot(nx-o.root.position.x,ny+o.root.position.z)<.48);
    if(occupied){this.play(r.routine.id,'Idle');r.blocked+=dt;if(r.blocked>3){r.path=[];r.wait=1.5;r.blocked=0;}continue;}
    r.blocked=0;r.root.position.set(nx,groundHeight(nx,ny,.48,this.surfaces),-ny);this.face(r.root,dx,dy,dt);this.play(r.routine.id,'Walk');r.travel+=step;
   }
