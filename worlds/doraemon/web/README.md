@@ -25,9 +25,11 @@ WASD / 方向键行走，Shift 跑步，鼠标拖动环视，V 切换视角，E 
 
 野比家和静香家支持一、二楼和可连续行走的楼梯；房间门与哆啦A梦壁橱使用独立滑动面板、固定轨道与碰撞。胖虎家、小夫家外观、喷泉及庭院按参考重建。角色、草木、车辆与道路使用压缩贴图和减面版本。
 
-使用 `npm test` 检查加载、通路与交通；`node tools/verify-adventure.cjs` 回归现有玩法；`npm run typecheck` 检查类型；`npm run build:pages` 生成 GitHub Pages 发布包。构建只保留运行时模型，纹理已内嵌，音频按需加载。
+使用 `npm test` 检查加载、通路与交通；`node tools/verify-adventure.cjs` 回归现有玩法与推拉门防夹；`npm run typecheck` 检查类型；`npm run build:pages` 生成 GitHub Pages 发布包。构建只保留运行时模型，房间精修贴图单独加载，音频按需加载。
 
-新增建筑的可编辑 Blender 文件为 `tools/neighborhood-v11.blend`，生成脚本为 `tools/rebuild_neighborhood.py`。模型迁移、纹理压缩和减面脚本分别为 `refine_runtime_assets.py`、`optimize_textures.py` 和 `trim_geometry.py`。迁移应在副本上按“纹理压缩 → 迁移 → 减面”运行；最终资产已包含在仓库，日常运行无需 Blender。
+大雄房间恢复到用户确认过的 Godot 精修资产：保留完整家具网格、4K 墙面/木材/榻榻米色彩贴图、2K 扫描法线与粗糙度，以及布料和盆栽贴图。`bedroom-materials/manifest.json` 保留来源、尺寸和 SHA-256；这些贴图没有降采样。网页移植了榻榻米织纹采样与木纹方向，并配置窗边阴影和室内暖色反射光。网页实时光照与原 Godot 烘焙光照仍可能有差别。
+
+新楼梯从原房门接入。当前建筑源文件为 `tools/neighborhood-v12.blend`，脚本为 `restore_bedroom_neighborhood.py`；房间导入、原始贴图复制、重复贴图剔除脚本依次为 `restore_bedroom_details.py`、`copy_bedroom_materials.py`、`prune_bedroom_maps.py`。最终资产已包含在仓库，日常运行无需 Blender。旧版全局降采样脚本不适用于已恢复的精修房间。
 
 ## 验证与构建
 

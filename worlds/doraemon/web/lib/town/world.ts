@@ -30,7 +30,7 @@ export function terrainHeight(x:number,y:number):number|undefined {
 }
 export const PLACES: {id:PlaceId;title:string;subtitle:string;x:number;y:number;floor:number;description:string}[] = [
  {id:'home',title:'大雄的家',subtitle:'野比家 · 庭院与一楼',x:-9.6,y:-6.3,floor:0,description:'穿过石板小路，推开熟悉的木门。客厅的茶还温着。'},
- {id:'bedroom',title:'大雄的房间',subtitle:'二楼 · 窗边的书桌',x:-11.35,y:3.3,floor:1,description:'绿窗帘、摊开的作业本，还有藏着童年秘密的壁橱。'},
+ {id:'bedroom',title:'大雄的房间',subtitle:'二楼 · 窗边的书桌',x:-10.775,y:3.3,floor:1,description:'绿窗帘、摊开的作业本，还有藏着童年秘密的壁橱。'},
  {id:'lot',title:'那片空地',subtitle:'三根水泥管 · 伙伴的集合点',x:18,y:0,floor:0,description:'胖虎和小夫已经到了。再玩一会儿，太阳还没下山。'},
  {id:'shizuka',title:'静香家',subtitle:'源家 · 花开的街角',x:-9,y:-24.3,floor:0,description:'粉色的门檐下，静香在等放学回家的朋友。'},
  {id:'suneo',title:'小夫家',subtitle:'骨川家 · 红瓦与喷泉',x:-31,y:-24.4,floor:0,description:'宽宽的阳台和修整过的庭院，是街区里很好认的一户。'},
@@ -55,7 +55,7 @@ export const ACTORS:Actor[]=[
 export function collides(x:number,y:number,z:number,cs:Collider[],radius=.18){
  return cs.some(c=>z<c.z+c.h/2-.05 && z+1.30>c.z-c.h/2+.08 && Math.abs(x-c.x)<c.w/2+radius && Math.abs(y-c.y)<c.d/2+radius);
 }
-export const HOUSE={lower:.48,upper:3.15,stairX:-12.48,stairY0:3.05,stairY1:6.50};
+export const HOUSE={lower:.48,upper:3.15,stairX:-13.15,stairY0:1.30,stairY1:4.75};
 export type GroundSurface={x0:number;x1:number;y0:number;y1:number;height:number;name:string;baseHeight?:number;edgeFalloff?:number;slopeY0?:number;slopeY1?:number};
 export function surfaceHeight(x:number,y:number,s:GroundSurface){
  const smooth=(v:number)=>{const t=Math.max(0,Math.min(1,v));return t*t*(3-2*t);};

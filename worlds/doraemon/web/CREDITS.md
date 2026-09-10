@@ -13,4 +13,6 @@
 
 反馈或来源更正请通过仓库 Issue 联系维护者。
 
+2026-09-10 房间恢复：网页重新接入原 Godot 精修房间，包含 Poly Haven 的 `painted_plaster_wall`、`fine_grained_wood`、`japanese_cedar_planks`、`rough_linen`、`tatami_mat` 和 `oak_veneer_02` CC0 扫描。详细作者、原始下载地址、许可及校验值见 `public/bedroom-materials/manifest.json`。用户的对照截图不作为网页材质发布。
+
 2026-09-10 网页更新：四栋建筑与家具为参考布局后的本地建模，二维加载头像为 AI 生成的非官方同人图。保留既有作者与权利声明。调研了 [Poly Haven](https://polyhaven.com/license) 和 [ambientCG](https://docs.ambientcg.com/license/) 的 CC0 资源；本次选择复用并优化现有草木、角色和纹理，未新增第三方扫描包。参考截图未作为网页资产分发。

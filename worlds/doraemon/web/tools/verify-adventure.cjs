@@ -5,6 +5,15 @@ const {TownEngine}=require('../lib/town/engine.ts'),{TownAdventure}=require('../
 const metadata=JSON.parse(fs.readFileSync('public/models/world.json'));
 function engine(){const e=Object.create(TownEngine.prototype);Object.assign(e,{scene:new THREE.Scene(),world:new THREE.Group(),player:new THREE.Group(),playerPosition:new THREE.Vector3(-9.6,.133,6.3),ring:new THREE.Group(),target:new THREE.Vector3(),targetGoal:new THREE.Vector3(),camera:new THREE.PerspectiveCamera(),state:{ready:true,mode:'orbit',floor:0,inside:false,cutaway:false,actor:null},colliders:metadata.colliders,groundSurfaces:metadata.walkableSurfaces,sound:{effect(){},stop(){}},ecosystem:{held:new Set(),companion:null,actorPosition(id){return e.world.getObjectByName('actor_'+id)?.position;}},motions:new Map(),emit(){},keys:new Set(),touch:{x:0,y:0},yaw:0,azimuth:0});e.scene.fog=new THREE.FogExp2('#bad7dd');e.sky=new TownSky(e.scene);e.weather=new TownWeather(e.scene,e.sky,new THREE.DirectionalLight(),new THREE.HemisphereLight(),new TownAtmosphere());e.adventure=new TownAdventure(e);for(const a of ACTORS){const o=new THREE.Group();o.name='actor_'+a.id;o.position.set(a.x,a.z,-a.y);e.world.add(o);}return e;}
 const e=engine(),a=e.adventure;
+// The restored west entry slides along the hall, with its collider following
+// the actual leaf. An occupied doorway must stop a closing leaf.
+const leaf=new THREE.Group();leaf.name='v12_nobita_slide';const doorway={x:-12.585,y:5.35,z:4.13,w:.065,d:.84,h:1.97};
+e.slidingDoors=[{object:leaf,collider:doorway,axis:'z',origin:5.35,sign:-1,travel:-.88,target:0}];
+assert(collides(-12.585,5.35,3.15,[doorway],.18));e.playerPosition.set(-13.15,3.15,-5.35);e.toggleSlidingDoor(leaf.name);for(let i=0;i<90;i++)e.updateDoors(1/60);
+assert(!collides(-12.585,5.35,3.15,[doorway],.18));assert(Math.abs(doorway.y-6.23)<.001);
+e.playerPosition.set(-12.585,3.15,-5.35);e.toggleSlidingDoor(leaf.name);for(let i=0;i<90;i++)e.updateDoors(1/60);assert(!collides(-12.585,5.35,3.15,[doorway],.23));
+e.playerPosition.set(-13.15,3.15,-5.35);for(let i=0;i<90;i++)e.updateDoors(1/60);assert(collides(-12.585,5.35,3.15,[doorway],.18));
+e.playerPosition.set(-9.6,.133,6.3);
 assert.equal(a.fly(),false);e.state.actor={id:'doraemon'};assert(a.getGift());assert.deepEqual(a.state.inventory,['bamboo','door']);
 assert(a.fly());for(let i=0;i<150;i++)a.flightMove(1/30);assert(e.playerPosition.y>1.65);e.keys.add('Space');for(let i=0;i<90;i++)a.flightMove(1/30);e.keys.clear();const flightHeight=e.playerPosition.y;assert(flightHeight>6);assert(a.land());assert(!a.state.flying&&!collides(e.playerPosition.x,-e.playerPosition.z,e.playerPosition.y,e.colliders));
 assert(a.openPortal('bedroom'));assert(a.enterPortal());assert.equal(e.state.floor,1);assert.equal(a.fly(),false);assert(a.openDrawer());a.update(.5);assert(a.enterTime());assert.equal(e.world.visible,false);assert(a.travel('winter'));for(let i=0;i<110;i++)a.update(1/30);assert.equal(a.state.activity,'none');assert.equal(e.world.visible,true);assert.equal(e.weather.state.season,'winter');assert.equal(e.weather.state.hour,20);assert.equal(e.state.floor,1);

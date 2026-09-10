@@ -1,7 +1,7 @@
 import {defineConfig} from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/postcss';
-import {readdirSync,rmSync,statSync,writeFileSync} from 'node:fs';
+import {readdirSync,rmSync,statSync,writeFileSync,readFileSync} from 'node:fs';
 import {resolve,relative} from 'node:path';
 import {fileURLToPath,URL} from 'node:url';
 import {MODEL_PARTS} from './lib/town/model-manifest';
@@ -13,7 +13,10 @@ export default defineConfig({
   const folder=resolve('dist-pages/models');
   const walk=(dir:string)=>{for(const name of readdirSync(dir)){const path=resolve(dir,name);if(statSync(path).isDirectory())walk(path);else if(!models.has(relative(folder,path)))rmSync(path);}};walk(folder);
   const sizes=[...models].map(name=>({name,bytes:statSync(resolve(folder,name)).size}));
-  writeFileSync('dist-pages/asset-sizes.json',JSON.stringify({totalModelBytes:sizes.reduce((sum,v)=>sum+v.bytes,0),models:sizes},null,2));
+  const totalModelBytes=sizes.reduce((sum,v)=>sum+v.bytes,0);
+  const roomManifest=JSON.parse(readFileSync('dist-pages/bedroom-materials/manifest.json','utf8'));
+  const roomMaterialBytes=roomManifest.files.reduce((sum:number,f:{bytes:number})=>sum+f.bytes,0);
+  writeFileSync('dist-pages/asset-sizes.json',JSON.stringify({totalModelBytes,roomMaterialBytes,totalModelAndMaterialBytes:totalModelBytes+roomMaterialBytes,models:sizes},null,2));
  }}],
  resolve:{alias:{'@':fileURLToPath(new URL('.',import.meta.url))}},
  css:{postcss:{plugins:[tailwindcss()]}},

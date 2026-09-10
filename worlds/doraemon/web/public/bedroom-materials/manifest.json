@@ -1,0 +1,1192 @@
+{
+  "scans": {
+    "painted_plaster_wall": {
+      "source": "https://polyhaven.com/a/painted_plaster_wall",
+      "license": "CC0",
+      "authors": {
+        "Amal Kumar": "All"
+      },
+      "dimensions_m": [
+        2.0,
+        2.0
+      ],
+      "maps": {
+        "albedo": {
+          "file": "painted_plaster_wall/albedo.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/painted_plaster_wall/painted_plaster_wall_diff_4k.jpg",
+          "md5": "7db04e0e455152cf79e112f5852c973d",
+          "sha256": "0d175fb5bdcb8e8a1eedc87cd5ab41fbfd01de84ee7c4f8907017011181e3990",
+          "bytes": 12556766
+        },
+        "normal": {
+          "file": "painted_plaster_wall/normal.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/painted_plaster_wall/painted_plaster_wall_nor_gl_2k.png",
+          "md5": "2eba0da17c1d194537c1231cb412e310",
+          "sha256": "322041257ab0dad1a1a1c18d98bc28689136103f6a64d4849f7aa3ae5b8b090f",
+          "bytes": 22789885
+        },
+        "roughness": {
+          "file": "painted_plaster_wall/roughness.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/painted_plaster_wall/painted_plaster_wall_rough_2k.jpg",
+          "md5": "7cdd5fbbe56f7becb757fc5b52d11d28",
+          "sha256": "35aad595469533cc3b7cc209cc6c7e065d660211f02c867f4492d3b371b1fee1",
+          "bytes": 1595466
+        },
+        "ao": {
+          "file": "painted_plaster_wall/ao.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/painted_plaster_wall/painted_plaster_wall_ao_2k.jpg",
+          "md5": "b911e43133db837371f58983f5270586",
+          "sha256": "3d89b5ea1f9d93d611ab0015d887b620ec9c6623e19effadba84ee9345c4c6fc",
+          "bytes": 2176195
+        }
+      }
+    },
+    "fine_grained_wood": {
+      "source": "https://polyhaven.com/a/fine_grained_wood",
+      "license": "CC0",
+      "authors": {
+        "Rob Tuytel": "All"
+      },
+      "dimensions_m": [
+        0.6000000238418579,
+        0.6000000238418579
+      ],
+      "maps": {
+        "albedo": {
+          "file": "fine_grained_wood/albedo.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/fine_grained_wood/fine_grained_wood_col_4k.jpg",
+          "md5": "50cba9a39e97c3063d87cb0a9db1f106",
+          "sha256": "0c71b4505412216bbe7b2dc2b2bcfe414dfd319d13e48992cdaeb2961f44146f",
+          "bytes": 4744081
+        },
+        "normal": {
+          "file": "fine_grained_wood/normal.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/fine_grained_wood/fine_grained_wood_nor_gl_2k.png",
+          "md5": "c29616d3509274d1ba7c3fa7a111045f",
+          "sha256": "8bf311cca68565541749b32c91960e6e40fd9bfce651b923512394d571e21759",
+          "bytes": 3210822
+        },
+        "roughness": {
+          "file": "fine_grained_wood/roughness.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/fine_grained_wood/fine_grained_wood_rough_2k.jpg",
+          "md5": "1356433f66fe066762c1be121f76738d",
+          "sha256": "7e8f5fc146ae7accd3b9deb2a173c1cf253707ccdee5070ce16cefd4ee68f1b7",
+          "bytes": 871792
+        },
+        "ao": {
+          "file": "fine_grained_wood/ao.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/fine_grained_wood/fine_grained_wood_ao_2k.jpg",
+          "md5": "5ffe88a08e47c49f2c88c20f54c3759c",
+          "sha256": "fc44d72b3b3131a888194f0048ed28ad2ac328401f2719c3a17410731efb95b1",
+          "bytes": 2360200
+        }
+      }
+    },
+    "japanese_cedar_planks": {
+      "source": "https://polyhaven.com/a/japanese_cedar_planks",
+      "license": "CC0",
+      "authors": {
+        "Charlotte Baglioni": "Scanning",
+        "Rico Cilliers": "Processing "
+      },
+      "dimensions_m": [
+        1.130000114440918,
+        1.130000114440918
+      ],
+      "maps": {
+        "albedo": {
+          "file": "japanese_cedar_planks/albedo.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/japanese_cedar_planks/japanese_cedar_planks_diff_4k.jpg",
+          "md5": "cd8e06083e81ee18bc0f038a17721feb",
+          "sha256": "37d5acc6cfeee1908701a2d2d8ee08addae4446e91cfb917f332e9e15f787ea4",
+          "bytes": 10221817
+        },
+        "normal": {
+          "file": "japanese_cedar_planks/normal.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/japanese_cedar_planks/japanese_cedar_planks_nor_gl_2k.png",
+          "md5": "511c81c525df3d1e1058d448fae21094",
+          "sha256": "7b56cf81683d32e1cfbaa15b170c59e451ceb0eeb5bdd2892d11b2dbdf3db49f",
+          "bytes": 23012005
+        },
+        "roughness": {
+          "file": "japanese_cedar_planks/roughness.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/japanese_cedar_planks/japanese_cedar_planks_rough_2k.jpg",
+          "md5": "e162e97313dce7f6c913d9301aea3e21",
+          "sha256": "4599cdbbdcc86b5c2bef6744fdaf662cb3742d05ae6f47515af545653e72a1d0",
+          "bytes": 2807174
+        },
+        "ao": {
+          "file": "japanese_cedar_planks/ao.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/japanese_cedar_planks/japanese_cedar_planks_ao_2k.jpg",
+          "md5": "39c8caf362b03a4c45ffb7cdcbd79534",
+          "sha256": "1b7524411345dc96cfd8eb9a67f0d631d2008b99cd9ffb2b144ea6db4a744316",
+          "bytes": 3189312
+        }
+      }
+    },
+    "rough_linen": {
+      "source": "https://polyhaven.com/a/rough_linen",
+      "license": "CC0",
+      "authors": {
+        "colormass": "Photography",
+        "Rico Cilliers": "Processing"
+      },
+      "dimensions_m": [
+        0.2707081392676629,
+        0.27129998803138733
+      ],
+      "maps": {
+        "albedo": {
+          "file": "rough_linen/albedo.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/rough_linen/rough_linen_diff_4k.jpg",
+          "md5": "8baff705eca1ecca5eefce25563b4b78",
+          "sha256": "dca61aacd6cf3194681070cede3c16a3b61a32cb3eef5bf4c52db698b2286d3d",
+          "bytes": 13064750
+        },
+        "normal": {
+          "file": "rough_linen/normal.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/rough_linen/rough_linen_nor_gl_2k.png",
+          "md5": "c790b11f591f898dbec1d75733159fb3",
+          "sha256": "1de2d1e782a54340b9a047a78382c1a0218cc1933bdffb331d6ed5fa2164e932",
+          "bytes": 22196908
+        },
+        "roughness": {
+          "file": "rough_linen/roughness.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_rough_2k.jpg",
+          "md5": "fb70674c782d6bead54c8baaae2b77db",
+          "sha256": "48400d48fa203882bf5d984d5beb2f95edb1550309924601c018f2c4f3f80731",
+          "bytes": 4655974
+        },
+        "ao": {
+          "file": "rough_linen/ao.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/rough_linen/rough_linen_ao_2k.jpg",
+          "md5": "9163a4646100801e63ac886552b52c9e",
+          "sha256": "277399dfd364393c506fb35f7b868a2d3c0c388400439c327829cf787bc7c315",
+          "bytes": 3969492
+        }
+      }
+    },
+    "tatami_mat": {
+      "source": "https://polyhaven.com/a/tatami_mat",
+      "license": "CC0",
+      "authors": {
+        "Charlotte Baglioni": "All"
+      },
+      "dimensions_m": [
+        1.8000000715255737,
+        1.8000000715255737
+      ],
+      "maps": {
+        "albedo": {
+          "file": "tatami_mat/albedo.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/tatami_mat/tatami_mat_diff_4k.jpg",
+          "md5": "002094c6d9e31a246fae721e454fb29a",
+          "sha256": "cfe8deb47e9ebd1add4bc81bee436311b6fb21b8d148b6b3534c97f5822f367b",
+          "bytes": 9478853
+        },
+        "normal": {
+          "file": "tatami_mat/normal.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/tatami_mat/tatami_mat_nor_gl_2k.png",
+          "md5": "5907409be0858356da291abdd3949415",
+          "sha256": "65a89e1357fe5181638d44ad6150fa3e5e21438a13a196feff2e10a781a20404",
+          "bytes": 20436403
+        },
+        "roughness": {
+          "file": "tatami_mat/roughness.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/tatami_mat/tatami_mat_rough_2k.jpg",
+          "md5": "2b3feb4d7a3f674cd0404a8be374ccac",
+          "sha256": "39e132424cf4c5a9dbedd167893d39eb3eeb2a5e8450ee7cde396ddc4777c8d8",
+          "bytes": 1151251
+        },
+        "ao": {
+          "file": "tatami_mat/ao.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/tatami_mat/tatami_mat_ao_2k.jpg",
+          "md5": "41b3b21e239c771af3f2466179e73be0",
+          "sha256": "7b9bd02ba0ba9805683dcd61ce8fdff9820a269be79cb6a88920528e937aa7dd",
+          "bytes": 2374019
+        }
+      }
+    },
+    "oak_veneer_02": {
+      "source": "https://polyhaven.com/a/oak_veneer_02",
+      "license": "CC0",
+      "authors": {
+        "Jenelle van Heerden": "All"
+      },
+      "dimensions_m": [
+        1.0,
+        1.0
+      ],
+      "maps": {
+        "albedo": {
+          "file": "oak_veneer_02/albedo.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/oak_veneer_02/oak_veneer_02_diff_4k.jpg",
+          "md5": "6f4784644d32ef682dcc7caa3e0d0ae2",
+          "sha256": "bc19644b49bc66efaa84346247fa1294431d2a898dd0dd66462f3b18343f416d",
+          "bytes": 9748186
+        },
+        "normal": {
+          "file": "oak_veneer_02/normal.png",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/png/2k/oak_veneer_02/oak_veneer_02_nor_gl_2k.png",
+          "md5": "9bea304ec1341cdcc4fec9c855f6a685",
+          "sha256": "42e8d32864eb3ecbfc3da5c5e4627a00bf7b1a0ce431c4f789eab23890936914",
+          "bytes": 18576832
+        },
+        "roughness": {
+          "file": "oak_veneer_02/roughness.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/oak_veneer_02/oak_veneer_02_rough_2k.jpg",
+          "md5": "b95f4e3abe3407ae0f83a536182e2c0f",
+          "sha256": "31dce770142513800781464754bcd248d6f8ac79984dff26c81593195f3f9e6f",
+          "bytes": 3167619
+        },
+        "ao": {
+          "file": "oak_veneer_02/ao.jpg",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/oak_veneer_02/oak_veneer_02_ao_2k.jpg",
+          "md5": "23fce6d4be378e40cebf8cb85e85be86",
+          "sha256": "da9d2156ed039e7fc438d249fc1ad1fed8610e481f416471e92056b4fe95438d",
+          "bytes": 2252912
+        }
+      }
+    }
+  },
+  "materials": {
+    "DeskHoneyWood": {
+      "uses": [
+        "大雄书桌整面桌面、浅色抽屉"
+      ],
+      "replace_source_materials": [
+        "V10_Desktop",
+        "V10_Drawer"
+      ],
+      "uv": {
+        "mode": "unique tabletop; retain original UV",
+        "tabletop_uv_0_1_m": [
+          0.6,
+          1.18
+        ],
+        "drawer_uv_0_1_m": [
+          0.168,
+          0.306
+        ],
+        "not_for_automatic_member_remapping": true,
+        "grain_axis": "V / image vertical",
+        "note": "Whole desktop UV is unique. Keep existing UV and scale=(1,1,1); drawer coverage differs intentionally."
+      },
+      "godot_overrides": {
+        "clearcoat_enabled": false,
+        "texture_repeat": true,
+        "metallic_specular": 0.35
+      },
+      "source_notes": [
+        "Existing V10 desktop color/use patina retained at 62% residual amplitude.",
+        "Existing 1254² honey cedar grain contributes real visible fiber variation; procedural composite emitted at 2048².",
+        "Broad color variation does not become bump. Only detrended fine grain adds 11 μm modeled height."
+      ],
+      "maps": {
+        "albedo": {
+          "file": "DeskHoneyWood_albedo.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "bytes": 3348695,
+          "sha256": "8c2961bcbae26fc09c182a516116ea06944d8a9f4d9304207a04597c006bfd39",
+          "statistics": {
+            "mean": [
+              0.673352,
+              0.591,
+              0.477255
+            ],
+            "std": [
+              0.030845,
+              0.028155,
+              0.023988
+            ],
+            "p01": [
+              0.6,
+              0.52549,
+              0.419608
+            ],
+            "p99": [
+              0.737255,
+              0.65098,
+              0.529412
+            ]
+          }
+        },
+        "roughness": {
+          "file": "DeskHoneyWood_roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 375903,
+          "sha256": "e0479c2b2356c7b05828744a47479eaf20e38111e9b05c4e46fe3586134194f2",
+          "statistics": {
+            "mean": [
+              0.564998
+            ],
+            "std": [
+              0.035245
+            ],
+            "p01": [
+              0.482353
+            ],
+            "p99": [
+              0.647059
+            ]
+          }
+        },
+        "normal": {
+          "file": "DeskHoneyWood_normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 657995,
+          "sha256": "2c37194e0224e58778f4ec55bc7a1fc1040fb65dbad9d2a9f0ac16f9202d1042",
+          "statistics": {
+            "mean": [
+              0.500142,
+              0.501916,
+              0.999967
+            ],
+            "std": [
+              0.017099,
+              0.000422,
+              0.000361
+            ],
+            "p01": [
+              0.458824,
+              0.498039,
+              1.0
+            ],
+            "p99": [
+              0.541176,
+              0.501961,
+              1.0
+            ]
+          },
+          "normal_angle_degrees": {
+            "median": 1.146,
+            "p95": 3.821,
+            "max": 8.835
+          }
+        }
+      }
+    },
+    "DarkWood": {
+      "uses": [
+        "桌椅深色框架、书架边框、深木条"
+      ],
+      "replace_source_materials": [
+        "V10_Walnut"
+      ],
+      "uv": {
+        "mode": "metric repeating",
+        "tile_m": [
+          0.35,
+          1.2
+        ],
+        "grain_axis": "V / image vertical",
+        "retain_existing_uv": true
+      },
+      "godot_overrides": {
+        "clearcoat_enabled": false,
+        "texture_repeat": true,
+        "metallic_specular": 0.33
+      },
+      "source_notes": [
+        "Existing walnut hue retained; same source family gives coherent furniture, without uniform varnish sheen."
+      ],
+      "maps": {
+        "albedo": {
+          "file": "DarkWood_albedo.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "bytes": 3285505,
+          "sha256": "facc6ad884c5a1830ff4049f30278a182c16fa38f41d8e0ae9af755174a69ff2",
+          "statistics": {
+            "mean": [
+              0.554674,
+              0.487702,
+              0.385844
+            ],
+            "std": [
+              0.029746,
+              0.026159,
+              0.021787
+            ],
+            "p01": [
+              0.482353,
+              0.423529,
+              0.333333
+            ],
+            "p99": [
+              0.619608,
+              0.545098,
+              0.431373
+            ]
+          }
+        },
+        "roughness": {
+          "file": "DarkWood_roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 320694,
+          "sha256": "8908f2d5e298f0611a4da81a795c09ee86134b950bcfe9e1d4a4faadacc0adb8",
+          "statistics": {
+            "mean": [
+              0.589999
+            ],
+            "std": [
+              0.031882
+            ],
+            "p01": [
+              0.517647
+            ],
+            "p99": [
+              0.662745
+            ]
+          }
+        },
+        "normal": {
+          "file": "DarkWood_normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 770165,
+          "sha256": "544211ca79915f83d5d5cf5276aa06a799714123beabf8fbd9da9085e496f004",
+          "statistics": {
+            "mean": [
+              0.500125,
+              0.501958,
+              0.999735
+            ],
+            "std": [
+              0.02415,
+              9.9e-05,
+              0.001003
+            ],
+            "p01": [
+              0.443137,
+              0.501961,
+              0.996078
+            ],
+            "p99": [
+              0.556863,
+              0.501961,
+              1.0
+            ]
+          },
+          "normal_angle_degrees": {
+            "median": 2.034,
+            "p95": 5.648,
+            "max": 8.835
+          }
+        }
+      }
+    },
+    "GreenLinen": {
+      "uses": [
+        "绿色主窗帘、绿色软布"
+      ],
+      "replace_source_materials": [
+        "V10_GreenLinen"
+      ],
+      "uv": {
+        "mode": "meter-based continuous cloth UV",
+        "tile_m": [
+          0.08,
+          0.08
+        ],
+        "retain_existing_uv": true,
+        "note": "8 cm = one image tile. Existing curved curtain/cloth already has metric UV; do not scale it a second time."
+      },
+      "godot_overrides": {
+        "clearcoat_enabled": false,
+        "texture_repeat": true,
+        "cull_mode": "CULL_DISABLED",
+        "metallic_specular": 0.25
+      },
+      "source_notes": [
+        "Original woven fiber direction and millimeter thread spacing retained.",
+        "Large folds belong to geometry, not painted stripes or amplified normal."
+      ],
+      "maps": {
+        "albedo": {
+          "file": "GreenLinen_albedo.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 880511,
+          "sha256": "f11c50c2e46202de0a82ebc22b1d06d7b33f6c3bc7f7ff7e2bb963441d4b5ad1",
+          "statistics": {
+            "mean": [
+              0.516166,
+              0.58135,
+              0.499073
+            ],
+            "std": [
+              0.01594,
+              0.013147,
+              0.0122
+            ],
+            "p01": [
+              0.482353,
+              0.552941,
+              0.47451
+            ],
+            "p99": [
+              0.54902,
+              0.611765,
+              0.52549
+            ]
+          }
+        },
+        "roughness": {
+          "file": "GreenLinen_roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 576817,
+          "sha256": "a27b08738b8ecb8eb9a2a38ece6fa9c64b7018607ed83e81a1e41fa247f8819f",
+          "statistics": {
+            "mean": [
+              0.904997
+            ],
+            "std": [
+              0.018674
+            ],
+            "p01": [
+              0.862745
+            ],
+            "p99": [
+              0.94902
+            ]
+          }
+        },
+        "normal": {
+          "file": "GreenLinen_normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 1427914,
+          "sha256": "b700aabefbb0d5ce7518c16cd46f8de199b8f5331cc52e18113eaac8cc6bdc4d",
+          "statistics": {
+            "mean": [
+              0.500077,
+              0.500073,
+              0.998981
+            ],
+            "std": [
+              0.027896,
+              0.025221,
+              0.001722
+            ],
+            "p01": [
+              0.447059,
+              0.45098,
+              0.996078
+            ],
+            "p99": [
+              0.552941,
+              0.54902,
+              1.0
+            ]
+          },
+          "normal_angle_degrees": {
+            "median": 4.124,
+            "p95": 6.574,
+            "max": 9.847
+          }
+        }
+      }
+    },
+    "BlueLinen": {
+      "uses": [
+        "蓝色椅垫、蓝布"
+      ],
+      "replace_source_materials": [
+        "V10_BlueLinen"
+      ],
+      "uv": {
+        "mode": "meter-based continuous cloth UV",
+        "tile_m": [
+          0.08,
+          0.08
+        ],
+        "retain_existing_uv": true,
+        "note": "8 cm = one image tile. Existing curved curtain/cloth already has metric UV; do not scale it a second time."
+      },
+      "godot_overrides": {
+        "clearcoat_enabled": false,
+        "texture_repeat": true,
+        "cull_mode": "CULL_DISABLED",
+        "metallic_specular": 0.25
+      },
+      "source_notes": [
+        "Original woven fiber direction and millimeter thread spacing retained.",
+        "Large folds belong to geometry, not painted stripes or amplified normal."
+      ],
+      "maps": {
+        "albedo": {
+          "file": "BlueLinen_albedo.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 942441,
+          "sha256": "b2ca71938ce71ecebf9aa0813ccf8d655088e032d99bfbdbca489a25059d6eee",
+          "statistics": {
+            "mean": [
+              0.37943,
+              0.488495,
+              0.54052
+            ],
+            "std": [
+              0.017221,
+              0.014994,
+              0.013608
+            ],
+            "p01": [
+              0.341176,
+              0.458824,
+              0.513726
+            ],
+            "p99": [
+              0.415686,
+              0.521569,
+              0.568627
+            ]
+          }
+        },
+        "roughness": {
+          "file": "BlueLinen_roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 576779,
+          "sha256": "4842fd1ffaa011c830fc0e320543729823b5bae702701733f53d5ee7490c3b19",
+          "statistics": {
+            "mean": [
+              0.904996
+            ],
+            "std": [
+              0.018668
+            ],
+            "p01": [
+              0.862745
+            ],
+            "p99": [
+              0.94902
+            ]
+          }
+        },
+        "normal": {
+          "file": "BlueLinen_normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 1427916,
+          "sha256": "3b9b0a4cc4cebd8db5aad74018c6ac4bc80a797b67dcbcdc9635ec0f35a9c14f",
+          "statistics": {
+            "mean": [
+              0.500077,
+              0.500073,
+              0.998981
+            ],
+            "std": [
+              0.027896,
+              0.025221,
+              0.001722
+            ],
+            "p01": [
+              0.447059,
+              0.45098,
+              0.996078
+            ],
+            "p99": [
+              0.552941,
+              0.54902,
+              1.0
+            ]
+          },
+          "normal_angle_degrees": {
+            "median": 4.124,
+            "p95": 6.574,
+            "max": 9.847
+          }
+        }
+      }
+    },
+    "WarmPaperWall": {
+      "uses": [
+        "室内暖纸感墙面、壁橱纸饰面"
+      ],
+      "replace_source_materials": [
+        "V10_Plaster"
+      ],
+      "uv": {
+        "mode": "metric repeating",
+        "tile_m": [
+          1,
+          1
+        ],
+        "retain_existing_uv": true
+      },
+      "godot_overrides": {
+        "clearcoat_enabled": false,
+        "texture_repeat": true,
+        "metallic_specular": 0.22
+      },
+      "source_notes": [
+        "Reuses subtle mineral microtexture with warm off-white paper body; not translucent shoji glass.",
+        "No wall-scale stain, baked edge shadow, or diagonal lighting in texture."
+      ],
+      "maps": {
+        "albedo": {
+          "file": "WarmPaperWall_albedo.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 572117,
+          "sha256": "62ae4c44cf4bb8bfae55800c4f3126a9d2fa43fe89eea1bf23a9ddcd8751f38e",
+          "statistics": {
+            "mean": [
+              0.787,
+              0.764,
+              0.700999
+            ],
+            "std": [
+              0.00409,
+              0.004244,
+              0.004418
+            ],
+            "p01": [
+              0.776471,
+              0.752941,
+              0.690196
+            ],
+            "p99": [
+              0.796078,
+              0.772549,
+              0.709804
+            ]
+          }
+        },
+        "roughness": {
+          "file": "WarmPaperWall_roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 263456,
+          "sha256": "347f17072766110eae29ca2ec0759b8fcb93f16e09a6f96f40f1c6282220560a",
+          "statistics": {
+            "mean": [
+              0.919999
+            ],
+            "std": [
+              0.010372
+            ],
+            "p01": [
+              0.898039
+            ],
+            "p99": [
+              0.945098
+            ]
+          }
+        },
+        "normal": {
+          "file": "WarmPaperWall_normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 903816,
+          "sha256": "6f02c4bd4dd96a51cd746b3f0c2fe9bb398fdf784922fa6a64fe5bc4584c1244",
+          "statistics": {
+            "mean": [
+              0.500243,
+              0.500266,
+              1.0
+            ],
+            "std": [
+              0.004567,
+              0.004187,
+              0.0
+            ],
+            "p01": [
+              0.490196,
+              0.490196,
+              1.0
+            ],
+            "p99": [
+              0.509804,
+              0.509804,
+              1.0
+            ]
+          },
+          "normal_angle_degrees": {
+            "median": 0.711,
+            "p95": 1.146,
+            "max": 2.48
+          }
+        }
+      }
+    },
+    "IndoorLeaf": {
+      "uses": [
+        "两盆室内盆栽已有叶片网格"
+      ],
+      "replace_source_materials": [
+        "V10_Indoor_BotanicalLeaf",
+        "BotanicalLeaf_V7"
+      ],
+      "uv": {
+        "mode": "existing multi-species atlas",
+        "retain_existing_uv": true,
+        "texture_scale": [
+          1,
+          1,
+          1
+        ],
+        "note": "Do not crop or retile: leaf atlas quadrants are selected by source mesh UV."
+      },
+      "godot_overrides": {
+        "clearcoat_enabled": false,
+        "texture_repeat": false,
+        "cull_mode": "CULL_DISABLED",
+        "transparency": "TRANSPARENCY_DISABLED",
+        "alpha_scissor_threshold": null,
+        "backlight_enabled": true,
+        "backlight": [
+          0.1,
+          0.16,
+          0.045,
+          1
+        ],
+        "subsurf_scatter_enabled": false,
+        "metallic_specular": 0.23
+      },
+      "source_notes": [
+        "Source atlas was opaque JPEG; leaf silhouette is modeled geometry, not rectangular alpha cards.",
+        "No alpha file is needed. Every albedo pixel is opaque. Do not enable transparency or alpha scissors.",
+        "Removed the old .85 × .505 = .429 roughness ambiguity. This PNG contains the final .80 target.",
+        "Source leaf normal strength .35 is already baked. Godot normal_scale remains 1.0."
+      ],
+      "maps": {
+        "albedo": {
+          "file": "IndoorLeaf_albedo.png",
+          "size": [
+            2048,
+            2048
+          ],
+          "bytes": 5438123,
+          "sha256": "a4f845b2783893f215f4c812fd165f8360ef0733c750ceef6a8d1d13d72fc669",
+          "statistics": {
+            "mean": [
+              0.338462,
+              0.442759,
+              0.210287
+            ],
+            "std": [
+              0.128167,
+              0.119259,
+              0.072259
+            ],
+            "p01": [
+              0.129412,
+              0.25098,
+              0.098039
+            ],
+            "p99": [
+              0.572549,
+              0.666667,
+              0.34902
+            ]
+          }
+        },
+        "roughness": {
+          "file": "IndoorLeaf_roughness.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 512287,
+          "sha256": "9fbf0a32059de9a1b3eddc86ac67f32130c871b9486a91b391be890c39e24b4a",
+          "statistics": {
+            "mean": [
+              0.799896
+            ],
+            "std": [
+              0.025043
+            ],
+            "p01": [
+              0.741176
+            ],
+            "p99": [
+              0.854902
+            ]
+          }
+        },
+        "normal": {
+          "file": "IndoorLeaf_normal.png",
+          "size": [
+            1024,
+            1024
+          ],
+          "bytes": 1280558,
+          "sha256": "37acef39020343990894845510060470d4d96926ec155bdf0d6cab2438494201",
+          "statistics": {
+            "mean": [
+              0.500283,
+              0.500285,
+              0.999911
+            ],
+            "std": [
+              0.012526,
+              0.012864,
+              0.000607
+            ],
+            "p01": [
+              0.466667,
+              0.462745,
+              0.996078
+            ],
+            "p99": [
+              0.537255,
+              0.537255,
+              1.0
+            ]
+          },
+          "normal_angle_degrees": {
+            "median": 1.31,
+            "p95": 4.124,
+            "max": 10.264
+          }
+        }
+      }
+    }
+  },
+  "license": "https://polyhaven.com/license",
+  "files": [
+    {
+      "file": "GreenLinen_albedo.png",
+      "bytes": 880511,
+      "sha256": "f11c50c2e46202de0a82ebc22b1d06d7b33f6c3bc7f7ff7e2bb963441d4b5ad1"
+    },
+    {
+      "file": "IndoorLeaf_normal.png",
+      "bytes": 1280558,
+      "sha256": "37acef39020343990894845510060470d4d96926ec155bdf0d6cab2438494201"
+    },
+    {
+      "file": "BlueLinen_albedo.png",
+      "bytes": 942441,
+      "sha256": "b2ca71938ce71ecebf9aa0813ccf8d655088e032d99bfbdbca489a25059d6eee"
+    },
+    {
+      "file": "DarkWood_normal.png",
+      "bytes": 770165,
+      "sha256": "544211ca79915f83d5d5cf5276aa06a799714123beabf8fbd9da9085e496f004"
+    },
+    {
+      "file": "DarkWood_roughness.png",
+      "bytes": 320694,
+      "sha256": "8908f2d5e298f0611a4da81a795c09ee86134b950bcfe9e1d4a4faadacc0adb8"
+    },
+    {
+      "file": "GreenLinen_roughness.png",
+      "bytes": 576817,
+      "sha256": "a27b08738b8ecb8eb9a2a38ece6fa9c64b7018607ed83e81a1e41fa247f8819f"
+    },
+    {
+      "file": "IndoorLeaf_roughness.png",
+      "bytes": 512287,
+      "sha256": "9fbf0a32059de9a1b3eddc86ac67f32130c871b9486a91b391be890c39e24b4a"
+    },
+    {
+      "file": "WarmPaperWall_normal.png",
+      "bytes": 903816,
+      "sha256": "6f02c4bd4dd96a51cd746b3f0c2fe9bb398fdf784922fa6a64fe5bc4584c1244"
+    },
+    {
+      "file": "DeskHoneyWood_normal.png",
+      "bytes": 657995,
+      "sha256": "2c37194e0224e58778f4ec55bc7a1fc1040fb65dbad9d2a9f0ac16f9202d1042"
+    },
+    {
+      "file": "WarmPaperWall_roughness.png",
+      "bytes": 263456,
+      "sha256": "347f17072766110eae29ca2ec0759b8fcb93f16e09a6f96f40f1c6282220560a"
+    },
+    {
+      "file": "GreenLinen_normal.png",
+      "bytes": 1427914,
+      "sha256": "b700aabefbb0d5ce7518c16cd46f8de199b8f5331cc52e18113eaac8cc6bdc4d"
+    },
+    {
+      "file": "IndoorLeaf_albedo.png",
+      "bytes": 5438123,
+      "sha256": "a4f845b2783893f215f4c812fd165f8360ef0733c750ceef6a8d1d13d72fc669"
+    },
+    {
+      "file": "BlueLinen_normal.png",
+      "bytes": 1427916,
+      "sha256": "3b9b0a4cc4cebd8db5aad74018c6ac4bc80a797b67dcbcdc9635ec0f35a9c14f"
+    },
+    {
+      "file": "DarkWood_albedo.png",
+      "bytes": 3285505,
+      "sha256": "facc6ad884c5a1830ff4049f30278a182c16fa38f41d8e0ae9af755174a69ff2"
+    },
+    {
+      "file": "BlueLinen_roughness.png",
+      "bytes": 576779,
+      "sha256": "4842fd1ffaa011c830fc0e320543729823b5bae702701733f53d5ee7490c3b19"
+    },
+    {
+      "file": "DeskHoneyWood_roughness.png",
+      "bytes": 375903,
+      "sha256": "e0479c2b2356c7b05828744a47479eaf20e38111e9b05c4e46fe3586134194f2"
+    },
+    {
+      "file": "WarmPaperWall_albedo.png",
+      "bytes": 572117,
+      "sha256": "62ae4c44cf4bb8bfae55800c4f3126a9d2fa43fe89eea1bf23a9ddcd8751f38e"
+    },
+    {
+      "file": "DeskHoneyWood_albedo.png",
+      "bytes": 3348695,
+      "sha256": "8c2961bcbae26fc09c182a516116ea06944d8a9f4d9304207a04597c006bfd39"
+    },
+    {
+      "file": "fine_grained_wood/albedo.jpg",
+      "bytes": 4744081,
+      "sha256": "0c71b4505412216bbe7b2dc2b2bcfe414dfd319d13e48992cdaeb2961f44146f"
+    },
+    {
+      "file": "fine_grained_wood/normal.png",
+      "bytes": 3210822,
+      "sha256": "8bf311cca68565541749b32c91960e6e40fd9bfce651b923512394d571e21759"
+    },
+    {
+      "file": "fine_grained_wood/ao.jpg",
+      "bytes": 2360200,
+      "sha256": "fc44d72b3b3131a888194f0048ed28ad2ac328401f2719c3a17410731efb95b1"
+    },
+    {
+      "file": "fine_grained_wood/roughness.jpg",
+      "bytes": 871792,
+      "sha256": "7e8f5fc146ae7accd3b9deb2a173c1cf253707ccdee5070ce16cefd4ee68f1b7"
+    },
+    {
+      "file": "painted_plaster_wall/albedo.jpg",
+      "bytes": 12556766,
+      "sha256": "0d175fb5bdcb8e8a1eedc87cd5ab41fbfd01de84ee7c4f8907017011181e3990"
+    },
+    {
+      "file": "painted_plaster_wall/normal.png",
+      "bytes": 22789885,
+      "sha256": "322041257ab0dad1a1a1c18d98bc28689136103f6a64d4849f7aa3ae5b8b090f"
+    },
+    {
+      "file": "painted_plaster_wall/ao.jpg",
+      "bytes": 2176195,
+      "sha256": "3d89b5ea1f9d93d611ab0015d887b620ec9c6623e19effadba84ee9345c4c6fc"
+    },
+    {
+      "file": "painted_plaster_wall/roughness.jpg",
+      "bytes": 1595466,
+      "sha256": "35aad595469533cc3b7cc209cc6c7e065d660211f02c867f4492d3b371b1fee1"
+    },
+    {
+      "file": "rough_linen/normal.png",
+      "bytes": 22196908,
+      "sha256": "1de2d1e782a54340b9a047a78382c1a0218cc1933bdffb331d6ed5fa2164e932"
+    },
+    {
+      "file": "rough_linen/ao.jpg",
+      "bytes": 3969492,
+      "sha256": "277399dfd364393c506fb35f7b868a2d3c0c388400439c327829cf787bc7c315"
+    },
+    {
+      "file": "rough_linen/roughness.jpg",
+      "bytes": 4655974,
+      "sha256": "48400d48fa203882bf5d984d5beb2f95edb1550309924601c018f2c4f3f80731"
+    },
+    {
+      "file": "japanese_cedar_planks/albedo.jpg",
+      "bytes": 10221817,
+      "sha256": "37d5acc6cfeee1908701a2d2d8ee08addae4446e91cfb917f332e9e15f787ea4"
+    },
+    {
+      "file": "japanese_cedar_planks/normal.png",
+      "bytes": 23012005,
+      "sha256": "7b56cf81683d32e1cfbaa15b170c59e451ceb0eeb5bdd2892d11b2dbdf3db49f"
+    },
+    {
+      "file": "japanese_cedar_planks/ao.jpg",
+      "bytes": 3189312,
+      "sha256": "1b7524411345dc96cfd8eb9a67f0d631d2008b99cd9ffb2b144ea6db4a744316"
+    },
+    {
+      "file": "japanese_cedar_planks/roughness.jpg",
+      "bytes": 2807174,
+      "sha256": "4599cdbbdcc86b5c2bef6744fdaf662cb3742d05ae6f47515af545653e72a1d0"
+    },
+    {
+      "file": "oak_veneer_02/albedo.jpg",
+      "bytes": 9748186,
+      "sha256": "bc19644b49bc66efaa84346247fa1294431d2a898dd0dd66462f3b18343f416d"
+    },
+    {
+      "file": "oak_veneer_02/normal.png",
+      "bytes": 18576832,
+      "sha256": "42e8d32864eb3ecbfc3da5c5e4627a00bf7b1a0ce431c4f789eab23890936914"
+    },
+    {
+      "file": "oak_veneer_02/ao.jpg",
+      "bytes": 2252912,
+      "sha256": "da9d2156ed039e7fc438d249fc1ad1fed8610e481f416471e92056b4fe95438d"
+    },
+    {
+      "file": "oak_veneer_02/roughness.jpg",
+      "bytes": 3167619,
+      "sha256": "31dce770142513800781464754bcd248d6f8ac79984dff26c81593195f3f9e6f"
+    },
+    {
+      "file": "tatami_mat/albedo.jpg",
+      "bytes": 9478853,
+      "sha256": "cfe8deb47e9ebd1add4bc81bee436311b6fb21b8d148b6b3534c97f5822f367b"
+    },
+    {
+      "file": "tatami_mat/normal.png",
+      "bytes": 20436403,
+      "sha256": "65a89e1357fe5181638d44ad6150fa3e5e21438a13a196feff2e10a781a20404"
+    },
+    {
+      "file": "tatami_mat/ao.jpg",
+      "bytes": 2374019,
+      "sha256": "7b9bd02ba0ba9805683dcd61ce8fdff9820a269be79cb6a88920528e937aa7dd"
+    },
+    {
+      "file": "tatami_mat/roughness.jpg",
+      "bytes": 1151251,
+      "sha256": "39e132424cf4c5a9dbedd167893d39eb3eeb2a5e8450ee7cde396ddc4777c8d8"
+    }
+  ]
+}
