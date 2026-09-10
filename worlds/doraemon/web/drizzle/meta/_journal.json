@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1789078742024,
+      "tag": "0000_useful_flatman",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789079761702,
+      "tag": "0001_rare_brood",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789080109421,
+      "tag": "0002_curly_viper",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1789082143376,
+      "tag": "0003_wet_franklin_richards",
+      "breakpoints": true
+    }
+  ]
+}

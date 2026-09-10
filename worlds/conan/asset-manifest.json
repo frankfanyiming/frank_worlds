@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "release": "xlands-2026-09-11",
+  "archives": [
+    {
+      "id": "conan",
+      "name": "conan-source-2026-09-11.zip",
+      "url": "https://github.com/frankfanyiming/frank_worlds/releases/download/xlands-2026-09-11/conan-source-2026-09-11.zip",
+      "bytes": 1166124362,
+      "sha256": "8f4c4c3e3cb768da66cb77f607ccb980e129722d2abec82e4bcd007f8caa93fb",
+      "extractTo": "worlds/conan/source"
+    },
+    {
+      "id": "conan-web",
+      "name": "conan-web-source-2026-09-11.zip",
+      "url": "https://github.com/frankfanyiming/frank_worlds/releases/download/xlands-2026-09-11/conan-web-source-2026-09-11.zip",
+      "bytes": 570360039,
+      "sha256": "d4deebab61eb3fdc94269dc1e01a90854564668625e5bbfeea4ff006e04dc0b5",
+      "extractTo": "worlds/conan/web-project"
+    }
+  ]
+}

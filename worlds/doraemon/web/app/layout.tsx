@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import './xlands.css';
 export const metadata: Metadata = {
-  title: '那个夏天 · frank 小世界',
-  description: 'Frank 制作的哆啦A梦同人 3D 小镇。走进大雄家，使用竹蜻蜓和任意门，过桥去后山，体验四季与昼夜。欢迎一起共建。',
+  title: '小世界 · XLands',
+  description: '进入小世界，旅行、探索，也留下自己的作品。',
   authors: [{name: 'Frank', url: 'https://github.com/frankfanyiming/frank_worlds'}],
 };
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {

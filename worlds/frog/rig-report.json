@@ -1,0 +1,22 @@
+{
+  "source": "Tripo",
+  "bones": 16,
+  "clips": [
+    "Idle",
+    "JumpAir",
+    "JumpStart",
+    "Land",
+    "Sit",
+    "Walk"
+  ],
+  "leftLeg": [
+    "thigh.L",
+    "shin.L",
+    "foot.L"
+  ],
+  "rightLeg": [
+    "thigh.R",
+    "shin.R",
+    "foot.R"
+  ]
+}

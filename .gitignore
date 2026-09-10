@@ -8,3 +8,19 @@ dist/
 *.tsbuildinfo
 .DS_Store
 *.log
+
+# Native source assets are versioned as GitHub Release archives with SHA-256 manifests.
+worlds/conan/web-source/
+worlds/conan/web-optimized/
+worlds/conan/source/assets/
+worlds/conan/source/ui-font.ttc
+worlds/conan/web-project/assets/
+worlds/conan/web-project/ui-font.ttc
+worlds/frog/source/assets/
+worlds/frog/source/ui-font.ttc
+worlds/frog/blender/
+**/export_templates/
+**/feature_profiles/
+**/script_templates/
+**/text_editor_themes/
+*.blend1

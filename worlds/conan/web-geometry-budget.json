@@ -1,0 +1,26 @@
+[
+  {
+    "file": "assets/street.glb",
+    "originalFaces": 3461446,
+    "webFaces": 278168,
+    "bytes": 24152528
+  },
+  {
+    "file": "assets/buildings/agasa.glb",
+    "originalFaces": 499902,
+    "webFaces": 353314,
+    "bytes": 27343564
+  },
+  {
+    "file": "assets/buildings/kudo.glb",
+    "originalFaces": 1956007,
+    "webFaces": 305229,
+    "bytes": 26080720
+  },
+  {
+    "file": "assets/buildings/mouri.glb",
+    "originalFaces": 1311484,
+    "webFaces": 381333,
+    "bytes": 31405048
+  }
+]

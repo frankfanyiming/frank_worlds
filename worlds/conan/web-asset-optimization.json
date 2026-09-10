@@ -1,0 +1,22 @@
+[
+  {
+    "file": "buildings/agasa.glb",
+    "originalBytes": 96965536,
+    "webBytes": 32371256
+  },
+  {
+    "file": "buildings/kudo.glb",
+    "originalBytes": 265493676,
+    "webBytes": 162869764
+  },
+  {
+    "file": "buildings/mouri.glb",
+    "originalBytes": 202238424,
+    "webBytes": 80734460
+  },
+  {
+    "file": "street.glb",
+    "originalBytes": 295615228,
+    "webBytes": 309521316
+  }
+]

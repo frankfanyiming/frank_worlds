@@ -6,7 +6,9 @@ const {PLACES,collides,groundHeight}=await import('data:text/javascript;base64,'
 const data=JSON.parse(fs.readFileSync('public/models/world.json','utf8'));
 for(const p of PLACES)assert(!collides(p.x,p.y,p.floor?3.15:.23,data.colliders),`Destination blocked: ${p.id}`);
 assert(collides(-17.15,4,.48,data.colliders),'House wall must block player');
-assert(collides(-34,5,.23,data.colliders),'Neighbor must block player');
+// The current neighborhood opens this interior; its perimeter wall still blocks movement.
+assert(!collides(-34,5,.23,data.colliders),'Neighbor interior must remain explorable');
+assert(collides(-39.25,5,.23,data.colliders),'Neighbor perimeter wall must block player');
 assert.equal(groundHeight(-10,5,3.15),3.15);assert.equal(groundHeight(-9,-7,.23),.23);
 function route(points,z){
  for(let k=1;k<points.length;k++){
