@@ -6,9 +6,10 @@
       "id": "frog",
       "name": "frog-source-2026-09-11.zip",
       "url": "https://github.com/frankfanyiming/frank_worlds/releases/download/xlands-2026-09-11/frog-source-2026-09-11.zip",
-      "bytes": 84523073,
-      "sha256": "62e31faad7aaa176457811fa0126205cdf80a7e856a2b29cfb1ad85a43b283bc",
+      "bytes": 92091162,
+      "sha256": "76259be5ac4072ce75dfaa3c809571cc0cd8986faba685b8890a48936b7b9acb",
       "extractTo": "worlds/frog"
     }
-  ]
+  ],
+  "availability": "pending-publication"
 }

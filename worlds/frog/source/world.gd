@@ -181,7 +181,7 @@ func _button(txt: String,action: Callable) -> Button:
 
 func _setup_ui():
  hud=CanvasLayer.new();add_child(hud);overlay=Control.new();overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);overlay.mouse_filter=Control.MOUSE_FILTER_IGNORE;hud.add_child(overlay)
- var theme=Theme.new();theme.default_font=load("res://ui-font.ttc");theme.default_font_size=18;overlay.theme=theme
+ var theme=Theme.new();theme.default_font=load("res://ui-font.otf");theme.default_font_size=18;overlay.theme=theme
  var title_panel=PanelContainer.new();title_panel.position=Vector2(26,22);overlay.add_child(title_panel);title_panel.add_theme_stylebox_override("panel",_style(Color(.96,.96,.89,.91)))
  var left=VBoxContainer.new();title_panel.add_child(left)
  var title=_label("旅行青蛙 · 林间来信",25);left.add_child(title)

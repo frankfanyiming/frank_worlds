@@ -7,6 +7,7 @@ name=sys.argv[1] if len(sys.argv)>1 else ''
 if name not in ['frog','conan','conan-web']:raise SystemExit('Usage: python3 tools/fetch-native-assets.py frog|conan|conan-web')
 world='conan' if name.startswith('conan') else name
 manifest=json.loads((ROOT/'worlds'/world/'asset-manifest.json').read_text())
+if manifest.get('availability')=='pending-publication':raise SystemExit('The full native source archives await publication approval; code and browser builds are available in this repository.')
 entry=next(e for e in manifest['archives'] if e['id']==name)
 target=ROOT/entry['extractTo'];target.mkdir(parents=True,exist_ok=True)
 with tempfile.TemporaryDirectory() as temporary:

@@ -7,3 +7,5 @@
 完整资产通过根目录 `tools/fetch-native-assets.py` 下载，并核验 SHA-256 后解压。资产包链接见 `asset-manifest.json`。大型资产按仓库约定放在 GitHub Releases；源代码与版本清单保存在 Git。
 
 浏览器入口：[小世界](https://frankfanyiming.github.io/frank_worlds/)
+
+完整源资产包已整理，但公开上传仍等待仓库所有者单独确认。网页运行包与可读源码独立发布；资产下载脚本会明确提示当前状态。

@@ -6,17 +6,18 @@
       "id": "conan",
       "name": "conan-source-2026-09-11.zip",
       "url": "https://github.com/frankfanyiming/frank_worlds/releases/download/xlands-2026-09-11/conan-source-2026-09-11.zip",
-      "bytes": 1166124362,
-      "sha256": "8f4c4c3e3cb768da66cb77f607ccb980e129722d2abec82e4bcd007f8caa93fb",
+      "bytes": 1168379136,
+      "sha256": "0ca0478913546ceb7ca5dfbac6bb729c1137922dd3a14917160c15a7d2e165e3",
       "extractTo": "worlds/conan/source"
     },
     {
       "id": "conan-web",
       "name": "conan-web-source-2026-09-11.zip",
       "url": "https://github.com/frankfanyiming/frank_worlds/releases/download/xlands-2026-09-11/conan-web-source-2026-09-11.zip",
-      "bytes": 570360039,
-      "sha256": "d4deebab61eb3fdc94269dc1e01a90854564668625e5bbfeea4ff006e04dc0b5",
+      "bytes": 576031520,
+      "sha256": "06de8e3550d1288670473c3563d4f05051f94feee360881221b3a8dbd1756811",
       "extractTo": "worlds/conan/web-project"
     }
-  ]
+  ],
+  "availability": "pending-publication"
 }

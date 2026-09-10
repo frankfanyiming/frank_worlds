@@ -42,3 +42,5 @@ npm run build:pages
 用户自己的 OpenAI API Key 只留在页面内存，请求直接发往 OpenAI。平台 Agent 默认 GPT‑6 Astra，支付及服务密钥配置齐备后启用；未配置时禁止调用与扣款。
 
 代码授权与模型来源见 [LICENSE](LICENSE)、[CREDITS](CREDITS.md)。
+
+旅行蛙与柯南的完整源模型压缩包已整理，公开上传待确认；当前 Git 包含可读源码和清单，网页运行包单独发布在 gh-pages。确认公开后会更新清单并开放自动下载。

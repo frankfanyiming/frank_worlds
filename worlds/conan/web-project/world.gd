@@ -155,7 +155,7 @@ func build_people()->void:
 		var n=model("pedestrian_m" if i%2==0 else "pedestrian_f",exterior,Vector3(16.6 if i%2==0 else 8.65,.16,-19+float(i)*8));var a=animation_in(n);play(a,"Walk");actors.append({"node":n,"anim":a,"name":"街坊","dialog":"午后好，河边和车站都可以步行过去。","walking":true,"home":n.position,"phase":float(i)*1.31})
 func build_ui()->void:
 	ui=CanvasLayer.new();add_child(ui);ui.name="Interface"
-	var theme=Theme.new();theme.default_font=load("res://ui-font.ttc");theme.default_font_size=15
+	var theme=Theme.new();theme.default_font=load("res://ui-font.otf");theme.default_font_size=15
 	var panel=PanelContainer.new();panel.position=Vector2(24,22);panel.theme=theme;ui.add_child(panel)
 	var style=StyleBoxFlat.new();style.bg_color=Color(.055,.09,.115,.87);style.corner_radius_top_left=14;style.corner_radius_top_right=14;style.corner_radius_bottom_left=14;style.corner_radius_bottom_right=14;style.content_margin_left=18;style.content_margin_right=18;style.content_margin_top=13;style.content_margin_bottom=13;panel.add_theme_stylebox_override("panel",style)
 	var col=VBoxContainer.new();col.add_theme_constant_override("separation",8);panel.add_child(col)

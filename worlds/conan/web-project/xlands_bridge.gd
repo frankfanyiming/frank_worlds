@@ -15,7 +15,7 @@ func _ready():
  if ResourceLoader.exists("res://assets/forest-original.wav"):
   music=AudioStreamPlayer.new();music.stream=load("res://assets/forest-original.wav");music.volume_db=-3;add_child(music);music.finished.connect(func():music.play());music.play()
   if OS.has_feature("web"):AudioServer.set_bus_mute(0,JavaScriptBridge.eval("new URLSearchParams(location.search).get('sound') !== '1'"))
- var canvas=CanvasLayer.new();add_child(canvas);var button=Button.new();button.text=_t("共创拓展区");button.position=Vector2(28,85);button.add_theme_font_override("font",load("res://ui-font.ttc"));button.add_theme_font_size_override("font_size",15);canvas.add_child(button);button.pressed.connect(_expand)
+ var canvas=CanvasLayer.new();add_child(canvas);var button=Button.new();button.text=_t("共创拓展区");button.position=Vector2(28,85);button.add_theme_font_override("font",load("res://ui-font.otf"));button.add_theme_font_size_override("font_size",15);canvas.add_child(button);button.pressed.connect(_expand)
 func _expand():
  if OS.has_feature("web"):JavaScriptBridge.eval("window.parent.postMessage({type:'xlands-expansion'},'*')")
  else:OS.shell_open("https://frankfanyiming.github.io/frank_worlds/#expansion/conan")
