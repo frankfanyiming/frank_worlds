@@ -12,7 +12,7 @@
     "lint": "oxlint",
     "format": "oxfmt",
     "build:pages": "vite build --config vite.pages.config.ts",
-    "test": "node tests/runtime.test.mjs",
+    "test": "node tests/runtime.test.mjs && node tests/loading.test.cjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

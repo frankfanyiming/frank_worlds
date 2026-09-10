@@ -1,6 +1,6 @@
 import {restoreBedroomMaterials} from './bedroom-materials';
-import {MODEL_PARTS} from './model-manifest';
-import {LoadProgress,boundedMap,withDeadline,fetchBytes} from './loading';
+import {STARTUP_PARTS,BEDROOM_PART,ASSET_VERSION} from './model-manifest';
+import {LoadProgress,boundedMap,withDeadline,fetchBytes,evictCachedAsset} from './loading';
 import {assetPath} from './asset-path';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -21,13 +21,15 @@ import {TownWeather} from './weather';
 import {TownSound} from './sound';
 import {TownInteriorLight} from './lighting';
 type CharacterMotion={mixer:THREE.AnimationMixer;actions:Map<string,THREE.AnimationAction>;current:string;oneShotUntil:number};
-export type TownState={adventure?:ReturnType<TownAdventure['snapshot']>;weather?:ReturnType<TownWeather['snapshot']>;audio?:ReturnType<TownSound['snapshot']>;ready:boolean;progress:number;loadingStage?:string;house?:'home'|'shizuka'|null;mode:ViewMode;inside:boolean;floor:number;cutaway:boolean;place:PlaceId;position:{x:number;y:number};near:string;actor:Actor|null;sunset:boolean;error:string|null};
+export type BedroomState={status:'idle'|'loading'|'ready'|'error';progress:number;requested:boolean;error:string|null};
+export type TownState={bedroom?:BedroomState;adventure?:ReturnType<TownAdventure['snapshot']>;weather?:ReturnType<TownWeather['snapshot']>;audio?:ReturnType<TownSound['snapshot']>;ready:boolean;progress:number;loadingStage?:string;house?:'home'|'shizuka'|null;mode:ViewMode;inside:boolean;floor:number;cutaway:boolean;place:PlaceId;position:{x:number;y:number};near:string;actor:Actor|null;sunset:boolean;error:string|null};
 const START:TownState={ready:false,progress:0,mode:'orbit',inside:false,floor:0,cutaway:false,place:'home',position:{x:-9.6,y:-6.3},near:'',actor:null,sunset:false,error:null};
 export class TownEngine {
  water=new TownWater(); atmosphere=new TownAtmosphere(); sky:TownSky; traffic?:TownTraffic; ecosystem?:TownEcosystem; shaderErrors:string[]=[];
  interiorLight:TownInteriorLight;adventure:TownAdventure;weather:TownWeather;sound=new TownSound();
- loadAbort=new AbortController(); loadedForFrame=false; state={...START}; scene=new THREE.Scene(); camera=new THREE.PerspectiveCamera(38,1,.08,260);
+ loadAbort=new AbortController(); loadedForFrame=false; state:TownState={...START,bedroom:{status:'idle',progress:0,requested:false,error:null}}; scene=new THREE.Scene(); camera=new THREE.PerspectiveCamera(38,1,.08,260);
  renderer:THREE.WebGLRenderer; composer?:EffectComposer; ao?:SSAOPass; sun:THREE.DirectionalLight; environmentTarget:THREE.WebGLRenderTarget;
+ modelLoader?:GLTFLoader; bedroomTask?:Promise<boolean>; navigation=0; bedroomQueued=false;
  world?:THREE.Group; player=new THREE.Group(); playerPosition=new THREE.Vector3(-9.6,.23,6.3);
  target=new THREE.Vector3(-8,1,-2); targetGoal=this.target.clone(); azimuth=.63; distance=41; yaw=0; pitch=0;
  groundSurfaces:GroundSurface[]=[]; assetRevision=0; colliders:Collider[]=[]; slidingDoors:{object:THREE.Object3D;collider:Collider;axis:'x'|'z';origin:number;sign:number;travel:number;target:number}[]=[]; keys=new Set<string>(); pointer={down:false,x:0,y:0,moved:0}; paused=false; touch={x:0,y:0};
@@ -55,25 +57,25 @@ export class TownEngine {
  on(target:EventTarget,event:string,fn:EventListener,opts?:AddEventListenerOptions){target.addEventListener(event,fn,opts);this.disposers.push(()=>target.removeEventListener(event,fn,opts));}
  emit(){if(!this.dead)this.publish({...this.state,adventure:this.adventure?.snapshot(),weather:this.weather?.snapshot(),audio:this.sound.snapshot(),position:{x:this.playerPosition.x,y:-this.playerPosition.z}});}
  async load(){try{
-  const draco=new DRACOLoader();draco.setDecoderPath(assetPath('/draco/'));draco.setWorkerLimit(2);this.disposers.push(()=>draco.dispose());const loader=new GLTFLoader().setDRACOLoader(draco);
-  const parts=MODEL_PARTS;
+  const draco=new DRACOLoader();draco.setDecoderPath(assetPath('/draco/'));draco.setWorkerLimit(2);this.disposers.push(()=>draco.dispose());const loader=this.modelLoader=new GLTFLoader().setDRACOLoader(draco);
+  const parts=STARTUP_PARTS;
   const tracker=new LoadProgress(parts.length+1,p=>{this.state.progress=p;this.emit();});
   this.state.loadingStage='正在打开街道和房屋';this.emit();
-  const dataTask=fetchBytes(assetPath('/models/world.json?v=12'),this.loadAbort.signal).then(bytes=>{const value=JSON.parse(new TextDecoder().decode(bytes));if(!Array.isArray(value.colliders)||!value.actors)throw new Error('小镇地图数据不完整');tracker.update(parts.length,1);return value;});
+  const dataTask=fetchBytes(assetPath('/models/world.json?v='+ASSET_VERSION),this.loadAbort.signal).then(async bytes=>{try{const value=JSON.parse(new TextDecoder().decode(bytes));if(!Array.isArray(value.colliders)||!value.actors)throw new Error('小镇地图数据不完整');tracker.update(parts.length,1);return value;}catch(e){await evictCachedAsset(assetPath('/models/world.json?v='+ASSET_VERSION));throw e;}});
   const [gltfs,data]=await Promise.all([boundedMap(parts,this.quality?3:2,async(part,i)=>{
    let failure:unknown;
    for(let attempt=0;attempt<2;attempt++){
     if(this.dead||this.loadAbort.signal.aborted)throw new Error('加载已取消');
-    try{const bytes=await fetchBytes(assetPath('/models/'+part+'.glb?v=20260910-12'),this.loadAbort.signal);tracker.update(i,.65);
+    try{const bytes=await fetchBytes(assetPath('/models/'+part+'.glb?v='+ASSET_VERSION),this.loadAbort.signal);tracker.update(i,.65);
      const result=await withDeadline(loader.parseAsync(bytes,assetPath('/models/')),45000,'模型解码');tracker.update(i,1);return result;
-    }catch(e){failure=e;if(this.loadAbort.signal.aborted)throw e;}
+    }catch(e){failure=e;if(this.loadAbort.signal.aborted)throw e;await evictCachedAsset(assetPath('/models/'+part+'.glb?v='+ASSET_VERSION));}
    }
    throw new Error('部分小镇资源没有下载完成，请检查网络后重试。',{cause:failure});
   }),dataTask]);
   tracker.stage(92);this.state.loadingStage='正在布置房间和伙伴';this.emit();
 
   if(this.dead)return;this.assetRevision=(data as {revision:number}).revision;this.colliders=(data as {colliders:Collider[]}).colliders;this.groundSurfaces=(data as {walkableSurfaces?:GroundSurface[]}).walkableSurfaces??[];const landscape=data as {heightfield?:Heightfield;walkableOverlays?:WalkMesh[]};if(landscape.heightfield)setExpansionTerrain(landscape.heightfield,landscape.walkableOverlays);this.playerPosition.y=groundHeight(this.playerPosition.x,-this.playerPosition.z,.23,this.groundSurfaces);this.player.position.copy(this.playerPosition);this.world=new THREE.Group();this.ecosystem=new TownEcosystem(this.colliders,this.groundSurfaces,(id,clip)=>{const m=this.motions.get(id);if(m&&m.oneShotUntil<=this.elapsed)this.playClip(id,clip);});for(let i=0;i<gltfs.length;i++){
-   const gltf=gltfs[i];if(parts[i].startsWith('vehicles/')||parts[i].startsWith('gadgets/'))continue;if(parts[i].startsWith('fauna/')){this.ecosystem.addFauna(gltf,parts[i]==='fauna/cat'?'cat':'bird',this.world,parts[i].endsWith('_ash')?1:0);continue;}if(parts[i]==='bedroom-v12'){this.state.loadingStage='正在铺好榻榻米和布置房间';this.emit();await restoreBedroomMaterials(gltf.scene,this.loadAbort.signal,Math.min(8,this.renderer.capabilities.getMaxAnisotropy()),fraction=>tracker.stage(92+fraction*3));}this.world.add(gltf.scene);
+   const gltf=gltfs[i];if(parts[i].startsWith('vehicles/')||parts[i].startsWith('gadgets/'))continue;if(parts[i].startsWith('fauna/')){this.ecosystem.addFauna(gltf,parts[i]==='fauna/cat'?'cat':'bird',this.world,parts[i].endsWith('_ash')?1:0);continue;}this.world.add(gltf.scene);
    if(parts[i].startsWith('actors/')){const id=parts[i].split('/')[1].replace('-v11','');const root=gltf.scene.getObjectByName('actor_'+id);if(!root)throw new Error('Missing actor '+id);
     if(id!=='nobita'){const origin=(data as {actors:Record<string,[number,number,number]>}).actors['actor_'+id];if(origin)root.position.set(origin[0],origin[2],-origin[1]);}
     const mixer=new THREE.AnimationMixer(root);const actions=new Map(gltf.animations.filter(clip=>clip.name!=="Wave").map(clip=>[clip.name,mixer.clipAction(clip)]));
@@ -82,19 +84,70 @@ export class TownEngine {
    }
   }this.scene.add(this.world);this.ecosystem.addResidents(this.world);this.traffic=new TownTraffic(this.world);for(let i=0;i<parts.length;i++)if(parts[i].startsWith('vehicles/'))this.traffic.addAsset(gltfs[i].scene,parts[i].includes('kei_truck')?'truck':'car');
   this.ecosystem.obstacle=(x,y,z,r)=>this.traffic?.collides(x,y,z,r)??false;
-  const unique=new Set<THREE.Material>();
-  this.world.traverse(o=>{if(o instanceof THREE.Mesh){o.castShadow=true;o.receiveShadow=true;if(o instanceof THREE.SkinnedMesh)o.frustumCulled=false;const ms=Array.isArray(o.material)?o.material:[o.material];o.castShadow=!ms.every(m=>/Decal|LotTransition|glass/i.test(m.name));ms.forEach(m=>{if(unique.has(m))return;unique.add(m);if(m instanceof THREE.MeshStandardMaterial){for(const texture of [m.map,m.normalMap,m.roughnessMap])if(texture)texture.anisotropy=Math.min(8,this.renderer.capabilities.getMaxAnisotropy());if(m.map){m.map.wrapS=m.map.wrapT=THREE.RepeatWrapping;if(!m.normalMap&&/warm oak|walnut|honey floor|woven rush|plaster|Oak|Walnut|Timber|Tatami|Curtain|Seat/.test(m.name)){m.bumpMap=m.map;m.bumpScale=/Tatami|Curtain|Seat/.test(m.name)?.0003:.0006;}}
-    if(!/^V10_|Glass|Chrome|Bell|Brass|Steel/.test(m.name))m.roughness=Math.max(m.roughness,.42);if(/^Glass/.test(m.name)){m.transparent=true;m.opacity=.12;m.depthWrite=false;}if(/BotanicalLeaf|Hydrangea|GrassBlade/.test(m.name))m.side=THREE.DoubleSide;if(m.name==='soft blue window glass')m.roughness=.32;if(/Decal|LotTransition/.test(m.name)){m.transparent=true;m.depthWrite=false;m.polygonOffset=true;m.polygonOffsetFactor=-1;m.polygonOffsetUnits=-1;}}});this.atmosphere.install(o);this.water.install(o);}});
+  this.prepareMeshes(this.world);
   const avatar=this.world.getObjectByName('actor_nobita');if(avatar){avatar.removeFromParent();avatar.position.set(0,0,0);this.player.add(avatar);}
   // Preserve imported mesh axes; yaw belongs to the enclosing player group.
   this.weather.install(this.world);for(let i=0;i<parts.length;i++)if(parts[i].startsWith('gadgets/')){const id=parts[i].split('/')[1];if(id==='season-extras'){gltfs[i].scene.updateMatrixWorld(true);this.weather.addAsset(gltfs[i].scene);for(const kind of ['baseball','bat']){const o=gltfs[i].scene.getObjectByName(kind==='baseball'?'Prop_Baseball':'Prop_Bat');if(o){const g=new THREE.Group();g.add(o.clone(true));this.adventure.addAsset(kind,g);}}}else this.adventure.addAsset(id,gltfs[i].scene);}
-  for(const config of [
-   {name:'v12_nobita_slide',x:-12.585,y:5.35,z:4.13,w:.065,d:.84,h:1.97,axis:'z' as const,travel:-.88,origin:5.35,sign:-1},
-   {name:'v12_closet_slide',x:-10.80,y:5.83,z:4.35,w:1.20,d:.06,h:2.30,axis:'x' as const,travel:-1.19,origin:-10.80,sign:1},
-  ]){const object=this.world.getObjectByName(config.name);if(object){const {x,y,z,w,d,h}=config;const collider={x,y,z,w,d,h,group:config.name};this.colliders.push(collider);this.slidingDoors.push({object,collider,axis:config.axis,origin:config.origin,sign:config.sign,travel:config.travel,target:0});}}
   this.layers();tracker.stage(96);this.state.loadingStage="正在准备第一幅画面";this.emit();
   await withDeadline(this.renderer.compileAsync(this.scene,this.camera),45000,"画面准备");if(this.dead)return;if(this.shaderErrors.length)throw new Error("当前设备无法绘制小镇，请使用流畅模式重试。");this.loadedForFrame=true;
  }catch(e){if(!this.dead){console.error('Town load:',e);this.loadAbort.abort();this.state.error=e instanceof Error?e.message:'小镇没有完整载入，请检查网络后重试。';this.emit();}}}
+ prepareMeshes(root:THREE.Object3D){
+  const unique=new Set<THREE.Material>();
+  root.traverse(o=>{if(o instanceof THREE.Mesh){o.castShadow=true;o.receiveShadow=true;if(o instanceof THREE.SkinnedMesh)o.frustumCulled=false;const ms=Array.isArray(o.material)?o.material:[o.material];o.castShadow=!ms.every(m=>/Decal|LotTransition|glass/i.test(m.name));ms.forEach(m=>{if(unique.has(m))return;unique.add(m);if(m instanceof THREE.MeshStandardMaterial){for(const texture of [m.map,m.normalMap,m.roughnessMap])if(texture)texture.anisotropy=Math.min(8,this.renderer.capabilities.getMaxAnisotropy());if(m.map){m.map.wrapS=m.map.wrapT=THREE.RepeatWrapping;if(!m.normalMap&&/warm oak|walnut|honey floor|woven rush|plaster|Oak|Walnut|Timber|Tatami|Curtain|Seat/.test(m.name)){m.bumpMap=m.map;m.bumpScale=/Tatami|Curtain|Seat/.test(m.name)?.0003:.0006;}}
+    if(!/^V10_|Glass|Chrome|Bell|Brass|Steel/.test(m.name))m.roughness=Math.max(m.roughness,.42);if(/^Glass/.test(m.name)){m.transparent=true;m.opacity=.12;m.depthWrite=false;}if(/BotanicalLeaf|Hydrangea|GrassBlade/.test(m.name))m.side=THREE.DoubleSide;if(m.name==='soft blue window glass')m.roughness=.32;if(/Decal|LotTransition/.test(m.name)){m.transparent=true;m.depthWrite=false;m.polygonOffset=true;m.polygonOffsetFactor=-1;m.polygonOffsetUnits=-1;}}});this.atmosphere.install(o);this.water.install(o);}});
+ }
+ registerBedroomDoors(room:THREE.Object3D){
+  for(const config of [
+   {name:'v12_nobita_slide',x:-12.585,y:5.35,z:4.13,w:.065,d:.84,h:1.97,axis:'z' as const,travel:-.88,origin:5.35,sign:-1},
+   {name:'v12_closet_slide',x:-10.80,y:5.83,z:4.35,w:1.20,d:.06,h:2.30,axis:'x' as const,travel:-1.19,origin:-10.80,sign:1},
+  ]){const object=room.getObjectByName(config.name);if(object){const {x,y,z,w,d,h}=config;const collider={x,y,z,w,d,h,group:config.name};this.colliders.push(collider);this.slidingDoors.push({object,collider,axis:config.axis,origin:config.origin,sign:config.sign,travel:config.travel,target:0});}}
+ }
+ ensureBedroom(requested=false):Promise<boolean>{
+  const state=this.state.bedroom!;
+  if(state.status==='ready')return Promise.resolve(true);
+  if(requested){state.requested=true;this.keys.clear();this.touch={x:0,y:0};this.walkTarget=null;this.emit();}
+  if(this.bedroomTask)return this.bedroomTask;
+  if(!this.world||!this.modelLoader||this.dead)return Promise.resolve(false);
+  state.status='loading';state.progress=0;state.error=null;this.emit();
+  this.bedroomTask=this.loadBedroom().finally(()=>{this.bedroomTask=undefined;});
+  return this.bedroomTask;
+ }
+ async loadBedroom():Promise<boolean>{
+  const state=this.state.bedroom!,url=assetPath('/models/'+BEDROOM_PART+'.glb?v='+ASSET_VERSION);
+  let room:THREE.Group|undefined;
+  const progress=(value:number)=>{state.progress=Math.floor(value);this.emit();};
+  try{
+   const bytes=await fetchBytes(url,this.loadAbort.signal);progress(20);
+   try{room=(await withDeadline(this.modelLoader!.parseAsync(bytes,assetPath('/models/')),45000,'房间模型解码')).scene;}catch(e){await evictCachedAsset(url);throw e;}
+   if(this.dead)throw new Error('加载已取消');progress(30);
+   await restoreBedroomMaterials(room,this.loadAbort.signal,Math.min(8,this.renderer.capabilities.getMaxAnisotropy()),fraction=>progress(30+fraction*60));
+   if(this.dead)throw new Error('加载已取消');
+   this.prepareMeshes(room);progress(94);
+   const shaderErrorCount=this.shaderErrors.length;
+   await withDeadline(this.renderer.compileAsync(room,this.camera,this.scene),45000,'房间画面准备');
+   if(this.shaderErrors.length>shaderErrorCount)throw new Error('房间画面暂时无法绘制');
+   if(this.dead)throw new Error('加载已取消');
+   // Add the complete room atomically: never show bare meshes or temporary materials.
+   this.world!.add(room);this.registerBedroomDoors(room);this.weather.install(room);
+   state.status='ready';state.progress=100;state.requested=false;state.error=null;this.layers();this.sun.shadow.needsUpdate=true;this.emit();return true;
+  }catch(e){
+   if(room){room.removeFromParent();this.disposeObject(room);}
+   if(!this.dead){state.status='error';state.error='大雄的房间还没准备好，请重试。';this.emit();console.warn('Bedroom load:',e);}return false;
+  }
+ }
+ cancelBedroomEntry(){this.navigation++;if(this.state.bedroom)this.state.bedroom.requested=false;this.keys.clear();this.touch={x:0,y:0};this.walkTarget=null;this.emit();}
+ retryBedroomEntry(){void this.teleport('bedroom');}
+ queueBedroom(){
+  if(this.bedroomQueued)return;this.bedroomQueued=true;
+  // Start after a visible town frame, leaving initial navigation and paint unblocked.
+  const timer=setTimeout(()=>{if(!this.dead&&this.state.bedroom?.status==='idle')void this.ensureBedroom();},1500);
+  this.disposers.push(()=>clearTimeout(timer));
+ }
+ disposeObject(root:THREE.Object3D){
+  const materials=new Set<THREE.Material>(),textures=new Set<THREE.Texture>(),geometries=new Set<THREE.BufferGeometry>();
+  root.traverse(o=>{if(o instanceof THREE.Mesh){geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material])materials.add(m);}});
+  for(const m of materials){for(const v of Object.values(m))if(v instanceof THREE.Texture)textures.add(v);m.dispose();}for(const t of textures)t.dispose();for(const g of geometries)g.dispose();
+ }
  playClip(id:string,name:string,restart=false){
   const motion=this.motions.get(id);if(!motion||(!restart&&motion.current===name))return;const next=motion.actions.get(name);if(!next)return;
   const old=motion.actions.get(motion.current);next.reset().setEffectiveWeight(1);const walkRate:Record<string,number>={doraemon:.28/.212,shizuka:.52/.60,gian:.57/(.60*1.57/1.4),suneo:.51/(.60*1.35/1.4)};next.setEffectiveTimeScale(name==='Walk'?(walkRate[id]??1):1);
@@ -123,11 +176,11 @@ export class TownEngine {
 
  toggleCutaway(){this.state.cutaway=!this.state.cutaway;this.state.house=this.state.place==='shizuka'?'shizuka':this.state.house??'home';if(this.state.cutaway){this.targetGoal.set(this.state.house==='shizuka'?-11.95:-13,3,this.state.house==='shizuka'?18:-4.5);this.target.copy(this.targetGoal);this.distance=28;}this.layers();this.emit();}
  setSunset(){this.state.sunset=!this.state.sunset;this.weather.setHour(this.state.sunset?17.5:15.5);this.emit();}
- teleport(id:PlaceId){this.adventure.onTeleport();const p=PLACES.find(p=>p.id===id);if(!p)return;this.playerPosition.set(p.x,p.floor?HOUSE.upper:groundHeight(p.x,p.y,.23,this.groundSurfaces),-p.y);this.state.place=id;this.state.floor=p.floor;this.state.inside=p.floor===1;this.state.house=p.floor===1?'home':null;this.state.actor=null;this.walkTarget=null;this.state.cutaway=p.floor===1;this.targetGoal.copy(this.playerPosition).add(new THREE.Vector3(0,1,0));this.target.copy(this.targetGoal);this.distance=p.floor?10:30;this.player.position.copy(this.playerPosition);this.yaw=id==='bedroom'?Math.PI:0;this.pitch=id==='bedroom'?-.15:0;this.layers();this.emit();}
- enterHome(){this.adventure.onTeleport();this.playerPosition.set(-11.50,HOUSE.lower,-1.8);this.player.position.copy(this.playerPosition);this.state.inside=true;this.state.house='home';this.state.floor=0;this.walkTarget=null;this.distance=17;this.targetGoal.copy(this.playerPosition).add(new THREE.Vector3(0,1,0));this.target.copy(this.targetGoal);this.layers();this.emit();}
- showTown(){if(this.adventure.state.activity==='time')this.adventure.onTeleport();this.state.mode='orbit';this.state.cutaway=false;this.targetGoal.set(0,1,27);this.target.copy(this.targetGoal);this.distance=158;this.layers();this.emit();}
+ async teleport(id:PlaceId){const navigation=++this.navigation;if(id==='bedroom'&&this.state.bedroom?.status!=='ready'){if(!await this.ensureBedroom(true)||this.dead||navigation!==this.navigation)return false;}else if(this.state.bedroom)this.state.bedroom.requested=false;this.adventure.onTeleport();const p=PLACES.find(p=>p.id===id);if(!p)return;this.playerPosition.set(p.x,p.floor?HOUSE.upper:groundHeight(p.x,p.y,.23,this.groundSurfaces),-p.y);this.state.place=id;this.state.floor=p.floor;this.state.inside=p.floor===1;this.state.house=p.floor===1?'home':null;this.state.actor=null;this.walkTarget=null;this.state.cutaway=p.floor===1;this.targetGoal.copy(this.playerPosition).add(new THREE.Vector3(0,1,0));this.target.copy(this.targetGoal);this.distance=p.floor?10:30;this.player.position.copy(this.playerPosition);this.yaw=id==='bedroom'?Math.PI:0;this.pitch=id==='bedroom'?-.15:0;this.layers();this.emit();return true;}
+ enterHome(){this.cancelBedroomEntry();this.adventure.onTeleport();this.playerPosition.set(-11.50,HOUSE.lower,-1.8);this.player.position.copy(this.playerPosition);this.state.inside=true;this.state.house='home';this.state.floor=0;this.walkTarget=null;this.distance=17;this.targetGoal.copy(this.playerPosition).add(new THREE.Vector3(0,1,0));this.target.copy(this.targetGoal);this.layers();this.emit();}
+ showTown(){this.cancelBedroomEntry();if(this.adventure.state.activity==='time')this.adventure.onTeleport();this.state.mode='orbit';this.state.cutaway=false;this.targetGoal.set(0,1,27);this.target.copy(this.targetGoal);this.distance=158;this.layers();this.emit();}
  setFloor(floor:number){if(this.state.house==='shizuka'||(!this.state.inside&&this.state.place==='shizuka')){this.enterShizuka(floor);return;}if(floor){this.teleport('bedroom');}else{this.enterHome();this.state.cutaway=true;this.layers();this.emit();}}
- enterShizuka(floor=0){this.adventure.onTeleport();this.playerPosition.set(-10.78,floor?2.94:.24,floor?19:21.0);this.player.position.copy(this.playerPosition);this.state.house='shizuka';this.state.inside=true;this.state.floor=floor;this.state.cutaway=true;this.state.actor=null;this.walkTarget=null;this.targetGoal.copy(this.playerPosition).set(-11.95,floor?3.3:1.3,18);this.target.copy(this.targetGoal);this.distance=15;this.layers();this.emit();}
+ enterShizuka(floor=0){this.cancelBedroomEntry();this.adventure.onTeleport();this.playerPosition.set(-10.78,floor?2.94:.24,floor?19:21.0);this.player.position.copy(this.playerPosition);this.state.house='shizuka';this.state.inside=true;this.state.floor=floor;this.state.cutaway=true;this.state.actor=null;this.walkTarget=null;this.targetGoal.copy(this.playerPosition).set(-11.95,floor?3.3:1.3,18);this.target.copy(this.targetGoal);this.distance=15;this.layers();this.emit();}
  toggleSlidingDoor(name:string){const door=this.slidingDoors.find(d=>d.object.name===name);if(!door)return;door.target=door.target===0?door.travel:0;this.emit();}
  updateDoors(dt:number){for(const d of this.slidingDoors){const offset=THREE.MathUtils.damp(d.object.position[d.axis],d.target,10,dt);const key=d.axis==='x'?'x':'y';const next={...d.collider,[key]:d.origin+d.sign*offset};if(collides(this.playerPosition.x,-this.playerPosition.z,this.playerPosition.y,[next],.23))continue;d.object.position[d.axis]=offset;d.collider[key]=next[key];}}
  layers(){if(!this.world)return;const indoor=this.state.inside;const doll=this.state.mode==='orbit'&&(indoor||this.state.cutaway);const lower=doll&&this.state.floor===0;const bedroomDoll=doll&&this.state.house==='home',bedroomLower=bedroomDoll&&this.state.floor===0;this.player.visible=this.state.mode==='orbit';
@@ -170,7 +223,7 @@ export class TownEngine {
   if(near.includes('壁橱')){this.state.actor={id:'closet',name:'哆啦A梦的壁橱',x:0,y:0,z:0,color:'#008ac3',lines:['叠好的被褥和小枕头。原来，哆啦A梦每天就睡在这里。']};this.emit();return;}
   if(actor){this.state.actor=actor;this.emit();}
  }
- meetActor(id:string){const actor=ACTORS.find(a=>a.id===id);if(!actor||!this.state.ready)return false;this.adventure.onTeleport();const target=this.ecosystem?.actorPosition(id)??new THREE.Vector3(actor.x,actor.z,-actor.y);let candidate:THREE.Vector3|undefined;for(let i=0;i<12;i++){const a=i*Math.PI/6,x=target.x+Math.cos(a)*1.2,z=target.z+Math.sin(a)*1.2,h=groundHeight(x,-z,target.y,this.groundSurfaces);if(Math.abs(h-target.y)<.5&&!collides(x,-z,h,this.colliders)){candidate=new THREE.Vector3(x,h,z);break;}}if(!candidate)return false;this.playerPosition.copy(candidate);this.player.position.copy(candidate);this.state.inside=insideHouse(candidate.x,-candidate.z);this.state.house=houseAt(candidate.x,-candidate.z);this.state.floor=candidate.y>2.75?1:0;this.state.actor=actor;this.targetGoal.copy(target).add(new THREE.Vector3(0,.9,0));this.target.copy(this.targetGoal);this.distance=this.state.inside?8:15;this.yaw=Math.atan2(candidate.x-target.x,candidate.z-target.z);this.layers();this.emit();return true;}
+ meetActor(id:string){this.cancelBedroomEntry();const actor=ACTORS.find(a=>a.id===id);if(!actor||!this.state.ready)return false;this.adventure.onTeleport();const target=this.ecosystem?.actorPosition(id)??new THREE.Vector3(actor.x,actor.z,-actor.y);let candidate:THREE.Vector3|undefined;for(let i=0;i<12;i++){const a=i*Math.PI/6,x=target.x+Math.cos(a)*1.2,z=target.z+Math.sin(a)*1.2,h=groundHeight(x,-z,target.y,this.groundSurfaces);if(Math.abs(h-target.y)<.5&&!collides(x,-z,h,this.colliders)){candidate=new THREE.Vector3(x,h,z);break;}}if(!candidate)return false;this.playerPosition.copy(candidate);this.player.position.copy(candidate);this.state.inside=insideHouse(candidate.x,-candidate.z);this.state.house=houseAt(candidate.x,-candidate.z);this.state.floor=candidate.y>2.75?1:0;this.state.actor=actor;this.targetGoal.copy(target).add(new THREE.Vector3(0,.9,0));this.target.copy(this.targetGoal);this.distance=this.state.inside?8:15;this.yaw=Math.atan2(candidate.x-target.x,candidate.z-target.z);this.layers();this.emit();return true;}
  closeDialogue(){this.state.actor=null;this.emit();}
  pointTo(x:number,y:number){const rect=this.renderer.domElement.getBoundingClientRect();const ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2((x-rect.left)/rect.width*2-1,-(y-rect.top)/rect.height*2+1),this.camera);
   const visible=(o:THREE.Object3D|null):boolean=>!o||(o.visible&&visible(o.parent));
@@ -180,7 +233,7 @@ export class TownEngine {
   const walkHit=hits.find(h=>inTown(h.point.x,-h.point.z)&&Math.abs(h.point.y-groundHeight(h.point.x,-h.point.z,this.playerPosition.y,this.groundSurfaces))<.23);
   if(walkHit){const point=walkHit.point.clone(),height=groundHeight(point.x,-point.z,this.playerPosition.y,this.groundSurfaces);if(collides(point.x,-point.z,height,this.colliders))return;point.y=height;this.walkTarget=point;}
  }
- move(dt:number){if(!this.state.ready||this.paused||this.state.actor||this.adventure.state.activity==='time'){this.idlePlayer();return;}if(this.adventure.flightMove(dt))return;const k=this.keys;let f=(k.has('KeyW')||k.has('ArrowUp')?1:0)-(k.has('KeyS')||k.has('ArrowDown')?1:0)-this.touch.y;let r=(k.has('KeyD')||k.has('ArrowRight')?1:0)-(k.has('KeyA')||k.has('ArrowLeft')?1:0)+this.touch.x;
+ move(dt:number){if(!this.state.ready||this.state.bedroom?.requested||this.paused||this.state.actor||this.adventure.state.activity==='time'){this.idlePlayer();return;}if(this.adventure.flightMove(dt))return;const k=this.keys;let f=(k.has('KeyW')||k.has('ArrowUp')?1:0)-(k.has('KeyS')||k.has('ArrowDown')?1:0)-this.touch.y;let r=(k.has('KeyD')||k.has('ArrowRight')?1:0)-(k.has('KeyA')||k.has('ArrowLeft')?1:0)+this.touch.x;
   const direction=new THREE.Vector3();const angle=this.state.mode==='first'?this.yaw:this.azimuth;
   if(f||r){this.walkTarget=null;direction.set(-Math.sin(angle)*f+Math.cos(angle)*r,0,-Math.cos(angle)*f-Math.sin(angle)*r);}
   else if(this.walkTarget){direction.subVectors(this.walkTarget,this.playerPosition);direction.y=0;if(direction.length()<.18){this.walkTarget=null;direction.set(0,0,0);}}
@@ -188,6 +241,10 @@ export class TownEngine {
    if(!collides(x,sy,z,this.colliders)&&!this.traffic?.collides(x,sy,z))this.playerPosition.x=x;
    const nz=THREE.MathUtils.clamp(old.z+direction.z*speed,-TOWN_BOUNDS.y1,-TOWN_BOUNDS.y0),nzY=groundHeight(this.playerPosition.x,-nz,old.y,this.groundSurfaces);if(!collides(this.playerPosition.x,-nz,nzY,this.colliders)&&!this.traffic?.collides(this.playerPosition.x,-nz,nzY))this.playerPosition.z=nz;
    this.playerPosition.y=groundHeight(this.playerPosition.x,-this.playerPosition.z,old.y,this.groundSurfaces);
+   // Pause on the staircase until the full upper room exists; retain the safe position.
+   if(houseAt(this.playerPosition.x,-this.playerPosition.z)==='home'&&this.playerPosition.y>2.7&&this.state.bedroom?.status!=='ready'){
+    this.playerPosition.copy(old);this.player.position.copy(old);void this.ensureBedroom(true);this.idlePlayer();return;
+   }
    if(this.playerPosition.distanceToSquared(old)<.0000001&&this.walkTarget)this.walkTarget=null;
    const yaw=Math.atan2(direction.x,direction.z);this.player.quaternion.slerp(new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),yaw),Math.min(1,dt*13));
    this.targetGoal.copy(this.playerPosition).add(new THREE.Vector3(0,1.05,0));
@@ -204,7 +261,7 @@ export class TownEngine {
   const shadowFocus=this.state.mode==='first'?this.playerPosition:this.target,extent=this.state.mode==='first'?(this.state.place==='bedroom'?6:12):this.distance>60?48:22;
   this.renderer.toneMapping=this.state.inside&&this.state.house==='home'&&this.state.floor===1?THREE.AgXToneMapping:THREE.ACESFilmicToneMapping;this.sun.target.position.copy(shadowFocus);this.sun.position.copy(shadowFocus).add(this.weather.sunOffset);const shadowCamera=this.sun.shadow.camera;
   if(shadowCamera.right!==extent){Object.assign(shadowCamera,{left:-extent,right:extent,top:extent,bottom:-extent});shadowCamera.updateProjectionMatrix();}
-  if(!document.hidden){this.shadowTimer+=dt;if(this.shadowTimer>.12){this.sun.shadow.needsUpdate=true;this.shadowTimer=0;}this.renderer.info.reset();if(this.quality&&this.composer)this.composer.render();else this.renderer.render(this.scene,this.camera);if(this.loadedForFrame&&!this.state.ready){if(this.shaderErrors.length)throw new Error("图形绘制失败，请切换流畅模式。");this.state.ready=true;this.state.progress=100;this.emit();}}
+  if(!document.hidden){this.shadowTimer+=dt;if(this.shadowTimer>.12){this.sun.shadow.needsUpdate=true;this.shadowTimer=0;}this.renderer.info.reset();if(this.quality&&this.composer)this.composer.render();else this.renderer.render(this.scene,this.camera);if(this.loadedForFrame&&!this.state.ready){if(this.shaderErrors.length)throw new Error("图形绘制失败，请切换流畅模式。");this.state.ready=true;this.state.progress=100;this.emit();this.queueBedroom();}}
  }catch(e){this.loadAbort.abort();this.state.ready=false;this.state.error=e instanceof Error?e.message:"画面暂时无法绘制，请使用流畅模式重试。";this.emit();}};
- destroy(){this.dead=true;this.loadAbort.abort();this.sound.dispose();this.ecosystem?.dispose();for(const m of this.motions.values()){m.mixer.stopAllAction();m.mixer.uncacheRoot(m.mixer.getRoot());}this.motions.clear();cancelAnimationFrame(this.raf);this.resizeObserver.disconnect();this.disposers.forEach(f=>f());this.composer?.dispose();this.ao?.dispose();this.scene.traverse(o=>{if(o instanceof THREE.Mesh){o.geometry.dispose();(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>{if(m instanceof THREE.MeshStandardMaterial)m.map?.dispose();m.dispose();});}});this.environmentTarget.dispose();this.renderer.dispose();this.renderer.domElement.remove();}
+ destroy(){this.dead=true;this.loadAbort.abort();this.sound.dispose();this.ecosystem?.dispose();for(const m of this.motions.values()){m.mixer.stopAllAction();m.mixer.uncacheRoot(m.mixer.getRoot());}this.motions.clear();cancelAnimationFrame(this.raf);this.resizeObserver.disconnect();this.disposers.forEach(f=>f());this.composer?.dispose();this.ao?.dispose();this.disposeObject(this.scene);this.environmentTarget.dispose();this.renderer.dispose();this.renderer.domElement.remove();}
 }

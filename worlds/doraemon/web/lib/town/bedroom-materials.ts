@@ -1,6 +1,7 @@
 import * as THREE from 'three';
+import {ASSET_VERSION} from './model-manifest';
 import {assetPath} from './asset-path';
-import {boundedMap,fetchBytes,withDeadline} from './loading';
+import {boundedMap,fetchBytes,withDeadline,evictCachedAsset} from './loading';
 type Finish={scan?:string;family?:string;scale?:[number,number];tint?:[number,number,number];depth?:number;projection?:boolean;cloth?:boolean;rotate?:boolean};
 type MapInfo={file:string};
 type Manifest={scans:Record<string,{maps:Record<string,MapInfo>}>;materials:Record<string,{replace_source_materials:string[];maps:Record<string,MapInfo>}>};
@@ -26,16 +27,26 @@ function tatamiShader(mat:THREE.MeshStandardMaterial){
  mat.customProgramCacheKey=()=> 'accepted-room-weave-v12';
 }
 export async function restoreBedroomMaterials(room:THREE.Object3D,signal:AbortSignal,anisotropy:number,onProgress:(fraction:number)=>void=()=>{}){
- const bytes=await fetchBytes(assetPath('/bedroom-materials/manifest.json'),signal);const manifest=JSON.parse(new TextDecoder().decode(bytes)) as Manifest;
+ const manifestUrl=assetPath('/bedroom-materials/manifest.json?v='+ASSET_VERSION);let manifest:Manifest;
+ try{const bytes=await fetchBytes(manifestUrl,signal);manifest=JSON.parse(new TextDecoder().decode(bytes)) as Manifest;if(!manifest.scans||!manifest.materials)throw new Error('房间材质清单不完整');}catch(e){if(!signal.aborted)await evictCachedAsset(manifestUrl);throw e;}
  const mats=new Set<THREE.MeshStandardMaterial>();room.traverse(o=>{if(o instanceof THREE.Mesh)for(const m of Array.isArray(o.material)?o.material:[o.material])if(m instanceof THREE.MeshStandardMaterial)mats.add(m);});
  const assignments=new Map<THREE.MeshStandardMaterial,Finish>();const wanted=new Map<string,boolean>();
  for(const m of mats){const config=finish(m.name)??{};config.family=Object.keys(manifest.materials).find(k=>manifest.materials[k].replace_source_materials.includes(m.name));assignments.set(m,config);
   if(config.family)for(const [channel,info]of Object.entries(manifest.materials[config.family].maps))if(!config.scan||(config.cloth&&channel==='albedo'))wanted.set(info.file,channel==='albedo');
   if(config.scan)for(const [channel,info]of Object.entries(manifest.scans[config.scan].maps))if(!config.cloth||channel!=='albedo')wanted.set(info.file,channel==='albedo');
  }
- let complete=0;const textures=new Map<string,THREE.Texture>();await boundedMap([...wanted],3,async([file,srgb])=>{
-  const data=await fetchBytes(assetPath('/bedroom-materials/'+file),signal);const url=URL.createObjectURL(new Blob([data]));try{const t=await withDeadline(new THREE.TextureLoader().loadAsync(url),45000,'房间材质解码');t.flipY=false;t.colorSpace=srgb?THREE.SRGBColorSpace:THREE.NoColorSpace;t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=anisotropy;textures.set(file,t);onProgress(++complete/wanted.size);}finally{URL.revokeObjectURL(url);}
- });
+ let complete=0;const textures=new Map<string,THREE.Texture>(),local=new AbortController();
+ const abort=()=>local.abort();signal.addEventListener('abort',abort,{once:true});if(signal.aborted)abort();
+ try{await boundedMap([...wanted],3,async([file,srgb])=>{
+  const path=assetPath('/bedroom-materials/'+file+'?v='+ASSET_VERSION);
+  try{
+   const data=await fetchBytes(path,local.signal);local.signal.throwIfAborted();const url=URL.createObjectURL(new Blob([data]));
+   try{
+    let t:THREE.Texture;try{t=await withDeadline(new THREE.TextureLoader().loadAsync(url).then(t=>{if(local.signal.aborted){t.dispose();local.signal.throwIfAborted();}return t;}),45000,'房间材质解码');}catch(e){if(!local.signal.aborted)await evictCachedAsset(path);throw e;}
+    t.flipY=false;t.colorSpace=srgb?THREE.SRGBColorSpace:THREE.NoColorSpace;t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=anisotropy;textures.set(file,t);onProgress(++complete/wanted.size);
+   }finally{URL.revokeObjectURL(url);}
+  }catch(e){local.abort();throw e;}
+ });}catch(e){local.abort();for(const t of textures.values())t.dispose();throw e;}finally{signal.removeEventListener('abort',abort);}
  const original=new Set<THREE.Texture>();for(const m of mats)for(const t of [m.map,m.normalMap,m.roughnessMap,m.aoMap])if(t)original.add(t);
  for(const [m,c]of assignments){
   const apply=(maps:Record<string,MapInfo>,cloth=false)=>{for(const [channel,key]of [['albedo','map'],['normal','normalMap'],['roughness','roughnessMap'],['ao','aoMap']] as const){if(cloth&&channel==='albedo')continue;const t=textures.get(maps[channel]?.file);if(!t)continue;const copy=t.clone();copy.channel=0;if(c.scale){if(c.rotate){copy.matrixAutoUpdate=false;copy.matrix.set(0,c.scale[1],0,c.scale[0],0,0,0,0,1);}else copy.repeat.set(...c.scale);}m[key]=copy;}};
