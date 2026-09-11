@@ -16,6 +16,7 @@ var sun: DirectionalLight3D
 var sky_fill: DirectionalLight3D
 var home_enclosure: Node3D
 var home_light: OmniLight3D
+var window_light: SpotLight3D
 var room_lamps: Array[OmniLight3D] = []
 var inside_home := false
 var shell: Node3D
@@ -139,6 +140,7 @@ func _setup_environment():
  sun=DirectionalLight3D.new();sun.rotation_degrees=Vector3(-48,-30,-15);sun.light_color=Color("fff2db");sun.light_energy=1.05;sun.shadow_enabled=true;sun.directional_shadow_max_distance=95;sun.light_angular_distance=.5;add_child(sun)
  sky_fill=DirectionalLight3D.new();sky_fill.rotation_degrees=Vector3(-35,150,0);sky_fill.light_color=Color("b8d7d4");sky_fill.light_energy=.17;add_child(sky_fill)
  home_light=OmniLight3D.new();home_light.position=Vector3(-14.8,4.5,-10.9);home_light.light_color=Color("f7f3e7");home_light.light_energy=.72;home_light.omni_range=8;home_light.shadow_enabled=true;home_light.visible=false;add_child(home_light)
+ window_light=SpotLight3D.new();window_light.position=Vector3(-11.15,2.70,-13.30);window_light.light_color=Color("fff0d5");window_light.light_energy=1.05;window_light.spot_range=10;window_light.spot_angle=35;window_light.spot_attenuation=.55;window_light.shadow_enabled=true;window_light.visible=false;add_child(window_light);window_light.look_at(Vector3(-16.7,.12,-9.5))
  for p in [[-14.42,1.50,-10.9],[-12.0,2.1,-12.1],[-14.0,3.9,-14.3],[24.8,1.05,6.95]]:
   var l=OmniLight3D.new();l.position=vec(p);l.light_color=Color("ffd696");l.light_energy=.65;l.omni_range=4.3;l.shadow_enabled=true;add_child(l)
   if p[0]<0:room_lamps.append(l)
@@ -160,8 +162,10 @@ void fragment(){float w=sin(world.x*3.0+TIME*.6+sin(world.z*2.0))*sin(world.z*2.
  for child in node.get_children():_configure_materials(child)
 
 func _home_collisions(node: Node):
- if node is MeshInstance3D and (str(node.name).begins_with("EnclosureWall") or str(node.name).begins_with("EnclosureCeiling")):
+ if node is MeshInstance3D and (str(node.name).begins_with("EnclosureWall") or str(node.name).begins_with("EnclosureCeiling") or str(node.name).begins_with("EnclosureFloorUnderlay")):
   node.create_trimesh_collision()
+  # The enclosure receives furniture shadows; inward faces must not self-shadow.
+  node.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
  for child in node.get_children():_home_collisions(child)
 
 func _update_home():
@@ -173,6 +177,7 @@ func _update_home():
  stage.visible=not inside_home
  home_enclosure.visible=inside_home
  home_light.visible=inside_home
+ window_light.visible=inside_home
  if butterfly:butterfly.visible=not inside_home
  _apply_lighting()
  _camera_update(1)
@@ -186,9 +191,10 @@ func _apply_lighting():
  environment.background_mode=Environment.BG_COLOR if inside_home else Environment.BG_SKY
  environment.background_color=Color("70644c")
  environment.fog_enabled=not inside_home
- environment.ambient_light_color=Color("b5c0ba") if inside_home else (Color("a6b4c5") if night else Color("c5d0b7"))
- environment.ambient_light_energy=.48 if inside_home else (.46 if night else .38)
- home_light.light_energy=.55 if night else .72
+ environment.ambient_light_color=Color("c0c3bd") if inside_home else (Color("a6b4c5") if night else Color("c5d0b7"))
+ environment.ambient_light_energy=.40 if inside_home else (.46 if night else .38)
+ home_light.light_energy=.43 if night else .53
+ window_light.light_energy=.65 if night else 1.05
  for lamp in room_lamps:
   lamp.light_color=Color("fff0d8") if inside_home else Color("ffd696")
   lamp.light_energy=.27 if inside_home else .65

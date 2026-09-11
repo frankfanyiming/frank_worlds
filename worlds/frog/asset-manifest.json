@@ -4,10 +4,10 @@
   "archives": [
     {
       "id": "frog",
-      "name": "frog-source-2026-09-11-stone-home.zip",
-      "url": "https://github.com/frankfanyiming/frank_worlds/releases/download/xlands-2026-09-11/frog-source-2026-09-11-stone-home.zip",
-      "bytes": 93762385,
-      "sha256": "0a0b9de33d9e08a08af54117ea238ffaa27ae81e020e72a7bc375b2982a99926",
+      "name": "frog-source-2026-09-11-natural-rock-home.zip",
+      "url": "https://github.com/frankfanyiming/frank_worlds/releases/download/xlands-2026-09-11/frog-source-2026-09-11-natural-rock-home.zip",
+      "bytes": 98870296,
+      "sha256": "d4119e9123e7d4758d6f8d028dd2ad610377d3ea504a35d81506dc9a95caf66d",
       "extractTo": "worlds/frog"
     }
   ],
