@@ -1,7 +1,7 @@
 {
-  "sourceCommit": "4062f332c0cbe4bce2b9b58b32cc0ef69e1a8941",
-  "revision": 14,
-  "assetRevision": 13,
+  "sourceCommit": "52d0ec39333f41f638f99ea7eac231e47d5a70a5",
+  "revision": 15,
+  "assetRevision": 15,
   "date": "2026-09-11",
   "summary": "XLands: three worlds, guestbook and versioned co-creation",
   "worlds": [
@@ -11,5 +11,6 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-11T06:51:41.607502+00:00"
+  "updatedAt": "2026-09-11T09:25:10.872876+00:00",
+  "frogHome": "enclosed-grey-stone-room"
 }
