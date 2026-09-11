@@ -1,13 +1,13 @@
 {
-  "totalBytes": 94653496,
-  "sha256": "6bf593ff8015e2767c84d8f54f4add06001619e230c870ed72707a898ce7b9ff",
+  "totalBytes": 95764120,
+  "sha256": "724c52316af49c44fc22f0c926ef907cf42c38ebb57c50a7f0beb4d6abe22416",
   "chunks": [
     {
       "file": "world-000.bin.gz",
       "offset": 0,
       "rawBytes": 16777216,
       "bytes": 16743860,
-      "sha256": "f4dec535b40a0fca9932a4d24fd8e6938a4030d1e85a177be2e4dd4a88371b70"
+      "sha256": "cb2ff66c17c5a97555ee27ba1f699cc6c8ea973e2b6bb6b9d80825098424e5a0"
     },
     {
       "file": "world-001.bin.gz",
@@ -20,29 +20,29 @@
       "file": "world-002.bin.gz",
       "offset": 33554432,
       "rawBytes": 16777216,
-      "bytes": 16694561,
-      "sha256": "2c57d9563fb9edb07060f9ce3c70e5eb18e14c2dbc55d5b6b8922acd22cf3ba9"
+      "bytes": 16673078,
+      "sha256": "fbf680c085c75bcda0629f5970d2bff4ad16000ec17c78dc07afa6673759007a"
     },
     {
       "file": "world-003.bin.gz",
       "offset": 50331648,
       "rawBytes": 16777216,
-      "bytes": 16572409,
-      "sha256": "39e8ffdcce948be5a0f1464db6e0b4d71212afdac0baa52aadcbd9a21ccc11bc"
+      "bytes": 16574164,
+      "sha256": "40913c2c79b8927d60098c318ae4db323ed4664b4f7ad73867d4ea1ea4abdca5"
     },
     {
       "file": "world-004.bin.gz",
       "offset": 67108864,
       "rawBytes": 16777216,
-      "bytes": 16370483,
-      "sha256": "6e6e3a6e7666f18b8d7390c66485d33e5e62218098e88bb69af79c2623f2597f"
+      "bytes": 16400164,
+      "sha256": "ae5c6acde55338abf3613da65cfecda9c513f9ded4f6d76384e08e28d334135a"
     },
     {
       "file": "world-005.bin.gz",
       "offset": 83886080,
-      "rawBytes": 10767416,
-      "bytes": 10522246,
-      "sha256": "88903b3197a5601b0153beaee44badbfde25039a4cf96a3e4e80681ba7b6cfe8"
+      "rawBytes": 11878040,
+      "bytes": 11595603,
+      "sha256": "42e21670ffa47ae0f4d6e32e534d8939987e928a0338deb83c2ef321cb1690ec"
     }
   ]
 }
