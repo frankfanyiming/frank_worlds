@@ -1,0 +1,26 @@
+[
+  {
+    "data": "res://assets/house-lighting/panda-day.lmbake",
+    "house": "panda",
+    "state": "day",
+    "users": 27
+  },
+  {
+    "data": "res://assets/house-lighting/panda-dusk.lmbake",
+    "house": "panda",
+    "state": "dusk",
+    "users": 27
+  },
+  {
+    "data": "res://assets/house-lighting/frog-day.lmbake",
+    "house": "frog",
+    "state": "day",
+    "users": 33
+  },
+  {
+    "data": "res://assets/house-lighting/frog-dusk.lmbake",
+    "house": "frog",
+    "state": "dusk",
+    "users": 33
+  }
+]

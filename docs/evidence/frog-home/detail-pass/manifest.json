@@ -1,0 +1,102 @@
+{
+  "date": "2026-09-12",
+  "kind": "Blender real model review renders; not concept generation or Godot runtime capture",
+  "blender": "5.2.1 LTS",
+  "detail_revision": "natural-rock-felt-willow-01",
+  "images": [
+    {
+      "file": "01-main.png",
+      "source": "worlds/frog/blender/revision-02-renders/01-main.png",
+      "bytes": 2427703,
+      "sha256": "ac25cfa03d451549fe3b6fdfdc60cae36ad5122cbae866bb21d5a59342497109"
+    },
+    {
+      "file": "02-loft.png",
+      "source": "worlds/frog/blender/revision-02-renders/02-loft.png",
+      "bytes": 2353222,
+      "sha256": "2f3c41e617d41d9910134701c0d1d6f93f44c714542b40945ee7924cd2b9b935"
+    },
+    {
+      "file": "03-entry.png",
+      "source": "worlds/frog/blender/revision-02-renders/03-entry.png",
+      "bytes": 2393125,
+      "sha256": "1c13208ebd1c6cd0ce9429ffd35170f147872dc34376b956b950f071f4e0df35"
+    },
+    {
+      "file": "04-details.png",
+      "source": "worlds/frog/blender/revision-02-renders/04-details.png",
+      "bytes": 2285118,
+      "sha256": "882624408f7db5d1ae20ec21fe205f88512b6691f03ec8570bf81514e0e62c01"
+    }
+  ],
+  "assets": [
+    {
+      "file": "worlds/frog/source/assets/home-enclosure.glb",
+      "bytes": 6682540,
+      "sha256": "9bce017c78a3ce5b72b2a88b83c2e8cfc831d25ace50f1fc9a4ad823b34fdc3b",
+      "meshes": 11,
+      "materials": 9,
+      "triangles": 37894,
+      "embedded_images": {
+        "image/png": 8,
+        "image/jpeg": 5
+      }
+    },
+    {
+      "file": "worlds/frog/source/assets/home-furnishings.glb",
+      "bytes": 17610180,
+      "sha256": "d5a44b52c78d423731174dea469daa8195cbc00e967c61b7a1b1580e347bbd40",
+      "meshes": 23,
+      "materials": 23,
+      "triangles": 281190,
+      "embedded_images": {
+        "image/png": 14,
+        "image/jpeg": 14
+      }
+    }
+  ],
+  "sources": [
+    {
+      "file": "tools/build-frog-home.py",
+      "bytes": 20818,
+      "sha256": "6bde7c528368b703a55f03de606ab38836a45b8ff9fbe1219e3eaa7a59e0145d"
+    },
+    {
+      "file": "tools/build-frog-furnishings.py",
+      "bytes": 38966,
+      "sha256": "ea4fac6b5aa11e5648ed5041b4e203bb3f21804349d824890578950388daaa44"
+    },
+    {
+      "file": "worlds/frog/source/assets/home-layout.json",
+      "bytes": 13689,
+      "sha256": "559bc22e80891af3e7ee0fa783189b297305e90a01f236997417a51a096dbe40"
+    },
+    {
+      "file": "worlds/frog/source/assets/home-window-lighting.json",
+      "bytes": 663,
+      "sha256": "48c88ea9a1602ea3f62660f7ae6c58ecf88def27856d2df413c8ca1f4823386c"
+    },
+    {
+      "file": "worlds/frog/source/assets/frog.glb",
+      "bytes": 9472992,
+      "sha256": "d1059fc66ea5bff91dc09d4433d7fae8dd6f3d1f73a36eb9c2b9c1ab495f2654"
+    },
+    {
+      "file": "worlds/frog/blender/frog-home-enclosure.blend",
+      "bytes": 6251404,
+      "sha256": "f7f3c3f6507469fd54d855842d32c481c73a7adcbf57b2ab5b4e88fa3bdca909"
+    },
+    {
+      "file": "worlds/frog/blender/frog-home-furnishings.blend",
+      "bytes": 14989632,
+      "sha256": "1213b4da95941496877361ae298e4b65b8a7d1e88cf47b336d152d9bb509ca25"
+    },
+    {
+      "file": "worlds/frog/blender/frog-home-review.blend",
+      "bytes": 31794145,
+      "sha256": "df4c3e1b1359314ff7e70005f522ef91eba50e1a94116cfea5c6ad70002db248"
+    }
+  ],
+  "navigation_contract": "Entry, exit, floor, loft, stair route/width, QA routes, room bounds and existing collision records equal pre-detail pass. Added one Background bamboo ladder collider and window metadata. Wall relief joined to actual wall mesh.",
+  "colour_note": "Native review blend retains PNG source textures. Runtime GLB uses JPEG for opaque sRGB base colours only; normals/roughness remain PNG."
+}

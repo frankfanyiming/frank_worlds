@@ -1,0 +1,15 @@
+"""Refresh provenance from exported GLBs and measured, skinned foot samples."""
+from pathlib import Path
+import json,struct,hashlib
+R=Path(__file__).resolve().parents[1];E=R/'docs/evidence/character-motion';A=R/'worlds/frog/source/assets'
+for species in ['frog','panda']:
+ qa_path=E/(species+'-motion-check.json')
+ if not qa_path.exists():continue
+ qa=json.loads(qa_path.read_text());asset=A/(species+'.glb');blob=asset.read_bytes();length=struct.unpack_from('<I',blob,12)[0];gltf=json.loads(blob[20:20+length]);path=R/'docs'/(species+'-asset-source.json')
+ doc=json.loads(path.read_text()) if path.exists() else {'source':'Tripo','model':'Tripo v3.1','task_id':'2eda77ff-b581-4673-96b4-62b5d2da22fe','source_asset':'Original Tripo model.fbx, task 2eda77ff-b581-4673-96b4-62b5d2da22fe; reduced once to 88000 faces before the immutable Blender baseline'}
+ animations=[a['name'] for a in gltf['animations']];filename='frog-rig-jump.blend' if species=='frog' else 'panda-rig.blend';baseline=R/'worlds/frog/blender/character-motion-originals'/filename
+ doc.update({'runtime_asset':str(asset.relative_to(R)),'runtime_bytes':len(blob),'runtime_sha256':hashlib.sha256(blob).hexdigest(),'runtime_faces':qa['faces'],'runtime_vertices':qa['vertices'],'height':qa['height'],'bones':qa['bones'],'animations':animations,'native_rig':'worlds/frog/blender/'+filename,'rigging':'Blender 16-bone four-weight anatomical skin, rest-pole two-bone leg IK, independent grounded feet and measured in-place locomotion','motion_build_script':'tools/build-character-motion.py','motion_input':'worlds/frog/blender/character-motion-originals/'+filename,'motion_input_sha256':hashlib.sha256(baseline.read_bytes()).hexdigest(),'locomotion_contract':'worlds/frog/source/assets/locomotion.json','motion_evidence':str(qa_path.relative_to(R)),'shape_edit':'Original Tripo geometry and UVs retained. Rounded haunch silhouette and cream belly protected from lower-leg weights.' if species=='frog' else 'Original Tripo geometry and UVs retained. Shortened torso, larger visible paws, softer matte surface; satchel and cream belly stay with torso.','role':'Playable frog, walking/running/jumping and resting.' if species=='frog' else 'Neighbour NPC with physical short walks, greeting, turn steps, sitting and standing.'})
+ validation=doc.setdefault('validation',{});validation.update({'normalization':True,'weights_max':4,'all_weights_normalized':qa['all_weights_normalized'],'actual_blender_animation_samples':sum(len(c['samples']) for c in qa['clips'].values()),'rig_check_evidence':str(qa_path.relative_to(R)),'glb_verified':{'mesh_count':len(gltf['meshes']),'materials':len(gltf['materials']),'textures':len(gltf.get('textures',[])),'skin_joints':len(gltf['skins'][0]['joints']),'animations':animations},'walk_actual_sole_measurements':qa['clips']['Walk']['summary'],'engine_playback':validation.get('engine_playback','pending root integration')})
+ for obsolete in ['actual_blender_rig_samples','minimum_animated_foot_y','invalid_vertex_weights']:validation.pop(obsolete,None)
+ path.write_text(json.dumps(doc,ensure_ascii=False,indent=2)+'\n')
+ print(species,doc['runtime_sha256'],animations)

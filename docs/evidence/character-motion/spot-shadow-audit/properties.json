@@ -1,0 +1,78 @@
+{
+  "lights": [
+    {
+      "bake_mode": 1,
+      "bias": 0.025000000372529,
+      "energy": 0.649999976158142,
+      "name": "Window_FrogWindow0",
+      "normal_bias": 0.449999988079071,
+      "shadow": true,
+      "type": "SpotLight3D"
+    },
+    {
+      "bake_mode": 1,
+      "bias": 0.025000000372529,
+      "energy": 0.649999976158142,
+      "name": "Window_FrogWindow1",
+      "normal_bias": 0.449999988079071,
+      "shadow": true,
+      "type": "SpotLight3D"
+    },
+    {
+      "bake_mode": 1,
+      "bias": 0.025000000372529,
+      "energy": 0.649999976158142,
+      "name": "Window_FrogWindow2",
+      "normal_bias": 0.449999988079071,
+      "shadow": true,
+      "type": "SpotLight3D"
+    },
+    {
+      "bake_mode": 1,
+      "bias": 0.100000001490116,
+      "energy": 0.360000014305115,
+      "name": "RoomFill",
+      "normal_bias": 1.0,
+      "shadow": false,
+      "type": "OmniLight3D"
+    },
+    {
+      "bake_mode": 1,
+      "bias": 0.100000001490116,
+      "energy": 0.180000007152557,
+      "name": "Lamp_table_candle",
+      "normal_bias": 1.0,
+      "shadow": false,
+      "type": "OmniLight3D"
+    },
+    {
+      "bake_mode": 1,
+      "bias": 0.100000001490116,
+      "energy": 0.180000007152557,
+      "name": "Lamp_loft_lantern",
+      "normal_bias": 1.0,
+      "shadow": false,
+      "type": "OmniLight3D"
+    },
+    {
+      "bake_mode": 1,
+      "bias": 0.100000001490116,
+      "energy": 0.0,
+      "name": "UnderLoftBounce",
+      "normal_bias": 1.0,
+      "shadow": false,
+      "type": "OmniLight3D"
+    }
+  ],
+  "materials": [
+    {
+      "diffuse_mode": 0,
+      "metallic": 1.0,
+      "name": "tripo_mat_de0ee79b",
+      "normal": true,
+      "normal_scale": 0.349999994039536,
+      "roughness": 1.0,
+      "shading_mode": 1
+    }
+  ]
+}

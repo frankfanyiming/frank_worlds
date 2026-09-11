@@ -1,0 +1,949 @@
+{
+  "frog": {
+    "dependencies": [
+      "uid://d3l1b1w7nxppy::::res://assets/home-enclosure_Home continuous warm grey rock mineral color.jpg",
+      "uid://baxfwprv514pu::::res://assets/home-enclosure_Home continuous warm grey rock roughness.png",
+      "uid://bfbqwqbn3jomj::::res://assets/home-enclosure_Home continuous warm grey rock mineral normal.png",
+      "uid://1mjcff7qsbvu::::res://assets/home-enclosure_Soft distant garden window color.jpg",
+      "uid://c3wy1uxqtujk0::::res://assets/home-enclosure_Home flagstone 2 mineral color.jpg",
+      "uid://vp0rbqam2osq::::res://assets/home-enclosure_Home flagstone 2 roughness.png",
+      "uid://cq5mymcsvsteb::::res://assets/home-enclosure_Home flagstone 2 mineral normal.png",
+      "uid://b1p6rht3yly82::::res://assets/home-enclosure_Home flagstone 1 mineral color.jpg",
+      "uid://stuojcx110sv::::res://assets/home-enclosure_Home flagstone 1 roughness.png",
+      "uid://u4ih5cvjo1jx::::res://assets/home-enclosure_Home flagstone 1 mineral normal.png",
+      "uid://b25lpgqdyjjf2::::res://assets/home-enclosure_Home flagstone 0 mineral color.jpg",
+      "uid://c4qvctdipe5ti::::res://assets/home-enclosure_Home flagstone 0 roughness.png",
+      "uid://bbv0f4giw67bl::::res://assets/home-enclosure_Home flagstone 0 mineral normal.png",
+      "uid://hr72hmwjy82a::::res://assets/home-furnishings_R02 Honey wood color.jpg",
+      "uid://dy3e5x4ias27b::::res://assets/home-furnishings_R02 Honey wood normal.png",
+      "uid://b0xqbums3bewp::::res://assets/home-furnishings_R02 Chestnut trunk color.jpg",
+      "uid://cijn8nanusaxq::::res://assets/home-furnishings_R02 Chestnut trunk normal.png",
+      "uid://cdly5g5v1yrlm::::res://assets/home-furnishings_R02 Cream shelf mushroom color.jpg",
+      "uid://6bwrxetod2rn::::res://assets/home-furnishings_R02 Cream shelf mushroom normal.png",
+      "uid://4kchvy2yrggk::::res://assets/home-furnishings_R02 Warm grey mushroom gills color.jpg",
+      "uid://c4tqjhu5qb4oe::::res://assets/home-furnishings_R02 Warm grey mushroom gills normal.png",
+      "uid://bskuuuc0bvlfw::::res://assets/home-furnishings_R02 Stump endgrain color.jpg",
+      "uid://b4b1jqfx8yl62::::res://assets/home-furnishings_R02 Stump endgrain normal.png",
+      "uid://des0kqjpircr4::::res://assets/home-furnishings_R02 Soft moss patches color.jpg",
+      "uid://4oroolm4b0nk::::res://assets/home-furnishings_R02 Soft moss patches normal.png",
+      "uid://cahmdsu1facps::::res://assets/home-furnishings_R02 Moss leaf cloth color.jpg",
+      "uid://dpnxf3asfu0p7::::res://assets/home-furnishings_R02 Moss leaf cloth normal.png",
+      "uid://dnabsmukw8gkc::::res://assets/home-furnishings_R02 Oat linen color.jpg",
+      "uid://qqxgtf0vmn0u::::res://assets/home-furnishings_R02 Oat linen normal.png",
+      "uid://criqiwihe8esk::::res://assets/home-furnishings_R02 Blue sleeping quilt color.jpg",
+      "uid://cnixa5jbtx20q::::res://assets/home-furnishings_R02 Blue sleeping quilt normal.png",
+      "uid://b3a6turtbwqvh::::res://assets/home-furnishings_R02 Rose woven mat color.jpg",
+      "uid://cdybj5vonikv6::::res://assets/home-furnishings_R02 Rose woven mat normal.png",
+      "uid://bm5lqs2is6gc2::::res://assets/home-furnishings_R02 Deep green leaves color.jpg",
+      "uid://skclba2sy6in::::res://assets/home-furnishings_R02 Deep green leaves normal.png",
+      "uid://c35fw23186yjl::::res://assets/home-furnishings_R02 Earth pottery color.jpg",
+      "uid://cc4u4wca4ura2::::res://assets/home-furnishings_R02 Earth pottery normal.png",
+      "uid://733ucjrfn58e::::res://assets/home-furnishings_R02 Cream pottery color.jpg",
+      "uid://c8j3ehk58cawe::::res://assets/home-furnishings_R02 Cream pottery normal.png",
+      "uid://clklnb1b5iyvx::::res://assets/home-furnishings_R02 Warm carved hearth stone color.jpg",
+      "uid://bojx234847465::::res://assets/home-furnishings_R02 Warm carved hearth stone normal.png",
+      "uid://ccah1138jjpml::::res://assets/house-lighting/frog-day.lmbake"
+    ],
+    "geometry": [
+      {
+        "node": "home-enclosure/EnclosureCeiling",
+        "runtime": {
+          "sha256": "7bfa36bf1a1a37f965fe2644c18308a624c9bd41b67ac7dfa0dfff832cfdd67d",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 670
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "0392bbdc48076dc7d764a1eb8514a4303919d87a4bdf70c5a9118dd54c0e737a",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 670
+        }
+      },
+      {
+        "node": "home-enclosure/EnclosureFloorUnderlay",
+        "runtime": {
+          "sha256": "bbc9e11e70737f72f314e9df47cd3c0785c1de28e419bfd7a318e9d4f0efee7f",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-15.0, 0.145, -12.0)]",
+          "triangles": 508
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "40b2457e5eb4c0ac672403a67627d5728fc7e45b610bae57529e97b6d5372952",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-15.0, 0.145, -12.0)]",
+          "triangles": 508
+        }
+      },
+      {
+        "node": "home-enclosure/EnclosureWall",
+        "runtime": {
+          "sha256": "2ad79d5e43239b3773673b4cd5c954cb65ff4153256f3a6460c69669499fe060",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 2652
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "636402d3a7eb28d5605a70b948184cb96b371074db51959ed407b8fee7d9cf07",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 2652
+        }
+      },
+      {
+        "node": "home-enclosure/FrogWindowBackground",
+        "runtime": {
+          "sha256": "0f1bde1f9f9db6a9ad7578fc9259ee73e128e6d8bed7fa27dcf15980f79211b2",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 192
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "3ad26509cb630acb67b4cc1f8e3b21eeeae55d714f831e8eee36182c3091157f",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 192
+        }
+      },
+      {
+        "node": "home-enclosure/HomeDetails_00",
+        "runtime": {
+          "sha256": "bb6c76e5b5af820df71a004477af7cde9b4fdf9de9dcbc2c979f46020aed034e",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 404
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "74a9ae81bca7e9f5f733d354d51c5ad0b79269dd36e007b6c3c4eef434d87adb",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 476
+        }
+      },
+      {
+        "node": "home-enclosure/HomeDetails_01",
+        "runtime": {
+          "sha256": "bb3052eb9109e4242673978184b99e0b070ea736573546c7ce3eb23afa73bee0",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 10016
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "eb5d3ab7174b17c72199ee900ff0e488861a9a5de14bd6397ce91ad121d09acb",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 10032
+        }
+      },
+      {
+        "node": "home-enclosure/HomeDetails_02",
+        "runtime": {
+          "sha256": "eed038db2851985dd73429f1e06162b894a2feae285c6d9176ec883a622d3d8b",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 9388
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "a78fdffcbd50ae4bbc77f4c64729f6e6a831d4fcd66b14419c573f6a908af55b",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 9396
+        }
+      },
+      {
+        "node": "home-enclosure/HomeDetails_03",
+        "runtime": {
+          "sha256": "e35056f9bb2714aba40ba603be338ac6dc4e1ff45586bcb214c3c2ed9c5303ef",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 7752
+        },
+        "same_triangle_coordinates_and_transform": true,
+        "source": {
+          "sha256": "e35056f9bb2714aba40ba603be338ac6dc4e1ff45586bcb214c3c2ed9c5303ef",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 7752
+        }
+      },
+      {
+        "node": "home-enclosure/HomeDetails_04",
+        "runtime": {
+          "sha256": "71b593e4a766c1242a91349a233a77bf5e4b30481595fb09d61901bf22a09b92",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-16.1725, 1.43, -7.58)]",
+          "triangles": 864
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "a275b994321d5d7fd98a841974a43ca86d4dbea133067dca0f3964ee75178a6d",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-16.1725, 1.43, -7.58)]",
+          "triangles": 864
+        }
+      },
+      {
+        "node": "home-enclosure/HomeDetails_05",
+        "runtime": {
+          "sha256": "4591e399d46729d1e7112e8429c9faf0e099772f6ead4130885f267b74769594",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-15.0, 0.4, -7.665)]",
+          "triangles": 4584
+        },
+        "same_triangle_coordinates_and_transform": true,
+        "source": {
+          "sha256": "4591e399d46729d1e7112e8429c9faf0e099772f6ead4130885f267b74769594",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-15.0, 0.4, -7.665)]",
+          "triangles": 4584
+        }
+      },
+      {
+        "node": "home-enclosure/HomeDetails_07",
+        "runtime": {
+          "sha256": "3d8df9976cf81ae4d0d370e682b4db739bfa9b8dc85701f6035506d9f888d0d3",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 768
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "10987c1c24441fdceb97c711aedc78bf7d2b5641f3e9b103e2fce46319cbb4b4",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 768
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_00",
+        "runtime": {
+          "sha256": "ddd0fc5298b792962e0998ebd703bb7ee5b4a83329648f8a8af28938437cdcd8",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 22280
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "deb0c85b640481dcc5fa3cbbeec7ea160f9003464c93421e927fc6bdf71475e0",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 22284
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_01",
+        "runtime": {
+          "sha256": "23554a6cc335c7ab9657fc7edf1de7cd049ba020d734ddb290843a0585c54a09",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 44968
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "f403c6c3c965bdf7a63c6eee27f01f07a491d4aced71a6612563edb9b671c17c",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 44968
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_02",
+        "runtime": {
+          "sha256": "1392111303ed09108cd79b532b9a2ae3312fc2dcca88098c0e78bd40caf9db11",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 22064
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "cc912f2eeb53605a8f5aa83ef96db2577bd283b00c9dacadbc1aa11533ee457f",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 22160
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_03",
+        "runtime": {
+          "sha256": "2a9d24d5fff4ca41a609d0d046462d20af3a914c38b3b2a05df344e00e4d69c8",
+          "transform": "[X: (0.0, 0.0, 0.69), Y: (0.0, 0.087, 0.0), Z: (-0.39, 0.0, 0.0), O: (-18.55, 0.25581, -11.41)]",
+          "triangles": 12096
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "6f3d065ca974319ff1041be4f37ff996431a4d17ac2c8471ea6d93db4732fc22",
+          "transform": "[X: (0.0, 0.0, 0.69), Y: (0.0, 0.087, 0.0), Z: (-0.39, 0.0, 0.0), O: (-18.55, 0.25581, -11.41)]",
+          "triangles": 12096
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_04",
+        "runtime": {
+          "sha256": "be391d03b1e0720cd425dae604b62706147538ab58a7684ef21de41206e57f71",
+          "transform": "[X: (0.0, 0.0, 0.677), Y: (0.0, 0.071, 0.0), Z: (-0.379, 0.0, 0.0), O: (-18.55, 0.21181, -11.41)]",
+          "triangles": 10584
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "8b7dd73730ab75aacf470ea9c08276178fd1faccd52071f2e4ccbe9d1b1cec4b",
+          "transform": "[X: (0.0, 0.0, 0.677), Y: (0.0, 0.071, 0.0), Z: (-0.379, 0.0, 0.0), O: (-18.55, 0.21181, -11.41)]",
+          "triangles": 10584
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_05",
+        "runtime": {
+          "sha256": "2cadb9d2e200116574b3fb97b03b28b23719193e3a6e680e460ad350ca4d4761",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 72460
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "c0ff9790f1a3306ec9fc0f3da42a27eb78193d593ebc9684ada9bf346384cb32",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 72492
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_06",
+        "runtime": {
+          "sha256": "f7d17d4eaeaa923c038e84363d613e95f6f2726e9b9631e9c64c6cbfb02778e7",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 22772
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "de119cadd00bc370c1ccda0aca65fde16f6673652631a01b3c2689e04cbd53a0",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 23036
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_07",
+        "runtime": {
+          "sha256": "9bef32a9e56794b187b78f6482d6e0175ff139690e6c84dcf01e70e63ab1616d",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 7870
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "fccbd703be966d18dc134552a45de074ae83fb096919177433f5e01d82908982",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 8128
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_08",
+        "runtime": {
+          "sha256": "75482b5d251368ae17f4fa4db45e1524e61c42544b4a36cd410c6a080b726f20",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 10920
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "7200b5b0e4a7270f1be7c31e59d47542e232dec36d8fdf23fdf054d0f721e09f",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 10920
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_09",
+        "runtime": {
+          "sha256": "fb3390eacbdd02f5d0bff82346713d14ab26744cef3c49e373e0108139cad0cd",
+          "transform": "[X: (1.045, 0.0, 0.0), Y: (0.0, 0.13, 0.0), Z: (0.0, 0.0, 0.775), O: (-14.15, 3.505, -14.8)]",
+          "triangles": 13488
+        },
+        "same_triangle_coordinates_and_transform": true,
+        "source": {
+          "sha256": "fb3390eacbdd02f5d0bff82346713d14ab26744cef3c49e373e0108139cad0cd",
+          "transform": "[X: (1.045, 0.0, 0.0), Y: (0.0, 0.13, 0.0), Z: (0.0, 0.0, 0.775), O: (-14.15, 3.505, -14.8)]",
+          "triangles": 13488
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_10",
+        "runtime": {
+          "sha256": "a4faae50057faeff2ddce83cc1fa51c9f481c5824c4da519a7c5e836645f5751",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 4940
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "1c88248d5a45ae513ef5f71263828c0eaf5b53a046c54fc656c1fa83e6e41b57",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 5004
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_11",
+        "runtime": {
+          "sha256": "8ae3f4e65b8dabb0b7304cec61ce71fe589bc3a53ab4c742dc72d61e57bbb278",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-15.99, 3.273, -14.49)]",
+          "triangles": 344
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "ffc95a862b24f12ca10b8baf827499a80bf6c1ccd1b063e481b8cf86625e6862",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-15.99, 3.273, -14.49)]",
+          "triangles": 376
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_12",
+        "runtime": {
+          "sha256": "3aada6eefffd00200200419b2e37657ff0443f4e1c7076644736e94a66755595",
+          "transform": "[X: (0.993956, 0.0, 0.109778), Y: (0.0, 1.0, 0.0), Z: (-0.109778, 0.0, 0.993956), O: (-16.93, 3.59, -15.22)]",
+          "triangles": 7148
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "cc54603588340751351bc082a521809b0363620756a7d04508b0f6b89cb06103",
+          "transform": "[X: (0.993956, 0.0, 0.109778), Y: (0.0, 1.0, 0.0), Z: (-0.109778, 0.0, 0.993956), O: (-16.93, 3.59, -15.22)]",
+          "triangles": 7532
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_13",
+        "runtime": {
+          "sha256": "d8062b8cc6dbbac4babe52b6fbac674ff648f7f81186a795a41d6ec51116a1f4",
+          "transform": "[X: (0.993956, 0.0, 0.109778), Y: (0.0, 1.0, 0.0), Z: (-0.109778, 0.0, 0.993956), O: (-16.93, 3.628, -15.22)]",
+          "triangles": 2996
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "4b7add3f6bf83f9a8225d328ad3e14d89de108ac3c97657924f1673d5dc76896",
+          "transform": "[X: (0.993956, 0.0, 0.109778), Y: (0.0, 1.0, 0.0), Z: (-0.109778, 0.0, 0.993956), O: (-16.93, 3.628, -15.22)]",
+          "triangles": 2996
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_14",
+        "runtime": {
+          "sha256": "2cdad068ef2ccbc12a50aaa69a7b0268df6709c66b5890c467b5b67cbfd75427",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-14.22, 4.87, -16.04)]",
+          "triangles": 448
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "c5b69d4f0326d355d88660a4df04fabf3182d3a5e4818595f538a4f5e73de96e",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-14.22, 4.87, -16.04)]",
+          "triangles": 448
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_15",
+        "runtime": {
+          "sha256": "2480f52a15c5e263d725b9f2f444a9a96796c49d20ca91f5eab0edb6df4f0262",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 266
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "cc2aa223cc07c01c876c69b519fe188ff603511e2aed9742dab58188aef7792c",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 266
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_16",
+        "runtime": {
+          "sha256": "81477ebde5165c1776f12d5867c57c1ebd4233a5364105ddd5ffca1a451e5164",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 6728
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "9f8b5f8e37e82e1f9679bb5625468eb1b08c123cd7d2f8dbd5d81425c12b05e2",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 6856
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_17",
+        "runtime": {
+          "sha256": "9b8e1fd9bc7ad3347e15f813e2d37acfa11960fbab2bb9c580d91fa2fe16e3fb",
+          "transform": "[X: (0.015, 0.0, 0.0), Y: (0.0, 0.015, 0.0), Z: (0.0, 0.0, 0.012), O: (-15.76, 5.035, -15.923)]",
+          "triangles": 880
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "5705347109a5e2d621683c97a719aae14898a632167ad3c30ec5d392347b4f8e",
+          "transform": "[X: (0.015, 0.0, 0.0), Y: (0.0, 0.015, 0.0), Z: (0.0, 0.0, 0.012), O: (-15.76, 5.035, -15.923)]",
+          "triangles": 880
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_18",
+        "runtime": {
+          "sha256": "0336bdc9d323e4cf58a974ee39ba3e3ba4ff777d1a5cbfd50a9a48ca352a8d4c",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 7552
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "b3162d0aac87a45e1027037d209f21cf0c55f32440505385680ea940b1ecfb45",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 7712
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_19",
+        "runtime": {
+          "sha256": "2fe7157a85de27882390557a3e90f0e7524255c3f0cfcef12a3d37b6eb650a3c",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-11.62, 0.618, -13.12)]",
+          "triangles": 3024
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "3c2589581c69ab5f80fb0eebbea05d7c07c1a4a1903dc5305e4240d55e0d87bf",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-11.62, 0.618, -13.12)]",
+          "triangles": 3024
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_20",
+        "runtime": {
+          "sha256": "97d2ea6ae0a948f55a23659486612dbc07eb5fe2fcfcf1d8ecd18dd5247d6012",
+          "transform": "[X: (0.22, 0.0, 0.0), Y: (0.0, 0.23, 0.0), Z: (0.0, 0.0, 0.018), O: (-12.02, 0.478, -13.02)]",
+          "triangles": 4692
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "450451ff36590cb82a1a8518261abb8881cfa151e6c68bd229a5e69defca0b55",
+          "transform": "[X: (0.22, 0.0, 0.0), Y: (0.0, 0.23, 0.0), Z: (0.0, 0.0, 0.018), O: (-12.02, 0.478, -13.02)]",
+          "triangles": 4788
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_21",
+        "runtime": {
+          "sha256": "c8e75d3da49392a2bbae34e333de09ac116a0fac1764701ffe84d5b6302cdcea",
+          "transform": "[X: (0.047, 0.0, 0.0), Y: (0.0, 0.044, 0.0), Z: (0.0, 0.0, 0.039), O: (-18.29, 1.76, -10.6)]",
+          "triangles": 864
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "1f94c056949d4c0d104e885cbdb8ada59cbcb5dff7beb1a4956e83801a3f4091",
+          "transform": "[X: (0.047, 0.0, 0.0), Y: (0.0, 0.044, 0.0), Z: (0.0, 0.0, 0.039), O: (-18.29, 1.76, -10.6)]",
+          "triangles": 864
+        }
+      },
+      {
+        "node": "home-furnishings/HomeFurniture_22",
+        "runtime": {
+          "sha256": "954a59d6fc0f015bbced9bbb1eddb75f9ad189bf828343774165a963ddf8f639",
+          "transform": "[X: (0.029, 0.0, 0.0), Y: (0.0, 0.073, 0.0), Z: (0.0, 0.0, 0.029), O: (-14.74, 1.018, -10.88)]",
+          "triangles": 288
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "7a7fd5c51620394bdaa628c788c17bf9182094c5fa0d7107d8865087371d47ea",
+          "transform": "[X: (0.029, 0.0, 0.0), Y: (0.0, 0.073, 0.0), Z: (0.0, 0.0, 0.029), O: (-14.74, 1.018, -10.88)]",
+          "triangles": 288
+        }
+      }
+    ]
+  },
+  "panda": {
+    "dependencies": [
+      "uid://b6w1gyfoea6xr::::res://assets/panda-home_Panda mineral limestone detailed albedo.jpg",
+      "uid://7xx07uvtkjai::::res://assets/panda-home_Panda mineral limestone detailed roughness.png",
+      "uid://dm7s72j781bea::::res://assets/panda-home_Panda mineral limestone detailed normal.png",
+      "uid://1b4obhix7yff::::res://assets/panda-home_Panda golden bamboo detailed albedo.jpg",
+      "uid://dxibmem363dt5::::res://assets/panda-home_Panda warm oak grain detailed roughness.png",
+      "uid://dov35l8mlsq3h::::res://assets/panda-home_Panda warm oak grain detailed normal.png",
+      "uid://bvktyxj6w4kpb::::res://assets/panda-home_Panda warm oak grain detailed albedo.jpg",
+      "uid://bgcgb3kwr0noa::::res://assets/panda-home_Panda oak endgrain detailed albedo.jpg",
+      "uid://bvjsk6yu2u0ug::::res://assets/panda-home_Panda unbleached linen detailed albedo.jpg",
+      "uid://g2n31ydy0i4w::::res://assets/panda-home_Panda sage linen detailed roughness.png",
+      "uid://clp1bex4koxxl::::res://assets/panda-home_Panda sage linen detailed normal.png",
+      "uid://dyhai8qqnfyes::::res://assets/panda-home_Panda ochre bed linen detailed albedo.jpg",
+      "uid://wcpq8xmfq2j4::::res://assets/panda-home_Panda sage linen detailed albedo.jpg",
+      "uid://vylgdi8nvvv5::::res://assets/panda-home_Panda woven natural straw detailed albedo.jpg",
+      "uid://cwx5o04m1tymx::::res://assets/panda-home_Panda glazed celadon detailed albedo.jpg",
+      "uid://bx2dkar4mwsj6::::res://assets/panda-home_Panda glazed celadon detailed roughness.png",
+      "uid://cfhm3rrtvh7di::::res://assets/panda-home_Panda glazed celadon detailed normal.png",
+      "uid://wjwybv8q8cws::::res://assets/panda-home_Panda flagstone 1 detailed albedo.jpg",
+      "uid://bj1rff5almjnb::::res://assets/panda-home_Panda flagstone 2 detailed albedo.jpg",
+      "uid://c57du2wsrbs8a::::res://assets/panda-home_Panda flagstone 0 detailed albedo.jpg",
+      "uid://5ndrus8lrssr::::res://assets/panda-home_Panda flagstone 3 detailed albedo.jpg",
+      "uid://dwihtx5hyqikg::::res://assets/panda-home_panda-ink-landscape-runtime.jpg",
+      "uid://chatqvrr3efrl::::res://assets/panda-home_Panda soft garden beyond round windows.jpg",
+      "uid://dku24kf5vxcxx::::res://assets/house-lighting/panda-day.lmbake"
+    ],
+    "geometry": [
+      {
+        "node": "panda-home/EnclosureFloorUnderlay",
+        "runtime": {
+          "sha256": "a6945a21357e535ac59346a43a7864cb841aa7875d699da277a2c2382590726a",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 380
+        },
+        "same_triangle_coordinates_and_transform": true,
+        "source": {
+          "sha256": "a6945a21357e535ac59346a43a7864cb841aa7875d699da277a2c2382590726a",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 380
+        }
+      },
+      {
+        "node": "panda-home/EnclosureWall",
+        "runtime": {
+          "sha256": "9cf71f10e892ffe7219791cc067168195e25ad0b0dfe8dfee3f362c5e34f97a7",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 7723
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "e581266db33611a3d67162cd209420a4aec744653e690856d288171be66652af",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 7724
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_01",
+        "runtime": {
+          "sha256": "97473701cd390247864014d3a9972979e6e1b27da7668ab4e3de33d07e9e903c",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 10896
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "61821ad52acde6ad5ba23557b155fdd580b09390fb220a52f7b4f84f912dffb0",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 11088
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_02",
+        "runtime": {
+          "sha256": "e2bcfcf1f0f2044438475bd0e6f84d1c8ac99bdca9eff9676a7e144cf91dad47",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 2900
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "17ff12ba0cb71896658cf6055b180369b332b3a531d13416963a423ccfc012c2",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 3188
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_03",
+        "runtime": {
+          "sha256": "be28421ad713dbd60fd8e15b45ff7bd821e0e81fa35901d69f26e80ce0375e21",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 7440
+        },
+        "same_triangle_coordinates_and_transform": true,
+        "source": {
+          "sha256": "be28421ad713dbd60fd8e15b45ff7bd821e0e81fa35901d69f26e80ce0375e21",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 7440
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_04",
+        "runtime": {
+          "sha256": "04dc6f628ca72d5455e5052226f3ee71909d63f3601a8c5b5e0a86e43e4e6f41",
+          "transform": "[X: (-1.0, 0.0, -0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, -1.0), O: (-3.5, 0.33, -1.42)]",
+          "triangles": 14408
+        },
+        "same_triangle_coordinates_and_transform": true,
+        "source": {
+          "sha256": "04dc6f628ca72d5455e5052226f3ee71909d63f3601a8c5b5e0a86e43e4e6f41",
+          "transform": "[X: (-1.0, 0.0, -0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, -1.0), O: (-3.5, 0.33, -1.42)]",
+          "triangles": 14408
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_05",
+        "runtime": {
+          "sha256": "a36b47e8fe0efe4654a5219c7cf1f3ed77039a7a348efb47d9aa91070b65d9c7",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.85, 3.49, -2.79)]",
+          "triangles": 14664
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "c0f17589b235a9b3e5dda867ccc3faeac58429a5600b682e66bba5854d98960d",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.85, 3.49, -2.79)]",
+          "triangles": 14728
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_06",
+        "runtime": {
+          "sha256": "ec6930af72a90b9812e38d5e322016fd282f66f4a534762635deac059f3972f6",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.85, 3.63, -2.58)]",
+          "triangles": 188
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "00de6f1d4c9d2d93137050043c0318226266dd31a08ff65ae0722fa43b9b6eb7",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (-1.85, 3.63, -2.58)]",
+          "triangles": 188
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_07",
+        "runtime": {
+          "sha256": "108d5e9a0beff3a85f9d48d9ac3ced8044871f730c349656eb148ddc67bf2103",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.3, 3.705, -3.45)]",
+          "triangles": 1372
+        },
+        "same_triangle_coordinates_and_transform": true,
+        "source": {
+          "sha256": "108d5e9a0beff3a85f9d48d9ac3ced8044871f730c349656eb148ddc67bf2103",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.3, 3.705, -3.45)]",
+          "triangles": 1372
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_08",
+        "runtime": {
+          "sha256": "dfa7cfab47ee600b0e25caba7b67a179934d3841b635b000b20d9d3638e88dd6",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.216, 0.23)]",
+          "triangles": 176804
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "5c2c1d98c22564465a60a6cb61103e9b0c2fbb65da284c073ca74237974127ce",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.216, 0.23)]",
+          "triangles": 177468
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_09",
+        "runtime": {
+          "sha256": "be4c40b36c4b7a9da8993612ed8914800a53a5d7ed1281afad8347a454b92b55",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 4976
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "6d96112467b290ba9581e9aa1168c349372328350d1400382d7a79f1c22677c2",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 5488
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_10",
+        "runtime": {
+          "sha256": "2ce23606a09114d2a71eabad2533ce6f982caeb228f2da456b13db8b773b4efd",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 1648
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "9702509226e738423ee75ffd1df630f3b8862f89059fa6c0acc918fc7da5c294",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 1840
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_11",
+        "runtime": {
+          "sha256": "f5473c86670e3fa5a2a326a744582ca547d671d937c3c1ecd4220059dd6d5734",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 3840
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "2b315c6a9df2c6bda82484753eb0000d5d6bee37806e5ffd9ad7c625f8767f22",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 4288
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_12",
+        "runtime": {
+          "sha256": "6edda2189617842101ebf4f4c7c74b1e4b880247fdd89a66b424279f6fa9a9df",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 360
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "985bb09beceacdeb33beca698263449e6873a576b47271908086825402b8188b",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 360
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_13",
+        "runtime": {
+          "sha256": "1dd2848171052ef816c84d6ab762458ba840a1c6b9ea909d50c89c8d8e044061",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 180
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "ace636046ecc5785cc7e00d2b0b11e1b06b0daefda31afed187396df16b67b59",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 180
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_14",
+        "runtime": {
+          "sha256": "7a7aae56047f8a501d47f15428e3b7cde43fefa76d2f4c9c9de461e19d14d118",
+          "transform": "[X: (0.1368, 0.0, 0.0), Y: (0.0, 0.19, 0.0), Z: (0.0, 0.0, 0.1368), O: (-3.42, 1.4876, 0.58)]",
+          "triangles": 1056
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "47028e14fcb7dde66477d3f3b206a179019d1bbb14f37d3dc977d60bf95184e4",
+          "transform": "[X: (0.1368, 0.0, 0.0), Y: (0.0, 0.19, 0.0), Z: (0.0, 0.0, 0.1368), O: (-3.42, 1.4876, 0.58)]",
+          "triangles": 1056
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_15",
+        "runtime": {
+          "sha256": "0fd22711abb66d1dd4f1aeb16ccb67f4c94b25acd9350d1c156d396efc767752",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 396
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "1fdd28ef0eaa33ebbb4c96f8a69ebd04ccd95f2a80f39254e0209cb470a7d32f",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 432
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_16",
+        "runtime": {
+          "sha256": "6ace63568a4370dfe0f42cef9029b53c46510f3d52a37b4bdb1ec475c902f80f",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 156
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "8caefe44db3375ee70b6d99d9ad40586bc2e43a791f0b078d7cce344138cfadf",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 156
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_17",
+        "runtime": {
+          "sha256": "303cec6d3793adf83ef9493a14b2c15138091d848e472e5a706077b5b4ddbc02",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 5590
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "488605eef5df7350bf48493ec740f6f3f2333e704adf8f64edc3d1a429f92fc5",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 5610
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_18",
+        "runtime": {
+          "sha256": "0d4b25ca55be2dcecb6d309e220b00b35c7e7b57ebecf0bcdd455a857bc4dc7b",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 8528
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "047c35680b483fd435bfcd21e8463c51c5d669f35df3a9cd9d92d2fc938e1783",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 8548
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_19",
+        "runtime": {
+          "sha256": "1c944837225a4e360b4c757620b9651ade05ba978a2e66e2ff5afc215c191079",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 8480
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "67ae0e97ca17269b6b17292c6d588e9b8b76bac30eb9a43fce435cf5dbc09137",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 8500
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_20",
+        "runtime": {
+          "sha256": "9cf65d98c26a68a243ba87af42b058799978b27c1bf2f818eac5b8fbead73195",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 6456
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "e4666f54262ecea6e15c63a46e91210b012d376b67fda07cd3bf4bcd9e351bad",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 6484
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_21",
+        "runtime": {
+          "sha256": "39ae45acbbfaed4a1698c796180a1cc4dd3ed20f26327fabc7ce557e0aa0c1c9",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, -0.0, 1.0), Z: (0.0, -1.0, -0.0), O: (-3.5, 2.84, -1.0915)]",
+          "triangles": 360
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "e5019c6e5fca32dc7edf435392a6788a5608044decf7edf993ab785a1fcdcd29",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, -0.0, 1.0), Z: (0.0, -1.0, -0.0), O: (-3.5, 2.84, -1.0915)]",
+          "triangles": 360
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_22",
+        "runtime": {
+          "sha256": "b3e1c5ed5725157c5a8b964036b7d873e428cca9b654b8015fc636bbfe01e900",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 9616
+        },
+        "same_triangle_coordinates_and_transform": true,
+        "source": {
+          "sha256": "b3e1c5ed5725157c5a8b964036b7d873e428cca9b654b8015fc636bbfe01e900",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 9616
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_23",
+        "runtime": {
+          "sha256": "c03c3bc196945fa4ca064a2fa8eafe5e447f6412b9a0a59e0b5ea663c6f5fb96",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 8400
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "2e837e91a0b957fdb606fa8f72330410390617ae58a2106757eac78ccdcbdd53",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 8400
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_24",
+        "runtime": {
+          "sha256": "9fbed3eb7909c144edebf8dbf269383e50119167af5b9e467bb063ccb7ee6392",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 848
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "967be2d67af06a04c01301d02f48d229de2f5b907c4558624f0ee1bcd4c4de83",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 848
+        }
+      },
+      {
+        "node": "panda-home/PandaHome_25",
+        "runtime": {
+          "sha256": "f9103cd6cc82ba769e9a9c325f6e323a7aa29c66b90f4f74b436d17c89ea1154",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 2
+        },
+        "same_triangle_coordinates_and_transform": true,
+        "source": {
+          "sha256": "f9103cd6cc82ba769e9a9c325f6e323a7aa29c66b90f4f74b436d17c89ea1154",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 2
+        }
+      },
+      {
+        "node": "panda-home/PandaWindowBackground",
+        "runtime": {
+          "sha256": "4c6013b5e63c2cd219f8c6a9d16e7f8fff906e80cb81817e22258f1a4a022d36",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 192
+        },
+        "same_triangle_coordinates_and_transform": false,
+        "source": {
+          "sha256": "206bd2807d7bad033fcd8b560619d28f48c474cb3a026eb38ba2f5030d1e81fa",
+          "transform": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.0, 0.0)]",
+          "triangles": 192
+        }
+      }
+    ]
+  },
+  "pass_all": false
+}

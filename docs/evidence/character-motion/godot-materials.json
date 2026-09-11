@@ -1,0 +1,115 @@
+{
+  "characters": {
+    "frog": [
+      {
+        "cast_shadow": 1,
+        "lod_bias": 1.0,
+        "mesh": "res://assets/frog.glb::ArrayMesh_76nb3",
+        "node": "/root/frog/FrogRig/Skeleton3D/Tripo_Frog_Skin",
+        "shadow_mesh": false,
+        "skin_bind_count": 16,
+        "surfaces": [
+          {
+            "distinct_normals_001": 43932,
+            "format": 34359745559,
+            "indices": 264000,
+            "material": {
+              "albedo": {
+                "class": "PortableCompressedTexture2D",
+                "path": "res://assets/frog.glb::PortableCompressedTexture2D_w3oqm",
+                "decoded_data_hex_md5": "a12bc5683ee373d9e4cdd8956e604e40",
+                "size": [
+                  4096,
+                  4096
+                ]
+              },
+              "albedo_color": "(1.0, 1.0, 1.0, 1.0)",
+              "class": "StandardMaterial3D",
+              "cull_mode": 2,
+              "disable_receive_shadows": false,
+              "metallic": 1.0,
+              "name": "tripo_mat_de0ee79b",
+              "normal": {
+                "class": "PortableCompressedTexture2D",
+                "path": "res://assets/frog.glb::PortableCompressedTexture2D_3djwy",
+                "decoded_data_hex_md5": "c5f56cc203c597f5fbb0838dc72193e1",
+                "size": [
+                  4096,
+                  4096
+                ]
+              },
+              "normal_enabled": true,
+              "normal_scale": 0.349999994039536,
+              "path": "res://assets/frog.glb::StandardMaterial3D_jovxg",
+              "roughness": 1.0,
+              "roughness_texture": {
+                "class": "PortableCompressedTexture2D",
+                "path": "res://assets/frog.glb::PortableCompressedTexture2D_absop",
+                "decoded_data_hex_md5": "b86a797fd1b1dcb1f3408fbffb43748f",
+                "size": [
+                  4096,
+                  4096
+                ]
+              },
+              "shading_mode": 1
+            },
+            "normals": 49148,
+            "vertices": 49148
+          }
+        ]
+      }
+    ],
+    "panda": [
+      {
+        "cast_shadow": 1,
+        "lod_bias": 1.0,
+        "mesh": "res://assets/panda.glb::ArrayMesh_4eq21",
+        "node": "/root/panda/PandaRig/Skeleton3D/Tripo_Panda_Skin",
+        "shadow_mesh": false,
+        "skin_bind_count": 16,
+        "surfaces": [
+          {
+            "distinct_normals_001": 17055,
+            "format": 34359745559,
+            "indices": 68331,
+            "material": {
+              "albedo": {
+                "class": "CompressedTexture2D",
+                "path": "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_BaseColor.jpg",
+                "decoded_data_hex_md5": "63ca3aa064fbbf30f747fe72fc6363ad",
+                "size": [
+                  2048,
+                  2048
+                ]
+              },
+              "albedo_color": "(1.0, 1.0, 1.0, 1.0)",
+              "class": "StandardMaterial3D",
+              "cull_mode": 2,
+              "disable_receive_shadows": false,
+              "metallic": 1.0,
+              "name": "tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_material",
+              "normal": null,
+              "normal_enabled": false,
+              "normal_scale": 1.0,
+              "path": "res://assets/panda.glb::StandardMaterial3D_0covb",
+              "roughness": 0.860000014305115,
+              "roughness_texture": {
+                "class": "CompressedTexture2D",
+                "path": "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Metallic-tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Roughness.png",
+                "decoded_data_hex_md5": "aa891fa727b26907fdf387f143c91072",
+                "size": [
+                  1024,
+                  1024
+                ]
+              },
+              "shading_mode": 1
+            },
+            "normals": 21914,
+            "vertices": 21914
+          }
+        ]
+      }
+    ]
+  },
+  "renderer": "gl_compatibility"
+}

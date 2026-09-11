@@ -1,0 +1,84 @@
+{
+  "source": "Tripo",
+  "model": "Tripo v3.1",
+  "task_id": "e1d93848-311b-45c4-b298-1cee5a0628d3",
+  "optimized_task_id": "69379bfb-896b-4a6f-baeb-0eeecedfbee9",
+  "conversion_task_id": "2bc04164-f03d-4e19-a2a6-9557c057d114",
+  "source_asset": "worlds/frog/blender/panda-tripo/panda-20k-source.glb",
+  "source_asset_sha256": "aca26133707449b625a0b9623f6877e4353dbf9bc5b64726166312bbf1e47d4a",
+  "runtime_asset": "worlds/frog/source/assets/panda.glb",
+  "runtime_faces": 22777,
+  "runtime_vertices": 21814,
+  "height": 1.350000023841858,
+  "forward": "Godot +Z; source Tripo +X rotated -90 degrees in Blender Z",
+  "runtime_bytes": 2719648,
+  "rigging": "Blender 16-bone four-weight anatomical skin, rest-pole two-bone leg IK, independent grounded feet and measured in-place locomotion",
+  "bones": 16,
+  "animations": [
+    "Greet",
+    "Idle",
+    "Sit",
+    "Stand",
+    "Turn",
+    "Walk"
+  ],
+  "native_rig": "worlds/frog/blender/panda-rig.blend",
+  "reference": "worlds/frog/blender/panda-front-reference.png",
+  "reference_creation": "Built-in imagegen single front derived from approved panda turnaround",
+  "reference_prompt": "worlds/frog/blender/panda-front-reference-prompt.txt",
+  "environment_source": "Blender authored architecture, bamboo furniture and ceramic objects",
+  "role": "Neighbour NPC with physical short walks, greeting, turn steps, sitting and standing.",
+  "validation": {
+    "normalization": true,
+    "weights_max": 4,
+    "source_front_verified_by_orthogonal_renders": true,
+    "engine_playback": {
+      "status": "passed",
+      "engine": "Godot 4.7.2 GL Compatibility",
+      "evidence": "docs/evidence/households-runtime/households-check.json",
+      "checks": 95,
+      "character_position": "normal CharacterBody3D movement with actual-speed-driven animation",
+      "visual_lightmap_review": "passed final source scene capture, Godot 4.7.2 Compatibility; docs/evidence/households-runtime/lighting-check.json"
+    },
+    "rig_check_evidence": "docs/evidence/character-motion/panda-motion-check.json",
+    "glb_verified": {
+      "mesh_count": 1,
+      "materials": 1,
+      "textures": 2,
+      "skin_joints": 16,
+      "animations": [
+        "Greet",
+        "Idle",
+        "Sit",
+        "Stand",
+        "Turn",
+        "Walk"
+      ]
+    },
+    "all_weights_normalized": true,
+    "actual_blender_animation_samples": 312,
+    "walk_actual_sole_measurements": {
+      "L": {
+        "min_z": -0.00097,
+        "max_lift": 0.083792,
+        "forward_travel": 0.315045,
+        "stance_world_drift": 0.00017,
+        "stance_ground_error": 0.00097
+      },
+      "R": {
+        "min_z": -0.00097,
+        "max_lift": 0.083792,
+        "forward_travel": 0.315141,
+        "stance_world_drift": 7e-05,
+        "stance_ground_error": 0.00097
+      }
+    }
+  },
+  "runtime_sha256": "b7ee5da7c6010cc45a5e02736bedac637b06def09cc4d31f4e01d3a63cf05c20",
+  "motion_build_script": "tools/build-character-motion.py",
+  "motion_input": "worlds/frog/blender/character-motion-originals/panda-rig.blend",
+  "motion_input_sha256": "df50174b0a0072b084c1e8508711b7e3b1b36753bcbee187b4359307b9e99a19",
+  "locomotion_contract": "worlds/frog/source/assets/locomotion.json",
+  "motion_evidence": "docs/evidence/character-motion/panda-motion-check.json",
+  "shape_edit": "Original Tripo geometry and UVs retained. Shortened torso, larger visible paws, softer matte surface; satchel and cream belly stay with torso."
+}

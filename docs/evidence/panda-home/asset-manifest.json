@@ -1,0 +1,43 @@
+{
+  "panda.glb": {
+    "bytes": 3103728,
+    "sha256": "1c75d7b0b63043dd0b183e97f4c44520917027178bdc87bbc04947237bdda150",
+    "mesh_count": 1,
+    "animations": [
+      "Greet",
+      "Idle"
+    ]
+  },
+  "panda-home.glb": {
+    "bytes": 4826984,
+    "sha256": "909b55a54f4c41c727f2c0a57d5e03fcbd2460b0a70c2e8e8f311156f138b7be",
+    "mesh_count": 23,
+    "animations": []
+  },
+  "panda-exterior.glb": {
+    "bytes": 1222144,
+    "sha256": "cdc0215215663a1a157f9146e4a55e101accae5577da51ac28f16ebb35a2c5e2",
+    "mesh_count": 13,
+    "animations": []
+  },
+  "main_camera": {
+    "position": [
+      0.35,
+      4.05,
+      4.42
+    ],
+    "target": [
+      0,
+      2.0,
+      -0.8
+    ],
+    "fov": 74
+  },
+  "qa_keys": [
+    "qa_ground_route",
+    "qa_loft_route",
+    "qa_wall_start",
+    "qa_wall_direction",
+    "qa_wall_route"
+  ]
+}

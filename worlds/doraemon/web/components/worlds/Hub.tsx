@@ -560,7 +560,7 @@ function NativeWorld({
         key={retry}
         title={t(titleKey[world])}
         src={
-          assetPath('worlds/' + world + '/index.html') + '?v=loading-2&lang=' +
+          assetPath('worlds/' + world + '/index.html') + '?v=homes-17&lang=' +
           locale +
           '&sound=' +
           (initialSound.current ? '1' : '0')

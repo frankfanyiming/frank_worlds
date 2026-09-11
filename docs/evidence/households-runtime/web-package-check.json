@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "world": "frog",
+  "totalBytes": 276017180,
+  "sha256": "c71941638ce0f8cb051268887fc9fd1b96762008a5ea9cf3f2eea39c5f8c6617",
+  "chunks": 17,
+  "downloadBytes": 190520666,
+  "checks": [
+    "WebAssembly header",
+    "chunk assembly",
+    "SHA-256 integrity",
+    "corrupt-download recovery",
+    "error retry UI",
+    "language bridge",
+    "ready signal"
+  ],
+  "native_character_gi": "Both character instances explicitly GI_MODE_DYNAMIC; final source screenshots and movies recaptured after integration."
+}

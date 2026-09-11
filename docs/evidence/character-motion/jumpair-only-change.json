@@ -1,0 +1,23 @@
+{
+  "before_sha256": "d1059fc66ea5bff91dc09d4433d7fae8dd6f3d1f73a36eb9c2b9c1ab495f2654",
+  "after_sha256": "d02f3bedea63cfd65f3406660b2f950377439fa58c60ce9937ebb649e6564f68",
+  "bytes": 9472852,
+  "unchanged_static_data": {
+    "mesh_buffers": true,
+    "skins": true,
+    "images": true,
+    "materials": true,
+    "nodes": true
+  },
+  "unchanged_clips": {
+    "Greet": true,
+    "Idle": true,
+    "JumpAir": false,
+    "JumpStart": true,
+    "Land": true,
+    "Run": true,
+    "Sit": true,
+    "Walk": true
+  },
+  "only_changed_clip": "JumpAir"
+}

@@ -1,0 +1,54 @@
+{
+  "blender_version": "5.2.1 LTS",
+  "linear_gray": 0.25,
+  "preencoded_gray": 0.5370987304831942,
+  "scene": "three equal planes with identical normal, uniform white world strength 1, Cycles 64 samples, Standard/no-look/no-exposure",
+  "patches": [
+    {
+      "name": "A_constant_linear",
+      "constant_linear": 0.25,
+      "image_input": null,
+      "render_sample_x": 146
+    },
+    {
+      "name": "B_generated_direct_linear",
+      "constant_linear": 0.25,
+      "image_input": 0.25,
+      "image_buffer_before_pack": [
+        0.250980406999588,
+        0.250980406999588,
+        0.250980406999588,
+        1.0
+      ],
+      "image_buffer_after_pack": [
+        0.250980406999588,
+        0.250980406999588,
+        0.250980406999588,
+        1.0
+      ],
+      "image_colorspace": "sRGB",
+      "image_is_float": false,
+      "render_sample_x": 384
+    },
+    {
+      "name": "C_generated_preconverted_sRGB",
+      "constant_linear": 0.25,
+      "image_input": 0.5370987304831942,
+      "image_buffer_before_pack": [
+        0.5372549295425415,
+        0.5372549295425415,
+        0.5372549295425415,
+        1.0
+      ],
+      "image_buffer_after_pack": [
+        0.5372549295425415,
+        0.5372549295425415,
+        0.5372549295425415,
+        1.0
+      ],
+      "image_colorspace": "sRGB",
+      "image_is_float": false,
+      "render_sample_x": 622
+    }
+  ]
+}

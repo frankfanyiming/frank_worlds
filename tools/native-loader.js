@@ -135,7 +135,7 @@ async function load() {
   controllers.add(controller);
   let descriptor;
   try {
-    descriptor = await deadline(fetch('world-pack.json', {signal: controller.signal}).then(r => {
+    descriptor = await deadline(fetch('world-pack.json', {signal: controller.signal, cache: 'no-store'}).then(r => {
       if (!r.ok) throw Error('World manifest unavailable');
       return r.json();
     }), 20000, () => controller.abort());

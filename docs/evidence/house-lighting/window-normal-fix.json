@@ -1,0 +1,16 @@
+{
+  "day_candle_bake_energy": 0.09,
+  "flipped_vertices": 2654,
+  "mesh": "home-enclosure/HomeDetails_05",
+  "positions_unchanged": true,
+  "runtime_only": true,
+  "triangles_per_ring": [
+    1280,
+    1280,
+    1280
+  ],
+  "stone_reveal_mesh": "home-enclosure/HomeDetails_07",
+  "stone_reveal_triangles": 768,
+  "source_geometry_positions_uv_uv2_unchanged": true,
+  "double_flip_guard": "Known legacy GLB SHA256 + runtime metadata; new generated GLBs skip patch."
+}

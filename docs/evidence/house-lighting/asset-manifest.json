@@ -1,0 +1,57 @@
+{
+  "files": [
+    {
+      "path": "worlds/frog/source/assets/house-lighting/frog-day.exr",
+      "bytes": 11128249,
+      "sha256": "824920bf7578dbab5860b853b97d7f382d0200fe79e07b619661f287ab6e3002"
+    },
+    {
+      "path": "worlds/frog/source/assets/house-lighting/frog-day.lmbake",
+      "bytes": 140267,
+      "sha256": "e1c993154f9f2b75b8bdc59c326eea64b8855b8902f7cefd3bd508d5a086c218"
+    },
+    {
+      "path": "worlds/frog/source/assets/house-lighting/frog-dusk.exr",
+      "bytes": 11030007,
+      "sha256": "7eefbaf8c1ff55646dc3d1400850d3d6b8634d83d215d9a49ae00fe37cca64b7"
+    },
+    {
+      "path": "worlds/frog/source/assets/house-lighting/frog-dusk.lmbake",
+      "bytes": 140269,
+      "sha256": "dbf5f9f0e7bb615ebd1bcd5617c17ea6eb4bd2ee8e48a07080c923fbd6817da1"
+    },
+    {
+      "path": "worlds/frog/source/assets/house-lighting/frog-room.scn",
+      "bytes": 12597422,
+      "sha256": "5972655e0e30725de2f3b325f56b86ae956af39538a697ae6336bcba0e2cd2e9"
+    },
+    {
+      "path": "worlds/frog/source/assets/house-lighting/panda-day.exr",
+      "bytes": 15465143,
+      "sha256": "901886c9b9c1f97609b2352ca5eb982949b0a42273cebf92b65489d2a49a1f33"
+    },
+    {
+      "path": "worlds/frog/source/assets/house-lighting/panda-day.lmbake",
+      "bytes": 150376,
+      "sha256": "273592c4b7c021138d9b07d8f9390c150c691c73312e7e222cc820070804825c"
+    },
+    {
+      "path": "worlds/frog/source/assets/house-lighting/panda-dusk.exr",
+      "bytes": 15272164,
+      "sha256": "5b9497cd8c3015e1056c3ce98ca36957010edfd175419665a3a1bd78656c651f"
+    },
+    {
+      "path": "worlds/frog/source/assets/house-lighting/panda-dusk.lmbake",
+      "bytes": 150378,
+      "sha256": "3ef21e873187d483af7d1e6c448aae895ac4865bfac781bf6fa770f4b458cd26"
+    },
+    {
+      "path": "worlds/frog/source/assets/house-lighting/panda-room.scn",
+      "bytes": 9865646,
+      "sha256": "aa6deb619e59b45eff9a18b1766790a1a59404327fabafc38774474c7c744ed1"
+    }
+  ],
+  "total_runtime_source_bytes": 75939921,
+  "frozen": "2026-09-12T06:05:00+08:00",
+  "web_package_bytes": "Measured separately by export; source EXR size is not final PCK size."
+}

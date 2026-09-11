@@ -1,0 +1,68 @@
+{
+  "characters": [
+    {
+      "name": "frog",
+      "passed": true,
+      "scene_loaded": true,
+      "textures": [
+        {
+          "height": 4096,
+          "path": "res://assets/frog.glb::PortableCompressedTexture2D_w3oqm",
+          "property": "albedo_texture",
+          "valid": true,
+          "width": 4096
+        },
+        {
+          "height": 4096,
+          "path": "res://assets/frog.glb::PortableCompressedTexture2D_absop",
+          "property": "metallic_texture",
+          "valid": true,
+          "width": 4096
+        },
+        {
+          "height": 4096,
+          "path": "res://assets/frog.glb::PortableCompressedTexture2D_absop",
+          "property": "roughness_texture",
+          "valid": true,
+          "width": 4096
+        },
+        {
+          "height": 4096,
+          "path": "res://assets/frog.glb::PortableCompressedTexture2D_3djwy",
+          "property": "normal_texture",
+          "valid": true,
+          "width": 4096
+        }
+      ]
+    },
+    {
+      "name": "panda",
+      "passed": true,
+      "scene_loaded": true,
+      "textures": [
+        {
+          "height": 2048,
+          "path": "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_BaseColor.jpg",
+          "property": "albedo_texture",
+          "valid": true,
+          "width": 2048
+        },
+        {
+          "height": 1024,
+          "path": "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Metallic-tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Roughness.png",
+          "property": "metallic_texture",
+          "valid": true,
+          "width": 1024
+        },
+        {
+          "height": 1024,
+          "path": "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Metallic-tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Roughness.png",
+          "property": "roughness_texture",
+          "valid": true,
+          "width": 1024
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

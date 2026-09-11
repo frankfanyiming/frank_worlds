@@ -1,0 +1,26 @@
+{
+  "frog": {
+    "walk_speed": 1.18,
+    "run_speed": 2.45,
+    "jump_prepare": 0.12,
+    "jump_takeoff": 0.13,
+    "land_duration": 0.3333333333333333,
+    "walk_cycle": 0.6666666666666666,
+    "run_cycle": 0.4666666666666667,
+    "walk_support_fraction": 0.5,
+    "run_support_fraction": 0.4,
+    "forward": "Godot -Z / Blender +Y",
+    "walk_lift": 0.13,
+    "run_lift": 0.18
+  },
+  "panda": {
+    "walk_speed": 0.68,
+    "walk_cycle": 0.8,
+    "walk_support_fraction": 0.58,
+    "forward": "Godot +Z / Blender -Y",
+    "walk_lift": 0.1
+  },
+  "fps": 30,
+  "root_motion": "In place. Match playback speed to actual displacement / reference speed; support feet have constant backward velocity.",
+  "version": "2026-09-12-visible-footfall-v1"
+}

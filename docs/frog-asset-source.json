@@ -1,0 +1,85 @@
+{
+  "source": "Tripo",
+  "model": "Tripo v3.1",
+  "task_id": "2eda77ff-b581-4673-96b4-62b5d2da22fe",
+  "source_asset": "Original Tripo model.fbx, task 2eda77ff-b581-4673-96b4-62b5d2da22fe; reduced once to 88000 faces before the immutable Blender baseline",
+  "runtime_asset": "worlds/frog/source/assets/frog.glb",
+  "runtime_bytes": 9472852,
+  "runtime_sha256": "d02f3bedea63cfd65f3406660b2f950377439fa58c60ce9937ebb649e6564f68",
+  "runtime_faces": 88000,
+  "runtime_vertices": 44006,
+  "height": 1.0800305604934692,
+  "bones": 16,
+  "animations": [
+    "Greet",
+    "Idle",
+    "JumpAir",
+    "JumpStart",
+    "Land",
+    "Run",
+    "Sit",
+    "Walk"
+  ],
+  "native_rig": "worlds/frog/blender/frog-rig-jump.blend",
+  "rigging": "Blender 16-bone four-weight anatomical skin, rest-pole two-bone leg IK, independent grounded feet and measured in-place locomotion",
+  "motion_build_script": "tools/build-character-motion.py",
+  "motion_input": "worlds/frog/blender/character-motion-originals/frog-rig-jump.blend",
+  "motion_input_sha256": "443c3a64aecfb148ca481fd06111392827d483e74ab0eb90c3a3e790040e30f2",
+  "locomotion_contract": "worlds/frog/source/assets/locomotion.json",
+  "motion_evidence": "docs/evidence/character-motion/frog-motion-check.json",
+  "shape_edit": "Original Tripo geometry and UVs retained. Rounded haunch silhouette and cream belly protected from lower-leg weights.",
+  "role": "Playable frog, walking/running/jumping and resting.",
+  "validation": {
+    "normalization": true,
+    "weights_max": 4,
+    "all_weights_normalized": true,
+    "actual_blender_animation_samples": 330,
+    "rig_check_evidence": "docs/evidence/character-motion/frog-motion-check.json",
+    "glb_verified": {
+      "mesh_count": 1,
+      "materials": 1,
+      "textures": 3,
+      "skin_joints": 16,
+      "animations": [
+        "Greet",
+        "Idle",
+        "JumpAir",
+        "JumpStart",
+        "Land",
+        "Run",
+        "Sit",
+        "Walk"
+      ]
+    },
+    "walk_actual_sole_measurements": {
+      "L": {
+        "min_z": 0.002388,
+        "max_lift": 0.169154,
+        "forward_travel": 0.39266,
+        "stance_world_drift": 0.000606,
+        "stance_ground_error": 0.002389
+      },
+      "R": {
+        "min_z": -4.4e-05,
+        "max_lift": 0.168275,
+        "forward_travel": 0.392383,
+        "stance_world_drift": 0.00076,
+        "stance_ground_error": 4.4e-05
+      }
+    },
+    "engine_playback": {
+      "status": "passed",
+      "engine": "Godot 4.7.2 GL Compatibility",
+      "evidence": "docs/evidence/households-runtime/households-check.json",
+      "checks": 95,
+      "character_position": "normal CharacterBody3D movement with actual-speed-driven animation",
+      "visual_lightmap_review": "passed final source scene capture, Godot 4.7.2 Compatibility; docs/evidence/households-runtime/lighting-check.json"
+    },
+    "jumpair_revision": {
+      "runtime_sha256": "d02f3bedea63cfd65f3406660b2f950377439fa58c60ce9937ebb649e6564f68",
+      "blender_visual_evidence": "docs/evidence/character-motion/jumpair-visual-check.json",
+      "scope_evidence": "docs/evidence/character-motion/jumpair-only-change.json",
+      "engine_playback": "passed final real Godot walking/jump recording, no visible foot/thigh penetration; docs/evidence/households-runtime/青蛙-实机行走跳跃.mp4"
+    }
+  }
+}

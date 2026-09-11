@@ -1,0 +1,22 @@
+{
+  "runtime_sha256": "d02f3bedea63cfd65f3406660b2f950377439fa58c60ce9937ebb649e6564f68",
+  "scope": "JumpAir only; glTF accessor proof in jumpair-only-change.json",
+  "pose": {
+    "root_up": 0.012,
+    "foot_forward": 0.015,
+    "foot_lift_base": 0.003,
+    "foot_lift_variation": 0.002,
+    "ankle_pitch_radians": -0.035
+  },
+  "inspection": "Inspected real Blender renders at 0, 0.2 and 0.4 seconds from side and front. Both feet and individual toes are visible beneath the haunches, with no toe tips emerging through the thigh surface. This is visual inspection, not a complete geometric intersection proof.",
+  "renders": [
+    "frog-jumpair-revised-0.0s-side.png",
+    "frog-jumpair-revised-0.0s-front.png",
+    "frog-jumpair-revised-0.2s-side.png",
+    "frog-jumpair-revised-0.2s-front.png",
+    "frog-jumpair-revised-0.4s-side.png",
+    "frog-jumpair-revised-0.4s-front.png"
+  ],
+  "airborne_motion": "World CharacterBody3D provides the jump trajectory; the pose keeps feet in a near-extended shape. The negative minimum local sole height (about -0.007) applies only while airborne.",
+  "engine_revision_check": "Pending root integration for this exact runtime SHA."
+}

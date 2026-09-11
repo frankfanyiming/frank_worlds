@@ -1,0 +1,22 @@
+{
+  "blender": "5.2.1 LTS",
+  "purpose": "Check sRGB sample preservation when Image.save writes JPEG for runtime base-color maps",
+  "float_buffer": false,
+  "colorspace": "sRGB",
+  "input_linear_reference": 0.25,
+  "pixels_written_srgb": 0.5370987304831942,
+  "decoded_jpeg_rgb": [
+    137,
+    137,
+    137
+  ],
+  "sample_pixel": [
+    8,
+    8
+  ],
+  "size": [
+    16,
+    16
+  ],
+  "limits": "Single uniform grey chip. Not a proof of pixel-identical lossy texture conversion or engine rendering."
+}

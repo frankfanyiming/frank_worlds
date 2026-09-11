@@ -1,0 +1,5469 @@
+{
+  "cameras": [
+    {
+      "bounds": {
+        "max": [
+          -9.4,
+          6.6,
+          -7.1
+        ],
+        "min": [
+          -20.6,
+          0.188,
+          -16.9
+        ]
+      },
+      "fov": 61.0,
+      "frog_projection": {
+        "all_in_front": true,
+        "height_fraction": 0.202954355875651,
+        "height_pixels": 194.836181640625,
+        "landmarks": {
+          "center": {
+            "behind_camera": false,
+            "fraction": [
+              0.500000042385525,
+              0.519256496429443
+            ],
+            "pixels": [
+              720.000061035156,
+              498.486236572266
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -15.0,
+              0.697604179382324,
+              -8.18000030517578
+            ]
+          },
+          "feet": {
+            "behind_camera": false,
+            "fraction": [
+              0.500000042385525,
+              0.611752128601074
+            ],
+            "pixels": [
+              720.000061035156,
+              587.282043457031
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -15.0,
+              0.177604168653488,
+              -8.18000030517578
+            ]
+          },
+          "head": {
+            "behind_camera": false,
+            "fraction": [
+              0.500000042385525,
+              0.408797772725423
+            ],
+            "pixels": [
+              720.000061035156,
+              392.445861816406
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -15.0,
+              1.23760426044464,
+              -8.18000030517578
+            ]
+          }
+        },
+        "standing_height_m": 1.08,
+        "viewport_pixels": [
+          1440.0,
+          960.0
+        ]
+      },
+      "inside_authored_bounds": true,
+      "label": "frog_entry_camera_inside",
+      "mode": 1,
+      "position": [
+        -11.7774543762207,
+        2.68458390235901,
+        -8.65080261230469
+      ]
+    },
+    {
+      "bounds": {
+        "max": [
+          -9.4,
+          6.6,
+          -7.1
+        ],
+        "min": [
+          -20.6,
+          0.188,
+          -16.9
+        ]
+      },
+      "fov": 61.0,
+      "frog_projection": {
+        "all_in_front": true,
+        "height_fraction": 0.199388345082601,
+        "height_pixels": 191.412811279297,
+        "landmarks": {
+          "center": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.518916829427083
+            ],
+            "pixels": [
+              720.0,
+              498.16015625
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -18.5193367004395,
+              0.70954042673111,
+              -10.9507465362549
+            ]
+          },
+          "feet": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.610198783874512
+            ],
+            "pixels": [
+              720.0,
+              585.790832519531
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -18.5193367004395,
+              0.189540416002274,
+              -10.9507465362549
+            ]
+          },
+          "head": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.410810438791911
+            ],
+            "pixels": [
+              720.0,
+              394.378021240234
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -18.5193367004395,
+              1.24954044818878,
+              -10.9507465362549
+            ]
+          }
+        },
+        "standing_height_m": 1.08,
+        "viewport_pixels": [
+          1440.0,
+          960.0
+        ]
+      },
+      "inside_authored_bounds": true,
+      "label": "frog_main_camera_inside",
+      "mode": 1,
+      "position": [
+        -16.9050102233887,
+        2.68965196609497,
+        -7.97149801254272
+      ]
+    },
+    {
+      "bounds": {
+        "max": [
+          -9.4,
+          6.6,
+          -7.1
+        ],
+        "min": [
+          -20.6,
+          0.188,
+          -16.9
+        ]
+      },
+      "fov": 61.0,
+      "frog_projection": {
+        "all_in_front": true,
+        "height_fraction": 0.197001489003499,
+        "height_pixels": 189.121429443359,
+        "landmarks": {
+          "center": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.518689409891764
+            ],
+            "pixels": [
+              720.0,
+              497.941833496094
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -18.5195407867432,
+              0.709225714206696,
+              -10.9492816925049
+            ]
+          },
+          "feet": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.609103584289551
+            ],
+            "pixels": [
+              720.0,
+              584.739440917969
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -18.5195407867432,
+              0.189225673675537,
+              -10.9492816925049
+            ]
+          },
+          "head": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.412102095286051
+            ],
+            "pixels": [
+              720.0,
+              395.618011474609
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -18.5195407867432,
+              1.24922573566437,
+              -10.9492816925049
+            ]
+          }
+        },
+        "standing_height_m": 1.08,
+        "viewport_pixels": [
+          1440.0,
+          960.0
+        ]
+      },
+      "inside_authored_bounds": true,
+      "label": "frog_wheel_camera_inside",
+      "mode": 1,
+      "position": [
+        -16.8012199401855,
+        2.68926167488098,
+        -7.9362678527832
+      ]
+    },
+    {
+      "bounds": {
+        "max": [
+          -9.4,
+          6.6,
+          -7.1
+        ],
+        "min": [
+          -20.6,
+          0.188,
+          -16.9
+        ]
+      },
+      "fov": 61.0,
+      "frog_projection": {
+        "all_in_front": true,
+        "height_fraction": 0.186334101359049,
+        "height_pixels": 178.880737304688,
+        "landmarks": {
+          "center": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.517671744028727
+            ],
+            "pixels": [
+              720.0,
+              496.964874267578
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -15.8162145614624,
+              3.77083420753479,
+              -13.8548717498779
+            ]
+          },
+          "feet": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.604040400187175
+            ],
+            "pixels": [
+              720.0,
+              579.878784179688
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -15.8162145614624,
+              3.25083422660828,
+              -13.8548717498779
+            ]
+          },
+          "head": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.417706298828125
+            ],
+            "pixels": [
+              720.0,
+              400.998046875
+            ],
+            "within_5px_margin": true,
+            "world": [
+              -15.8162145614624,
+              4.3108344078064,
+              -13.8548717498779
+            ]
+          }
+        },
+        "standing_height_m": 1.08,
+        "viewport_pixels": [
+          1440.0,
+          960.0
+        ]
+      },
+      "inside_authored_bounds": true,
+      "label": "frog_loft_camera_inside",
+      "mode": 1,
+      "position": [
+        -14.3446788787842,
+        5.7505407333374,
+        -10.3163661956787
+      ]
+    },
+    {
+      "bounds": {
+        "max": [
+          -9.4,
+          6.6,
+          -7.1
+        ],
+        "min": [
+          -20.6,
+          0.188,
+          -16.9
+        ]
+      },
+      "fov": 68.0,
+      "inside_authored_bounds": true,
+      "label": "frog_frog_eye_inside",
+      "mode": 2,
+      "position": [
+        -15.8147306442261,
+        3.93012070655823,
+        -13.854453086853
+      ]
+    },
+    {
+      "bounds": {
+        "max": [
+          5.1,
+          6.22,
+          5.1
+        ],
+        "min": [
+          -5.1,
+          0.1,
+          -5.1
+        ]
+      },
+      "fov": 61.0,
+      "frog_projection": {
+        "all_in_front": true,
+        "height_fraction": 0.219965140024821,
+        "height_pixels": 211.166534423828,
+        "landmarks": {
+          "center": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.520860799153646
+            ],
+            "pixels": [
+              720.0,
+              500.0263671875
+            ],
+            "within_5px_margin": true,
+            "world": [
+              100.0,
+              0.716927111148834,
+              3.84999990463257
+            ]
+          },
+          "feet": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.617951583862305
+            ],
+            "pixels": [
+              720.0,
+              593.233520507812
+            ],
+            "within_5px_margin": true,
+            "world": [
+              100.0,
+              0.196927085518837,
+              3.84999990463257
+            ]
+          },
+          "head": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.397986443837484
+            ],
+            "pixels": [
+              720.0,
+              382.066986083984
+            ],
+            "within_5px_margin": true,
+            "world": [
+              100.0,
+              1.25692713260651,
+              3.84999990463257
+            ]
+          }
+        },
+        "standing_height_m": 1.08,
+        "viewport_pixels": [
+          1440.0,
+          960.0
+        ]
+      },
+      "inside_authored_bounds": true,
+      "label": "panda_entry_camera_inside",
+      "mode": 1,
+      "position": [
+        2.54164123535156,
+        2.73755931854248,
+        3.77393436431885
+      ]
+    },
+    {
+      "bounds": {
+        "max": [
+          5.1,
+          6.22,
+          5.1
+        ],
+        "min": [
+          -5.1,
+          0.1,
+          -5.1
+        ]
+      },
+      "fov": 61.0,
+      "frog_projection": {
+        "all_in_front": true,
+        "height_fraction": 0.204108206431071,
+        "height_pixels": 195.943878173828,
+        "landmarks": {
+          "center": {
+            "behind_camera": false,
+            "fraction": [
+              0.500000042385525,
+              0.519366137186686
+            ],
+            "pixels": [
+              720.000061035156,
+              498.591491699219
+            ],
+            "within_5px_margin": true,
+            "world": [
+              103.121520996094,
+              0.715257465839386,
+              2.92501711845398
+            ]
+          },
+          "feet": {
+            "behind_camera": false,
+            "fraction": [
+              0.500000042385525,
+              0.612316640218099
+            ],
+            "pixels": [
+              720.000061035156,
+              587.823974609375
+            ],
+            "within_5px_margin": true,
+            "world": [
+              103.121520996094,
+              0.195257440209389,
+              2.92501711845398
+            ]
+          },
+          "head": {
+            "behind_camera": false,
+            "fraction": [
+              0.500000042385525,
+              0.408208433787028
+            ],
+            "pixels": [
+              720.000061035156,
+              391.880096435547
+            ],
+            "within_5px_margin": true,
+            "world": [
+              103.121520996094,
+              1.25525748729706,
+              2.92501711845398
+            ]
+          }
+        },
+        "standing_height_m": 1.08,
+        "viewport_pixels": [
+          1440.0,
+          960.0
+        ]
+      },
+      "inside_authored_bounds": true,
+      "label": "panda_main_camera_inside",
+      "mode": 1,
+      "position": [
+        0.322181701660156,
+        2.69527149200439,
+        4.53828430175781
+      ]
+    },
+    {
+      "bounds": {
+        "max": [
+          5.1,
+          6.22,
+          5.1
+        ],
+        "min": [
+          -5.1,
+          0.1,
+          -5.1
+        ]
+      },
+      "fov": 61.0,
+      "frog_projection": {
+        "all_in_front": true,
+        "height_fraction": 0.201637077331543,
+        "height_pixels": 193.571594238281,
+        "landmarks": {
+          "center": {
+            "behind_camera": false,
+            "fraction": [
+              0.499999957614475,
+              0.51913096110026
+            ],
+            "pixels": [
+              719.999938964844,
+              498.36572265625
+            ],
+            "within_5px_margin": true,
+            "world": [
+              103.122024536133,
+              0.714715421199799,
+              2.92501711845398
+            ]
+          },
+          "feet": {
+            "behind_camera": false,
+            "fraction": [
+              0.499999957614475,
+              0.61121654510498
+            ],
+            "pixels": [
+              719.999938964844,
+              586.767883300781
+            ],
+            "within_5px_margin": true,
+            "world": [
+              103.122024536133,
+              0.194715395569801,
+              2.92501711845398
+            ]
+          },
+          "head": {
+            "behind_camera": false,
+            "fraction": [
+              0.499999957614475,
+              0.409579467773438
+            ],
+            "pixels": [
+              719.999938964844,
+              393.1962890625
+            ],
+            "within_5px_margin": true,
+            "world": [
+              103.122024536133,
+              1.25471544265747,
+              2.92501711845398
+            ]
+          }
+        },
+        "standing_height_m": 1.08,
+        "viewport_pixels": [
+          1440.0,
+          960.0
+        ]
+      },
+      "inside_authored_bounds": true,
+      "label": "panda_wheel_camera_inside",
+      "mode": 1,
+      "position": [
+        0.231010437011719,
+        2.69477081298828,
+        4.5439772605896
+      ]
+    },
+    {
+      "bounds": {
+        "max": [
+          5.1,
+          6.22,
+          5.1
+        ],
+        "min": [
+          -5.1,
+          0.1,
+          -5.1
+        ]
+      },
+      "fov": 61.0,
+      "frog_projection": {
+        "all_in_front": true,
+        "height_fraction": 0.179859002431234,
+        "height_pixels": 172.664642333984,
+        "landmarks": {
+          "center": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.51705363591512
+            ],
+            "pixels": [
+              720.0,
+              496.371490478516
+            ],
+            "within_5px_margin": true,
+            "world": [
+              99.8373947143555,
+              3.53499126434326,
+              -1.77081370353699
+            ]
+          },
+          "feet": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.600853284200033
+            ],
+            "pixels": [
+              720.0,
+              576.819152832031
+            ],
+            "within_5px_margin": true,
+            "world": [
+              99.8373947143555,
+              3.01499128341675,
+              -1.77081370353699
+            ]
+          },
+          "head": {
+            "behind_camera": false,
+            "fraction": [
+              0.5,
+              0.420994281768799
+            ],
+            "pixels": [
+              720.0,
+              404.154510498047
+            ],
+            "within_5px_margin": true,
+            "world": [
+              99.8373947143555,
+              4.07499122619629,
+              -1.77081370353699
+            ]
+          }
+        },
+        "standing_height_m": 1.08,
+        "viewport_pixels": [
+          1440.0,
+          960.0
+        ]
+      },
+      "inside_authored_bounds": true,
+      "label": "panda_loft_camera_inside",
+      "mode": 1,
+      "position": [
+        1.4439697265625,
+        5.51534843444824,
+        1.95810496807098
+      ]
+    },
+    {
+      "bounds": {
+        "max": [
+          5.1,
+          6.22,
+          5.1
+        ],
+        "min": [
+          -5.1,
+          0.1,
+          -5.1
+        ]
+      },
+      "fov": 68.0,
+      "inside_authored_bounds": true,
+      "label": "panda_frog_eye_inside",
+      "mode": 2,
+      "position": [
+        -0.164115905761719,
+        3.69513249397278,
+        -1.77074193954468
+      ]
+    }
+  ],
+  "checks": {
+    "frog_enclosed": true,
+    "frog_enter_via_door": true,
+    "frog_entry_camera_inside": true,
+    "frog_entry_camera_inside_frog_in_frame": true,
+    "frog_evening_is_indoor": true,
+    "frog_exit_approach": true,
+    "frog_exit_restores_world": true,
+    "frog_exit_via_door": true,
+    "frog_frog_eye_inside": true,
+    "frog_frog_eye_tracks_character": true,
+    "frog_ground_jump": true,
+    "frog_ground_jump_visible_takeoff": true,
+    "frog_ground_return": true,
+    "frog_ground_route": true,
+    "frog_layout_has_routes": true,
+    "frog_loft_camera_inside": true,
+    "frog_loft_camera_inside_frog_in_frame": true,
+    "frog_loft_jump_stays_inside": true,
+    "frog_loft_jump_stays_inside_visible_takeoff": true,
+    "frog_loft_return": true,
+    "frog_loft_route": true,
+    "frog_main_camera_inside": true,
+    "frog_main_camera_inside_frog_in_frame": true,
+    "frog_skin_and_movement_clips": true,
+    "frog_stairs_down": true,
+    "frog_stairs_up": true,
+    "frog_wall_blocks": true,
+    "frog_wall_blocks_approach": true,
+    "frog_wall_blocks_start": true,
+    "frog_wall_return": true,
+    "frog_wheel_camera_inside": true,
+    "frog_wheel_camera_inside_frog_in_frame": true,
+    "panda_body_approach": true,
+    "panda_body_blocks": true,
+    "panda_body_retreat": true,
+    "panda_entered_separate_room": true,
+    "panda_entry_camera_inside": true,
+    "panda_entry_camera_inside_frog_in_frame": true,
+    "panda_evening_is_indoor": true,
+    "panda_exit_approach": true,
+    "panda_exit_restores_world": true,
+    "panda_exit_via_door": true,
+    "panda_frog_eye_inside": true,
+    "panda_frog_eye_tracks_character": true,
+    "panda_ground_jump": true,
+    "panda_ground_jump_visible_takeoff": true,
+    "panda_ground_return": true,
+    "panda_ground_route": true,
+    "panda_has_detailed_textured_mesh": true,
+    "panda_layout_has_routes": true,
+    "panda_live_translation_en": true,
+    "panda_live_translation_ja": true,
+    "panda_live_translation_ko": true,
+    "panda_live_translation_zh-TW": true,
+    "panda_loft_camera_inside": true,
+    "panda_loft_camera_inside_frog_in_frame": true,
+    "panda_loft_jump_stays_inside": true,
+    "panda_loft_jump_stays_inside_visible_takeoff": true,
+    "panda_loft_return": true,
+    "panda_loft_route": true,
+    "panda_main_camera_inside": true,
+    "panda_main_camera_inside_frog_in_frame": true,
+    "panda_returns_to_tea_seat": true,
+    "panda_stairs_down": true,
+    "panda_stairs_up": true,
+    "panda_tea_approach": true,
+    "panda_tea_interaction": true,
+    "panda_tea_pose": true,
+    "panda_translation_restores_chinese": true,
+    "panda_tripo_provenance_recorded": true,
+    "panda_visit_interaction": true,
+    "panda_walks_physical_loop": true,
+    "panda_wall_blocks": true,
+    "panda_wall_blocks_approach": true,
+    "panda_wall_blocks_start": true,
+    "panda_wall_return": true,
+    "panda_wheel_camera_inside": true,
+    "panda_wheel_camera_inside_frog_in_frame": true,
+    "screenshot_01-原出生点与青蛙家外观": true,
+    "screenshot_01b-刚踏进青蛙家": true,
+    "screenshot_02-青蛙家主视角": true,
+    "screenshot_03-青蛙夹层睡铺": true,
+    "screenshot_04-青蛙家蛙眼视角": true,
+    "screenshot_05-青蛙家黄昏": true,
+    "screenshot_06-青蛙家出门恢复庭院": true,
+    "screenshot_07-沿小径来到熊猫家": true,
+    "screenshot_07b-刚踏进熊猫家": true,
+    "screenshot_08-熊猫家主视角": true,
+    "screenshot_09-熊猫竹床夹层": true,
+    "screenshot_10-熊猫家蛙眼视角": true,
+    "screenshot_11-熊猫家黄昏": true,
+    "screenshot_12-和熊猫喝茶": true,
+    "screenshot_13-熊猫家出门恢复森林": true,
+    "spawn_outdoors": true,
+    "woodland_to_panda": true
+  },
+  "failed": [],
+  "jumps": [
+    {
+      "animation_sequence": [
+        "JumpStart",
+        "JumpAir",
+        "Land",
+        "Idle"
+      ],
+      "end": [
+        -18.5112247467041,
+        0.169169083237648,
+        -10.9465208053589
+      ],
+      "height": 1.18414141237736,
+      "label": "frog_ground_jump",
+      "landed": true,
+      "start": [
+        -18.5195407867432,
+        0.169225677847862,
+        -10.9492816925049
+      ],
+      "stayed_in_same_home": true
+    },
+    {
+      "animation_sequence": [
+        "JumpStart",
+        "JumpAir",
+        "Land",
+        "Idle"
+      ],
+      "end": [
+        -15.8147306442261,
+        3.23012065887451,
+        -13.854453086853
+      ],
+      "height": 1.19255757331848,
+      "label": "frog_loft_jump_stays_inside",
+      "landed": true,
+      "start": [
+        -15.8147306442261,
+        3.2299268245697,
+        -13.854453086853
+      ],
+      "stayed_in_same_home": true
+    },
+    {
+      "animation_sequence": [
+        "JumpStart",
+        "JumpAir",
+        "Land",
+        "Idle"
+      ],
+      "end": [
+        103.122024536133,
+        0.174669563770294,
+        2.92501711845398
+      ],
+      "height": 1.19274079799652,
+      "label": "panda_ground_jump",
+      "landed": true,
+      "start": [
+        103.122024536133,
+        0.174715399742126,
+        2.92501711845398
+      ],
+      "stayed_in_same_home": true
+    },
+    {
+      "animation_sequence": [
+        "JumpStart",
+        "JumpAir",
+        "Land",
+        "Idle"
+      ],
+      "end": [
+        99.8358840942383,
+        2.99513244628906,
+        -1.77074193954468
+      ],
+      "height": 1.19247531890869,
+      "label": "panda_loft_jump_stays_inside",
+      "landed": true,
+      "start": [
+        99.8358840942383,
+        2.99502086639404,
+        -1.77074193954468
+      ],
+      "stayed_in_same_home": true
+    }
+  ],
+  "locale_frames": [
+    {
+      "locale": "en",
+      "samples": [
+        {
+          "correct": true,
+          "frame": 0,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  Have tea with Panda",
+          "zone": "Panda’s tea room  ·  Afternoon"
+        },
+        {
+          "correct": true,
+          "frame": 1,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  Have tea with Panda",
+          "zone": "Panda’s tea room  ·  Afternoon"
+        },
+        {
+          "correct": true,
+          "frame": 2,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  Have tea with Panda",
+          "zone": "Panda’s tea room  ·  Afternoon"
+        },
+        {
+          "correct": true,
+          "frame": 3,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  Have tea with Panda",
+          "zone": "Panda’s tea room  ·  Afternoon"
+        },
+        {
+          "correct": true,
+          "frame": 4,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  Have tea with Panda",
+          "zone": "Panda’s tea room  ·  Afternoon"
+        },
+        {
+          "correct": true,
+          "frame": 5,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  Have tea with Panda",
+          "zone": "Panda’s tea room  ·  Afternoon"
+        },
+        {
+          "correct": true,
+          "frame": 6,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  Have tea with Panda",
+          "zone": "Panda’s tea room  ·  Afternoon"
+        },
+        {
+          "correct": true,
+          "frame": 7,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  Have tea with Panda",
+          "zone": "Panda’s tea room  ·  Afternoon"
+        }
+      ],
+      "stable": true
+    },
+    {
+      "locale": "ja",
+      "samples": [
+        {
+          "correct": true,
+          "frame": 0,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  パンダとお茶を飲む",
+          "zone": "パンダの茶の間  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 1,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  パンダとお茶を飲む",
+          "zone": "パンダの茶の間  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 2,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  パンダとお茶を飲む",
+          "zone": "パンダの茶の間  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 3,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  パンダとお茶を飲む",
+          "zone": "パンダの茶の間  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 4,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  パンダとお茶を飲む",
+          "zone": "パンダの茶の間  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 5,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  パンダとお茶を飲む",
+          "zone": "パンダの茶の間  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 6,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  パンダとお茶を飲む",
+          "zone": "パンダの茶の間  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 7,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  パンダとお茶を飲む",
+          "zone": "パンダの茶の間  ·  午後"
+        }
+      ],
+      "stable": true
+    },
+    {
+      "locale": "ko",
+      "samples": [
+        {
+          "correct": true,
+          "frame": 0,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  판다와 차 마시기",
+          "zone": "판다의 다실  ·  오후"
+        },
+        {
+          "correct": true,
+          "frame": 1,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  판다와 차 마시기",
+          "zone": "판다의 다실  ·  오후"
+        },
+        {
+          "correct": true,
+          "frame": 2,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  판다와 차 마시기",
+          "zone": "판다의 다실  ·  오후"
+        },
+        {
+          "correct": true,
+          "frame": 3,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  판다와 차 마시기",
+          "zone": "판다의 다실  ·  오후"
+        },
+        {
+          "correct": true,
+          "frame": 4,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  판다와 차 마시기",
+          "zone": "판다의 다실  ·  오후"
+        },
+        {
+          "correct": true,
+          "frame": 5,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  판다와 차 마시기",
+          "zone": "판다의 다실  ·  오후"
+        },
+        {
+          "correct": true,
+          "frame": 6,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  판다와 차 마시기",
+          "zone": "판다의 다실  ·  오후"
+        },
+        {
+          "correct": true,
+          "frame": 7,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  판다와 차 마시기",
+          "zone": "판다의 다실  ·  오후"
+        }
+      ],
+      "stable": true
+    },
+    {
+      "locale": "zh-TW",
+      "samples": [
+        {
+          "correct": true,
+          "frame": 0,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  和熊貓喝杯茶",
+          "zone": "熊貓的竹木茶室  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 1,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  和熊貓喝杯茶",
+          "zone": "熊貓的竹木茶室  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 2,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  和熊貓喝杯茶",
+          "zone": "熊貓的竹木茶室  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 3,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  和熊貓喝杯茶",
+          "zone": "熊貓的竹木茶室  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 4,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  和熊貓喝杯茶",
+          "zone": "熊貓的竹木茶室  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 5,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  和熊貓喝杯茶",
+          "zone": "熊貓的竹木茶室  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 6,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  和熊貓喝杯茶",
+          "zone": "熊貓的竹木茶室  ·  午後"
+        },
+        {
+          "correct": true,
+          "frame": 7,
+          "nearest": "panda_tea",
+          "prompt": "E  ·  和熊貓喝杯茶",
+          "zone": "熊貓的竹木茶室  ·  午後"
+        }
+      ],
+      "stable": true
+    }
+  ],
+  "notes": [
+    {
+      "frog_animation_clips": [
+        "Greet",
+        "Idle",
+        "JumpAir",
+        "JumpStart",
+        "Land",
+        "Run",
+        "Sit",
+        "Walk"
+      ],
+      "frog_skinned_meshes": [
+        {
+          "binds": 16,
+          "mesh": "Tripo_Frog_Skin"
+        }
+      ]
+    },
+    {
+      "panda_provenance": {
+        "animations": [
+          "Greet",
+          "Idle",
+          "Sit",
+          "Stand",
+          "Turn",
+          "Walk"
+        ],
+        "bones": 16.0,
+        "conversion_task_id": "2bc04164-f03d-4e19-a2a6-9557c057d114",
+        "environment_source": "Blender authored architecture, bamboo furniture and ceramic objects",
+        "forward": "Godot +Z; source Tripo +X rotated -90 degrees in Blender Z",
+        "height": 1.35000002384186,
+        "locomotion_contract": "worlds/frog/source/assets/locomotion.json",
+        "model": "Tripo v3.1",
+        "motion_build_script": "tools/build-character-motion.py",
+        "motion_evidence": "docs/evidence/character-motion/panda-motion-check.json",
+        "motion_input": "worlds/frog/blender/character-motion-originals/panda-rig.blend",
+        "motion_input_sha256": "df50174b0a0072b084c1e8508711b7e3b1b36753bcbee187b4359307b9e99a19",
+        "native_rig": "worlds/frog/blender/panda-rig.blend",
+        "optimized_task_id": "69379bfb-896b-4a6f-baeb-0eeecedfbee9",
+        "reference": "worlds/frog/blender/panda-front-reference.png",
+        "reference_creation": "Built-in imagegen single front derived from approved panda turnaround",
+        "reference_prompt": "worlds/frog/blender/panda-front-reference-prompt.txt",
+        "rigging": "Blender 16-bone four-weight anatomical skin, rest-pole two-bone leg IK, independent grounded feet and measured in-place locomotion",
+        "role": "Neighbour NPC with physical short walks, greeting, turn steps, sitting and standing.",
+        "runtime_asset": "worlds/frog/source/assets/panda.glb",
+        "runtime_bytes": 2719648.0,
+        "runtime_faces": 22777.0,
+        "runtime_sha256": "b7ee5da7c6010cc45a5e02736bedac637b06def09cc4d31f4e01d3a63cf05c20",
+        "runtime_vertices": 21814.0,
+        "shape_edit": "Original Tripo geometry and UVs retained. Shortened torso, larger visible paws, softer matte surface; satchel and cream belly stay with torso.",
+        "source": "Tripo",
+        "source_asset": "worlds/frog/blender/panda-tripo/panda-20k-source.glb",
+        "source_asset_sha256": "aca26133707449b625a0b9623f6877e4353dbf9bc5b64726166312bbf1e47d4a",
+        "task_id": "e1d93848-311b-45c4-b298-1cee5a0628d3",
+        "validation": {
+          "actual_blender_animation_samples": 312.0,
+          "all_weights_normalized": true,
+          "engine_playback": "pending root integration",
+          "glb_verified": {
+            "animations": [
+              "Greet",
+              "Idle",
+              "Sit",
+              "Stand",
+              "Turn",
+              "Walk"
+            ],
+            "materials": 1.0,
+            "mesh_count": 1.0,
+            "skin_joints": 16.0,
+            "textures": 2.0
+          },
+          "normalization": true,
+          "rig_check_evidence": "docs/evidence/character-motion/panda-motion-check.json",
+          "source_front_verified_by_orthogonal_renders": true,
+          "walk_actual_sole_measurements": {
+            "L": {
+              "forward_travel": 0.315045,
+              "max_lift": 0.083792,
+              "min_z": -0.00097,
+              "stance_ground_error": 0.00097,
+              "stance_world_drift": 0.00017
+            },
+            "R": {
+              "forward_travel": 0.315141,
+              "max_lift": 0.083792,
+              "min_z": -0.00097,
+              "stance_ground_error": 0.00097,
+              "stance_world_drift": 0.00007
+            }
+          },
+          "weights_max": 4.0
+        }
+      },
+      "panda_provenance_file": "/Users/frank/Documents/Codex/2026-09-10/kan/work/frank_worlds/worlds/frog/source/../../../docs/panda-asset-source.json"
+    },
+    {
+      "end": [
+        -1.43132781982422,
+        0.195076838135719,
+        -0.244405478239059
+      ],
+      "maximum_single_physics_step": 0.0113410986959934,
+      "panda_walk_distance": 5.15660599712282,
+      "start": [
+        -1.34999847412109,
+        0.195000007748604,
+        -0.25
+      ],
+      "walk_animation_frames": 455
+    }
+  ],
+  "npc_contacts": [
+    {
+      "body": "/root/FrogWoodland/PandaHome/PandaBody",
+      "combined_capsule_radii": 0.650000005960464,
+      "contact_samples": [
+        {
+          "feet": [
+            98.6545562744141,
+            0.175165116786957,
+            0.406414270401001
+          ],
+          "normal": [
+            0.00693637365475297,
+            0.0,
+            0.999975979328156
+          ],
+          "position": [
+            98.6526412963867,
+            0.945160865783691,
+            0.129990875720978
+          ]
+        },
+        {
+          "feet": [
+            98.6545257568359,
+            0.174270644783974,
+            0.40284937620163
+          ],
+          "normal": [
+            0.00693603605031967,
+            0.0,
+            0.999975979328156
+          ],
+          "position": [
+            98.6526336669922,
+            0.945101022720337,
+            0.129990860819817
+          ]
+        },
+        {
+          "feet": [
+            98.6545181274414,
+            0.174405083060265,
+            0.401572018861771
+          ],
+          "normal": [
+            0.00693598762154579,
+            0.0,
+            0.999975979328156
+          ],
+          "position": [
+            98.6526412963867,
+            0.945116519927979,
+            0.129990920424461
+          ]
+        }
+      ],
+      "feet": [
+        98.6545181274414,
+        0.173936635255814,
+        0.401572018861771
+      ],
+      "minimum_horizontal_distance": 0.651587665081024,
+      "npc": [
+        98.6500015258789,
+        0.195000007748604,
+        -0.25
+      ]
+    }
+  ],
+  "outdoor_floor_samples": [
+    {
+      "authored_target": [
+        -15.0,
+        0.27140000462532,
+        -3.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": 0.00351960770785809,
+      "found": true,
+      "label": "woodland_to_panda_0",
+      "normal": [
+        0.0475110486149788,
+        0.998870193958282,
+        -0.0010724033927545
+      ],
+      "surface": [
+        -15.0,
+        0.022519588470459,
+        -3.0
+      ]
+    },
+    {
+      "authored_target": [
+        -5.0,
+        0.182899996638298,
+        -4.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": -0.0844945162534714,
+      "found": true,
+      "label": "woodland_to_panda_1",
+      "normal": [
+        -0.0108336564153433,
+        0.99977570772171,
+        0.018200671300292
+      ],
+      "surface": [
+        -5.0,
+        -0.0654945373535156,
+        -4.0
+      ]
+    },
+    {
+      "authored_target": [
+        4.0,
+        0.325300008058548,
+        -8.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": 0.0575133077800274,
+      "found": true,
+      "label": "woodland_to_panda_2",
+      "normal": [
+        -0.0254376623779535,
+        0.999584674835205,
+        -0.0135421874001622
+      ],
+      "surface": [
+        4.0,
+        0.0765132904052734,
+        -8.0
+      ]
+    },
+    {
+      "authored_target": [
+        11.0,
+        0.317299991846085,
+        -9.0
+      ],
+      "collider": "/root/FrogWoodland/navigation/CorrectedBridge",
+      "collision_mask": 1,
+      "expected_root_y": 0.411017239093781,
+      "found": true,
+      "label": "woodland_to_panda_3",
+      "normal": [
+        -0.327091962099075,
+        0.944992542266846,
+        0.0
+      ],
+      "surface": [
+        11.0,
+        0.430017232894897,
+        -9.0
+      ]
+    },
+    {
+      "authored_target": [
+        19.0,
+        0.43639999628067,
+        -9.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": 0.165272787213326,
+      "found": true,
+      "label": "woodland_to_panda_4",
+      "normal": [
+        0.0179501883685589,
+        0.999748706817627,
+        0.0134326806291938
+      ],
+      "surface": [
+        19.0,
+        0.184272766113281,
+        -9.0
+      ]
+    },
+    {
+      "authored_target": [
+        24.0,
+        0.268299996852875,
+        -2.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": -0.000958370161242783,
+      "found": true,
+      "label": "woodland_to_panda_5",
+      "normal": [
+        0.0256959181278944,
+        0.999596834182739,
+        -0.0120828989893198
+      ],
+      "surface": [
+        24.0,
+        0.0180416107177734,
+        -2.0
+      ]
+    },
+    {
+      "authored_target": [
+        24.0,
+        0.277500003576279,
+        5.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": 0.00850160233676434,
+      "found": true,
+      "label": "woodland_to_panda_6",
+      "normal": [
+        -0.0477653630077839,
+        0.998839259147644,
+        0.00621533067896962
+      ],
+      "surface": [
+        24.0,
+        0.0275015830993652,
+        5.0
+      ]
+    },
+    {
+      "authored_target": [
+        19.0,
+        0.480100005865097,
+        12.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": 0.208501413464546,
+      "found": true,
+      "label": "woodland_to_panda_7",
+      "normal": [
+        -0.0204114820808172,
+        0.999633491039276,
+        -0.0177856888622046
+      ],
+      "surface": [
+        19.0,
+        0.227501392364502,
+        12.0
+      ]
+    },
+    {
+      "authored_target": [
+        13.0,
+        0.34850001335144,
+        22.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": 0.0791354924440384,
+      "found": true,
+      "label": "woodland_to_panda_8",
+      "normal": [
+        -0.0505029037594795,
+        0.998630464076996,
+        0.0136638162657619
+      ],
+      "surface": [
+        13.0,
+        0.0981354713439941,
+        22.0
+      ]
+    },
+    {
+      "authored_target": [
+        26.0,
+        0.349999994039536,
+        22.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": 0.875607073307037,
+      "found": true,
+      "label": "woodland_to_panda_9",
+      "normal": [
+        -0.0928100049495697,
+        0.982792437076569,
+        -0.159704193472862
+      ],
+      "surface": [
+        26.0,
+        0.894607067108154,
+        22.0
+      ]
+    },
+    {
+      "authored_target": [
+        26.0,
+        0.449999988079071,
+        18.0
+      ],
+      "collider": "/root/FrogWoodland/woodland/Ground",
+      "collision_mask": 1,
+      "expected_root_y": 0.347282469272614,
+      "found": true,
+      "label": "woodland_to_panda_10",
+      "normal": [
+        -0.0273807775229216,
+        0.995303094387054,
+        -0.0928557962179184
+      ],
+      "surface": [
+        26.0,
+        0.36628246307373,
+        18.0
+      ]
+    }
+  ],
+  "panda_meshes": [
+    {
+      "albedo_textures": [
+        {
+          "height": 2048,
+          "path": "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_BaseColor.jpg",
+          "width": 2048
+        }
+      ],
+      "name": "Tripo_Panda_Skin",
+      "skin_binds": 16,
+      "triangles": 22777
+    }
+  ],
+  "panda_walk_samples": [
+    {
+      "animation": "Turn",
+      "frame": 0,
+      "position": [
+        -1.34999847412109,
+        0.195000007748604,
+        -0.25
+      ],
+      "route_index": 0,
+      "speed_scale": 1.0
+    },
+    {
+      "animation": "Walk",
+      "frame": 15,
+      "position": [
+        -1.35258483886719,
+        0.195064514875412,
+        -0.20474049448967
+      ],
+      "route_index": 0,
+      "speed_scale": 1.0000091791153
+    },
+    {
+      "animation": "Walk",
+      "frame": 30,
+      "position": [
+        -1.36228942871094,
+        0.194904759526253,
+        -0.0350176803767681
+      ],
+      "route_index": 0,
+      "speed_scale": 0.999980688095093
+    },
+    {
+      "animation": "Walk",
+      "frame": 45,
+      "position": [
+        -1.37196350097656,
+        0.195061981678009,
+        0.134705424308777
+      ],
+      "route_index": 0,
+      "speed_scale": 1.00000989437103
+    },
+    {
+      "animation": "Walk",
+      "frame": 60,
+      "position": [
+        -1.38164520263672,
+        0.194973483681679,
+        0.304427117109299
+      ],
+      "route_index": 0,
+      "speed_scale": 1.0000091791153
+    },
+    {
+      "animation": "Walk",
+      "frame": 75,
+      "position": [
+        -1.391357421875,
+        0.195033103227615,
+        0.474150002002716
+      ],
+      "route_index": 0,
+      "speed_scale": 1.0000091791153
+    },
+    {
+      "animation": "Walk",
+      "frame": 90,
+      "position": [
+        -1.40105438232422,
+        0.19582799077034,
+        0.643872797489166
+      ],
+      "route_index": 0,
+      "speed_scale": 0.99997091293335
+    },
+    {
+      "animation": "Walk",
+      "frame": 105,
+      "position": [
+        -1.41078186035156,
+        0.195839002728462,
+        0.813583612442017
+      ],
+      "route_index": 0,
+      "speed_scale": 1.0000091791153
+    },
+    {
+      "animation": "Walk",
+      "frame": 120,
+      "position": [
+        -1.42047119140625,
+        0.195046275854111,
+        0.983301520347595
+      ],
+      "route_index": 0,
+      "speed_scale": 1.0000091791153
+    },
+    {
+      "animation": "Walk",
+      "frame": 135,
+      "position": [
+        -1.43018341064453,
+        0.194950595498085,
+        1.15302455425262
+      ],
+      "route_index": 0,
+      "speed_scale": 0.99997091293335
+    },
+    {
+      "animation": "Walk",
+      "frame": 150,
+      "position": [
+        -1.43987274169922,
+        0.194960743188858,
+        1.32274484634399
+      ],
+      "route_index": 0,
+      "speed_scale": 1.0000091791153
+    },
+    {
+      "animation": "Turn",
+      "frame": 165,
+      "position": [
+        -1.44568634033203,
+        0.194960907101631,
+        1.42457616329193
+      ],
+      "route_index": 1,
+      "speed_scale": 1.0
+    },
+    {
+      "animation": "Walk",
+      "frame": 180,
+      "position": [
+        -1.56916809082031,
+        0.195155769586563,
+        1.44170224666595
+      ],
+      "route_index": 1,
+      "speed_scale": 0.999734878540039
+    },
+    {
+      "animation": "Walk",
+      "frame": 195,
+      "position": [
+        -1.73752593994141,
+        0.194923639297485,
+        1.46505558490753
+      ],
+      "route_index": 1,
+      "speed_scale": 0.999734878540039
+    },
+    {
+      "animation": "Walk",
+      "frame": 210,
+      "position": [
+        -1.90592193603516,
+        0.195065453648567,
+        1.48840951919556
+      ],
+      "route_index": 1,
+      "speed_scale": 1.00040030479431
+    },
+    {
+      "animation": "Walk",
+      "frame": 225,
+      "position": [
+        -2.07431030273438,
+        0.195820808410645,
+        1.51176404953003
+      ],
+      "route_index": 1,
+      "speed_scale": 0.999734878540039
+    },
+    {
+      "animation": "Walk",
+      "frame": 240,
+      "position": [
+        -2.24269866943359,
+        0.195104688405991,
+        1.5351175069809
+      ],
+      "route_index": 1,
+      "speed_scale": 1.0004016160965
+    },
+    {
+      "animation": "Turn",
+      "frame": 255,
+      "position": [
+        -2.27637481689453,
+        0.195823952555656,
+        1.53978836536407
+      ],
+      "route_index": 2,
+      "speed_scale": 1.0
+    },
+    {
+      "animation": "Walk",
+      "frame": 270,
+      "position": [
+        -2.28334808349609,
+        0.195814922451973,
+        1.36993992328644
+      ],
+      "route_index": 2,
+      "speed_scale": 1.00000321865082
+    },
+    {
+      "animation": "Walk",
+      "frame": 285,
+      "position": [
+        -2.29032897949219,
+        0.195829302072525,
+        1.2000869512558
+      ],
+      "route_index": 2,
+      "speed_scale": 1.00000321865082
+    },
+    {
+      "animation": "Walk",
+      "frame": 300,
+      "position": [
+        -2.29730987548828,
+        0.195824697613716,
+        1.03023064136505
+      ],
+      "route_index": 2,
+      "speed_scale": 0.999992609024048
+    },
+    {
+      "animation": "Walk",
+      "frame": 315,
+      "position": [
+        -2.30431365966797,
+        0.195092916488647,
+        0.860374450683594
+      ],
+      "route_index": 2,
+      "speed_scale": 0.999997854232788
+    },
+    {
+      "animation": "Walk",
+      "frame": 330,
+      "position": [
+        -2.31129455566406,
+        0.19583722949028,
+        0.690518200397491
+      ],
+      "route_index": 2,
+      "speed_scale": 0.999997854232788
+    },
+    {
+      "animation": "Walk",
+      "frame": 345,
+      "position": [
+        -2.31829071044922,
+        0.195835128426552,
+        0.520662307739258
+      ],
+      "route_index": 2,
+      "speed_scale": 1.0000205039978
+    },
+    {
+      "animation": "Walk",
+      "frame": 360,
+      "position": [
+        -2.32528686523438,
+        0.195821836590767,
+        0.350806027650833
+      ],
+      "route_index": 2,
+      "speed_scale": 0.999997854232788
+    },
+    {
+      "animation": "Walk",
+      "frame": 375,
+      "position": [
+        -2.33226776123047,
+        0.194979578256607,
+        0.180949717760086
+      ],
+      "route_index": 2,
+      "speed_scale": 0.999997854232788
+    },
+    {
+      "animation": "Walk",
+      "frame": 390,
+      "position": [
+        -2.33925628662109,
+        0.195818230509758,
+        0.0110934246331453
+      ],
+      "route_index": 2,
+      "speed_scale": 0.999998092651367
+    },
+    {
+      "animation": "Walk",
+      "frame": 405,
+      "position": [
+        -2.34624481201172,
+        0.19505463540554,
+        -0.158754259347916
+      ],
+      "route_index": 2,
+      "speed_scale": 0.999997854232788
+    },
+    {
+      "animation": "Walk",
+      "frame": 420,
+      "position": [
+        -2.32456207275391,
+        0.195006668567657,
+        -0.182957261800766
+      ],
+      "route_index": 3,
+      "speed_scale": 1.00001287460327
+    },
+    {
+      "animation": "Walk",
+      "frame": 435,
+      "position": [
+        -2.15494537353516,
+        0.19497786462307,
+        -0.194624468684196
+      ],
+      "route_index": 3,
+      "speed_scale": 1.00001335144043
+    },
+    {
+      "animation": "Walk",
+      "frame": 450,
+      "position": [
+        -1.98532867431641,
+        0.195821449160576,
+        -0.206291899085045
+      ],
+      "route_index": 3,
+      "speed_scale": 1.00068521499634
+    },
+    {
+      "animation": "Walk",
+      "frame": 465,
+      "position": [
+        -1.81572723388672,
+        0.19503028690815,
+        -0.217959612607956
+      ],
+      "route_index": 3,
+      "speed_scale": 1.00001358985901
+    },
+    {
+      "animation": "Walk",
+      "frame": 480,
+      "position": [
+        -1.64612579345703,
+        0.195025607943535,
+        -0.229627445340157
+      ],
+      "route_index": 3,
+      "speed_scale": 1.00001358985901
+    },
+    {
+      "animation": "Walk",
+      "frame": 495,
+      "position": [
+        -1.4765625,
+        0.195239618420601,
+        -0.241294428706169
+      ],
+      "route_index": 3,
+      "speed_scale": 1.00001287460327
+    }
+  ],
+  "player_teleports_by_test": 0,
+  "real_runtime": true,
+  "routes": [
+    {
+      "elapsed": 2.76666666666666,
+      "feet": [
+        -15.0,
+        0.200000002980232,
+        -8.18000030517578
+      ],
+      "home": "frog",
+      "label": "frog_enter",
+      "ordinary_door_transition": true,
+      "reached": true,
+      "start": [
+        -15.0,
+        0.00347656011581421,
+        -4.0
+      ],
+      "target": [
+        -15.0,
+        0.200000002980232,
+        -8.10000038146973
+      ]
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        -15.0,
+        0.157604172825813,
+        -8.18000030517578
+      ],
+      "height_delta": -0.0423958301544189,
+      "home": "frog",
+      "label": "frog_ground_0",
+      "reached": true,
+      "target": [
+        -15.0,
+        0.200000002980232,
+        -8.18000030517578
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.03333333333333,
+      "feet": [
+        -15.8629293441772,
+        0.158317282795906,
+        -8.87943172454834
+      ],
+      "height_delta": -0.0416827201843262,
+      "home": "frog",
+      "label": "frog_ground_1",
+      "reached": true,
+      "target": [
+        -15.9499998092651,
+        0.200000002980232,
+        -8.94999980926514
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 0.933333333333335,
+      "feet": [
+        -16.7136249542236,
+        0.157457292079926,
+        -9.57888031005859
+      ],
+      "height_delta": -0.0425427109003067,
+      "home": "frog",
+      "label": "frog_ground_2",
+      "reached": true,
+      "target": [
+        -16.7999992370605,
+        0.200000002980232,
+        -9.64999961853027
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.4,
+      "feet": [
+        -16.7992324829102,
+        0.157587170600891,
+        -11.1983604431152
+      ],
+      "height_delta": -0.0424128323793411,
+      "home": "frog",
+      "label": "frog_ground_3",
+      "reached": true,
+      "target": [
+        -16.7999992370605,
+        0.200000002980232,
+        -11.3000001907349
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 2.18333333333333,
+      "feet": [
+        -18.4519424438477,
+        0.167063474655151,
+        -10.9330701828003
+      ],
+      "height_delta": -0.0329365283250809,
+      "home": "frog",
+      "label": "frog_ground_4",
+      "reached": true,
+      "target": [
+        -18.5499992370605,
+        0.200000002980232,
+        -10.9700002670288
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        -18.5112247467041,
+        0.169169083237648,
+        -10.9465208053589
+      ],
+      "height_delta": -0.0188309103250504,
+      "home": "frog",
+      "label": "frog_stairs_up_0",
+      "reached": true,
+      "target": [
+        -18.5499992370605,
+        0.187999993562698,
+        -10.9700002670288
+      ],
+      "target_height": 0.187999993562698
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.5414390563965,
+        0.303670287132263,
+        -11.3073348999023
+      ],
+      "height_delta": -0.0301397144794464,
+      "home": "frog",
+      "label": "frog_stairs_up_1",
+      "reached": true,
+      "target": [
+        -18.5499992370605,
+        0.33381000161171,
+        -11.4099998474121
+      ],
+      "target_height": 0.33381000161171
+    },
+    {
+      "elapsed": 0.366666666666667,
+      "feet": [
+        -18.2184677124023,
+        0.436164706945419,
+        -11.4906902313232
+      ],
+      "height_delta": -0.0434553027153015,
+      "home": "frog",
+      "label": "frog_stairs_up_2",
+      "reached": true,
+      "target": [
+        -18.1022701263428,
+        0.479620009660721,
+        -11.5113096237183
+      ],
+      "target_height": 0.479620009660721
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        -17.82155418396,
+        0.590970039367676,
+        -11.7334871292114
+      ],
+      "height_delta": -0.0344599485397339,
+      "home": "frog",
+      "label": "frog_stairs_up_3",
+      "reached": true,
+      "target": [
+        -17.7417697906494,
+        0.62542998790741,
+        -11.7955102920532
+      ],
+      "target_height": 0.62542998790741
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.5837097167969,
+        0.734997689723969,
+        -12.1097040176392
+      ],
+      "height_delta": -0.0362423062324524,
+      "home": "frog",
+      "label": "frog_stairs_up_4",
+      "reached": true,
+      "target": [
+        -17.5387401580811,
+        0.771239995956421,
+        -12.2072200775146
+      ],
+      "target_height": 0.771239995956421
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.5321369171143,
+        0.879548728466034,
+        -12.5527591705322
+      ],
+      "height_delta": -0.0375012755393982,
+      "home": "frog",
+      "label": "frog_stairs_up_5",
+      "reached": true,
+      "target": [
+        -17.5327301025391,
+        0.917050004005432,
+        -12.6662302017212
+      ],
+      "target_height": 0.917050004005432
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.6739025115967,
+        1.02418291568756,
+        -12.975697517395
+      ],
+      "height_delta": -0.0386770963668823,
+      "home": "frog",
+      "label": "frog_stairs_up_6",
+      "reached": true,
+      "target": [
+        -17.724910736084,
+        1.06286001205444,
+        -13.0831098556519
+      ],
+      "target_height": 1.06286001205444
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        -17.9972362518311,
+        1.1725766658783,
+        -13.3106851577759
+      ],
+      "height_delta": -0.0360933542251587,
+      "home": "frog",
+      "label": "frog_stairs_up_7",
+      "reached": true,
+      "target": [
+        -18.0778503417969,
+        1.20867002010345,
+        -13.3766498565674
+      ],
+      "target_height": 1.20867002010345
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.4153270721436,
+        1.31762230396271,
+        -13.4648332595825
+      ],
+      "height_delta": -0.0368577241897583,
+      "home": "frog",
+      "label": "frog_stairs_up_8",
+      "reached": true,
+      "target": [
+        -18.5227794647217,
+        1.35448002815247,
+        -13.4896402359009
+      ],
+      "target_height": 1.35448002815247
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.8595333099365,
+        1.4622278213501,
+        -13.4244356155396
+      ],
+      "height_delta": -0.0380622148513794,
+      "home": "frog",
+      "label": "frog_stairs_up_9",
+      "reached": true,
+      "target": [
+        -18.9730091094971,
+        1.50029003620148,
+        -13.4000902175903
+      ],
+      "target_height": 1.50029003620148
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        -19.260103225708,
+        1.61055707931519,
+        -13.187123298645
+      ],
+      "height_delta": -0.0355429649353027,
+      "home": "frog",
+      "label": "frog_stairs_up_10",
+      "reached": true,
+      "target": [
+        -19.3408203125,
+        1.64610004425049,
+        -13.1254301071167
+      ],
+      "target_height": 1.64610004425049
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -19.5066680908203,
+        1.75554585456848,
+        -12.8159399032593
+      ],
+      "height_delta": -0.0363541841506958,
+      "home": "frog",
+      "label": "frog_stairs_up_11",
+      "reached": true,
+      "target": [
+        -19.5545597076416,
+        1.79190003871918,
+        -12.7191696166992
+      ],
+      "target_height": 1.79190003871918
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -19.5701122283936,
+        1.90009570121765,
+        -12.3744144439697
+      ],
+      "height_delta": -0.0376143455505371,
+      "home": "frog",
+      "label": "frog_stairs_up_12",
+      "reached": true,
+      "target": [
+        -19.5725898742676,
+        1.93771004676819,
+        -12.260479927063
+      ],
+      "target_height": 1.93771004676819
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -19.4396800994873,
+        2.0447473526001,
+        -11.9478483200073
+      ],
+      "height_delta": -0.0387725830078125,
+      "home": "frog",
+      "label": "frog_stairs_up_13",
+      "reached": true,
+      "target": [
+        -19.3913803100586,
+        2.08351993560791,
+        -11.8387002944946
+      ],
+      "target_height": 2.08351993560791
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        -19.1253776550293,
+        2.19315004348755,
+        -11.6043787002563
+      ],
+      "height_delta": -0.0361800193786621,
+      "home": "frog",
+      "label": "frog_stairs_up_14",
+      "reached": true,
+      "target": [
+        -19.0462493896484,
+        2.22933006286621,
+        -11.5360298156738
+      ],
+      "target_height": 2.22933006286621
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.7115364074707,
+        2.33820247650146,
+        -11.4391813278198
+      ],
+      "height_delta": -0.0369374752044678,
+      "home": "frog",
+      "label": "frog_stairs_up_15",
+      "reached": true,
+      "target": [
+        -18.6044292449951,
+        2.37513995170593,
+        -11.4114303588867
+      ],
+      "target_height": 2.37513995170593
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.2664127349854,
+        2.48281860351562,
+        -11.4677858352661
+      ],
+      "height_delta": -0.0381314754486084,
+      "home": "frog",
+      "label": "frog_stairs_up_16",
+      "reached": true,
+      "target": [
+        -18.1520099639893,
+        2.52095007896423,
+        -11.4891700744629
+      ],
+      "target_height": 2.52095007896423
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        -17.859691619873,
+        2.63116025924683,
+        -11.6944017410278
+      ],
+      "height_delta": -0.0355997085571289,
+      "home": "frog",
+      "label": "frog_stairs_up_17",
+      "reached": true,
+      "target": [
+        -17.7771301269531,
+        2.66675996780396,
+        -11.7540998458862
+      ],
+      "target_height": 2.66675996780396
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.603385925293,
+        2.77615904808044,
+        -12.0589284896851
+      ],
+      "height_delta": -0.0364110469818115,
+      "home": "frog",
+      "label": "frog_stairs_up_18",
+      "reached": true,
+      "target": [
+        -17.5528297424316,
+        2.81257009506226,
+        -12.1546201705933
+      ],
+      "target_height": 2.81257009506226
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.5283031463623,
+        2.92071557044983,
+        -12.4986209869385
+      ],
+      "height_delta": -0.0376644134521484,
+      "home": "frog",
+      "label": "frog_stairs_up_19",
+      "reached": true,
+      "target": [
+        -17.5228004455566,
+        2.95837998390198,
+        -12.6126899719238
+      ],
+      "target_height": 2.95837998390198
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.6474266052246,
+        3.06558632850647,
+        -12.9284791946411
+      ],
+      "height_delta": -0.0386037826538086,
+      "home": "frog",
+      "label": "frog_stairs_up_20",
+      "reached": true,
+      "target": [
+        -17.6929092407227,
+        3.10419011116028,
+        -13.0390596389771
+      ],
+      "target_height": 3.10419011116028
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        -17.9525623321533,
+        3.22195816040039,
+        -13.2801218032837
+      ],
+      "height_delta": -0.0280418395996094,
+      "home": "frog",
+      "label": "frog_stairs_up_21",
+      "reached": true,
+      "target": [
+        -18.0300006866455,
+        3.25,
+        -13.3506698608398
+      ],
+      "target_height": 3.25
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        -18.0308418273926,
+        3.23093557357788,
+        -13.9006862640381
+      ],
+      "height_delta": -0.0190644264221191,
+      "home": "frog",
+      "label": "frog_stairs_up_22",
+      "reached": true,
+      "target": [
+        -18.0300006866455,
+        3.25,
+        -14.0200004577637
+      ],
+      "target_height": 3.25
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        -18.0308418273926,
+        3.23093557357788,
+        -13.9006862640381
+      ],
+      "height_delta": -0.029064416885376,
+      "home": "frog",
+      "label": "frog_loft_0",
+      "reached": true,
+      "target": [
+        -18.0300006866455,
+        3.25999999046326,
+        -14.0200004577637
+      ],
+      "target_height": 3.25999999046326
+    },
+    {
+      "elapsed": 0.3,
+      "feet": [
+        -17.7665424346924,
+        3.23010492324829,
+        -14.0227346420288
+      ],
+      "height_delta": -0.0298950672149658,
+      "home": "frog",
+      "label": "frog_loft_1",
+      "reached": true,
+      "target": [
+        -17.6499996185303,
+        3.25999999046326,
+        -14.0200004577637
+      ],
+      "target_height": 3.25999999046326
+    },
+    {
+      "elapsed": 1.06666666666667,
+      "feet": [
+        -16.5105247497559,
+        3.23083710670471,
+        -14.0208206176758
+      ],
+      "height_delta": -0.0291628837585449,
+      "home": "frog",
+      "label": "frog_loft_2",
+      "reached": true,
+      "target": [
+        -16.3999996185303,
+        3.25999999046326,
+        -14.0200004577637
+      ],
+      "target_height": 3.25999999046326
+    },
+    {
+      "elapsed": 0.533333333333333,
+      "feet": [
+        -15.900107383728,
+        3.23082160949707,
+        -13.8785800933838
+      ],
+      "height_delta": -0.0291783809661865,
+      "home": "frog",
+      "label": "frog_loft_3",
+      "reached": true,
+      "target": [
+        -15.8000001907349,
+        3.25999999046326,
+        -13.8500003814697
+      ],
+      "target_height": 3.25999999046326
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        -15.8147306442261,
+        3.23012065887451,
+        -13.854453086853
+      ],
+      "height_delta": -0.0298793315887451,
+      "home": "frog",
+      "label": "frog_loft_return_0",
+      "reached": true,
+      "target": [
+        -15.8000001907349,
+        3.25999999046326,
+        -13.8500003814697
+      ],
+      "target_height": 3.25999999046326
+    },
+    {
+      "elapsed": 0.516666666666667,
+      "feet": [
+        -16.2972087860107,
+        3.2308189868927,
+        -13.9909477233887
+      ],
+      "height_delta": -0.0291810035705566,
+      "home": "frog",
+      "label": "frog_loft_return_1",
+      "reached": true,
+      "target": [
+        -16.3999996185303,
+        3.25999999046326,
+        -14.0200004577637
+      ],
+      "target_height": 3.25999999046326
+    },
+    {
+      "elapsed": 1.05,
+      "feet": [
+        -17.5325870513916,
+        3.23011088371277,
+        -14.0197792053223
+      ],
+      "height_delta": -0.0298891067504883,
+      "home": "frog",
+      "label": "frog_loft_return_2",
+      "reached": true,
+      "target": [
+        -17.6499996185303,
+        3.25999999046326,
+        -14.0200004577637
+      ],
+      "target_height": 3.25999999046326
+    },
+    {
+      "elapsed": 0.333333333333333,
+      "feet": [
+        -17.9258766174316,
+        3.23093557357788,
+        -14.0200033187866
+      ],
+      "height_delta": -0.029064416885376,
+      "home": "frog",
+      "label": "frog_loft_return_3",
+      "reached": true,
+      "target": [
+        -18.0300006866455,
+        3.25999999046326,
+        -14.0200004577637
+      ],
+      "target_height": 3.25999999046326
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        -17.9258766174316,
+        3.23093557357788,
+        -14.0200033187866
+      ],
+      "height_delta": -0.0190644264221191,
+      "home": "frog",
+      "label": "frog_stairs_down_0",
+      "reached": true,
+      "target": [
+        -18.0300006866455,
+        3.25,
+        -14.0200004577637
+      ],
+      "target_height": 3.25
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        -18.0318183898926,
+        3.23093557357788,
+        -13.4605760574341
+      ],
+      "height_delta": -0.0190644264221191,
+      "home": "frog",
+      "label": "frog_stairs_down_1",
+      "reached": true,
+      "target": [
+        -18.0300006866455,
+        3.25,
+        -13.3506698608398
+      ],
+      "target_height": 3.25
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.7748832702637,
+        3.12042427062988,
+        -13.1111640930176
+      ],
+      "height_delta": 0.0162341594696045,
+      "home": "frog",
+      "label": "frog_stairs_down_2",
+      "reached": true,
+      "target": [
+        -17.6929092407227,
+        3.10419011116028,
+        -13.0390596389771
+      ],
+      "target_height": 3.10419011116028
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.5634384155273,
+        3.01437425613403,
+        -12.7164249420166
+      ],
+      "height_delta": 0.0559942722320557,
+      "home": "frog",
+      "label": "frog_stairs_down_3",
+      "reached": true,
+      "target": [
+        -17.5228004455566,
+        2.95837998390198,
+        -12.6126899719238
+      ],
+      "target_height": 2.95837998390198
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.5436096191406,
+        2.86899781227112,
+        -12.2687950134277
+      ],
+      "height_delta": 0.0564277172088623,
+      "home": "frog",
+      "label": "frog_stairs_down_4",
+      "reached": true,
+      "target": [
+        -17.5528297424316,
+        2.81257009506226,
+        -12.1546201705933
+      ],
+      "target_height": 2.81257009506226
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.7185497283936,
+        2.72420287132263,
+        -11.8559017181396
+      ],
+      "height_delta": 0.0574429035186768,
+      "home": "frog",
+      "label": "frog_stairs_down_5",
+      "reached": true,
+      "target": [
+        -17.7771301269531,
+        2.66675996780396,
+        -11.7540998458862
+      ],
+      "target_height": 2.66675996780396
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        -18.0691661834717,
+        2.57444500923157,
+        -11.5463838577271
+      ],
+      "height_delta": 0.053494930267334,
+      "home": "frog",
+      "label": "frog_stairs_down_6",
+      "reached": true,
+      "target": [
+        -18.1520099639893,
+        2.52095007896423,
+        -11.4891700744629
+      ],
+      "target_height": 2.52095007896423
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.5007629394531,
+        2.42965126037598,
+        -11.4263324737549
+      ],
+      "height_delta": 0.0545113086700439,
+      "home": "frog",
+      "label": "frog_stairs_down_7",
+      "reached": true,
+      "target": [
+        -18.6044292449951,
+        2.37513995170593,
+        -11.4114303588867
+      ],
+      "target_height": 2.37513995170593
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.9421310424805,
+        2.28488183021545,
+        -11.5041418075562
+      ],
+      "height_delta": 0.0555517673492432,
+      "home": "frog",
+      "label": "frog_stairs_down_8",
+      "reached": true,
+      "target": [
+        -19.0462493896484,
+        2.22933006286621,
+        -11.5360298156738
+      ],
+      "target_height": 2.22933006286621
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -19.3081340789795,
+        2.13951420783997,
+        -11.763053894043
+      ],
+      "height_delta": 0.0559942722320557,
+      "home": "frog",
+      "label": "frog_stairs_down_9",
+      "reached": true,
+      "target": [
+        -19.3913803100586,
+        2.08351993560791,
+        -11.8387002944946
+      ],
+      "target_height": 2.08351993560791
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -19.5284233093262,
+        1.99472081661224,
+        -12.1536560058594
+      ],
+      "height_delta": 0.0570107698440552,
+      "home": "frog",
+      "label": "frog_stairs_down_10",
+      "reached": true,
+      "target": [
+        -19.5725898742676,
+        1.93771004676819,
+        -12.260479927063
+      ],
+      "target_height": 1.93771004676819
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -19.5604305267334,
+        1.84937143325806,
+        -12.6005830764771
+      ],
+      "height_delta": 0.0574713945388794,
+      "home": "frog",
+      "label": "frog_stairs_down_11",
+      "reached": true,
+      "target": [
+        -19.5545597076416,
+        1.79190003871918,
+        -12.7191696166992
+      ],
+      "target_height": 1.79190003871918
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        -19.3888931274414,
+        1.69957661628723,
+        -13.0361423492432
+      ],
+      "height_delta": 0.0534765720367432,
+      "home": "frog",
+      "label": "frog_stairs_down_12",
+      "reached": true,
+      "target": [
+        -19.3408203125,
+        1.64610004425049,
+        -13.1254301071167
+      ],
+      "target_height": 1.64610004425049
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -19.0593719482422,
+        1.55481398105621,
+        -13.3390798568726
+      ],
+      "height_delta": 0.0545239448547363,
+      "home": "frog",
+      "label": "frog_stairs_down_13",
+      "reached": true,
+      "target": [
+        -18.9730091094971,
+        1.50029003620148,
+        -13.4000902175903
+      ],
+      "target_height": 1.50029003620148
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.6310329437256,
+        1.41005575656891,
+        -13.4704847335815
+      ],
+      "height_delta": 0.0555757284164429,
+      "home": "frog",
+      "label": "frog_stairs_down_14",
+      "reached": true,
+      "target": [
+        -18.5227794647217,
+        1.35448002815247,
+        -13.4896402359009
+      ],
+      "target_height": 1.35448002815247
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.1872673034668,
+        1.26526987552643,
+        -13.4063653945923
+      ],
+      "height_delta": 0.0565998554229736,
+      "home": "frog",
+      "label": "frog_stairs_down_15",
+      "reached": true,
+      "target": [
+        -18.0778503417969,
+        1.20867002010345,
+        -13.3766498565674
+      ],
+      "target_height": 1.20867002010345
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.8137760162354,
+        1.11992609500885,
+        -13.1589317321777
+      ],
+      "height_delta": 0.0570660829544067,
+      "home": "frog",
+      "label": "frog_stairs_down_16",
+      "reached": true,
+      "target": [
+        -17.724910736084,
+        1.06286001205444,
+        -13.0831098556519
+      ],
+      "target_height": 1.06286001205444
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.5817852020264,
+        0.974547624588013,
+        -12.7751913070679
+      ],
+      "height_delta": 0.0574976205825806,
+      "home": "frog",
+      "label": "frog_stairs_down_17",
+      "reached": true,
+      "target": [
+        -17.5327301025391,
+        0.917050004005432,
+        -12.6662302017212
+      ],
+      "target_height": 0.917050004005432
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        -17.5365123748779,
+        0.825340628623962,
+        -12.3092918395996
+      ],
+      "height_delta": 0.0541006326675415,
+      "home": "frog",
+      "label": "frog_stairs_down_18",
+      "reached": true,
+      "target": [
+        -17.5387401580811,
+        0.771239995956421,
+        -12.2072200775146
+      ],
+      "target_height": 0.771239995956421
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -17.6924686431885,
+        0.679958701133728,
+        -11.8893089294434
+      ],
+      "height_delta": 0.0545287132263184,
+      "home": "frog",
+      "label": "frog_stairs_down_19",
+      "reached": true,
+      "target": [
+        -17.7417697906494,
+        0.62542998790741,
+        -11.7955102920532
+      ],
+      "target_height": 0.62542998790741
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.0142402648926,
+        0.535214066505432,
+        -11.5777702331543
+      ],
+      "height_delta": 0.0555940568447113,
+      "home": "frog",
+      "label": "frog_stairs_down_20",
+      "reached": true,
+      "target": [
+        -18.1022701263428,
+        0.479620009660721,
+        -11.5113096237183
+      ],
+      "target_height": 0.479620009660721
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        -18.4389896392822,
+        0.347044765949249,
+        -11.4332342147827
+      ],
+      "height_delta": 0.0132347643375397,
+      "home": "frog",
+      "label": "frog_stairs_down_21",
+      "reached": true,
+      "target": [
+        -18.5499992370605,
+        0.33381000161171,
+        -11.4099998474121
+      ],
+      "target_height": 0.33381000161171
+    },
+    {
+      "elapsed": 0.35,
+      "feet": [
+        -18.553373336792,
+        0.197558537125587,
+        -11.0880613327026
+      ],
+      "height_delta": 0.0095585435628891,
+      "home": "frog",
+      "label": "frog_stairs_down_22",
+      "reached": true,
+      "target": [
+        -18.5499992370605,
+        0.187999993562698,
+        -10.9700002670288
+      ],
+      "target_height": 0.187999993562698
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        -18.553373336792,
+        0.197558537125587,
+        -11.0880613327026
+      ],
+      "height_delta": -0.00244146585464478,
+      "home": "frog",
+      "label": "frog_ground_return_0",
+      "reached": true,
+      "target": [
+        -18.5499992370605,
+        0.200000002980232,
+        -10.9700002670288
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 2.45,
+      "feet": [
+        -16.9012985229492,
+        0.157476410269737,
+        -11.2535886764526
+      ],
+      "height_delta": -0.042523592710495,
+      "home": "frog",
+      "label": "frog_ground_return_1",
+      "reached": true,
+      "target": [
+        -16.7999992370605,
+        0.200000002980232,
+        -11.3000001907349
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.36666666666667,
+      "feet": [
+        -16.8010025024414,
+        0.157492056488991,
+        -9.7669677734375
+      ],
+      "height_delta": -0.0425079464912415,
+      "home": "frog",
+      "label": "frog_ground_return_2",
+      "reached": true,
+      "target": [
+        -16.7999992370605,
+        0.200000002980232,
+        -9.64999961853027
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 0.933333333333335,
+      "feet": [
+        -16.0318241119385,
+        0.158318728208542,
+        -9.01898574829102
+      ],
+      "height_delta": -0.0416812747716904,
+      "home": "frog",
+      "label": "frog_ground_return_3",
+      "reached": true,
+      "target": [
+        -15.9499998092651,
+        0.200000002980232,
+        -8.94999980926514
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.03333333333333,
+      "feet": [
+        -15.0858545303345,
+        0.158320650458336,
+        -8.24961376190186
+      ],
+      "height_delta": -0.0416793525218964,
+      "home": "frog",
+      "label": "frog_ground_return_4",
+      "reached": true,
+      "target": [
+        -15.0,
+        0.200000002980232,
+        -8.18000030517578
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        -15.0858545303345,
+        0.158320650458336,
+        -8.24961376190186
+      ],
+      "height_delta": -0.0416793525218964,
+      "home": "frog",
+      "label": "frog_wall_blocks_approach_0",
+      "reached": true,
+      "target": [
+        -15.0,
+        0.200000002980232,
+        -8.18000030517578
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.81666666666667,
+      "feet": [
+        -13.0141429901123,
+        0.157690569758415,
+        -8.6535062789917
+      ],
+      "height_delta": -0.042309433221817,
+      "home": "frog",
+      "label": "frog_wall_blocks_approach_1",
+      "reached": true,
+      "target": [
+        -12.8999996185303,
+        0.200000002980232,
+        -8.68000030517578
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.03333333333333,
+      "feet": [
+        -11.9031734466553,
+        0.157594040036201,
+        -9.1516284942627
+      ],
+      "height_delta": -0.0424059629440308,
+      "home": "frog",
+      "label": "frog_wall_blocks_approach_2",
+      "reached": true,
+      "target": [
+        -11.8000001907349,
+        0.200000002980232,
+        -9.19999980926514
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.2,
+      "feet": [
+        -10.8785924911499,
+        0.158335328102112,
+        -10.1220417022705
+      ],
+      "height_delta": -0.0416646748781204,
+      "home": "frog",
+      "label": "frog_wall_blocks_approach_3",
+      "reached": true,
+      "target": [
+        -10.8000001907349,
+        0.200000002980232,
+        -10.1999998092651
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        -10.8785924911499,
+        0.158335328102112,
+        -10.1220417022705
+      ],
+      "height_delta": -0.0416646748781204,
+      "home": "frog",
+      "label": "frog_wall_blocks_start",
+      "reached": true,
+      "target": [
+        -10.8000001907349,
+        0.200000002980232,
+        -10.1999998092651
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 0.566666666666667,
+      "feet": [
+        -10.6910667419434,
+        0.157644465565681,
+        -10.2179660797119
+      ],
+      "height_delta": -0.0423555374145508,
+      "home": "frog",
+      "label": "frog_wall_return_0",
+      "reached": true,
+      "target": [
+        -10.8000001907349,
+        0.200000002980232,
+        -10.1999998092651
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.2,
+      "feet": [
+        -11.7255172729492,
+        0.158323153853416,
+        -9.27365970611572
+      ],
+      "height_delta": -0.0416768491268158,
+      "home": "frog",
+      "label": "frog_wall_return_1",
+      "reached": true,
+      "target": [
+        -11.8000001907349,
+        0.200000002980232,
+        -9.19999980926514
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.03333333333333,
+      "feet": [
+        -12.8085021972656,
+        0.158325672149658,
+        -8.72343826293945
+      ],
+      "height_delta": -0.041674330830574,
+      "home": "frog",
+      "label": "frog_wall_return_2",
+      "reached": true,
+      "target": [
+        -12.8999996185303,
+        0.200000002980232,
+        -8.68000030517578
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.81666666666667,
+      "feet": [
+        -14.8871068954468,
+        0.158322975039482,
+        -8.2069616317749
+      ],
+      "height_delta": -0.0416770279407501,
+      "home": "frog",
+      "label": "frog_wall_return_3",
+      "reached": true,
+      "target": [
+        -15.0,
+        0.200000002980232,
+        -8.18000030517578
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        -14.9346837997437,
+        0.158321127295494,
+        -8.19559860229492
+      ],
+      "height_delta": -0.0416788756847382,
+      "home": "frog",
+      "label": "frog_exit_approach",
+      "reached": true,
+      "target": [
+        -15.0,
+        0.200000002980232,
+        -8.18000030517578
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 0.766666666666667,
+      "feet": [
+        -15.0,
+        0.319999992847443,
+        -6.30000019073486
+      ],
+      "home": "",
+      "label": "frog_exit",
+      "ordinary_door_transition": true,
+      "reached": true,
+      "start": [
+        -14.9346837997437,
+        0.158321127295494,
+        -8.19559860229492
+      ],
+      "target": [
+        -15.0,
+        0.200000002980232,
+        -7.05000019073486
+      ]
+    },
+    {
+      "elapsed": 2.35,
+      "feet": [
+        -14.998948097229,
+        0.00350837362930179,
+        -3.10048389434814
+      ],
+      "height_delta": -0.0000112340785562992,
+      "home": "",
+      "label": "woodland_to_panda_0",
+      "reached": true,
+      "target": [
+        -15.0,
+        0.00351960770785809,
+        -3.0
+      ],
+      "target_height": 0.00351960770785809
+    },
+    {
+      "elapsed": 7.09999999999998,
+      "feet": [
+        -5.10356187820435,
+        -0.0858899056911469,
+        -3.98933839797974
+      ],
+      "height_delta": -0.00139538943767548,
+      "home": "",
+      "label": "woodland_to_panda_1",
+      "reached": true,
+      "target": [
+        -5.0,
+        -0.0844945162534714,
+        -4.0
+      ],
+      "target_height": -0.0844945162534714
+    },
+    {
+      "elapsed": 6.94999999999998,
+      "feet": [
+        3.89404392242432,
+        0.0546226426959038,
+        -7.95337057113647
+      ],
+      "height_delta": -0.00289066508412361,
+      "home": "",
+      "label": "woodland_to_panda_2",
+      "reached": true,
+      "target": [
+        4.0,
+        0.0575133077800274,
+        -8.0
+      ],
+      "target_height": 0.0575133077800274
+    },
+    {
+      "elapsed": 5.19999999999999,
+      "feet": [
+        10.8846158981323,
+        0.387171387672424,
+        -8.98382949829102
+      ],
+      "height_delta": -0.0238458514213562,
+      "home": "",
+      "label": "woodland_to_panda_3",
+      "reached": true,
+      "target": [
+        11.0,
+        0.411017239093781,
+        -9.0
+      ],
+      "target_height": 0.411017239093781
+    },
+    {
+      "elapsed": 5.84999999999998,
+      "feet": [
+        18.8849067687988,
+        0.166700020432472,
+        -8.99953365325928
+      ],
+      "height_delta": 0.00142723321914673,
+      "home": "",
+      "label": "woodland_to_panda_4",
+      "reached": true,
+      "target": [
+        19.0,
+        0.165272787213326,
+        -9.0
+      ],
+      "target_height": 0.165272787213326
+    },
+    {
+      "elapsed": 6.06666666666665,
+      "feet": [
+        23.9339160919189,
+        -0.000997178605757654,
+        -2.09405303001404
+      ],
+      "height_delta": -0.0000388084445148706,
+      "home": "",
+      "label": "woodland_to_panda_5",
+      "reached": true,
+      "target": [
+        24.0,
+        -0.000958370161242783,
+        -2.0
+      ],
+      "target_height": -0.000958370161242783
+    },
+    {
+      "elapsed": 4.94999999999999,
+      "feet": [
+        23.9982585906982,
+        0.00856998097151518,
+        4.8946681022644
+      ],
+      "height_delta": 0.000068378634750843,
+      "home": "",
+      "label": "woodland_to_panda_6",
+      "reached": true,
+      "target": [
+        24.0,
+        0.00850160233676434,
+        5.0
+      ],
+      "target_height": 0.00850160233676434
+    },
+    {
+      "elapsed": 6.08333333333332,
+      "feet": [
+        19.05686378479,
+        0.208198383450508,
+        11.9198322296143
+      ],
+      "height_delta": -0.000303030014038086,
+      "home": "",
+      "label": "woodland_to_panda_7",
+      "reached": true,
+      "target": [
+        19.0,
+        0.208501413464546,
+        12.0
+      ],
+      "target_height": 0.208501413464546
+    },
+    {
+      "elapsed": 8.23333333333332,
+      "feet": [
+        13.05237865448,
+        0.0830159559845924,
+        21.9112854003906
+      ],
+      "height_delta": 0.00388046354055405,
+      "home": "",
+      "label": "woodland_to_panda_8",
+      "reached": true,
+      "target": [
+        13.0,
+        0.0791354924440384,
+        22.0
+      ],
+      "target_height": 0.0791354924440384
+    },
+    {
+      "elapsed": 9.18333333333337,
+      "feet": [
+        25.8881092071533,
+        0.869052648544312,
+        21.9998893737793
+      ],
+      "height_delta": -0.00655442476272583,
+      "home": "",
+      "label": "woodland_to_panda_9",
+      "reached": true,
+      "target": [
+        26.0,
+        0.875607073307037,
+        22.0
+      ],
+      "target_height": 0.875607073307037
+    },
+    {
+      "elapsed": 2.81666666666666,
+      "feet": [
+        25.9999485015869,
+        0.359123051166534,
+        18.1125068664551
+      ],
+      "height_delta": 0.0118405818939209,
+      "home": "",
+      "label": "woodland_to_panda_10",
+      "reached": true,
+      "target": [
+        26.0,
+        0.347282469272614,
+        18.0
+      ],
+      "target_height": 0.347282469272614
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        100.0,
+        0.175260424613953,
+        3.84999990463257
+      ],
+      "height_delta": -0.0447395741939545,
+      "home": "panda",
+      "label": "panda_ground_0",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        3.84999990463257
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 1.86666666666666,
+      "feet": [
+        100.0,
+        0.174960002303123,
+        1.75583839416504
+      ],
+      "height_delta": -0.0450399965047836,
+      "home": "panda",
+      "label": "panda_ground_1",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        1.64999997615814
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.4,
+      "feet": [
+        100.0,
+        0.174873173236847,
+        1.28383958339691
+      ],
+      "height_delta": -0.0451268255710602,
+      "home": "panda",
+      "label": "panda_ground_2",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        1.16999995708466
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 1.31666666666667,
+      "feet": [
+        101.401832580566,
+        0.174954280257225,
+        1.61972963809967
+      ],
+      "height_delta": -0.0450457185506821,
+      "home": "panda",
+      "label": "panda_ground_3",
+      "reached": true,
+      "target": [
+        101.5,
+        0.219999998807907,
+        1.64999997615814
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 1.26666666666667,
+      "feet": [
+        102.197105407715,
+        0.174905627965927,
+        2.85894727706909
+      ],
+      "height_delta": -0.04509437084198,
+      "home": "panda",
+      "label": "panda_ground_4",
+      "reached": true,
+      "target": [
+        102.25,
+        0.219999998807907,
+        2.95000004768372
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.750000000000001,
+      "feet": [
+        103.035049438477,
+        0.175802439451218,
+        2.92501711845398
+      ],
+      "height_delta": -0.0441975593566895,
+      "home": "panda",
+      "label": "panda_ground_5",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.219999998807907,
+        2.89000010490417
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        103.122024536133,
+        0.174669563770294,
+        2.92501711845398
+      ],
+      "height_delta": -0.0453304350376129,
+      "home": "panda",
+      "label": "panda_stairs_up_0",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.219999998807907,
+        2.89000010490417
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.633333333333334,
+      "feet": [
+        103.137825012207,
+        0.505337715148926,
+        2.55269312858582
+      ],
+      "height_delta": 0.0829805731773376,
+      "home": "panda",
+      "label": "panda_stairs_up_1",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.422357141971588,
+        2.5
+      ],
+      "target_height": 0.422357141971588
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139846801758,
+        0.702215850353241,
+        2.26213121414185
+      ],
+      "height_delta": 0.0785015821456909,
+      "home": "panda",
+      "label": "panda_stairs_up_2",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.62371426820755,
+        2.20499992370605
+      ],
+      "target_height": 0.62371426820755
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        0.906583666801453,
+        1.96406066417694
+      ],
+      "height_delta": 0.0815122127532959,
+      "home": "panda",
+      "label": "panda_stairs_up_3",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.825071454048157,
+        1.9099999666214
+      ],
+      "target_height": 0.825071454048157
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        1.10534083843231,
+        1.67177307605743
+      ],
+      "height_delta": 0.0789122581481934,
+      "home": "panda",
+      "label": "panda_stairs_up_4",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.02642858028412,
+        1.61500000953674
+      ],
+      "target_height": 1.02642858028412
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        1.30954957008362,
+        1.37387669086456
+      ],
+      "height_delta": 0.0817638635635376,
+      "home": "panda",
+      "label": "panda_stairs_up_5",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.22778570652008,
+        1.32000005245209
+      ],
+      "target_height": 1.22778570652008
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        1.50753235816956,
+        1.08243107795715
+      ],
+      "height_delta": 0.0783895254135132,
+      "home": "panda",
+      "label": "panda_stairs_up_6",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.42914283275604,
+        1.02499997615814
+      ],
+      "target_height": 1.42914283275604
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        1.71205925941467,
+        0.784193217754364
+      ],
+      "height_delta": 0.0815593004226685,
+      "home": "panda",
+      "label": "panda_stairs_up_7",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.630499958992,
+        0.730000019073486
+      ],
+      "target_height": 1.630499958992
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        1.91062068939209,
+        0.491845786571503
+      ],
+      "height_delta": 0.0787636041641235,
+      "home": "panda",
+      "label": "panda_stairs_up_8",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.83185708522797,
+        0.435000002384186
+      ],
+      "target_height": 1.83185708522797
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        2.11500215530396,
+        0.193868830800056
+      ],
+      "height_delta": 0.0817878246307373,
+      "home": "panda",
+      "label": "panda_stairs_up_9",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.03321433067322,
+        0.140000000596046
+      ],
+      "target_height": 2.03321433067322
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        2.31295943260193,
+        -0.0975674614310265
+      ],
+      "height_delta": 0.078387975692749,
+      "home": "panda",
+      "label": "panda_stairs_up_10",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.23457145690918,
+        -0.155000001192093
+      ],
+      "target_height": 2.23457145690918
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        2.51734066009521,
+        -0.395828247070312
+      ],
+      "height_delta": 0.0814120769500732,
+      "home": "panda",
+      "label": "panda_stairs_up_11",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.43592858314514,
+        -0.449999988079071
+      ],
+      "target_height": 2.43592858314514
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        2.71606874465942,
+        -0.688098967075348
+      ],
+      "height_delta": 0.0787830352783203,
+      "home": "panda",
+      "label": "panda_stairs_up_12",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.6372857093811,
+        -0.745000004768372
+      ],
+      "target_height": 2.6372857093811
+    },
+    {
+      "elapsed": 0.55,
+      "feet": [
+        103.139984130859,
+        2.92042255401611,
+        -0.986120283603668
+      ],
+      "height_delta": 0.0817797183990479,
+      "home": "panda",
+      "label": "panda_stairs_up_13",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.83864283561707,
+        -1.03999996185303
+      ],
+      "target_height": 2.83864283561707
+    },
+    {
+      "elapsed": 0.45,
+      "feet": [
+        103.139984130859,
+        2.99583792686462,
+        -1.22061288356781
+      ],
+      "height_delta": -0.0441620349884033,
+      "home": "panda",
+      "label": "panda_stairs_up_14",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        3.03999996185303,
+        -1.33500003814697
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 0.316666666666667,
+      "feet": [
+        102.897285461426,
+        2.99510836601257,
+        -1.45485067367554
+      ],
+      "height_delta": -0.0448915958404541,
+      "home": "panda",
+      "label": "panda_stairs_up_15",
+      "reached": true,
+      "target": [
+        102.800003051758,
+        3.03999996185303,
+        -1.5
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 1.21666666666667,
+      "feet": [
+        101.513442993164,
+        2.99509382247925,
+        -1.82198572158813
+      ],
+      "height_delta": -0.0449061393737793,
+      "home": "panda",
+      "label": "panda_stairs_up_16",
+      "reached": true,
+      "target": [
+        101.400001525879,
+        3.03999996185303,
+        -1.85000002384186
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 1.18333333333333,
+      "feet": [
+        102.695610046387,
+        2.99486827850342,
+        -1.52610123157501
+      ],
+      "height_delta": -0.0451316833496094,
+      "home": "panda",
+      "label": "panda_loft_0",
+      "reached": true,
+      "target": [
+        102.800003051758,
+        3.03999996185303,
+        -1.5
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 1.18333333333333,
+      "feet": [
+        101.513275146484,
+        2.99516224861145,
+        -1.82167875766754
+      ],
+      "height_delta": -0.0448377132415771,
+      "home": "panda",
+      "label": "panda_loft_1",
+      "reached": true,
+      "target": [
+        101.400001525879,
+        3.03999996185303,
+        -1.85000002384186
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 1.35,
+      "feet": [
+        99.9244918823242,
+        2.99582695960999,
+        -1.77489161491394
+      ],
+      "height_delta": -0.044173002243042,
+      "home": "panda",
+      "label": "panda_loft_2",
+      "reached": true,
+      "target": [
+        99.8199996948242,
+        3.03999996185303,
+        -1.76999998092651
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        99.8358840942383,
+        2.99513244628906,
+        -1.77074193954468
+      ],
+      "height_delta": -0.0448675155639648,
+      "home": "panda",
+      "label": "panda_loft_return_0",
+      "reached": true,
+      "target": [
+        99.8199996948242,
+        3.03999996185303,
+        -1.76999998092651
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 1.33333333333333,
+      "feet": [
+        101.298820495605,
+        2.99483871459961,
+        -1.84487342834473
+      ],
+      "height_delta": -0.045161247253418,
+      "home": "panda",
+      "label": "panda_loft_return_1",
+      "reached": true,
+      "target": [
+        101.400001525879,
+        3.03999996185303,
+        -1.85000002384186
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 1.21666666666667,
+      "feet": [
+        102.695022583008,
+        2.99475741386414,
+        -1.52614486217499
+      ],
+      "height_delta": -0.0452425479888916,
+      "home": "panda",
+      "label": "panda_loft_return_2",
+      "reached": true,
+      "target": [
+        102.800003051758,
+        3.03999996185303,
+        -1.5
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 1.18333333333333,
+      "feet": [
+        101.512748718262,
+        2.99538159370422,
+        -1.82181549072266
+      ],
+      "height_delta": -0.0446183681488037,
+      "home": "panda",
+      "label": "panda_stairs_down_0",
+      "reached": true,
+      "target": [
+        101.400001525879,
+        3.03999996185303,
+        -1.85000002384186
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 1.18333333333333,
+      "feet": [
+        102.695037841797,
+        2.99582695960999,
+        -1.52623629570007
+      ],
+      "height_delta": -0.044173002243042,
+      "home": "panda",
+      "label": "panda_stairs_down_1",
+      "reached": true,
+      "target": [
+        102.800003051758,
+        3.03999996185303,
+        -1.5
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 0.316666666666667,
+      "feet": [
+        103.039588928223,
+        2.99593567848206,
+        -1.38481605052948
+      ],
+      "height_delta": -0.0440642833709717,
+      "home": "panda",
+      "label": "panda_stairs_down_2",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        3.03999996185303,
+        -1.33500003814697
+      ],
+      "target_height": 3.03999996185303
+    },
+    {
+      "elapsed": 0.233333333333333,
+      "feet": [
+        103.142929077148,
+        2.99506449699402,
+        -1.15971767902374
+      ],
+      "height_delta": 0.156421661376953,
+      "home": "panda",
+      "label": "panda_stairs_down_3",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.83864283561707,
+        -1.03999996185303
+      ],
+      "target_height": 2.83864283561707
+    },
+    {
+      "elapsed": 0.283333333333333,
+      "feet": [
+        103.145195007324,
+        2.79026031494141,
+        -0.829651653766632
+      ],
+      "height_delta": 0.152974605560303,
+      "home": "panda",
+      "label": "panda_stairs_down_4",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.6372857093811,
+        -0.745000004768372
+      ],
+      "target_height": 2.6372857093811
+    },
+    {
+      "elapsed": 0.45,
+      "feet": [
+        103.140754699707,
+        2.59073162078857,
+        -0.546106934547424
+      ],
+      "height_delta": 0.154803037643433,
+      "home": "panda",
+      "label": "panda_stairs_down_5",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.43592858314514,
+        -0.449999988079071
+      ],
+      "target_height": 2.43592858314514
+    },
+    {
+      "elapsed": 0.466666666666667,
+      "feet": [
+        103.140045166016,
+        2.38865041732788,
+        -0.245811820030212
+      ],
+      "height_delta": 0.154078960418701,
+      "home": "panda",
+      "label": "panda_stairs_down_6",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.23457145690918,
+        -0.155000001192093
+      ],
+      "target_height": 2.23457145690918
+    },
+    {
+      "elapsed": 0.466666666666667,
+      "feet": [
+        103.140014648438,
+        2.18638110160828,
+        0.0556838326156139
+      ],
+      "height_delta": 0.153166770935059,
+      "home": "panda",
+      "label": "panda_stairs_down_7",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        2.03321433067322,
+        0.140000000596046
+      ],
+      "target_height": 2.03321433067322
+    },
+    {
+      "elapsed": 0.45,
+      "feet": [
+        103.140014648438,
+        1.98694896697998,
+        0.336445778608322
+      ],
+      "height_delta": 0.155091881752014,
+      "home": "panda",
+      "label": "panda_stairs_down_8",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.83185708522797,
+        0.435000002384186
+      ],
+      "target_height": 1.83185708522797
+    },
+    {
+      "elapsed": 0.466666666666667,
+      "feet": [
+        103.140014648438,
+        1.78504943847656,
+        0.635722041130066
+      ],
+      "height_delta": 0.154549479484558,
+      "home": "panda",
+      "label": "panda_stairs_down_9",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.630499958992,
+        0.730000019073486
+      ],
+      "target_height": 1.630499958992
+    },
+    {
+      "elapsed": 0.466666666666667,
+      "feet": [
+        103.140014648438,
+        1.58298003673553,
+        0.936074256896973
+      ],
+      "height_delta": 0.153837203979492,
+      "home": "panda",
+      "label": "panda_stairs_down_10",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.42914283275604,
+        1.02499997615814
+      ],
+      "target_height": 1.42914283275604
+    },
+    {
+      "elapsed": 0.45,
+      "feet": [
+        103.140014648438,
+        1.38313615322113,
+        1.21903657913208
+      ],
+      "height_delta": 0.15535044670105,
+      "home": "panda",
+      "label": "panda_stairs_down_11",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.22778570652008,
+        1.32000005245209
+      ],
+      "target_height": 1.22778570652008
+    },
+    {
+      "elapsed": 0.45,
+      "feet": [
+        103.140014648438,
+        1.18179798126221,
+        1.51402187347412
+      ],
+      "height_delta": 0.155369400978088,
+      "home": "panda",
+      "label": "panda_stairs_down_12",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        1.02642858028412,
+        1.61500000953674
+      ],
+      "target_height": 1.02642858028412
+    },
+    {
+      "elapsed": 0.466666666666667,
+      "feet": [
+        103.140014648438,
+        0.979962110519409,
+        1.81302976608276
+      ],
+      "height_delta": 0.154890656471252,
+      "home": "panda",
+      "label": "panda_stairs_down_13",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.825071454048157,
+        1.9099999666214
+      ],
+      "target_height": 0.825071454048157
+    },
+    {
+      "elapsed": 0.466666666666667,
+      "feet": [
+        103.140014648438,
+        0.777919948101044,
+        2.11332178115845
+      ],
+      "height_delta": 0.154205679893494,
+      "home": "panda",
+      "label": "panda_stairs_down_14",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.62371426820755,
+        2.20499992370605
+      ],
+      "target_height": 0.62371426820755
+    },
+    {
+      "elapsed": 0.466666666666667,
+      "feet": [
+        103.140014648438,
+        0.575749337673187,
+        2.41408753395081
+      ],
+      "height_delta": 0.153392195701599,
+      "home": "panda",
+      "label": "panda_stairs_down_15",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.422357141971588,
+        2.5
+      ],
+      "target_height": 0.422357141971588
+    },
+    {
+      "elapsed": 0.616666666666667,
+      "feet": [
+        103.140014648438,
+        0.35534256696701,
+        2.77146005630493
+      ],
+      "height_delta": 0.135342568159103,
+      "home": "panda",
+      "label": "panda_stairs_down_16",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.219999998807907,
+        2.89000010490417
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        103.140014648438,
+        0.35534256696701,
+        2.77146005630493
+      ],
+      "height_delta": 0.135342568159103,
+      "home": "panda",
+      "label": "panda_ground_return_0",
+      "reached": true,
+      "target": [
+        103.139999389648,
+        0.219999998807907,
+        2.89000010490417
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.966666666666668,
+      "feet": [
+        102.354682922363,
+        0.175057172775269,
+        2.94410133361816
+      ],
+      "height_delta": -0.0449428260326385,
+      "home": "panda",
+      "label": "panda_ground_return_1",
+      "reached": true,
+      "target": [
+        102.25,
+        0.219999998807907,
+        2.95000004768372
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 1.26666666666667,
+      "feet": [
+        101.557579040527,
+        0.175821095705032,
+        1.74589133262634
+      ],
+      "height_delta": -0.0441789031028748,
+      "home": "panda",
+      "label": "panda_ground_return_2",
+      "reached": true,
+      "target": [
+        101.5,
+        0.219999998807907,
+        1.64999997615814
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 1.33333333333333,
+      "feet": [
+        100.102493286133,
+        0.175012320280075,
+        1.2035436630249
+      ],
+      "height_delta": -0.044987678527832,
+      "home": "panda",
+      "label": "panda_ground_return_3",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        1.16999995708466
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.383333333333333,
+      "feet": [
+        99.9953765869141,
+        0.174970343708992,
+        1.53888010978699
+      ],
+      "height_delta": -0.0450296550989151,
+      "home": "panda",
+      "label": "panda_ground_return_4",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        1.64999997615814
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 1.86666666666666,
+      "feet": [
+        99.9997711181641,
+        0.175274401903152,
+        3.74031090736389
+      ],
+      "height_delta": -0.0447255969047546,
+      "home": "panda",
+      "label": "panda_ground_return_5",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        3.84999990463257
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        99.9997711181641,
+        0.175274401903152,
+        3.74031090736389
+      ],
+      "height_delta": -0.0447255969047546,
+      "home": "panda",
+      "label": "panda_wall_blocks_approach_0",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        3.84999990463257
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 1.63333333333333,
+      "feet": [
+        98.5777969360352,
+        0.17493799328804,
+        2.66406321525574
+      ],
+      "height_delta": -0.0450620055198669,
+      "home": "panda",
+      "label": "panda_wall_blocks_approach_1",
+      "reached": true,
+      "target": [
+        98.5,
+        0.219999998807907,
+        2.59999990463257
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.0,
+      "feet": [
+        98.5777969360352,
+        0.17493799328804,
+        2.66406321525574
+      ],
+      "height_delta": -0.0450620055198669,
+      "home": "panda",
+      "label": "panda_wall_blocks_start",
+      "reached": true,
+      "target": [
+        98.5,
+        0.219999998807907,
+        2.59999990463257
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 2.4,
+      "feet": [
+        98.3907241821289,
+        0.174940809607506,
+        2.5740385055542
+      ],
+      "height_delta": -0.0450591892004013,
+      "home": "panda",
+      "label": "panda_wall_return_0",
+      "reached": true,
+      "target": [
+        98.5,
+        0.219999998807907,
+        2.59999990463257
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 1.65,
+      "feet": [
+        99.9109878540039,
+        0.175293460488319,
+        3.77643513679504
+      ],
+      "height_delta": -0.0447065383195877,
+      "home": "panda",
+      "label": "panda_wall_return_1",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        3.84999990463257
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 2.38333333333333,
+      "feet": [
+        98.7032470703125,
+        0.174979314208031,
+        1.44941222667694
+      ],
+      "height_delta": -0.0250206887722015,
+      "home": "panda",
+      "label": "panda_body_approach",
+      "reached": true,
+      "target": [
+        98.6500015258789,
+        0.200000002980232,
+        1.35000002384186
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 0.783333333333334,
+      "feet": [
+        98.6505584716797,
+        0.175029739737511,
+        1.23706424236298
+      ],
+      "height_delta": -0.0249702632427216,
+      "home": "panda",
+      "label": "panda_body_retreat",
+      "reached": true,
+      "target": [
+        98.6500015258789,
+        0.200000002980232,
+        1.35000002384186
+      ],
+      "target_height": 0.200000002980232
+    },
+    {
+      "elapsed": 1.13333333333333,
+      "feet": [
+        99.8902969360352,
+        0.175026297569275,
+        1.18339657783508
+      ],
+      "height_delta": -0.0449737012386322,
+      "home": "panda",
+      "label": "panda_tea_approach",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        1.16999995708466
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 2.25,
+      "feet": [
+        100.000007629395,
+        0.175145894289017,
+        3.73616528511047
+      ],
+      "height_delta": -0.0448541045188904,
+      "home": "panda",
+      "label": "panda_exit_approach",
+      "reached": true,
+      "target": [
+        100.0,
+        0.219999998807907,
+        3.84999990463257
+      ],
+      "target_height": 0.219999998807907
+    },
+    {
+      "elapsed": 0.533333333333333,
+      "feet": [
+        26.0,
+        0.550000011920929,
+        18.7000007629395
+      ],
+      "home": "",
+      "label": "panda_exit",
+      "ordinary_door_transition": true,
+      "reached": true,
+      "start": [
+        100.000007629395,
+        0.174835741519928,
+        3.82489848136902
+      ],
+      "target": [
+        100.0,
+        0.200000002980232,
+        4.71000003814697
+      ]
+    }
+  ],
+  "save_path": "/Users/frank/Documents/Codex/2026-09-10/kan/outputs/两户住宅细节验收/第四次-动作与边界/isolated-test-save-423331.json",
+  "screenshots": [
+    {
+      "camera": [
+        -23.3211936950684,
+        13.7442855834961,
+        10.2020168304443
+      ],
+      "feet": [
+        -15.0,
+        0.00347656011581421,
+        -4.0
+      ],
+      "file": "01-原出生点与青蛙家外观.png",
+      "home": "",
+      "mode": 0,
+      "name": "01-原出生点与青蛙家外观",
+      "night": false
+    },
+    {
+      "camera": [
+        -11.7774543762207,
+        2.68208742141724,
+        -8.65080261230469
+      ],
+      "feet": [
+        -15.0,
+        0.157604172825813,
+        -8.18000030517578
+      ],
+      "file": "01b-刚踏进青蛙家.png",
+      "home": "frog",
+      "mode": 1,
+      "name": "01b-刚踏进青蛙家",
+      "night": false
+    },
+    {
+      "camera": [
+        -16.9093399047852,
+        2.68954277038574,
+        -7.97296619415283
+      ],
+      "feet": [
+        -18.5194931030273,
+        0.169357523322105,
+        -10.9499502182007
+      ],
+      "file": "02-青蛙家主视角.png",
+      "home": "frog",
+      "mode": 1,
+      "name": "02-青蛙家主视角",
+      "night": false
+    },
+    {
+      "camera": [
+        -14.333441734314,
+        5.7505259513855,
+        -10.3132905960083
+      ],
+      "feet": [
+        -15.8152284622192,
+        3.2300431728363,
+        -13.8545932769775
+      ],
+      "file": "03-青蛙夹层睡铺.png",
+      "home": "frog",
+      "mode": 1,
+      "name": "03-青蛙夹层睡铺",
+      "night": false
+    },
+    {
+      "camera": [
+        -15.8147306442261,
+        3.93012070655823,
+        -13.854453086853
+      ],
+      "feet": [
+        -15.8147306442261,
+        3.23012065887451,
+        -13.854453086853
+      ],
+      "file": "04-青蛙家蛙眼视角.png",
+      "home": "frog",
+      "mode": 2,
+      "name": "04-青蛙家蛙眼视角",
+      "night": false
+    },
+    {
+      "camera": [
+        -14.0,
+        4.69999980926514,
+        -7.90000009536743
+      ],
+      "feet": [
+        -14.9346837997437,
+        0.158321127295494,
+        -8.19559860229492
+      ],
+      "file": "05-青蛙家黄昏.png",
+      "home": "frog",
+      "mode": 0,
+      "name": "05-青蛙家黄昏",
+      "night": true
+    },
+    {
+      "camera": [
+        -15.0,
+        13.8110370635986,
+        10.1596221923828
+      ],
+      "feet": [
+        -15.0,
+        0.0386458337306976,
+        -6.30000019073486
+      ],
+      "file": "06-青蛙家出门恢复庭院.png",
+      "home": "",
+      "mode": 0,
+      "name": "06-青蛙家出门恢复庭院",
+      "night": false
+    },
+    {
+      "camera": [
+        25.999885559082,
+        14.1110820770264,
+        34.6766548156738
+      ],
+      "feet": [
+        25.9999446868896,
+        0.353597342967987,
+        18.0536918640137
+      ],
+      "file": "07-沿小径来到熊猫家.png",
+      "home": "",
+      "mode": 0,
+      "name": "07-沿小径来到熊猫家",
+      "night": false
+    },
+    {
+      "camera": [
+        102.541641235352,
+        2.70014238357544,
+        3.77393436431885
+      ],
+      "feet": [
+        100.0,
+        0.175260424613953,
+        3.84999990463257
+      ],
+      "file": "07b-刚踏进熊猫家.png",
+      "home": "panda",
+      "mode": 1,
+      "name": "07b-刚踏进熊猫家",
+      "night": false
+    },
+    {
+      "camera": [
+        100.327247619629,
+        2.69519948959351,
+        4.5380277633667
+      ],
+      "feet": [
+        103.121841430664,
+        0.174674049019814,
+        2.92501711845398
+      ],
+      "file": "08-熊猫家主视角.png",
+      "home": "panda",
+      "mode": 1,
+      "name": "08-熊猫家主视角",
+      "night": false
+    },
+    {
+      "camera": [
+        101.432754516602,
+        5.51538038253784,
+        1.95863020420074
+      ],
+      "feet": [
+        99.8365020751953,
+        2.99505567550659,
+        -1.77077174186707
+      ],
+      "file": "09-熊猫竹床夹层.png",
+      "home": "panda",
+      "mode": 1,
+      "name": "09-熊猫竹床夹层",
+      "night": false
+    },
+    {
+      "camera": [
+        99.8358840942383,
+        3.69513249397278,
+        -1.77074193954468
+      ],
+      "feet": [
+        99.8358840942383,
+        2.99513244628906,
+        -1.77074193954468
+      ],
+      "file": "10-熊猫家蛙眼视角.png",
+      "home": "panda",
+      "mode": 2,
+      "name": "10-熊猫家蛙眼视角",
+      "night": false
+    },
+    {
+      "camera": [
+        100.349998474121,
+        4.05000019073486,
+        4.42000007629395
+      ],
+      "feet": [
+        99.9486770629883,
+        0.175028711557388,
+        3.80759572982788
+      ],
+      "file": "11-熊猫家黄昏.png",
+      "home": "panda",
+      "mode": 0,
+      "name": "11-熊猫家黄昏",
+      "night": true
+    },
+    {
+      "camera": [
+        100.349998474121,
+        4.05000019073486,
+        4.42000007629395
+      ],
+      "feet": [
+        100.0,
+        0.175260424613953,
+        1.16999995708466
+      ],
+      "file": "12-和熊猫喝茶.png",
+      "home": "panda",
+      "mode": 0,
+      "name": "12-和熊猫喝茶",
+      "night": false
+    },
+    {
+      "camera": [
+        26.0,
+        14.1769618988037,
+        35.1596031188965
+      ],
+      "feet": [
+        26.0,
+        0.421770840883255,
+        18.7000007629395
+      ],
+      "file": "13-熊猫家出门恢复森林.png",
+      "home": "",
+      "mode": 0,
+      "name": "13-熊猫家出门恢复森林",
+      "night": false
+    }
+  ],
+  "walls": [
+    {
+      "collider": "/root/FrogWoodland/home-enclosure/EnclosureWall/EnclosureWall_col",
+      "contacts": [
+        {
+          "feet": [
+            -10.1569938659668,
+            0.156814709305763,
+            -10.1845779418945
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88970184326172,
+            0.406474441289902,
+            -10.1214847564697
+          ]
+        },
+        {
+          "feet": [
+            -10.1534290313721,
+            0.157066956162453,
+            -10.1845779418945
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88973331451416,
+            0.406080603599548,
+            -10.1216087341309
+          ]
+        },
+        {
+          "feet": [
+            -10.1498641967773,
+            0.159220784902573,
+            -10.1845779418945
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88548851013184,
+            0.433029592037201,
+            -10.1214714050293
+          ]
+        },
+        {
+          "feet": [
+            -10.1463308334351,
+            0.177404254674911,
+            -10.1861619949341
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88574409484863,
+            0.431416392326355,
+            -10.1214733123779
+          ]
+        },
+        {
+          "feet": [
+            -10.1463308334351,
+            0.177404254674911,
+            -10.1861619949341
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88624286651611,
+            0.426107555627823,
+            -10.1228790283203
+          ]
+        },
+        {
+          "feet": [
+            -10.1474876403809,
+            0.166106969118118,
+            -10.1886034011841
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88648128509521,
+            0.423835337162018,
+            -10.123387336731
+          ]
+        },
+        {
+          "feet": [
+            -10.1474876403809,
+            0.166106969118118,
+            -10.1886034011841
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88744068145752,
+            0.414816617965698,
+            -10.1253299713135
+          ]
+        },
+        {
+          "feet": [
+            -10.1493854522705,
+            0.15831258893013,
+            -10.1916999816895
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88770484924316,
+            0.412446945905685,
+            -10.1257905960083
+          ]
+        },
+        {
+          "feet": [
+            -10.1409482955933,
+            0.177379220724106,
+            -10.2082986831665
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88063621520996,
+            0.430308908224106,
+            -10.1431827545166
+          ]
+        },
+        {
+          "feet": [
+            -10.1409482955933,
+            0.177379220724106,
+            -10.2082986831665
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88086128234863,
+            0.426082670688629,
+            -10.1450157165527
+          ]
+        },
+        {
+          "feet": [
+            -10.141921043396,
+            0.166062340140343,
+            -10.2116479873657
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88100910186768,
+            0.424319922924042,
+            -10.1455554962158
+          ]
+        },
+        {
+          "feet": [
+            -10.141921043396,
+            0.166062340140343,
+            -10.2116479873657
+          ],
+          "normal": [
+            -0.960290312767029,
+            0.152474969625473,
+            -0.233653619885445
+          ],
+          "position": [
+            -9.88184261322021,
+            0.41476708650589,
+            -10.1483669281006
+          ]
+        }
+      ],
+      "end": [
+        -10.1188526153564,
+        0.158315822482109,
+        -10.3123397827148
+      ],
+      "final_radial_boundary": {
+        "body_center": [
+          -10.1188526153564,
+          0.718315839767456,
+          -10.3123397827148
+        ],
+        "body_radius": 5.16466808319092,
+        "capsule_radius": 0.270000010728836,
+        "clearance": 0.317294597625732,
+        "collider": "/root/FrogWoodland/home-enclosure/EnclosureWall/EnclosureWall_col",
+        "found": true,
+        "from": [
+          -15.0,
+          0.718315839767456,
+          -12.0
+        ],
+        "inside_with_capsule_clearance": true,
+        "normal": [
+          -0.960290312767029,
+          0.152474969625473,
+          -0.233653619885445
+        ],
+        "wall": [
+          -9.81897640228271,
+          0.718315839767456,
+          -10.2086572647095
+        ],
+        "wall_radius": 5.48196268081665
+      },
+      "initial_boundary_distance": 0.991578102111816,
+      "label": "frog_wall_blocks",
+      "progress": 0.697842597961426,
+      "start": [
+        -10.8166952133179,
+        0.158288344740868,
+        -10.1834402084351
+      ],
+      "surface": [
+        -9.82511711120605,
+        0.718288362026215,
+        -10.1834402084351
+      ],
+      "wall_contact_count": 27,
+      "wall_hit": true
+    },
+    {
+      "collider": "/root/FrogWoodland/PandaHome/panda-home/EnclosureWall/EnclosureWall_col",
+      "contacts": [
+        {
+          "feet": [
+            96.1298370361328,
+            0.175835847854614,
+            2.59776163101196
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.9492111206055,
+            0.982529163360596,
+            2.79702568054199
+          ]
+        },
+        {
+          "feet": [
+            96.1199798583984,
+            0.175839200615883,
+            2.5879282951355
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.9356689453125,
+            0.982004106044769,
+            2.78360795974731
+          ]
+        },
+        {
+          "feet": [
+            96.1101226806641,
+            0.175839617848396,
+            2.57809495925903
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.9258117675781,
+            0.982004582881927,
+            2.77377462387085
+          ]
+        },
+        {
+          "feet": [
+            96.1002655029297,
+            0.175838842988014,
+            2.56826162338257
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.9159164428711,
+            0.981997072696686,
+            2.76390433311462
+          ]
+        },
+        {
+          "feet": [
+            96.0904083251953,
+            0.175838738679886,
+            2.5584282875061
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.9060592651367,
+            0.981996953487396,
+            2.75407099723816
+          ]
+        },
+        {
+          "feet": [
+            96.0805511474609,
+            0.175838723778725,
+            2.54859495162964
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.8961944580078,
+            0.981998026371002,
+            2.74424314498901
+          ]
+        },
+        {
+          "feet": [
+            96.0706939697266,
+            0.175838708877563,
+            2.53876161575317
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.8863372802734,
+            0.981998026371002,
+            2.73440980911255
+          ]
+        },
+        {
+          "feet": [
+            96.0608367919922,
+            0.175837904214859,
+            2.52892827987671
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.8764419555664,
+            0.981990396976471,
+            2.72453951835632
+          ]
+        },
+        {
+          "feet": [
+            96.0509796142578,
+            0.175837785005569,
+            2.51909494400024
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.8665771484375,
+            0.981991350650787,
+            2.71471166610718
+          ]
+        },
+        {
+          "feet": [
+            96.0411224365234,
+            0.175837755203247,
+            2.50926160812378
+          ],
+          "normal": [
+            0.699536502361298,
+            -0.136315137147903,
+            -0.701474845409393
+          ],
+          "position": [
+            95.8567199707031,
+            0.981991350650787,
+            2.70487833023071
+          ]
+        },
+        {
+          "feet": [
+            95.9623336791992,
+            0.175869271159172,
+            2.44582152366638
+          ],
+          "normal": [
+            0.772700011730194,
+            -0.0298671033233404,
+            -0.634068250656128
+          ],
+          "position": [
+            95.7602233886719,
+            0.953688561916351,
+            2.62680268287659
+          ]
+        },
+        {
+          "feet": [
+            95.9535980224609,
+            0.175853610038757,
+            2.43517255783081
+          ],
+          "normal": [
+            0.772700011730194,
+            -0.0298671033233404,
+            -0.634068250656128
+          ],
+          "position": [
+            95.7492828369141,
+            0.953335165977478,
+            2.61348271369934
+          ]
+        }
+      ],
+      "end": [
+        95.7219467163086,
+        0.175794005393982,
+        1.94046914577484
+      ],
+      "final_radial_boundary": {
+        "body_center": [
+          95.7219467163086,
+          0.735794007778168,
+          1.94046914577484
+        ],
+        "body_radius": 4.69756937026978,
+        "capsule_radius": 0.270000010728836,
+        "clearance": 0.321169376373291,
+        "collider": "/root/FrogWoodland/PandaHome/panda-home/EnclosureWall/EnclosureWall_col",
+        "found": true,
+        "from": [
+          100.0,
+          0.735794007778168,
+          0.0
+        ],
+        "inside_with_capsule_clearance": true,
+        "normal": [
+          0.932600915431976,
+          -0.181040197610855,
+          -0.312218010425568
+        ],
+        "wall": [
+          95.4294586181641,
+          0.735794007778168,
+          2.07313680648804
+        ],
+        "wall_radius": 5.01873874664307
+      },
+      "initial_boundary_distance": 2.77359771728516,
+      "label": "panda_wall_blocks",
+      "progress": 2.78851318359375,
+      "start": [
+        98.5104598999023,
+        0.175048515200615,
+        2.6086323261261
+      ],
+      "surface": [
+        95.7368621826172,
+        0.735048532485962,
+        2.6086323261261
+      ],
+      "wall_contact_count": 74,
+      "wall_hit": true
+    }
+  ]
+}

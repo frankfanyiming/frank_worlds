@@ -1,0 +1,73 @@
+{
+  "created_at": "2026-09-11T21:09:19.954203+00:00",
+  "stage": "Blender source and true geometry renders; Godot validation is separate",
+  "detail_revision": 2,
+  "files": {
+    "worlds/frog/source/assets/panda-home.glb": {
+      "bytes": 14953816,
+      "sha256": "b1125d11fb7c763cc95aee6404e3f2d580ac9baf235f79a3c0d2dda7b030ef60"
+    },
+    "worlds/frog/source/assets/panda-home.json": {
+      "bytes": 23546,
+      "sha256": "be082f5669722e08f8715fa0e84e9ee96999df2cdeb92d628aa2832b21b00cb0"
+    },
+    "worlds/frog/blender/panda-home.blend": {
+      "bytes": 6418408,
+      "sha256": "61801423461605d7a9e4100d4d92e2600899a15c5c46ffdd27540b60da7e7787"
+    },
+    "worlds/frog/blender/panda-home-with-tripo.blend": {
+      "bytes": 8992273,
+      "sha256": "8d4e7283693ab17322fafc8731a9e9e56f32025cc0da55b660c8f5d001664a9b"
+    },
+    "tools/build-panda-home.py": {
+      "bytes": 32508,
+      "sha256": "1af2708bbf715a165376de922490c51b787f9bad30ee5cff96fd635f45b2701d"
+    },
+    "tools/panda-house-detail.py": {
+      "bytes": 23477,
+      "sha256": "e59a50d0d62f3ee56e0d8bca8365a7e34776b1a0881135008448a721a4a5361f"
+    },
+    "worlds/frog/blender/panda-ink-landscape.png": {
+      "bytes": 3334480,
+      "sha256": "47a30c65943b4649d4127676f0a0958a5055487ceb1a160a8346ada23ef19909"
+    },
+    "worlds/frog/blender/panda-ink-landscape-prompt.txt": {
+      "bytes": 815,
+      "sha256": "57a31956dce5ad3d8a55fadaaf8a030bc59def3e0c138878fb9af1c57a6ddd51"
+    },
+    "docs/evidence/panda-home/details-02/panda-room-loft-blender.png": {
+      "bytes": 1956063,
+      "sha256": "2d81856a5d15bd85efa53bc2de38b3f054d5708f5f498a0729e917e548d1f0f8"
+    },
+    "docs/evidence/panda-home/details-02/panda-room-main-blender.png": {
+      "bytes": 2064985,
+      "sha256": "0bebda2c7cb1e7f5a1882e80bb3984b6c5e885252701ec4c80130446be4f53bc"
+    },
+    "docs/evidence/panda-home/details-02/panda-room-side-blender.png": {
+      "bytes": 2091955,
+      "sha256": "9a6e9e37fc333a12f4c667517b3d1f7eb2ead9542851a5fda023eac04d9fbf4a"
+    },
+    "docs/evidence/panda-home/details-02/panda-stone-detail-blender.png": {
+      "bytes": 1651166,
+      "sha256": "fd5c3220c9999ab96db9b11371f7137a4b43cca6e31118739b150905604edffd"
+    },
+    "docs/evidence/panda-home/details-02/panda-tea-detail-blender.png": {
+      "bytes": 2094635,
+      "sha256": "444840c80db27c088c51e94cde9da73c8b8229d4cc3eb45b1c53488873b10b08"
+    }
+  },
+  "glb_validation": {
+    "mesh_batches": 28,
+    "triangles": 300344,
+    "materials": 27,
+    "normal_mapped_materials": 13,
+    "roughness_mapped_materials": 13,
+    "images": 23,
+    "all_textured_primitives_have_uv": true,
+    "required_nodes_present": true,
+    "image_formats": [
+      "image/jpeg",
+      "image/png"
+    ]
+  }
+}

@@ -27,7 +27,7 @@ func _web_input(args):
   if pressed:Input.action_press(action)
   else:Input.action_release(action)
  elif action=="interact" and pressed:
-  var e=InputEventKey.new();e.keycode=KEY_E;e.pressed=true;Input.parse_input_event(e)
+  var e=InputEventKey.new();e.keycode=KEY_E;e.physical_keycode=KEY_E;e.pressed=true;Input.parse_input_event(e)
 func _web_sound(args):
  if args.size():AudioServer.set_bus_mute(0,not bool(args[0]))
 func _t(value):
@@ -37,6 +37,6 @@ func _process(delta):
  tick+=delta
  if tick>.4 and locale!="zh-CN":tick=0;_translate(get_parent())
 func _translate(n):
- if n is Label or n is Button:n.text=_t(n.text)
+ if n is Label or n is Button or n is Label3D:n.text=_t(n.text)
  for c in n.get_children():
   if c!=self:_translate(c)

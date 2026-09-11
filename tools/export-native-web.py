@@ -14,7 +14,21 @@ if not (project/'ui-font.otf').exists():
  raise SystemExit('Install assets first: tools/fetch-native-assets.py '+('frog' if args.world=='frog' else 'conan-web'))
 output=args.output.resolve();output.mkdir(parents=True,exist_ok=True)
 subprocess.run([args.godot,'--headless','--path',str(project),'--editor','--import'],check=True)
-subprocess.run([args.godot,'--headless','--path',str(project),'--export-release','Web',str(output/'index.html')],check=True)
+# Baked rooms contain the same geometry with UV2 and share the extracted images.
+# Keep original GLBs locally, and preserve the non-baked fallback for developers.
+# Only exclude their duplicate runtime copies when both replacement scenes exist.
+preset_path=project/'export_presets.cfg'
+preset_original=preset_path.read_text()
+preset_export=preset_original
+if args.world=='frog' and all((project/'assets/house-lighting'/f'{name}-room.scn').exists() for name in ('frog','panda')):
+ duplicates='assets/home-enclosure.glb,assets/home-furnishings.glb,assets/panda-home.glb'
+ preset_export,count=re.subn(r'^exclude_filter="([^"]*)"$',lambda m:'exclude_filter="'+m.group(1)+','+duplicates+'"',preset_original,count=1,flags=re.M)
+ if count!=1:raise SystemExit('Cannot safely apply baked-room export exclusions.')
+try:
+ if preset_export!=preset_original:preset_path.write_text(preset_export)
+ subprocess.run([args.godot,'--headless','--path',str(project),'--export-release','Web',str(output/'index.html')],check=True)
+finally:
+ if preset_export!=preset_original and preset_path.read_text()==preset_export:preset_path.write_text(preset_original)
 html=(output/'index.html').read_text()
 match=re.search(r'const GODOT_CONFIG = (\{.*?\});',html)
 if not match:raise SystemExit('Unsupported Godot export shell; generated files were preserved.')

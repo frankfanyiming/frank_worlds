@@ -1,0 +1,22 @@
+{
+  "02-gi-disabled": {
+    "full_mean_abs_rgb": 1.1362909722222223,
+    "frog_region_mean_abs_rgb": 13.032273994424534,
+    "room_region_mean_abs_rgb": 0.0
+  },
+  "03-normal-disabled": {
+    "full_mean_abs_rgb": 0.0059006944444444445,
+    "frog_region_mean_abs_rgb": 0.06767025089605734,
+    "room_region_mean_abs_rgb": 0.0
+  },
+  "04-spot-shadows-disabled": {
+    "full_mean_abs_rgb": 0.4925076388888889,
+    "frog_region_mean_abs_rgb": 5.648387096774194,
+    "room_region_mean_abs_rgb": 0.0
+  },
+  "15-spot-reverse-cull": {
+    "full_mean_abs_rgb": 0.36842812500000005,
+    "frog_region_mean_abs_rgb": 4.225698924731183,
+    "room_region_mean_abs_rgb": 0.0
+  }
+}

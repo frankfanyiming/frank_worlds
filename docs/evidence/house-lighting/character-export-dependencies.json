@@ -1,0 +1,46 @@
+{
+  "resources": [
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/frog.glb",
+      "excluded_by": []
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_BaseColor.jpg",
+      "excluded_by": []
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Metallic-tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Roughness.png",
+      "excluded_by": []
+    },
+    {
+      "dependencies": [
+        "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_BaseColor.jpg",
+        "res://assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Metallic-tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Roughness.png"
+      ],
+      "exists": true,
+      "path": "res://assets/panda.glb",
+      "excluded_by": []
+    }
+  ],
+  "excluded_dependencies": 0,
+  "all_exist": true,
+  "export_excludes": [
+    "assets/lighting/*",
+    "assets/buildings/*.png",
+    "assets/buildings/*.jpg",
+    "assets/*_Color*",
+    "assets/*_NormalGL*",
+    "assets/*_ORM*",
+    "assets/agasa_Color*",
+    "assets/agasa_Normal*",
+    "assets/interior.glb",
+    "assets/interior_*",
+    "*.LICENSE.txt"
+  ]
+}

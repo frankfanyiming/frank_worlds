@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-12",
+  "stage": "concept-only",
+  "generator": "built-in image_gen.imagegen",
+  "status": "pending-user-review",
+  "assets": [
+    {
+      "file": "01-青蛙家-原作装修.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2051000,
+      "sha256": "bd1c2c8b36260eea8d88c602eb3f14f269612147bd1171ff55297e2dfe346c54"
+    },
+    {
+      "file": "02-青蛙家-侧向视角.png",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2327732,
+      "sha256": "09e169d2850ad55a4fada62056ac46d76db9b73e8ceea7fb338f3c47d2914ad3"
+    },
+    {
+      "file": "03-熊猫家-竹木茶室.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2271718,
+      "sha256": "b62c6f7ae45a053d0da281d73a8289942fc9784b342be9aa0134f45719e1db70"
+    }
+  ]
+}

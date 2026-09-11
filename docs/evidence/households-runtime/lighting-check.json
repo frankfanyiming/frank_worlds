@@ -1,0 +1,26 @@
+[
+  {
+    "baked_scene": true,
+    "home": "frog",
+    "lightmaps": [
+      {
+        "both_available": true,
+        "day": "res://assets/house-lighting/frog-day.lmbake",
+        "dusk": "res://assets/house-lighting/frog-dusk.lmbake",
+        "dusk_loaded": true
+      }
+    ]
+  },
+  {
+    "baked_scene": true,
+    "home": "panda",
+    "lightmaps": [
+      {
+        "both_available": true,
+        "day": "res://assets/house-lighting/panda-day.lmbake",
+        "dusk": "res://assets/house-lighting/panda-dusk.lmbake",
+        "dusk_loaded": true
+      }
+    ]
+  }
+]

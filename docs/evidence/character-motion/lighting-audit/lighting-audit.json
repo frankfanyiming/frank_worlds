@@ -1,0 +1,48 @@
+{
+  "camera": "[X: (0.802081, 0.0, -0.597216), Y: (-0.3281, 0.835571, -0.44065), Z: (0.499016, 0.549383, 0.670195), O: (-14.58813, 2.682046, -7.750896)]",
+  "lights": [
+    {
+      "bias": 0.025000000372529,
+      "energy": 0.649999976158142,
+      "name": "WindowLight_FrogWindow0",
+      "normal_bias": 0.449999988079071,
+      "position": "(-18.1407, 4.25828, -16.23843)",
+      "shadow_enabled": true
+    },
+    {
+      "bias": 0.025000000372529,
+      "energy": 0.649999976158142,
+      "name": "WindowLight_FrogWindow1",
+      "normal_bias": 0.449999988079071,
+      "position": "(-9.673285, 2.42517, -13.61184)",
+      "shadow_enabled": true
+    },
+    {
+      "bias": 0.025000000372529,
+      "energy": 0.649999976158142,
+      "name": "WindowLight_FrogWindow2",
+      "normal_bias": 0.449999988079071,
+      "position": "(-12.23241, 4.33245, -16.35911)",
+      "shadow_enabled": true
+    },
+    {
+      "bias": 0.100000001490116,
+      "energy": 0.180000007152557,
+      "name": "LanternLight_table_candle",
+      "normal_bias": 1.0,
+      "position": "(-14.42, 1.25, -10.67)",
+      "shadow_enabled": false
+    },
+    {
+      "bias": 0.100000001490116,
+      "energy": 0.180000007152557,
+      "name": "LanternLight_loft_lantern",
+      "normal_bias": 1.0,
+      "position": "(-14.0, 3.9, -14.3)",
+      "shadow_enabled": false
+    }
+  ],
+  "material_shading": 1,
+  "per_pixel_enum": 1,
+  "tonemap_modes": "Linear,Reinhard,Filmic,ACES,AgX"
+}

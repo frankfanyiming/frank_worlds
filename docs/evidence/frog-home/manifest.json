@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-12",
+  "stage": "Blender model review, not Godot or published browser capture",
+  "source_scene": "worlds/frog/blender/frog-home-review.blend",
+  "actor": "existing Tripo frog runtime GLB, unchanged",
+  "camera_layout_source": "worlds/frog/source/assets/home-layout.json",
+  "images": [
+    {
+      "file": "01-main.png",
+      "source": "worlds/frog/blender/revision-02-renders/01-main.png",
+      "bytes": 2136271,
+      "sha256": "81ffa4dd6f2706c027448cd6e59aafa8f20b67b498340df063530d60a991a02c"
+    },
+    {
+      "file": "02-loft.png",
+      "source": "worlds/frog/blender/revision-02-renders/02-loft.png",
+      "bytes": 1948141,
+      "sha256": "90d7af19ed01c275f7a28c62db32e34b78102ec20b0cc69a0c7337846a6c003d"
+    },
+    {
+      "file": "03-entry.png",
+      "source": "worlds/frog/blender/revision-02-renders/03-entry.png",
+      "bytes": 2047727,
+      "sha256": "6ed306796359be493979027df31ab6c54b2e307b65ee6fb137204d7ed4b68fe9"
+    }
+  ]
+}

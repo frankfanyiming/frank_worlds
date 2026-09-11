@@ -1,0 +1,82 @@
+[
+  {
+    "species": "frog",
+    "embedded_name": "tripo_model_normal",
+    "embedded_decoded_sha256": "1e026745d1c58489696da0dff9d20fbb9a53b7b0f69594a0c97985c876c7c916",
+    "size": [
+      4096,
+      4096
+    ],
+    "extracted": [
+      {
+        "path": "worlds/frog/source/assets/frog_tripo_model_normal.jpg",
+        "decoded_sha256": "1e026745d1c58489696da0dff9d20fbb9a53b7b0f69594a0c97985c876c7c916",
+        "matches": true
+      }
+    ]
+  },
+  {
+    "species": "frog",
+    "embedded_name": "tripo_model_basecolor",
+    "embedded_decoded_sha256": "430bd32a135f38aefbac8f2291ea8c49a145cda6ed80155b79f88c247f3b6bb5",
+    "size": [
+      4096,
+      4096
+    ],
+    "extracted": [
+      {
+        "path": "worlds/frog/source/assets/frog_tripo_model_basecolor.jpg",
+        "decoded_sha256": "430bd32a135f38aefbac8f2291ea8c49a145cda6ed80155b79f88c247f3b6bb5",
+        "matches": true
+      }
+    ]
+  },
+  {
+    "species": "frog",
+    "embedded_name": "tripo_model_metallic-tripo_model_roughness",
+    "embedded_decoded_sha256": "4ca269fe62528b41b0547c998e3be08cbfca4719ebb2e276e6f42893c43dedc7",
+    "size": [
+      4096,
+      4096
+    ],
+    "extracted": [
+      {
+        "path": "worlds/frog/source/assets/frog_tripo_model_metallic-tripo_model_roughness.png",
+        "decoded_sha256": "4ca269fe62528b41b0547c998e3be08cbfca4719ebb2e276e6f42893c43dedc7",
+        "matches": true
+      }
+    ]
+  },
+  {
+    "species": "panda",
+    "embedded_name": "tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_BaseColor",
+    "embedded_decoded_sha256": "0d47151fe67b2be354ee79f264f933d5f2e7a4fb9e6ce23702c51cd2a54c0532",
+    "size": [
+      2048,
+      2048
+    ],
+    "extracted": [
+      {
+        "path": "worlds/frog/source/assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_BaseColor.jpg",
+        "decoded_sha256": "0d47151fe67b2be354ee79f264f933d5f2e7a4fb9e6ce23702c51cd2a54c0532",
+        "matches": true
+      }
+    ]
+  },
+  {
+    "species": "panda",
+    "embedded_name": "tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Metallic-tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Roughness",
+    "embedded_decoded_sha256": "959a3cb42243f00cb666fe8489bc02e7e7771c66875b393dd54033a5d8c813f5",
+    "size": [
+      1024,
+      1024
+    ],
+    "extracted": [
+      {
+        "path": "worlds/frog/source/assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Metallic-tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Roughness.png",
+        "decoded_sha256": "959a3cb42243f00cb666fe8489bc02e7e7771c66875b393dd54033a5d8c813f5",
+        "matches": true
+      }
+    ]
+  }
+]

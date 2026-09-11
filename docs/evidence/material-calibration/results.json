@@ -1,0 +1,278 @@
+{
+  "01-original-principled.png": [
+    {
+      "name": "A_constant_linear",
+      "mean_rgb": [
+        136.96571180555554,
+        136.96571180555554,
+        136.96571180555554
+      ],
+      "minmax_rgb": [
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ]
+      ]
+    },
+    {
+      "name": "B_generated_direct_linear",
+      "mean_rgb": [
+        64.00737847222223,
+        64.00737847222223,
+        64.00737847222223
+      ],
+      "minmax_rgb": [
+        [
+          63,
+          65
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          63,
+          65
+        ]
+      ]
+    },
+    {
+      "name": "C_generated_preconverted_sRGB",
+      "mean_rgb": [
+        136.98784722222223,
+        136.98784722222223,
+        136.98784722222223
+      ],
+      "minmax_rgb": [
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ]
+      ]
+    }
+  ],
+  "02-original-emission.png": [
+    {
+      "name": "A_constant_linear",
+      "mean_rgb": [
+        136.96571180555554,
+        136.96571180555554,
+        136.96571180555554
+      ],
+      "minmax_rgb": [
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ]
+      ]
+    },
+    {
+      "name": "B_generated_direct_linear",
+      "mean_rgb": [
+        64.00737847222223,
+        64.00737847222223,
+        64.00737847222223
+      ],
+      "minmax_rgb": [
+        [
+          63,
+          65
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          63,
+          65
+        ]
+      ]
+    },
+    {
+      "name": "C_generated_preconverted_sRGB",
+      "mean_rgb": [
+        136.98784722222223,
+        136.98784722222223,
+        136.98784722222223
+      ],
+      "minmax_rgb": [
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ]
+      ]
+    }
+  ],
+  "03-glb-roundtrip-principled.png": [
+    {
+      "name": "A_constant_linear",
+      "mean_rgb": [
+        136.96571180555554,
+        136.96571180555554,
+        136.96571180555554
+      ],
+      "minmax_rgb": [
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ]
+      ]
+    },
+    {
+      "name": "B_generated_direct_linear",
+      "mean_rgb": [
+        64.00737847222223,
+        64.00737847222223,
+        64.00737847222223
+      ],
+      "minmax_rgb": [
+        [
+          63,
+          65
+        ],
+        [
+          63,
+          65
+        ],
+        [
+          63,
+          65
+        ]
+      ]
+    },
+    {
+      "name": "C_generated_preconverted_sRGB",
+      "mean_rgb": [
+        136.98784722222223,
+        136.98784722222223,
+        136.98784722222223
+      ],
+      "minmax_rgb": [
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ],
+        [
+          136,
+          138
+        ]
+      ]
+    }
+  ],
+  "glb_materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      },
+      "name": "A_constant_linear",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.25,
+          0.25,
+          0.25,
+          1
+        ],
+        "metallicFactor": 0
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      },
+      "name": "B_generated_direct_linear",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0
+      }
+    },
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      },
+      "name": "C_generated_preconverted_sRGB",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1
+        },
+        "metallicFactor": 0
+      }
+    }
+  ],
+  "embedded_images": [
+    {
+      "name": "B_generated_direct_linear",
+      "mode": "RGBA",
+      "center_pixel": [
+        64,
+        64,
+        64,
+        255
+      ]
+    },
+    {
+      "name": "C_generated_preconverted_sRGB",
+      "mode": "RGBA",
+      "center_pixel": [
+        137,
+        137,
+        137,
+        255
+      ]
+    }
+  ]
+}

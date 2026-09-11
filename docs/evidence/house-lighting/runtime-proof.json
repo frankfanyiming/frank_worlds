@@ -1,0 +1,26 @@
+[
+  {
+    "actor_dynamic_meshes": 1,
+    "baked_users": 27,
+    "house": "panda",
+    "state": "day"
+  },
+  {
+    "actor_dynamic_meshes": 1,
+    "baked_users": 27,
+    "house": "panda",
+    "state": "dusk"
+  },
+  {
+    "actor_dynamic_meshes": 1,
+    "baked_users": 33,
+    "house": "frog",
+    "state": "day"
+  },
+  {
+    "actor_dynamic_meshes": 1,
+    "baked_users": 33,
+    "house": "frog",
+    "state": "dusk"
+  }
+]
