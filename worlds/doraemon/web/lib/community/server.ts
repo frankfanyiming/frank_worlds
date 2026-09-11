@@ -53,7 +53,7 @@ const clean = (v: unknown, n: number) =>
   typeof v === 'string' ? v.trim().slice(0, n) : '';
 async function bodyOf(request: Request) {
   const raw = await request.text();
-  required(raw.length <= 150000, 'INVALID_INPUT', 413);
+  required(raw.length <= 1048576, 'INVALID_INPUT', 413);
   let value: unknown;
   try {
     value = JSON.parse(raw || '{}');
@@ -119,11 +119,13 @@ const publicBranch = (r: any, uid?: string) => ({
   published: r.published_revision !== null,
   updatedAt: r.updated_at,
   owned: r.owner_id === uid,
-  tileCount: Object.keys(
-    JSON.parse(
-      (r.owner_id === uid ? r.data : r.published_data) || '{"tiles":{}}',
-    ).tiles,
-  ).length,
+  tileCount:
+    r.tile_count ??
+    Object.keys(
+      JSON.parse(
+        (r.owner_id === uid ? r.data : r.published_data) || '{"tiles":{}}',
+      ).tiles,
+    ).length,
 });
 export async function handleCommunity(
   request: Request,
@@ -276,9 +278,9 @@ export async function handleCommunity(
       if (mine) required(uid, 'UNAUTHORIZED', 401);
       const rows = await db
         .prepare(
-          'SELECT id,owner_id,world,title,source_id,revision,published_revision,published_title,published_data,data,updated_at FROM branches WHERE (? IS NULL OR world = ?) AND ((? = 1 AND owner_id = ?) OR (? = 0 AND published_revision IS NOT NULL)) ORDER BY updated_at DESC LIMIT 60',
+          "SELECT b.id,b.owner_id,b.world,b.title,b.source_id,b.revision,b.published_revision,b.published_title,b.updated_at,(SELECT count(*) FROM json_each(CASE WHEN b.owner_id=? THEN b.data ELSE b.published_data END,'$.tiles')) tile_count FROM branches b WHERE (? IS NULL OR b.world = ?) AND ((? = 1 AND b.owner_id = ?) OR (? = 0 AND b.published_revision IS NOT NULL)) ORDER BY b.updated_at DESC LIMIT 60",
         )
-        .bind(world, world, mine ? 1 : 0, uid, mine ? 1 : 0)
+        .bind(uid, world, world, mine ? 1 : 0, uid, mine ? 1 : 0)
         .all();
       response = json({
         branches: rows.results.map((r: any) => publicBranch(r, uid)),

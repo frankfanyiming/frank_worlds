@@ -663,6 +663,61 @@ assert.equal(
   1,
 );
 checks += 3;
+// A world at the documented limit must still be editable and list cheaply.
+const full = M.emptyScene('frog');
+for (let z = 0; z < 8; z++)
+  for (let x = 0; x < 8; x++) {
+    const tile = 'tile_' + x + '_' + z;
+    full.tiles[tile] = {
+      id: tile,
+      x,
+      z,
+      biome: 'grass',
+      label: 'A shared garden',
+    };
+    for (let n = 0; n < 20; n++) {
+      const id = 'item_' + x + '_' + z + '_' + n + '_' + 'a'.repeat(45);
+      full.objects[id] = {
+        id,
+        tileId: tile,
+        asset: 'flowers',
+        position: { x: 1 + (n % 3) * 0.3, y: 0, z: 1 + (n % 4) * 0.3 },
+        rotation: 0,
+        color: '#a1b2c3',
+        label: 'A small patch of flowers for the community.',
+      };
+    }
+  }
+assert.equal(M.validateScene(full).length, 0);
+assert(JSON.stringify(full).length > 150000);
+checks += 2;
+const fullId = (
+  await req(
+    'branches',
+    'POST',
+    { world: 'frog', title: 'Full garden' },
+    a,
+    false,
+    201,
+  )
+).id;
+const fullBranch = await req('branches/' + fullId, 'GET', undefined, a);
+await req(
+  'branches/' + fullId,
+  'PUT',
+  {
+    revision: fullBranch.revision,
+    title: fullBranch.title,
+    scene: full,
+    publish: true,
+  },
+  a,
+);
+const publicList = await req('branches?world=frog');
+assert.equal(publicList.branches.find((b) => b.id === fullId).tileCount, 64);
+assert(JSON.stringify(publicList).length < 10000);
+checks += 2;
+await req('notes', 'POST', { padding: 'x'.repeat(1048577) }, a, false, 413);
 console.log(
   JSON.stringify(
     {
@@ -693,6 +748,8 @@ console.log(
         'generation replay',
         'failed generation refund',
         'abandoned reservation recovery',
+        'maximum world size stays editable',
+        'bounded gallery response',
       ],
     },
     null,
