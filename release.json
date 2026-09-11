@@ -1,8 +1,8 @@
 {
-  "sourceCommit": "6f7c43883b75e0767d089d7442d4a4f0a7123db6",
-  "revision": 16,
-  "assetRevision": 16,
-  "date": "2026-09-11",
+  "sourceCommit": "f61a25c402701f8e2c8e823898ae6f75a9b1f3a0",
+  "revision": 17,
+  "assetRevision": 17,
+  "date": "2026-09-12",
   "summary": "XLands: three worlds, guestbook and versioned co-creation",
   "worlds": [
     "doraemon",
@@ -11,6 +11,6 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-11T11:50:10.769988+00:00",
-  "frogHome": "continuous-natural-rock-and-flagstones"
+  "updatedAt": "2026-09-11T22:20:11.287207+00:00",
+  "frogHome": "detailed-frog-and-panda-homes-baked-lighting-grounded-motion"
 }
