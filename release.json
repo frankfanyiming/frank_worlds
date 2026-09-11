@@ -1,5 +1,5 @@
 {
-  "sourceCommit": "dd7bfc02c8cc4c354a03edb6f1a7c171fffa755b",
+  "sourceCommit": "4062f332c0cbe4bce2b9b58b32cc0ef69e1a8941",
   "revision": 14,
   "assetRevision": 13,
   "date": "2026-09-11",
@@ -9,5 +9,7 @@
     "frog",
     "conan"
   ],
-  "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site"
+  "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
+  "loadingFix": "stream-progress-range-retry",
+  "updatedAt": "2026-09-11T06:51:41.607502+00:00"
 }
