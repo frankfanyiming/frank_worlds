@@ -13,6 +13,11 @@ var was_grounded=false
 var camera: Camera3D
 var environment: Environment
 var sun: DirectionalLight3D
+var sky_fill: DirectionalLight3D
+var home_enclosure: Node3D
+var home_light: OmniLight3D
+var room_lamps: Array[OmniLight3D] = []
+var inside_home := false
 var shell: Node3D
 var door: Node3D
 var boat: Node3D
@@ -71,7 +76,15 @@ func _ready():
  if room:room.get_parent().remove_child(room);room.queue_free()
  add_child(load("res://assets/interior.glb").instantiate())
  add_child(load("res://assets/navigation.glb").instantiate())
+ home_enclosure=load("res://assets/home-enclosure.glb").instantiate()
+ add_child(home_enclosure)
+ _home_collisions(home_enclosure)
+ home_enclosure.visible=false
  shell=stage.find_child("HouseShellRoot",true,false)
+ for name in ["HouseShell_Blue_grey_shelter_stone","Architecture_Blue_grey_shelter_stone"]:
+  var old_stone=stage.find_child(name,true,false)
+  if old_stone:old_stone.visible=false
+ stage.add_child(load("res://assets/stone-shell.glb").instantiate())
  clovers=stage.find_child("CloversRoot",true,false)
  door=stage.find_child("DoorRoot",true,false)
  boat=stage.find_child("BoatRoot",true,false)
@@ -124,9 +137,11 @@ func _setup_environment():
  environment.glow_enabled=true;environment.glow_intensity=.28
  environment.fog_enabled=true;environment.fog_light_color=Color("b8c8a7");environment.fog_density=.0025
  sun=DirectionalLight3D.new();sun.rotation_degrees=Vector3(-48,-30,-15);sun.light_color=Color("fff2db");sun.light_energy=1.05;sun.shadow_enabled=true;sun.directional_shadow_max_distance=95;sun.light_angular_distance=.5;add_child(sun)
- var fill=DirectionalLight3D.new();fill.rotation_degrees=Vector3(-35,150,0);fill.light_color=Color("b8d7d4");fill.light_energy=.17;add_child(fill)
+ sky_fill=DirectionalLight3D.new();sky_fill.rotation_degrees=Vector3(-35,150,0);sky_fill.light_color=Color("b8d7d4");sky_fill.light_energy=.17;add_child(sky_fill)
+ home_light=OmniLight3D.new();home_light.position=Vector3(-14.8,4.5,-10.9);home_light.light_color=Color("f7f3e7");home_light.light_energy=.72;home_light.omni_range=8;home_light.shadow_enabled=true;home_light.visible=false;add_child(home_light)
  for p in [[-14.42,1.50,-10.9],[-12.0,2.1,-12.1],[-14.0,3.9,-14.3],[24.8,1.05,6.95]]:
   var l=OmniLight3D.new();l.position=vec(p);l.light_color=Color("ffd696");l.light_energy=.65;l.omni_range=4.3;l.shadow_enabled=true;add_child(l)
+  if p[0]<0:room_lamps.append(l)
 
 func _configure_materials(node: Node):
  if node is MeshInstance3D:
@@ -143,6 +158,40 @@ void fragment(){float w=sin(world.x*3.0+TIME*.6+sin(world.z*2.0))*sin(world.z*2.
   elif "flame" in mi.name.to_lower() or "Candle_flame" in mi.name:
    mi.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
  for child in node.get_children():_configure_materials(child)
+
+func _home_collisions(node: Node):
+ if node is MeshInstance3D and (str(node.name).begins_with("EnclosureWall") or str(node.name).begins_with("EnclosureCeiling")):
+  node.create_trimesh_collision()
+ for child in node.get_children():_home_collisions(child)
+
+func _update_home():
+ var radius=Vector2(frog.position.x+15,frog.position.z+12).length()
+ # The doorstep is the boundary. Approaching the outside wall never lifts the roof.
+ var indoors=radius<4.75 and frog.position.z<(-7.48 if inside_home else -7.82) and frog.position.y<5.4
+ if indoors==inside_home:return
+ inside_home=indoors
+ stage.visible=not inside_home
+ home_enclosure.visible=inside_home
+ home_light.visible=inside_home
+ if butterfly:butterfly.visible=not inside_home
+ _apply_lighting()
+ _camera_update(1)
+
+func _apply_lighting():
+ sun.light_energy=0.0 if inside_home else (.50 if night else 1.05)
+ sun.light_color=Color("ffa36b") if night else Color("fff2db")
+ sun.rotation_degrees.x=-14 if night else -48
+ sky_fill.light_energy=.22 if inside_home else .17
+ sky_fill.light_color=Color("dbe4e6") if inside_home else Color("b8d7d4")
+ environment.background_mode=Environment.BG_COLOR if inside_home else Environment.BG_SKY
+ environment.background_color=Color("70644c")
+ environment.fog_enabled=not inside_home
+ environment.ambient_light_color=Color("b5c0ba") if inside_home else (Color("a6b4c5") if night else Color("c5d0b7"))
+ environment.ambient_light_energy=.48 if inside_home else (.46 if night else .38)
+ home_light.light_energy=.55 if night else .72
+ for lamp in room_lamps:
+  lamp.light_color=Color("fff0d8") if inside_home else Color("ffd696")
+  lamp.light_energy=.27 if inside_home else .65
 
 func _setup_door():
  if door==null:return
@@ -205,10 +254,11 @@ func _process(delta):
  if not ready_world:return
  time+=delta
  if time>2 and fps_samples.size()<300:fps_samples.append(Engine.get_frames_per_second())
+ _update_home()
  _camera_update(delta)
  if door:
   var d=Vector2(frog.position.x+15,frog.position.z+7.66).length();door.rotation.y=lerp_angle(door.rotation.y,-1.55 if d<3.1 else 0.0,1-exp(-delta*4))
- if shell:shell.visible=mode==2 or Vector2(frog.position.x+15,frog.position.z+12).length()>5.5
+ if shell:shell.visible=true
  if clovers:clovers.visible=Time.get_unix_time_from_system()-float(state.harvest_at)>100
  if gear:gear.visible=bool(state.packed) and mode!=2;gear.rotation.y=PI
  if butterfly:
@@ -234,7 +284,7 @@ func _physics_process(delta):
  var wish=Vector3.ZERO
  if auditing:wish=audit_input
  elif not input_locked:
-  var v=Input.get_vector("left","right","forward","back");wish=Vector3(v.x,0,v.y).rotated(Vector3.UP,yaw)
+  var v=Input.get_vector("left","right","forward","back");wish=Vector3(v.x,0,v.y).rotated(Vector3.UP,camera.rotation.y if inside_home and mode!=2 else yaw)
  var speed=4.4 if Input.is_action_pressed("run") else 2.9
  if posing>0:wish=Vector3.ZERO
  var rate=1-exp(-delta*12);frog.velocity.x=lerp(frog.velocity.x,wish.x*speed,rate);frog.velocity.z=lerp(frog.velocity.z,wish.z*speed,rate)
@@ -279,21 +329,37 @@ func _camera_update(delta):
  if frog==null or camera==null:return
  if capture_dir!="":return
  var target=frog.position+Vector3.UP*.70
- var inside=Vector2(frog.position.x+15,frog.position.z+12).length()<5.1
+ camera.fov=68 if inside_home else 44
  actor.visible=mode!=2
  if mode==2:
   camera.position=target;camera.rotation=Vector3(-pitch*.35,yaw,0);return
+ if inside_home:
+  _home_camera()
+  return
+ camera.fov=44
  var dist=distance if mode==0 else 5.4
- if inside and mode==0:dist=min(distance,11)
  var p=pitch if mode==0 else clamp(pitch*.55,.18,.55)
  var offset=Vector3(sin(yaw)*cos(p),sin(p),cos(yaw)*cos(p))*dist
  var desired=target+offset
  camera.position=camera.position.lerp(desired,1-exp(-delta*7));camera.look_at(target)
 
+func _home_camera():
+ # Both overview and follow views remain on the room side of the walls.
+ # No outdoor orbit, wheel zoom, or interpolation through the roof indoors.
+ var upper=clamp((frog.position.y-1.2)/1.3,0.0,1.0)
+ var left=clamp((-15.3-frog.position.x)/1.3,0.0,1.0)*upper
+ var entry=clamp((frog.position.z+9.45)/1.6,0.0,1.0)
+ camera.fov=80+4*entry
+ camera.position=Vector3(lerp(-14.2,-16.7,left),5.0,-7.72)
+ var look=Vector3(-15,lerp(1.1,1.65,upper)-.9*entry,-11.5)
+ if mode==1:look=look.lerp(frog.position+Vector3.UP*.65,.08)
+ camera.look_at(look)
+
 func _unhandled_input(event):
  if event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
-  yaw-=event.relative.x*.006;pitch=clamp(pitch+event.relative.y*.005,.14,1.35)
- if event is InputEventMouseButton and event.pressed:
+  if not inside_home or mode==2:
+   yaw-=event.relative.x*.006;pitch=clamp(pitch+event.relative.y*.005,.14,1.35)
+ if event is InputEventMouseButton and event.pressed and not inside_home:
   if event.button_index==MOUSE_BUTTON_WHEEL_UP:distance=clamp(distance-1.5,7,34)
   if event.button_index==MOUSE_BUTTON_WHEEL_DOWN:distance=clamp(distance+1.5,7,34)
  if event is InputEventKey and event.pressed and not event.echo:
@@ -309,8 +375,7 @@ func _cycle_camera():
  mode_button.text=["俯看小世界","跟着小青蛙","蛙眼看世界"][mode]
 
 func _toggle_night():
- night=not night;sun.light_energy=.50 if night else 1.05;sun.light_color=Color("ffa36b") if night else Color("fff2db");sun.rotation_degrees.x=-14 if night else -48
- environment.ambient_light_color=Color("a6b4c5") if night else Color("c5d0b7");environment.ambient_light_energy=.46 if night else .38
+ night=not night;_apply_lighting()
 
 func _update_nearest():
  nearest="";var best=2.4
@@ -408,7 +473,7 @@ func _capture_views():
  input_locked=true;overlay.visible=false;await get_tree().create_timer(2.0).timeout
  var views=[
   {"name":"01-庭院与岩屋","eye":Vector3(-15,13,13),"at":Vector3(-17,1.1,-3.5),"frog":Vector3(-15,.35,-3)},
-  {"name":"02-树干小屋剖面","eye":Vector3(-6,9,-3),"at":Vector3(-15,1.7,-12),"frog":Vector3(-15,.22,-9.0)},
+  {"name":"02-树干小屋室内","eye":Vector3(-6,9,-3),"at":Vector3(-15,1.7,-12),"frog":Vector3(-15,.22,-9.0)},
   {"name":"03-蓝色睡铺","eye":Vector3(-12,4.4,-10.5),"at":Vector3(-14.7,3.1,-14.1),"frog":Vector3(-17,2.75,-13.6)},
   {"name":"04-森林与溪桥","eye":Vector3(21,9,3),"at":Vector3(9,.8,-9),"frog":Vector3(13,.7,-9)},
   {"name":"05-林间营地","eye":Vector3(29,5,13),"at":Vector3(24,1.0,5.5),"frog":Vector3(22,.35,7)},
@@ -419,14 +484,15 @@ func _capture_views():
   var rq=PhysicsRayQueryParameters3D.create(frog.position+Vector3.UP*1.6,frog.position-Vector3.UP*2);rq.exclude=[frog.get_rid()]
   var floor_hit=get_world_3d().direct_space_state.intersect_ray(rq)
   if not floor_hit.is_empty():frog.position.y=floor_hit.position.y+.015
-  actor.rotation.y=PI;camera.position=v.eye;camera.look_at(v.at)
-  if shell:shell.visible=not ("小屋" in v.name or "睡铺" in v.name)
+  actor.rotation.y=PI
+  _update_home()
+  if inside_home:_home_camera()
+  else:camera.fov=44;camera.position=v.eye;camera.look_at(v.at)
   await get_tree().create_timer(.7).timeout
-  if shell:shell.visible=not ("小屋" in v.name or "睡铺" in v.name)
   await RenderingServer.frame_post_draw
   get_viewport().get_texture().get_image().save_png(capture_dir+"/"+v.name+".png")
   print("CAPTURE ",v.name)
- frog.position=vec(data.spawn);camera.position=Vector3(-15,13,13);camera.look_at(Vector3(-17,1.1,-3.5));overlay.visible=true
+ frog.position=vec(data.spawn);_update_home();camera.position=Vector3(-15,13,13);camera.look_at(Vector3(-17,1.1,-3.5));overlay.visible=true
  await RenderingServer.frame_post_draw
  get_viewport().get_texture().get_image().save_png(capture_dir+"/08-游戏界面.png")
  print("CAPTURE_DONE");get_tree().quit()
