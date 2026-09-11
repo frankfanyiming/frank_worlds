@@ -20,7 +20,8 @@ for(const world of ['frog','conan']){
   async start(options){assert.deepEqual([...options.args],['--main-pack','index.pck']);calls.push('start');this.options.onPrint(world.toUpperCase()+'_WORLD_READY');}
  };
  const parent={postMessage:m=>messages.push(m)},window={addEventListener(){},xlandsSound(){}};
- const sandbox={URLSearchParams,Uint8Array,Response,DecompressionStream,crypto,console:{log(){},warn(){},error(){throw Error('Loader unexpectedly failed');}},location:{search:'?lang=ja&sound=1'},document:{documentElement:{},querySelector:element,querySelectorAll:()=>[]},window,parent,Engine,fetch:async file=>{
+ const sandbox={URLSearchParams,Uint8Array,Response,DecompressionStream,AbortController,setTimeout,clearTimeout,crypto,console:{log(){},warn(){},error(){throw Error('Loader unexpectedly failed');}},location:{search:'?lang=ja&sound=1'},document:{documentElement:{},querySelector:element,querySelectorAll:()=>[]},window,parent,Engine,fetch:async file=>{
+  file=file.split('?')[0];
   if(file==='world-pack.json')return Response.json(descriptor);
   let bytes=await readFile(join(dir,file));
   // A corrupt download must be retried and must never reach the engine.
@@ -33,6 +34,7 @@ for(const world of ['frog','conan']){
  assert.equal(createHash('sha256').update(assembled).digest('hex'),descriptor.sha256);
  assert.equal(element('#status').removed,true);assert(messages.some(m=>m.type==='xlands-ready'));
  assert.equal(sandbox.document.documentElement.lang,'ja');
+ assert(messages.some(m=>m.type==='xlands-progress'&&m.progress>0&&m.progress<15),'Progress must appear before a complete chunk arrives');
  const errorMessages=[];
  await runInNewContext(script,{...sandbox,console:{...sandbox.console,error(){}},parent:{postMessage:m=>errorMessages.push(m)},fetch:async()=>new Response('Unavailable',{status:503})},{timeout:10000});
  assert(errorMessages.some(m=>m.type==='xlands-error'));assert.equal(element('#retry').hidden,false);

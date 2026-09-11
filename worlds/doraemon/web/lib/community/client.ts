@@ -9,12 +9,35 @@ export class ApiError extends Error {
   }
 }
 let basePromise: Promise<string> | undefined;
+async function requestJson(url: string, options: RequestInit = {}) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 12000);
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal });
+    // An upstream protection page is not a valid API response, even with status 200.
+    if (!response.headers.get('Content-Type')?.includes('application/json'))
+      throw new ApiError('NETWORK', response.status);
+    const json: any = await response.json();
+    if (!json || typeof json !== 'object') throw new ApiError('NETWORK', response.status);
+    return { response, json };
+  } catch (error) {
+    if (error instanceof ApiError) throw error;
+    throw new ApiError('NETWORK', 0);
+  } finally {
+    clearTimeout(timer);
+  }
+}
 export async function apiBase() {
   if (!basePromise)
-    basePromise = fetch(assetPath('community-config.json'))
-      .then((r) => (r.ok ? r.json() : {}))
-      .then((c: any) => c.apiOrigin || '')
-      .catch(() => '');
+    basePromise = requestJson(assetPath('community-config.json'))
+      .then(({ response, json }) => {
+        if (!response.ok) throw new ApiError('NETWORK', response.status);
+        return json.apiOrigin || '';
+      })
+      .catch((error) => {
+        basePromise = undefined;
+        throw error;
+      });
   return basePromise;
 }
 export function visitorToken() {
@@ -30,12 +53,11 @@ async function ensureSession() {
   if (!sessionPromise)
     sessionPromise = (async () => {
       const origin = await apiBase();
-      const response = await fetch(origin + '/api/community/session', {
+      const { response, json } = await requestJson(origin + '/api/community/session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: '{}',
       });
-      const json: any = await response.json();
       if (!response.ok)
         throw new ApiError(json.error || 'NOT_CONFIGURED', response.status);
       localStorage.setItem('xlands-visitor-token', json.token);
@@ -51,13 +73,12 @@ export async function api<T = any>(
 ): Promise<T> {
   if (method !== 'GET') await ensureSession();
   const origin = await apiBase();
-  let response: Response;
-  try {
-    response = await fetch(origin + '/api/community/' + path, {
+  const token = visitorToken();
+  const { response, json } = await requestJson(origin + '/api/community/' + path, {
       method,
       headers: {
-        'Content-Type': 'application/json',
-        'X-Visitor-Token': visitorToken(),
+        ...(body !== undefined ? { 'Content-Type': 'application/json' } : {}),
+        ...(token ? { 'X-Visitor-Token': token } : {}),
       },
       body: body === undefined ? undefined : JSON.stringify(body),
       credentials:
@@ -65,12 +86,6 @@ export async function api<T = any>(
           ? 'omit'
           : 'same-origin',
     });
-  } catch {
-    throw new ApiError('NETWORK', 0);
-  }
-  const json: any = await response
-    .json()
-    .catch(() => ({ error: 'NOT_CONFIGURED' }));
   if (response.status === 401 && json.error === 'UNAUTHORIZED') {
     localStorage.removeItem('xlands-visitor-token');
     throw new ApiError('UNAUTHORIZED', 401);

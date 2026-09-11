@@ -80,7 +80,7 @@ export default function WorldHub() {
   useEffect(() => {
     document.documentElement.lang = locale;
     document.title = t('brand') + ' · XLands';
-    localStorage.setItem('xlands-language', locale);
+    try { localStorage.setItem('xlands-language', locale); } catch {}
   }, [locale]);
   async function loadBranches() {
     setLoading(true);
@@ -507,30 +507,45 @@ function NativeWorld({
 }) {
   const frame = useRef<HTMLIFrameElement>(null),
     soundRef = useRef(sound),
-    initialSound = useRef(sound);
+    initialSound = useRef(sound),
+    lastActivity = useRef(Date.now());
   soundRef.current = sound;
   const [progress, setProgress] = useState(0),
+    [detail, setDetail] = useState(''),
     [ready, setReady] = useState(false),
     [error, setError] = useState(false),
     [retry, setRetry] = useState(0);
   useEffect(() => {
     setReady(false);
     setError(false);
+    lastActivity.current = Date.now();
+    let started = false;
+    const watchdog = window.setInterval(() => {
+      if (!started && Date.now() - lastActivity.current > 90000) setError(true);
+    }, 5000);
     const fn = (e: MessageEvent) => {
       if (e.source !== frame.current?.contentWindow) return;
+      lastActivity.current = Date.now();
       if (e.data?.type === 'xlands-ready') {
+        started = true;
         setReady(true);
         frame.current?.contentWindow?.postMessage(
           { type: 'xlands-sound', enabled: soundRef.current },
           '*',
         );
       }
-      if (e.data?.type === 'xlands-progress') setProgress(e.data.progress);
+      if (e.data?.type === 'xlands-progress') {
+        setProgress(e.data.progress);
+        if (typeof e.data.detail === 'string') setDetail(e.data.detail);
+      }
       if (e.data?.type === 'xlands-error') setError(true);
       if (e.data?.type === 'xlands-expansion') onExpansion();
     };
     window.addEventListener('message', fn);
-    return () => window.removeEventListener('message', fn);
+    return () => {
+      window.removeEventListener('message', fn);
+      window.clearInterval(watchdog);
+    };
   }, [world, retry]);
   useEffect(() => {
     frame.current?.contentWindow?.postMessage(
@@ -540,14 +555,12 @@ function NativeWorld({
   }, [sound]);
   return (
     <div className="native-world">
-      <iframe
+      {!error && <iframe
         ref={frame}
         key={retry}
         title={t(titleKey[world])}
         src={
-          'https://frankfanyiming.github.io/frank_worlds/worlds/' +
-          world +
-          '/index.html?lang=' +
+          assetPath('worlds/' + world + '/index.html') + '?v=loading-2&lang=' +
           locale +
           '&sound=' +
           (initialSound.current ? '1' : '0')
@@ -555,7 +568,7 @@ function NativeWorld({
         allow="autoplay; fullscreen; gamepad"
         allowFullScreen
         onError={() => setError(true)}
-      />
+      />}
       {!ready && (
         <div className="native-loading">
           <img src={assetPath('covers/' + world + '.png')} alt="" />
@@ -563,11 +576,13 @@ function NativeWorld({
             <h2>{error ? t('error') : t('preparing')}</h2>
             <progress value={progress} max={100} aria-label={t('loading')} />
             <span>{Math.round(progress)}%</span>
+            {!error && detail && <p>{detail}</p>}
             {error && (
               <button
                 onClick={() => {
                   setRetry(retry + 1);
                   setProgress(0);
+                  setDetail('');
                 }}
               >
                 {t('retry')}

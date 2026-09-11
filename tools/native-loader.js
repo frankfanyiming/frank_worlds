@@ -1,0 +1,183 @@
+// Embedded by export-native-web.py. Keep startup errors visible before loading Godot.
+const lang = new URLSearchParams(location.search).get('lang') || 'zh-CN';
+const copy = {
+  'zh-CN': ['正在下载世界…', '连接中断，请重试', '重新载入', '正在打开场景…', '正在加载引擎…'],
+  'zh-TW': ['正在下載世界…', '連線中斷，請重試', '重新載入', '正在開啟場景…', '正在載入引擎…'],
+  en: ['Downloading the world…', 'Connection interrupted. Please retry.', 'Retry', 'Opening the scene…', 'Loading the engine…'],
+  ja: ['世界をダウンロードしています…', '接続が切れました。再試行してください。', '再試行', 'シーンを開いています…', 'エンジンを読み込んでいます…'],
+  ko: ['세계를 내려받고 있어요…', '연결이 끊겼어요. 다시 시도해 주세요.', '다시 시도', '장면을 여는 중…', '엔진을 불러오는 중…'],
+}[lang] || ['Downloading…', 'Unable to connect. Please retry.', 'Retry', 'Opening…', 'Loading engine…'];
+document.documentElement.lang = lang;
+const statusPanel = document.querySelector('#status');
+const label = document.querySelector('#label');
+const progressBar = document.querySelector('#progress');
+const percent = document.querySelector('#percent');
+const retryButton = document.querySelector('#retry');
+retryButton.textContent = copy[2];
+let progress = 0, lastPublished = 0, failed = false, ready = false;
+let queuedSound = new URLSearchParams(location.search).get('sound') === '1';
+const controllers = new Set();
+
+function update(value, stage, force = false) {
+  if (failed || ready) return;
+  progress = Math.max(progress, Math.min(99, value));
+  if (!force && Date.now() - lastPublished < 120) return;
+  lastPublished = Date.now();
+  progressBar.value = progress;
+  percent.textContent = Math.floor(progress) + '%';
+  if (stage) label.textContent = stage;
+  parent.postMessage({type: 'xlands-progress', progress, detail: label.textContent}, '*');
+}
+function fail(error) {
+  if (failed || ready) return;
+  failed = true;
+  for (const controller of controllers) controller.abort();
+  console.error(error);
+  label.textContent = copy[1];
+  retryButton.hidden = false;
+  parent.postMessage({type: 'xlands-error'}, '*');
+}
+function deadline(promise, ms, onTimeout = () => {}) {
+  let timer;
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      timer = setTimeout(() => { onTimeout(); reject(Error('Download timed out')); }, ms);
+    }),
+  ]).finally(() => clearTimeout(timer));
+}
+window.addEventListener('error', e => fail(e.error || Error(e.message || 'Engine error')));
+window.addEventListener('unhandledrejection', e => fail(e.reason));
+window.addEventListener('pagehide', () => { for (const c of controllers) c.abort(); });
+window.addEventListener('message', e => {
+  if (e.source !== parent) return;
+  if (e.data?.type === 'xlands-sound') {
+    queuedSound = !!e.data.enabled;
+    window.xlandsSound?.(queuedSound);
+  }
+});
+for (const button of document.querySelectorAll('[data-action]')) {
+  button.addEventListener('pointerdown', e => {
+    e.preventDefault(); button.setPointerCapture(e.pointerId);
+    window.xlandsInput?.(button.dataset.action, true);
+  });
+  for (const type of ['pointerup', 'pointercancel', 'lostpointercapture'])
+    button.addEventListener(type, () => window.xlandsInput?.(button.dataset.action, false));
+}
+
+async function loadEngineScript() {
+  if (typeof Engine !== 'undefined') return;
+  const script = document.createElement('script');
+  script.src = 'index.js';
+  await deadline(new Promise((resolve, reject) => {
+    script.onload = resolve;
+    script.onerror = () => reject(Error('Engine script unavailable'));
+    document.head.appendChild(script);
+  }), 45000, () => script.remove());
+}
+
+// Preserve bytes already received on a broken connection. A 200 response to a
+// resumed request means Range is unsupported, so restart that chunk safely.
+async function downloadChunk(chunk, onProgress) {
+  const encoded = new Uint8Array(chunk.bytes);
+  let received = 0;
+  const url = chunk.file + '?v=' + chunk.sha256;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    const controller = new AbortController();
+    controllers.add(controller);
+    try {
+      const response = await deadline(fetch(url, {
+        signal: controller.signal,
+        headers: received ? { Range: 'bytes=' + received + '-' } : {},
+      }), 30000, () => controller.abort());
+      if (!response.ok || !response.body) throw Error('Download failed: ' + response.status);
+      if (response.status === 206) {
+        const range = /^bytes (\d+)-(\d+)\/(\d+)$/.exec(response.headers.get('Content-Range') || '');
+        if (!range || Number(range[1]) !== received || Number(range[3]) !== chunk.bytes)
+          throw Error('Invalid download range');
+      } else {
+        received = 0;
+        onProgress(0);
+      }
+      const reader = response.body.getReader();
+      while (true) {
+        const {done, value} = await deadline(reader.read(), 30000, () => controller.abort());
+        if (done) break;
+        if (received + value.length > encoded.length) { received = 0; throw Error('Unexpected chunk size'); }
+        encoded.set(value, received);
+        received += value.length;
+        onProgress(received);
+      }
+      if (received !== chunk.bytes) throw Error('Incomplete chunk');
+      const raw = new Uint8Array(await new Response(
+        new Response(encoded).body.pipeThrough(new DecompressionStream('gzip')),
+      ).arrayBuffer());
+      const digest = Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', raw)))
+        .map(b => b.toString(16).padStart(2, '0')).join('');
+      if (raw.length !== chunk.rawBytes || digest !== chunk.sha256) throw Error('Corrupt chunk');
+      return raw;
+    } catch (error) {
+      controller.abort();
+      if (received === chunk.bytes) received = 0; // Full but invalid: re-download.
+      if (attempt === 2 || failed) throw error;
+    } finally {
+      controllers.delete(controller);
+    }
+  }
+  throw Error('Download failed');
+}
+
+async function load() {
+  update(1, copy[4], true);
+  await loadEngineScript();
+  if (Engine.getMissingFeatures({threads: false}).length) throw Error('WebGL2 unavailable');
+  const controller = new AbortController();
+  controllers.add(controller);
+  let descriptor;
+  try {
+    descriptor = await deadline(fetch('world-pack.json', {signal: controller.signal}).then(r => {
+      if (!r.ok) throw Error('World manifest unavailable');
+      return r.json();
+    }), 20000, () => controller.abort());
+  } finally { controllers.delete(controller); }
+  const bytes = new Uint8Array(descriptor.totalBytes);
+  const downloaded = descriptor.chunks.map(() => 0);
+  const totalDownload = descriptor.chunks.reduce((sum, chunk) => sum + chunk.bytes, 0);
+  let cursor = 0, engineProgress = 0;
+  function report() {
+    const complete = downloaded.reduce((sum, size) => sum + size, 0);
+    update(3 + engineProgress * 10 + complete / totalDownload * 80,
+      copy[0] + ' ' + (complete / 1048576).toFixed(1) + ' / ' + (totalDownload / 1048576).toFixed(1) + ' MB');
+  }
+  const engine = new Engine({...config, canvas: document.querySelector('#canvas'), locale: lang,
+    canvasResizePolicy: 2,
+    onProgress: (loaded, total) => { engineProgress = total ? Math.min(1, loaded / total) : 0; report(); },
+    onPrint: text => {
+      console.log(text);
+      if (text.includes('_READY')) {
+        ready = true;
+        statusPanel.remove();
+        window.xlandsSound?.(queuedSound);
+        parent.postMessage({type: 'xlands-ready'}, '*');
+      }
+    },
+    onPrintError: text => console.warn(text),
+    onExit: code => { if (code !== 0) fail(Error('Engine exited: ' + code)); },
+  });
+  async function next() {
+    while (cursor < descriptor.chunks.length && !failed) {
+      const index = cursor++, chunk = descriptor.chunks[index];
+      const data = await downloadChunk(chunk, size => { downloaded[index] = size; report(); });
+      bytes.set(data, chunk.offset);
+    }
+  }
+  await Promise.all([
+    deadline(engine.init('index'), 180000), next(), next(), next(),
+  ]);
+  if (failed) return;
+  update(94, copy[3], true);
+  await engine.preloadFile(bytes.buffer, 'index.pck');
+  update(96, copy[3], true);
+  await deadline(engine.start({args: ['--main-pack', 'index.pck']}), 90000);
+}
+load().catch(fail);
