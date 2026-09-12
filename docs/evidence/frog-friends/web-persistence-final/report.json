@@ -20,11 +20,11 @@
   "events": [
     {
       "type": "close",
-      "at": 3579,
+      "at": 3287.7000000476837,
       "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
       "data": {
         "_save_sequence": 103,
-        "_saved_at": 1789242514.988,
+        "_saved_at": 1789242641.253,
         "camp_visits": 0,
         "clovers": 57,
         "friend_life": {
@@ -74,12 +74,12 @@
     },
     {
       "type": "sync-start",
-      "at": 3591.399999976158,
+      "at": 3291.5,
       "id": 1
     },
     {
       "type": "sync-end",
-      "at": 3595.3000000715256,
+      "at": 3295.5,
       "id": 1,
       "error": ""
     }
@@ -94,11 +94,11 @@
     "events": [
       {
         "type": "close",
-        "at": 3144.5999999046326,
+        "at": 3134,
         "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
         "data": {
           "_save_sequence": 106,
-          "_saved_at": 1789242518.161,
+          "_saved_at": 1789242644.416,
           "camp_visits": 0,
           "clovers": 57,
           "friend_life": {
@@ -149,7 +149,7 @@
     ],
     "mirror": {
       "_save_sequence": 106,
-      "_saved_at": 1789242518.161,
+      "_saved_at": 1789242644.416,
       "camp_visits": 0,
       "clovers": 57,
       "friend_life": {
@@ -257,5 +257,5 @@
     "kind": "album",
     "title": "旅行相册  ·  0 张"
   },
-  "closeToCommitMs": 16.300000071525574
+  "closeToCommitMs": 7.799999952316284
 }
