@@ -1,0 +1,269 @@
+{
+  "asset_sha256": {
+    "assets/buildings/agasa.glb": "3b4c696d25082bd5612b7f725ebc2db93585d87e0acafde07c7f92d7326ea71e",
+    "assets/buildings/agasa.json": "0ff3e84e4ac5d1ea27b134dda72544dc74030e89035abef8161fe8deca2053d6",
+    "assets/buildings/mouri.glb": "f38efe67bd82ea459a0d919184c3b716debd0ddadd8522e719321042459b7787",
+    "assets/buildings/mouri.json": "406e4eba428d1ac12c79f1b8458e1ed87383fecac33bae2982bf5bea42d7305b",
+    "assets/buildings/street-block.glb": "cd8d9725b256efde0751d05b1eb3e674ca06f6ed1ac3ca67f7f9d8d5ce6d4dcb",
+    "assets/buildings/street-block.json": "71ed3e721cdb16521f94d9fc3feb22c1387dc9502af95999bfdc75b255e3103d",
+    "assets/character-motion.json": "a2400ebe158977a8316a69f157c529aeb713b504912dd2196f12e5f311fdacef",
+    "assets/street.glb": "b7d46aac81734b09495ac089725a57a61203c9a946a0e6bef78d52bf6b97d74f",
+    "world.gd": "d647a44665c08827c6f581d03a1e7af5d4570b41539065ccc816ee706d5c1e9d"
+  },
+  "checks": {
+    "connected_mouri_frontage/connected_frontage_forward": false,
+    "connected_mouri_frontage/street_to_frontage": true,
+    "normal_characterbody_physics_enabled": true
+  },
+  "complete": true,
+  "controller": {
+    "auditing": true,
+    "capsule_height": 1.02,
+    "capsule_radius": 0.23,
+    "floor_snap": 0.319999992847443,
+    "run_mps": 1.85,
+    "testing": false,
+    "walk_mps": 0.85
+  },
+  "display_server": "headless",
+  "engine": {
+    "build": "official",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "hex": 263938,
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "status": "stable",
+    "string": "4.7.2-stable (official)",
+    "timestamp": 0
+  },
+  "failures": [
+    "connected_mouri_frontage/connected_frontage_forward"
+  ],
+  "notes": [
+    "Headless results establish actual controller movement/collision only. They do not establish rendered appearance, mobile performance, or release status.",
+    "Outdoor scenario reset is explicitly listed. No player position is assigned inside walk/follow and no raycast substitutes for movement.",
+    "Dependent route stopped after connected_frontage_forward/3; no interior reset was used to bypass it.",
+    "Not attempted after earlier failure: connected_frontage_reverse",
+    "Not attempted after earlier failure: frontage_to_mouri_outside"
+  ],
+  "physics_hz": 60,
+  "renderer": "gl_compatibility",
+  "routes": [
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 7.86491788877174,
+      "elapsed": 4.39999999999999,
+      "end": [
+        8.99836921691895,
+        0.130822271108627,
+        4.00000190734863
+      ],
+      "horizontal_error": 0.0983686447143555,
+      "label": "street_to_frontage/0",
+      "lowest_y": 0.0343052819371223,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.131668731570244,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        16.7999992370605,
+        0.124938189983368,
+        4.0
+      ],
+      "target": [
+        8.90000057220459,
+        0.200000002980232,
+        4.0
+      ],
+      "vertical_error": -0.0691777318716049
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 16.5946353413165,
+      "elapsed": 9.00000000000003,
+      "end": [
+        8.65103149414062,
+        0.130931615829468,
+        20.5210494995117
+      ],
+      "horizontal_error": 0.0789576023817062,
+      "label": "connected_frontage_forward/0",
+      "lowest_y": 0.124248079955578,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130937203764915,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.88336753845215,
+        0.124768503010273,
+        4.00000190734863
+      ],
+      "target": [
+        8.65000152587891,
+        0.200000002980232,
+        20.6000003814697
+      ],
+      "vertical_error": -0.0690683871507645
+    },
+    {
+      "animation_clips": [
+        "Run",
+        "Idle"
+      ],
+      "distance_walked": 8.97350458375877,
+      "elapsed": 4.96666666666665,
+      "end": [
+        8.65005683898926,
+        0.13078910112381,
+        11.6877527236938
+      ],
+      "horizontal_error": 0.0877523571252823,
+      "label": "connected_frontage_forward/1",
+      "lowest_y": 0.128342673182487,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130940660834312,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.65103149414062,
+        0.130934789776802,
+        20.6360340118408
+      ],
+      "target": [
+        8.65000057220459,
+        0.200000002980232,
+        11.6000003814697
+      ],
+      "vertical_error": -0.0692109018564224
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 7.91188446432352,
+      "elapsed": 4.28333333333332,
+      "end": [
+        8.65000534057617,
+        0.130817979574203,
+        3.69859480857849
+      ],
+      "horizontal_error": 0.0985949039459229,
+      "label": "connected_frontage_forward/2",
+      "lowest_y": 0.124248079955578,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130841583013535,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.65019989013672,
+        0.130784139037132,
+        11.5727472305298
+      ],
+      "target": [
+        8.65000057220459,
+        0.200000002980232,
+        3.59999990463257
+      ],
+      "vertical_error": -0.0691820234060287
+    },
+    {
+      "animation_clips": [
+        "Run",
+        "Idle"
+      ],
+      "distance_walked": 7.08119141717907,
+      "elapsed": 7.09999999999998,
+      "end": [
+        8.81094264984131,
+        0.130793809890747,
+        -3.39549565315247
+      ],
+      "end_agasa_local": [
+        -55.1890563964844,
+        0.130793809890747,
+        3.60450434684753
+      ],
+      "end_mouri_local": [
+        -0.00450468063354492,
+        0.130793809890747,
+        1.01094245910645
+      ],
+      "horizontal_error": 0.161005109548569,
+      "label": "connected_frontage_forward/3",
+      "lowest_y": 0.124249495565891,
+      "mode": "run",
+      "on_floor": true,
+      "passed": false,
+      "peak_y": 0.130935564637184,
+      "reason": "stalled_against_collision_or_wrong_floor",
+      "scenario": "connected_mouri_frontage",
+      "slide_contacts": [
+        {
+          "collider": "/root/Beika/BlenderStreet/street/Terrain_Collision/Terrain_Collision_col",
+          "collider_position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "depth": 0.000981703400611877,
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "point": [
+            8.81042194366455,
+            0.134999990463257,
+            -3.39563035964966
+          ]
+        },
+        {
+          "collider": "/root/Beika/BlenderStreet/street/Terrain_Collision/Terrain_Collision_col",
+          "collider_position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "depth": 0.00105006992816925,
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "point": [
+            8.81094264984131,
+            0.134999990463257,
+            -3.39549565315247
+          ]
+        }
+      ],
+      "start": [
+        8.65000534057617,
+        0.125093355774879,
+        3.58359527587891
+      ],
+      "target": [
+        8.65000057220459,
+        0.200000002980232,
+        -3.40000009536743
+      ],
+      "vertical_error": -0.0692061930894852
+    }
+  ],
+  "scenario_start_placements": [],
+  "simulated_seconds": 30.7499999999995,
+  "trace_file": "physical-route-trace.json"
+}

@@ -1,0 +1,38 @@
+{
+  "animation": "normal AnimationPlayer playback through production Idle and E interaction; no seek",
+  "checks": [
+    {
+      "check": "production_idle",
+      "clip": "Idle",
+      "passed": true
+    },
+    {
+      "check": "nearest_is_agasa",
+      "passed": true
+    },
+    {
+      "check": "interaction_plays_talk",
+      "clip": "Talk",
+      "passed": true
+    },
+    {
+      "check": "npc_stays_at_authored_position",
+      "passed": true
+    }
+  ],
+  "clips": [
+    "Idle",
+    "Read",
+    "Run",
+    "Sit",
+    "Talk",
+    "Walk",
+    "Wave"
+  ],
+  "engine": "4.7.2-stable (official)",
+  "npc_transform_unchanged": true,
+  "player_initial_pose_staged": true,
+  "production_scene": "res://world.tscn",
+  "renderer": "gl_compatibility",
+  "scope": "Authored NPC standing and talking; Agasa walking remains a Blender asset check, not a production NPC walk test."
+}

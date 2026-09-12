@@ -1,0 +1,185 @@
+[
+  {
+    "name": "agasa",
+    "native": {
+      "bytes": 58270820,
+      "sha256": "7240c32f032c3f991b3db4e046821520c765e3874c677946fba72e19f922ce73"
+    },
+    "web": {
+      "bytes": 21281972,
+      "sha256": "b794b69829c18e406c8b097fb23d5112bd366d813eee0b3d5e74a335b29db45c"
+    },
+    "image_resizes": [
+      {
+        "texture": "oak_albedo",
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          768,
+          768
+        ]
+      },
+      {
+        "texture": "oak_normal",
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          768,
+          768
+        ]
+      },
+      {
+        "texture": "oak_roughness",
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          768,
+          768
+        ]
+      },
+      {
+        "texture": "purple_albedo",
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          768,
+          768
+        ]
+      },
+      {
+        "texture": "purple_normal",
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          768,
+          768
+        ]
+      },
+      {
+        "texture": "walnut_albedo",
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          768,
+          768
+        ]
+      },
+      {
+        "texture": "walnut_normal",
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          768,
+          768
+        ]
+      },
+      {
+        "texture": "walnut_roughness",
+        "before": [
+          2048,
+          2048
+        ],
+        "after": [
+          768,
+          768
+        ]
+      }
+    ],
+    "visual_only_decimation": [
+      {
+        "node": "AgasaReference_Lab_instruments",
+        "ratio": 0.4
+      }
+    ],
+    "collision_nodes_not_decimated": true
+  },
+  {
+    "name": "street-block",
+    "native": {
+      "bytes": 10235480,
+      "sha256": "dd19142a87a39463a8f42840b7052cdf849acad0d3ac2b3a5ea9f22f28687991"
+    },
+    "web": {
+      "bytes": 8447352,
+      "sha256": "cd8d9725b256efde0751d05b1eb3e674ca06f6ed1ac3ca67f7f9d8d5ce6d4dcb"
+    },
+    "image_resizes": [],
+    "visual_only_decimation": [
+      {
+        "node": "ConnectedBlock_0",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_0_Glass",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_1",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_1_Glass",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_2",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_2_Glass",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_3",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_3_Glass",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_4",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_4_Glass",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_5",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_5_Glass",
+        "ratio": 0.72
+      },
+      {
+        "node": "ConnectedBlock_Sidewalk",
+        "ratio": 0.72
+      },
+      {
+        "node": "IrohaSushi",
+        "ratio": 0.72
+      },
+      {
+        "node": "IrohaSushi_Glass",
+        "ratio": 0.72
+      }
+    ],
+    "collision_nodes_not_decimated": true
+  }
+]

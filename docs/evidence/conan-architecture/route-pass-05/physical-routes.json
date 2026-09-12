@@ -1,0 +1,6647 @@
+{
+  "asset_sha256": {
+    "assets/buildings/agasa.glb": "b794b69829c18e406c8b097fb23d5112bd366d813eee0b3d5e74a335b29db45c",
+    "assets/buildings/agasa.json": "ccc858536926a6f1db79386ffa10047b79be7f3fac158a785f976297f0d42313",
+    "assets/buildings/mouri.glb": "f38efe67bd82ea459a0d919184c3b716debd0ddadd8522e719321042459b7787",
+    "assets/buildings/mouri.json": "406e4eba428d1ac12c79f1b8458e1ed87383fecac33bae2982bf5bea42d7305b",
+    "assets/buildings/street-block.glb": "cd8d9725b256efde0751d05b1eb3e674ca06f6ed1ac3ca67f7f9d8d5ce6d4dcb",
+    "assets/buildings/street-block.json": "f358ee353228a04a0cf5fdd6f35323018b145c5ff030d7e271a841405c04166d",
+    "assets/character-motion.json": "a2400ebe158977a8316a69f157c529aeb713b504912dd2196f12e5f311fdacef",
+    "assets/street.glb": "b7d46aac81734b09495ac089725a57a61203c9a946a0e6bef78d52bf6b97d74f",
+    "world.gd": "99b7f6974e3145acfb175be2365cb24ab81c27fcb183b9717314c1d806fbe3fb"
+  },
+  "checks": {
+    "agasa_basement/Basement to main": true,
+    "agasa_basement/Basement to main_reverse": true,
+    "agasa_basement/cellar_to_research": true,
+    "agasa_basement/cellar_to_research_reverse": true,
+    "agasa_basement/front_to_round_kitchen": true,
+    "agasa_basement/front_to_round_kitchen_reverse": true,
+    "agasa_basement/hall_to_kitchen_front": true,
+    "agasa_basement/kitchen_front_to_hall": true,
+    "agasa_basement/main_to_tower": true,
+    "agasa_basement/main_to_tower_reverse": true,
+    "agasa_gallery/Main to gallery": true,
+    "agasa_gallery/front_to_round_kitchen": true,
+    "agasa_gallery/gallery_bridge": true,
+    "agasa_gallery/gallery_perimeter": false,
+    "agasa_gallery/kitchen_front_to_hall": true,
+    "agasa_gallery/main_to_tower": true,
+    "agasa_garage/front_to_round_kitchen": true,
+    "agasa_garage/front_to_round_kitchen_reverse": true,
+    "agasa_garage/kitchen_to_living": true,
+    "agasa_garage/kitchen_to_living_reverse": true,
+    "agasa_garage/living_to_garage": true,
+    "agasa_garage/living_to_garage_reverse": true,
+    "agasa_kitchen/front_to_round_kitchen": true,
+    "agasa_kitchen/front_to_round_kitchen_reverse": true,
+    "agasa_kitchen/hall_to_kitchen_aisle": true,
+    "agasa_kitchen/hall_to_kitchen_aisle_reverse": true,
+    "agasa_kitchen/hall_to_kitchen_front": true,
+    "agasa_kitchen/kitchen_front_to_hall": true,
+    "agasa_kitchen/kitchen_work_aisle": true,
+    "agasa_kitchen/kitchen_work_aisle_reverse": true,
+    "connected_mouri_frontage/connected_frontage_forward": true,
+    "connected_mouri_frontage/connected_frontage_reverse": true,
+    "connected_mouri_frontage/frontage_to_mouri_outside": true,
+    "connected_mouri_frontage/street_to_frontage": true,
+    "normal_characterbody_physics_enabled": true
+  },
+  "complete": true,
+  "controller": {
+    "auditing": true,
+    "capsule_height": 1.02,
+    "capsule_radius": 0.23,
+    "floor_snap": 0.319999992847443,
+    "run_mps": 1.85,
+    "testing": false,
+    "walk_mps": 0.85
+  },
+  "display_server": "headless",
+  "engine": {
+    "build": "official",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "hex": 263938,
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "status": "stable",
+    "string": "4.7.2-stable (official)",
+    "timestamp": 0
+  },
+  "failures": [
+    "agasa_gallery/gallery_perimeter"
+  ],
+  "notes": [
+    "Headless results establish actual controller movement/collision only. They do not establish rendered appearance, mobile performance, or release status.",
+    "Outdoor scenario reset is explicitly listed. No player position is assigned inside walk/follow and no raycast substitutes for movement.",
+    "Dependent route stopped after gallery_perimeter/7; no interior reset was used to bypass it.",
+    "Not attempted after earlier failure: gallery_perimeter_reverse",
+    "Not attempted after earlier failure: gallery_bridge_reverse",
+    "Not attempted after earlier failure: Main to gallery_reverse",
+    "Not attempted after earlier failure: main_to_tower_reverse",
+    "Not attempted after earlier failure: hall_to_kitchen_front",
+    "Not attempted after earlier failure: front_to_round_kitchen_reverse"
+  ],
+  "physics_hz": 60,
+  "renderer": "gl_compatibility",
+  "requested_scenario": "all",
+  "routes": [
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 7.86491788877174,
+      "elapsed": 4.39999999999999,
+      "end": [
+        8.99836921691895,
+        0.130822271108627,
+        4.00000190734863
+      ],
+      "horizontal_error": 0.0983686447143555,
+      "label": "street_to_frontage/0",
+      "lowest_y": 0.0343052819371223,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.131668731570244,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        16.7999992370605,
+        0.124938189983368,
+        4.0
+      ],
+      "target": [
+        8.90000057220459,
+        0.200000002980232,
+        4.0
+      ],
+      "vertical_error": -0.0691777318716049
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 16.6196963749826,
+      "elapsed": 9.00000000000003,
+      "end": [
+        8.99939632415771,
+        0.130933821201324,
+        20.5219097137451
+      ],
+      "horizontal_error": 0.0780930072069168,
+      "label": "connected_frontage_forward/0",
+      "lowest_y": 0.124248124659061,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130942687392235,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.88336753845215,
+        0.124768503010273,
+        4.00000190734863
+      ],
+      "target": [
+        9.00000095367432,
+        0.200000002980232,
+        20.6000003814697
+      ],
+      "vertical_error": -0.0690661817789078
+    },
+    {
+      "animation_clips": [
+        "Run",
+        "Idle"
+      ],
+      "distance_walked": 9.01826642692322,
+      "elapsed": 4.96666666666665,
+      "end": [
+        8.99999332427979,
+        0.130521178245544,
+        11.6885185241699
+      ],
+      "horizontal_error": 0.0885181427001953,
+      "label": "connected_frontage_forward/1",
+      "lowest_y": 0.12424822896719,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130942955613136,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99939632415771,
+        0.130934864282608,
+        20.6369018554688
+      ],
+      "target": [
+        9.00000095367432,
+        0.200000002980232,
+        11.6000003814697
+      ],
+      "vertical_error": -0.0694788247346878
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 7.89592867810279,
+      "elapsed": 4.28333333333332,
+      "end": [
+        8.99999713897705,
+        0.130635276436806,
+        3.69935202598572
+      ],
+      "horizontal_error": 0.0993521213531494,
+      "label": "connected_frontage_forward/2",
+      "lowest_y": 0.124712280929089,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130836725234985,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999332427979,
+        0.130768716335297,
+        11.5735158920288
+      ],
+      "target": [
+        9.00000095367432,
+        0.200000002980232,
+        3.59999990463257
+      ],
+      "vertical_error": -0.0693647265434265
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 6.8906829142943,
+      "elapsed": 3.74999999999999,
+      "end": [
+        8.99999809265137,
+        0.130825906991959,
+        -3.30314970016479
+      ],
+      "horizontal_error": 0.0968503952026367,
+      "label": "connected_frontage_forward/3",
+      "lowest_y": 0.125096499919891,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130837440490723,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999713897705,
+        0.130563884973526,
+        3.5843517780304
+      ],
+      "target": [
+        9.0,
+        0.200000002980232,
+        -3.40000009536743
+      ],
+      "vertical_error": -0.0691740959882736
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 6.88749911636114,
+      "elapsed": 3.74999999999999,
+      "end": [
+        8.99999809265137,
+        0.130837082862854,
+        -10.3056478500366
+      ],
+      "horizontal_error": 0.0943517684936523,
+      "label": "connected_frontage_forward/4",
+      "lowest_y": 0.130798742175102,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130840852856636,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999809265137,
+        0.130810245871544,
+        -3.41814923286438
+      ],
+      "target": [
+        9.0,
+        0.200000002980232,
+        -10.3999996185303
+      ],
+      "vertical_error": -0.0691629201173782
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 7.90499952062964,
+      "elapsed": 4.29999999999999,
+      "end": [
+        8.99999809265137,
+        0.130935296416283,
+        -18.325647354126
+      ],
+      "horizontal_error": 0.0743522644042969,
+      "label": "connected_frontage_forward/5",
+      "lowest_y": 0.130802422761917,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130943089723587,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999809265137,
+        0.130810633301735,
+        -10.4206485748291
+      ],
+      "target": [
+        9.0,
+        0.200000002980232,
+        -18.3999996185303
+      ],
+      "vertical_error": -0.0690647065639496
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 8.86088885553181,
+      "elapsed": 4.81666666666665,
+      "end": [
+        8.99999904632568,
+        0.130810275673866,
+        -27.30153465271
+      ],
+      "horizontal_error": 0.0984649658203125,
+      "label": "connected_frontage_forward/6",
+      "lowest_y": 0.130797892808914,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130937099456787,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999809265137,
+        0.130932718515396,
+        -18.4406471252441
+      ],
+      "target": [
+        8.99999904632568,
+        0.200000002980232,
+        -27.3999996185303
+      ],
+      "vertical_error": -0.069189727306366
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        8.99999904632568,
+        0.130828469991684,
+        -27.4165344238281
+      ],
+      "horizontal_error": 0.0165348052978516,
+      "label": "connected_frontage_reverse/0",
+      "lowest_y": 0.130828469991684,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130828469991684,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999904632568,
+        0.130828469991684,
+        -27.4165344238281
+      ],
+      "target": [
+        8.99999904632568,
+        0.200000002980232,
+        -27.3999996185303
+      ],
+      "vertical_error": -0.0691715329885483
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 8.93745935731567,
+      "elapsed": 4.89999999999999,
+      "end": [
+        8.99999904632568,
+        0.130935296416283,
+        -18.4915771484375
+      ],
+      "horizontal_error": 0.0915775299072266,
+      "label": "connected_frontage_reverse/1",
+      "lowest_y": 0.130797490477562,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130942404270172,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999904632568,
+        0.130817174911499,
+        -27.4290351867676
+      ],
+      "target": [
+        9.0,
+        0.200000002980232,
+        -18.3999996185303
+      ],
+      "vertical_error": -0.0690647065639496
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 7.90501281246543,
+      "elapsed": 4.29999999999999,
+      "end": [
+        8.99999904632568,
+        0.13083678483963,
+        -10.471565246582
+      ],
+      "horizontal_error": 0.0715656280517578,
+      "label": "connected_frontage_reverse/2",
+      "lowest_y": 0.130802467465401,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130943477153778,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999904632568,
+        0.130935281515121,
+        -18.3765773773193
+      ],
+      "target": [
+        9.0,
+        0.200000002980232,
+        -10.3999996185303
+      ],
+      "vertical_error": -0.0691632181406021
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 6.85666954237968,
+      "elapsed": 3.73333333333332,
+      "end": [
+        8.99999904632568,
+        0.130814641714096,
+        -3.49989557266235
+      ],
+      "horizontal_error": 0.0998954772949219,
+      "label": "connected_frontage_reverse/3",
+      "lowest_y": 0.130798816680908,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130840599536896,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999904632568,
+        0.130836650729179,
+        -10.3565645217896
+      ],
+      "target": [
+        9.0,
+        0.200000002980232,
+        -3.40000009536743
+      ],
+      "vertical_error": -0.0691853612661362
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 6.89233987405896,
+      "elapsed": 3.74999999999999,
+      "end": [
+        8.99999904632568,
+        0.130627572536469,
+        3.50260663032532
+      ],
+      "horizontal_error": 0.097393274307251,
+      "label": "connected_frontage_reverse/4",
+      "lowest_y": 0.125066697597504,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130837008357048,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999904632568,
+        0.130817949771881,
+        -3.38489508628845
+      ],
+      "target": [
+        9.00000095367432,
+        0.200000002980232,
+        3.59999990463257
+      ],
+      "vertical_error": -0.0693724304437637
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 7.93364992178977,
+      "elapsed": 4.29999999999999,
+      "end": [
+        8.99999904632568,
+        0.130607321858406,
+        11.5226030349731
+      ],
+      "horizontal_error": 0.077397346496582,
+      "label": "connected_frontage_reverse/5",
+      "lowest_y": 0.124311961233616,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.13083603978157,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999904632568,
+        0.130794867873192,
+        3.6176061630249
+      ],
+      "target": [
+        9.00000095367432,
+        0.200000002980232,
+        11.6000003814697
+      ],
+      "vertical_error": -0.0693926811218262
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 8.93817725777626,
+      "elapsed": 4.83333333333332,
+      "end": [
+        9.00000095367432,
+        0.130934685468674,
+        20.5292892456055
+      ],
+      "horizontal_error": 0.0707111358642578,
+      "label": "connected_frontage_reverse/6",
+      "lowest_y": 0.124248079955578,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130936086177826,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        8.99999904632568,
+        0.130836486816406,
+        11.6376047134399
+      ],
+      "target": [
+        9.00000095367432,
+        0.200000002980232,
+        20.6000003814697
+      ],
+      "vertical_error": -0.0690653175115585
+    },
+    {
+      "animation_clips": [
+        "Run"
+      ],
+      "distance_walked": 20.8586518097436,
+      "elapsed": 11.3333333333335,
+      "end": [
+        8.65117359161377,
+        0.124262310564518,
+        -0.0794729366898537
+      ],
+      "horizontal_error": 0.0705369114875793,
+      "label": "frontage_to_mouri_outside/0",
+      "lowest_y": 0.124248124659061,
+      "mode": "run",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.130939453840256,
+      "reason": "arrived",
+      "scenario": "connected_mouri_frontage",
+      "start": [
+        9.00000095367432,
+        0.130935460329056,
+        20.6442852020264
+      ],
+      "target": [
+        8.65000057220459,
+        0.0,
+        -0.150000095367432
+      ],
+      "vertical_error": 0.124262310564518
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "horizontal_error": 0.0,
+      "label": "front_to_round_kitchen/0",
+      "lowest_y": 0.0447916612029076,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0447916612029076,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "vertical_error": -0.0352083370089531
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.51570255681872,
+      "elapsed": 2.99999999999999,
+      "end": [
+        63.9999923706055,
+        0.0558289848268032,
+        -1.21345019340515
+      ],
+      "horizontal_error": 0.0865499973297119,
+      "label": "front_to_round_kitchen/1",
+      "lowest_y": 0.0398332551121712,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0560536310076714,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -1.30000019073486
+      ],
+      "vertical_error": -0.0241710133850574
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.41328959073871,
+      "elapsed": 2.86666666666666,
+      "end": [
+        64.0000381469727,
+        0.0558365732431412,
+        -3.650071144104
+      ],
+      "horizontal_error": 0.0999288707971573,
+      "label": "front_to_round_kitchen/2",
+      "lowest_y": 0.0557211898267269,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559270419180393,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9999923706055,
+        0.0558249019086361,
+        -1.23678338527679
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241634249687195
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.22498877625912,
+      "elapsed": 1.46666666666667,
+      "end": [
+        62.7938423156738,
+        0.0558328852057457,
+        -3.88392925262451
+      ],
+      "horizontal_error": 0.0952077135443687,
+      "label": "front_to_round_kitchen/3",
+      "lowest_y": 0.055832602083683,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558404289186001,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0000381469727,
+        0.055832602083683,
+        -3.67340469360352
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.231824970105663,
+      "elapsed": 0.3,
+      "end": [
+        62.5398559570312,
+        0.0558366775512695,
+        -3.89583301544189
+      ],
+      "horizontal_error": 0.0899517685174942,
+      "label": "front_to_round_kitchen/4",
+      "lowest_y": 0.055832676589489,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558366775512695,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.7713203430176,
+        0.0558327399194241,
+        -3.88392925262451
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241633206605911
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.0900293292943388,
+      "elapsed": 0.133333333333333,
+      "end": [
+        62.6065788269043,
+        0.0558328852057457,
+        -3.89815092086792
+      ],
+      "horizontal_error": 0.0934402421116829,
+      "label": "kitchen_front_to_hall/0",
+      "lowest_y": 0.0558324716985226,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558366440236568,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.5165901184082,
+        0.0558324716985226,
+        -3.89583301544189
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.28068531211466,
+      "elapsed": 1.53333333333333,
+      "end": [
+        63.902904510498,
+        0.0558329001069069,
+        -3.76032280921936
+      ],
+      "horizontal_error": 0.0976426899433136,
+      "label": "kitchen_front_to_hall/1",
+      "lowest_y": 0.055832676589489,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558403730392456,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.6299018859863,
+        0.0558364354074001,
+        -3.89815092086792
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241670981049538
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        63.9259223937988,
+        0.0558325946331024,
+        -3.76032280921936
+      ],
+      "horizontal_error": 0.0747933983802795,
+      "label": "main_to_tower/0",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558325946331024,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9259223937988,
+        0.0558325946331024,
+        -3.76032280921936
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241674035787582
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.06388652604073,
+      "elapsed": 2.45,
+      "end": [
+        65.8635711669922,
+        0.055832963436842,
+        -4.46867513656616
+      ],
+      "horizontal_error": 0.0919274836778641,
+      "label": "main_to_tower/1",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367371559143,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9259223937988,
+        0.0558325946331024,
+        -3.76032280921936
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -4.5
+      ],
+      "vertical_error": -0.0241670347750187
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 5.2325141124893,
+      "elapsed": 6.18333333333332,
+      "end": [
+        65.9487533569336,
+        0.0558367371559143,
+        -9.70227336883545
+      ],
+      "horizontal_error": 0.097734734416008,
+      "label": "main_to_tower/2",
+      "lowest_y": 0.0558250397443771,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558369159698486,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.8835296630859,
+        0.0558325536549091,
+        -4.47016954421997
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -9.80000019073486
+      ],
+      "vertical_error": -0.0241632610559464
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.87610155367292,
+      "elapsed": 2.23333333333333,
+      "end": [
+        64.0913848876953,
+        0.0558328852057457,
+        -9.98728942871094
+      ],
+      "horizontal_error": 0.0922646000981331,
+      "label": "main_to_tower/3",
+      "lowest_y": 0.0558328852057457,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367408812046,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.9487533569336,
+        0.0558364205062389,
+        -9.72560214996338
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -10.0
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.371768831275403,
+      "elapsed": 0.466666666666667,
+      "end": [
+        64.0134201049805,
+        0.0618778392672539,
+        -10.3541126251221
+      ],
+      "horizontal_error": 0.0968217477202415,
+      "label": "main_to_tower/4",
+      "lowest_y": 0.0558325834572315,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0618778392672539,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.068603515625,
+        0.0558325834572315,
+        -9.98728942871094
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -10.4499998092651
+      ],
+      "vertical_error": -0.0181221589446068
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.968318430939689,
+      "elapsed": 1.16666666666667,
+      "end": [
+        64.0011596679688,
+        0.0617407821118832,
+        -11.3451337814331
+      ],
+      "horizontal_error": 0.0948738381266594,
+      "label": "main_to_tower/5",
+      "lowest_y": 0.0617078952491283,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0618330538272858,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0134201049805,
+        0.0617289058864117,
+        -10.3768968582153
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0182592160999775
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0011596679688,
+        0.061740268021822,
+        -11.368462562561
+      ],
+      "horizontal_error": 0.0715473666787148,
+      "label": "Basement to main_reverse/0",
+      "lowest_y": 0.061740268021822,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.061740268021822,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0011596679688,
+        0.061740268021822,
+        -11.368462562561
+      ],
+      "target": [
+        64.0,
+        0.0850000008940697,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0232597328722477
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.379046104382724,
+      "elapsed": 0.466666666666667,
+      "end": [
+        64.3608322143555,
+        0.0572846606373787,
+        -11.4851226806641
+      ],
+      "horizontal_error": 0.0940924808382988,
+      "label": "Basement to main_reverse/1",
+      "lowest_y": 0.0572846606373787,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0617434978485107,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0011596679688,
+        0.061740268021822,
+        -11.368462562561
+      ],
+      "target": [
+        64.4511642456055,
+        0.0850000008940697,
+        -11.5114574432373
+      ],
+      "vertical_error": -0.027715340256691
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.44253797410056,
+      "elapsed": 0.533333333333333,
+      "end": [
+        64.7780685424805,
+        0.0385328121483326,
+        -11.6810092926025
+      ],
+      "horizontal_error": 0.0885834023356438,
+      "label": "Basement to main_reverse/2",
+      "lowest_y": 0.0385328121483326,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.056894451379776,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.3828735351562,
+        0.056894451379776,
+        -11.4870624542236
+      ],
+      "target": [
+        64.8581695556641,
+        0.0214000009000301,
+        -11.7188358306885
+      ],
+      "vertical_error": 0.0171328112483025
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.472706703003496,
+      "elapsed": 0.516666666666667,
+      "end": [
+        65.1143798828125,
+        -0.148672431707382,
+        -11.9794797897339
+      ],
+      "horizontal_error": 0.0913708433508873,
+      "label": "Basement to main_reverse/3",
+      "lowest_y": -0.148672431707382,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0354748219251633,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.7985992431641,
+        0.0354748219251633,
+        -11.6842670440674
+      ],
+      "target": [
+        65.1811676025391,
+        -0.169400006532669,
+        -12.0418338775635
+      ],
+      "vertical_error": 0.0207275748252869
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.472248668782413,
+      "elapsed": 0.516666666666667,
+      "end": [
+        65.3421859741211,
+        -0.336812525987625,
+        -12.3650035858154
+      ],
+      "horizontal_error": 0.0957949161529541,
+      "label": "Basement to main_reverse/4",
+      "lowest_y": -0.336812525987625,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.153345689177513,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.1283264160156,
+        -0.153345689177513,
+        -11.9906072616577
+      ],
+      "target": [
+        65.388542175293,
+        -0.360199987888336,
+        -12.4488353729248
+      ],
+      "vertical_error": 0.0233874619007111
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.483364930842072,
+      "elapsed": 0.533333333333333,
+      "end": [
+        65.4423065185547,
+        -0.531788468360901,
+        -12.8155117034912
+      ],
+      "horizontal_error": 0.0863205343484879,
+      "label": "Basement to main_reverse/5",
+      "lowest_y": -0.531788468360901,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.343714475631714,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.346435546875,
+        -0.343714475631714,
+        -12.3850765228271
+      ],
+      "target": [
+        65.4599990844727,
+        -0.550999999046326,
+        -12.8999996185303
+      ],
+      "vertical_error": 0.0192115306854248
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.46618527173996,
+      "elapsed": 0.516666666666667,
+      "end": [
+        65.3972320556641,
+        -0.722504913806915,
+        -13.2650079727173
+      ],
+      "horizontal_error": 0.086593970656395,
+      "label": "Basement to main_reverse/6",
+      "lowest_y": -0.722504913806915,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.539113342761993,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.4424209594727,
+        -0.539113342761993,
+        -12.8422203063965
+      ],
+      "target": [
+        65.388542175293,
+        -0.741800010204315,
+        -13.3511648178101
+      ],
+      "vertical_error": 0.0192950963973999
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.456333587877452,
+      "elapsed": 0.5,
+      "end": [
+        65.221076965332,
+        -0.908079564571381,
+        -13.6694774627686
+      ],
+      "horizontal_error": 0.0972546637058258,
+      "label": "Basement to main_reverse/7",
+      "lowest_y": -0.908079564571381,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.729837477207184,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.3967895507812,
+        -0.729837477207184,
+        -13.2925338745117
+      ],
+      "target": [
+        65.1811676025391,
+        -0.932600021362305,
+        -13.7581663131714
+      ],
+      "vertical_error": 0.0245204567909241
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.474127335008234,
+      "elapsed": 0.516666666666667,
+      "end": [
+        64.9239501953125,
+        -1.09902119636536,
+        -14.0097017288208
+      ],
+      "horizontal_error": 0.0971294790506363,
+      "label": "Basement to main_reverse/8",
+      "lowest_y": -1.09902119636536,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.915529847145081,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.2179489135742,
+        -0.915529847145081,
+        -13.690770149231
+      ],
+      "target": [
+        64.8581695556641,
+        -1.12339997291565,
+        -14.0811653137207
+      ],
+      "vertical_error": 0.024378776550293
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.487632722593844,
+      "elapsed": 0.533333333333333,
+      "end": [
+        64.527458190918,
+        -1.29485642910004,
+        -14.2458896636963
+      ],
+      "horizontal_error": 0.0874073877930641,
+      "label": "Basement to main_reverse/9",
+      "lowest_y": -1.29485642910004,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.10561716556549,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.9133834838867,
+        -1.10561716556549,
+        -14.0234308242798
+      ],
+      "target": [
+        64.4511642456055,
+        -1.31420004367828,
+        -14.2885427474976
+      ],
+      "vertical_error": 0.0193436145782471
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.467529983725399,
+      "elapsed": 0.516666666666667,
+      "end": [
+        64.090705871582,
+        -1.48376369476318,
+        -14.3414506912231
+      ],
+      "horizontal_error": 0.0925832316279411,
+      "label": "Basement to main_reverse/10",
+      "lowest_y": -1.48376369476318,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.30134546756744,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.5070724487305,
+        -1.30134546756744,
+        -14.2504615783691
+      ],
+      "target": [
+        64.0,
+        -1.50499999523163,
+        -14.3600006103516
+      ],
+      "vertical_error": 0.0212363004684448
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.46608542650938,
+      "elapsed": 0.516666666666667,
+      "end": [
+        63.6411399841309,
+        -1.67459845542908,
+        -14.2976245880127
+      ],
+      "horizontal_error": 0.0927499309182167,
+      "label": "Basement to main_reverse/11",
+      "lowest_y": -1.67459845542908,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.49132645130157,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0640106201172,
+        -1.49132645130157,
+        -14.3416013717651
+      ],
+      "target": [
+        63.5488357543945,
+        -1.69579994678497,
+        -14.2885427474976
+      ],
+      "vertical_error": 0.021201491355896
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.470751440618187,
+      "elapsed": 0.516666666666667,
+      "end": [
+        63.2237167358398,
+        -1.86643886566162,
+        -14.1175708770752
+      ],
+      "horizontal_error": 0.0896108523011208,
+      "label": "Basement to main_reverse/12",
+      "lowest_y": -1.86643886566162,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.68215751647949,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.6136131286621,
+        -1.68215751647949,
+        -14.2971620559692
+      ],
+      "target": [
+        63.1418342590332,
+        -1.88660001754761,
+        -14.0811653137207
+      ],
+      "vertical_error": 0.0201611518859863
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.473661028314382,
+      "elapsed": 0.516666666666667,
+      "end": [
+        62.8848686218262,
+        -2.05729246139526,
+        -13.8194971084595
+      ],
+      "horizontal_error": 0.0901207253336906,
+      "label": "Basement to main_reverse/13",
+      "lowest_y": -2.05729246139526,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.87192666530609,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.2018203735352,
+        -1.87192666530609,
+        -14.1143369674683
+      ],
+      "target": [
+        62.8188362121582,
+        -2.07739996910095,
+        -13.7581663131714
+      ],
+      "vertical_error": 0.0201075077056885
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.471562691964209,
+      "elapsed": 0.516666666666667,
+      "end": [
+        62.657283782959,
+        -2.24515080451965,
+        -13.434136390686
+      ],
+      "horizontal_error": 0.0947855487465858,
+      "label": "Basement to main_reverse/14",
+      "lowest_y": -2.24515080451965,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.06181788444519,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.8708457946777,
+        -2.06181788444519,
+        -13.8083772659302
+      ],
+      "target": [
+        62.611457824707,
+        -2.2681999206543,
+        -13.3511648178101
+      ],
+      "vertical_error": 0.0230491161346436
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.4678302439861,
+      "elapsed": 0.516666666666667,
+      "end": [
+        62.5602989196777,
+        -2.43315625190735,
+        -12.9972887039185
+      ],
+      "horizontal_error": 0.0993839800357819,
+      "label": "Basement to main_reverse/15",
+      "lowest_y": -2.43315625190735,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.25200891494751,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.6530647277832,
+        -2.25200891494751,
+        -13.4140367507935
+      ],
+      "target": [
+        62.5400009155273,
+        -2.45900011062622,
+        -12.8999996185303
+      ],
+      "vertical_error": 0.0258438587188721
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.465450274758041,
+      "elapsed": 0.516666666666667,
+      "end": [
+        62.6021957397461,
+        -2.6240930557251,
+        -12.5478429794312
+      ],
+      "horizontal_error": 0.0994398891925812,
+      "label": "Basement to main_reverse/16",
+      "lowest_y": -2.6240930557251,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.44314289093018,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.5601997375488,
+        -2.44314289093018,
+        -12.9712200164795
+      ],
+      "target": [
+        62.611457824707,
+        -2.64980006217957,
+        -12.4488353729248
+      ],
+      "vertical_error": 0.0257070064544678
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.471397063229233,
+      "elapsed": 0.516666666666667,
+      "end": [
+        62.7804412841797,
+        -2.81740427017212,
+        -12.1293687820435
+      ],
+      "horizontal_error": 0.0955851972103119,
+      "label": "Basement to main_reverse/17",
+      "lowest_y": -2.81740427017212,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.63410758972168,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.6025123596191,
+        -2.63410758972168,
+        -12.5209093093872
+      ],
+      "target": [
+        62.8188362121582,
+        -2.84060001373291,
+        -12.0418338775635
+      ],
+      "vertical_error": 0.023195743560791
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.473635802511126,
+      "elapsed": 0.516666666666667,
+      "end": [
+        63.0771789550781,
+        -3.00815892219543,
+        -11.789155960083
+      ],
+      "horizontal_error": 0.0955260619521141,
+      "label": "Basement to main_reverse/18",
+      "lowest_y": -3.00815892219543,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.82428479194641,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.783519744873,
+        -2.82428479194641,
+        -12.1077709197998
+      ],
+      "target": [
+        63.1418342590332,
+        -3.03139996528625,
+        -11.7188358306885
+      ],
+      "vertical_error": 0.0232410430908203
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.468354894779623,
+      "elapsed": 0.533333333333333,
+      "end": [
+        63.4735488891602,
+        -3.12405800819397,
+        -11.5534133911133
+      ],
+      "horizontal_error": 0.0861882492899895,
+      "label": "Basement to main_reverse/19",
+      "lowest_y": -3.12451148033142,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.01416683197021,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.0878639221191,
+        -3.01416683197021,
+        -11.7752895355225
+      ],
+      "target": [
+        63.5488357543945,
+        -3.09500002861023,
+        -11.5114574432373
+      ],
+      "vertical_error": -0.0290579795837402
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.430406761821359,
+      "elapsed": 0.533333333333333,
+      "end": [
+        63.9107627868652,
+        -3.11903715133667,
+        -11.4599914550781
+      ],
+      "horizontal_error": 0.0914489850401878,
+      "label": "Basement to main_reverse/20",
+      "lowest_y": -3.12406420707703,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.11903715133667,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.4906883239746,
+        -3.12406420707703,
+        -11.5496168136597
+      ],
+      "target": [
+        64.0,
+        -3.09500002861023,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0240371227264404
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        63.9329490661621,
+        -3.11909985542297,
+        -11.4606122970581
+      ],
+      "horizontal_error": 0.0701475068926811,
+      "label": "cellar_to_research/0",
+      "lowest_y": -3.11909985542297,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.11909985542297,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9329490661621,
+        -3.11909985542297,
+        -11.4606122970581
+      ],
+      "target": [
+        64.0,
+        -3.09999990463257,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0190999507904053
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.76809697435237,
+      "elapsed": 3.28333333333333,
+      "end": [
+        63.9978485107422,
+        -3.12415957450867,
+        -8.69376754760742
+      ],
+      "horizontal_error": 0.0937918424606323,
+      "label": "cellar_to_research/1",
+      "lowest_y": -3.12427306175232,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.1180694103241,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9329490661621,
+        -3.11909985542297,
+        -11.4606122970581
+      ],
+      "target": [
+        64.0,
+        -3.09999990463257,
+        -8.60000038146973
+      ],
+      "vertical_error": -0.0241596698760986
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.77998727792874,
+      "elapsed": 2.11666666666666,
+      "end": [
+        62.2889709472656,
+        -3.12415957450867,
+        -8.17550086975098
+      ],
+      "horizontal_error": 0.0925527289509773,
+      "label": "cellar_to_research/2",
+      "lowest_y": -3.12415957450867,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.12415957450867,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9978485107422,
+        -3.12415957450867,
+        -8.67044734954834
+      ],
+      "target": [
+        62.2000007629395,
+        -3.09999990463257,
+        -8.14999961853027
+      ],
+      "vertical_error": -0.0241596698760986
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.28015433019027,
+      "elapsed": 1.53333333333333,
+      "end": [
+        62.204662322998,
+        -3.12416315078735,
+        -6.89639091491699
+      ],
+      "horizontal_error": 0.096503384411335,
+      "label": "cellar_to_research/3",
+      "lowest_y": -3.12416315078735,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.12415957450867,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.2678298950195,
+        -3.12415957450867,
+        -8.17493152618408
+      ],
+      "target": [
+        62.2000007629395,
+        -3.09999990463257,
+        -6.80000019073486
+      ],
+      "vertical_error": -0.0241632461547852
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.81152669666335,
+      "elapsed": 2.15,
+      "end": [
+        60.6355209350586,
+        -3.12416315078735,
+        -5.9689884185791
+      ],
+      "horizontal_error": 0.0985587015748024,
+      "label": "cellar_to_research/4",
+      "lowest_y": -3.12416315078735,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.12415957450867,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.204662322998,
+        -3.12415957450867,
+        -6.87312412261963
+      ],
+      "target": [
+        60.5499992370605,
+        -3.09999990463257,
+        -5.92000007629395
+      ],
+      "vertical_error": -0.0241632461547852
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        60.6186408996582,
+        -3.12416362762451,
+        -5.96490526199341
+      ],
+      "horizontal_error": 0.0820253267884254,
+      "label": "cellar_to_research_reverse/0",
+      "lowest_y": -3.12416362762451,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.12416362762451,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        60.6186408996582,
+        -3.12416362762451,
+        -5.96490526199341
+      ],
+      "target": [
+        60.5499992370605,
+        -3.09999990463257,
+        -5.92000007629395
+      ],
+      "vertical_error": -0.0241637229919434
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.6975158941932,
+      "elapsed": 2.01666666666666,
+      "end": [
+        62.1189727783203,
+        -3.12416315078735,
+        -6.75753450393677
+      ],
+      "horizontal_error": 0.0914815217256546,
+      "label": "cellar_to_research_reverse/1",
+      "lowest_y": -3.12416362762451,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.12416315078735,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        60.6186408996582,
+        -3.12416362762451,
+        -5.96490526199341
+      ],
+      "target": [
+        62.2000007629395,
+        -3.09999990463257,
+        -6.80000019073486
+      ],
+      "vertical_error": -0.0241632461547852
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.29430000321008,
+      "elapsed": 1.55,
+      "end": [
+        62.1957054138184,
+        -3.12415957450867,
+        -8.05368137359619
+      ],
+      "horizontal_error": 0.0964139774441719,
+      "label": "cellar_to_research_reverse/2",
+      "lowest_y": -3.12416315078735,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.12415957450867,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.1366119384766,
+        -3.12415957450867,
+        -6.76077747344971
+      ],
+      "target": [
+        62.2000007629395,
+        -3.09999990463257,
+        -8.14999961853027
+      ],
+      "vertical_error": -0.0241596698760986
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.77970180520788,
+      "elapsed": 2.11666666666666,
+      "end": [
+        63.9041137695312,
+        -3.12415957450867,
+        -8.5724983215332
+      ],
+      "horizontal_error": 0.0997523590922356,
+      "label": "cellar_to_research_reverse/3",
+      "lowest_y": -3.12415957450867,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.12415957450867,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.1957054138184,
+        -3.12415957450867,
+        -8.07695770263672
+      ],
+      "target": [
+        64.0,
+        -3.09999990463257,
+        -8.60000038146973
+      ],
+      "vertical_error": -0.0241596698760986
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.77803264372051,
+      "elapsed": 3.29999999999999,
+      "end": [
+        63.9976806640625,
+        -3.118159532547,
+        -11.3496809005737
+      ],
+      "horizontal_error": 0.090349406003952,
+      "label": "cellar_to_research_reverse/4",
+      "lowest_y": -3.1242983341217,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.11793756484985,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9252548217773,
+        -3.12415957450867,
+        -8.57307052612305
+      ],
+      "target": [
+        64.0,
+        -3.09999990463257,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0181596279144287
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        63.9976806640625,
+        -3.118159532547,
+        -11.3729953765869
+      ],
+      "horizontal_error": 0.0670452862977982,
+      "label": "Basement to main/0",
+      "lowest_y": -3.118159532547,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.118159532547,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9976806640625,
+        -3.118159532547,
+        -11.3729953765869
+      ],
+      "target": [
+        64.0,
+        -3.09500002861023,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0231595039367676
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.37905346089974,
+      "elapsed": 0.466666666666667,
+      "end": [
+        63.6370658874512,
+        -3.12293744087219,
+        -11.4866895675659
+      ],
+      "horizontal_error": 0.0916406214237213,
+      "label": "Basement to main/1",
+      "lowest_y": -3.12293744087219,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.11815929412842,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9976806640625,
+        -3.118159532547,
+        -11.3729953765869
+      ],
+      "target": [
+        63.5488357543945,
+        -3.09500002861023,
+        -11.5114574432373
+      ],
+      "vertical_error": -0.0279374122619629
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.444473452400416,
+      "elapsed": 0.583333333333333,
+      "end": [
+        63.2243881225586,
+        -3.07879757881165,
+        -11.6788702011108
+      ],
+      "horizontal_error": 0.0917190909385681,
+      "label": "Basement to main/2",
+      "lowest_y": -3.12420034408569,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -3.07879757881165,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.614917755127,
+        -3.12334513664246,
+        -11.4886312484741
+      ],
+      "target": [
+        63.1418342590332,
+        -3.03139996528625,
+        -11.7188358306885
+      ],
+      "vertical_error": -0.0473976135253906
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.485152317211032,
+      "elapsed": 0.783333333333334,
+      "end": [
+        62.8849334716797,
+        -2.88746166229248,
+        -11.9795093536377
+      ],
+      "horizontal_error": 0.0908470898866653,
+      "label": "Basement to main/3",
+      "lowest_y": -3.0748884677887,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.88746166229248,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.2124061584473,
+        -3.0748884677887,
+        -11.6798658370972
+      ],
+      "target": [
+        62.8188362121582,
+        -2.84060001373291,
+        -12.0418338775635
+      ],
+      "vertical_error": -0.0468616485595703
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.480814563110471,
+      "elapsed": 0.783333333333334,
+      "end": [
+        62.6578025817871,
+        -2.69901514053345,
+        -12.3643712997437
+      ],
+      "horizontal_error": 0.0963432192802429,
+      "label": "Basement to main/4",
+      "lowest_y": -2.88549375534058,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.69901514053345,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.8784294128418,
+        -2.88549375534058,
+        -11.9846982955933
+      ],
+      "target": [
+        62.611457824707,
+        -2.64980006217957,
+        -12.4488353729248
+      ],
+      "vertical_error": -0.0492150783538818
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.485457788454369,
+      "elapsed": 0.800000000000001,
+      "end": [
+        62.5586051940918,
+        -2.50778937339783,
+        -12.806450843811
+      ],
+      "horizontal_error": 0.0953807756304741,
+      "label": "Basement to main/5",
+      "lowest_y": -2.69519543647766,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.50778937339783,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.6558723449707,
+        -2.69519543647766,
+        -12.3736362457275
+      ],
+      "target": [
+        62.5400009155273,
+        -2.45900011062622,
+        -12.8999996185303
+      ],
+      "vertical_error": -0.0487892627716064
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.476791199762374,
+      "elapsed": 0.783333333333334,
+      "end": [
+        62.6004867553711,
+        -2.3189172744751,
+        -13.251974105835
+      ],
+      "horizontal_error": 0.0997955948114395,
+      "label": "Basement to main/6",
+      "lowest_y": -2.50387930870056,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.3189172744751,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.5586051940918,
+        -2.50387930870056,
+        -12.8188390731812
+      ],
+      "target": [
+        62.611457824707,
+        -2.2681999206543,
+        -13.3511648178101
+      ],
+      "vertical_error": -0.0507173538208008
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.491752035683021,
+      "elapsed": 0.800000000000001,
+      "end": [
+        62.7812538146973,
+        -2.12414026260376,
+        -13.6754865646362
+      ],
+      "horizontal_error": 0.0908205807209015,
+      "label": "Basement to main/7",
+      "lowest_y": -2.31470084190369,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -2.12414026260376,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.5997428894043,
+        -2.31470084190369,
+        -13.2651348114014
+      ],
+      "target": [
+        62.8188362121582,
+        -2.07739996910095,
+        -13.7581663131714
+      ],
+      "vertical_error": -0.0467402935028076
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.483805479481816,
+      "elapsed": 0.783333333333334,
+      "end": [
+        63.0799179077148,
+        -1.93324184417725,
+        -14.0152349472046
+      ],
+      "horizontal_error": 0.0904458314180374,
+      "label": "Basement to main/8",
+      "lowest_y": -2.12023687362671,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.93324184417725,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.781909942627,
+        -2.12023687362671,
+        -13.6879510879517
+      ],
+      "target": [
+        63.1418342590332,
+        -1.88660001754761,
+        -14.0811653137207
+      ],
+      "vertical_error": -0.0466418266296387
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.482613749336451,
+      "elapsed": 0.783333333333334,
+      "end": [
+        63.4663238525391,
+        -1.74400687217712,
+        -14.2432279586792
+      ],
+      "horizontal_error": 0.0941363051533699,
+      "label": "Basement to main/9",
+      "lowest_y": -1.93112397193909,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.74400687217712,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.0851440429688,
+        -1.93112397193909,
+        -14.021800994873
+      ],
+      "target": [
+        63.5488357543945,
+        -1.69579994678497,
+        -14.2885427474976
+      ],
+      "vertical_error": -0.0482069253921509
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.488522541010752,
+      "elapsed": 0.800000000000001,
+      "end": [
+        63.9112777709961,
+        -1.55171465873718,
+        -14.3424997329712
+      ],
+      "horizontal_error": 0.0904318243265152,
+      "label": "Basement to main/10",
+      "lowest_y": -1.74023461341858,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.55171465873718,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.4757804870605,
+        -1.74023461341858,
+        -14.245192527771
+      ],
+      "target": [
+        64.0,
+        -1.50499999523163,
+        -14.3600006103516
+      ],
+      "vertical_error": -0.0467146635055542
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.478430745424703,
+      "elapsed": 0.783333333333334,
+      "end": [
+        64.3593139648438,
+        -1.36168336868286,
+        -14.2990398406982
+      ],
+      "horizontal_error": 0.0924481675028801,
+      "label": "Basement to main/11",
+      "lowest_y": -1.5477968454361,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.36168336868286,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.9243545532227,
+        -1.5477968454361,
+        -14.3424997329712
+      ],
+      "target": [
+        64.4511642456055,
+        -1.31420004367828,
+        -14.2885427474976
+      ],
+      "vertical_error": -0.0474833250045776
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.479236440267414,
+      "elapsed": 0.783333333333334,
+      "end": [
+        64.772216796875,
+        -1.17170774936676,
+        -14.1206035614014
+      ],
+      "horizontal_error": 0.0945687666535378,
+      "label": "Basement to main/12",
+      "lowest_y": -1.35764002799988,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -1.17170774936676,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.3733673095703,
+        -1.35764002799988,
+        -14.2997255325317
+      ],
+      "target": [
+        64.8581695556641,
+        -1.12339997291565,
+        -14.0811653137207
+      ],
+      "vertical_error": -0.0483077764511108
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.484196660108864,
+      "elapsed": 0.783333333333334,
+      "end": [
+        65.1124801635742,
+        -0.98069554567337,
+        -13.8223171234131
+      ],
+      "horizontal_error": 0.0939855873584747,
+      "label": "Basement to main/13",
+      "lowest_y": -1.16769909858704,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.98069554567337,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.7843627929688,
+        -1.16769909858704,
+        -14.119987487793
+      ],
+      "target": [
+        65.1811676025391,
+        -0.932600021362305,
+        -13.7581663131714
+      ],
+      "vertical_error": -0.0480955243110657
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.481037513818592,
+      "elapsed": 0.783333333333334,
+      "end": [
+        65.3404235839844,
+        -0.79237425327301,
+        -13.438081741333
+      ],
+      "horizontal_error": 0.0993476212024689,
+      "label": "Basement to main/14",
+      "lowest_y": -0.978569090366364,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.79237425327301,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.1188735961914,
+        -0.978569090366364,
+        -13.8173294067383
+      ],
+      "target": [
+        65.388542175293,
+        -0.741800010204315,
+        -13.3511648178101
+      ],
+      "vertical_error": -0.0505742430686951
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.48774438071996,
+      "elapsed": 0.800000000000001,
+      "end": [
+        65.4411087036133,
+        -0.600191593170166,
+        -12.9944477081299
+      ],
+      "horizontal_error": 0.0963186770677567,
+      "label": "Basement to main/15",
+      "lowest_y": -0.788538038730621,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.600191593170166,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.3423538208008,
+        -0.788538038730621,
+        -13.4291458129883
+      ],
+      "target": [
+        65.4599990844727,
+        -0.550999999046326,
+        -12.8999996185303
+      ],
+      "vertical_error": -0.0491915941238403
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.484340876573697,
+      "elapsed": 0.800000000000001,
+      "end": [
+        65.3988952636719,
+        -0.40807843208313,
+        -12.541916847229
+      ],
+      "horizontal_error": 0.0936554744839668,
+      "label": "Basement to main/16",
+      "lowest_y": -0.596266448497772,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.40807843208313,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.4411087036133,
+        -0.596266448497772,
+        -12.9822149276733
+      ],
+      "target": [
+        65.388542175293,
+        -0.360199987888336,
+        -12.4488353729248
+      ],
+      "vertical_error": -0.0478784441947937
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.481682930840179,
+      "elapsed": 0.783333333333334,
+      "end": [
+        65.2200088500977,
+        -0.217164665460587,
+        -12.1266241073608
+      ],
+      "horizontal_error": 0.0932632088661194,
+      "label": "Basement to main/17",
+      "lowest_y": -0.404115259647369,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.217164665460587,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.3995666503906,
+        -0.404115259647369,
+        -12.5279932022095
+      ],
+      "target": [
+        65.1811676025391,
+        -0.169400006532669,
+        -12.0418338775635
+      ],
+      "vertical_error": -0.0477646589279175
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.483431381639093,
+      "elapsed": 0.783333333333334,
+      "end": [
+        64.9217834472656,
+        -0.0264648906886578,
+        -11.7868213653564
+      ],
+      "horizontal_error": 0.093106172978878,
+      "label": "Basement to main/18",
+      "lowest_y": -0.213165491819382,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": -0.0264648906886578,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.2192764282227,
+        -0.213165491819382,
+        -12.1143779754639
+      ],
+      "target": [
+        64.8581695556641,
+        0.0214000009000301,
+        -11.7188358306885
+      ],
+      "vertical_error": -0.0478648915886879
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.456899673677981,
+      "elapsed": 0.633333333333334,
+      "end": [
+        64.5340728759766,
+        0.0557633303105831,
+        -11.558762550354
+      ],
+      "horizontal_error": 0.0954547747969627,
+      "label": "Basement to main/19",
+      "lowest_y": -0.0243973154574633,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559714064002037,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.916748046875,
+        -0.0243973154574633,
+        -11.7803726196289
+      ],
+      "target": [
+        64.4511642456055,
+        0.0850000008940697,
+        -11.5114574432373
+      ],
+      "vertical_error": -0.0292366705834866
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.444553274661303,
+      "elapsed": 0.55,
+      "end": [
+        64.0838851928711,
+        0.0609248876571655,
+        -11.4594135284424
+      ],
+      "horizontal_error": 0.0861022025346756,
+      "label": "Basement to main/20",
+      "lowest_y": 0.0557249113917351,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0609248876571655,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.5171585083008,
+        0.0557404384016991,
+        -11.5547227859497
+      ],
+      "target": [
+        64.0,
+        0.0850000008940697,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0240751132369041
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0617828369141,
+        0.0608672425150871,
+        -11.4599761962891
+      ],
+      "horizontal_error": 0.0649318546056747,
+      "label": "main_to_tower_reverse/0",
+      "lowest_y": 0.0608672425150871,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0608672425150871,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0617828369141,
+        0.0608672425150871,
+        -11.4599761962891
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0191327556967735
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.924970098771155,
+      "elapsed": 1.11666666666667,
+      "end": [
+        64.0052108764648,
+        0.0617366209626198,
+        -10.5368490219116
+      ],
+      "horizontal_error": 0.0870053991675377,
+      "label": "main_to_tower_reverse/1",
+      "lowest_y": 0.0608672425150871,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0618471913039684,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0617828369141,
+        0.0608672425150871,
+        -11.4599761962891
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -10.4499998092651
+      ],
+      "vertical_error": -0.0182633772492409
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.417603739537299,
+      "elapsed": 0.516666666666667,
+      "end": [
+        64.0009155273438,
+        0.0558367297053337,
+        -10.0964689254761
+      ],
+      "horizontal_error": 0.0964732691645622,
+      "label": "main_to_tower_reverse/2",
+      "lowest_y": 0.0558344461023808,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0617366880178452,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0052108764648,
+        0.0617364011704922,
+        -10.5136156082153
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -10.0
+      ],
+      "vertical_error": -0.0241632685065269
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.87600114173256,
+      "elapsed": 2.23333333333333,
+      "end": [
+        65.8583602905273,
+        0.0558367408812046,
+        -9.81269264221191
+      ],
+      "horizontal_error": 0.0925114899873734,
+      "label": "main_to_tower_reverse/3",
+      "lowest_y": 0.055832851678133,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367408812046,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0009155273438,
+        0.0558364950120449,
+        -10.0731363296509
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -9.80000019073486
+      ],
+      "vertical_error": -0.0241632573306561
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 5.21836236515082,
+      "elapsed": 6.16666666666665,
+      "end": [
+        65.9487609863281,
+        0.0558366291224957,
+        -4.59477233886719
+      ],
+      "horizontal_error": 0.0947803929448128,
+      "label": "main_to_tower_reverse/4",
+      "lowest_y": 0.0558250434696674,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558403804898262,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.8811416625977,
+        0.0558364912867546,
+        -9.81269264221191
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -4.5
+      ],
+      "vertical_error": -0.024163369089365
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.02210229309276,
+      "elapsed": 2.4,
+      "end": [
+        64.0862426757812,
+        0.055832963436842,
+        -3.78608202934265
+      ],
+      "horizontal_error": 0.0934864282608032,
+      "label": "main_to_tower_reverse/5",
+      "lowest_y": 0.0558324605226517,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367408812046,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        65.9487609863281,
+        0.0558324605226517,
+        -4.57144355773926
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241670347750187
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0670394897461,
+        0.0558326616883278,
+        -3.78394746780396
+      ],
+      "horizontal_error": 0.0751446858048439,
+      "label": "hall_to_kitchen_front/0",
+      "lowest_y": 0.0558326616883278,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558326616883278,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0670394897461,
+        0.0558326616883278,
+        -3.78394746780396
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241673365235329
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.2804809845984,
+      "elapsed": 1.53333333333333,
+      "end": [
+        62.7913131713867,
+        0.0558327697217464,
+        -3.89237976074219
+      ],
+      "horizontal_error": 0.091629832983017,
+      "label": "hall_to_kitchen_front/1",
+      "lowest_y": 0.0558326616883278,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367371559143,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        64.0670394897461,
+        0.0558326616883278,
+        -3.78394746780396
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241672284901142
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.231665505096316,
+      "elapsed": 0.3,
+      "end": [
+        62.5365943908691,
+        0.0558328852057457,
+        -3.89807915687561
+      ],
+      "horizontal_error": 0.0866149291396141,
+      "label": "hall_to_kitchen_front/2",
+      "lowest_y": 0.0558326654136181,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558329001069069,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.7681770324707,
+        0.0558326728641987,
+        -3.89237976074219
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        62.5132675170898,
+        0.0558325946331024,
+        -3.89807915687561
+      ],
+      "horizontal_error": 0.0632959082722664,
+      "label": "front_to_round_kitchen_reverse/0",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558325946331024,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.5132675170898,
+        0.0558325946331024,
+        -3.89807915687561
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241674035787582
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.090004691388458,
+      "elapsed": 0.133333333333333,
+      "end": [
+        62.6032638549805,
+        0.0558367371559143,
+        -3.89913034439087
+      ],
+      "horizontal_error": 0.0967408195137978,
+      "label": "front_to_round_kitchen_reverse/1",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367371559143,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.5132675170898,
+        0.0558325946331024,
+        -3.89807915687561
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241632610559464
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.29486813931726,
+      "elapsed": 1.55,
+      "end": [
+        63.9136390686035,
+        0.0558327808976173,
+        -3.7592179775238
+      ],
+      "horizontal_error": 0.086851492524147,
+      "label": "front_to_round_kitchen_reverse/2",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558366775512695,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        62.6265983581543,
+        0.0558325946331024,
+        -3.89913034439087
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241672173142433
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.37094011250883,
+      "elapsed": 2.81666666666666,
+      "end": [
+        63.997730255127,
+        0.0558218993246555,
+        -1.38908135890961
+      ],
+      "horizontal_error": 0.0891100764274597,
+      "label": "front_to_round_kitchen_reverse/3",
+      "lowest_y": 0.0557408258318901,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559246726334095,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.936653137207,
+        0.055832464247942,
+        -3.7592179775238
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -1.30000019073486
+      ],
+      "vertical_error": -0.0241780988872051
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.56935836467892,
+      "elapsed": 3.04999999999999,
+      "end": [
+        63.9999084472656,
+        0.0448146276175976,
+        1.20088243484497
+      ],
+      "horizontal_error": 0.0991178005933762,
+      "label": "front_to_round_kitchen_reverse/4",
+      "lowest_y": 0.0388742871582508,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559341832995415,
+      "reason": "arrived",
+      "scenario": "agasa_basement",
+      "start": [
+        63.997730255127,
+        0.0558287501335144,
+        -1.36576640605927
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "vertical_error": -0.0351853705942631
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "horizontal_error": 0.0,
+      "label": "front_to_round_kitchen/0",
+      "lowest_y": 0.0447916612029076,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0447916612029076,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "vertical_error": -0.0352083370089531
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.51570255681872,
+      "elapsed": 2.99999999999999,
+      "end": [
+        63.9999923706055,
+        0.0558289848268032,
+        -1.21345019340515
+      ],
+      "horizontal_error": 0.0865499973297119,
+      "label": "front_to_round_kitchen/1",
+      "lowest_y": 0.0398332551121712,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0560536310076714,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -1.30000019073486
+      ],
+      "vertical_error": -0.0241710133850574
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.41328959073871,
+      "elapsed": 2.86666666666666,
+      "end": [
+        64.0000381469727,
+        0.0558365732431412,
+        -3.650071144104
+      ],
+      "horizontal_error": 0.0999288707971573,
+      "label": "front_to_round_kitchen/2",
+      "lowest_y": 0.0557211898267269,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559270419180393,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        63.9999923706055,
+        0.0558249019086361,
+        -1.23678338527679
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241634249687195
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.22498877625912,
+      "elapsed": 1.46666666666667,
+      "end": [
+        62.7938423156738,
+        0.0558328852057457,
+        -3.88392925262451
+      ],
+      "horizontal_error": 0.0952077135443687,
+      "label": "front_to_round_kitchen/3",
+      "lowest_y": 0.055832602083683,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558404289186001,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.0000381469727,
+        0.055832602083683,
+        -3.67340469360352
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.231824970105663,
+      "elapsed": 0.3,
+      "end": [
+        62.5398559570312,
+        0.0558366775512695,
+        -3.89583301544189
+      ],
+      "horizontal_error": 0.0899517685174942,
+      "label": "front_to_round_kitchen/4",
+      "lowest_y": 0.055832676589489,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558366775512695,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        62.7713203430176,
+        0.0558327399194241,
+        -3.88392925262451
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241633206605911
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.0900293292943388,
+      "elapsed": 0.133333333333333,
+      "end": [
+        62.6065788269043,
+        0.0558328852057457,
+        -3.89815092086792
+      ],
+      "horizontal_error": 0.0934402421116829,
+      "label": "kitchen_front_to_hall/0",
+      "lowest_y": 0.0558324716985226,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558366440236568,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        62.5165901184082,
+        0.0558324716985226,
+        -3.89583301544189
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.28068531211466,
+      "elapsed": 1.53333333333333,
+      "end": [
+        63.902904510498,
+        0.0558329001069069,
+        -3.76032280921936
+      ],
+      "horizontal_error": 0.0976426899433136,
+      "label": "kitchen_front_to_hall/1",
+      "lowest_y": 0.055832676589489,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558403730392456,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        62.6299018859863,
+        0.0558364354074001,
+        -3.89815092086792
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241670981049538
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        63.9259223937988,
+        0.0558325946331024,
+        -3.76032280921936
+      ],
+      "horizontal_error": 0.0747933983802795,
+      "label": "main_to_tower/0",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558325946331024,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        63.9259223937988,
+        0.0558325946331024,
+        -3.76032280921936
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241674035787582
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.06388652604073,
+      "elapsed": 2.45,
+      "end": [
+        65.8635711669922,
+        0.055832963436842,
+        -4.46867513656616
+      ],
+      "horizontal_error": 0.0919274836778641,
+      "label": "main_to_tower/1",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367371559143,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        63.9259223937988,
+        0.0558325946331024,
+        -3.76032280921936
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -4.5
+      ],
+      "vertical_error": -0.0241670347750187
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 5.2325141124893,
+      "elapsed": 6.18333333333332,
+      "end": [
+        65.9487533569336,
+        0.0558367371559143,
+        -9.70227336883545
+      ],
+      "horizontal_error": 0.097734734416008,
+      "label": "main_to_tower/2",
+      "lowest_y": 0.0558250397443771,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558369159698486,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        65.8835296630859,
+        0.0558325536549091,
+        -4.47016954421997
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -9.80000019073486
+      ],
+      "vertical_error": -0.0241632610559464
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.87610155367292,
+      "elapsed": 2.23333333333333,
+      "end": [
+        64.0913848876953,
+        0.0558328852057457,
+        -9.98728942871094
+      ],
+      "horizontal_error": 0.0922646000981331,
+      "label": "main_to_tower/3",
+      "lowest_y": 0.0558328852057457,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367408812046,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        65.9487533569336,
+        0.0558364205062389,
+        -9.72560214996338
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -10.0
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.371768831275403,
+      "elapsed": 0.466666666666667,
+      "end": [
+        64.0134201049805,
+        0.0618778392672539,
+        -10.3541126251221
+      ],
+      "horizontal_error": 0.0968217477202415,
+      "label": "main_to_tower/4",
+      "lowest_y": 0.0558325834572315,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0618778392672539,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.068603515625,
+        0.0558325834572315,
+        -9.98728942871094
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -10.4499998092651
+      ],
+      "vertical_error": -0.0181221589446068
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.968318430939689,
+      "elapsed": 1.16666666666667,
+      "end": [
+        64.0011596679688,
+        0.0617407821118832,
+        -11.3451337814331
+      ],
+      "horizontal_error": 0.0948738381266594,
+      "label": "main_to_tower/5",
+      "lowest_y": 0.0617078952491283,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0618330538272858,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.0134201049805,
+        0.0617289058864117,
+        -10.3768968582153
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0182592160999775
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0011596679688,
+        0.061740268021822,
+        -11.368462562561
+      ],
+      "horizontal_error": 0.0715473666787148,
+      "label": "Main to gallery/0",
+      "lowest_y": 0.061740268021822,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.061740268021822,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.0011596679688,
+        0.061740268021822,
+        -11.368462562561
+      ],
+      "target": [
+        64.0,
+        0.0850000008940697,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0232597328722477
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.379007984884083,
+      "elapsed": 0.466666666666667,
+      "end": [
+        63.6413459777832,
+        0.0573971979320049,
+        -11.4845685958862
+      ],
+      "horizontal_error": 0.0963387340307236,
+      "label": "Main to gallery/1",
+      "lowest_y": 0.0573971979320049,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0617404468357563,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.0011596679688,
+        0.061740268021822,
+        -11.368462562561
+      ],
+      "target": [
+        63.5488357543945,
+        0.0850000008940697,
+        -11.5114574432373
+      ],
+      "vertical_error": -0.0276028029620647
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.444442870561033,
+      "elapsed": 0.583333333333333,
+      "end": [
+        63.2285423278809,
+        0.0980300754308701,
+        -11.676947593689
+      ],
+      "horizontal_error": 0.0962959676980972,
+      "label": "Main to gallery/2",
+      "lowest_y": 0.0557289086282253,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0980300754308701,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        63.619327545166,
+        0.0570011623203754,
+        -11.4865093231201
+      ],
+      "target": [
+        63.1418342590332,
+        0.147400006651878,
+        -11.7188358306885
+      ],
+      "vertical_error": -0.0493699312210083
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.488120766822249,
+      "elapsed": 0.783333333333334,
+      "end": [
+        62.8853874206543,
+        0.287594139575958,
+        -11.9794273376465
+      ],
+      "horizontal_error": 0.0912339836359024,
+      "label": "Main to gallery/3",
+      "lowest_y": 0.102054446935654,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.287594139575958,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        63.2168998718262,
+        0.102054446935654,
+        -11.6777858734131
+      ],
+      "target": [
+        62.8188362121582,
+        0.334600001573563,
+        -12.0418338775635
+      ],
+      "vertical_error": -0.0470058619976044
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.484386455034837,
+      "elapsed": 0.783333333333334,
+      "end": [
+        62.6557350158691,
+        0.474503606557846,
+        -12.3682956695557
+      ],
+      "horizontal_error": 0.0919081792235374,
+      "label": "Main to gallery/4",
+      "lowest_y": 0.289670407772064,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.474503606557846,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        62.878849029541,
+        0.289670407772064,
+        -11.9845781326294
+      ],
+      "target": [
+        62.611457824707,
+        0.521799981594086,
+        -12.4488353729248
+      ],
+      "vertical_error": -0.0472963750362396
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.482568722916767,
+      "elapsed": 0.783333333333334,
+      "end": [
+        62.5576858520508,
+        0.66170746088028,
+        -12.8099021911621
+      ],
+      "horizontal_error": 0.0918166786432266,
+      "label": "Main to gallery/5",
+      "lowest_y": 0.478239834308624,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.66170746088028,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        62.653736114502,
+        0.478239834308624,
+        -12.3779582977295
+      ],
+      "target": [
+        62.5400009155273,
+        0.708999991416931,
+        -12.8999996185303
+      ],
+      "vertical_error": -0.0472925305366516
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.478796185459942,
+      "elapsed": 0.783333333333334,
+      "end": [
+        62.6009635925293,
+        0.848706007003784,
+        -13.2593946456909
+      ],
+      "horizontal_error": 0.0923682525753975,
+      "label": "Main to gallery/6",
+      "lowest_y": 0.665652513504028,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.848706007003784,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        62.5576858520508,
+        0.665652513504028,
+        -12.8227844238281
+      ],
+      "target": [
+        62.611457824707,
+        0.896200001239777,
+        -13.3511648178101
+      ],
+      "vertical_error": -0.0474939942359924
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.473518995335326,
+      "elapsed": 0.766666666666667,
+      "end": [
+        62.7778778076172,
+        1.03337705135345,
+        -13.6687078475952
+      ],
+      "horizontal_error": 0.098389059305191,
+      "label": "Main to gallery/7",
+      "lowest_y": 0.852687895298004,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 1.03337705135345,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        62.6002769470215,
+        0.852687895298004,
+        -13.2734546661377
+      ],
+      "target": [
+        62.8188362121582,
+        1.08340001106262,
+        -13.7581663131714
+      ],
+      "vertical_error": -0.0500229597091675
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.485030029667541,
+      "elapsed": 0.783333333333334,
+      "end": [
+        63.0765342712402,
+        1.22157907485962,
+        -14.0109338760376
+      ],
+      "horizontal_error": 0.0958986058831215,
+      "label": "Main to gallery/8",
+      "lowest_y": 1.03749549388885,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 1.22157907485962,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        62.778450012207,
+        1.03749549388885,
+        -13.6805515289307
+      ],
+      "target": [
+        63.1418342590332,
+        1.27059996128082,
+        -14.0811653137207
+      ],
+      "vertical_error": -0.0490208864212036
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.484405651222914,
+      "elapsed": 0.783333333333334,
+      "end": [
+        63.4640769958496,
+        1.4083069562912,
+        -14.2415065765381
+      ],
+      "horizontal_error": 0.0969352796673775,
+      "label": "Main to gallery/9",
+      "lowest_y": 1.22369086742401,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 1.4083069562912,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        63.0813064575195,
+        1.22369086742401,
+        -14.0172452926636
+      ],
+      "target": [
+        63.5488357543945,
+        1.45780003070831,
+        -14.2885427474976
+      ],
+      "vertical_error": -0.0494930744171143
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.483823972288519,
+      "elapsed": 0.783333333333334,
+      "end": [
+        63.905933380127,
+        1.59607243537903,
+        -14.341160774231
+      ],
+      "horizontal_error": 0.0959347113966942,
+      "label": "Main to gallery/10",
+      "lowest_y": 1.41210961341858,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 1.59607243537903,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        63.4732246398926,
+        1.41210961341858,
+        -14.2435035705566
+      ],
+      "target": [
+        64.0,
+        1.64499998092651,
+        -14.3600006103516
+      ],
+      "vertical_error": -0.0489275455474854
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.479718618793413,
+      "elapsed": 0.783333333333334,
+      "end": [
+        64.3557662963867,
+        1.78320789337158,
+        -14.2992038726807
+      ],
+      "horizontal_error": 0.095991812646389,
+      "label": "Main to gallery/11",
+      "lowest_y": 1.6000314950943,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 1.78320789337158,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        63.9182167053223,
+        1.6000314950943,
+        -14.341160774231
+      ],
+      "target": [
+        64.4511642456055,
+        1.832200050354,
+        -14.2885427474976
+      ],
+      "vertical_error": -0.0489921569824219
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.483536699553952,
+      "elapsed": 0.783333333333334,
+      "end": [
+        64.7738647460938,
+        1.9718189239502,
+        -14.1196260452271
+      ],
+      "horizontal_error": 0.0926635265350342,
+      "label": "Main to gallery/12",
+      "lowest_y": 1.78734529018402,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 1.9718189239502,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.3693923950195,
+        1.78734529018402,
+        -14.2999057769775
+      ],
+      "target": [
+        64.8581695556641,
+        2.01939988136292,
+        -14.0811653137207
+      ],
+      "vertical_error": -0.0475809574127197
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.478749088710174,
+      "elapsed": 0.766666666666667,
+      "end": [
+        65.1108093261719,
+        2.15751814842224,
+        -13.8238496780396
+      ],
+      "horizontal_error": 0.0962527468800545,
+      "label": "Main to gallery/13",
+      "lowest_y": 1.97475624084473,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 2.15751814842224,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.7861862182617,
+        1.97475624084473,
+        -14.1188821792603
+      ],
+      "target": [
+        65.1811676025391,
+        2.20659995079041,
+        -13.7581663131714
+      ],
+      "vertical_error": -0.0490818023681641
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.484340827679262,
+      "elapsed": 0.783333333333334,
+      "end": [
+        65.3413162231445,
+        2.3441858291626,
+        -13.4361867904663
+      ],
+      "horizontal_error": 0.097257524728775,
+      "label": "Main to gallery/14",
+      "lowest_y": 2.15967631340027,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 2.3441858291626,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        65.1170959472656,
+        2.15967631340027,
+        -13.8189897537231
+      ],
+      "target": [
+        65.388542175293,
+        2.3938000202179,
+        -13.3511648178101
+      ],
+      "vertical_error": -0.0496141910552979
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.483897397993132,
+      "elapsed": 0.783333333333334,
+      "end": [
+        65.4410705566406,
+        2.53175687789917,
+        -12.9945545196533
+      ],
+      "horizontal_error": 0.0964309051632881,
+      "label": "Main to gallery/15",
+      "lowest_y": 2.34797692298889,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 2.53175687789917,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        65.3433151245117,
+        2.34797692298889,
+        -13.4270877838135
+      ],
+      "target": [
+        65.4599990844727,
+        2.58100008964539,
+        -12.8999996185303
+      ],
+      "vertical_error": -0.0492432117462158
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.478107497678138,
+      "elapsed": 0.783333333333334,
+      "end": [
+        65.3992919921875,
+        2.71835112571716,
+        -12.5464220046997
+      ],
+      "horizontal_error": 0.0981769263744354,
+      "label": "Main to gallery/16",
+      "lowest_y": 2.53576755523682,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 2.71835112571716,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        65.4410705566406,
+        2.53576755523682,
+        -12.982328414917
+      ],
+      "target": [
+        65.388542175293,
+        2.7681999206543,
+        -12.4488353729248
+      ],
+      "vertical_error": -0.0498487949371338
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.485173620516434,
+      "elapsed": 0.783333333333334,
+      "end": [
+        65.2200088500977,
+        2.907301902771,
+        -12.1272792816162
+      ],
+      "horizontal_error": 0.0938592478632927,
+      "label": "Main to gallery/17",
+      "lowest_y": 2.72253465652466,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 2.907301902771,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        65.3999862670898,
+        2.72253465652466,
+        -12.5330533981323
+      ],
+      "target": [
+        65.1811676025391,
+        2.95539999008179,
+        -12.0418338775635
+      ],
+      "vertical_error": -0.048098087310791
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.476271427702159,
+      "elapsed": 0.766666666666667,
+      "end": [
+        64.9257507324219,
+        3.09207725524902,
+        -11.7914123535156
+      ],
+      "horizontal_error": 0.0991693884134293,
+      "label": "Main to gallery/18",
+      "lowest_y": 2.91133189201355,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.09207725524902,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        65.2193069458008,
+        2.91133189201355,
+        -12.1150341033936
+      ],
+      "target": [
+        64.8581695556641,
+        3.14260005950928,
+        -11.7188358306885
+      ],
+      "vertical_error": -0.0505228042602539
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.472212269669399,
+      "elapsed": 0.65,
+      "end": [
+        64.5260238647461,
+        3.17584443092346,
+        -11.5545921325684
+      ],
+      "horizontal_error": 0.0863977074623108,
+      "label": "Main to gallery/19",
+      "lowest_y": 3.09423613548279,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.17612051963806,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.9210739135742,
+        3.09423613548279,
+        -11.7852802276611
+      ],
+      "target": [
+        64.4511642456055,
+        3.20499992370605,
+        -11.5114574432373
+      ],
+      "vertical_error": -0.0291554927825928
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.430423989892006,
+      "elapsed": 0.533333333333333,
+      "end": [
+        64.0892562866211,
+        3.18095564842224,
+        -11.4601697921753
+      ],
+      "horizontal_error": 0.0915067419409752,
+      "label": "Main to gallery/20",
+      "lowest_y": 3.17577290534973,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.18095564842224,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.5091934204102,
+        3.17583250999451,
+        -11.5504465103149
+      ],
+      "target": [
+        64.0,
+        3.20499992370605,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0240442752838135
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0670776367188,
+        3.1808979511261,
+        -11.4607553482056
+      ],
+      "horizontal_error": 0.070215180516243,
+      "label": "gallery_bridge/0",
+      "lowest_y": 3.1808979511261,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.1808979511261,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.0670776367188,
+        3.1808979511261,
+        -11.4607553482056
+      ],
+      "target": [
+        64.0,
+        3.20600008964539,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0251021385192871
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.36567142768763,
+      "elapsed": 1.63333333333333,
+      "end": [
+        64.0044250488281,
+        3.17581820487976,
+        -10.0970258712769
+      ],
+      "horizontal_error": 0.097126729786396,
+      "label": "gallery_bridge/1",
+      "lowest_y": 3.17581820487976,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.18192481994629,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.0670776367188,
+        3.1808979511261,
+        -11.4607553482056
+      ],
+      "target": [
+        64.0,
+        3.20600008964539,
+        -10.0
+      ],
+      "vertical_error": -0.030181884765625
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 5.20428380044177,
+      "elapsed": 6.14999999999998,
+      "end": [
+        69.2081680297852,
+        3.17593574523926,
+        -10.0012445449829
+      ],
+      "horizontal_error": 0.091843456029892,
+      "label": "gallery_bridge/2",
+      "lowest_y": 3.17568802833557,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.17594361305237,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        64.0044250488281,
+        3.17583799362183,
+        -10.0737504959106
+      ],
+      "target": [
+        69.3000030517578,
+        3.20600008964539,
+        -10.0
+      ],
+      "vertical_error": -0.0300643444061279
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        69.2314910888672,
+        3.17593574523926,
+        -10.0012445449829
+      ],
+      "horizontal_error": 0.0685232654213905,
+      "label": "gallery_perimeter/0",
+      "lowest_y": 3.17593574523926,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.17593574523926,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        69.2314910888672,
+        3.17593574523926,
+        -10.0012445449829
+      ],
+      "target": [
+        69.3000030517578,
+        3.20600008964539,
+        -10.0
+      ],
+      "vertical_error": -0.0300643444061279
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.23621378047392,
+      "elapsed": 1.48333333333333,
+      "end": [
+        70.4567413330078,
+        3.17582869529724,
+        -9.85439205169678
+      ],
+      "horizontal_error": 0.0943656489253044,
+      "label": "gallery_perimeter/1",
+      "lowest_y": 3.17581677436829,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.17594361305237,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        69.2314910888672,
+        3.17593574523926,
+        -10.0012445449829
+      ],
+      "target": [
+        70.5500030517578,
+        3.20600008964539,
+        -9.84000015258789
+      ],
+      "vertical_error": -0.0301713943481445
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        70.4794235229492,
+        3.17583250999451,
+        -9.85439205169678
+      ],
+      "horizontal_error": 0.0873797759413719,
+      "label": "gallery_perimeter/2",
+      "lowest_y": 3.17583250999451,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.17583250999451,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        70.4794235229492,
+        3.17583250999451,
+        -9.85439205169678
+      ],
+      "target": [
+        70.5384902954102,
+        3.20600008964539,
+        -9.78999996185303
+      ],
+      "vertical_error": -0.0301675796508789
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.52860578009859,
+      "elapsed": 1.81666666666667,
+      "end": [
+        71.2430801391602,
+        3.17584013938904,
+        -8.53083610534668
+      ],
+      "horizontal_error": 0.0998506993055344,
+      "label": "gallery_perimeter/3",
+      "lowest_y": 3.17580246925354,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.17597413063049,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        70.4794235229492,
+        3.17583250999451,
+        -9.85439205169678
+      ],
+      "target": [
+        71.2927398681641,
+        3.20600008964539,
+        -8.44421005249023
+      ],
+      "vertical_error": -0.0301599502563477
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.45230796933174,
+      "elapsed": 1.73333333333333,
+      "end": [
+        71.5321350097656,
+        3.17583274841309,
+        -7.09059906005859
+      ],
+      "horizontal_error": 0.092344231903553,
+      "label": "gallery_perimeter/4",
+      "lowest_y": 3.17581725120544,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.17594265937805,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        71.2471771240234,
+        3.17583656311035,
+        -8.51396465301514
+      ],
+      "target": [
+        71.5500030517578,
+        3.20600008964539,
+        -7.0
+      ],
+      "vertical_error": -0.0301673412322998
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.43706119526178,
+      "elapsed": 1.71666666666667,
+      "end": [
+        71.3073425292969,
+        3.17584013938904,
+        -5.64945268630981
+      ],
+      "horizontal_error": 0.0947942286729813,
+      "label": "gallery_perimeter/5",
+      "lowest_y": 3.17581343650818,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.1759569644928,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        71.5321350097656,
+        3.17584013938904,
+        -7.06833744049072
+      ],
+      "target": [
+        71.2927398681641,
+        3.20600008964539,
+        -5.55578994750977
+      ],
+      "vertical_error": -0.0301599502563477
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.51345099275932,
+      "elapsed": 1.8,
+      "end": [
+        70.5855255126953,
+        3.17583298683167,
+        -4.29730224609375
+      ],
+      "horizontal_error": 0.0991664677858353,
+      "label": "gallery_perimeter/6",
+      "lowest_y": 3.17579483985901,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 3.17594313621521,
+      "reason": "arrived",
+      "scenario": "agasa_gallery",
+      "start": [
+        71.3073425292969,
+        3.17584013938904,
+        -5.62679481506348
+      ],
+      "target": [
+        70.5384902954102,
+        3.20600008964539,
+        -4.21000003814697
+      ],
+      "vertical_error": -0.0301671028137207
+    },
+    {
+      "animation_clips": [
+        "Walk",
+        "Idle"
+      ],
+      "capsule_bounds": {
+        "max": [
+          70.5499114990234,
+          4.20083665847778,
+          -3.79130792617798
+        ],
+        "min": [
+          70.0899047851562,
+          3.18083667755127,
+          -4.25130796432495
+        ]
+      },
+      "distance_walked": 0.368239502422512,
+      "elapsed": 3.03333333333333,
+      "end": [
+        70.3199081420898,
+        3.17583656311035,
+        -4.02130794525146
+      ],
+      "end_agasa_local": [
+        6.31990814208984,
+        3.17583656311035,
+        2.97869205474854
+      ],
+      "end_mouri_local": [
+        0.621305227279663,
+        3.17583656311035,
+        62.5199089050293
+      ],
+      "horizontal_error": 1.37763547897339,
+      "label": "gallery_perimeter/7",
+      "lowest_y": 3.17580342292786,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": false,
+      "peak_y": 3.17594194412231,
+      "reason": "stalled_against_collision_or_wrong_floor",
+      "scenario": "agasa_gallery",
+      "slide_contacts": [
+        {
+          "collider": "/root/Beika/Blender_agasa/agasa/AgasaReference_Gallery_Collision/AgasaReference_Gallery_Collision_col",
+          "collider_position": [
+            64.0,
+            0.0,
+            -7.0
+          ],
+          "depth": 0.000941991806030273,
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "point": [
+            70.3196792602539,
+            3.17999982833862,
+            -4.0210132598877
+          ]
+        },
+        {
+          "collider": "/root/Beika/Blender_agasa/agasa/AgasaReference_Gallery_Collision/AgasaReference_Gallery_Collision_col",
+          "collider_position": [
+            64.0,
+            0.0,
+            -7.0
+          ],
+          "depth": 0.000941991806030273,
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "point": [
+            70.320182800293,
+            3.17999982833862,
+            -4.02151441574097
+          ]
+        }
+      ],
+      "start": [
+        70.5820846557617,
+        3.17583250999451,
+        -4.27988624572754
+      ],
+      "target": [
+        69.3386535644531,
+        3.20600008964539,
+        -3.05434417724609
+      ],
+      "test_only_forward_contacts": [
+        {
+          "collider": "/root/Beika/Blender_agasa/agasa/AgasaReference_Hall_Collision/AgasaReference_Hall_Collision_col",
+          "normal": [
+            0.793699741363525,
+            0.0,
+            -0.608309745788574
+          ],
+          "point": [
+            70.1369705200195,
+            3.97093510627747,
+            -3.88091945648193
+          ]
+        },
+        {
+          "collider": "/root/Beika/Blender_agasa/agasa/AgasaReference_Hall_Collision/AgasaReference_Hall_Collision_col",
+          "normal": [
+            0.793699741363525,
+            0.0,
+            -0.608309745788574
+          ],
+          "point": [
+            70.1369705200195,
+            3.41093516349792,
+            -3.88091945648193
+          ]
+        },
+        {
+          "collider": "/root/Beika/Blender_agasa/agasa/AgasaReference_Hall_Collision/AgasaReference_Hall_Collision_col",
+          "normal": [
+            0.805161416530609,
+            0.0,
+            -0.593055784702301
+          ],
+          "point": [
+            70.1343002319336,
+            3.97093510627747,
+            -3.88440012931824
+          ]
+        },
+        {
+          "collider": "/root/Beika/Blender_agasa/agasa/AgasaReference_Hall_Collision/AgasaReference_Hall_Collision_col",
+          "normal": [
+            0.805161416530609,
+            0.0,
+            -0.593055784702301
+          ],
+          "point": [
+            70.1343002319336,
+            3.41093516349792,
+            -3.88440012931824
+          ]
+        }
+      ],
+      "vertical_error": -0.0301635265350342
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "horizontal_error": 0.0,
+      "label": "front_to_round_kitchen/0",
+      "lowest_y": 0.0447916612029076,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0447916612029076,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "vertical_error": -0.0352083370089531
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.51605290733278,
+      "elapsed": 2.99999999999999,
+      "end": [
+        63.9999923706055,
+        0.0558328181505203,
+        -1.21380519866943
+      ],
+      "horizontal_error": 0.0861949920654297,
+      "label": "front_to_round_kitchen/1",
+      "lowest_y": 0.0398332551121712,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0560670010745525,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -1.30000019073486
+      ],
+      "vertical_error": -0.0241671800613403
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.41329189669341,
+      "elapsed": 2.86666666666666,
+      "end": [
+        64.0000305175781,
+        0.0558328777551651,
+        -3.65042805671692
+      ],
+      "horizontal_error": 0.0995719507336617,
+      "label": "front_to_round_kitchen/2",
+      "lowest_y": 0.055742833763361,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559249743819237,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.9999923706055,
+        0.0558248497545719,
+        -1.23713862895966
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241671204566956
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.22496551647782,
+      "elapsed": 1.46666666666667,
+      "end": [
+        62.7938003540039,
+        0.055832888931036,
+        -3.88396286964417
+      ],
+      "horizontal_error": 0.095160685479641,
+      "label": "front_to_round_kitchen/3",
+      "lowest_y": 0.0558325871825218,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558404363691807,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        64.0000305175781,
+        0.0558325871825218,
+        -3.67376160621643
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241671092808247
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.231831171549857,
+      "elapsed": 0.3,
+      "end": [
+        62.5397987365723,
+        0.0558327697217464,
+        -3.8958432674408
+      ],
+      "horizontal_error": 0.0898941308259964,
+      "label": "front_to_round_kitchen/4",
+      "lowest_y": 0.0558324679732323,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558365732431412,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        62.7712707519531,
+        0.0558324679732323,
+        -3.88396286964417
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241672284901142
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.0900290990248322,
+      "elapsed": 0.133333333333333,
+      "end": [
+        62.6065216064453,
+        0.0558329001069069,
+        -3.89815378189087
+      ],
+      "horizontal_error": 0.0934973880648613,
+      "label": "kitchen_front_to_hall/0",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558366514742374,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        62.5165328979492,
+        0.0558325946331024,
+        -3.8958432674408
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241670981049538
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.28070798376575,
+      "elapsed": 1.53333333333333,
+      "end": [
+        63.9028739929199,
+        0.0558327808976173,
+        -3.76032543182373
+      ],
+      "horizontal_error": 0.097673311829567,
+      "label": "kitchen_front_to_hall/1",
+      "lowest_y": 0.0558325536549091,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558404289186001,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        62.6298484802246,
+        0.0558325834572315,
+        -3.89815378189087
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241672173142433
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        63.9258918762207,
+        0.0558325909078121,
+        -3.76032543182373
+      ],
+      "horizontal_error": 0.0748239830136299,
+      "label": "hall_to_kitchen_aisle/0",
+      "lowest_y": 0.0558325909078121,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558325909078121,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.9258918762207,
+        0.0558325909078121,
+        -3.76032543182373
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241674073040485
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.06387255247682,
+      "elapsed": 2.45,
+      "end": [
+        65.8635330200195,
+        0.055832963436842,
+        -4.46865797042847
+      ],
+      "horizontal_error": 0.0919691994786263,
+      "label": "hall_to_kitchen_aisle/1",
+      "lowest_y": 0.0558325909078121,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367371559143,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.9258918762207,
+        0.0558325909078121,
+        -3.76032543182373
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -4.5
+      ],
+      "vertical_error": -0.0241670347750187
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 5.23250401206315,
+      "elapsed": 6.18333333333332,
+      "end": [
+        65.9487457275391,
+        0.0558328852057457,
+        -9.70224571228027
+      ],
+      "horizontal_error": 0.0977624803781509,
+      "label": "hall_to_kitchen_aisle/2",
+      "lowest_y": 0.0558251924812794,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558402501046658,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        65.8834915161133,
+        0.0558365024626255,
+        -4.47015237808228
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -9.80000019073486
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        65.9487457275391,
+        0.0558364316821098,
+        -9.72557544708252
+      ],
+      "horizontal_error": 0.0744352638721466,
+      "label": "kitchen_work_aisle/0",
+      "lowest_y": 0.0558364316821098,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558364316821098,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        65.9487457275391,
+        0.0558364316821098,
+        -9.72557544708252
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -9.80000019073486
+      ],
+      "vertical_error": -0.0241635665297508
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.00217791181058,
+      "elapsed": 2.38333333333333,
+      "end": [
+        63.9478950500488,
+        0.0558328852057457,
+        -9.65349102020264
+      ],
+      "horizontal_error": 0.0979588180780411,
+      "label": "kitchen_work_aisle/1",
+      "lowest_y": 0.0558327585458755,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367408812046,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        65.9487457275391,
+        0.0558364316821098,
+        -9.72557544708252
+      ],
+      "target": [
+        63.8499984741211,
+        0.0799999982118607,
+        -9.64999961853027
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.24472415680066,
+      "elapsed": 1.48333333333333,
+      "end": [
+        63.296199798584,
+        0.0558255426585674,
+        -8.57963466644287
+      ],
+      "horizontal_error": 0.0920657441020012,
+      "label": "kitchen_work_aisle/2",
+      "lowest_y": 0.0558252036571503,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367520570755,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.9245948791504,
+        0.055832602083683,
+        -9.65349102020264
+      ],
+      "target": [
+        63.25,
+        0.0799999982118607,
+        -8.5
+      ],
+      "vertical_error": -0.0241744555532932
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.08346761297435,
+      "elapsed": 1.3,
+      "end": [
+        63.4829864501953,
+        0.0558366663753986,
+        -7.49696493148804
+      ],
+      "horizontal_error": 0.0984461233019829,
+      "label": "kitchen_work_aisle/3",
+      "lowest_y": 0.055821381509304,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558407008647919,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.2919807434082,
+        0.0558327883481979,
+        -8.56287288665771
+      ],
+      "target": [
+        63.5,
+        0.0799999982118607,
+        -7.40000009536743
+      ],
+      "vertical_error": -0.024163331836462
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        63.4829864501953,
+        0.0558253414928913,
+        -7.47448396682739
+      ],
+      "horizontal_error": 0.0764022767543793,
+      "label": "kitchen_work_aisle_reverse/0",
+      "lowest_y": 0.0558253414928913,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558253414928913,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.4829864501953,
+        0.0558253414928913,
+        -7.47448396682739
+      ],
+      "target": [
+        63.5,
+        0.0799999982118607,
+        -7.40000009536743
+      ],
+      "vertical_error": -0.0241746567189693
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.956920716445893,
+      "elapsed": 1.15,
+      "end": [
+        63.2707328796387,
+        0.0558253712952137,
+        -8.40670967102051
+      ],
+      "horizontal_error": 0.0955664068460464,
+      "label": "kitchen_work_aisle_reverse/1",
+      "lowest_y": 0.0558213740587234,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558406338095665,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.4829864501953,
+        0.0558253414928913,
+        -7.47448396682739
+      ],
+      "target": [
+        63.25,
+        0.0799999982118607,
+        -8.5
+      ],
+      "vertical_error": -0.024174626916647
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.25789069710299,
+      "elapsed": 1.5,
+      "end": [
+        63.8098220825195,
+        0.0558328852057457,
+        -9.56440353393555
+      ],
+      "horizontal_error": 0.0945559740066528,
+      "label": "kitchen_work_aisle_reverse/2",
+      "lowest_y": 0.05582495033741,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558369234204292,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.2707328796387,
+        0.0558250732719898,
+        -8.42869472503662
+      ],
+      "target": [
+        63.8499984741211,
+        0.0799999982118607,
+        -9.64999961853027
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.05939174490049,
+      "elapsed": 2.45,
+      "end": [
+        65.8611297607422,
+        0.055832963436842,
+        -9.79107475280762
+      ],
+      "horizontal_error": 0.0893142819404602,
+      "label": "kitchen_work_aisle_reverse/3",
+      "lowest_y": 0.0558326579630375,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367371559143,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.8125076293945,
+        0.0558326579630375,
+        -9.58287620544434
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -9.80000019073486
+      ],
+      "vertical_error": -0.0241670347750187
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        65.8841857910156,
+        0.0558364912867546,
+        -9.79107475280762
+      ],
+      "horizontal_error": 0.0664136409759521,
+      "label": "hall_to_kitchen_aisle_reverse/0",
+      "lowest_y": 0.0558364912867546,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558364912867546,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        65.8841857910156,
+        0.0558364912867546,
+        -9.79107475280762
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -9.80000019073486
+      ],
+      "vertical_error": -0.024163506925106
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 5.20417506084777,
+      "elapsed": 6.14999999999998,
+      "end": [
+        65.9489135742188,
+        0.0558328852057457,
+        -4.58730602264404
+      ],
+      "horizontal_error": 0.0873127430677414,
+      "label": "hall_to_kitchen_aisle_reverse/1",
+      "lowest_y": 0.0558250397443771,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558369234204292,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        65.8841857910156,
+        0.0558364912867546,
+        -9.79107475280762
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -4.5
+      ],
+      "vertical_error": -0.024167113006115
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.02231540298089,
+      "elapsed": 2.4,
+      "end": [
+        64.083625793457,
+        0.0558329001069069,
+        -3.78467178344727
+      ],
+      "horizontal_error": 0.0905284807085991,
+      "label": "hall_to_kitchen_aisle_reverse/2",
+      "lowest_y": 0.055832464247942,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367408812046,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        65.9489135742188,
+        0.055832464247942,
+        -4.56397724151611
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241670981049538
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0643539428711,
+        0.0558325424790382,
+        -3.78257918357849
+      ],
+      "horizontal_error": 0.0721306651830673,
+      "label": "hall_to_kitchen_front/0",
+      "lowest_y": 0.0558325424790382,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558325424790382,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        64.0643539428711,
+        0.0558325424790382,
+        -3.78257918357849
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241674557328224
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.28048197226599,
+      "elapsed": 1.53333333333333,
+      "end": [
+        62.7887573242188,
+        0.0558329001069069,
+        -3.89249110221863
+      ],
+      "horizontal_error": 0.0890736356377602,
+      "label": "hall_to_kitchen_front/1",
+      "lowest_y": 0.0558325424790382,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558368265628815,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        64.0643539428711,
+        0.0558325424790382,
+        -3.78257918357849
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241670981049538
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.21751601411961,
+      "elapsed": 0.283333333333333,
+      "end": [
+        62.5481872558594,
+        0.0558329001069069,
+        -3.89783787727356
+      ],
+      "horizontal_error": 0.098210297524929,
+      "label": "hall_to_kitchen_front/2",
+      "lowest_y": 0.055832751095295,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558366663753986,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        62.765625,
+        0.0558364354074001,
+        -3.89249110221863
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241670981049538
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        62.5248641967773,
+        0.0558326654136181,
+        -3.89783787727356
+      ],
+      "horizontal_error": 0.0748946517705917,
+      "label": "front_to_round_kitchen_reverse/0",
+      "lowest_y": 0.0558326654136181,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558326654136181,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        62.5248641967773,
+        0.0558326654136181,
+        -3.89783787727356
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241673327982426
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.0758434869349003,
+      "elapsed": 0.116666666666667,
+      "end": [
+        62.6006965637207,
+        0.0558328926563263,
+        -3.89893937110901
+      ],
+      "horizontal_error": 0.0993098616600037,
+      "label": "front_to_round_kitchen_reverse/1",
+      "lowest_y": 0.0558326654136181,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558329001069069,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        62.5248641967773,
+        0.0558326654136181,
+        -3.89783787727356
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241671055555344
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.29488462395966,
+      "elapsed": 1.55,
+      "end": [
+        63.9111289978027,
+        0.0558328777551651,
+        -3.7594587802887
+      ],
+      "horizontal_error": 0.0893729478120804,
+      "label": "front_to_round_kitchen_reverse/2",
+      "lowest_y": 0.055832676589489,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558404438197613,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        62.6240234375,
+        0.0558364354074001,
+        -3.89893937110901
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241671204566956
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.37093097739853,
+      "elapsed": 2.81666666666666,
+      "end": [
+        63.9976425170898,
+        0.0558367222547531,
+        -1.38939893245697
+      ],
+      "horizontal_error": 0.0894298255443573,
+      "label": "front_to_round_kitchen_reverse/3",
+      "lowest_y": 0.0556115359067917,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559160746634007,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.9341468811035,
+        0.0558325871825218,
+        -3.7594587802887
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -1.30000019073486
+      ],
+      "vertical_error": -0.0241632759571075
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.57285642880015,
+      "elapsed": 3.04999999999999,
+      "end": [
+        63.9999084472656,
+        0.044825654476881,
+        1.20065486431122
+      ],
+      "horizontal_error": 0.099345363676548,
+      "label": "front_to_round_kitchen_reverse/4",
+      "lowest_y": 0.0388263575732708,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559350289404392,
+      "reason": "arrived",
+      "scenario": "agasa_kitchen",
+      "start": [
+        63.9976425170898,
+        0.055833026766777,
+        -1.36608552932739
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "vertical_error": -0.0351743437349796
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "horizontal_error": 0.0,
+      "label": "front_to_round_kitchen/0",
+      "lowest_y": 0.0447916612029076,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0447916612029076,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "vertical_error": -0.0352083370089531
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.51605290733278,
+      "elapsed": 2.99999999999999,
+      "end": [
+        63.9999923706055,
+        0.0558328181505203,
+        -1.21380519866943
+      ],
+      "horizontal_error": 0.0861949920654297,
+      "label": "front_to_round_kitchen/1",
+      "lowest_y": 0.0398332551121712,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0560670010745525,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -1.30000019073486
+      ],
+      "vertical_error": -0.0241671800613403
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.41329189669341,
+      "elapsed": 2.86666666666666,
+      "end": [
+        64.0000305175781,
+        0.0558328777551651,
+        -3.65042805671692
+      ],
+      "horizontal_error": 0.0995719507336617,
+      "label": "front_to_round_kitchen/2",
+      "lowest_y": 0.055742833763361,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559249743819237,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        63.9999923706055,
+        0.0558248497545719,
+        -1.23713862895966
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241671204566956
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.22496551647782,
+      "elapsed": 1.46666666666667,
+      "end": [
+        62.7938003540039,
+        0.055832888931036,
+        -3.88396286964417
+      ],
+      "horizontal_error": 0.095160685479641,
+      "label": "front_to_round_kitchen/3",
+      "lowest_y": 0.0558325871825218,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558404363691807,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        64.0000305175781,
+        0.0558325871825218,
+        -3.67376160621643
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241671092808247
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.231831171549857,
+      "elapsed": 0.3,
+      "end": [
+        62.5397987365723,
+        0.0558327697217464,
+        -3.8958432674408
+      ],
+      "horizontal_error": 0.0898941308259964,
+      "label": "front_to_round_kitchen/4",
+      "lowest_y": 0.0558324679732323,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558365732431412,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        62.7712707519531,
+        0.0558324679732323,
+        -3.88396286964417
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241672284901142
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        62.5165328979492,
+        0.0558325946331024,
+        -3.8958432674408
+      ],
+      "horizontal_error": 0.0666618645191193,
+      "label": "kitchen_to_living/0",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558325946331024,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        62.5165328979492,
+        0.0558325946331024,
+        -3.8958432674408
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241674035787582
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.39407071680762,
+      "elapsed": 1.66666666666667,
+      "end": [
+        63.9036979675293,
+        0.0558327808976173,
+        -3.75932335853577
+      ],
+      "horizontal_error": 0.096752293407917,
+      "label": "kitchen_to_living/1",
+      "lowest_y": 0.0558325946331024,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367297053337,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        62.5165328979492,
+        0.0558325946331024,
+        -3.8958432674408
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241672173142433
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 3.78765599662438,
+      "elapsed": 4.48333333333332,
+      "end": [
+        67.7118835449219,
+        0.0558366514742374,
+        -3.89681458473206
+      ],
+      "horizontal_error": 0.0881770625710487,
+      "label": "kitchen_to_living/2",
+      "lowest_y": 0.055648285895586,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559333078563213,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        63.9267654418945,
+        0.0558326654136181,
+        -3.75932335853577
+      ],
+      "target": [
+        67.8000030517578,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241633467376232
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.71947284415364,
+      "elapsed": 2.05,
+      "end": [
+        69.4537124633789,
+        0.0558147989213467,
+        -3.94721364974976
+      ],
+      "horizontal_error": 0.0963309034705162,
+      "label": "kitchen_to_living/3",
+      "lowest_y": 0.0546802803874016,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367855846882,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        67.7351837158203,
+        0.0546802803874016,
+        -3.89681458473206
+      ],
+      "target": [
+        69.5500030517578,
+        0.0799999982118607,
+        -3.95000004768372
+      ],
+      "vertical_error": -0.024185199290514
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.552130941301584,
+      "elapsed": 0.666666666666667,
+      "end": [
+        69.8842544555664,
+        0.0558256953954697,
+        -4.32002592086792
+      ],
+      "horizontal_error": 0.0889886468648911,
+      "label": "kitchen_to_living/4",
+      "lowest_y": 0.0558074824512005,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558370612561703,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        69.4770202636719,
+        0.0558254532516003,
+        -3.94721364974976
+      ],
+      "target": [
+        69.9499969482422,
+        0.0799999982118607,
+        -4.38000011444092
+      ],
+      "vertical_error": -0.024174302816391
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.665349152870476,
+      "elapsed": 0.800000000000001,
+      "end": [
+        70.3362731933594,
+        0.055814515799284,
+        -4.82761812210083
+      ],
+      "horizontal_error": 0.0964388400316238,
+      "label": "kitchen_to_living/5",
+      "lowest_y": 0.0558110065758228,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558332316577435,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        69.8956527709961,
+        0.0558214150369167,
+        -4.3291220664978
+      ],
+      "target": [
+        70.4000015258789,
+        0.0799999982118607,
+        -4.90000009536743
+      ],
+      "vertical_error": -0.0241854824125767
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        70.3450012207031,
+        0.055816899985075,
+        -4.83951616287231
+      ],
+      "horizontal_error": 0.0817516967654228,
+      "label": "living_to_garage/0",
+      "lowest_y": 0.055816899985075,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.055816899985075,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        70.3450012207031,
+        0.055816899985075,
+        -4.83951616287231
+      ],
+      "target": [
+        70.4000015258789,
+        0.0799999982118607,
+        -4.90000009536743
+      ],
+      "vertical_error": -0.0241830982267857
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 3.8188396175392,
+      "elapsed": 4.51666666666666,
+      "end": [
+        71.2274017333984,
+        0.0558367408812046,
+        -8.55409049987793
+      ],
+      "horizontal_error": 0.0985354781150818,
+      "label": "living_to_garage/1",
+      "lowest_y": 0.0557737722992897,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559284873306751,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        70.3450012207031,
+        0.055816899985075,
+        -4.83951616287231
+      ],
+      "target": [
+        71.25,
+        0.0799999982118607,
+        -8.64999961853027
+      ],
+      "vertical_error": -0.0241632573306561
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.54934402834624,
+      "elapsed": 1.88333333333333,
+      "end": [
+        72.7540054321289,
+        0.100838899612427,
+        -8.64578151702881
+      ],
+      "horizontal_error": 0.0960856676101685,
+      "label": "living_to_garage/2",
+      "lowest_y": 0.0558364912867546,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.100838899612427,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        71.2274017333984,
+        0.0558364912867546,
+        -8.57591247558594
+      ],
+      "target": [
+        72.8499984741211,
+        0.0799999982118607,
+        -8.64999961853027
+      ],
+      "vertical_error": 0.0208389014005661
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.4506412607152,
+      "elapsed": 1.7,
+      "end": [
+        74.2022018432617,
+        0.0358187779784203,
+        -8.64972877502441
+      ],
+      "horizontal_error": 0.0978015884757042,
+      "label": "living_to_garage/3",
+      "lowest_y": 0.0350783094763756,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.100906036794186,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        72.7772827148438,
+        0.099749930202961,
+        -8.64578151702881
+      ],
+      "target": [
+        74.3000030517578,
+        0.0799999982118607,
+        -8.64999961853027
+      ],
+      "vertical_error": -0.0441812202334404
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 4.05676749977283,
+      "elapsed": 4.79999999999999,
+      "end": [
+        74.1028289794922,
+        0.0359071716666222,
+        -12.7045850753784
+      ],
+      "horizontal_error": 0.0954570919275284,
+      "label": "living_to_garage/4",
+      "lowest_y": 0.0356416814029217,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0359071716666222,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        74.2255325317383,
+        0.0358364544808865,
+        -8.64972877502441
+      ],
+      "target": [
+        74.0999984741211,
+        0.0599999986588955,
+        -12.8000001907349
+      ],
+      "vertical_error": -0.0240928269922733
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        74.1028900146484,
+        0.0358581840991974,
+        -12.7279472351074
+      ],
+      "horizontal_error": 0.0721109509468079,
+      "label": "living_to_garage_reverse/0",
+      "lowest_y": 0.0358581840991974,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0358581840991974,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        74.1028900146484,
+        0.0358581840991974,
+        -12.7279472351074
+      ],
+      "target": [
+        74.0999984741211,
+        0.0599999986588955,
+        -12.8000001907349
+      ],
+      "vertical_error": -0.0241418145596981
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 3.98595345020294,
+      "elapsed": 4.71666666666666,
+      "end": [
+        74.2953262329102,
+        0.0356541574001312,
+        -8.7467212677002
+      ],
+      "horizontal_error": 0.0968346521258354,
+      "label": "living_to_garage_reverse/1",
+      "lowest_y": 0.0356541574001312,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0359294936060905,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        74.1028900146484,
+        0.0358581840991974,
+        -12.7279472351074
+      ],
+      "target": [
+        74.3000030517578,
+        0.0799999982118607,
+        -8.64999961853027
+      ],
+      "vertical_error": -0.0443458408117294
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.38414942682721,
+      "elapsed": 1.73333333333333,
+      "end": [
+        72.9373626708984,
+        0.100804075598717,
+        -8.65427589416504
+      ],
+      "horizontal_error": 0.0874687880277634,
+      "label": "living_to_garage_reverse/2",
+      "lowest_y": 0.0356291942298412,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.10084093362093,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        74.2953262329102,
+        0.0358289033174515,
+        -8.72345542907715
+      ],
+      "target": [
+        72.8499984741211,
+        0.0799999982118607,
+        -8.64999961853027
+      ],
+      "vertical_error": 0.0208040773868561
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.59616562002338,
+      "elapsed": 1.86666666666666,
+      "end": [
+        71.3457412719727,
+        0.055836733430624,
+        -8.65024089813232
+      ],
+      "horizontal_error": 0.0957415774464607,
+      "label": "living_to_garage_reverse/3",
+      "lowest_y": 0.0555240139365196,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.100910931825638,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        72.9141082763672,
+        0.100819990038872,
+        -8.65427589416504
+      ],
+      "target": [
+        71.25,
+        0.0799999982118607,
+        -8.64999961853027
+      ],
+      "vertical_error": -0.0241632647812366
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 3.77654292574152,
+      "elapsed": 4.46666666666666,
+      "end": [
+        70.4205474853516,
+        0.0558221042156219,
+        -4.98390293121338
+      ],
+      "horizontal_error": 0.0863818377256393,
+      "label": "living_to_garage_reverse/4",
+      "lowest_y": 0.0557544343173504,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559231527149677,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        71.3224029541016,
+        0.0558365024626255,
+        -8.65024089813232
+      ],
+      "target": [
+        70.4000015258789,
+        0.0799999982118607,
+        -4.90000009536743
+      ],
+      "vertical_error": -0.0241778939962387
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        70.4205093383789,
+        0.0558174625039101,
+        -4.96219539642334
+      ],
+      "horizontal_error": 0.0654891282320023,
+      "label": "kitchen_to_living_reverse/0",
+      "lowest_y": 0.0558174625039101,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558174625039101,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        70.4205093383789,
+        0.0558174625039101,
+        -4.96219539642334
+      ],
+      "target": [
+        70.4000015258789,
+        0.0799999982118607,
+        -4.90000009536743
+      ],
+      "vertical_error": -0.0241825357079506
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.65089394338429,
+      "elapsed": 0.783333333333334,
+      "end": [
+        70.0112075805664,
+        0.0558224059641361,
+        -4.45622205734253
+      ],
+      "horizontal_error": 0.097757488489151,
+      "label": "kitchen_to_living_reverse/1",
+      "lowest_y": 0.0558101199567318,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558291971683502,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        70.4205093383789,
+        0.0558174625039101,
+        -4.96219539642334
+      ],
+      "target": [
+        69.9499969482422,
+        0.0799999982118607,
+        -4.38000011444092
+      ],
+      "vertical_error": -0.0241775922477245
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.580505493562669,
+      "elapsed": 0.700000000000001,
+      "end": [
+        69.6104354858398,
+        0.0558187589049339,
+        -4.01588916778564
+      ],
+      "horizontal_error": 0.0894061252474785,
+      "label": "kitchen_to_living_reverse/2",
+      "lowest_y": 0.0558079145848751,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558402240276337,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        70.0034637451172,
+        0.0558176450431347,
+        -4.44308519363403
+      ],
+      "target": [
+        69.5500030517578,
+        0.0799999982118607,
+        -3.95000004768372
+      ],
+      "vertical_error": -0.0241812393069267
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.70513988379389,
+      "elapsed": 2.03333333333333,
+      "end": [
+        67.8990859985352,
+        0.0558367185294628,
+        -3.90567708015442
+      ],
+      "horizontal_error": 0.0992454513907433,
+      "label": "kitchen_to_living_reverse/3",
+      "lowest_y": 0.0557908304035664,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558371804654598,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        69.6012802124023,
+        0.0558173470199108,
+        -4.00456714630127
+      ],
+      "target": [
+        67.8000030517578,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241632796823978
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 3.78717232937925,
+      "elapsed": 4.48333333333332,
+      "end": [
+        64.0917739868164,
+        0.0558329001069069,
+        -3.75366020202637
+      ],
+      "horizontal_error": 0.0918469503521919,
+      "label": "kitchen_to_living_reverse/4",
+      "lowest_y": 0.0556961745023727,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559352338314056,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        67.875846862793,
+        0.0558373294770718,
+        -3.90567708015442
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241670981049538
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.53567789727822,
+      "elapsed": 1.83333333333333,
+      "end": [
+        62.5392265319824,
+        0.055832888931036,
+        -3.89204478263855
+      ],
+      "horizontal_error": 0.0895797088742256,
+      "label": "kitchen_to_living_reverse/5",
+      "lowest_y": 0.0558327659964561,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367371559143,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        64.0684814453125,
+        0.0558364056050777,
+        -3.75366020202637
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241671092808247
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        62.5161209106445,
+        0.0558364354074001,
+        -3.89204478263855
+      ],
+      "horizontal_error": 0.066597007215023,
+      "label": "front_to_round_kitchen_reverse/0",
+      "lowest_y": 0.0558364354074001,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558364354074001,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        62.5161209106445,
+        0.0558364354074001,
+        -3.89204478263855
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241635628044605
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.0901164747774601,
+      "elapsed": 0.133333333333333,
+      "end": [
+        62.6060905456543,
+        0.0558366291224957,
+        -3.8964569568634
+      ],
+      "horizontal_error": 0.0939770340919495,
+      "label": "front_to_round_kitchen_reverse/1",
+      "lowest_y": 0.0558327361941338,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367297053337,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        62.5161209106445,
+        0.0558364354074001,
+        -3.89204478263855
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.024163369089365
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.28072131099179,
+      "elapsed": 1.53333333333333,
+      "end": [
+        63.9025993347168,
+        0.055832888931036,
+        -3.7602322101593
+      ],
+      "horizontal_error": 0.0979366526007652,
+      "label": "front_to_round_kitchen_reverse/2",
+      "lowest_y": 0.0558325536549091,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558404289186001,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        62.6293830871582,
+        0.0558325536549091,
+        -3.8964569568634
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241671092808247
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.37092004693113,
+      "elapsed": 2.81666666666666,
+      "end": [
+        63.9972839355469,
+        0.0558257363736629,
+        -1.39041757583618
+      ],
+      "horizontal_error": 0.0904581695795059,
+      "label": "front_to_round_kitchen_reverse/3",
+      "lowest_y": 0.0557333342730999,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559059157967567,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        63.9256248474121,
+        0.0558325834572315,
+        -3.7602322101593
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -1.30000019073486
+      ],
+      "vertical_error": -0.0241742618381977
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.58369846595451,
+      "elapsed": 3.06666666666666,
+      "end": [
+        63.9999160766602,
+        0.0448250360786915,
+        1.213982462883
+      ],
+      "horizontal_error": 0.0860177725553513,
+      "label": "front_to_round_kitchen_reverse/4",
+      "lowest_y": 0.0391316935420036,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.055933304131031,
+      "reason": "arrived",
+      "scenario": "agasa_garage",
+      "start": [
+        63.9972839355469,
+        0.0558367818593979,
+        -1.36710977554321
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "vertical_error": -0.0351749621331692
+    }
+  ],
+  "scenario_start_placements": [
+    {
+      "from": [
+        8.65117359161377,
+        0.130838215351105,
+        -0.194447383284569
+      ],
+      "interior_teleports": 0,
+      "scenario": "agasa_basement",
+      "to": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "type": "existing_outdoor_destination_menu_spawn"
+    },
+    {
+      "from": [
+        63.9999084472656,
+        0.0448364801704884,
+        1.2242157459259
+      ],
+      "interior_teleports": 0,
+      "scenario": "agasa_gallery",
+      "to": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "type": "existing_outdoor_destination_menu_spawn"
+    },
+    {
+      "from": [
+        70.3199081420898,
+        3.17583656311035,
+        -4.02130794525146
+      ],
+      "interior_teleports": 0,
+      "scenario": "agasa_kitchen",
+      "to": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "type": "existing_outdoor_destination_menu_spawn"
+    },
+    {
+      "from": [
+        63.9999084472656,
+        0.0448130071163177,
+        1.22398817539215
+      ],
+      "interior_teleports": 0,
+      "scenario": "agasa_garage",
+      "to": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "type": "existing_outdoor_destination_menu_spawn"
+    }
+  ],
+  "simulated_seconds": 347.916666666679,
+  "trace_file": "physical-route-trace.json"
+}

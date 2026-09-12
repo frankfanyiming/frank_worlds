@@ -167,7 +167,13 @@ export default function WorldHub() {
           </button>
           <strong>{t(titleKey[world])}</strong>
           <div>
-            <button onClick={() => navigate('expansion/' + world)}>
+            <label className="world-language">
+              <Globe2 size={17} />
+              <select aria-label={t('language')} value={locale} onChange={e => setLocale(e.target.value as Locale)}>
+                {languages.map(l => <option key={l.id} value={l.id}>{l.label}</option>)}
+              </select>
+            </label>
+            <button className="world-expand" aria-label={t('expand')} onClick={() => navigate('expansion/' + world)}>
               <GitMerge size={17} />
               {t('expand')}
             </button>
@@ -184,7 +190,7 @@ export default function WorldHub() {
           <Suspense
             fallback={<div className="xl-full-loading">{t('preparing')}</div>}
           >
-            <Doraemon sound={sound} />
+            <Doraemon sound={sound} locale={locale} />
           </Suspense>
         ) : (
           <NativeWorld
@@ -518,6 +524,8 @@ function NativeWorld({
   useEffect(() => {
     setReady(false);
     setError(false);
+    setProgress(0);
+    setDetail('');
     lastActivity.current = Date.now();
     let started = false;
     const watchdog = window.setInterval(() => {
@@ -546,7 +554,7 @@ function NativeWorld({
       window.removeEventListener('message', fn);
       window.clearInterval(watchdog);
     };
-  }, [world, retry]);
+  }, [world, retry, locale]);
   useEffect(() => {
     frame.current?.contentWindow?.postMessage(
       { type: 'xlands-sound', enabled: sound },
@@ -557,10 +565,10 @@ function NativeWorld({
     <div className="native-world">
       {!error && <iframe
         ref={frame}
-        key={retry}
+        key={world + locale + retry}
         title={t(titleKey[world])}
         src={
-          assetPath('worlds/' + world + '/index.html') + '?v=homes-17&lang=' +
+          assetPath('worlds/' + world + '/index.html') + '?v=mobile-18&lang=' +
           locale +
           '&sound=' +
           (initialSound.current ? '1' : '0')
@@ -570,9 +578,10 @@ function NativeWorld({
         onError={() => setError(true)}
       />}
       {!ready && (
-        <div className="native-loading">
+        <div className={'native-loading ' + (world === 'conan' ? 'conan-loading' : '')}>
           <img src={assetPath('covers/' + world + '.png')} alt="" />
           <div>
+            {world === 'conan' && <div className="aptx-capsule" aria-hidden="true" style={{ '--download': `${Math.max(0, Math.min(100, progress))}%` } as React.CSSProperties}><i /><b>APTX</b><span>4869</span></div>}
             <h2>{error ? t('error') : t('preparing')}</h2>
             <progress value={progress} max={100} aria-label={t('loading')} />
             <span>{Math.round(progress)}%</span>

@@ -1,0 +1,287 @@
+{
+  "collider_versions": [
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Basement_Collision",
+      "native_triangles": 768,
+      "web_triangles": 768,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Bathroom_Collision",
+      "native_triangles": 648,
+      "web_triangles": 648,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Bedroom_Collision",
+      "native_triangles": 324,
+      "web_triangles": 324,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Facade_Collision",
+      "native_triangles": 3820,
+      "web_triangles": 3820,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Gallery_Collision",
+      "native_triangles": 1412,
+      "web_triangles": 1412,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Garage_Collision",
+      "native_triangles": 1836,
+      "web_triangles": 1836,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Garden_Collision",
+      "native_triangles": 432,
+      "web_triangles": 432,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Ground_Collision",
+      "native_triangles": 556,
+      "web_triangles": 556,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Hall_Collision",
+      "native_triangles": 1136,
+      "web_triangles": 1136,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Kitchen_Collision",
+      "native_triangles": 1024,
+      "web_triangles": 1024,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Laboratory_Collision",
+      "native_triangles": 756,
+      "web_triangles": 756,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Living_Collision",
+      "native_triangles": 324,
+      "web_triangles": 324,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Stair_Collision",
+      "native_triangles": 542,
+      "web_triangles": 542,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Tower_Collision",
+      "native_triangles": 2088,
+      "web_triangles": 2088,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_0_Collision",
+      "native_triangles": 216,
+      "web_triangles": 216,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_1_Collision",
+      "native_triangles": 216,
+      "web_triangles": 216,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_2_Collision",
+      "native_triangles": 216,
+      "web_triangles": 216,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_3_Collision",
+      "native_triangles": 216,
+      "web_triangles": 216,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_4_Collision",
+      "native_triangles": 216,
+      "web_triangles": 216,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_5_Collision",
+      "native_triangles": 216,
+      "web_triangles": 216,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_Sidewalk_Collision",
+      "native_triangles": 216,
+      "web_triangles": 216,
+      "same_triangles_at_1e-5m": true
+    },
+    {
+      "asset": "street-block",
+      "node": "IrohaSushi_Collision",
+      "native_triangles": 864,
+      "web_triangles": 864,
+      "same_triangles_at_1e-5m": true
+    }
+  ],
+  "terrain_checks": [
+    {
+      "version": "source",
+      "inside_stair_hole_clear_rays": 60,
+      "outside_ground_present_rays": 12,
+      "embedded_image_sha256": [],
+      "remaining_isolated_iroha_triangles": 0
+    },
+    {
+      "version": "web-project",
+      "inside_stair_hole_clear_rays": 60,
+      "outside_ground_present_rays": 12,
+      "embedded_image_sha256": [],
+      "remaining_isolated_iroha_triangles": 0
+    }
+  ],
+  "visual_detail_revision": [
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Basement_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Bathroom_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Bedroom_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Facade_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Gallery_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Garage_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Garden_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Ground_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Hall_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Kitchen_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Laboratory_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Living_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Stair_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "agasa",
+      "node": "AgasaReference_Tower_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_0_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_1_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_2_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_3_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_4_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_5_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "street-block",
+      "node": "ConnectedBlock_Sidewalk_Collision",
+      "unchanged": true
+    },
+    {
+      "asset": "street-block",
+      "node": "IrohaSushi_Collision",
+      "unchanged": true
+    }
+  ],
+  "passed": true
+}

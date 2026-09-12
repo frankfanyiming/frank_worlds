@@ -74,7 +74,7 @@
 .xlands select {
   padding-right: 30px;
 }
-.xlands label:not(.language-select):not(.consent):not(.color-label) {
+.xlands label:not(.language-select):not(.consent):not(.color-label):not(.world-language) {
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -1626,3 +1626,38 @@
     scroll-behavior: auto !important;
   }
 }
+
+/* Mobile portal and embedded worlds share one safe-area-aware header height. */
+.xl-world{--world-nav-height:calc(58px + env(safe-area-inset-top));height:100dvh;min-height:0;overflow:hidden}
+.world-nav{height:var(--world-nav-height);padding-top:env(safe-area-inset-top);padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right))}
+.xl-world .town-app{top:var(--world-nav-height)}
+.native-world{height:calc(100dvh - var(--world-nav-height));min-height:0}
+.world-language{position:relative;display:flex;align-items:center;min-height:44px;gap:5px;min-width:0}
+.world-language select{border:0;background:transparent;width:90px;font-size:12px;padding:8px 0;min-height:44px;cursor:pointer}
+.native-loading>div{max-width:calc(100% - 36px);overflow-wrap:anywhere}
+.native-loading progress{max-width:80vw}
+.aptx-capsule{position:relative;display:block;margin:0 auto 34px;width:170px;height:62px;border:2px solid #8c3038;border-radius:40px;overflow:hidden;background:linear-gradient(90deg,#fff9ef 50%,#b5444d 50%);box-shadow:0 7px 20px #54252c18;transform:rotate(-14deg);color:#7d2730}
+.aptx-capsule i{position:absolute;inset:0;background:#ffffff80;clip-path:inset(0 0 0 var(--download,0%));transition:clip-path .15s}
+.aptx-capsule b,.aptx-capsule span{position:absolute;top:17px;font-size:15px;letter-spacing:1px}
+.aptx-capsule b{left:14px;color:#6c3036}.aptx-capsule span{right:15px}
+.conan-loading progress{accent-color:#a53643}
+@media(max-width:720px){
+ .xl-world{--world-nav-height:calc(56px + env(safe-area-inset-top))}
+ .world-nav{gap:8px}.world-nav>strong{flex:1;min-width:0;max-width:none;font-size:12px}
+ .world-nav>div{gap:4px;flex-shrink:0}.world-nav button{min-height:44px;min-width:44px;padding:8px;font-size:12px}
+ .world-nav .world-expand{font-size:0;gap:0}.world-nav .world-expand svg{width:19px;height:19px}
+ .world-language{width:40px;justify-content:center}.world-language select{position:absolute;inset:0;opacity:0;width:100%}.world-language>svg{width:19px}
+ .hub-shell{padding-left:max(18px,env(safe-area-inset-left));padding-right:max(18px,env(safe-area-inset-right))}
+ .hub-header{height:auto;min-height:88px;padding-top:calc(12px + env(safe-area-inset-top));padding-bottom:12px;flex-wrap:wrap;gap:10px}
+ .hub-header nav{gap:8px;flex-wrap:wrap;justify-content:flex-end}.hub-header nav>.icon-button{display:inline-flex;min-height:44px;min-width:44px;padding:10px}
+ .hub-header nav>button,.hub-header nav a,.language-select{min-height:44px}.hub-header nav .guest-link{display:inline-flex}
+ .hub-header .language-select select{font-size:14px;max-width:94px;min-height:44px}
+ .xl-modal{max-height:calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));max-width:calc(100vw - 24px);padding:20px;overflow:auto;overscroll-behavior:contain}
+ .xlands input,.xlands select,.xlands textarea{font-size:16px}.xl-modal>header{gap:12px;align-items:flex-start}.xl-modal h2{overflow-wrap:anywhere;min-width:0}
+ .xl-modal .segmented{flex-wrap:wrap}.xl-modal .segmented button{white-space:normal;min-height:44px}.modal-footer{flex-wrap:wrap}
+ .studio-workspace,.studio-tools,.studio-agent{min-width:0}.studio-header{flex-wrap:wrap;gap:10px}.studio-header>.row-actions{flex-wrap:wrap}
+ .xlands .row-actions{flex-wrap:wrap}.xlands button{touch-action:manipulation}.native-controls{display:none}
+}
+@media(any-pointer:coarse){.native-controls{display:none}.world-nav button{min-height:44px;min-width:44px}.xl-modal button{min-height:44px}}
+@media(max-height:500px) and (orientation:landscape){.xl-world{--world-nav-height:calc(48px + env(safe-area-inset-top))}.world-nav>strong{font-size:12px}.world-nav button{min-height:42px}.native-loading h2{font-size:20px;margin:6px}.aptx-capsule{margin-bottom:22px;width:140px;height:54px}.aptx-capsule b,.aptx-capsule span{top:13px;font-size:13px}}
+@media(any-pointer:coarse){.hub-header nav>button,.hub-header nav>a,.hub-header nav>.icon-button,.hub-header .language-select,.hub-header select{min-height:44px}.hub-header nav>.icon-button{min-width:44px}.hub-header nav>a{display:inline-flex;align-items:center}}

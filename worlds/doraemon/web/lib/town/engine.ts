@@ -32,7 +32,7 @@ export class TownEngine {
  modelLoader?:GLTFLoader; bedroomTask?:Promise<boolean>; navigation=0; bedroomQueued=false;
  world?:THREE.Group; player=new THREE.Group(); playerPosition=new THREE.Vector3(-9.6,.23,6.3);
  target=new THREE.Vector3(-8,1,-2); targetGoal=this.target.clone(); azimuth=.63; distance=41; yaw=0; pitch=0;
- groundSurfaces:GroundSurface[]=[]; assetRevision=0; colliders:Collider[]=[]; slidingDoors:{object:THREE.Object3D;collider:Collider;axis:'x'|'z';origin:number;sign:number;travel:number;target:number}[]=[]; keys=new Set<string>(); pointer={down:false,x:0,y:0,moved:0}; paused=false; touch={x:0,y:0};
+ groundSurfaces:GroundSurface[]=[]; assetRevision=0; colliders:Collider[]=[]; slidingDoors:{object:THREE.Object3D;collider:Collider;axis:'x'|'z';origin:number;sign:number;travel:number;target:number}[]=[]; keys=new Set<string>(); pointer={down:false,id:-1,x:0,y:0,moved:0}; paused=false; touchRunning=false; touch={x:0,y:0};
  clock=new THREE.Clock();frameSeconds=1/60;shadowTimer=0; raf=0; elapsed=0; sendAt=0; cameraTarget=new THREE.Vector3(); walkTarget:THREE.Vector3|null=null;
  ring:THREE.Mesh; resizeObserver:ResizeObserver; quality=true; disposers:(()=>void)[]=[]; dead=false; dialogueIndex=0; motions=new Map<string,CharacterMotion>();
  constructor(public host:HTMLDivElement,public publish:(s:TownState)=>void){
@@ -138,6 +138,8 @@ export class TownEngine {
  cancelBedroomEntry(){this.navigation++;if(this.state.bedroom)this.state.bedroom.requested=false;this.keys.clear();this.touch={x:0,y:0};this.walkTarget=null;this.emit();}
  retryBedroomEntry(){void this.teleport('bedroom');}
  queueBedroom(){
+  // Mobile opens the 244 MB original room only on entry; do not compete with walking frames.
+  if(typeof matchMedia==='function'&&matchMedia('(any-pointer:coarse)').matches)return;
   if(this.bedroomQueued)return;this.bedroomQueued=true;
   // Start after a visible town frame, leaving initial navigation and paint unblocked.
   const timer=setTimeout(()=>{if(!this.dead&&this.state.bedroom?.status==='idle')void this.ensureBedroom();},1500);
@@ -158,19 +160,20 @@ export class TownEngine {
  resize(){const w=this.host.clientWidth,h=this.host.clientHeight;if(!w||!h)return;this.camera.aspect=w/h;this.camera.updateProjectionMatrix();this.renderer.setSize(w,h);this.composer?.setSize(w,h);}
  bind(){const canvas=this.renderer.domElement;
   this.on(window,'keydown',((e:KeyboardEvent)=>{if((e.target as HTMLElement)?.closest('input,textarea,[role="dialog"]'))return;if(['KeyW','KeyA','KeyS','KeyD','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.code))e.preventDefault();this.keys.add(e.code);if(e.repeat)return;if(e.code==='KeyV')this.setMode(this.state.mode==='orbit'?'first':'orbit');if(e.code==='KeyE')this.interact();if(e.code==='KeyR')this.toggleCutaway();if(e.code==='Space'&&(this.adventure.state.flying||this.adventure.state.activity==='baseball'||this.adventure.state.activity==='dodge')){e.preventDefault();this.adventure.action();}if(e.code==='KeyC')this.adventure.land();if(e.code==='Escape'){this.state.actor=null;this.emit();}}) as EventListener);
-  this.on(window,'keyup',((e:KeyboardEvent)=>{this.keys.delete(e.code);}) as EventListener);this.on(window,'blur',()=>{this.keys.clear();this.touch={x:0,y:0};this.pointer.down=false;});
-  this.on(document,'visibilitychange',()=>{if(document.hidden){this.keys.clear();this.touch={x:0,y:0};}});
-  this.on(canvas,'pointerdown',((e:PointerEvent)=>{if(!this.state.ready)return;canvas.focus({preventScroll:true});this.pointer={down:true,x:e.clientX,y:e.clientY,moved:0};canvas.setPointerCapture(e.pointerId);}) as EventListener);
-  this.on(canvas,'pointermove',((e:PointerEvent)=>{if(!this.pointer.down&&document.pointerLockElement!==canvas)return;const dx=document.pointerLockElement?e.movementX:e.clientX-this.pointer.x,dy=document.pointerLockElement?e.movementY:e.clientY-this.pointer.y;this.pointer.x=e.clientX;this.pointer.y=e.clientY;this.pointer.moved+=Math.abs(dx)+Math.abs(dy);if(this.state.mode==='first'){this.yaw-=dx*.004;this.pitch=THREE.MathUtils.clamp(this.pitch-dy*.003,-1.35,1.35);}else{this.azimuth-=dx*.005;}}) as EventListener);
-  this.on(canvas,'pointerup',((e:PointerEvent)=>{this.pointer.down=false;if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);if(this.pointer.moved<6&&this.state.mode==='orbit')this.pointTo(e.clientX,e.clientY);}) as EventListener);
-  this.on(canvas,'pointercancel',()=>{this.pointer.down=false;});
+  this.on(window,'keyup',((e:KeyboardEvent)=>{this.keys.delete(e.code);}) as EventListener);this.on(window,'blur',()=>{this.keys.clear();this.touch={x:0,y:0};this.touchRunning=false;this.pointer.down=false;});
+  this.on(document,'visibilitychange',()=>{if(document.hidden){this.keys.clear();this.touch={x:0,y:0};this.touchRunning=false;this.pointer.down=false;}});
+  this.on(canvas,'pointerdown',((e:PointerEvent)=>{if(!this.state.ready||this.paused||this.pointer.down)return;canvas.focus({preventScroll:true});this.pointer={down:true,id:e.pointerId,x:e.clientX,y:e.clientY,moved:0};canvas.setPointerCapture(e.pointerId);}) as EventListener);
+  this.on(canvas,'pointermove',((e:PointerEvent)=>{if(this.paused||((!this.pointer.down||e.pointerId!==this.pointer.id)&&document.pointerLockElement!==canvas))return;const dx=document.pointerLockElement?e.movementX:e.clientX-this.pointer.x,dy=document.pointerLockElement?e.movementY:e.clientY-this.pointer.y;this.pointer.x=e.clientX;this.pointer.y=e.clientY;this.pointer.moved+=Math.abs(dx)+Math.abs(dy);if(this.state.mode==='first'){this.yaw-=dx*.004;this.pitch=THREE.MathUtils.clamp(this.pitch-dy*.003,-1.35,1.35);}else{this.azimuth-=dx*.005;}}) as EventListener);
+  this.on(canvas,'pointerup',((e:PointerEvent)=>{if(e.pointerId!==this.pointer.id||!this.pointer.down)return;this.pointer.down=false;if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId);if(this.pointer.moved<6&&this.state.mode==='orbit')this.pointTo(e.clientX,e.clientY);}) as EventListener);
+  for(const event of ['pointercancel','lostpointercapture'])this.on(canvas,event,((e:PointerEvent)=>{if(e.pointerId===this.pointer.id)this.pointer.down=false;}) as EventListener);
   this.on(canvas,'wheel',((e:WheelEvent)=>{e.preventDefault();if(this.state.mode==='orbit')this.distance=THREE.MathUtils.clamp(this.distance*Math.exp(e.deltaY*.001),this.state.inside?5:9,175);}) as EventListener,{passive:false});
   this.on(canvas,'contextmenu',e=>e.preventDefault());
   this.on(canvas,'webglcontextlost',e=>{e.preventDefault();this.state.ready=false;this.loadedForFrame=false;this.state.error='图形资源不足或画面被系统暂停，请用流畅模式重新打开。';this.emit();});
  }
  setMode(mode:ViewMode){this.state.mode=mode;this.walkTarget=null;if(mode==='first'){this.yaw=this.state.floor?Math.PI:0;this.pitch=this.state.place==='bedroom'?-.15:0;}else{document.exitPointerLock?.();this.distance=this.state.inside?(this.state.floor?10:15):35;this.target.copy(this.playerPosition).add(new THREE.Vector3(0,1,0));}this.layers();this.emit();}
- setPaused(value:boolean){this.paused=value;this.keys.clear();this.touch={x:0,y:0};}
- setTouch(x:number,y:number){this.touch={x,y};}
+ setPaused(value:boolean){this.paused=value;this.keys.clear();this.touch={x:0,y:0};this.touchRunning=false;this.pointer.down=false;}
+ setTouch(x:number,y:number){this.touch={x:THREE.MathUtils.clamp(x,-1,1),y:THREE.MathUtils.clamp(y,-1,1)};}
+ setTouchRun(pressed:boolean){this.touchRunning=pressed;}
  createEffects(){this.composer=new EffectComposer(this.renderer);this.composer.addPass(new RenderPass(this.scene,this.camera));this.ao=new SSAOPass(this.scene,this.camera,Math.max(1,this.host.clientWidth),Math.max(1,this.host.clientHeight));this.ao.kernelRadius=.72;this.ao.minDistance=.003;this.ao.maxDistance=.11;this.composer.addPass(this.ao);this.composer.addPass(new OutputPass());}
  setQuality(value:boolean){this.quality=value;if(value&&!this.composer)this.createEffects();if(!value){this.ao?.dispose();this.composer?.dispose();this.ao=undefined;this.composer=undefined;}this.renderer.setPixelRatio(value?Math.min(devicePixelRatio,1.5):1);this.sun.shadow.mapSize.set(value?2048:1024,value?2048:1024);this.sun.shadow.map?.dispose();this.sun.shadow.map=null;this.resize();}
 
@@ -237,7 +240,7 @@ export class TownEngine {
   const direction=new THREE.Vector3();const angle=this.state.mode==='first'?this.yaw:this.azimuth;
   if(f||r){this.walkTarget=null;direction.set(-Math.sin(angle)*f+Math.cos(angle)*r,0,-Math.cos(angle)*f-Math.sin(angle)*r);}
   else if(this.walkTarget){direction.subVectors(this.walkTarget,this.playerPosition);direction.y=0;if(direction.length()<.18){this.walkTarget=null;direction.set(0,0,0);}}
-  const moving=direction.lengthSq()>.005;const beforeMove=this.playerPosition.clone();if(moving){direction.normalize();const speed=(k.has('ShiftLeft')||k.has('ShiftRight')?1.95:1.05)*dt;const old=this.playerPosition.clone();const x=THREE.MathUtils.clamp(old.x+direction.x*speed,TOWN_BOUNDS.x0,TOWN_BOUNDS.x1),sy=-old.z;const z=groundHeight(x,sy,old.y,this.groundSurfaces);
+  const moving=direction.lengthSq()>.005;const beforeMove=this.playerPosition.clone();if(moving){direction.normalize();const speed=(k.has('ShiftLeft')||k.has('ShiftRight')||this.touchRunning?1.95:1.05)*dt;const old=this.playerPosition.clone();const x=THREE.MathUtils.clamp(old.x+direction.x*speed,TOWN_BOUNDS.x0,TOWN_BOUNDS.x1),sy=-old.z;const z=groundHeight(x,sy,old.y,this.groundSurfaces);
    if(!collides(x,sy,z,this.colliders)&&!this.traffic?.collides(x,sy,z))this.playerPosition.x=x;
    const nz=THREE.MathUtils.clamp(old.z+direction.z*speed,-TOWN_BOUNDS.y1,-TOWN_BOUNDS.y0),nzY=groundHeight(this.playerPosition.x,-nz,old.y,this.groundSurfaces);if(!collides(this.playerPosition.x,-nz,nzY,this.colliders)&&!this.traffic?.collides(this.playerPosition.x,-nz,nzY))this.playerPosition.z=nz;
    this.playerPosition.y=groundHeight(this.playerPosition.x,-this.playerPosition.z,old.y,this.groundSurfaces);

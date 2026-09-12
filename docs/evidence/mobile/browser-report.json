@@ -1,0 +1,427 @@
+{
+  "environment": "Desktop Chromium with mobile viewport and touch emulation; not a physical phone",
+  "checks": [
+    {
+      "name": "portal fits 390x844",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 390,
+          "h": 844,
+          "scroll": 390
+        },
+        "controls": [
+          {
+            "text": "来访本",
+            "r": {
+              "x": 18,
+              "y": 59.1875,
+              "w": 67,
+              "h": 44
+            }
+          },
+          {
+            "text": "语言中文繁體中文English日本語한국어",
+            "r": {
+              "x": 150.890625,
+              "y": 59.1875,
+              "w": 94,
+              "h": 44
+            }
+          },
+          {
+            "text": "",
+            "r": {
+              "x": 252.890625,
+              "y": 59.1875,
+              "w": 44,
+              "h": 44
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "portal fits 844x390",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 844,
+          "h": 390,
+          "scroll": 844
+        },
+        "controls": [
+          {
+            "text": "来访本",
+            "r": {
+              "x": 482.953125,
+              "y": 30,
+              "w": 67,
+              "h": 44
+            }
+          },
+          {
+            "text": "语言中文繁體中文English日本語한국어",
+            "r": {
+              "x": 644,
+              "y": 30,
+              "w": 116,
+              "h": 44
+            }
+          },
+          {
+            "text": "",
+            "r": {
+              "x": 776,
+              "y": 30,
+              "w": 44,
+              "h": 44
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "portal fits 360x640",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 360,
+          "h": 640,
+          "scroll": 360
+        },
+        "controls": [
+          {
+            "text": "来访本",
+            "r": {
+              "x": 18,
+              "y": 59.1875,
+              "w": 67,
+              "h": 44
+            }
+          },
+          {
+            "text": "语言中文繁體中文English日本語한국어",
+            "r": {
+              "x": 150.890625,
+              "y": 59.1875,
+              "w": 94,
+              "h": 44
+            }
+          },
+          {
+            "text": "",
+            "r": {
+              "x": 252.890625,
+              "y": 59.1875,
+              "w": 44,
+              "h": 44
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "portal language and guestbook remain usable",
+      "pass": true,
+      "detail": {
+        "language": "en",
+        "guestbookWidth": 354
+      }
+    },
+    {
+      "name": "Doraemon real scene starts on mobile",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "quality": false,
+        "shaderErrors": []
+      }
+    },
+    {
+      "name": "Doraemon canvas and touch controls fit 390",
+      "pass": true,
+      "detail": {
+        "canvas": {
+          "x": 0,
+          "y": 56,
+          "width": 390,
+          "height": 788
+        },
+        "controls": [
+          {
+            "x": 20,
+            "y": 700,
+            "w": 116,
+            "h": 116
+          },
+          {
+            "x": 253,
+            "y": 699,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "x": 318,
+            "y": 699,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "x": 253,
+            "y": 764,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "x": 318,
+            "y": 764,
+            "w": 56,
+            "h": 56
+          }
+        ]
+      }
+    },
+    {
+      "name": "Doraemon canvas and touch controls fit 844",
+      "pass": true,
+      "detail": {
+        "canvas": {
+          "x": 0,
+          "y": 48,
+          "width": 844,
+          "height": 342
+        },
+        "controls": [
+          {
+            "x": 20,
+            "y": 274,
+            "w": 96,
+            "h": 96
+          },
+          {
+            "x": 615,
+            "y": 326,
+            "w": 48,
+            "h": 48
+          },
+          {
+            "x": 670,
+            "y": 326,
+            "w": 48,
+            "h": 48
+          },
+          {
+            "x": 725,
+            "y": 326,
+            "w": 48,
+            "h": 48
+          },
+          {
+            "x": 780,
+            "y": 326,
+            "w": 48,
+            "h": 48
+          }
+        ]
+      }
+    },
+    {
+      "name": "Doraemon real concurrent joystick + look + run",
+      "pass": true,
+      "detail": {
+        "distance": 2.4695957261078845,
+        "start": {
+          "x": -9.6,
+          "y": -6.3,
+          "height": 0.133
+        },
+        "end": {
+          "x": -9.169340780524388,
+          "y": -3.8682443200249357,
+          "height": 0.194
+        }
+      }
+    },
+    {
+      "name": "Doraemon mobile settings open and close",
+      "pass": true,
+      "detail": {
+        "x": 19.5,
+        "y": 12,
+        "width": 351,
+        "height": 820
+      }
+    },
+    {
+      "name": "Doraemon requested bedroom and interior light",
+      "pass": true,
+      "detail": {
+        "house": "home",
+        "bedroom": {
+          "status": "ready",
+          "progress": 100,
+          "requested": false,
+          "error": null
+        },
+        "light": {
+          "windowSources": 7,
+          "practicals": 5,
+          "daylightIntensity": 1.9
+        }
+      }
+    },
+    {
+      "name": "company site fits 390x844",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 390,
+          "h": 844,
+          "scroll": 390
+        },
+        "buttons": [
+          {
+            "x": 111.4375,
+            "y": 445.4375,
+            "w": 44,
+            "h": 44
+          },
+          {
+            "x": 234.5625,
+            "y": 445.4375,
+            "w": 44,
+            "h": 44
+          },
+          {
+            "x": 222,
+            "y": 782,
+            "w": 84.21875,
+            "h": 44
+          },
+          {
+            "x": 318.21875,
+            "y": 782,
+            "w": 52.28125,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "name": "company site fits 844x390",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 844,
+          "h": 390,
+          "scroll": 844
+        },
+        "buttons": [
+          {
+            "x": 343.4375,
+            "y": 281.1875,
+            "w": 44,
+            "h": 44
+          },
+          {
+            "x": 456.5625,
+            "y": 281.1875,
+            "w": 44,
+            "h": 44
+          },
+          {
+            "x": 679.875,
+            "y": 336,
+            "w": 77.203125,
+            "h": 44
+          },
+          {
+            "x": 769.078125,
+            "y": 336,
+            "w": 47.921875,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "name": "company site fits 360x640",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 360,
+          "h": 640,
+          "scroll": 360
+        },
+        "buttons": [
+          {
+            "x": 98,
+            "y": 370.5,
+            "w": 44,
+            "h": 44
+          },
+          {
+            "x": 218,
+            "y": 370.5,
+            "w": 44,
+            "h": 44
+          },
+          {
+            "x": 193.5,
+            "y": 588,
+            "w": 84.21875,
+            "h": 44
+          },
+          {
+            "x": 289.71875,
+            "y": 588,
+            "w": 52.28125,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "name": "company touch carousel and video dialog",
+      "pass": true,
+      "detail": {
+        "before": "03 / 05",
+        "after": "04 / 05",
+        "dialog": {
+          "x": 19,
+          "y": 283.5625,
+          "width": 352,
+          "height": 276.875
+        }
+      }
+    },
+    {
+      "name": "company form fits portrait",
+      "pass": true,
+      "detail": [
+        {
+          "w": 343.21875,
+          "x": 23.390625,
+          "font": "16px"
+        },
+        {
+          "w": 343.21875,
+          "x": 23.390625,
+          "font": "16px"
+        },
+        {
+          "w": 343.21875,
+          "x": 23.390625,
+          "font": "16px"
+        },
+        {
+          "w": 343.21875,
+          "x": 23.390625,
+          "font": "16px"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}

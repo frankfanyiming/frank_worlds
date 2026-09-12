@@ -1,0 +1,207 @@
+{
+  "environment": "Final exported Conan inside the actual XLands portal iframe; desktop Chromium mobile viewport and touch emulation, not a physical phone",
+  "checks": [
+    {
+      "name": "Portrait touch opens DOM menu without controls covering it",
+      "pass": true,
+      "detail": {
+        "dialog": {
+          "x": 15,
+          "y": 12,
+          "width": 360,
+          "height": 764,
+          "top": 12,
+          "right": 375,
+          "bottom": 776,
+          "left": 15
+        },
+        "buttons": [
+          {
+            "text": "街区",
+            "height": 48
+          },
+          {
+            "text": "切换视角",
+            "height": 48
+          },
+          {
+            "text": "昼夜",
+            "height": 48
+          },
+          {
+            "text": "门外",
+            "height": 48
+          },
+          {
+            "text": "白罗咖啡厅",
+            "height": 48
+          },
+          {
+            "text": "咖啡厅后仓库",
+            "height": 48
+          },
+          {
+            "text": "咖啡厅洗手间",
+            "height": 48
+          },
+          {
+            "text": "毛利侦探事务所",
+            "height": 48
+          },
+          {
+            "text": "事务所茶水间与档案",
+            "height": 48
+          },
+          {
+            "text": "毛利家客厅与厨房",
+            "height": 48
+          },
+          {
+            "text": "小五郎和柯南的卧室",
+            "height": 48
+          },
+          {
+            "text": "小兰的卧室",
+            "height": 48
+          },
+          {
+            "text": "毛利家洗漱间",
+            "height": 48
+          },
+          {
+            "text": "门外",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 玄关",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 厨房餐厅",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 客厅",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 主卧",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 新一卧室",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 二楼客卧",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 后翼客房",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 后翼卧室",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 后翼上层客房",
+            "height": 48
+          },
+          {
+            "text": "工藤家 · 挑空书房",
+            "height": 48
+          },
+          {
+            "text": "门外",
+            "height": 48
+          },
+          {
+            "text": "阿笠宅 · 浴室",
+            "height": 48
+          },
+          {
+            "text": "阿笠宅 · 环形厨房",
+            "height": 48
+          },
+          {
+            "text": "阿笠宅 · 双床休息区",
+            "height": 48
+          },
+          {
+            "text": "阿笠宅 · 客厅",
+            "height": 48
+          },
+          {
+            "text": "阿笠宅 · 圆塔楼梯",
+            "height": 48
+          },
+          {
+            "text": "阿笠宅 · 二楼环廊",
+            "height": 48
+          },
+          {
+            "text": "阿笠宅 · 地下研究室",
+            "height": 48
+          },
+          {
+            "text": "阿笠宅 · 发明工作间",
+            "height": 48
+          },
+          {
+            "text": "阿笠宅 · 后车库",
+            "height": 48
+          }
+        ],
+        "controls": "none",
+        "locked": true
+      }
+    },
+    {
+      "name": "Native menu scrolls using actual touch swipes",
+      "pass": true,
+      "before": 0,
+      "after": 1067
+    },
+    {
+      "name": "Chinese kitchen selection by actual touch tap",
+      "pass": true,
+      "dialogClosed": true,
+      "touchControlsRestored": true,
+      "evidence": "04-kitchen-touch-selected.png"
+    },
+    {
+      "name": "Japanese DOM destinations retain coordinate callbacks on actual touch",
+      "pass": true,
+      "menuItem": "阿笠邸 · 円形キッチン",
+      "viewport": "844x390",
+      "dialogClosed": true,
+      "touchControlsRestored": true,
+      "evidence": "06-japanese-kitchen-touch.png"
+    },
+    {
+      "name": "Frog menu to bag then continue walking by actual touch",
+      "pass": true,
+      "viewport": "390x844",
+      "open": {
+        "locked": true,
+        "controls": "none"
+      },
+      "closed": {
+        "locked": false,
+        "controls": "block"
+      },
+      "evidence": [
+        "08-frog-menu.png",
+        "09-frog-bag-open.png",
+        "10-frog-bag-closed.png"
+      ]
+    }
+  ],
+  "errors": [],
+  "console": [
+    "BLENDER_TOWN_READY buildings=3 tripo_characters=11 cars=6 remote_rooms=0",
+    "BLENDER_TOWN_READY buildings=3 tripo_characters=11 cars=6 remote_rooms=0"
+  ],
+  "scope": "Conan embedded portal portrait and landscape menus in Chinese and Japanese; Frog standalone portrait bag open/close"
+}

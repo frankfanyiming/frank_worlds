@@ -1,0 +1,94 @@
+{
+  "version": 2,
+  "units": "meters and seconds",
+  "root_motion": "in_place",
+  "playback": "Use horizontal speed measured from displacement after collisions divided by clip reference speed.",
+  "conan": {
+    "height": 1.05,
+    "forward": "Godot +Z",
+    "walk_speed": 0.7,
+    "run_speed": 1.5,
+    "cycles": {
+      "Idle": {
+        "seconds": 3.0,
+        "fps": 30,
+        "frames": 90
+      },
+      "Walk": {
+        "seconds": 0.8,
+        "fps": 30,
+        "frames": 24
+      },
+      "Run": {
+        "seconds": 0.6,
+        "fps": 30,
+        "frames": 18
+      },
+      "Wave": {
+        "seconds": 2.0,
+        "fps": 30,
+        "frames": 60
+      },
+      "Talk": {
+        "seconds": 2.4,
+        "fps": 30,
+        "frames": 72
+      },
+      "Read": {
+        "seconds": 3.0,
+        "fps": 30,
+        "frames": 90
+      },
+      "Sit": {
+        "seconds": 3.0,
+        "fps": 30,
+        "frames": 90
+      }
+    },
+    "runtime_sha256": "808801e09b26c8adef8f02b5dd2b5fedd0f6b7d5b2f760a9ecc3bdade6396300"
+  },
+  "agasa": {
+    "height": 1.56,
+    "forward": "Godot +Z",
+    "walk_speed": 0.58,
+    "run_speed": 1.05,
+    "cycles": {
+      "Idle": {
+        "seconds": 3.0,
+        "fps": 30,
+        "frames": 90
+      },
+      "Walk": {
+        "seconds": 1.2,
+        "fps": 30,
+        "frames": 36
+      },
+      "Run": {
+        "seconds": 0.9333333333333333,
+        "fps": 30,
+        "frames": 28
+      },
+      "Wave": {
+        "seconds": 2.0,
+        "fps": 30,
+        "frames": 60
+      },
+      "Talk": {
+        "seconds": 2.4,
+        "fps": 30,
+        "frames": 72
+      },
+      "Read": {
+        "seconds": 3.0,
+        "fps": 30,
+        "frames": 90
+      },
+      "Sit": {
+        "seconds": 3.0,
+        "fps": 30,
+        "frames": 90
+      }
+    },
+    "runtime_sha256": "28230b5871c5cb0c2775e2d0dcbc377f01c78e9c69b7425cc359462325eb0985"
+  }
+}

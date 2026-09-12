@@ -24,6 +24,7 @@ function update(value, stage, force = false) {
   if (!force && Date.now() - lastPublished < 120) return;
   lastPublished = Date.now();
   progressBar.value = progress;
+  document.querySelector('.aptx-capsule')?.style?.setProperty('--download', progress + '%');
   percent.textContent = Math.floor(progress) + '%';
   if (stage) label.textContent = stage;
   parent.postMessage({type: 'xlands-progress', progress, detail: label.textContent}, '*');
@@ -56,14 +57,88 @@ window.addEventListener('message', e => {
     window.xlandsSound?.(queuedSound);
   }
 });
-for (const button of document.querySelectorAll('[data-action]')) {
-  button.addEventListener('pointerdown', e => {
-    e.preventDefault(); button.setPointerCapture(e.pointerId);
-    window.xlandsInput?.(button.dataset.action, true);
+// Each surface owns its pointer. Joystick, camera and action fingers are independent.
+function installTouchControls() {
+  const controls = {
+    'zh-CN': ['移动','拖动画面转视角','跑步','互动','跳跃','视角'],
+    'zh-TW': ['移動','拖動畫面轉視角','跑步','互動','跳躍','視角'],
+    en: ['Move','Drag the scene to look','Run','Interact','Jump','View'],
+    ja: ['移動','画面をドラッグして見回す','走る','調べる','ジャンプ','視点'],
+    ko: ['이동','화면을 끌어 둘러보기','달리기','상호작용','점프','시점'],
+  }[lang] || ['Move','Drag to look','Run','Interact','Jump','View'];
+  const stick = document.querySelector('#touch-stick'), canvas = document.querySelector('#canvas');
+  if (!stick?.addEventListener || !canvas?.addEventListener) return;
+  const knob = stick.querySelector('.touch-stick-knob');
+  let moveId = null, look = null, menuOpen = false, panelLocked = false;
+  const blocked = () => menuOpen || panelLocked;
+  const held = new Map();
+  for (const el of document.querySelectorAll('[data-touch-copy]')) el.textContent = controls[Number(el.dataset.touchCopy)];
+  stick.setAttribute('aria-label', controls[0]);
+  const move = event => {
+    if (event.pointerId !== moveId) return;
+    const box = stick.getBoundingClientRect(), radius = box.width * .32;
+    let x = (event.clientX - box.left - box.width / 2) / radius, y = (event.clientY - box.top - box.height / 2) / radius;
+    const length = Math.hypot(x, y); if (length > 1) { x /= length; y /= length; }
+    knob.style.transform = `translate(${x * radius}px, ${y * radius}px)`;
+    window.xlandsMove?.(length < .13 ? 0 : x, length < .13 ? 0 : y);
+  };
+  const endMove = event => { if (event.pointerId !== moveId) return; moveId = null; knob.style.transform = ''; window.xlandsMove?.(0, 0); };
+  stick.addEventListener('pointerdown', event => { if (blocked() || moveId !== null) return; event.preventDefault(); moveId = event.pointerId; stick.setPointerCapture(event.pointerId); move(event); });
+  stick.addEventListener('pointermove', move);
+  for (const type of ['pointerup','pointercancel','lostpointercapture']) stick.addEventListener(type, endMove);
+  for (const button of document.querySelectorAll('[data-action]')) {
+    const action = button.dataset.action, pointers = new Set(); held.set(button, pointers);
+    if (action === 'jump') { button.textContent = controls[4]; button.setAttribute('aria-label', controls[4]); }
+    button.addEventListener('pointerdown', event => {
+      if (blocked()) return;
+      event.preventDefault(); button.setPointerCapture(event.pointerId); pointers.add(event.pointerId); button.classList.add('held');
+      window.xlandsInput?.(action, true);
+    });
+    const release = event => {
+      if (!pointers.delete(event.pointerId) || pointers.size) return;
+      button.classList.remove('held'); window.xlandsInput?.(action, false);
+    };
+    for (const type of ['pointerup','pointercancel','lostpointercapture']) button.addEventListener(type, release);
+  }
+  canvas.addEventListener('pointerdown', event => { if (blocked() || event.pointerType !== 'touch' || look) return; look = {id:event.pointerId, x:event.clientX, y:event.clientY}; canvas.setPointerCapture(event.pointerId); });
+  canvas.addEventListener('pointermove', event => {
+    if (blocked() || !look || look.id !== event.pointerId) return;
+    const dx = event.clientX - look.x, dy = event.clientY - look.y; look.x = event.clientX; look.y = event.clientY;
+    window.xlandsLook?.(dx, dy);
   });
-  for (const type of ['pointerup', 'pointercancel', 'lostpointercapture'])
-    button.addEventListener(type, () => window.xlandsInput?.(button.dataset.action, false));
+  const endLook = event => { if (look?.id === event.pointerId) look = null; };
+  for (const type of ['pointerup','pointercancel','lostpointercapture']) canvas.addEventListener(type, endLook);
+  function reset() {
+    moveId = null; look = null; knob.style.transform = ''; window.xlandsMove?.(0, 0);
+    for (const [button, pointers] of held) { pointers.clear(); button.classList.remove('held'); window.xlandsInput?.(button.dataset.action, false); }
+  }
+  const sheet = document.createElement('div'); sheet.className = 'native-menu'; sheet.hidden = true;
+  const card = document.createElement('section'); card.className = 'native-menu-card'; card.setAttribute('role','dialog'); card.setAttribute('aria-modal','true');
+  const heading = document.createElement('header'), title = document.createElement('h2'), close = document.createElement('button');
+  title.id = 'native-menu-title'; card.setAttribute('aria-labelledby',title.id); close.textContent = '×';
+  close.setAttribute('aria-label', {'zh-CN':'关闭菜单','zh-TW':'關閉選單',ja:'メニューを閉じる',ko:'메뉴 닫기',en:'Close menu'}[lang] || 'Close menu');
+  heading.append(title,close); const items = document.createElement('div'); items.className = 'native-menu-items'; card.append(heading,items); sheet.append(card); document.body.append(sheet);
+  const cancelMenu = () => window.xlandsMenuAction?.(-1);
+  close.addEventListener('click',cancelMenu); sheet.addEventListener('click',event=>{if(event.target===sheet)cancelMenu();});
+  const syncLock = () => {document.body.classList.toggle('world-ui-open',blocked()); if(blocked())reset();};
+  window.xlandsOverlayLocked = locked => {panelLocked=!!locked;syncLock();};
+  window.xlandsMenu = data => {
+    menuOpen=!!data; sheet.hidden=!menuOpen; syncLock();
+    if(!data)return;
+    title.textContent=data.title; items.replaceChildren(); items.scrollTop=0;
+    for(const item of data.items){
+      const row=document.createElement(item.separator?'div':'button'); row.textContent=item.text;
+      if(item.separator)row.className='native-menu-section';
+      else {row.disabled=!!item.disabled;row.addEventListener('click',()=>window.xlandsMenuAction?.(item.id));}
+      items.append(row);
+    }
+    close.focus({preventScroll:true});
+  };
+  window.addEventListener('blur', reset); window.addEventListener('pagehide', reset); window.addEventListener('resize', reset);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) reset(); });
 }
+installTouchControls();
+if (typeof location.pathname === 'string' && location.pathname.includes('/conan/')) document.body?.classList.add('conan');
 
 async function loadEngineScript() {
   if (typeof Engine !== 'undefined') return;
@@ -156,6 +231,7 @@ async function load() {
       console.log(text);
       if (text.includes('_READY')) {
         ready = true;
+        document.body.classList.add('world-ready');
         statusPanel.remove();
         window.xlandsSound?.(queuedSound);
         parent.postMessage({type: 'xlands-ready'}, '*');

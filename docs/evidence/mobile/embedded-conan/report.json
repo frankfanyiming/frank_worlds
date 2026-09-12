@@ -1,0 +1,73 @@
+{
+  "environment": "Final exported Conan inside the actual XLands portal iframe; desktop Chromium mobile viewport and touch emulation, not a physical phone",
+  "checks": [
+    {
+      "name": "Initial build native PopupMenu touch gestures",
+      "pass": false,
+      "details": "Touch opens MenuButton, but list swipe and scrollbar drag turn the camera; touch tap on a visible kitchen row does not select. Mouse wheel diagnostic can scroll.",
+      "evidence": [
+        "02-destinations-portrait.png",
+        "03-destinations-scroll-portrait.png",
+        "04-scrollbar-touch-portrait.png",
+        "05-menu-wheel-diagnostic.png",
+        "06-kitchen-portrait.png"
+      ]
+    },
+    {
+      "name": "Chinese kitchen destination coordinate metadata",
+      "pass": true,
+      "selection": "Diagnostic mouse click selected the real circular kitchen; touch activation is tracked as a separate failed pre-fix check.",
+      "evidence": "07-kitchen-mouse-diagnostic.png"
+    },
+    {
+      "name": "Embedded canvas and portal header sizing",
+      "pass": true,
+      "portrait": {
+        "viewport": [
+          390,
+          844
+        ],
+        "header": [
+          0,
+          0,
+          390,
+          56
+        ],
+        "iframe": [
+          0,
+          56,
+          390,
+          788
+        ]
+      },
+      "landscape": {
+        "viewport": [
+          844,
+          390
+        ],
+        "header": [
+          0,
+          0,
+          844,
+          48
+        ],
+        "iframe": [
+          0,
+          48,
+          844,
+          342
+        ]
+      },
+      "evidence": [
+        "01-portal-portrait.png",
+        "08-kitchen-landscape.png"
+      ]
+    }
+  ],
+  "errors": [],
+  "console": [
+    "BLENDER_TOWN_READY buildings=3 tripo_characters=11 cars=6 remote_rooms=0",
+    "BLENDER_TOWN_READY buildings=3 tripo_characters=11 cars=6 remote_rooms=0"
+  ],
+  "phase": "before-native-DOM-menu-fix"
+}

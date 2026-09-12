@@ -9,6 +9,7 @@ window/size/viewport_height=960
 window/size/window_width_override=1280
 window/size/window_height_override=854
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 [rendering]
 textures/vram_compression/import_etc2_astc=true
 textures/vram_compression/import_s3tc_bptc=true
@@ -25,3 +26,7 @@ lights_and_shadows/positional_shadow/atlas_quadrant_0_subdiv=1
 lights_and_shadows/positional_shadow/atlas_quadrant_1_subdiv=2
 [debug]
 gdscript/warnings/inference_on_variant=0
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=false

@@ -1,0 +1,64 @@
+{
+  "capture": "Actual Godot world.tscn, normal controller; no animation seek or transform simulation",
+  "rendering": "Compatibility / OpenGL 4.1 on Apple M5 Pro",
+  "lighting": {
+    "day_sun": 0.42,
+    "ambient": 0.4,
+    "window_spot_multiplier": 0.65,
+    "agasa_spot_multiplier": 0.5525
+  },
+  "world_source_sha256": "99b7f6974e3145acfb175be2365cb24ab81c27fcb183b9717314c1d806fbe3fb",
+  "asset_sha256": {
+    "conan": "808801e09b26c8adef8f02b5dd2b5fedd0f6b7d5b2f760a9ecc3bdade6396300",
+    "agasa": "28230b5871c5cb0c2775e2d0dcbc377f01c78e9c69b7425cc359462325eb0985"
+  },
+  "raw_movie": {
+    "workspace_path": "outputs/柯南与移动端升级/角色正常物理验收/最终/conan-motion-v2.avi",
+    "sha256": "5e1b48542b7c7d551dca77330dfe7605e454a5b1d17363bccde1689d22525eb4",
+    "bytes": 82921598,
+    "fps": 60,
+    "frames": 649,
+    "dimensions": [
+      1440,
+      900
+    ]
+  },
+  "presentation_movie": {
+    "workspace_path": "outputs/柯南与移动端升级/角色正常物理验收/最终/conan-motion-v2.mp4",
+    "encoding": "H.264 from original AVI JPEG frames via macOS AVAssetWriter",
+    "initial_setup_frames_omitted": 45,
+    "frame_order_and_timing": "unchanged after setup frames",
+    "script": "tools/encode-godot-avi.swift",
+    "bytes": 6153575,
+    "sha256": "b989d54297b53ce5c98403e999f322369983fd170b15b9223e3e6d52e6646c8f",
+    "dimensions": [
+      1440,
+      900
+    ],
+    "fps": 60,
+    "frames": 604,
+    "duration_seconds": 10.066666666666666,
+    "decoded_playback_check": {
+      "width": 1440,
+      "height": 900,
+      "fps": 60.0,
+      "duration_seconds": 10.066666666666666,
+      "frame_2s_visual": "matches recorded upright world and walking character"
+    }
+  },
+  "checks": {
+    "conan": 9,
+    "agasa": 4,
+    "fresh_import": 5
+  },
+  "limitations": [
+    "Visible temporary barrier is an audit fixture, not a production building.",
+    "Agasa currently uses Idle and Talk; full walking is an asset-level Blender validation.",
+    "This is native engine evidence; public browser acceptance is separate."
+  ],
+  "raw_frame_data": {
+    "path": "conan-motion-v2.json.gz",
+    "uncompressed_sha256": "8232b20a6072126ca188f88e218be4660f5f8af12dc301129cd9e92a54db2a88",
+    "uncompressed_bytes": 555352
+  }
+}

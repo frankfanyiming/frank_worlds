@@ -1,0 +1,663 @@
+{
+  "asset_sha256": {
+    "assets/buildings/agasa.glb": "50c39fecf3144c83035c7f6aa3e602f131a255d1cc8fa143b5b1121f33da33d7",
+    "assets/buildings/agasa.json": "fd8352a9abdc88448b8388daf9dcb84a75218e51e7d500e79fc4ab29a260dd63",
+    "assets/buildings/mouri.glb": "f38efe67bd82ea459a0d919184c3b716debd0ddadd8522e719321042459b7787",
+    "assets/buildings/mouri.json": "406e4eba428d1ac12c79f1b8458e1ed87383fecac33bae2982bf5bea42d7305b",
+    "assets/buildings/street-block.glb": "cd8d9725b256efde0751d05b1eb3e674ca06f6ed1ac3ca67f7f9d8d5ce6d4dcb",
+    "assets/buildings/street-block.json": "71ed3e721cdb16521f94d9fc3feb22c1387dc9502af95999bfdc75b255e3103d",
+    "assets/character-motion.json": "a2400ebe158977a8316a69f157c529aeb713b504912dd2196f12e5f311fdacef",
+    "assets/street.glb": "b7d46aac81734b09495ac089725a57a61203c9a946a0e6bef78d52bf6b97d74f",
+    "world.gd": "7bc5916c13a22a04e33424dd32038aa0e90408386cfdbf5d3d131cf48f402dd1"
+  },
+  "checks": {
+    "front_to_round_kitchen": true,
+    "kitchen_front_to_hall": true,
+    "main_to_tower": true,
+    "normal_characterbody_physics_enabled": true,
+    "street_to_frontage": false,
+    "tower_to_kitchen_aisle": false
+  },
+  "complete": true,
+  "controller": {
+    "auditing": true,
+    "capsule_height": 1.02,
+    "capsule_radius": 0.23,
+    "floor_snap": 0.319999992847443,
+    "run_mps": 1.85,
+    "testing": false,
+    "walk_mps": 0.85
+  },
+  "display_server": "headless",
+  "engine": {
+    "build": "official",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "hex": 263938,
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "status": "stable",
+    "string": "4.7.2-stable (official)",
+    "timestamp": 0
+  },
+  "failures": [
+    "street_to_frontage",
+    "tower_to_kitchen_aisle"
+  ],
+  "notes": [
+    "Headless results establish actual controller movement/collision only. They do not establish rendered appearance, mobile performance, or release status.",
+    "Outdoor scenario reset is explicitly listed. No player position is assigned inside walk/follow and no raycast substitutes for movement.",
+    "Dependent route stopped after street_to_frontage/0; no interior reset was used to bypass it.",
+    "Not attempted after earlier failure: connected_frontage_forward",
+    "Not attempted after earlier failure: connected_frontage_reverse",
+    "Not attempted after earlier failure: frontage_to_mouri_outside",
+    "Dependent route stopped after tower_to_kitchen_aisle/0; no interior reset was used to bypass it.",
+    "Not attempted after earlier failure: kitchen_work_aisle",
+    "Not attempted after earlier failure: kitchen_work_aisle_reverse",
+    "Not attempted after earlier failure: kitchen_aisle_to_tower",
+    "Not attempted after earlier failure: Basement to main_reverse",
+    "Not attempted after earlier failure: cellar_to_research",
+    "Not attempted after earlier failure: cellar_to_research_reverse",
+    "Not attempted after earlier failure: Basement to main",
+    "Not attempted after earlier failure: Main to gallery",
+    "Not attempted after earlier failure: gallery_bridge",
+    "Not attempted after earlier failure: gallery_bridge_reverse",
+    "Not attempted after earlier failure: Main to gallery_reverse",
+    "Not attempted after earlier failure: main_to_tower_reverse",
+    "Not attempted after earlier failure: hall_to_kitchen_for_living",
+    "Not attempted after earlier failure: kitchen_to_living",
+    "Not attempted after earlier failure: living_to_garage",
+    "Not attempted after earlier failure: living_to_garage_reverse",
+    "Not attempted after earlier failure: kitchen_to_living_reverse",
+    "Not attempted after earlier failure: hall_to_kitchen_front",
+    "Not attempted after earlier failure: front_to_round_kitchen_reverse"
+  ],
+  "physics_hz": 60,
+  "renderer": "gl_compatibility",
+  "routes": [
+    {
+      "animation_clips": [
+        "Run",
+        "Idle"
+      ],
+      "distance_walked": 7.21160717727616,
+      "elapsed": 6.08333333333332,
+      "end": [
+        9.62472820281982,
+        0.0401181317865849,
+        4.00000762939453
+      ],
+      "end_agasa_local": [
+        -54.3752708435059,
+        0.0401181317865849,
+        11.0000076293945
+      ],
+      "end_mouri_local": [
+        -7.40000820159912,
+        0.0401181317865849,
+        1.82472801208496
+      ],
+      "horizontal_error": 0.724727630615234,
+      "label": "street_to_frontage/0",
+      "lowest_y": 0.0343052819371223,
+      "mode": "run",
+      "on_floor": true,
+      "passed": false,
+      "peak_y": 0.130899503827095,
+      "reason": "stalled_against_collision_or_wrong_floor",
+      "scenario": "connected_mouri_frontage",
+      "slide_contacts": [
+        {
+          "collider": "/root/Beika/BlenderStreet/street/Terrain_Collision/Terrain_Collision_col",
+          "collider_position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "depth": 0.000964753329753876,
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "point": [
+            9.62428379058838,
+            0.044999998062849,
+            4.00000858306885
+          ]
+        },
+        {
+          "collider": "/root/Beika/BlenderStreet/street/Terrain_Collision/Terrain_Collision_col",
+          "collider_position": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "depth": 0.000964753329753876,
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "point": [
+            9.62474632263184,
+            0.044999998062849,
+            4.00000858306885
+          ]
+        }
+      ],
+      "start": [
+        16.7999992370605,
+        0.124938189983368,
+        4.0
+      ],
+      "target": [
+        8.90000057220459,
+        0.200000002980232,
+        4.0
+      ],
+      "vertical_error": -0.159881871193647
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "horizontal_error": 0.0,
+      "label": "front_to_round_kitchen/0",
+      "lowest_y": 0.0447916612029076,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0447916612029076,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "vertical_error": -0.0352083370089531
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.50637622084469,
+      "elapsed": 3.03333333333333,
+      "end": [
+        63.9999923706055,
+        0.0558327697217464,
+        -1.20412385463715
+      ],
+      "horizontal_error": 0.0958763360977173,
+      "label": "front_to_round_kitchen/1",
+      "lowest_y": 0.0398332551121712,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0560536310076714,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        64.0,
+        0.0447916612029076,
+        1.30000019073486
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -1.30000019073486
+      ],
+      "vertical_error": -0.0241672284901142
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.44590258225799,
+      "elapsed": 2.94999999999999,
+      "end": [
+        64.0000305175781,
+        0.0558327808976173,
+        -3.65464282035828
+      ],
+      "horizontal_error": 0.0953571870923042,
+      "label": "front_to_round_kitchen/2",
+      "lowest_y": 0.0557507537305355,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0559253543615341,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        63.9999923706055,
+        0.0558248497545719,
+        -1.20874178409576
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241672173142433
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.22837211797014,
+      "elapsed": 1.51666666666667,
+      "end": [
+        62.7928657531738,
+        0.0558328665792942,
+        -3.88309860229492
+      ],
+      "horizontal_error": 0.0943905040621758,
+      "label": "front_to_round_kitchen/3",
+      "lowest_y": 0.0558325983583927,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558366775512695,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        64.0000305175781,
+        0.0558325983583927,
+        -3.65918135643005
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241671316325665
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.239883119240403,
+      "elapsed": 0.35,
+      "end": [
+        62.5491943359375,
+        0.0558326989412308,
+        -3.89539217948914
+      ],
+      "horizontal_error": 0.0993005484342575,
+      "label": "front_to_round_kitchen/4",
+      "lowest_y": 0.055832602083683,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367222547531,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        62.7887077331543,
+        0.055832602083683,
+        -3.88309860229492
+      ],
+      "target": [
+        62.4500007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241672992706299
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.0618289264384657,
+      "elapsed": 0.133333333333333,
+      "end": [
+        62.6058578491211,
+        0.0558327399194241,
+        -3.89744019508362
+      ],
+      "horizontal_error": 0.094177708029747,
+      "label": "kitchen_front_to_hall/0",
+      "lowest_y": 0.0558325983583927,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558366067707539,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        62.5440711975098,
+        0.0558325983583927,
+        -3.89539217948914
+      ],
+      "target": [
+        62.7000007629395,
+        0.0799999982118607,
+        -3.90000009536743
+      ],
+      "vertical_error": -0.0241672582924366
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.30076869879849,
+      "elapsed": 1.6,
+      "end": [
+        63.9034729003906,
+        0.05583281442523,
+        -3.76006937026978
+      ],
+      "horizontal_error": 0.0970508754253387,
+      "label": "kitchen_front_to_hall/1",
+      "lowest_y": 0.0558325611054897,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.055840440094471,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        62.6102142333984,
+        0.0558325909078121,
+        -3.89744019508362
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241671837866306
+    },
+    {
+      "animation_clips": [],
+      "distance_walked": 0.0,
+      "elapsed": 0.0,
+      "end": [
+        63.9081878662109,
+        0.0558363310992718,
+        -3.76006937026978
+      ],
+      "horizontal_error": 0.0923626571893692,
+      "label": "main_to_tower/0",
+      "lowest_y": 0.0558363310992718,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558363310992718,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        63.9081878662109,
+        0.0558363310992718,
+        -3.76006937026978
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -3.75
+      ],
+      "vertical_error": -0.0241636671125889
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 2.0796176828444,
+      "elapsed": 2.51666666666666,
+      "end": [
+        65.8625259399414,
+        0.0558326803147793,
+        -4.46855592727661
+      ],
+      "horizontal_error": 0.0929511040449142,
+      "label": "main_to_tower/1",
+      "lowest_y": 0.0558326803147793,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367371559143,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        63.9081878662109,
+        0.0558363310992718,
+        -3.76006937026978
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -4.5
+      ],
+      "vertical_error": -0.0241673178970814
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 5.23676753556356,
+      "elapsed": 6.23333333333332,
+      "end": [
+        65.9484558105469,
+        0.0558327995240688,
+        -9.70466613769531
+      ],
+      "horizontal_error": 0.0953465029597282,
+      "label": "main_to_tower/2",
+      "lowest_y": 0.0558250360190868,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558369196951389,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        65.8658599853516,
+        0.0558364912867546,
+        -4.46855592727661
+      ],
+      "target": [
+        65.9499969482422,
+        0.0799999982118607,
+        -9.80000019073486
+      ],
+      "vertical_error": -0.0241671986877918
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 1.98698972305283,
+      "elapsed": 2.4,
+      "end": [
+        64.0920104980469,
+        0.0558366626501083,
+        -10.4152669906616
+      ],
+      "horizontal_error": 0.0983478575944901,
+      "label": "main_to_tower/3",
+      "lowest_y": 0.0558326654136181,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0558367408812046,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        65.9484558105469,
+        0.0558364316821098,
+        -9.70920085906982
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -10.4499998092651
+      ],
+      "vertical_error": -0.0241633355617523
+    },
+    {
+      "animation_clips": [
+        "Walk"
+      ],
+      "distance_walked": 0.931270486209542,
+      "elapsed": 1.15,
+      "end": [
+        64.0132217407227,
+        0.0590065345168114,
+        -11.3418712615967
+      ],
+      "horizontal_error": 0.0990160033106804,
+      "label": "main_to_tower/4",
+      "lowest_y": 0.0481131635606289,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": true,
+      "peak_y": 0.0590065345168114,
+      "reason": "arrived",
+      "scenario": "agasa",
+      "start": [
+        64.0879745483398,
+        0.0558364950120449,
+        -10.4152669906616
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -11.4400005340576
+      ],
+      "vertical_error": -0.0209934636950493
+    },
+    {
+      "animation_clips": [
+        "Walk",
+        "Idle"
+      ],
+      "distance_walked": 0.773658396035898,
+      "elapsed": 3.03333333333333,
+      "end": [
+        64.045654296875,
+        0.0557392239570618,
+        -10.6515274047852
+      ],
+      "end_agasa_local": [
+        0.045654296875,
+        0.0557392239570618,
+        -3.65152740478516
+      ],
+      "end_mouri_local": [
+        7.25152492523193,
+        0.0557392239570618,
+        56.2456550598145
+      ],
+      "horizontal_error": 0.206634178757668,
+      "label": "tower_to_kitchen_aisle/0",
+      "lowest_y": 0.0545978844165802,
+      "mode": "walk",
+      "on_floor": true,
+      "passed": false,
+      "peak_y": 0.0588365644216537,
+      "reason": "stalled_against_collision_or_wrong_floor",
+      "scenario": "agasa",
+      "slide_contacts": [
+        {
+          "collider": "/root/Beika/Blender_agasa/agasa/AgasaReference_Ground_Collision/AgasaReference_Ground_Collision_col",
+          "collider_position": [
+            64.0,
+            0.0,
+            -7.0
+          ],
+          "depth": 0.00113440304994583,
+          "normal": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "point": [
+            64.0467147827148,
+            0.0599999986588955,
+            -10.6562004089355
+          ]
+        },
+        {
+          "collider": "/root/Beika/Blender_agasa/agasa/AgasaReference_Ground_Collision/AgasaReference_Ground_Collision_col",
+          "collider_position": [
+            64.0,
+            0.0,
+            -7.0
+          ],
+          "depth": 0.0172120817005634,
+          "normal": [
+            -0.00558470282703638,
+            0.999675512313843,
+            0.0248530134558678
+          ],
+          "point": [
+            64.05126953125,
+            0.0599999986588955,
+            -10.676344871521
+          ]
+        },
+        {
+          "collider": "/root/Beika/Blender_agasa/agasa/AgasaReference_Ground_Collision/AgasaReference_Ground_Collision_col",
+          "collider_position": [
+            64.0,
+            0.0,
+            -7.0
+          ],
+          "depth": 0.0172048751264811,
+          "normal": [
+            0.00782132148742676,
+            -0.999363481998444,
+            -0.0348064042627811
+          ],
+          "point": [
+            64.05126953125,
+            0.0599999986588955,
+            -10.676344871521
+          ]
+        }
+      ],
+      "start": [
+        64.0139389038086,
+        0.0588365644216537,
+        -11.3475370407104
+      ],
+      "target": [
+        64.0,
+        0.0799999982118607,
+        -10.4499998092651
+      ],
+      "vertical_error": -0.0242607742547989
+    }
+  ],
+  "scenario_start_placements": [
+    {
+      "from": [
+        9.62472820281982,
+        0.0401181317865849,
+        4.00000762939453
+      ],
+      "interior_teleports": 0,
+      "scenario": "agasa",
+      "to": [
+        64.0,
+        0.0799999982118607,
+        1.30000019073486
+      ],
+      "type": "existing_outdoor_destination_menu_spawn"
+    }
+  ],
+  "simulated_seconds": 33.3166666666661,
+  "trace_file": "physical-route-trace.json"
+}

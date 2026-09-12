@@ -84,6 +84,8 @@ var capture_dir := ""
 var ready_world := false
 var locale := "zh-CN"
 var translations: Dictionary = {}
+var mobile_ui := false
+var mobile_menu: MenuButton
 
 func vec(a: Array) -> Vector3:
  return Vector3(float(a[0]),float(a[1]),float(a[2]))
@@ -397,12 +399,16 @@ func _apply_lighting():
  sky_fill.light_color=Color("dbe4e6") if inside_home else Color("b8d7d4")
  environment.background_mode=Environment.BG_COLOR if inside_home else Environment.BG_SKY
  environment.background_color=Color("70644c")
+ # Indoor exposure and diffuse bounce are independent of the outdoor sun.
+ # Keep baked contact shadows and window direction; lift the unreadable backs
+ # of furniture and moving characters instead of washing out the whole world.
+ environment.tonemap_exposure=(1.10 if night else 1.18) if inside_home else 1.0
  environment.fog_enabled=not inside_home
  environment.ambient_light_color=Color("d7cdbb") if inside_home else (Color("a6b4c5") if night else Color("c5d0b7"))
  environment.ambient_light_energy=(.40 if night else .62) if inside_home else (.46 if night else .38)
  if has_baked:
   environment.ambient_light_color=Color("edf2ef")
-  environment.ambient_light_energy=.25 if night else .35
+  environment.ambient_light_energy=.36 if night else .48
  home_light.light_energy=.25 if night else .36
  window_light.light_energy=.28 if night else .58
  var authored_windows=false
@@ -419,7 +425,10 @@ func _apply_lighting():
   lamp.light_color=Color("fff0d8") if inside_home else Color("ffd696")
   lamp.light_energy=.10 if inside_home else .65
  if has_baked:
-  home_light.visible=false;window_light.visible=false
+  home_light.visible=true;home_light.light_color=Color("fff4df")
+  home_light.light_energy=.30 if night else .42
+  home_light.omni_attenuation=.55;home_light.light_specular=0.0
+  window_light.visible=false
   _baked_room_lighting(baked_homes[active_home])
 
 func _setup_door():
@@ -465,20 +474,73 @@ func _button(txt: String,action: Callable) -> Button:
 func _setup_ui():
  hud=CanvasLayer.new();add_child(hud);overlay=Control.new();overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);overlay.mouse_filter=Control.MOUSE_FILTER_IGNORE;hud.add_child(overlay)
  var theme=Theme.new();theme.default_font=load("res://ui-font.otf");theme.default_font_size=18;overlay.theme=theme
- var title_panel=PanelContainer.new();title_panel.position=Vector2(26,22);overlay.add_child(title_panel);title_panel.add_theme_stylebox_override("panel",_style(Color(.96,.96,.89,.91)))
+ var title_panel=PanelContainer.new();title_panel.name="MainInfo";title_panel.position=Vector2(26,22);overlay.add_child(title_panel);title_panel.add_theme_stylebox_override("panel",_style(Color(.96,.96,.89,.91)))
  var left=VBoxContainer.new();title_panel.add_child(left)
  var title=_label("旅行青蛙 · 林间来信",25);left.add_child(title)
  zone_label=_label("家门口  ·  午后",15);zone_label.add_theme_color_override("font_color",Color("5c7150"));left.add_child(zone_label)
- var top=HBoxContainer.new();overlay.add_child(top);top.set_anchors_preset(Control.PRESET_TOP_RIGHT);top.offset_left=-550;top.offset_top=26;top.offset_right=-26;top.offset_bottom=70;top.add_theme_constant_override("separation",8)
+ var top=HBoxContainer.new();top.name="TopActions";overlay.add_child(top);top.set_anchors_preset(Control.PRESET_TOP_RIGHT);top.offset_left=-550;top.offset_top=26;top.offset_right=-26;top.offset_bottom=70;top.add_theme_constant_override("separation",8)
  counter=_label("三叶草 24",18);counter.custom_minimum_size=Vector2(130,44);counter.add_theme_stylebox_override("normal",_style(Color(.96,.96,.89,.91)));counter.vertical_alignment=VERTICAL_ALIGNMENT_CENTER;top.add_child(counter)
  mode_button=_button("俯看小世界",_cycle_camera);top.add_child(mode_button)
  top.add_child(_button("相册",_open_album));top.add_child(_button("午后 / 黄昏",_toggle_night))
- var bottom=VBoxContainer.new();overlay.add_child(bottom);bottom.set_anchors_preset(Control.PRESET_CENTER_BOTTOM);bottom.offset_left=-390;bottom.offset_top=-126;bottom.offset_right=390;bottom.offset_bottom=-22;bottom.alignment=BoxContainer.ALIGNMENT_CENTER
+ var bottom=VBoxContainer.new();bottom.name="BottomInfo";overlay.add_child(bottom);bottom.set_anchors_preset(Control.PRESET_CENTER_BOTTOM);bottom.offset_left=-390;bottom.offset_top=-126;bottom.offset_right=390;bottom.offset_bottom=-22;bottom.alignment=BoxContainer.ALIGNMENT_CENTER
  toast_label=_label("",18);toast_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;toast_label.add_theme_stylebox_override("normal",_style(Color(.96,.96,.89,.92)));bottom.add_child(toast_label)
  prompt_label=_label("",20);prompt_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;prompt_label.add_theme_stylebox_override("normal",_style(Color(.94,.96,.84,.94)));bottom.add_child(prompt_label)
- var help=_label("WASD 移动   ·   Space 跳跃   ·   鼠标右键环视   ·   E 互动   ·   P 拍照   ·   C 视角",14);help.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;bottom.add_child(help)
- var action_bar=HBoxContainer.new();overlay.add_child(action_bar);action_bar.set_anchors_preset(Control.PRESET_BOTTOM_LEFT);action_bar.offset_left=28;action_bar.offset_top=-78;action_bar.offset_right=280;action_bar.offset_bottom=-34
+ var help=_label("WASD 移动   ·   Space 跳跃   ·   鼠标右键环视   ·   E 互动   ·   P 拍照   ·   C 视角",14);help.name="KeyboardHelp";help.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;bottom.add_child(help)
+ var action_bar=HBoxContainer.new();action_bar.name="ActionBar";overlay.add_child(action_bar);action_bar.set_anchors_preset(Control.PRESET_BOTTOM_LEFT);action_bar.offset_left=28;action_bar.offset_top=-78;action_bar.offset_right=280;action_bar.offset_bottom=-34
  action_bar.add_child(_button("拍一张 P",_take_photo));action_bar.add_child(_button("行囊",_show_bag))
+ mobile_menu=MenuButton.new();mobile_menu.text="⋯";mobile_menu.custom_minimum_size=Vector2(48,44);mobile_menu.visible=false;top.add_child(mobile_menu)
+ mobile_menu.flat=false
+ mobile_menu.add_theme_stylebox_override("normal",_style(Color(.95,.95,.87,.96)))
+ mobile_menu.add_theme_color_override("font_color",Color("3e5136"));mobile_menu.add_theme_font_size_override("font_size",24)
+ var popup=mobile_menu.get_popup();popup.add_theme_font_size_override("font_size",18);popup.add_theme_constant_override("v_separation",16)
+ for label in ["俯看小世界","相册","午后 / 黄昏","拍一张 P","行囊"]:popup.add_item(_tr(label))
+ popup.id_pressed.connect(_mobile_action)
+
+func _mobile_action(id: int):
+ match id:
+  0:_cycle_camera()
+  1:_open_album()
+  2:_toggle_night()
+  3:_take_photo()
+  4:_show_bag()
+
+func _mobile_layout(viewport_size: Vector2):
+ if not overlay:return
+ mobile_ui=true
+ var width=max(280.0,viewport_size.x)
+ var portrait=viewport_size.y>viewport_size.x
+ var main=overlay.get_node("MainInfo")
+ main.position=Vector2(12,12);main.visible=portrait
+ main.get_child(0).get_child(0).add_theme_font_size_override("font_size",18)
+ zone_label.add_theme_font_size_override("font_size",13)
+ var top=overlay.get_node("TopActions")
+ top.set_anchors_preset(Control.PRESET_TOP_LEFT)
+ top.position=Vector2(12,104 if portrait else 12)
+ for child in top.get_children():child.visible=child==counter or child==mobile_menu
+ counter.size_flags_horizontal=Control.SIZE_EXPAND_FILL;counter.add_theme_font_size_override("font_size",16)
+ mobile_menu.get_popup().max_size=Vector2i(viewport_size-Vector2(24,24))
+ var bottom=overlay.get_node("BottomInfo")
+ bottom.set_anchors_preset(Control.PRESET_TOP_LEFT);bottom.position=Vector2(16,max(144.0,viewport_size.y-230));bottom.size=Vector2(width-32,65)
+ bottom.get_node("KeyboardHelp").hide();overlay.get_node("ActionBar").hide()
+ for label in [toast_label,prompt_label]:
+  label.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;label.custom_minimum_size.x=0;label.add_theme_font_size_override("font_size",15)
+ # Minimum sizes are recomputed after hiding the desktop buttons/help line.
+ # Fitting before that pass leaves the old 550/780 px container widths in place.
+ top.set_deferred("size",Vector2(min(230.0,width-24),44))
+ bottom.set_deferred("size",Vector2(width-32,65))
+ main.set_deferred("size",Vector2.ZERO)
+ if is_instance_valid(album_panel):_fit_mobile_panel()
+
+func _fit_mobile_panel():
+ var extent=get_viewport().get_visible_rect().size
+ var half=Vector2(min(460.0,(extent.x-24)/2),min(320.0,(extent.y-32)/2))
+ album_panel.offset_left=-half.x;album_panel.offset_right=half.x;album_panel.offset_top=-half.y;album_panel.offset_bottom=half.y
+
+func _touch_look(delta: Vector2):
+ if input_locked:return
+ if inside_home and mode==1:home_orbit-=delta.x*.006
+ if not inside_home or mode==2:
+  yaw-=delta.x*.006;pitch=clamp(pitch+delta.y*.005,.14,1.35)
 
 func _setup_butterfly():
  if not ResourceLoader.exists("res://assets/butterfly.glb"):return
@@ -827,8 +889,9 @@ func _take_photo():
 func _panel(title: String) -> VBoxContainer:
  _close_panel();input_locked=true
  album_panel=PanelContainer.new();overlay.add_child(album_panel);album_panel.set_anchors_preset(Control.PRESET_CENTER);album_panel.offset_left=-460;album_panel.offset_top=-320;album_panel.offset_right=460;album_panel.offset_bottom=320;album_panel.add_theme_stylebox_override("panel",_style(Color("f4f1df")))
+ if mobile_ui:_fit_mobile_panel()
  var box=VBoxContainer.new();box.add_theme_constant_override("separation",15);album_panel.add_child(box)
- var row=HBoxContainer.new();box.add_child(row);var head=_label(title,26);head.size_flags_horizontal=Control.SIZE_EXPAND_FILL;row.add_child(head);row.add_child(_button("继续散步",_close_panel));return box
+ var row=HBoxContainer.new();box.add_child(row);var head=_label(title,18 if mobile_ui else 26);head.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;head.size_flags_horizontal=Control.SIZE_EXPAND_FILL;row.add_child(head);row.add_child(_button("继续散步",_close_panel));return box
 
 func _close_panel():
  if is_instance_valid(album_panel):album_panel.queue_free()
@@ -842,8 +905,9 @@ func _show_bag():
 
 func _open_album():
  var box=_panel("旅行相册  ·  %d 张"%state.photos.size())
- if state.photos.is_empty():box.add_child(_label("还没有照片。按 P，留住眼前的小世界。",21));return
- var scroll=ScrollContainer.new();scroll.size_flags_vertical=Control.SIZE_EXPAND_FILL;box.add_child(scroll);var grid=GridContainer.new();grid.columns=3;grid.add_theme_constant_override("h_separation",12);grid.add_theme_constant_override("v_separation",15);scroll.add_child(grid)
+ if state.photos.is_empty():
+  var empty=_label("还没有照片。按 P，留住眼前的小世界。",18 if mobile_ui else 21);empty.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;box.add_child(empty);return
+ var scroll=ScrollContainer.new();scroll.size_flags_vertical=Control.SIZE_EXPAND_FILL;box.add_child(scroll);var grid=GridContainer.new();grid.columns=1 if mobile_ui else 3;grid.add_theme_constant_override("h_separation",12);grid.add_theme_constant_override("v_separation",15);scroll.add_child(grid)
  for item in state.photos:
   var path=ProjectSettings.globalize_path(photo_directory+"/"+item.file);var im=Image.load_from_file(path)
   if im==null:continue

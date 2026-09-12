@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-09-12T18:48:38.502427+08:00",
+  "state": "Blender source and native/web runtime frozen. Independent true CharacterBody route pass06 completed: 41 checks, 291 walking segments, 0 failures. Public deployment remains a separate root release step.",
+  "modeling_source": "Blender",
+  "references": [
+    {
+      "url": "https://felicia1012.pixnet.net/blog/posts/14219272223",
+      "role": "User-specified fan reference for architectural forms and neighbor relationships; not survey measurements"
+    },
+    {
+      "path": "outputs/柯南与移动端升级/reference-brief.md",
+      "relative_to": "workspace",
+      "role": "User brief and 14 attachment paths"
+    }
+  ],
+  "scale": "Inferred metre-scale game geometry; no claim of official floor heights, road distances, or measured floor-plan dimensions.",
+  "source_files": [
+    {
+      "path": "worlds/conan/blender/reference-2026-09/agasa-reference.blend",
+      "bytes": 46302947,
+      "sha256": "a01bfaf7187f4c7f36ed29dca11636412ac512930dbfb6b4e3686d0014a09015"
+    },
+    {
+      "path": "worlds/conan/blender/reference-2026-09/street-block.blend",
+      "bytes": 704718,
+      "sha256": "22fc59bb102373462ad140ef847e658c90119fdc737dd2c2e162ddc82aa3b982"
+    },
+    {
+      "path": "worlds/conan/blender/reference-2026-09/originals/agasa-lab-source.blend",
+      "bytes": 45087212,
+      "sha256": "63d7ebcc868a5a2199333f11f05d913e6cbc1a229708552f3097d442e6cb90e6"
+    },
+    {
+      "path": "worlds/conan/blender/reference-2026-09/beika-reference-study.blend",
+      "bytes": 66093722,
+      "sha256": "d2559bec6b65a96b956ece707330d7b4c4ef39dde67e0ae7dfc0211c46493d7a",
+      "role": "Final frozen runtime GLBs assembled as one editable Blender neighborhood review scene"
+    }
+  ],
+  "generator_files": [
+    {
+      "path": "tools/conan/build-agasa-reference.py",
+      "bytes": 31139,
+      "sha256": "d4eff4d2a9e2c89d5084bcf22a4a34fe4175774b54762bed802ba0090f00ae12"
+    },
+    {
+      "path": "tools/conan/build-reference-block.py",
+      "bytes": 9963,
+      "sha256": "ea98526f524a0b560a359d623c0f516b5c2f706aff79c38981719812ebd522cc"
+    },
+    {
+      "path": "tools/conan/build-reference-study.py",
+      "bytes": 1629,
+      "sha256": "5d9454bf3815969eac223db98003488c68bedee0e52ac7674586c1e2a146b303"
+    },
+    {
+      "path": "tools/conan/patch-street-context.py",
+      "bytes": 7232,
+      "sha256": "73fe0c4e75842a58a0fe183a88d1eb5e5ecaf92fd15b4e249b48530b84b6da42"
+    },
+    {
+      "path": "tools/conan/prepare-reference-runtime.py",
+      "bytes": 2281,
+      "sha256": "a7d6deb587398a8bf8282473afd2ea2950433c26bea8c93866765682abb179eb"
+    },
+    {
+      "path": "tools/conan/reference_geometry.py",
+      "bytes": 9010,
+      "sha256": "cc03b0f46a839fd38b1bb578ea985e98e477d6ab3a3365d775c3a749eeee2bc7"
+    },
+    {
+      "path": "tools/conan/verify-reference-geometry.py",
+      "bytes": 4268,
+      "sha256": "1f1cf4c3027bae43b9b603a92fa14a2d6588e36ba7cd221d2f53ad57b6966796"
+    }
+  ],
+  "runtime_files": [
+    {
+      "path": "worlds/conan/source/assets/buildings/agasa.glb",
+      "bytes": 58270820,
+      "sha256": "7240c32f032c3f991b3db4e046821520c765e3874c677946fba72e19f922ce73",
+      "meshes": 35,
+      "triangles": 317184
+    },
+    {
+      "path": "worlds/conan/source/assets/buildings/agasa.json",
+      "bytes": 39435,
+      "sha256": "d2682728b4d32ccf0b86ead58bfb1e3994a703042a2d51e4d04db18a5f1ac620"
+    },
+    {
+      "path": "worlds/conan/source/assets/buildings/street-block.glb",
+      "bytes": 10235480,
+      "sha256": "dd19142a87a39463a8f42840b7052cdf849acad0d3ac2b3a5ea9f22f28687991",
+      "meshes": 23,
+      "triangles": 184368
+    },
+    {
+      "path": "worlds/conan/source/assets/buildings/street-block.json",
+      "bytes": 2358,
+      "sha256": "f358ee353228a04a0cf5fdd6f35323018b145c5ff030d7e271a841405c04166d"
+    },
+    {
+      "path": "worlds/conan/source/assets/street.glb",
+      "bytes": 301755600,
+      "sha256": "cfbee45e0af199e3939017a6b87fa9e55d6f6d0733e62b0244bcabd9ced68233"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/agasa.glb",
+      "bytes": 21281972,
+      "sha256": "b794b69829c18e406c8b097fb23d5112bd366d813eee0b3d5e74a335b29db45c",
+      "meshes": 35,
+      "triangles": 220299
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/agasa.json",
+      "bytes": 39435,
+      "sha256": "d2682728b4d32ccf0b86ead58bfb1e3994a703042a2d51e4d04db18a5f1ac620"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/street-block.glb",
+      "bytes": 8447352,
+      "sha256": "cd8d9725b256efde0751d05b1eb3e674ca06f6ed1ac3ca67f7f9d8d5ce6d4dcb",
+      "meshes": 23,
+      "triangles": 133403
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/street-block.json",
+      "bytes": 2358,
+      "sha256": "f358ee353228a04a0cf5fdd6f35323018b145c5ff030d7e271a841405c04166d"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/street.glb",
+      "bytes": 24632996,
+      "sha256": "b7d46aac81734b09495ac089725a57a61203c9a946a0e6bef78d52bf6b97d74f"
+    }
+  ],
+  "build_reports": [
+    "docs/evidence/conan-architecture/architecture-runtime-report.json",
+    "docs/evidence/conan-architecture/source-street-patch-report.json",
+    "docs/evidence/conan-architecture/web-project-street-patch-report.json",
+    "docs/evidence/conan-architecture/agasa-build-report.json",
+    "docs/evidence/conan-architecture/street-block-build-report.json"
+  ],
+  "checks": {
+    "geometry": "docs/evidence/conan-architecture/geometry-contract.json",
+    "native_web_collision_groups": 22,
+    "native_web_triangle_coordinate_tolerance_metres": 1e-05,
+    "hole_inside_clear_rays_per_version": 60,
+    "hole_outside_ground_present_rays_per_version": 12,
+    "real_routes": {
+      "report": "docs/evidence/conan-architecture/route-pass-06/physical-routes.json",
+      "trace": "docs/evidence/conan-architecture/route-pass-06/physical-route-trace.json",
+      "checks_passed": 41,
+      "walking_segments": 291,
+      "failures": 0,
+      "scope": "Connected Mouri frontage; kitchen interior work aisle; basement and research both ways; complete upper gallery both ways; garage and returns; normal actual CharacterBody physics."
+    }
+  },
+  "unchanged_scope": [
+    "Original playable Mouri building remains an independent runtime asset",
+    "Kudo house preserved",
+    "Character Tripo assets and Agasa Tripo Beetle are owned by the character workflow",
+    "Ordinary Blender traffic vehicles and their corrected direction are not modified by architecture generators"
+  ],
+  "runtime_derivative": {
+    "agasa_max_image_dimension": 768,
+    "agasa_visual_lab_instruments_decimation_ratio": 0.4,
+    "street_block_visual_decimation_ratio": 0.72,
+    "collision_decimation": false
+  },
+  "stair_contract": {
+    "tower_local_center": [
+      0,
+      0,
+      -5.9
+    ],
+    "floor_heights": [
+      -3.12,
+      0.06,
+      3.18
+    ],
+    "inner_radius": 0.66,
+    "outer_radius": 2.1,
+    "route_radius": 1.46,
+    "flat_degrees_each_end": 30,
+    "rise_degrees": 300,
+    "height_function": "clamp((t - 1/12) / (10/12), 0, 1)",
+    "bridge_x": [
+      -0.45,
+      0.45
+    ],
+    "bridge_z": [
+      -4.44,
+      -3.36
+    ],
+    "ceiling_and_gallery_clearance_radius": 2.4
+  },
+  "evidence_types": {
+    "Blender": "docs/evidence/conan-architecture/agasa, mouri, shared-scene",
+    "Godot": "outputs/柯南与移动端升级/柯南实机空间 (workspace-relative; root integration)",
+    "physics": "docs/evidence/conan-architecture/route-pass-*",
+    "public_web": "Root release report; not yet asserted by this asset manifest"
+  }
+}

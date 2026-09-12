@@ -55,6 +55,8 @@ import {
   WorldSettings,
 } from '@/components/Adventure';
 import { SEASONS } from '@/lib/town/weather';
+import TouchControls from './TouchControls';
+import type { Locale } from '@/lib/community/i18n';
 const initial: TownState = {
   ready: false,
   progress: 0,
@@ -69,7 +71,7 @@ const initial: TownState = {
   sunset: false,
   error: null,
 };
-export default function Page({ sound = false }: { sound?: boolean }) {
+export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: boolean; locale?: Locale }) {
   const canvas = useRef<HTMLDivElement>(null),
     engine = useRef<TownEngine | null>(null);
   const [s, setS] = useState(initial),
@@ -238,39 +240,12 @@ export default function Page({ sound = false }: { sound?: boolean }) {
               +
             </div>
           )}
-          <div className="touch-pad" aria-label="触屏行走控制">
-            {[
-              ['forward', 0, -1, ArrowUp],
-              ['left', -1, 0, ArrowLeft],
-              ['back', 0, 1, ArrowDown],
-              ['right', 1, 0, ArrowRight],
-            ].map(([id, x, y, Icon]) => {
-              const I = Icon as typeof ArrowUp;
-              return (
-                <button
-                  key={String(id)}
-                  className={String(id)}
-                  aria-label={
-                    id === 'forward'
-                      ? '前进'
-                      : id === 'left'
-                        ? '左移'
-                        : id === 'back'
-                          ? '后退'
-                          : '右移'
-                  }
-                  onPointerDown={(e) => {
-                    e.currentTarget.setPointerCapture(e.pointerId);
-                    engine.current?.setTouch(Number(x), Number(y));
-                  }}
-                  onPointerUp={() => engine.current?.setTouch(0, 0)}
-                  onPointerCancel={() => engine.current?.setTouch(0, 0)}
-                >
-                  <I size={22} />
-                </button>
-              );
-            })}
-          </div>
+          <TouchControls locale={locale} disabled={!!panel || help || !!s.actor || !!s.bedroom?.requested}
+            onMove={(x, y) => engine.current?.setTouch(x, y)}
+            onRun={pressed => engine.current?.setTouchRun(pressed)}
+            onInteract={() => engine.current?.interact()}
+            onAction={() => engine.current?.adventure.action()}
+            onView={() => engine.current?.setMode(s.mode === 'first' ? 'orbit' : 'first')} />
         </>
       )}
       {s.ready && s.bedroom?.requested && (

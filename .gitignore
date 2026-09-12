@@ -19,6 +19,7 @@ worlds/conan/web-project/ui-font.ttc
 worlds/frog/source/assets/
 worlds/frog/source/ui-font.ttc
 worlds/frog/blender/
+worlds/conan/blender/
 **/export_templates/
 **/feature_profiles/
 **/script_templates/
@@ -28,3 +29,7 @@ worlds/frog/blender/
 worlds/conan/source/ui-font.otf
 worlds/conan/web-project/ui-font.otf
 worlds/frog/source/ui-font.otf
+
+# Local Blender/Python inspection caches.
+__pycache__/
+*.pyc

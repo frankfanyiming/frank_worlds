@@ -1,0 +1,21 @@
+{
+  "engine": "Godot 4.7.2",
+  "renderer": "gl_compatibility",
+  "agasa_glb_sha256": "b794b69829c18e406c8b097fb23d5112bd366d813eee0b3d5e74a335b29db45c",
+  "world_gd_sha256": "99b7f6974e3145acfb175be2365cb24ab81c27fcb183b9717314c1d806fbe3fb",
+  "captures": [
+    "毛利与连续商铺街区.png",
+    "事务所紧邻伊吕波寿司.png",
+    "agasa-双圆弧住宅与花园-day.png",
+    "agasa-中央环形厨房-day.png",
+    "agasa-中央环形厨房-night.png",
+    "agasa-并列双床-day.png",
+    "agasa-地下研究室-day.png",
+    "agasa-阿笠发明工作台-day.png",
+    "agasa-后车库与屋内通道-day.png",
+    "agasa-后塔真实地下楼梯-day.png",
+    "mouri-毛利事务所-day.png",
+    "kudo-工藤宅-客厅-night.png"
+  ],
+  "scope": "Actual rendered frames. Fixed review camera positions; physical route checks are separate. No walls hidden."
+}

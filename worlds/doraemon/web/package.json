@@ -14,7 +14,8 @@
     "build:pages": "vite build --config vite.pages.config.ts",
     "test": "node tests/runtime.test.mjs && node tests/loading.test.cjs",
     "typecheck": "tsc --noEmit",
-    "test:community": "node tests/community.test.mjs"
+    "test:community": "node tests/community.test.mjs",
+    "test:mobile": "node tests/mobile-input.test.cjs && node ../../../tools/test-mobile-input.mjs && node ../../../tools/test-native-recovery.mjs"
   },
   "dependencies": {
     "@base-ui/react": "1.7.0",

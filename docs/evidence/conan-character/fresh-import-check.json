@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "check": "conan_embedded_texture",
+      "passed": true
+    },
+    {
+      "check": "conan_seven_actions",
+      "passed": true
+    },
+    {
+      "check": "required_left_shin_key_survives_import",
+      "expected_raw_glb_x": 0.271376371,
+      "observed_quaternion_x": 0.271376430988312,
+      "passed": true
+    },
+    {
+      "check": "agasa_embedded_texture",
+      "passed": true
+    },
+    {
+      "check": "agasa_seven_actions",
+      "passed": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "resources": {
+    "agasa": {
+      "clips": [
+        "Idle",
+        "Read",
+        "Run",
+        "Sit",
+        "Talk",
+        "Walk",
+        "Wave"
+      ],
+      "textures": [
+        {
+          "height": 2048,
+          "path": "res://assets/agasa.glb::PortableCompressedTexture2D_epdor",
+          "width": 2048
+        }
+      ]
+    },
+    "conan": {
+      "clips": [
+        "Idle",
+        "Read",
+        "Run",
+        "Sit",
+        "Talk",
+        "Walk",
+        "Wave"
+      ],
+      "left_shin_x_at_walk_0_4": 0.271376430988312,
+      "textures": [
+        {
+          "height": 2048,
+          "path": "res://assets/conan.glb::PortableCompressedTexture2D_vivur",
+          "width": 2048
+        },
+        {
+          "height": 2048,
+          "path": "res://assets/conan.glb::PortableCompressedTexture2D_exf0y",
+          "width": 2048
+        },
+        {
+          "height": 2048,
+          "path": "res://assets/conan.glb::PortableCompressedTexture2D_1urmc",
+          "width": 2048
+        }
+      ]
+    }
+  },
+  "workflow": {
+    "initial_state": "Only project.godot and original two GLBs; no .import sidecars or .godot cache",
+    "first_editor_import_exit": 0,
+    "first_configuration_changed": true,
+    "second_editor_import_exit": 0,
+    "repeat_configuration_changed": false,
+    "runtime_export_hook": "tools/export-native-web.py configures after initial import, then repeats import only when changed",
+    "shared_configuration": "tools/configure_conan_import.py + tools/configure-conan-import.gd",
+    "probe": "tools/test-conan-import.gd"
+  },
+  "runtime_sha256": {
+    "conan": "808801e09b26c8adef8f02b5dd2b5fedd0f6b7d5b2f760a9ecc3bdade6396300",
+    "agasa": "28230b5871c5cb0c2775e2d0dcbc377f01c78e9c69b7425cc359462325eb0985"
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "status": "Model, Blender, fresh import, native engine playback and exported WebGL2 bundle validated. Public release state is recorded independently in the website release.json.",
+  "model": "Tripo v3.1",
+  "scenario": "game-mobile",
+  "rigging": "Blender custom 20-bone skin, maximum four influences (actual maximum two).",
+  "characters": {
+    "conan": {
+      "source": "Tripo",
+      "generation_task_id": "f856fc5a-20c2-4029-9f2a-b851b941c30a",
+      "conversion_task_id": "b287f046-e162-4fb9-b4c5-5594cf3b4d46",
+      "previous_tripo_task_id": "103dec1e-af57-4f44-9c00-b6e6c0dbcd6e",
+      "previous_runtime_backup": "worlds/conan/blender/character-v2/originals/conan.glb",
+      "previous_runtime_sha256": "96f376c5dc750bf9517912875e5077028bf5f9718f8818448d6cb78e94bc8881",
+      "reference_images": [
+        "worlds/conan/blender/character-v2/reference/conan-front.png",
+        "worlds/conan/blender/character-v2/reference/conan-turnaround.png"
+      ],
+      "immutable_input": "worlds/conan/blender/character-v2/tripo-conan/tripo-out/conan-front-png-convert-b287f046/model.fbx",
+      "immutable_input_sha256": "e610814a3850d394f80d53c65be01450e972e7e307a79a51e1616922e299c53e",
+      "editable_blend": "worlds/conan/blender/character-v2/conan-rig.blend",
+      "runtime_asset": "worlds/conan/web-project/assets/conan.glb",
+      "runtime_bytes": 1254148,
+      "runtime_sha256": "808801e09b26c8adef8f02b5dd2b5fedd0f6b7d5b2f760a9ecc3bdade6396300",
+      "faces": 14632,
+      "height": 1.05,
+      "bones": 20,
+      "max_vertex_weights": 2,
+      "animations": [
+        "Idle",
+        "Walk",
+        "Run",
+        "Wave",
+        "Talk",
+        "Read",
+        "Sit"
+      ],
+      "motion_evidence": "docs/evidence/conan-character/conan/motion-check.json",
+      "actual_glb_renders": "docs/evidence/conan-character/conan-final/",
+      "engine_playback": {
+        "status": "passed",
+        "engine": "4.7.2-stable (official)",
+        "renderer": "gl_compatibility",
+        "world_sha256": "99b7f6974e3145acfb175be2365cb24ab81c27fcb183b9717314c1d806fbe3fb",
+        "captured_at": "2026-09-12T10:39:45.744626+00:00",
+        "evidence": "docs/evidence/conan-character/runtime/conan-motion-v2-summary.json",
+        "checks_passed": 9,
+        "scope": "Normal production CharacterBody3D walk/run/turn/stop/obstacle contact and actual skinned foot contact.",
+        "web_release": "WebGL2 bundle validated; live deployment state is recorded by release.json.",
+        "actual_speed_m_s": {
+          "Walk": 0.8500020047451589,
+          "Run": 1.849990894919948
+        },
+        "foot_contact": {
+          "Walk": {
+            "Left": {
+              "max_observed_stance_drift_m": 0.0010709903755191804,
+              "stance_segments": 2,
+              "minimum_sole_relative_body_m": -0.00035777688026500387,
+              "maximum_lift_relative_body_m": 0.04664423316717199
+            },
+            "Right": {
+              "max_observed_stance_drift_m": 0.0011717767452358767,
+              "stance_segments": 3,
+              "minimum_sole_relative_body_m": -0.00041100382804801217,
+              "maximum_lift_relative_body_m": 0.04584105312824299
+            }
+          },
+          "Run": {
+            "Left": {
+              "max_observed_stance_drift_m": 0.0005488925944657524,
+              "stance_segments": 3,
+              "minimum_sole_relative_body_m": -6.194412708199204e-05,
+              "maximum_lift_relative_body_m": 0.07661606371402802
+            },
+            "Right": {
+              "max_observed_stance_drift_m": 0.0008250693933806717,
+              "stance_segments": 3,
+              "minimum_sole_relative_body_m": -4.4852495192981845e-05,
+              "maximum_lift_relative_body_m": 0.075265727937221
+            }
+          }
+        }
+      }
+    },
+    "agasa": {
+      "source": "Tripo",
+      "generation_task_id": "6384b71d-63d5-428e-be6d-94f243972fce",
+      "conversion_task_id": "5db7a64b-184e-4d40-9a71-894d1232db84",
+      "previous_tripo_task_id": "0ab52d1c-e1b8-4d61-b5d1-5034297fd660",
+      "previous_runtime_backup": "worlds/conan/blender/character-v2/originals/agasa.glb",
+      "previous_runtime_sha256": "c0384276671496798178d85e9849b5a39e52f9285123ae49bda2a4d8a635a8d0",
+      "reference_images": [
+        "worlds/conan/blender/character-v2/reference/agasa-front.png",
+        "worlds/conan/blender/character-v2/reference/agasa-turnaround.png"
+      ],
+      "immutable_input": "worlds/conan/blender/character-v2/tripo-agasa/tripo-out/agasa-front-png-convert-5db7a64b/model.fbx",
+      "immutable_input_sha256": "c9376c5a9c624ce00745f4e0429873a66f23f69758e2b9c4f943d0d5d68ee7ae",
+      "editable_blend": "worlds/conan/blender/character-v2/agasa-rig.blend",
+      "runtime_asset": "worlds/conan/web-project/assets/agasa.glb",
+      "runtime_bytes": 1184556,
+      "runtime_sha256": "28230b5871c5cb0c2775e2d0dcbc377f01c78e9c69b7425cc359462325eb0985",
+      "faces": 14866,
+      "height": 1.56,
+      "bones": 20,
+      "max_vertex_weights": 2,
+      "animations": [
+        "Idle",
+        "Walk",
+        "Run",
+        "Wave",
+        "Talk",
+        "Read",
+        "Sit"
+      ],
+      "motion_evidence": "docs/evidence/conan-character/agasa/motion-check.json",
+      "actual_glb_renders": "docs/evidence/conan-character/agasa-final/",
+      "engine_playback": {
+        "status": "passed",
+        "engine": "4.7.2-stable (official)",
+        "renderer": "gl_compatibility",
+        "world_sha256": "99b7f6974e3145acfb175be2365cb24ab81c27fcb183b9717314c1d806fbe3fb",
+        "captured_at": "2026-09-12T10:38:15.584767+00:00",
+        "evidence": "docs/evidence/conan-character/runtime/agasa-runtime-check.json",
+        "checks_passed": 4,
+        "scope": "Production NPC authored standing position and E-triggered Talk. Walking verified in Blender only; not used by this NPC.",
+        "web_release": "WebGL2 bundle validated; live deployment state is recorded by release.json."
+      }
+    }
+  },
+  "web_release": {
+    "bundle_status": "passed mobile viewport/touch emulation and full pack integrity checks",
+    "evidence": "docs/evidence/mobile/native-conan/report.json",
+    "intended_revision": 18,
+    "public_status_source": "https://frankfanyiming.github.io/frank_worlds/release.json"
+  }
+}

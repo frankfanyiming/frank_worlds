@@ -2,6 +2,7 @@
 """Export an installed native world with Godot 4.7.2 and package verified chunks."""
 from pathlib import Path
 import argparse,gzip,hashlib,json,re,subprocess
+from configure_conan_import import configure_conan_import
 
 parser=argparse.ArgumentParser(description=__doc__)
 parser.add_argument('world',choices=['frog','conan'])
@@ -14,6 +15,10 @@ if not (project/'ui-font.otf').exists():
  raise SystemExit('Install assets first: tools/fetch-native-assets.py '+('frog' if args.world=='frog' else 'conan-web'))
 output=args.output.resolve();output.mkdir(parents=True,exist_ok=True)
 subprocess.run([args.godot,'--headless','--path',str(project),'--editor','--import'],check=True)
+if args.world=='conan' and configure_conan_import(project,args.godot):
+ # Fresh runtime archives may have no .import sidecars. Configure after the
+ # first import, then reimport only when the embedded-map/key settings changed.
+ subprocess.run([args.godot,'--headless','--path',str(project),'--editor','--import'],check=True)
 # Baked rooms contain the same geometry with UV2 and share the extracted images.
 # Keep original GLBs locally, and preserve the non-baked fallback for developers.
 # Only exclude their duplicate runtime copies when both replacement scenes exist.

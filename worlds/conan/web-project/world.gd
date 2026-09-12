@@ -38,6 +38,13 @@ var inspection_views:Array=[]
 var current_view=0
 var photo_mode=false
 var gi_ready=false
+var mobile_ui=false
+var mobile_menu:MenuButton
+var character_motion:Dictionary={}
+var auditing=false
+var audit_input=Vector2.ZERO
+var manual_review_camera=false
+var doctor_car:Node3D
 func vec(a:Array)->Vector3:return Vector3(float(a[0]),float(a[1]),float(a[2]))
 func world_point(key:String,p:Array)->Vector3:return homes[key].to_global(vec(p))
 func model(key:String,parent:Node3D,pos:Vector3,angle:float=0.0,size:float=1.0)->Node3D:
@@ -60,7 +67,8 @@ func _ready()->void:
 		InputMap.add_action(a[0]);var e=InputEventKey.new();e.physical_keycode=a[1];InputMap.action_add_event(action_name(a[0]),e)
 	for path in ["street_materials.json","building_materials.json"]:
 		if FileAccess.file_exists("res://assets/"+path):material_meta.merge(JSON.parse_string(FileAccess.get_file_as_string("res://assets/"+path)),true)
-	lighting();build_street();build_houses();build_player();build_ui();build_people();build_weather();build_grass();travel(Vector3(16.8,.2,4),.4)
+	if FileAccess.file_exists("res://assets/character-motion.json"):character_motion=JSON.parse_string(FileAccess.get_file_as_string("res://assets/character-motion.json"))
+	lighting();build_street();build_reference_block();build_houses();build_player();build_ui();build_people();build_weather();build_grass();travel(Vector3(16.8,.2,4),.4)
 	await get_tree().process_frame
 	await prepare_indirect_light()
 	add_child(load("res://xlands_bridge.gd").new())
@@ -71,16 +79,17 @@ func _ready()->void:
 	if OS.get_cmdline_user_args().has("--verify"):await verify();get_tree().quit();return
 func action_name(n)->StringName:return StringName(n)
 func lighting()->void:
-	env=Environment.new();env.background_mode=Environment.BG_SKY;env.sky=Sky.new();env.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR;env.ambient_light_color=Color(.68,.75,.86);env.ambient_light_sky_contribution=.35;env.ambient_light_energy=.65;env.tonemap_mode=Environment.TONE_MAPPER_ACES;env.tonemap_exposure=.95
-	env.ssao_enabled=true;env.ssao_radius=.55;env.ssao_intensity=1.25;env.ssil_enabled=true;env.ssil_intensity=.7;env.fog_enabled=true;env.fog_density=.0014;env.fog_sky_affect=.08;env.fog_light_color=Color(.72,.80,.86)
+	env=Environment.new();env.background_mode=Environment.BG_SKY;env.sky=Sky.new();env.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR;env.ambient_light_color=Color(.68,.75,.86);env.ambient_light_sky_contribution=.35;env.ambient_light_energy=.40;env.tonemap_mode=Environment.TONE_MAPPER_ACES;env.tonemap_exposure=.95
+	var supports_screen_lighting=RenderingServer.get_current_rendering_method()=="forward_plus"
+	env.ssao_enabled=supports_screen_lighting;env.ssao_radius=.55;env.ssao_intensity=1.25;env.ssil_enabled=supports_screen_lighting;env.ssil_intensity=.7;env.fog_enabled=true;env.fog_density=.0014;env.fog_sky_affect=.08;env.fog_light_color=Color(.72,.80,.86)
 	var we=WorldEnvironment.new();we.environment=env;add_child(we)
-	sun=DirectionalLight3D.new();sun.rotation_degrees=Vector3(-38,35,0);sun.light_color=Color(1,.94,.84);sun.light_energy=1.35;sun.shadow_enabled=true;sun.directional_shadow_max_distance=100;sun.shadow_bias=.12;sun.shadow_normal_bias=1.0;sun.light_angular_distance=2.0;add_child(sun)
+	sun=DirectionalLight3D.new();sun.rotation_degrees=Vector3(-38,35,0);sun.light_color=Color(1,.94,.84);sun.light_energy=.42;sun.shadow_enabled=true;sun.directional_shadow_max_distance=100;sun.shadow_bias=.12;sun.shadow_normal_bias=1.0;sun.light_angular_distance=2.0;add_child(sun)
 func build_street()->void:
 	exterior=Node3D.new();exterior.name="BlenderStreet";add_child(exterior)
 	if ResourceLoader.exists("res://assets/street.glb"):
 		var street=model("street",exterior,Vector3.ZERO);collision_meshes(street)
 	else:collision(exterior,Vector3(10,-.1,0),Vector3(200,.15,200))
-	model("beetle",exterior,Vector3(67.7,.06,3.6),-.45)
+	doctor_car=model("beetle",exterior,Vector3(67.7,.06,3.6),-.45)
 	# All ordinary vehicles are Blender assets with +Z fronts, ground-zero tires,
 	# and four separate wheel pivots. The doctor's Tripo Beetle stays above.
 	traffic_specs=JSON.parse_string(FileAccess.get_file_as_string("res://assets/vehicles/manifest.json"))
@@ -102,6 +111,14 @@ func build_street()->void:
 		var signal_model=model("props/signal",exterior,item[0],item[1]);var surfaces=[]
 		collect_signal_materials(signal_model,surfaces);signals.append(surfaces)
 	var street_probe=ReflectionProbe.new();street_probe.position=Vector3(12.5,3,0);street_probe.size=Vector3(35,12,94);street_probe.box_projection=true;street_probe.intensity=.8;exterior.add_child(street_probe)
+func build_reference_block()->void:
+	var path="res://assets/buildings/street-block.json"
+	if not FileAccess.file_exists(path):return
+	var spec:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(path))
+	var block=model("buildings/street-block",exterior,vec(spec.origin),float(spec.get("yaw",0)))
+	block.name="ConnectedMouriBlock";collision_meshes(block)
+	for c in spec.get("colliders",[]):collision(block,vec(c.p),vec(c.s),float(c.get("r",0)),float(c.get("rx",0)))
+	for view in spec.get("views",[]):inspection_views.append({"name":view.name,"p":block.to_global(vec(view.p)),"target":block.to_global(vec(view.target))})
 func collect_signal_materials(n:Node,surfaces:Array)->void:
 	if n is MeshInstance3D:
 		for i in n.mesh.get_surface_count():
@@ -131,10 +148,12 @@ func build_houses()->void:
 		for c in spec.get("colliders",[]):collision(root,vec(c.p),vec(c.s),float(c.get("r",0)),float(c.get("rx",0)))
 		for r in spec.get("ramps",[]):collision(root,vec(r.p),vec(r.s),float(r.get("r",0)),float(r.get("rx",0)))
 		for item in spec.get("lights",[]):
-			var l=OmniLight3D.new();l.position=vec(item.p);l.omni_range=float(item.get("range",5));l.light_energy=float(item.get("energy",.8));l.light_color=Color(1,.93,.82);l.light_size=.06;l.shadow_enabled=true;l.omni_attenuation=.85;l.light_specular=.18;root.add_child(l);
+			var l=OmniLight3D.new();l.position=vec(item.p);l.omni_range=float(item.get("range",5));l.light_energy=float(item.get("energy",.8));l.light_color=Color(str(item.get("color","fff1d1")));l.light_size=.06;l.shadow_enabled=bool(item.get("shadow",key!="agasa"));l.omni_attenuation=float(item.get("attenuation",1.3 if key=="agasa" else .85));l.light_specular=.18;root.add_child(l)
 			if key=="kudo":l.position.y-=.36 if l.position.y<3 else .40
 			l.set_meta("base_energy",l.light_energy);lamps.append(l)
 		add_window_lights(key,root)
+		if key=="agasa" and doctor_car and spec.get("notes",{}).has("garage_beetle_position"):
+			doctor_car.global_position=root.to_global(vec(spec.notes.garage_beetle_position));doctor_car.rotation.y=PI
 		var probe=ReflectionProbe.new();probe.position=vec(spec.get("probe_center",[0,2.5,-2]));probe.size=vec(spec.get("probe_size",[23,9,28]));probe.interior=true;probe.box_projection=true;probe.intensity=.62;probe.enable_shadows=true;root.add_child(probe)
 		for view in spec.get("views",[]):
 			if view.name=="工藤宅-前立面":view.p=[.4,7.4,18.3];view.target=[0,3.8,4.5]
@@ -156,11 +175,11 @@ func build_people()->void:
 func build_ui()->void:
 	ui=CanvasLayer.new();add_child(ui);ui.name="Interface"
 	var theme=Theme.new();theme.default_font=load("res://ui-font.otf");theme.default_font_size=15
-	var panel=PanelContainer.new();panel.position=Vector2(24,22);panel.theme=theme;ui.add_child(panel)
+	var panel=PanelContainer.new();panel.name="MainInfo";panel.position=Vector2(24,22);panel.theme=theme;ui.add_child(panel)
 	var style=StyleBoxFlat.new();style.bg_color=Color(.055,.09,.115,.87);style.corner_radius_top_left=14;style.corner_radius_top_right=14;style.corner_radius_bottom_left=14;style.corner_radius_bottom_right=14;style.content_margin_left=18;style.content_margin_right=18;style.content_margin_top=13;style.content_margin_bottom=13;panel.add_theme_stylebox_override("panel",style)
 	var col=VBoxContainer.new();col.add_theme_constant_override("separation",8);panel.add_child(col)
 	var title=Label.new();title.text="米花町　／　frank 小世界";title.add_theme_font_size_override("font_size",22);col.add_child(title);clock_text=Label.new();col.add_child(clock_text)
-	var nav=HBoxContainer.new();col.add_child(nav)
+	var nav=HBoxContainer.new();nav.name="Destinations";col.add_child(nav)
 	var street=Button.new();street.text="街区";street.pressed.connect(func():travel(Vector3(16.8,.2,4),.4));nav.add_child(street)
 	for key in specs:
 		var menu=MenuButton.new();menu.text={"mouri":"白罗 · 毛利楼","kudo":"工藤家","agasa":"博士家"}[key];nav.add_child(menu)
@@ -171,9 +190,38 @@ func build_ui()->void:
 			else:travel(world_point(key,specs[key].rooms[id-1].p)+Vector3(0,.12,0),float(specs[key].get("yaw",0)))
 		)
 	info=Label.new();info.add_theme_color_override("font_color",Color(.83,.86,.84));col.add_child(info)
+	mobile_menu=MenuButton.new();mobile_menu.text="目的地 · 设置";mobile_menu.custom_minimum_size=Vector2(180,44);mobile_menu.visible=false;col.add_child(mobile_menu)
+	var mobile_popup=mobile_menu.get_popup();mobile_popup.add_theme_font_size_override("font_size",18);mobile_popup.add_theme_constant_override("v_separation",14)
+	mobile_popup.add_item("街区",0);mobile_popup.add_item("切换视角",1);mobile_popup.add_item("昼夜",2)
+	for key in specs:
+		mobile_popup.add_separator({"mouri":"毛利楼","kudo":"工藤家","agasa":"博士家"}[key])
+		mobile_popup.add_item("门外",mobile_popup.item_count+10);mobile_popup.set_item_metadata(mobile_popup.item_count-1,{"home":key,"p":specs[key].spawn})
+		for room in specs[key].get("rooms",[]):
+			mobile_popup.add_item(room.name,mobile_popup.item_count+10);mobile_popup.set_item_metadata(mobile_popup.item_count-1,{"home":key,"p":room.p})
+	mobile_popup.id_pressed.connect(_mobile_destination)
 	controls_panel=PanelContainer.new();controls_panel.theme=theme;controls_panel.position=Vector2(25,836);controls_panel.add_theme_stylebox_override("panel",style);ui.add_child(controls_panel)
 	var controls=Label.new();controls.text="WASD 行走   Shift 快走   鼠标右键 环视   V 视角   E 交谈   N 昼夜   F 隐藏界面";controls_panel.add_child(controls)
 	hint=Label.new();hint.theme=theme;hint.position=Vector2(30,786);hint.add_theme_font_size_override("font_size",19);ui.add_child(hint)
+func _mobile_destination(id:int)->void:
+	if id==0:travel(Vector3(16.8,.2,4),.4);return
+	if id==1:first_person=not first_person;return
+	if id==2:daytime=21.0 if daytime<18 else 15.5;return
+	var popup=mobile_menu.get_popup();var item=popup.get_item_metadata(popup.get_item_index(id))
+	if item is Dictionary:travel(world_point(item.home,item.p)+Vector3(0,.12,0),float(specs[item.home].get("yaw",0)))
+func _touch_look(delta:Vector2)->void:
+	if testing or photo_mode:return
+	yaw-=delta.x*.004;pitch=clamp(pitch-delta.y*.004,-1.15,1.0)
+func _mobile_layout(viewport_size:Vector2)->void:
+	if not ui:return
+	mobile_ui=true
+	var panel=ui.get_node("MainInfo");panel.position=Vector2(12,12)
+	var col=panel.get_child(0);col.get_child(0).text="米花町";col.get_child(0).add_theme_font_size_override("font_size",18)
+	col.get_node("Destinations").hide();mobile_menu.show();controls_panel.hide()
+	clock_text.add_theme_font_size_override("font_size",13);info.add_theme_font_size_override("font_size",14)
+	info.visible=viewport_size.y>viewport_size.x
+	panel.set_deferred("size",Vector2(min(310.0,viewport_size.x-24),0))
+	mobile_menu.get_popup().max_size=Vector2i(viewport_size-Vector2(24,24))
+	hint.position=Vector2(16,max(140.0,viewport_size.y-236));hint.size=Vector2(viewport_size.x-32,64);hint.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;hint.add_theme_font_size_override("font_size",16)
 func travel(p:Vector3,angle:float=0)->void:
 	photo_mode=false;player.position=p;player.velocity=Vector3.ZERO;yaw=angle;pitch=-.06;camera.position=p+Vector3(0,1.05,0)
 func _unhandled_input(event:InputEvent)->void:
@@ -188,22 +236,55 @@ func _unhandled_input(event:InputEvent)->void:
 		if event.keycode==KEY_E and not nearest.is_empty():hint.text=nearest.name+"："+nearest.dialog;message_until=elapsed+7;play(nearest.anim,"Talk")
 func _physics_process(delta:float)->void:
 	if not player or testing or photo_mode:return
-	var input=Input.get_vector("left","right","forward","back");var dir=Vector3(input.x,0,input.y).rotated(Vector3.UP,yaw);var speed=1.85 if Input.is_action_pressed("run") else .85
+	var input=audit_input if auditing else Input.get_vector("left","right","forward","back");var dir=Vector3(input.x,0,input.y).rotated(Vector3.UP,yaw);var speed=1.85 if Input.is_action_pressed("run") else .85
 	player.velocity.x=move_toward(player.velocity.x,dir.x*speed,delta*12);player.velocity.z=move_toward(player.velocity.z,dir.z*speed,delta*12)
-	player.velocity.y=-.35 if player.is_on_floor() else player.velocity.y-delta*14;player.move_and_slide()
+	var before_move=player.position
+	player.velocity.y=-.35 if player.is_on_floor() else player.velocity.y-delta*14
+	_try_step_up(Vector3(player.velocity.x,0,player.velocity.z)*delta)
+	player.move_and_slide()
 	if player.position.y< -6:travel(Vector3(16.8,.2,4),.4)
 	avatar.visible=not first_person
 	if dir.length()>.05:avatar.rotation.y=lerp_angle(avatar.rotation.y,atan2(dir.x,dir.z),delta*10)
-	var moving_speed=Vector2(player.velocity.x,player.velocity.z).length()
+	var moving_speed=Vector2(player.position.x-before_move.x,player.position.z-before_move.z).length()/max(delta,.001)
 	var running=Input.is_action_pressed("run")
 	play(avatar_anim,"Run" if running and moving_speed>.05 else ("Walk" if moving_speed>.05 else "Idle"))
-	if avatar_anim:avatar_anim.speed_scale=moving_speed/(.79545 if running else .36667) if moving_speed>.05 else 1.0
+	if avatar_anim:avatar_anim.speed_scale=moving_speed/conan_cycle_speed(running) if moving_speed>.05 else 1.0
+	update_nearby()
+	if manual_review_camera:return
 	var target=player.position+Vector3(0,1.05,0);camera.rotation=Vector3(pitch,yaw,0)
 	if first_person:camera.position=target
 	else:
 		var end=target+Vector3(0,.55,3.0).rotated(Vector3.RIGHT,pitch).rotated(Vector3.UP,yaw)
 		var query=PhysicsRayQueryParameters3D.create(target,end);query.exclude=[player.get_rid()];var hit=get_world_3d().direct_space_state.intersect_ray(query);camera.position=hit.position+(target-hit.position).normalized()*.15 if hit else end
-	update_nearby()
+func _try_step_up(motion:Vector3)->bool:
+	# Low kerbs only. Every query is hypothetical until height, support and full
+	# capsule clearance are known; ordinary slopes remain move_and_slide's job.
+	if not player.is_on_floor() or player.velocity.y>0.01 or motion.length()<.0001:return false
+	var start=player.global_transform
+	var obstacle=KinematicCollision3D.new()
+	if not player.test_move(start,motion,obstacle,.001,false,4):return false
+	var wall=false
+	for i in range(obstacle.get_collision_count()):
+		if obstacle.get_normal(i).y<cos(player.floor_max_angle):wall=true
+	if not wall:return false
+	var direction=motion.normalized()
+	var probe=start.origin+direction*(.23+min(motion.length(),.06)+.035)
+	var query=PhysicsRayQueryParameters3D.create(probe+Vector3.UP*.185,probe-Vector3.UP*.035,player.collision_mask,[player.get_rid()])
+	var floor_hit=get_world_3d().direct_space_state.intersect_ray(query)
+	if floor_hit.is_empty() or floor_hit.normal.y<cos(player.floor_max_angle):return false
+	# The capsule's bottom is .005 m above its CharacterBody origin.
+	var rise=float(floor_hit.position.y)-.005+.001-start.origin.y
+	if rise<.018 or rise>.181:return false # 1 mm solver margin at the 18 cm limit.
+	var lift=Vector3.UP*(rise+.002)
+	if player.test_move(start,lift,null,.001,true):return false
+	var raised=start.translated(lift)
+	if player.test_move(raised,motion,null,.001,true):return false
+	player.global_position+=lift
+	player.velocity.y=0
+	return true
+func conan_cycle_speed(running:bool)->float:
+	var contract=character_motion.get("conan",{})
+	return float(contract.get("run_speed" if running else "walk_speed",.79545 if running else .36667))
 func _process(delta:float)->void:
 	if not player or motion_review:return
 	elapsed+=delta;daytime=fmod(daytime+delta*.001,24);update_life(delta)
@@ -212,7 +293,7 @@ func update_nearby()->void:
 	for a in actors:
 		var distance=a.node.global_position.distance_to(player.position)
 		if distance<best:nearest=a;best=distance
-	if elapsed>message_until:hint.text="E　与 "+str(nearest.name)+" 交谈" if not nearest.is_empty() else ""
+	if elapsed>message_until:hint.text=("与 " if mobile_ui else "E　与 ")+str(nearest.name)+" 交谈" if not nearest.is_empty() else ""
 	var title="街巷与住宅";var distance=5.0
 	for key in specs:
 		for room in specs[key].get("rooms",[]):
@@ -222,7 +303,7 @@ func update_nearby()->void:
 func update_life(delta:float)->void:
 	var night=daytime>=18 or daytime<6;
 	for light in window_lights:light.light_energy=.04 if night else float(light.get_meta("day_energy"))
-	sun.light_energy=.12 if night else 1.35;sun.light_color=Color(.55,.67,1) if night else Color(1,.94,.84)
+	sun.light_energy=.12 if night else .42;sun.light_color=Color(.55,.67,1) if night else Color(1,.94,.84)
 	if env.sky.sky_material is ShaderMaterial:env.sky.sky_material.set_shader_parameter("night_mix",1.0 if night else 0.0)
 	for a in actors:
 		if a.walking:
@@ -356,12 +437,12 @@ void fragment(){float variety=fract(sin(dot(floor(wp.xz*8.0),vec2(12.98,78.23)))
 		var node=MultiMeshInstance3D.new();node.multimesh=mm;node.position=Vector3(patch[0].x,0,patch[0].y);node.visibility_range_end=55;node.visibility_range_end_margin=8;node.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF;exterior.add_child(node)
 
 func prepare_indirect_light()->void:
-	if OS.has_feature("web"):gi_ready=true;return
+	if OS.has_feature("web") or RenderingServer.get_current_rendering_method()=="gl_compatibility":gi_ready=true;return
 	var volumes={"mouri":[Vector3(0,5,-6),Vector3(10.3,11.5,14)],"kudo":[Vector3(0,4,-1.5),Vector3(25,11,28)],"agasa":[Vector3(0,3,0),Vector3(17.5,8,16)]}
 	DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path("res://assets/lighting/"))
 	for key in homes:
 		var gi=VoxelGI.new();gi.name="IndirectLight_"+key;gi.position=volumes[key][0];gi.size=volumes[key][1];gi.subdiv=VoxelGI.SUBDIV_128;homes[key].add_child(gi)
-		var path="res://assets/lighting/"+key+".res"
+		var path="res://assets/lighting/"+key+("-reference-2026-09" if key=="agasa" else "")+".res"
 		if ResourceLoader.exists(path) and not OS.get_cmdline_user_args().has("--bake"):gi.data=load(path)
 		elif OS.get_cmdline_user_args().has("--bake"):
 			info.text="正在整理屋内的间接光…";await get_tree().process_frame;gi.bake(homes[key],false)
@@ -378,8 +459,18 @@ func add_window_lights(key:String,root:Node3D)->void:
 		"kudo":[[[6.1,1.8,8.95],[6.1,1.1,4],2.0,8],[[-6.1,1.8,8.95],[-6.1,1.1,4],1.8,8],[[6.1,4.6,8.95],[6.1,3.8,4.7],1.5,7],[[-6.1,4.6,8.95],[-6.1,3.8,4.7],1.5,7]],
 		"agasa":[[[-6.4,2.0,1.5],[0,1.1,1.5],1.7,10],[[6.4,2.0,1.5],[0,1.1,1.5],1.6,10],[[-6.6,1.9,-4.5],[-2.4,1.2,-4.5],1.5,6]]
 	}
+	if key=="agasa" and specs[key].has("windows"):
+		placements[key]=[]
+		var windows=specs[key].windows
+		# Authored curved-window positions replace the old rectangular-house lamps.
+		# Four directional lights keep the WebGL light budget below per-mesh limits.
+		for index in [1,2,6,9]:
+			if index>=windows.size():continue
+			var w=windows[index];var p=vec(w.position);var inward=vec(w.inward_normal).normalized();var target=p+inward*4.5+Vector3.DOWN*.65
+			p+=inward*.14
+			placements[key].append([[p.x,p.y,p.z],[target.x,target.y,target.z],.85,8.5])
 	for item in placements.get(key,[]):
-		var light=SpotLight3D.new();root.add_child(light);light.position=vec(item[0]);light.look_at(root.to_global(vec(item[1])));light.light_color=Color(.84,.90,1);light.light_energy=item[2];light.spot_range=item[3];light.spot_angle=78;light.spot_attenuation=.55;light.light_size=.38;light.shadow_enabled=true;light.shadow_blur=2;light.light_specular=.08;light.set_meta("day_energy",light.light_energy);window_lights.append(light)
+		var light=SpotLight3D.new();root.add_child(light);light.position=vec(item[0]);light.look_at(root.to_global(vec(item[1])));light.light_color=Color(.84,.90,1);light.light_energy=float(item[2])*.65;light.spot_range=item[3];light.spot_angle=78;light.spot_attenuation=.55;light.light_size=.38;light.shadow_enabled=true;light.shadow_blur=2;light.light_specular=.08;light.set_meta("day_energy",light.light_energy);window_lights.append(light)
 	# The library chandelier illuminates both tiers; lights stay below its opaque arms.
 	if key=="kudo":
 		for y in [2.5,4.55]:
@@ -424,7 +515,7 @@ func review_motion()->void:
 		player.position=Vector3(16.8,.26,2);player.velocity=Vector3.ZERO;avatar.rotation.y=0
 		for settle in range(12):await get_tree().physics_frame;player.velocity=Vector3(0,-1,0);player.move_and_slide()
 		avatar_anim.play(clip,0);avatar_anim.advance(0);avatar_anim.pause();var duration=avatar_anim.current_animation_length
-		var speed=.85 if clip=="Walk" else 1.85;var cycle_speed=.36667 if clip=="Walk" else .79545
+		var speed=.85 if clip=="Walk" else 1.85;var cycle_speed=conan_cycle_speed(clip=="Run")
 		var grounded_frames=0
 		for frame in range(90):
 			await get_tree().physics_frame

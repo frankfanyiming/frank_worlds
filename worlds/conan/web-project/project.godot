@@ -9,6 +9,7 @@ window/size/viewport_height=900
 window/size/window_width_override=1440
 window/size/window_height_override=900
 window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 [rendering]
 textures/vram_compression/import_etc2_astc=true
 textures/vram_compression/import_s3tc_bptc=true
@@ -22,3 +23,7 @@ lights_and_shadows/directional_shadow/soft_shadow_filter_quality=3
 lights_and_shadows/positional_shadow/soft_shadow_filter_quality=3
 [debug]
 gdscript/warnings/inference_on_variant=0
+
+[input_devices]
+
+pointing/emulate_mouse_from_touch=false

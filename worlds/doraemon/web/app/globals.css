@@ -49,3 +49,37 @@
 @media(max-width:720px){.sound-toggle{left:20px;right:auto;top:auto;bottom:24px}}
 
 .room-loading{position:absolute;z-index:14;top:50%;left:50%;transform:translate(-50%,-50%);width:min(340px,calc(100% - 36px));padding:24px;border:1px solid #edeedc;border-radius:18px;background:#fafbecf5;box-shadow:0 12px 45px #26372530;color:#3c5946;text-align:center}.room-loading b{font-size:18px}.room-loading p{font-size:13px;line-height:1.7;margin:14px 0 20px}.room-loading>span{display:block;margin-top:10px;font-size:12px;font-variant-numeric:tabular-nums}.room-loading>div:last-child{display:flex;gap:20px;justify-content:center;align-items:center;margin-top:20px}
+
+/* Touch input uses dedicated pointers; scene dragging remains available between controls. */
+.touch-controls{display:none;position:absolute;inset:0;pointer-events:none;user-select:none;-webkit-user-select:none;z-index:8}
+.touch-controls[hidden]{display:none!important}
+.touch-stick{position:absolute;left:max(20px,env(safe-area-inset-left));bottom:calc(28px + env(safe-area-inset-bottom));width:116px;height:116px;border:1px solid #fff9;border-radius:50%;background:#f9f7e535;box-shadow:inset 0 0 20px #274c3320;pointer-events:auto;touch-action:none;display:grid;place-items:center;backdrop-filter:blur(4px)}
+.touch-stick-knob{width:48px;height:48px;border-radius:50%;background:#fff9e7ce;border:1px solid #fffff1;box-shadow:0 3px 12px #16332220;pointer-events:none}
+.touch-stick small{position:absolute;bottom:-22px;font-size:11px;text-shadow:0 1px 5px #fff;color:#254934}
+.touch-actions{position:absolute;right:max(16px,env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(2,56px);gap:9px;pointer-events:auto}
+.touch-actions button{width:56px;height:56px;padding:5px;flex-direction:column;gap:2px;border-radius:50%;border:1px solid #ffffeaaa;background:#fffcebce;color:#294d3d;touch-action:none;display:flex;align-items:center;justify-content:center;font-size:10px;line-height:1.1;overflow-wrap:anywhere;box-shadow:0 3px 16px #13332218}
+.touch-actions button svg{width:19px;height:19px}.touch-actions .touch-interact{background:#335c4fe8;color:#fff8e5}
+.touch-look-hint{position:absolute;bottom:calc(12px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);font-size:10px;color:#234332;text-shadow:0 1px 6px #fff;white-space:nowrap;opacity:.8}
+@media(any-pointer:coarse){.touch-controls{display:block}.walk-guide{display:none}.interaction-prompt{bottom:calc(162px + env(safe-area-inset-bottom))}.side-tools button{min-width:44px;min-height:44px}}
+@media(max-width:720px),(max-height:500px) and (orientation:landscape){
+ .town-app .topbar{top:12px;left:max(12px,env(safe-area-inset-left));right:max(12px,env(safe-area-inset-right));padding:0;gap:8px}
+ .town-app .camera-switch{position:static;transform:none;left:auto;top:auto;margin-right:auto}.camera-switch [data-slot=tabs-list]{height:44px}.camera-switch [data-slot=tabs-trigger]{min-width:0;font-size:11px;padding:0 10px;height:34px}.camera-switch svg{width:15px}
+ .town-app .day-chip{min-height:44px;gap:6px;padding:7px 10px}.day-chip b{font-size:13px}.day-chip>i{display:none}
+ .town-app .side-tools{top:68px;right:max(12px,env(safe-area-inset-right));gap:6px}.side-tools button{width:44px;min-height:44px}.side-tools span{font-size:10px}
+ .floor-switch{left:max(12px,env(safe-area-inset-left));top:70px;padding:4px;max-width:calc(100% - 78px)}.floor-switch button{min-height:40px;padding:7px 10px}.floor-switch>span{font-size:11px;padding:0 5px}
+ .adventure-toast{top:118px;left:12px;transform:none;max-width:calc(100% - 78px);font-size:12px;padding:8px 12px;max-height:22dvh;overflow:hidden}
+ .interaction-prompt{bottom:calc(164px + env(safe-area-inset-bottom));max-width:calc(100% - 28px);min-height:44px;font-size:12px;white-space:normal;line-height:1.5}
+ .activity-hud{top:132px;left:12px;max-height:calc(100% - 300px);overflow:auto;width:calc(100% - 78px);padding:12px}.activity-hud h3{font-size:17px}.activity-hud p{font-size:12px}.drawer-action{top:118px;left:12px;min-height:44px}
+ .time-menu{top:110px;left:12px;width:calc(100% - 78px);max-height:calc(100% - 135px);overflow:auto}.flight-controls{bottom:calc(166px + env(safe-area-inset-bottom));max-width:calc(100% - 20px);white-space:normal;font-size:12px;flex-wrap:wrap;justify-content:center}.flight-controls button{min-height:44px;min-width:44px}
+ [data-slot=dialog-content]{max-width:calc(100vw - 24px)!important;max-height:calc(100dvh - 24px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overflow:auto;overscroll-behavior:contain;padding:20px!important}.dialogue-box{bottom:calc(20px + env(safe-area-inset-bottom))!important}.dialogue-box button,.talk-actions button,.reset-btn,.audio-switch{min-height:44px}
+}
+@media(max-height:500px) and (orientation:landscape){
+ .touch-stick{width:96px;height:96px;bottom:calc(20px + env(safe-area-inset-bottom))}.touch-stick-knob{width:42px;height:42px}.touch-actions{grid-template-columns:repeat(4,48px);gap:7px;bottom:calc(16px + env(safe-area-inset-bottom))}.touch-actions button{width:48px;height:48px}.touch-stick small{bottom:-17px}.touch-look-hint{bottom:6px}
+ .town-app .side-tools{flex-direction:row;top:66px}.side-tools span{display:none}.floor-switch{top:64px}.interaction-prompt{bottom:80px;max-width:45%;font-size:11px}.adventure-toast{top:65px;left:50%;transform:translateX(-50%);max-width:42%;font-size:11px}.activity-hud{top:114px;left:145px;max-width:calc(100% - 400px);max-height:calc(100% - 135px)}.drawer-action{top:113px}.time-menu{top:60px;left:calc(50% - 155px);max-height:calc(100% - 72px)}
+}
+.topbar>button{pointer-events:auto}
+.xlands .side-tools button{padding:4px;gap:2px}.side-tools span{white-space:nowrap}
+/* Portaled dialogs must clear the world's navigation layer and keep their close target reachable. */
+[data-slot=dialog-overlay]{z-index:70}
+[data-slot=dialog-content]{z-index:71;background:#fffdf3}
+[data-slot=dialog-content]>[data-slot=dialog-close]{position:fixed;top:8px;right:8px;z-index:2;min-width:44px;min-height:44px;background:#fffdf3}

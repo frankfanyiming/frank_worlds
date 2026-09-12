@@ -1,0 +1,164 @@
+{
+  "source": "conan-motion-v2.json",
+  "engine": "4.7.2-stable (official)",
+  "controller": "world.gd normal _physics_process / CharacterBody3D",
+  "checks": [
+    {
+      "check": "real_mesh_feet_found",
+      "left": 892,
+      "passed": true,
+      "right": 837
+    },
+    {
+      "check": "normal_physics_enabled",
+      "passed": true
+    },
+    {
+      "check": "idle_after_stopping",
+      "passed": true
+    },
+    {
+      "actual_speed": 0.0,
+      "barrier": [
+        16.7999992370605,
+        0.775007903575897,
+        8.03667545318604
+      ],
+      "check": "wall_blocks_normal_controller",
+      "passed": true,
+      "player": [
+        16.7999992370605,
+        0.12866772711277,
+        7.72573518753052
+      ]
+    },
+    {
+      "check": "wall_contact_switches_to_idle",
+      "clip": "Idle",
+      "passed": true
+    },
+    {
+      "check": "Walk_Left_foot_contact",
+      "passed": true,
+      "drift_m": 0.0010709903755191804,
+      "minimum_relative_sole_m": -0.00035777688026500387
+    },
+    {
+      "check": "Walk_Right_foot_contact",
+      "passed": true,
+      "drift_m": 0.0011717767452358767,
+      "minimum_relative_sole_m": -0.00041100382804801217
+    },
+    {
+      "check": "Run_Left_foot_contact",
+      "passed": true,
+      "drift_m": 0.0005488925944657524,
+      "minimum_relative_sole_m": -6.194412708199204e-05
+    },
+    {
+      "check": "Run_Right_foot_contact",
+      "passed": true,
+      "drift_m": 0.0008250693933806717,
+      "minimum_relative_sole_m": -4.4852495192981845e-05
+    }
+  ],
+  "phases": {
+    "run_forward": {
+      "frames": 96,
+      "distance_m": 2.9091553688049405,
+      "mean_stable_actual_speed": 1.849990894919948,
+      "grounded_fraction": 1.0,
+      "clips": [
+        "Run"
+      ],
+      "mean_animation_rate": 1.2333272632799654
+    },
+    "settle": {
+      "frames": 36,
+      "distance_m": 0.0,
+      "mean_stable_actual_speed": 0.0,
+      "grounded_fraction": 1.0,
+      "clips": [
+        "Idle"
+      ],
+      "mean_animation_rate": 1.0
+    },
+    "stop": {
+      "frames": 42,
+      "distance_m": 0.012499332427980292,
+      "mean_stable_actual_speed": 0.0,
+      "grounded_fraction": 1.0,
+      "clips": [
+        "Idle",
+        "Walk"
+      ],
+      "mean_animation_rate": 1.0
+    },
+    "turn_back": {
+      "frames": 144,
+      "distance_m": 1.985820770263662,
+      "mean_stable_actual_speed": 0.8499928443662582,
+      "grounded_fraction": 1.0,
+      "clips": [
+        "Walk"
+      ],
+      "mean_animation_rate": 1.214275520655417
+    },
+    "walk_forward": {
+      "frames": 114,
+      "distance_m": 1.58833885192871,
+      "mean_stable_actual_speed": 0.8500020047451589,
+      "grounded_fraction": 1.0,
+      "clips": [
+        "Walk"
+      ],
+      "mean_animation_rate": 1.214288608824953
+    },
+    "wall_contact": {
+      "frames": 168,
+      "distance_m": 0.9859523773193297,
+      "mean_stable_actual_speed": 0.2956554051992056,
+      "grounded_fraction": 1.0,
+      "clips": [
+        "Idle",
+        "Walk"
+      ],
+      "mean_animation_rate": 1.0641913168333672
+    }
+  },
+  "feet": {
+    "Walk": {
+      "Left": {
+        "max_observed_stance_drift_m": 0.0010709903755191804,
+        "stance_segments": 2,
+        "minimum_sole_relative_body_m": -0.00035777688026500387,
+        "maximum_lift_relative_body_m": 0.04664423316717199
+      },
+      "Right": {
+        "max_observed_stance_drift_m": 0.0011717767452358767,
+        "stance_segments": 3,
+        "minimum_sole_relative_body_m": -0.00041100382804801217,
+        "maximum_lift_relative_body_m": 0.04584105312824299
+      }
+    },
+    "Run": {
+      "Left": {
+        "max_observed_stance_drift_m": 0.0005488925944657524,
+        "stance_segments": 3,
+        "minimum_sole_relative_body_m": -6.194412708199204e-05,
+        "maximum_lift_relative_body_m": 0.07661606371402802
+      },
+      "Right": {
+        "max_observed_stance_drift_m": 0.0008250693933806717,
+        "stance_segments": 3,
+        "minimum_sole_relative_body_m": -4.4852495192981845e-05,
+        "maximum_lift_relative_body_m": 0.075265727937221
+      }
+    }
+  },
+  "material_textures": [
+    "res://assets/conan.glb::PortableCompressedTexture2D_vivur",
+    "res://assets/conan.glb::PortableCompressedTexture2D_exf0y",
+    "res://assets/conan.glb::PortableCompressedTexture2D_1urmc"
+  ]
+}

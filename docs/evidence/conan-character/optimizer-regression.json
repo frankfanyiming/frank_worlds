@@ -1,0 +1,184 @@
+{
+  "issue": "Godot animation optimizer removed an essential LeftShin key at Walk .4 seconds, while keeping dependent foot compensation.",
+  "scope": "Only AnimationPlayer node import optimizer disabled for Conan and Agasa; GLB bytes unchanged.",
+  "setting": {
+    "_subresources.nodes.PATH:AnimationPlayer.optimizer/enabled": false,
+    "_subresources.nodes.PATH:AnimationPlayer.compression/enabled": false,
+    "gltf/embedded_image_handling": 2
+  },
+  "godot_optimized_at_0_4": {
+    "Hips": {
+      "pose": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.413897, 0.0)]",
+      "position": "(0.0, 0.403397, 0.0)",
+      "rotation": "(0, 0, 0, 1)"
+    },
+    "LeftFoot": {
+      "pose": "[X: (-0.999907, -0.002113, -0.013802), Y: (-0.013944, 0.202089, 0.979269), Z: (0.000721, 0.979365, -0.202099), O: (0.092734, 0.098677, -0.10308)]",
+      "position": "(-0.0, 0.164937, -0.0)",
+      "rotation": "(0.000883, -0.42215, 0.905996, -0.030984)"
+    },
+    "LeftShin": {
+      "pose": "[X: (0.997233, 0.040491, 0.062415), Y: (0.06528, -0.878646, -0.472991), Z: (0.035689, 0.475754, -0.878855), O: (0.081967, 0.243598, -0.025067)]",
+      "position": "(-0.0, 0.1726, 0.0)",
+      "rotation": "(0.172217, 0.004558, 0.011472, 0.984982)"
+    },
+    "LeftThigh": {
+      "pose": "[X: (0.996018, 0.065109, 0.060978), Y: (0.07339, -0.986672, -0.145231), Z: (0.050709, 0.149127, -0.987518), O: (0.0693, 0.413897, 0.0)]",
+      "position": "(0.0693, 0.0, 0.0)",
+      "rotation": "(0.996268, 0.034754, 0.028026, -0.073865)"
+    },
+    "RightFoot": {
+      "pose": "[X: (-1.000004, -0.000001, -0.000002), Y: (-0.000002, 0.0, 1.0), Z: (-0.000002, 1.0, 0.0), O: (-0.09135, 0.11755, 0.1491)]",
+      "position": "(0.0, 0.164937, -0.0)",
+      "rotation": "(-0.001096, -0.799037, 0.598479, 0.05798)"
+    }
+  },
+  "godot_preserved_at_0_4": {
+    "Hips": {
+      "pose": "[X: (1.0, 0.0, 0.0), Y: (0.0, 1.0, 0.0), Z: (0.0, 0.0, 1.0), O: (0.0, 0.413897, 0.0)]",
+      "position": "(0.0, 0.403397, 0.0)",
+      "rotation": "(0, 0, 0, 1)"
+    },
+    "LeftFoot": {
+      "pose": "[X: (-1.000004, -0.000001, 0.000002), Y: (0.000002, -0.0, 1.000001), Z: (-0.0, 1.0, -0.0), O: (0.09135, 0.117441, -0.1309)]",
+      "position": "(-0.0, 0.164937, -0.0)",
+      "rotation": "(0.000883, -0.42215, 0.905996, -0.030984)"
+    },
+    "LeftShin": {
+      "pose": "[X: (0.998083, 0.027761, 0.055397), Y: (0.056888, -0.764877, -0.64166), Z: (0.024559, 0.643578, -0.764988), O: (0.081967, 0.243598, -0.025067)]",
+      "position": "(-0.0, 0.1726, 0.0)",
+      "rotation": "(0.271376, 0.00511, 0.018206, 0.962288)"
+    },
+    "LeftThigh": {
+      "pose": "[X: (0.996018, 0.065109, 0.060978), Y: (0.07339, -0.986672, -0.145231), Z: (0.050709, 0.149127, -0.987518), O: (0.0693, 0.413897, 0.0)]",
+      "position": "(0.0693, 0.0, 0.0)",
+      "rotation": "(0.996268, 0.034754, 0.028026, -0.073865)"
+    },
+    "RightFoot": {
+      "pose": "[X: (-1.000004, -0.000001, -0.000002), Y: (-0.000002, 0.0, 1.0), Z: (-0.000002, 1.0, 0.0), O: (-0.09135, 0.11755, 0.1491)]",
+      "position": "(0.0, 0.164937, -0.0)",
+      "rotation": "(-0.001096, -0.799037, 0.598479, 0.05798)"
+    }
+  },
+  "physics_before": {
+    "Walk": {
+      "Left": {
+        "max_observed_stance_drift_m": 0.03865969920188433,
+        "stance_segments": 2,
+        "minimum_sole_relative_body_m": -0.022999316453932994,
+        "maximum_lift_relative_body_m": 0.04664423316717199
+      },
+      "Right": {
+        "max_observed_stance_drift_m": 0.0010757337436062251,
+        "stance_segments": 3,
+        "minimum_sole_relative_body_m": -0.0004285126924510052,
+        "maximum_lift_relative_body_m": 0.04584105312824299
+      }
+    },
+    "Run": {
+      "Left": {
+        "max_observed_stance_drift_m": 0.0005719669166260516,
+        "stance_segments": 3,
+        "minimum_sole_relative_body_m": -6.194412708199204e-05,
+        "maximum_lift_relative_body_m": 0.07657864689827001
+      },
+      "Right": {
+        "max_observed_stance_drift_m": 0.000825300849179238,
+        "stance_segments": 3,
+        "minimum_sole_relative_body_m": -5.2794814108997334e-05,
+        "maximum_lift_relative_body_m": 0.075260303914547
+      }
+    }
+  },
+  "physics_after": {
+    "Walk": {
+      "Left": {
+        "max_observed_stance_drift_m": 0.0010709903755191804,
+        "stance_segments": 2,
+        "minimum_sole_relative_body_m": -0.00035777688026500387,
+        "maximum_lift_relative_body_m": 0.04664423316717199
+      },
+      "Right": {
+        "max_observed_stance_drift_m": 0.0011717767452358767,
+        "stance_segments": 3,
+        "minimum_sole_relative_body_m": -0.00041100382804801217,
+        "maximum_lift_relative_body_m": 0.04584105312824299
+      }
+    },
+    "Run": {
+      "Left": {
+        "max_observed_stance_drift_m": 0.0005488925944657524,
+        "stance_segments": 3,
+        "minimum_sole_relative_body_m": -6.194412708199204e-05,
+        "maximum_lift_relative_body_m": 0.07661606371402802
+      },
+      "Right": {
+        "max_observed_stance_drift_m": 0.0008250693933806717,
+        "stance_segments": 3,
+        "minimum_sole_relative_body_m": -4.4852495192981845e-05,
+        "maximum_lift_relative_body_m": 0.075265727937221
+      }
+    }
+  },
+  "checks_after": [
+    {
+      "check": "real_mesh_feet_found",
+      "left": 892,
+      "passed": true,
+      "right": 837
+    },
+    {
+      "check": "normal_physics_enabled",
+      "passed": true
+    },
+    {
+      "check": "idle_after_stopping",
+      "passed": true
+    },
+    {
+      "actual_speed": 0.0,
+      "barrier": [
+        16.7999992370605,
+        0.775007903575897,
+        8.03667545318604
+      ],
+      "check": "wall_blocks_normal_controller",
+      "passed": true,
+      "player": [
+        16.7999992370605,
+        0.12866772711277,
+        7.72573518753052
+      ]
+    },
+    {
+      "check": "wall_contact_switches_to_idle",
+      "clip": "Idle",
+      "passed": true
+    },
+    {
+      "check": "Walk_Left_foot_contact",
+      "passed": true,
+      "drift_m": 0.0010709903755191804,
+      "minimum_relative_sole_m": -0.00035777688026500387
+    },
+    {
+      "check": "Walk_Right_foot_contact",
+      "passed": true,
+      "drift_m": 0.0011717767452358767,
+      "minimum_relative_sole_m": -0.00041100382804801217
+    },
+    {
+      "check": "Run_Left_foot_contact",
+      "passed": true,
+      "drift_m": 0.0005488925944657524,
+      "minimum_relative_sole_m": -6.194412708199204e-05
+    },
+    {
+      "check": "Run_Right_foot_contact",
+      "passed": true,
+      "drift_m": 0.0008250693933806717,
+      "minimum_relative_sole_m": -4.4852495192981845e-05
+    }
+  ],
+  "reference": "https://github.com/godotengine/godot/blob/master/editor/import/3d/resource_importer_scene.cpp"
+}
