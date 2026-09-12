@@ -3,7 +3,8 @@ extends SceneTree
 ## ConfigFile preserves unrelated advanced import settings and UID metadata.
 func _initialize():
  var changed_files:Array=[]
- for key in ["conan","agasa"]:
+ for key in ["conan","agasa","kogoro"]:
+  if key=="kogoro" and not FileAccess.file_exists("res://assets/kogoro.glb"):continue
   var path="res://assets/"+key+".glb.import"
   var config=ConfigFile.new()
   if config.load(path)!=OK:

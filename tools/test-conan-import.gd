@@ -17,7 +17,8 @@ func textures_in(n:Node,found:Array):
     found.append({"path":material.albedo_texture.resource_path,"width":material.albedo_texture.get_width(),"height":material.albedo_texture.get_height()})
  for child in n.get_children():textures_in(child,found)
 func run():
- for key in ["conan","agasa"]:
+ for key in ["conan","agasa","kogoro"]:
+  if key=="kogoro" and not FileAccess.file_exists("res://assets/kogoro.glb"):continue
   var node=load("res://assets/"+key+".glb").instantiate();root.add_child(node)
   var animation=animation_in(node);var textures:Array=[];textures_in(node,textures)
   checks.append({"check":key+"_embedded_texture","passed":not textures.is_empty() and textures.all(func(t):return ".glb::" in t.path and t.width>=1024)})

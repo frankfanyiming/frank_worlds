@@ -1,0 +1,882 @@
+{
+  "conan": {
+    "source_sha256": "808801e09b26c8adef8f02b5dd2b5fedd0f6b7d5b2f760a9ecc3bdade6396300",
+    "candidate_sha256": "0fda5f9f9d35433a6c418ad2841a0c6d569f43616948cd6c708a7b34f85abc8d",
+    "problems": [],
+    "original_binary_prefix_preserved": true,
+    "materials_images_textures_same": true,
+    "non_arm_node_changes": [],
+    "non_arm_bind_changes": [],
+    "all_bind_changes": [],
+    "non_arm_animation_changes": [],
+    "arm_animation_input_changes": [],
+    "checked_non_arm_channels": 294,
+    "geometry_changes": [],
+    "true_leg_weight_changes": [],
+    "safe_hand_leg_corrections": [],
+    "new_leg_influences": [],
+    "cross_side_arm_influences": [],
+    "changed_outside_scope": [],
+    "meshes": [
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "vertices": 5506,
+        "changed_weight_vertices": 0,
+        "changed_bounds_gltf": null,
+        "true_leg_vertices_checked": 2991,
+        "reordered_slots_only": 0
+      },
+      {
+        "primitive": [
+          0,
+          1
+        ],
+        "vertices": 2413,
+        "changed_weight_vertices": 0,
+        "changed_bounds_gltf": null,
+        "true_leg_vertices_checked": 0,
+        "reordered_slots_only": 0
+      },
+      {
+        "primitive": [
+          0,
+          2
+        ],
+        "vertices": 2045,
+        "changed_weight_vertices": 517,
+        "changed_bounds_gltf": {
+          "count": 517,
+          "min": [
+            -0.2505412697792053,
+            0.43318411707878113,
+            -0.056383710354566574
+          ],
+          "max": [
+            0.24985703825950623,
+            0.6774395704269409,
+            0.03664643317461014
+          ]
+        },
+        "true_leg_vertices_checked": 193,
+        "reordered_slots_only": 0
+      }
+    ],
+    "candidate_stable_at_end": true
+  },
+  "kogoro": {
+    "source_sha256": "3c89a95caaf5d59e5e204ee3af0762bac8889fdc2d649e4650285a80b3bdadbd",
+    "candidate_sha256": "a10cd7fb7c774579af8529a9dd146b42235d32e8ff0d570c6eba2cdf09a48be3",
+    "problems": [],
+    "original_binary_prefix_preserved": true,
+    "materials_images_textures_same": true,
+    "non_arm_node_changes": [],
+    "non_arm_bind_changes": [],
+    "all_bind_changes": [
+      "LeftArm",
+      "LeftForeArm",
+      "LeftHand",
+      "RightArm",
+      "RightForeArm",
+      "RightHand"
+    ],
+    "non_arm_animation_changes": [],
+    "arm_animation_input_changes": [],
+    "checked_non_arm_channels": 231,
+    "geometry_changes": [],
+    "true_leg_weight_changes": [],
+    "safe_hand_leg_corrections": [
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 6954,
+        "position": [
+          0.3618394136428833,
+          0.7875061631202698,
+          0.025947174057364464
+        ],
+        "old": {
+          "LeftThigh": 0.9189920425415039,
+          "LeftShin": 0.08100796490907669
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7047,
+        "position": [
+          -0.361670583486557,
+          0.7820471525192261,
+          0.027419554069638252
+        ],
+        "old": {
+          "RightThigh": 0.9152873158454895,
+          "RightShin": 0.0847126841545105
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7233,
+        "position": [
+          -0.36140599846839905,
+          0.7877870202064514,
+          0.027387961745262146
+        ],
+        "old": {
+          "RightThigh": 0.9194319844245911,
+          "RightShin": 0.08056803792715073
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7552,
+        "position": [
+          -0.3616730570793152,
+          0.7998619079589844,
+          0.02850220911204815
+        ],
+        "old": {
+          "RightThigh": 0.9266830086708069,
+          "RightShin": 0.07331699132919312
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7556,
+        "position": [
+          0.36138787865638733,
+          0.7905018925666809,
+          0.02815229259431362
+        ],
+        "old": {
+          "LeftThigh": 0.9211455583572388,
+          "LeftShin": 0.07885445654392242
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7557,
+        "position": [
+          0.3613935112953186,
+          0.7905011773109436,
+          0.02815243974328041
+        ],
+        "old": {
+          "LeftThigh": 0.9211400151252747,
+          "LeftShin": 0.07886000722646713
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7558,
+        "position": [
+          0.3607763946056366,
+          0.7843252420425415,
+          0.029675660654902458
+        ],
+        "old": {
+          "LeftThigh": 0.9174460172653198,
+          "LeftShin": 0.08255397528409958
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7761,
+        "position": [
+          -0.360739529132843,
+          0.7846364378929138,
+          0.030289217829704285
+        ],
+        "old": {
+          "RightThigh": 0.9176216125488281,
+          "RightShin": 0.08237838745117188
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7834,
+        "position": [
+          0.36130836606025696,
+          0.7905003428459167,
+          0.029691724106669426
+        ],
+        "old": {
+          "LeftThigh": 0.9210527539253235,
+          "LeftShin": 0.07894723117351532
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7835,
+        "position": [
+          0.36121904850006104,
+          0.7905081510543823,
+          0.02969202771782875
+        ],
+        "old": {
+          "LeftThigh": 0.9211381673812866,
+          "LeftShin": 0.07886183261871338
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7836,
+        "position": [
+          0.3608466386795044,
+          0.7843331694602966,
+          0.02969442680478096
+        ],
+        "old": {
+          "LeftThigh": 0.9173839688301086,
+          "LeftShin": 0.08261604607105255
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7838,
+        "position": [
+          0.3608437478542328,
+          0.7812330722808838,
+          0.03122793138027191
+        ],
+        "old": {
+          "LeftThigh": 0.9150705337524414,
+          "LeftShin": 0.08492947369813919
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 7839,
+        "position": [
+          -0.3611682951450348,
+          0.7781299352645874,
+          0.030630486086010933
+        ],
+        "old": {
+          "RightThigh": 0.9126328825950623,
+          "RightShin": 0.08736713975667953
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8040,
+        "position": [
+          -0.3608459532260895,
+          0.7864059209823608,
+          0.03204100951552391
+        ],
+        "old": {
+          "RightThigh": 0.9185091257095337,
+          "RightShin": 0.08149084448814392
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8140,
+        "position": [
+          0.3610624670982361,
+          0.7862907648086548,
+          0.032276324927806854
+        ],
+        "old": {
+          "LeftThigh": 0.9182043075561523,
+          "LeftShin": 0.08179567754268646
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8141,
+        "position": [
+          0.3608367145061493,
+          0.7843313813209534,
+          0.03123735450208187
+        ],
+        "old": {
+          "LeftThigh": 0.9172133207321167,
+          "LeftShin": 0.0827866867184639
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8142,
+        "position": [
+          0.36083781719207764,
+          0.784331202507019,
+          0.031235171481966972
+        ],
+        "old": {
+          "LeftThigh": 0.9172124266624451,
+          "LeftShin": 0.08278758823871613
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8143,
+        "position": [
+          0.36092859506607056,
+          0.7812464833259583,
+          0.03123735450208187
+        ],
+        "old": {
+          "LeftThigh": 0.914998471736908,
+          "LeftShin": 0.08500152081251144
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8340,
+        "position": [
+          -0.36128854751586914,
+          0.7732293605804443,
+          0.034889109432697296
+        ],
+        "old": {
+          "RightThigh": 0.9083538055419922,
+          "RightShin": 0.09164616465568542
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8416,
+        "position": [
+          -0.36079660058021545,
+          0.7787948250770569,
+          0.03419119119644165
+        ],
+        "old": {
+          "RightThigh": 0.9130138754844666,
+          "RightShin": 0.08698615431785583
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8417,
+        "position": [
+          0.36087194085121155,
+          0.7812473773956299,
+          0.03278430178761482
+        ],
+        "old": {
+          "LeftThigh": 0.914861261844635,
+          "LeftShin": 0.08513873815536499
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8418,
+        "position": [
+          0.36093729734420776,
+          0.7812464833259583,
+          0.032779816538095474
+        ],
+        "old": {
+          "LeftThigh": 0.9147993922233582,
+          "LeftShin": 0.08520063012838364
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8419,
+        "position": [
+          0.36146125197410583,
+          0.7766216993331909,
+          0.032791610807180405
+        ],
+        "old": {
+          "LeftThigh": 0.9109852910041809,
+          "LeftShin": 0.08901470899581909
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8420,
+        "position": [
+          0.36145487427711487,
+          0.7766191959381104,
+          0.032779816538095474
+        ],
+        "old": {
+          "LeftThigh": 0.9109911918640137,
+          "LeftShin": 0.08900880068540573
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8587,
+        "position": [
+          -0.3612876534461975,
+          0.7827717065811157,
+          0.03523019328713417
+        ],
+        "old": {
+          "RightThigh": 0.9152126312255859,
+          "RightShin": 0.08478735387325287
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8673,
+        "position": [
+          0.3619544506072998,
+          0.7835401296615601,
+          0.035917170345783234
+        ],
+        "old": {
+          "LeftThigh": 0.9150274395942688,
+          "LeftShin": 0.08497253060340881
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8675,
+        "position": [
+          0.3613034188747406,
+          0.7766191959381104,
+          0.03432216867804527
+        ],
+        "old": {
+          "LeftThigh": 0.9109333157539368,
+          "LeftShin": 0.08906668424606323
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8676,
+        "position": [
+          0.3613034188747406,
+          0.7766191959381104,
+          0.03432216867804527
+        ],
+        "old": {
+          "LeftThigh": 0.9109333157539368,
+          "LeftShin": 0.08906668424606323
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8677,
+        "position": [
+          0.3615081012248993,
+          0.7750767469406128,
+          0.03432216867804527
+        ],
+        "old": {
+          "LeftThigh": 0.9095972776412964,
+          "LeftShin": 0.09040272980928421
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8678,
+        "position": [
+          0.3615081012248993,
+          0.7750767469406128,
+          0.03432216867804527
+        ],
+        "old": {
+          "LeftThigh": 0.9095972776412964,
+          "LeftShin": 0.09040272980928421
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8869,
+        "position": [
+          0.36188459396362305,
+          0.7719905376434326,
+          0.035871781408786774
+        ],
+        "old": {
+          "LeftThigh": 0.906681478023529,
+          "LeftShin": 0.09331849962472916
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8870,
+        "position": [
+          0.3618670105934143,
+          0.7719916105270386,
+          0.03586420789361
+        ],
+        "old": {
+          "LeftThigh": 0.9067009687423706,
+          "LeftShin": 0.0932990238070488
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8953,
+        "position": [
+          0.36162567138671875,
+          0.7771859169006348,
+          0.036687761545181274
+        ],
+        "old": {
+          "LeftThigh": 0.9107030034065247,
+          "LeftShin": 0.08929698914289474
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8954,
+        "position": [
+          0.3614920973777771,
+          0.7750767469406128,
+          0.03586462512612343
+        ],
+        "old": {
+          "LeftThigh": 0.9093967080116272,
+          "LeftShin": 0.09060326963663101
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8955,
+        "position": [
+          0.36150482296943665,
+          0.7750769257545471,
+          0.035860396921634674
+        ],
+        "old": {
+          "LeftThigh": 0.9093849658966064,
+          "LeftShin": 0.09061500430107117
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 8957,
+        "position": [
+          -0.3616056740283966,
+          0.7697526216506958,
+          0.03678228333592415
+        ],
+        "old": {
+          "RightThigh": 0.9050999283790588,
+          "RightShin": 0.09490006417036057
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 9124,
+        "position": [
+          -0.36129501461982727,
+          0.7743714451789856,
+          0.03758035600185394
+        ],
+        "old": {
+          "RightThigh": 0.9088122248649597,
+          "RightShin": 0.09118775278329849
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 9222,
+        "position": [
+          0.3619121015071869,
+          0.770447850227356,
+          0.037394456565380096
+        ],
+        "old": {
+          "LeftThigh": 0.9052387475967407,
+          "LeftShin": 0.09476125985383987
+        },
+        "new": {
+          "LeftHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 9484,
+        "position": [
+          -0.3615705072879791,
+          0.7703549265861511,
+          0.03976420313119888
+        ],
+        "old": {
+          "RightThigh": 0.9051356911659241,
+          "RightShin": 0.09486429393291473
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      },
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "index": 30298,
+        "position": [
+          -0.3619706332683563,
+          0.8465282917022705,
+          -0.0033200429752469063
+        ],
+        "old": {
+          "RightThigh": 0.9504810571670532,
+          "RightShin": 0.049518924206495285
+        },
+        "new": {
+          "RightHand": 1.0
+        }
+      }
+    ],
+    "new_leg_influences": [],
+    "cross_side_arm_influences": [],
+    "changed_outside_scope": [],
+    "meshes": [
+      {
+        "primitive": [
+          0,
+          0
+        ],
+        "vertices": 70224,
+        "changed_weight_vertices": 16679,
+        "changed_bounds_gltf": {
+          "count": 16679,
+          "min": [
+            -0.45913177728652954,
+            0.6891313791275024,
+            -0.15416599810123444
+          ],
+          "max": [
+            0.45915910601615906,
+            1.4598383903503418,
+            0.05119701474905014
+          ]
+        },
+        "true_leg_vertices_checked": 19525,
+        "reordered_slots_only": 0
+      }
+    ],
+    "candidate_stable_at_end": true
+  }
+}

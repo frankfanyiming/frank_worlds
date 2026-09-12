@@ -568,7 +568,7 @@ function NativeWorld({
         key={world + locale + retry}
         title={t(titleKey[world])}
         src={
-          assetPath('worlds/' + world + '/index.html') + '?v=mobile-18&lang=' +
+          assetPath('worlds/' + world + '/index.html') + '?v=' + (world === 'conan' ? 'arms-soft-20' : 'mobile-18') + '&lang=' +
           locale +
           '&sound=' +
           (initialSound.current ? '1' : '0')

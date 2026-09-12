@@ -79,11 +79,13 @@ func _ready()->void:
 	if OS.get_cmdline_user_args().has("--verify"):await verify();get_tree().quit();return
 func action_name(n)->StringName:return StringName(n)
 func lighting()->void:
-	env=Environment.new();env.background_mode=Environment.BG_SKY;env.sky=Sky.new();env.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR;env.ambient_light_color=Color(.68,.75,.86);env.ambient_light_sky_contribution=.35;env.ambient_light_energy=.40;env.tonemap_mode=Environment.TONE_MAPPER_ACES;env.tonemap_exposure=.95
+	env=Environment.new();env.background_mode=Environment.BG_SKY;env.sky=Sky.new();env.ambient_light_source=Environment.AMBIENT_SOURCE_COLOR;env.ambient_light_color=Color(.88,.90,.92);env.ambient_light_sky_contribution=0;env.ambient_light_energy=.55;env.tonemap_mode=Environment.TONE_MAPPER_ACES;env.tonemap_exposure=.95
+	# A low-contrast grade follows lighting; verified in the Web Compatibility renderer.
+	env.adjustment_enabled=true;env.adjustment_saturation=.84;env.adjustment_contrast=.96
 	var supports_screen_lighting=RenderingServer.get_current_rendering_method()=="forward_plus"
 	env.ssao_enabled=supports_screen_lighting;env.ssao_radius=.55;env.ssao_intensity=1.25;env.ssil_enabled=supports_screen_lighting;env.ssil_intensity=.7;env.fog_enabled=true;env.fog_density=.0014;env.fog_sky_affect=.08;env.fog_light_color=Color(.72,.80,.86)
 	var we=WorldEnvironment.new();we.environment=env;add_child(we)
-	sun=DirectionalLight3D.new();sun.rotation_degrees=Vector3(-38,35,0);sun.light_color=Color(1,.94,.84);sun.light_energy=.42;sun.shadow_enabled=true;sun.directional_shadow_max_distance=100;sun.shadow_bias=.12;sun.shadow_normal_bias=1.0;sun.light_angular_distance=2.0;add_child(sun)
+	sun=DirectionalLight3D.new();sun.rotation_degrees=Vector3(-38,35,0);sun.light_color=Color(1,.98,.94);sun.light_energy=.28;sun.light_specular=.12;sun.shadow_enabled=true;sun.directional_shadow_max_distance=100;sun.shadow_bias=.12;sun.shadow_normal_bias=1.0;sun.light_angular_distance=2.0;add_child(sun)
 func build_street()->void:
 	exterior=Node3D.new();exterior.name="BlenderStreet";add_child(exterior)
 	if ResourceLoader.exists("res://assets/street.glb"):
@@ -147,8 +149,10 @@ func build_houses()->void:
 		var architecture=model("buildings/"+key,root,Vector3.ZERO);collision_meshes(architecture)
 		for c in spec.get("colliders",[]):collision(root,vec(c.p),vec(c.s),float(c.get("r",0)),float(c.get("rx",0)))
 		for r in spec.get("ramps",[]):collision(root,vec(r.p),vec(r.s),float(r.get("r",0)),float(r.get("rx",0)))
+		# These overlapping ceiling points supply weak diffuse fill.
+		# Windows and the sun retain directional shadows and roof occlusion.
 		for item in spec.get("lights",[]):
-			var l=OmniLight3D.new();l.position=vec(item.p);l.omni_range=float(item.get("range",5));l.light_energy=float(item.get("energy",.8));l.light_color=Color(str(item.get("color","fff1d1")));l.light_size=.06;l.shadow_enabled=bool(item.get("shadow",key!="agasa"));l.omni_attenuation=float(item.get("attenuation",1.3 if key=="agasa" else .85));l.light_specular=.18;root.add_child(l)
+			var l=OmniLight3D.new();l.position=vec(item.p);l.omni_range=float(item.get("range",5));l.light_energy=float(item.get("energy",.8))*(.4 if key=="agasa" else .22);l.light_color=Color(.98,.97,.93);l.light_size=.18;l.shadow_enabled=false;l.omni_attenuation=float(item.get("attenuation",1.3 if key=="agasa" else .85));l.light_specular=.08;root.add_child(l)
 			if key=="kudo":l.position.y-=.36 if l.position.y<3 else .40
 			l.set_meta("base_energy",l.light_energy);lamps.append(l)
 		add_window_lights(key,root)
@@ -303,12 +307,13 @@ func update_nearby()->void:
 func update_life(delta:float)->void:
 	var night=daytime>=18 or daytime<6;
 	for light in window_lights:light.light_energy=.04 if night else float(light.get_meta("day_energy"))
-	sun.light_energy=.12 if night else .42;sun.light_color=Color(.55,.67,1) if night else Color(1,.94,.84)
+	sun.light_energy=.055 if night else .28;sun.light_color=Color(.64,.72,.90) if night else Color(1,.98,.94)
+	env.ambient_light_energy=.24 if night else .55;env.ambient_light_color=Color(.76,.81,.88) if night else Color(.88,.90,.92)
 	if env.sky.sky_material is ShaderMaterial:env.sky.sky_material.set_shader_parameter("night_mix",1.0 if night else 0.0)
 	for a in actors:
 		if a.walking:
 			var phase=elapsed*.075+a.phase;a.node.position=a.home+Vector3(0,0,sin(phase)*5.5);a.node.rotation.y=lerp_angle(a.node.rotation.y,0 if cos(phase)>0 else PI,delta*4);a.anim.speed_scale=max(.3,abs(cos(phase))*.6)
-		elif elapsed>message_until:play(a.anim,"Read" if a.get("key","")=="kogoro" else "Idle")
+		elif elapsed>message_until:play(a.anim,"Idle")
 	var red=fmod(elapsed,25)>14;var length=traffic_curve.get_baked_length()
 	for car in traffic:
 		var p=traffic_curve.sample_baked(fmod(car.distance,length),true);var next=traffic_curve.sample_baked(fmod(car.distance+.15,length),true);var direction=(next-p).normalized()
@@ -346,6 +351,7 @@ func apply_materials(n:Node)->void:
 					if ResourceLoader.exists(albedo):m.albedo_texture=load(albedo);m.albedo_color=Color(str(spec.get("tint_hex","ffffff"))) if spec.get("tint_hex")!=null else Color.WHITE
 					if ResourceLoader.exists(path+"normal.png"):m.normal_enabled=true;m.normal_texture=load(path+"normal.png");m.normal_scale=float(spec.get("normal_strength",.25))
 					if ResourceLoader.exists(path+"roughness.jpg"):m.roughness_texture=load(path+"roughness.jpg");m.roughness_texture_channel=BaseMaterial3D.TEXTURE_CHANNEL_RED;m.roughness=1
+				if key.begins_with("M_Gray_mottled_linoleum"):m.albedo_color=Color("bfc3bc");m.normal_scale=.08
 				if key=="M_Continuous_asphalt":m.albedo_color=Color(.52,.54,.55)
 				if key=="Town_grass_ground":m.albedo_color=Color(.55,.68,.37);m.roughness=1
 				if glass:
@@ -470,11 +476,11 @@ func add_window_lights(key:String,root:Node3D)->void:
 			p+=inward*.14
 			placements[key].append([[p.x,p.y,p.z],[target.x,target.y,target.z],.85,8.5])
 	for item in placements.get(key,[]):
-		var light=SpotLight3D.new();root.add_child(light);light.position=vec(item[0]);light.look_at(root.to_global(vec(item[1])));light.light_color=Color(.84,.90,1);light.light_energy=float(item[2])*.65;light.spot_range=item[3];light.spot_angle=78;light.spot_attenuation=.55;light.light_size=.38;light.shadow_enabled=true;light.shadow_blur=2;light.light_specular=.08;light.set_meta("day_energy",light.light_energy);window_lights.append(light)
+		var light=SpotLight3D.new();root.add_child(light);light.position=vec(item[0]);light.look_at(root.to_global(vec(item[1])));light.light_color=Color(.98,.97,.93);light.light_energy=float(item[2])*.30;light.spot_range=item[3];light.spot_angle=78;light.spot_attenuation=.55;light.light_size=.38;light.shadow_enabled=true;light.shadow_blur=2;light.shadow_opacity=.55;light.light_specular=.08;light.set_meta("day_energy",light.light_energy);window_lights.append(light)
 	# The library chandelier illuminates both tiers; lights stay below its opaque arms.
 	if key=="kudo":
 		for y in [2.5,4.55]:
-			var light=OmniLight3D.new();root.add_child(light);light.position=Vector3(-4.7,y,-7.4);light.omni_range=6.4;light.light_energy=.65;light.light_color=Color(1,.88,.70);light.omni_attenuation=.45;light.light_specular=.08;light.shadow_enabled=false;lamps.append(light)
+			var light=OmniLight3D.new();root.add_child(light);light.position=Vector3(-4.7,y,-7.4);light.omni_range=6.4;light.light_energy=.30;light.light_color=Color(.98,.95,.88);light.omni_attenuation=.45;light.light_specular=.08;light.shadow_enabled=false;lamps.append(light)
 
 func first_mesh(n:Node)->MeshInstance3D:
 	if n is MeshInstance3D:return n

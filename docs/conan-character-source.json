@@ -2,7 +2,7 @@
   "status": "Model, Blender, fresh import, native engine playback and exported WebGL2 bundle validated. Public release state is recorded independently in the website release.json.",
   "model": "Tripo v3.1",
   "scenario": "game-mobile",
-  "rigging": "Blender custom 20-bone skin, maximum four influences (actual maximum two).",
+  "rigging": "Blender custom skins; Conan/Agasa 20 bones, Kogoro 17 bones. At most four influences; original validated leg/foot skin and curves retained by arm-only patch.",
   "characters": {
     "conan": {
       "source": "Tripo",
@@ -19,12 +19,12 @@
       "immutable_input_sha256": "e610814a3850d394f80d53c65be01450e972e7e307a79a51e1616922e299c53e",
       "editable_blend": "worlds/conan/blender/character-v2/conan-rig.blend",
       "runtime_asset": "worlds/conan/web-project/assets/conan.glb",
-      "runtime_bytes": 1254148,
-      "runtime_sha256": "808801e09b26c8adef8f02b5dd2b5fedd0f6b7d5b2f760a9ecc3bdade6396300",
+      "runtime_bytes": 1463756,
+      "runtime_sha256": "0fda5f9f9d35433a6c418ad2841a0c6d569f43616948cd6c708a7b34f85abc8d",
       "faces": 14632,
       "height": 1.05,
       "bones": 20,
-      "max_vertex_weights": 2,
+      "max_vertex_weights": 4,
       "animations": [
         "Idle",
         "Walk",
@@ -37,49 +37,21 @@
       "motion_evidence": "docs/evidence/conan-character/conan/motion-check.json",
       "actual_glb_renders": "docs/evidence/conan-character/conan-final/",
       "engine_playback": {
-        "status": "passed",
+        "status": "passed native Godot arm-repair runtime verification; public web release is separate",
         "engine": "4.7.2-stable (official)",
-        "renderer": "gl_compatibility",
-        "world_sha256": "99b7f6974e3145acfb175be2365cb24ab81c27fcb183b9717314c1d806fbe3fb",
-        "captured_at": "2026-09-12T10:39:45.744626+00:00",
-        "evidence": "docs/evidence/conan-character/runtime/conan-motion-v2-summary.json",
+        "world_sha256": "2b50f5b7c3c938da58d15367e39c46c7a0ffa5a4dcd3e6129e84159e1bd41b6c",
+        "runtime_sha256": "0fda5f9f9d35433a6c418ad2841a0c6d569f43616948cd6c708a7b34f85abc8d",
         "checks_passed": 9,
-        "scope": "Normal production CharacterBody3D walk/run/turn/stop/obstacle contact and actual skinned foot contact.",
-        "web_release": "WebGL2 bundle validated; live deployment state is recorded by release.json.",
-        "actual_speed_m_s": {
-          "Walk": 0.8500020047451589,
-          "Run": 1.849990894919948
-        },
-        "foot_contact": {
-          "Walk": {
-            "Left": {
-              "max_observed_stance_drift_m": 0.0010709903755191804,
-              "stance_segments": 2,
-              "minimum_sole_relative_body_m": -0.00035777688026500387,
-              "maximum_lift_relative_body_m": 0.04664423316717199
-            },
-            "Right": {
-              "max_observed_stance_drift_m": 0.0011717767452358767,
-              "stance_segments": 3,
-              "minimum_sole_relative_body_m": -0.00041100382804801217,
-              "maximum_lift_relative_body_m": 0.04584105312824299
-            }
-          },
-          "Run": {
-            "Left": {
-              "max_observed_stance_drift_m": 0.0005488925944657524,
-              "stance_segments": 3,
-              "minimum_sole_relative_body_m": -6.194412708199204e-05,
-              "maximum_lift_relative_body_m": 0.07661606371402802
-            },
-            "Right": {
-              "max_observed_stance_drift_m": 0.0008250693933806717,
-              "stance_segments": 3,
-              "minimum_sole_relative_body_m": -4.4852495192981845e-05,
-              "maximum_lift_relative_body_m": 0.075265727937221
-            }
-          }
-        }
+        "report": "docs/evidence/conan-arms-2026-09-13/conan-runtime-summary.json",
+        "scope": "Normal CharacterBody3D walk/run/turn/stop and sole sampling"
+      },
+      "arm_repair": {
+        "script": "tools/repair-conan-arms.py",
+        "input_backup": "worlds/conan/blender/arms-2026-09-13/originals/conan.glb",
+        "input_sha256": "808801e09b26c8adef8f02b5dd2b5fedd0f6b7d5b2f760a9ecc3bdade6396300",
+        "evidence": "docs/evidence/conan-arms-2026-09-13/conan-arm-repair.json",
+        "changes": "Anatomically forward elbow bend, relaxed wrists and contralateral swing; sleeve transition smoothing.",
+        "preserved": "Tripo mesh, textures, triangles and all non-arm animation channels; genuine leg/foot skin unchanged."
       }
     },
     "agasa": {
@@ -124,6 +96,43 @@
         "checks_passed": 4,
         "scope": "Production NPC authored standing position and E-triggered Talk. Walking verified in Blender only; not used by this NPC.",
         "web_release": "WebGL2 bundle validated; live deployment state is recorded by release.json."
+      }
+    },
+    "kogoro": {
+      "source": "Tripo",
+      "generation_task_id": "efc231ac-2159-4fe1-9eab-8c3db4e88534",
+      "rigging_task_id": "395a6b44-7d4a-489e-b7c6-5457dca89321",
+      "height": 1.81,
+      "bones": 17,
+      "animations": [
+        "Idle",
+        "Walk",
+        "Run",
+        "Wave",
+        "Talk",
+        "Read",
+        "Sit"
+      ],
+      "runtime_asset": "worlds/conan/web-project/assets/kogoro.glb",
+      "runtime_sha256": "a10cd7fb7c774579af8529a9dd146b42235d32e8ff0d570c6eba2cdf09a48be3",
+      "runtime_bytes": 9935836,
+      "max_vertex_weights": 4,
+      "arm_repair": {
+        "script": "tools/repair-conan-arms.py",
+        "input_backup": "worlds/conan/blender/arms-2026-09-13/originals/kogoro.glb",
+        "input_sha256": "3c89a95caaf5d59e5e204ee3af0762bac8889fdc2d649e4650285a80b3bdadbd",
+        "evidence": "docs/evidence/conan-arms-2026-09-13/kogoro-arm-repair.json",
+        "changes": "Anatomically forward elbow bend, relaxed wrists and contralateral swing; sleeve transition smoothing. Native Tripo-fitted arm pivots restored; 40 hand vertices detached from wrong leg bones.",
+        "preserved": "Tripo mesh, textures, triangles and all non-arm animation channels; genuine leg/foot skin unchanged."
+      },
+      "engine_playback": {
+        "status": "passed native Godot arm-repair runtime verification; public web release is separate",
+        "engine": "4.7.2-stable (official)",
+        "world_sha256": "2b50f5b7c3c938da58d15367e39c46c7a0ffa5a4dcd3e6129e84159e1bd41b6c",
+        "runtime_sha256": "a10cd7fb7c774579af8529a9dd146b42235d32e8ff0d570c6eba2cdf09a48be3",
+        "checks_passed": 4,
+        "report": "docs/evidence/conan-arms-2026-09-13/kogoro-runtime-check.json",
+        "scope": "Production Idle and E-triggered Talk; retained Read reviewed as a model pose only"
       }
     }
   },

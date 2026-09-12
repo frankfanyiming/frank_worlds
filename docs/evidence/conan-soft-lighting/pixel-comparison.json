@@ -1,0 +1,14 @@
+{
+  "before-office.png": {
+    "view": "same office camera, unchanged geometry; final uses idle selection",
+    "near_white_pixel_percent": 14.469921874999999,
+    "bt601_luma_std": 0.297902831226847,
+    "floor_patch_mean_luma": 0.12212749342161107
+  },
+  "after-office.png": {
+    "view": "same office camera, unchanged geometry; final uses idle selection",
+    "near_white_pixel_percent": 0.26904296875,
+    "bt601_luma_std": 0.21862082643408318,
+    "floor_patch_mean_luma": 0.283240132416603
+  }
+}

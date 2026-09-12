@@ -1,0 +1,1380 @@
+{
+  "animation": "normal AnimationPlayer playback through production Idle and E interaction; no seek",
+  "checks": [
+    {
+      "check": "production_idle",
+      "clip": "Idle",
+      "passed": true
+    },
+    {
+      "check": "nearest_is_kogoro",
+      "passed": true
+    },
+    {
+      "check": "interaction_plays_talk",
+      "clip": "Talk",
+      "passed": true
+    },
+    {
+      "check": "npc_stays_at_authored_position",
+      "passed": true
+    }
+  ],
+  "clips": [
+    "Idle",
+    "Read",
+    "Run",
+    "Sit",
+    "Talk",
+    "Walk",
+    "Wave"
+  ],
+  "engine": "4.7.2-stable (official)",
+  "npc_transform_unchanged": true,
+  "player_initial_pose_staged": true,
+  "production_scene": "res://world.tscn",
+  "renderer": "gl_compatibility",
+  "samples": [
+    {
+      "clip": "Idle",
+      "time": 0.733333333333334
+    },
+    {
+      "clip": "Idle",
+      "time": 0.750000000000001
+    },
+    {
+      "clip": "Idle",
+      "time": 0.766666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 0.783333333333334
+    },
+    {
+      "clip": "Idle",
+      "time": 0.800000000000001
+    },
+    {
+      "clip": "Idle",
+      "time": 0.816666666666668
+    },
+    {
+      "clip": "Idle",
+      "time": 0.833333333333334
+    },
+    {
+      "clip": "Idle",
+      "time": 0.850000000000001
+    },
+    {
+      "clip": "Idle",
+      "time": 0.866666666666668
+    },
+    {
+      "clip": "Idle",
+      "time": 0.883333333333334
+    },
+    {
+      "clip": "Idle",
+      "time": 0.900000000000001
+    },
+    {
+      "clip": "Idle",
+      "time": 0.916666666666668
+    },
+    {
+      "clip": "Idle",
+      "time": 0.933333333333335
+    },
+    {
+      "clip": "Idle",
+      "time": 0.950000000000001
+    },
+    {
+      "clip": "Idle",
+      "time": 0.966666666666668
+    },
+    {
+      "clip": "Idle",
+      "time": 0.983333333333335
+    },
+    {
+      "clip": "Idle",
+      "time": 1.0
+    },
+    {
+      "clip": "Idle",
+      "time": 1.01666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.03333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.05
+    },
+    {
+      "clip": "Idle",
+      "time": 1.06666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.08333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.1
+    },
+    {
+      "clip": "Idle",
+      "time": 1.11666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.13333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.15
+    },
+    {
+      "clip": "Idle",
+      "time": 1.16666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.18333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.2
+    },
+    {
+      "clip": "Idle",
+      "time": 1.21666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.23333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.25
+    },
+    {
+      "clip": "Idle",
+      "time": 1.26666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.28333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.3
+    },
+    {
+      "clip": "Idle",
+      "time": 1.31666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.33333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.35
+    },
+    {
+      "clip": "Idle",
+      "time": 1.36666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.38333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.4
+    },
+    {
+      "clip": "Idle",
+      "time": 1.41666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.43333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.45
+    },
+    {
+      "clip": "Idle",
+      "time": 1.46666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.48333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.5
+    },
+    {
+      "clip": "Idle",
+      "time": 1.51666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.53333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.55
+    },
+    {
+      "clip": "Idle",
+      "time": 1.56666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.58333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.6
+    },
+    {
+      "clip": "Idle",
+      "time": 1.61666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.63333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.65
+    },
+    {
+      "clip": "Idle",
+      "time": 1.66666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.68333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.7
+    },
+    {
+      "clip": "Idle",
+      "time": 1.71666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.73333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.75
+    },
+    {
+      "clip": "Idle",
+      "time": 1.76666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.78333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.8
+    },
+    {
+      "clip": "Idle",
+      "time": 1.81666666666667
+    },
+    {
+      "clip": "Idle",
+      "time": 1.83333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.85
+    },
+    {
+      "clip": "Idle",
+      "time": 1.86666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 1.88333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.9
+    },
+    {
+      "clip": "Idle",
+      "time": 1.91666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 1.93333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 1.95
+    },
+    {
+      "clip": "Idle",
+      "time": 1.96666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 1.98333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.0
+    },
+    {
+      "clip": "Idle",
+      "time": 2.01666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.03333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.05
+    },
+    {
+      "clip": "Idle",
+      "time": 2.06666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.08333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.1
+    },
+    {
+      "clip": "Idle",
+      "time": 2.11666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.13333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.15
+    },
+    {
+      "clip": "Idle",
+      "time": 2.16666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.18333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.2
+    },
+    {
+      "clip": "Idle",
+      "time": 2.21666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.23333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.25
+    },
+    {
+      "clip": "Idle",
+      "time": 2.26666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.28333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.3
+    },
+    {
+      "clip": "Idle",
+      "time": 2.31666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.33333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.35
+    },
+    {
+      "clip": "Idle",
+      "time": 2.36666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.38333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.4
+    },
+    {
+      "clip": "Idle",
+      "time": 2.41666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.43333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.45
+    },
+    {
+      "clip": "Idle",
+      "time": 2.46666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.48333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.5
+    },
+    {
+      "clip": "Idle",
+      "time": 2.51666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.53333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.55
+    },
+    {
+      "clip": "Idle",
+      "time": 2.56666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.58333333333333
+    },
+    {
+      "clip": "Idle",
+      "time": 2.6
+    },
+    {
+      "clip": "Idle",
+      "time": 2.61666666666666
+    },
+    {
+      "clip": "Idle",
+      "time": 2.63333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.0
+    },
+    {
+      "clip": "Talk",
+      "time": 0.0166666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.0333333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.05
+    },
+    {
+      "clip": "Talk",
+      "time": 0.0666666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.0833333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.1
+    },
+    {
+      "clip": "Talk",
+      "time": 0.116666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.133333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.15
+    },
+    {
+      "clip": "Talk",
+      "time": 0.166666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.183333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.2
+    },
+    {
+      "clip": "Talk",
+      "time": 0.216666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.233333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.25
+    },
+    {
+      "clip": "Talk",
+      "time": 0.266666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.283333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.3
+    },
+    {
+      "clip": "Talk",
+      "time": 0.316666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.333333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.35
+    },
+    {
+      "clip": "Talk",
+      "time": 0.366666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.383333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.4
+    },
+    {
+      "clip": "Talk",
+      "time": 0.416666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.433333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.45
+    },
+    {
+      "clip": "Talk",
+      "time": 0.466666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.483333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.5
+    },
+    {
+      "clip": "Talk",
+      "time": 0.516666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.533333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.55
+    },
+    {
+      "clip": "Talk",
+      "time": 0.566666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.583333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 0.6
+    },
+    {
+      "clip": "Talk",
+      "time": 0.616666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.633333333333334
+    },
+    {
+      "clip": "Talk",
+      "time": 0.65
+    },
+    {
+      "clip": "Talk",
+      "time": 0.666666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.683333333333334
+    },
+    {
+      "clip": "Talk",
+      "time": 0.700000000000001
+    },
+    {
+      "clip": "Talk",
+      "time": 0.716666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.733333333333334
+    },
+    {
+      "clip": "Talk",
+      "time": 0.750000000000001
+    },
+    {
+      "clip": "Talk",
+      "time": 0.766666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 0.783333333333334
+    },
+    {
+      "clip": "Talk",
+      "time": 0.800000000000001
+    },
+    {
+      "clip": "Talk",
+      "time": 0.816666666666668
+    },
+    {
+      "clip": "Talk",
+      "time": 0.833333333333334
+    },
+    {
+      "clip": "Talk",
+      "time": 0.850000000000001
+    },
+    {
+      "clip": "Talk",
+      "time": 0.866666666666668
+    },
+    {
+      "clip": "Talk",
+      "time": 0.883333333333334
+    },
+    {
+      "clip": "Talk",
+      "time": 0.900000000000001
+    },
+    {
+      "clip": "Talk",
+      "time": 0.916666666666668
+    },
+    {
+      "clip": "Talk",
+      "time": 0.933333333333335
+    },
+    {
+      "clip": "Talk",
+      "time": 0.950000000000001
+    },
+    {
+      "clip": "Talk",
+      "time": 0.966666666666668
+    },
+    {
+      "clip": "Talk",
+      "time": 0.983333333333335
+    },
+    {
+      "clip": "Talk",
+      "time": 1.0
+    },
+    {
+      "clip": "Talk",
+      "time": 1.01666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.03333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.05
+    },
+    {
+      "clip": "Talk",
+      "time": 1.06666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.08333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.1
+    },
+    {
+      "clip": "Talk",
+      "time": 1.11666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.13333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.15
+    },
+    {
+      "clip": "Talk",
+      "time": 1.16666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.18333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.2
+    },
+    {
+      "clip": "Talk",
+      "time": 1.21666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.23333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.25
+    },
+    {
+      "clip": "Talk",
+      "time": 1.26666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.28333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.3
+    },
+    {
+      "clip": "Talk",
+      "time": 1.31666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.33333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.35
+    },
+    {
+      "clip": "Talk",
+      "time": 1.36666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.38333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.4
+    },
+    {
+      "clip": "Talk",
+      "time": 1.41666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.43333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.45
+    },
+    {
+      "clip": "Talk",
+      "time": 1.46666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.48333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.5
+    },
+    {
+      "clip": "Talk",
+      "time": 1.51666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.53333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.55
+    },
+    {
+      "clip": "Talk",
+      "time": 1.56666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.58333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.6
+    },
+    {
+      "clip": "Talk",
+      "time": 1.61666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.63333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.65
+    },
+    {
+      "clip": "Talk",
+      "time": 1.66666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.68333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.7
+    },
+    {
+      "clip": "Talk",
+      "time": 1.71666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.73333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.75
+    },
+    {
+      "clip": "Talk",
+      "time": 1.76666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.78333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.8
+    },
+    {
+      "clip": "Talk",
+      "time": 1.81666666666667
+    },
+    {
+      "clip": "Talk",
+      "time": 1.83333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.85
+    },
+    {
+      "clip": "Talk",
+      "time": 1.86666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 1.88333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.9
+    },
+    {
+      "clip": "Talk",
+      "time": 1.91666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 1.93333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 1.95
+    },
+    {
+      "clip": "Talk",
+      "time": 1.96666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 1.98333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 2.0
+    },
+    {
+      "clip": "Talk",
+      "time": 2.01666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 2.03333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 2.05
+    },
+    {
+      "clip": "Talk",
+      "time": 2.06666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 2.08333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 2.1
+    },
+    {
+      "clip": "Talk",
+      "time": 2.11666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 2.13333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 2.15
+    },
+    {
+      "clip": "Talk",
+      "time": 2.16666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 2.18333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 2.2
+    },
+    {
+      "clip": "Talk",
+      "time": 2.21666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 2.23333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 2.25
+    },
+    {
+      "clip": "Talk",
+      "time": 2.26666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 2.28333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 2.3
+    },
+    {
+      "clip": "Talk",
+      "time": 2.31666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 2.33333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 2.35
+    },
+    {
+      "clip": "Talk",
+      "time": 2.36666666666666
+    },
+    {
+      "clip": "Talk",
+      "time": 2.38333333333333
+    },
+    {
+      "clip": "Talk",
+      "time": 2.4
+    },
+    {
+      "clip": "Talk",
+      "time": 0.0166665712992313
+    },
+    {
+      "clip": "Talk",
+      "time": 0.033333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.0499999046325647
+    },
+    {
+      "clip": "Talk",
+      "time": 0.0666665712992313
+    },
+    {
+      "clip": "Talk",
+      "time": 0.083333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.0999999046325646
+    },
+    {
+      "clip": "Talk",
+      "time": 0.116666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.133333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.149999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.166666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.183333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.199999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.216666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.233333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.249999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.266666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.283333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.299999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.316666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.333333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.349999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.366666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.383333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.399999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.416666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.433333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.449999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.466666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.483333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.499999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.516666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.533333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.549999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.566666571299231
+    },
+    {
+      "clip": "Talk",
+      "time": 0.583333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.599999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.616666571299232
+    },
+    {
+      "clip": "Talk",
+      "time": 0.633333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.649999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.666666571299232
+    },
+    {
+      "clip": "Talk",
+      "time": 0.683333237965898
+    },
+    {
+      "clip": "Talk",
+      "time": 0.699999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.716666571299232
+    },
+    {
+      "clip": "Talk",
+      "time": 0.733333237965899
+    },
+    {
+      "clip": "Talk",
+      "time": 0.749999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.766666571299232
+    },
+    {
+      "clip": "Talk",
+      "time": 0.783333237965899
+    },
+    {
+      "clip": "Talk",
+      "time": 0.799999904632565
+    },
+    {
+      "clip": "Talk",
+      "time": 0.816666571299232
+    },
+    {
+      "clip": "Talk",
+      "time": 0.833333237965899
+    },
+    {
+      "clip": "Talk",
+      "time": 0.849999904632566
+    },
+    {
+      "clip": "Talk",
+      "time": 0.866666571299232
+    },
+    {
+      "clip": "Talk",
+      "time": 0.883333237965899
+    },
+    {
+      "clip": "Talk",
+      "time": 0.899999904632566
+    },
+    {
+      "clip": "Talk",
+      "time": 0.916666571299232
+    },
+    {
+      "clip": "Talk",
+      "time": 0.933333237965899
+    },
+    {
+      "clip": "Talk",
+      "time": 0.949999904632566
+    },
+    {
+      "clip": "Talk",
+      "time": 0.966666571299233
+    },
+    {
+      "clip": "Talk",
+      "time": 0.983333237965899
+    },
+    {
+      "clip": "Talk",
+      "time": 0.999999904632566
+    },
+    {
+      "clip": "Talk",
+      "time": 1.01666657129923
+    },
+    {
+      "clip": "Talk",
+      "time": 1.0333332379659
+    },
+    {
+      "clip": "Talk",
+      "time": 1.04999990463257
+    },
+    {
+      "clip": "Talk",
+      "time": 1.06666657129923
+    },
+    {
+      "clip": "Talk",
+      "time": 1.0833332379659
+    },
+    {
+      "clip": "Talk",
+      "time": 1.09999990463257
+    },
+    {
+      "clip": "Talk",
+      "time": 1.11666657129923
+    },
+    {
+      "clip": "Talk",
+      "time": 1.1333332379659
+    },
+    {
+      "clip": "Talk",
+      "time": 1.14999990463257
+    },
+    {
+      "clip": "Talk",
+      "time": 1.16666657129923
+    },
+    {
+      "clip": "Talk",
+      "time": 1.1833332379659
+    },
+    {
+      "clip": "Talk",
+      "time": 1.19999990463257
+    },
+    {
+      "clip": "Talk",
+      "time": 1.21666657129923
+    },
+    {
+      "clip": "Talk",
+      "time": 1.2333332379659
+    },
+    {
+      "clip": "Talk",
+      "time": 1.24999990463257
+    }
+  ],
+  "scope": "Actual authored Kogoro standing and E conversation; retained Read is reviewed separately in Blender, not claimed as a book interaction."
+}

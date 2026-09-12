@@ -10,6 +10,7 @@
 2. 运行 `Blender --background --python tools/build-conan-character-motion.py`，或加 `-- --only conan` / `-- --only agasa`。脚本始终从原始 FBX 开始，不从已经绑骨的模型再次缩放。输出同目录角色 `.blend`、`.glb` 与足底采样报告。
 3. 使用 `tools/inspect-conan-characters.py -- <final.glb> <evidence-dir> --contacts` 重新导入导出的 GLB，检查正面、侧面、四分之一步态、跑步、招手及交谈。这里检查的是实际网格，不是概念图。
 4. 通过视觉检查后运行 `python3 tools/stage-conan-characters.py`，将两位角色及 `character-motion.json` 写入 Conan `source/assets` 和 `web-project/assets`。`python3 tools/export-native-web.py conan <output> --godot <Godot>` 会先 import，再调用共享 `configure_conan_import` 设置嵌入纹理 2、关闭 AnimationPlayer 的优化和压缩；只有参数改变时才再次 import。因此从没有 `.import` 的运行源包开始也可复现，不依赖当前电脑的缓存。独立源项目可在第一次 import 后运行 `python3 tools/configure_conan_import.py <project> --godot <Godot>`，若返回 `changed=true` 则再 import。
+   2026-09-13 起最终发布资产还需要下面“手臂后处理”步骤；不得用此基础 stage 覆盖已经修复的手臂。
 5. 引擎集成必须使用碰撞后的实际位移速度控制动画倍率，并单独验证院外、室内、顶墙和手机操作。源码、引擎实机与网页发布分别记录状态。
 
 ## 动作契约
@@ -19,7 +20,7 @@
 | 柯南 | 1.05 m | Godot +Z | 0.8 s / 0.70 m/s | 0.6 s / 1.50 m/s |
 | 阿笠博士 | 1.56 m | Godot +Z | 1.2 s / 0.58 m/s | 28/30 s / 1.05 m/s |
 
-保留 `Idle / Walk / Run / Wave / Talk / Read / Sit`。博士当前主要使用 Idle/Talk，其慢步资产可用于后续漫步。每个角色 20 根骨骼，包括颈部、锁骨与双腿，真实最大权重数为 2。所有动作不包含水平根位移，Web 控制器读取 `assets/character-motion.json` 的速度基准。
+保留 `Idle / Walk / Run / Wave / Talk / Read / Sit`。博士当前主要使用 Idle/Talk，其慢步资产可用于后续漫步。柯南和博士各 20 根骨骼，包括颈部、锁骨与双腿；基础版本最大权重数为 2，后续柯南袖子过渡修复使用最多 4 个权重。所有动作不包含水平根位移，Web 控制器读取 `assets/character-motion.json` 的速度基准。
 
 ## 本轮实际发现与修正
 
@@ -42,3 +43,14 @@
 录像命令必须先创建输出目录，并保持项目的视口尺寸。Godot MovieMaker 在脚本 `_initialize` 之前固定 AVI 尺寸；脚本中途改变 `root.size` 会产生尺寸不同的 JPEG 帧。最终捕捉脚本不再更改视口，使用项目的 1440×900。当前 macOS 的 avconvert 仍无法读取这份正确尺寸的 Godot MJPEG AVI，因此使用 `tools/encode-godot-avi.swift` 逐帧解码原 JPEG、交给系统 AVAssetWriter 编成 H.264。保留原始 AVI，展示 MP4 仅去掉最初 45 个摄像机准备帧（.75 秒），后续帧序和 60 fps 时间不变，不能把转换问题误判为角色动画错误。
 
 Blender 逐帧数据见 `docs/evidence/conan-character/conan/motion-check.json` 与 `agasa/motion-check.json`，最终模型图见 `conan-final/` 与 `agasa-final/`。实际引擎证据单独归档在 `runtime/`，来源文件分别记录已验收范围与网页状态，博士的资产 Walk 检查不冒充生产 NPC 走动。
+
+
+## 2026-09-13：手臂后处理
+
+本轮只修手臂，保留原 Tripo 外形、UV、材质、三角形及已经通过的脚部动作。毛利小五郎旧肘部旋转按错误世界轴弯到身后；40 个手指顶点又跨过全局宽度门槛，被绑到大腿，4.9 mm 的原始网格边在 Read 中被拉到约 595 mm。柯南也使用了同向手脚摆动，并在内侧衣袖留下单条边从躯干到前臂权重的硬切换。旋转方向必须按角色真实前向验证，不能把正角度当作正向弯肘。
+
+修复直接追加 GLB 蒙皮与手臂曲线数据，不重新导出未修改的腿部。小五郎六个手臂关节恢复原 Tripo 拟合位置，修正 40 个误绑手点；两角色只在缝合衣袖附近做拓扑平滑，保持重合 UV 点一致。该空间门槛适用于这两个已审计模型，换模型不能照抄。独立检查证明 Conan 3,184、Kogoro 19,525 个真实腿脚顶点，以及 294/231 条非手臂动画逐值不变。
+
+复现顺序：恢复源包 `worlds/conan/blender/arms-2026-09-13/originals/{conan,kogoro}.glb` → `Blender --background --python tools/repair-conan-arms.py` → `python3 tools/test-conan-arm-scope.py` → 重新导入 GLB 渲染正侧面 → `python3 tools/stage-conan-arm-repair.py --godot <Godot>`。这个 stage 必须在旧 `stage-conan-characters.py` 之后执行。运行项目第一次 import 后，通用导入配置脚本会同时关闭 Conan、Agasa 和存在时的 Kogoro 的优化与压缩，保留内嵌贴图。
+
+小五郎场景默认 Idle，E 触发 Talk；Read 作为未来持书动作保留，当前没有书时不应默认摆持书姿态。最终实机 Conan 九项、小五郎四项、导入七项通过，详见 [手臂修复证据](evidence/conan-arms-2026-09-13/README.md)。实际最大支撑漂移 1.17 mm，与已验证脚部一致；这些检查不代表未使用的 Kogoro Walk/Run 已全面重做。网页打包和公开加载由发布验收另行记录。

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Export an installed native world with Godot 4.7.2 and package verified chunks."""
 from pathlib import Path
-import argparse,gzip,hashlib,json,re,subprocess
+import argparse,gzip,hashlib,json,re,struct,subprocess
 from configure_conan_import import configure_conan_import
 
 parser=argparse.ArgumentParser(description=__doc__)
@@ -29,6 +29,29 @@ if args.world=='frog' and all((project/'assets/house-lighting'/f'{name}-room.scn
  duplicates='assets/home-enclosure.glb,assets/home-furnishings.glb,assets/panda-home.glb'
  preset_export,count=re.subn(r'^exclude_filter="([^"]*)"$',lambda m:'exclude_filter="'+m.group(1)+','+duplicates+'"',preset_original,count=1,flags=re.M)
  if count!=1:raise SystemExit('Cannot safely apply baked-room export exclusions.')
+if args.world=='conan':
+ # The repaired Kogoro retains the original maps inside its GLB. all_resources
+ # otherwise includes the old extracted JPGs a second time. Keep source files;
+ # exclude only these exact legacy maps after checking installed references.
+ legacy=[p for p in (project/'assets').glob('kogoro_*_efc231ac-2159-4fe1-9eab-8c3db4e88534.jpg')
+         if p.name.split('_')[1] in ('Color','NormalGL','ORM')]
+ def glb_json(path):
+  with path.open('rb') as f:
+   header=f.read(20)
+   if len(header)!=20 or header[:4]!=b'glTF':raise ValueError('Not a GLB: '+str(path))
+   return json.loads(f.read(struct.unpack_from('<I',header,12)[0]))
+ embedded=all('bufferView' in im and 'uri' not in im for im in glb_json(project/'assets/kogoro.glb').get('images',[]))
+ names={p.name for p in legacy}
+ referenced=any(any(name in str(im.get('uri','')) for name in names)
+                for path in (project/'assets').rglob('*.glb') for im in glb_json(path).get('images',[]))
+ for path in project.rglob('*'):
+  if path.suffix in ('.gd','.gdshader','.tscn','.tres','.json') and '.godot' not in path.parts:
+   if any(name in path.read_text(errors='replace') for name in names):referenced=True
+ if legacy and embedded and not referenced:
+  duplicates=','.join(str(p.relative_to(project)) for p in sorted(legacy))
+  preset_export,count=re.subn(r'^exclude_filter="([^"]*)"$',lambda m:'exclude_filter="'+m.group(1)+','+duplicates+'"',preset_export,count=1,flags=re.M)
+  if count!=1:raise SystemExit('Cannot safely exclude duplicate embedded textures.')
+  print('EXPORT_ONLY_LEGACY_TEXTURE_EXCLUSIONS '+duplicates)
 try:
  if preset_export!=preset_original:preset_path.write_text(preset_export)
  subprocess.run([args.godot,'--headless','--path',str(project),'--export-release','Web',str(output/'index.html')],check=True)

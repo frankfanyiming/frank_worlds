@@ -42,7 +42,7 @@ for xyz,power,size in [((2,-3,4),450,4),((-3,-1,2),160,3),((0,3,3),220,3)]:
 bpy.ops.object.camera_add();camera=bpy.context.object;s.camera=camera;camera.data.type='ORTHO';camera.data.ortho_scale=height*1.30
 angles=['front','side','back','quarter'] if '--all' in args else ['front','side','quarter']
 for view in angles:
- for action,frame in [('Idle',1),('Walk',8)] if rigs else [('Rest',1)]:
+ for action,frame in ([('Idle',1),('Walk',8),('Run',6),('Read',18),('Talk',14)] if '--arm-focus' in args else [('Idle',1),('Walk',8)]) if rigs else [('Rest',1)]:
   if action=='Walk' and view=='front':continue
   if action=='Walk' and not bpy.data.actions.get('Walk'):continue
   for rig in rigs:
