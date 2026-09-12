@@ -1,9 +1,9 @@
 {
-  "sourceCommit": "f61a25c402701f8e2c8e823898ae6f75a9b1f3a0",
-  "revision": 17,
-  "assetRevision": 17,
+  "sourceCommit": "3b6b37ffc6b56886afe8f37a42c06c5dc8ad04ba",
+  "revision": 18,
+  "assetRevision": 18,
   "date": "2026-09-12",
-  "summary": "XLands: three worlds, guestbook and versioned co-creation",
+  "summary": "XLands: mobile controls, reference-built Conan and Agasa, connected Mouri block, brighter interiors",
   "worlds": [
     "doraemon",
     "frog",
@@ -11,6 +11,22 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-11T22:20:11.287207+00:00",
-  "frogHome": "detailed-frog-and-panda-homes-baked-lighting-grounded-motion"
+  "updatedAt": "2026-09-12T11:18:25.470371+00:00",
+  "frogHome": "detailed-frog-and-panda-homes-baked-lighting-grounded-motion",
+  "mobile": "Portrait and landscape touch controls; multilingual destination menu; responsive portal",
+  "conan": "Tripo Conan and Agasa with grounded motion; Blender connected street block and Agasa reference house; APTX loading",
+  "nativePacks": {
+    "frog": {
+      "sha256": "62315a4aada6d92396cede73a43baeee4072fa815b429a95e2e299bb7c1720e7",
+      "rawBytes": 276022604,
+      "downloadBytes": 190526694,
+      "chunks": 17
+    },
+    "conan": {
+      "sha256": "fd65d93a474508308b12940b5b9e9f0e88297af78af158cbd316b55c0cf564aa",
+      "rawBytes": 155470076,
+      "downloadBytes": 152534134,
+      "chunks": 10
+    }
+  }
 }

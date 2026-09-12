@@ -1,4 +1,15 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>小世界</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dde5d2;font:14px system-ui;color:#24463a}canvas{width:100%;height:100%;display:block;outline:0;touch-action:none}#status{position:fixed;inset:0;display:grid;place-content:center;gap:15px;text-align:center;background:#e8ecdd}progress{accent-color:#477054;width:260px;height:5px}.pad{display:none;position:fixed;bottom:45px;gap:4px;touch-action:none}.pad button{width:43px;height:43px;background:#fffdf3c9;border:1px solid #ffffff90;border-radius:50%;color:#375b42;touch-action:none}.move{left:15px;grid-template-columns:repeat(3,43px)}.move button:first-child{grid-column:2}.move button:nth-child(2){grid-row:2;grid-column:1}.move button:nth-child(3){grid-row:2;grid-column:2}.move button:nth-child(4){grid-row:2;grid-column:3}.actions{right:15px}.actions button{width:58px;height:58px}@media(pointer:coarse){.pad{display:grid}}</style></head><body><canvas id="canvas" tabindex="0"></canvas><div id="status" role="status"><span id="label">正在准备世界…</span><progress id="progress" value="0" max="100"></progress><span id="percent">0%</span><button id="retry" hidden onclick="location.reload()">重新载入</button></div><div class="pad move"><button data-action="forward" aria-label="Forward">↑</button><button data-action="left" aria-label="Left">←</button><button data-action="back" aria-label="Back">↓</button><button data-action="right" aria-label="Right">→</button></div><div class="pad actions"><button data-action="interact">E</button><button data-action="jump" aria-label="Jump">↑</button></div><script>const config={"args": [], "canvasResizePolicy": 2, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.pck": 276017180, "index.wasm": 39514754}, "focusCanvas": true, "gdextensionLibs": [], "godotPoolSize": 4};
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>小世界</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dde5d2;font:14px system-ui;color:#24463a;overscroll-behavior:none}*{box-sizing:border-box}canvas{width:100%;height:100%;display:block;outline:0;touch-action:none}button{font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}#status{position:fixed;inset:0;display:grid;place-content:center;justify-items:center;gap:15px;text-align:center;background:#e8ecdd;padding:24px;z-index:5}#label{max-width:80vw;line-height:1.65}progress{accent-color:#477054;width:min(260px,75vw);height:5px}#retry{min-height:44px;padding:8px 20px;border:1px solid #96ac94;border-radius:12px;background:#fffdf3;color:inherit}.touch-controls{display:none;position:fixed;inset:0;pointer-events:none;user-select:none;-webkit-user-select:none}.touch-stick{position:absolute;left:max(20px,env(safe-area-inset-left));bottom:calc(28px + env(safe-area-inset-bottom));width:116px;height:116px;border:1px solid #fff9;border-radius:50%;background:#f9f7e52d;box-shadow:inset 0 0 20px #274c3320;pointer-events:auto;touch-action:none;display:grid;place-items:center;backdrop-filter:blur(4px)}.touch-stick-knob{width:48px;height:48px;border-radius:50%;background:#fff9e7c9;border:1px solid #fffff1;box-shadow:0 3px 12px #16332220;pointer-events:none}.touch-stick small{position:absolute;bottom:-22px;text-shadow:0 1px 5px #fff;font-size:11px;color:#244a39}.touch-actions{position:absolute;right:max(16px,env(safe-area-inset-right));bottom:calc(24px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(2,56px);gap:9px;pointer-events:auto}.touch-actions button{width:56px;height:56px;border-radius:50%;border:1px solid #ffffeaaa;background:#fffcebce;color:#294d3d;touch-action:none;display:flex;align-items:center;justify-content:center;font-size:11px;line-height:1.1;padding:5px;overflow-wrap:anywhere;box-shadow:0 3px 16px #13332218}.touch-actions button[data-action=interact]{background:#335c4fe8;color:#fff8e5}.touch-actions button.held{background:#b8d1ad}.touch-look-hint{position:absolute;bottom:calc(12px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);font-size:10px;color:#234332;text-shadow:0 1px 6px #fff;white-space:nowrap;opacity:.8}.aptx-capsule{display:none;position:relative;width:170px;height:62px;border:2px solid #862b34;border-radius:40px;overflow:hidden;background:linear-gradient(90deg,#fff9ef 50%,#b5444d 50%);box-shadow:0 7px 20px #54252c18;transform:rotate(-14deg);margin-bottom:16px;color:#7d2730}.aptx-capsule i{position:absolute;inset:0;background:#ffffff80;clip-path:inset(0 0 0 var(--download,0%));transition:clip-path .15s}.aptx-capsule b,.aptx-capsule span{position:absolute;top:20px;font-size:15px;letter-spacing:1px}.aptx-capsule b{left:14px;color:#6c3036}.aptx-capsule span{right:15px}.conan .aptx-capsule{display:block}.conan #status{background:#f0ebe4}.conan progress{accent-color:#a53643}
+.world-ui-open .touch-controls{display:none!important}.native-menu{position:fixed;inset:0;z-index:20;background:#102a3499;display:grid;place-items:center;padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left));touch-action:auto}.native-menu[hidden]{display:none}.native-menu-card{display:flex;flex-direction:column;width:min(360px,100%);max-height:100%;min-height:0;overflow:hidden;background:#fffdef;color:#24463a;border-radius:18px;box-shadow:0 16px 50px #102a3450}.native-menu-card header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-bottom:1px solid #24463a20}.native-menu-card h2{font-size:18px;font-weight:500;margin:0}.native-menu-card header button{width:44px;min-height:44px;border:0;border-radius:12px;background:#24463a0c;color:inherit;font-size:26px}.native-menu-items{overflow-y:auto;overscroll-behavior:contain;touch-action:pan-y;min-height:0;padding:4px 10px 12px;-webkit-overflow-scrolling:touch}.native-menu-items>button{display:block;width:100%;min-height:48px;text-align:left;border:0;border-radius:9px;background:transparent;color:inherit;padding:12px;font-size:16px}.native-menu-items>button:active,.native-menu-items>button:focus-visible{background:#24463a15}.native-menu-section{padding:16px 12px 5px;font-size:12px;color:#527064;letter-spacing:.08em}.conan .native-menu-card{background:#f4f0e9;color:#263e49}
+@media(any-pointer:coarse){body.world-ready .touch-controls{display:block}}
+@media(max-height:500px) and (orientation:landscape){.touch-stick{width:96px;height:96px;bottom:calc(20px + env(safe-area-inset-bottom))}.touch-stick-knob{width:42px;height:42px}.touch-actions{grid-template-columns:repeat(3,48px);gap:8px;bottom:calc(16px + env(safe-area-inset-bottom))}.touch-actions button{width:48px;height:48px}.touch-look-hint{bottom:8px}.touch-stick small{bottom:-17px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body><canvas id="canvas" tabindex="0"></canvas>
+<div id="status" role="status"><div class="aptx-capsule" aria-hidden="true"><i></i><b>APTX</b><span>4869</span></div><span id="label">正在准备世界…</span><progress id="progress" value="0" max="100"></progress><span id="percent">0%</span><button id="retry" hidden onclick="location.reload()">重新载入</button></div>
+<div class="touch-controls"><div class="touch-stick" id="touch-stick" role="group" aria-label="移动"><span class="touch-stick-knob"></span><small data-touch-copy="0">移动</small></div><span class="touch-look-hint" data-touch-copy="1">拖动画面转视角</span><div class="touch-actions"><button data-action="run" data-touch-copy="2">跑步</button><button data-action="view" data-touch-copy="5">视角</button><button data-action="jump" aria-label="Jump">↑</button><button data-action="interact" data-touch-copy="3">互动</button></div></div>
+<script>const config={"args": [], "canvasResizePolicy": 2, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.pck": 276022604, "index.wasm": 39514754}, "focusCanvas": true, "gdextensionLibs": [], "godotPoolSize": 4};
 // Embedded by export-native-web.py. Keep startup errors visible before loading Godot.
 const lang = new URLSearchParams(location.search).get('lang') || 'zh-CN';
 const copy = {
@@ -25,6 +36,7 @@ function update(value, stage, force = false) {
   if (!force && Date.now() - lastPublished < 120) return;
   lastPublished = Date.now();
   progressBar.value = progress;
+  document.querySelector('.aptx-capsule')?.style?.setProperty('--download', progress + '%');
   percent.textContent = Math.floor(progress) + '%';
   if (stage) label.textContent = stage;
   parent.postMessage({type: 'xlands-progress', progress, detail: label.textContent}, '*');
@@ -57,14 +69,88 @@ window.addEventListener('message', e => {
     window.xlandsSound?.(queuedSound);
   }
 });
-for (const button of document.querySelectorAll('[data-action]')) {
-  button.addEventListener('pointerdown', e => {
-    e.preventDefault(); button.setPointerCapture(e.pointerId);
-    window.xlandsInput?.(button.dataset.action, true);
+// Each surface owns its pointer. Joystick, camera and action fingers are independent.
+function installTouchControls() {
+  const controls = {
+    'zh-CN': ['移动','拖动画面转视角','跑步','互动','跳跃','视角'],
+    'zh-TW': ['移動','拖動畫面轉視角','跑步','互動','跳躍','視角'],
+    en: ['Move','Drag the scene to look','Run','Interact','Jump','View'],
+    ja: ['移動','画面をドラッグして見回す','走る','調べる','ジャンプ','視点'],
+    ko: ['이동','화면을 끌어 둘러보기','달리기','상호작용','점프','시점'],
+  }[lang] || ['Move','Drag to look','Run','Interact','Jump','View'];
+  const stick = document.querySelector('#touch-stick'), canvas = document.querySelector('#canvas');
+  if (!stick?.addEventListener || !canvas?.addEventListener) return;
+  const knob = stick.querySelector('.touch-stick-knob');
+  let moveId = null, look = null, menuOpen = false, panelLocked = false;
+  const blocked = () => menuOpen || panelLocked;
+  const held = new Map();
+  for (const el of document.querySelectorAll('[data-touch-copy]')) el.textContent = controls[Number(el.dataset.touchCopy)];
+  stick.setAttribute('aria-label', controls[0]);
+  const move = event => {
+    if (event.pointerId !== moveId) return;
+    const box = stick.getBoundingClientRect(), radius = box.width * .32;
+    let x = (event.clientX - box.left - box.width / 2) / radius, y = (event.clientY - box.top - box.height / 2) / radius;
+    const length = Math.hypot(x, y); if (length > 1) { x /= length; y /= length; }
+    knob.style.transform = `translate(${x * radius}px, ${y * radius}px)`;
+    window.xlandsMove?.(length < .13 ? 0 : x, length < .13 ? 0 : y);
+  };
+  const endMove = event => { if (event.pointerId !== moveId) return; moveId = null; knob.style.transform = ''; window.xlandsMove?.(0, 0); };
+  stick.addEventListener('pointerdown', event => { if (blocked() || moveId !== null) return; event.preventDefault(); moveId = event.pointerId; stick.setPointerCapture(event.pointerId); move(event); });
+  stick.addEventListener('pointermove', move);
+  for (const type of ['pointerup','pointercancel','lostpointercapture']) stick.addEventListener(type, endMove);
+  for (const button of document.querySelectorAll('[data-action]')) {
+    const action = button.dataset.action, pointers = new Set(); held.set(button, pointers);
+    if (action === 'jump') { button.textContent = controls[4]; button.setAttribute('aria-label', controls[4]); }
+    button.addEventListener('pointerdown', event => {
+      if (blocked()) return;
+      event.preventDefault(); button.setPointerCapture(event.pointerId); pointers.add(event.pointerId); button.classList.add('held');
+      window.xlandsInput?.(action, true);
+    });
+    const release = event => {
+      if (!pointers.delete(event.pointerId) || pointers.size) return;
+      button.classList.remove('held'); window.xlandsInput?.(action, false);
+    };
+    for (const type of ['pointerup','pointercancel','lostpointercapture']) button.addEventListener(type, release);
+  }
+  canvas.addEventListener('pointerdown', event => { if (blocked() || event.pointerType !== 'touch' || look) return; look = {id:event.pointerId, x:event.clientX, y:event.clientY}; canvas.setPointerCapture(event.pointerId); });
+  canvas.addEventListener('pointermove', event => {
+    if (blocked() || !look || look.id !== event.pointerId) return;
+    const dx = event.clientX - look.x, dy = event.clientY - look.y; look.x = event.clientX; look.y = event.clientY;
+    window.xlandsLook?.(dx, dy);
   });
-  for (const type of ['pointerup', 'pointercancel', 'lostpointercapture'])
-    button.addEventListener(type, () => window.xlandsInput?.(button.dataset.action, false));
+  const endLook = event => { if (look?.id === event.pointerId) look = null; };
+  for (const type of ['pointerup','pointercancel','lostpointercapture']) canvas.addEventListener(type, endLook);
+  function reset() {
+    moveId = null; look = null; knob.style.transform = ''; window.xlandsMove?.(0, 0);
+    for (const [button, pointers] of held) { pointers.clear(); button.classList.remove('held'); window.xlandsInput?.(button.dataset.action, false); }
+  }
+  const sheet = document.createElement('div'); sheet.className = 'native-menu'; sheet.hidden = true;
+  const card = document.createElement('section'); card.className = 'native-menu-card'; card.setAttribute('role','dialog'); card.setAttribute('aria-modal','true');
+  const heading = document.createElement('header'), title = document.createElement('h2'), close = document.createElement('button');
+  title.id = 'native-menu-title'; card.setAttribute('aria-labelledby',title.id); close.textContent = '×';
+  close.setAttribute('aria-label', {'zh-CN':'关闭菜单','zh-TW':'關閉選單',ja:'メニューを閉じる',ko:'메뉴 닫기',en:'Close menu'}[lang] || 'Close menu');
+  heading.append(title,close); const items = document.createElement('div'); items.className = 'native-menu-items'; card.append(heading,items); sheet.append(card); document.body.append(sheet);
+  const cancelMenu = () => window.xlandsMenuAction?.(-1);
+  close.addEventListener('click',cancelMenu); sheet.addEventListener('click',event=>{if(event.target===sheet)cancelMenu();});
+  const syncLock = () => {document.body.classList.toggle('world-ui-open',blocked()); if(blocked())reset();};
+  window.xlandsOverlayLocked = locked => {panelLocked=!!locked;syncLock();};
+  window.xlandsMenu = data => {
+    menuOpen=!!data; sheet.hidden=!menuOpen; syncLock();
+    if(!data)return;
+    title.textContent=data.title; items.replaceChildren(); items.scrollTop=0;
+    for(const item of data.items){
+      const row=document.createElement(item.separator?'div':'button'); row.textContent=item.text;
+      if(item.separator)row.className='native-menu-section';
+      else {row.disabled=!!item.disabled;row.addEventListener('click',()=>window.xlandsMenuAction?.(item.id));}
+      items.append(row);
+    }
+    close.focus({preventScroll:true});
+  };
+  window.addEventListener('blur', reset); window.addEventListener('pagehide', reset); window.addEventListener('resize', reset);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) reset(); });
 }
+installTouchControls();
+if (typeof location.pathname === 'string' && location.pathname.includes('/conan/')) document.body?.classList.add('conan');
 
 async function loadEngineScript() {
   if (typeof Engine !== 'undefined') return;
@@ -157,6 +243,7 @@ async function load() {
       console.log(text);
       if (text.includes('_READY')) {
         ready = true;
+        document.body.classList.add('world-ready');
         statusPanel.remove();
         window.xlandsSound?.(queuedSound);
         parent.postMessage({type: 'xlands-ready'}, '*');
