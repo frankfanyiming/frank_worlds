@@ -1,17 +1,17 @@
 {
-  "startupModelBytes": 28596910,
+  "startupModelBytes": 28727242,
   "deferredModelBytes": 48063076,
-  "totalModelBytes": 76659986,
+  "totalModelBytes": 76790318,
   "roomMaterialBytes": 211105656,
-  "totalModelAndMaterialBytes": 287765642,
+  "totalModelAndMaterialBytes": 287895974,
   "models": [
     {
       "name": "world-v11.glb",
       "bytes": 2300524
     },
     {
-      "name": "neighborhood-v12.glb",
-      "bytes": 1523872
+      "name": "neighborhood-v21.glb",
+      "bytes": 1654204
     },
     {
       "name": "bedroom-v12.glb",

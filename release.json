@@ -1,9 +1,9 @@
 {
-  "sourceCommit": "86a5996bac1d06f674f608e51ef59a6a29873c08",
-  "revision": 20,
-  "assetRevision": 20,
+  "sourceCommit": "a6c213a481518864b6f7a31f575276932dc74c5c",
+  "revision": 21,
+  "assetRevision": 21,
   "date": "2026-09-13",
-  "summary": "Conan and Kogoro natural arms, repaired skin weights and softer interior lighting",
+  "summary": "Refined homes and Mouri night facade, unified five-language interfaces, panda friendship daily play",
   "worlds": [
     "doraemon",
     "frog",
@@ -11,23 +11,24 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-12T18:03:34.671131+00:00",
-  "frogHome": "detailed-frog-and-panda-homes-baked-lighting-grounded-motion",
-  "mobile": "Portrait and landscape touch controls; multilingual destination menu; responsive portal",
-  "conan": "Tripo characters with repaired elbows, wrists and sleeve skinning; contralateral arm swing; relaxed Kogoro idle; neutral fill and gentle color grade",
+  "updatedAt": "2026-09-12T19:40:39.717503+00:00",
+  "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
+  "mobile": "Single modal per world, compact HUD, scrolling sheets, 44px touch targets and fixed canvas viewport",
+  "conan": "Readable bold window lettering, pale blue facade with cool exterior and warm cafe lighting; plan-based Agasa kitchen, beds and circulation; original repaired characters preserved",
   "nativePacks": {
     "frog": {
-      "sha256": "62315a4aada6d92396cede73a43baeee4072fa815b429a95e2e299bb7c1720e7",
-      "rawBytes": 276022604,
-      "downloadBytes": 190526694,
-      "chunks": 17
+      "sha256": "0eccc2302213de960b2dca13efae7464babdda1ff58ac770c1b656487155b5d9",
+      "rawBytes": 239220876,
+      "downloadBytes": 177955379,
+      "chunks": 15
     },
     "conan": {
-      "sha256": "ac447d35bd30efa3ded9ab7a18088efa862baaeaf5a585306c47602de56132c8",
-      "rawBytes": 175675684,
-      "downloadBytes": 172709882,
+      "sha256": "4e6f9af8df3df3f9478ee1f0cb6f2ae7df255ff7b244fc4ceae564a555098e64",
+      "rawBytes": 181217000,
+      "downloadBytes": 177945388,
       "chunks": 11
     }
   },
-  "guestbookLayout": "Narrow-screen single-column fields; all form bounds and touch targets checked at 360, 390 and 844 CSS px"
+  "guestbookLayout": "Narrow-screen single-column fields; all form bounds and touch targets checked at 360, 390 and 844 CSS px",
+  "friendLife": "Visit panda, three-step cooking, persistent gifts, actual walking companion, shared picnic and photos; local save with immediate-refresh recovery"
 }
