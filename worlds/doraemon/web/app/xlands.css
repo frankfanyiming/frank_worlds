@@ -517,6 +517,7 @@
   gap: 30px;
 }
 .note-compose {
+  min-width: 0;
   background: #fffdf6;
   border: 1px solid #e3e2d5;
   border-radius: 8px;
@@ -571,10 +572,11 @@
 }
 .note-fields {
   display: grid;
-  grid-template-columns: 1fr 1.4fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
   gap: 16px;
 }
 .note-fields label {
+  min-width: 0;
   font-size: 11px;
   color: #6f7d70;
 }
@@ -1453,7 +1455,7 @@
     gap: 3px;
   }
   .book-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 22px;
   }
   .note-pages {
@@ -1472,6 +1474,7 @@
     gap: 14px;
   }
   .note-fields {
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
   }
   .hub-footer {
@@ -1661,3 +1664,16 @@
 @media(any-pointer:coarse){.native-controls{display:none}.world-nav button{min-height:44px;min-width:44px}.xl-modal button{min-height:44px}}
 @media(max-height:500px) and (orientation:landscape){.xl-world{--world-nav-height:calc(48px + env(safe-area-inset-top))}.world-nav>strong{font-size:12px}.world-nav button{min-height:42px}.native-loading h2{font-size:20px;margin:6px}.aptx-capsule{margin-bottom:22px;width:140px;height:54px}.aptx-capsule b,.aptx-capsule span{top:13px;font-size:13px}}
 @media(any-pointer:coarse){.hub-header nav>button,.hub-header nav>a,.hub-header nav>.icon-button,.hub-header .language-select,.hub-header select{min-height:44px}.hub-header nav>.icon-button{min-width:44px}.hub-header nav>a{display:inline-flex;align-items:center}}
+@media (any-pointer: coarse), (max-width: 720px), (max-height: 500px) and (orientation: landscape) {
+  .note-compose input,
+  .note-compose select,
+  .note-compose textarea {
+    font-size: 16px;
+  }
+  .note-compose input:not([type='checkbox']),
+  .note-compose select,
+  .note-compose button,
+  .note-compose .consent {
+    min-height: 44px;
+  }
+}

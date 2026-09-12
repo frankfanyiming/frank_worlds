@@ -1,0 +1,283 @@
+{
+  "url": "http://127.0.0.1:8791/frank_worlds/",
+  "environment": "Desktop Chromium mobile viewport/touch emulation, not physical phone",
+  "checks": [
+    {
+      "name": "Guestbook descendants fit 390x844",
+      "pass": true,
+      "detail": [
+        {
+          "tag": "FORM",
+          "class": "note-compose",
+          "type": null,
+          "x": 18,
+          "right": 372,
+          "width": 354,
+          "height": 524.59375,
+          "font": "14px"
+        },
+        {
+          "tag": "TEXTAREA",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 351,
+          "width": 312,
+          "height": 180,
+          "font": "16px"
+        },
+        {
+          "tag": "SELECT",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 159,
+          "width": 120,
+          "height": 44,
+          "font": "16px"
+        },
+        {
+          "tag": "LABEL",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 351,
+          "width": 312,
+          "height": 68.046875,
+          "font": "11px"
+        },
+        {
+          "tag": "INPUT",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 351,
+          "width": 312,
+          "height": 44,
+          "font": "16px"
+        },
+        {
+          "tag": "LABEL",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 351,
+          "width": 312,
+          "height": 90.546875,
+          "font": "11px"
+        },
+        {
+          "tag": "INPUT",
+          "class": "",
+          "type": "email",
+          "x": 39,
+          "right": 351,
+          "width": 312,
+          "height": 44,
+          "font": "16px"
+        },
+        {
+          "tag": "BUTTON",
+          "class": "primary",
+          "type": "submit",
+          "x": 248,
+          "right": 351,
+          "width": 103,
+          "height": 44,
+          "font": "12px"
+        }
+      ]
+    },
+    {
+      "name": "Guestbook descendants fit 360x640",
+      "pass": true,
+      "detail": [
+        {
+          "tag": "FORM",
+          "class": "note-compose",
+          "type": null,
+          "x": 18,
+          "right": 342,
+          "width": 324,
+          "height": 524.59375,
+          "font": "14px"
+        },
+        {
+          "tag": "TEXTAREA",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 321,
+          "width": 282,
+          "height": 180,
+          "font": "16px"
+        },
+        {
+          "tag": "SELECT",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 159,
+          "width": 120,
+          "height": 44,
+          "font": "16px"
+        },
+        {
+          "tag": "LABEL",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 321,
+          "width": 282,
+          "height": 68.046875,
+          "font": "11px"
+        },
+        {
+          "tag": "INPUT",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 321,
+          "width": 282,
+          "height": 44,
+          "font": "16px"
+        },
+        {
+          "tag": "LABEL",
+          "class": "",
+          "type": null,
+          "x": 39,
+          "right": 321,
+          "width": 282,
+          "height": 90.546875,
+          "font": "11px"
+        },
+        {
+          "tag": "INPUT",
+          "class": "",
+          "type": "email",
+          "x": 39,
+          "right": 321,
+          "width": 282,
+          "height": 44,
+          "font": "16px"
+        },
+        {
+          "tag": "BUTTON",
+          "class": "primary",
+          "type": "submit",
+          "x": 218,
+          "right": 321,
+          "width": 103,
+          "height": 44,
+          "font": "12px"
+        }
+      ]
+    },
+    {
+      "name": "Guestbook descendants fit 844x390",
+      "pass": true,
+      "detail": [
+        {
+          "tag": "FORM",
+          "class": "note-compose",
+          "type": null,
+          "x": 24,
+          "right": 412,
+          "width": 388,
+          "height": 444.546875,
+          "font": "14px"
+        },
+        {
+          "tag": "TEXTAREA",
+          "class": "",
+          "type": null,
+          "x": 45,
+          "right": 391,
+          "width": 346,
+          "height": 180,
+          "font": "16px"
+        },
+        {
+          "tag": "SELECT",
+          "class": "",
+          "type": null,
+          "x": 45,
+          "right": 165,
+          "width": 120,
+          "height": 44,
+          "font": "16px"
+        },
+        {
+          "tag": "LABEL",
+          "class": "",
+          "type": null,
+          "x": 45,
+          "right": 182.5,
+          "width": 137.5,
+          "height": 90.546875,
+          "font": "11px"
+        },
+        {
+          "tag": "INPUT",
+          "class": "",
+          "type": null,
+          "x": 45,
+          "right": 182.5,
+          "width": 137.5,
+          "height": 44,
+          "font": "16px"
+        },
+        {
+          "tag": "LABEL",
+          "class": "",
+          "type": null,
+          "x": 198.5,
+          "right": 391,
+          "width": 192.5,
+          "height": 90.546875,
+          "font": "11px"
+        },
+        {
+          "tag": "INPUT",
+          "class": "",
+          "type": "email",
+          "x": 198.5,
+          "right": 391,
+          "width": 192.5,
+          "height": 44,
+          "font": "16px"
+        },
+        {
+          "tag": "BUTTON",
+          "class": "primary",
+          "type": "submit",
+          "x": 288,
+          "right": 391,
+          "width": 103,
+          "height": 44,
+          "font": "12px"
+        }
+      ]
+    },
+    {
+      "name": "Real touches reach every form field and submit target without sending",
+      "pass": true,
+      "detail": {
+        "focused": [
+          "message",
+          "nickname",
+          "email"
+        ],
+        "worldPointerDown": 1,
+        "selectedWorld": "doraemon",
+        "consent": true,
+        "interceptedSubmits": 1,
+        "mutatingRequests": 0
+      }
+    }
+  ],
+  "errors": [],
+  "mutatingRequests": [],
+  "note": "Submit event intercepted locally before application handler; no guest message or email sent."
+}

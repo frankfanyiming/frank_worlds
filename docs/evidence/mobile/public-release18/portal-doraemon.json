@@ -1,0 +1,311 @@
+{
+  "date": "2026-09-12T11:46:57.187Z",
+  "url": "https://frankfanyiming.github.io/frank_worlds/",
+  "environment": "Desktop Chromium + Metal with mobile viewport/touch emulation, not a physical phone",
+  "scope": "Public portal 390/844 and real Doraemon outdoor startup/touch only; no bedroom/company/native-world downloads",
+  "checks": [
+    {
+      "name": "Public portal fits 390x844",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 390,
+          "h": 844,
+          "scroll": 390
+        },
+        "controls": [
+          {
+            "text": "来访本",
+            "x": 18,
+            "y": 59.1875,
+            "w": 67,
+            "h": 44
+          },
+          {
+            "text": "语言中文繁體中文English日本語한국어",
+            "x": 150.890625,
+            "y": 59.1875,
+            "w": 94,
+            "h": 44
+          },
+          {
+            "text": "",
+            "x": 252.890625,
+            "y": 59.1875,
+            "w": 44,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "name": "Public portal fits 844x390",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 844,
+          "h": 390,
+          "scroll": 844
+        },
+        "controls": [
+          {
+            "text": "来访本",
+            "x": 482.953125,
+            "y": 30,
+            "w": 67,
+            "h": 44
+          },
+          {
+            "text": "语言中文繁體中文English日本語한국어",
+            "x": 644,
+            "y": 30,
+            "w": 116,
+            "h": 44
+          },
+          {
+            "text": "",
+            "x": 776,
+            "y": 30,
+            "w": 44,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "name": "Public Doraemon real scene starts",
+      "pass": true,
+      "detail": {
+        "ready": true,
+        "quality": false,
+        "revision": 12,
+        "bedroom": {
+          "status": "idle",
+          "progress": 0,
+          "requested": false,
+          "error": null
+        },
+        "renderHealth": {
+          "estimatedFps": 17,
+          "shaderErrors": [],
+          "calls": 978,
+          "triangles": 7490935
+        }
+      }
+    },
+    {
+      "name": "Public Doraemon canvas/touch fit 390x844",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 390,
+          "h": 844,
+          "scroll": 390
+        },
+        "canvas": {
+          "x": 0,
+          "y": 56,
+          "width": 390,
+          "height": 788
+        },
+        "controls": [
+          {
+            "x": 20,
+            "y": 700,
+            "w": 116,
+            "h": 116
+          },
+          {
+            "x": 253,
+            "y": 699,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "x": 318,
+            "y": 699,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "x": 253,
+            "y": 764,
+            "w": 56,
+            "h": 56
+          },
+          {
+            "x": 318,
+            "y": 764,
+            "w": 56,
+            "h": 56
+          }
+        ]
+      }
+    },
+    {
+      "name": "Public Doraemon canvas/touch fit 844x390",
+      "pass": true,
+      "detail": {
+        "s": {
+          "w": 844,
+          "h": 390,
+          "scroll": 844
+        },
+        "canvas": {
+          "x": 0,
+          "y": 48,
+          "width": 844,
+          "height": 342
+        },
+        "controls": [
+          {
+            "x": 20,
+            "y": 274,
+            "w": 96,
+            "h": 96
+          },
+          {
+            "x": 615,
+            "y": 326,
+            "w": 48,
+            "h": 48
+          },
+          {
+            "x": 670,
+            "y": 326,
+            "w": 48,
+            "h": 48
+          },
+          {
+            "x": 725,
+            "y": 326,
+            "w": 48,
+            "h": 48
+          },
+          {
+            "x": 780,
+            "y": 326,
+            "w": 48,
+            "h": 48
+          }
+        ]
+      }
+    },
+    {
+      "name": "Public Doraemon actual concurrent joystick/look/run and release",
+      "pass": true,
+      "detail": {
+        "distance": 2.5703136057715654,
+        "drift": 0,
+        "start": {
+          "x": -9.6,
+          "y": -6.3,
+          "height": 0.133
+        },
+        "end": {
+          "x": -9.163440860940447,
+          "y": -3.7670317510639793,
+          "height": 0.194
+        }
+      }
+    },
+    {
+      "name": "Startup did not request large bedroom model",
+      "pass": true,
+      "detail": {
+        "bedroomRequests": 0,
+        "totalModelRequests": 32
+      }
+    }
+  ],
+  "errors": [],
+  "modelRequests": [
+    "https://frankfanyiming.github.io/frank_worlds/models/world-v11.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/neighborhood-v12.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/vegetation-v3-lite.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/terrain-v6.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/streets-v7-lite.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/surface-v11-lite.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/streets-v7-lite.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/surface-v11-lite.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/details/house-v11.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/details/connector-v9-lite.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/expansion/expansion-terrain.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/expansion/expansion-river-bridge.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/expansion/expansion-trees-west.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/expansion/expansion-trees-east.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/expansion/expansion-groundcover-lite.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/actors/nobita.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/actors/doraemon-v11.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/actors/shizuka.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/actors/gian.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/actors/suneo.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/actors/tamako.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/actors/nobisuke.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/fauna/cat.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/fauna/sparrow.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/fauna/sparrow_ash.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/vehicles/kei_hatchback-v11.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/vehicles/kei_truck-v11.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/gadgets/bamboo.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/gadgets/door.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/gadgets/drawer.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/gadgets/time-machine.glb?v=20260910-12",
+    "https://frankfanyiming.github.io/frank_worlds/models/gadgets/season-extras.glb?v=20260910-12"
+  ],
+  "assets": [
+    {
+      "url": "https://frankfanyiming.github.io/frank_worlds/assets/index-D1lB3Tx9.css",
+      "status": 200
+    },
+    {
+      "url": "https://frankfanyiming.github.io/frank_worlds/assets/index-I5NGYg7w.js",
+      "status": 200
+    },
+    {
+      "url": "https://frankfanyiming.github.io/frank_worlds/assets/arrow-up-BRRjNKJF.js",
+      "status": 200
+    },
+    {
+      "url": "https://frankfanyiming.github.io/frank_worlds/assets/sound-CHfcr68J.js",
+      "status": 200
+    },
+    {
+      "url": "https://frankfanyiming.github.io/frank_worlds/assets/DoraemonWorld-CHX2x0QG.js",
+      "status": 200
+    },
+    {
+      "url": "https://frankfanyiming.github.io/frank_worlds/assets/three.module-B5uXXO0m.js",
+      "status": 200
+    },
+    {
+      "url": "https://frankfanyiming.github.io/frank_worlds/assets/GLTFLoader-AttUCMtF.js",
+      "status": 200
+    },
+    {
+      "url": "https://frankfanyiming.github.io/frank_worlds/assets/engine-CPMirWVJ.js",
+      "status": 200
+    }
+  ],
+  "portalCoverFollowup": {
+    "pass": true,
+    "covers": [
+      {
+        "url": "https://frankfanyiming.github.io/frank_worlds/covers/doraemon.png",
+        "width": 1448,
+        "height": 1086
+      },
+      {
+        "url": "https://frankfanyiming.github.io/frank_worlds/covers/frog.png",
+        "width": 1448,
+        "height": 1086
+      },
+      {
+        "url": "https://frankfanyiming.github.io/frank_worlds/covers/conan.png",
+        "width": 1448,
+        "height": 1086
+      }
+    ],
+    "note": "Initial screenshots preceded cover downloads; replaced with complete full-page screenshots. No world runtime loaded in this follow-up."
+  }
+}

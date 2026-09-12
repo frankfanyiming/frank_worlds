@@ -1,0 +1,247 @@
+{
+  "checkedAt": "2026-09-12T11:45:46.755121+00:00",
+  "checks": [
+    {
+      "path": "release.json",
+      "status": 200,
+      "sha256": "f4289f9083922d5b8305645345bca006c4cd75e1ada2125a52e96527b45bb327",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "7fdf834c5de59c50ef9eba0d29702c00cfb83fb94c131e8788690d127a3ab822",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "assets/index-I5NGYg7w.js",
+      "status": 200,
+      "sha256": "618d5157dbd44b160acd55a359e47cb0b4775d7eca6b7551221aacc587e9bf7b",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "assets/index-D1lB3Tx9.css",
+      "status": 200,
+      "sha256": "7aa0272cf8baaf0dec6001736a70e959dd0a2d449271420d9a74c8a3b67a4ebe",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/conan/index.html",
+      "status": 200,
+      "sha256": "ccf1ff85f2b8ab910a76dc7fa49e904b75193d7b2ec44c3cf03108b49b9670c2",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/conan/world-pack.json",
+      "status": 200,
+      "sha256": "6d395ccb50fbdf24c89f425cf2ff6d7f97c043bd645876159526f3664b0632dc",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/conan/world-000.bin.gz",
+      "status": 200,
+      "sha256": "223469e95c5e4eaa19206c408e457c9f66482a5abab60bc455b2d28117ea327f",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/conan/world-009.bin.gz",
+      "status": 200,
+      "sha256": "1e669777129cd603e3b5d401f908ccedcea397d066b7f61002f6bc219e28012b",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/frog/index.html",
+      "status": 200,
+      "sha256": "8fc8950522b1e51970d446522338fc434c69f5cdb05619268d98887d5aa3ada8",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/frog/world-pack.json",
+      "status": 200,
+      "sha256": "09cc0550f4bd85a30ce2619179fa37a4bcdd2eb0b607f5f354d10f10f60be650",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/frog/world-000.bin.gz",
+      "status": 200,
+      "sha256": "13f8e9fd997313b9193720b2ab23899059b8b895955a85ade02ad7ca53519b28",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/frog/world-016.bin.gz",
+      "status": 200,
+      "sha256": "c664a74c5836caf27f9bf2d6def62f592003628e1e4f5e01153b0cd7bfdc6e2d",
+      "matchesPublishedCandidate": true
+    }
+  ],
+  "release": {
+    "sourceCommit": "3b6b37ffc6b56886afe8f37a42c06c5dc8ad04ba",
+    "revision": 18,
+    "assetRevision": 18,
+    "date": "2026-09-12",
+    "summary": "XLands: mobile controls, reference-built Conan and Agasa, connected Mouri block, brighter interiors",
+    "worlds": [
+      "doraemon",
+      "frog",
+      "conan"
+    ],
+    "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
+    "loadingFix": "stream-progress-range-retry",
+    "updatedAt": "2026-09-12T11:18:25.470371+00:00",
+    "frogHome": "detailed-frog-and-panda-homes-baked-lighting-grounded-motion",
+    "mobile": "Portrait and landscape touch controls; multilingual destination menu; responsive portal",
+    "conan": "Tripo Conan and Agasa with grounded motion; Blender connected street block and Agasa reference house; APTX loading",
+    "nativePacks": {
+      "frog": {
+        "sha256": "62315a4aada6d92396cede73a43baeee4072fa815b429a95e2e299bb7c1720e7",
+        "rawBytes": 276022604,
+        "downloadBytes": 190526694,
+        "chunks": 17
+      },
+      "conan": {
+        "sha256": "fd65d93a474508308b12940b5b9e9f0e88297af78af158cbd316b55c0cf564aa",
+        "rawBytes": 155470076,
+        "downloadBytes": 152534134,
+        "chunks": 10
+      }
+    }
+  },
+  "allChunksAvailable": [
+    {
+      "path": "worlds/conan/world-000.bin.gz",
+      "status": 200,
+      "bytes": 16491963
+    },
+    {
+      "path": "worlds/conan/world-001.bin.gz",
+      "status": 200,
+      "bytes": 16384132
+    },
+    {
+      "path": "worlds/conan/world-002.bin.gz",
+      "status": 200,
+      "bytes": 16436795
+    },
+    {
+      "path": "worlds/conan/world-003.bin.gz",
+      "status": 200,
+      "bytes": 16340288
+    },
+    {
+      "path": "worlds/conan/world-004.bin.gz",
+      "status": 200,
+      "bytes": 16224013
+    },
+    {
+      "path": "worlds/conan/world-005.bin.gz",
+      "status": 200,
+      "bytes": 16552722
+    },
+    {
+      "path": "worlds/conan/world-006.bin.gz",
+      "status": 200,
+      "bytes": 16729772
+    },
+    {
+      "path": "worlds/conan/world-007.bin.gz",
+      "status": 200,
+      "bytes": 16520474
+    },
+    {
+      "path": "worlds/conan/world-008.bin.gz",
+      "status": 200,
+      "bytes": 16425993
+    },
+    {
+      "path": "worlds/conan/world-009.bin.gz",
+      "status": 200,
+      "bytes": 4427982
+    },
+    {
+      "path": "worlds/frog/world-000.bin.gz",
+      "status": 200,
+      "bytes": 6027723
+    },
+    {
+      "path": "worlds/frog/world-001.bin.gz",
+      "status": 200,
+      "bytes": 4773764
+    },
+    {
+      "path": "worlds/frog/world-002.bin.gz",
+      "status": 200,
+      "bytes": 5028464
+    },
+    {
+      "path": "worlds/frog/world-003.bin.gz",
+      "status": 200,
+      "bytes": 14501350
+    },
+    {
+      "path": "worlds/frog/world-004.bin.gz",
+      "status": 200,
+      "bytes": 6282588
+    },
+    {
+      "path": "worlds/frog/world-005.bin.gz",
+      "status": 200,
+      "bytes": 5106290
+    },
+    {
+      "path": "worlds/frog/world-006.bin.gz",
+      "status": 200,
+      "bytes": 7156892
+    },
+    {
+      "path": "worlds/frog/world-007.bin.gz",
+      "status": 200,
+      "bytes": 4922195
+    },
+    {
+      "path": "worlds/frog/world-008.bin.gz",
+      "status": 200,
+      "bytes": 13154717
+    },
+    {
+      "path": "worlds/frog/world-009.bin.gz",
+      "status": 200,
+      "bytes": 16741640
+    },
+    {
+      "path": "worlds/frog/world-010.bin.gz",
+      "status": 200,
+      "bytes": 16530064
+    },
+    {
+      "path": "worlds/frog/world-011.bin.gz",
+      "status": 200,
+      "bytes": 16651442
+    },
+    {
+      "path": "worlds/frog/world-012.bin.gz",
+      "status": 200,
+      "bytes": 16600332
+    },
+    {
+      "path": "worlds/frog/world-013.bin.gz",
+      "status": 200,
+      "bytes": 16633638
+    },
+    {
+      "path": "worlds/frog/world-014.bin.gz",
+      "status": 200,
+      "bytes": 16183390
+    },
+    {
+      "path": "worlds/frog/world-015.bin.gz",
+      "status": 200,
+      "bytes": 16747802
+    },
+    {
+      "path": "worlds/frog/world-016.bin.gz",
+      "status": 200,
+      "bytes": 7484403
+    }
+  ],
+  "pass": true
+}
