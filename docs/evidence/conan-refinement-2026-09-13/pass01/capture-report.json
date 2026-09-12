@@ -1,0 +1,437 @@
+{
+  "assets": {
+    "agasa": "e1320430d2fba74c5645d9034f8a0cd9c18b91f0f22225990e35e8d9a127fdb0",
+    "kudo": "b06a2a859c3efa59096d45ebc9a93cceed9fe37ae460db7a35a49f8b5106ad09",
+    "kudo-details": "4dd3ab1fd52062fdbc8fec06fc963b4d71ecdf0f9e3fa53e77cf7343f45c626d",
+    "mouri": "4cec176ed2f430de68a7b17f021e7a5bf24377e898cc3b7c61357db97164651d",
+    "mouri-details": "7387f2908fe465e6c35fed2846d27083e1b52a1504a963e12544680620ca7473"
+  },
+  "engine": {
+    "build": "official",
+    "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+    "hex": 263938,
+    "major": 4,
+    "minor": 7,
+    "patch": 2,
+    "status": "stable",
+    "string": "4.7.2-stable (official)",
+    "timestamp": 0
+  },
+  "renderer": "gl_compatibility",
+  "views": [
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 58,
+        "id": "mouri-street",
+        "key": "mouri",
+        "p": [
+          12,
+          7.3,
+          14
+        ],
+        "t": [
+          0,
+          4.6,
+          -4.0
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-mouri-street.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 54,
+        "id": "mouri-windows",
+        "key": "mouri",
+        "p": [
+          3.5,
+          3.1,
+          9.5
+        ],
+        "t": [
+          -1.9,
+          3.35,
+          0
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-mouri-windows.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 52,
+        "id": "mouri-night-reference",
+        "key": "mouri",
+        "p": [
+          -7.4,
+          3.1,
+          7.5
+        ],
+        "t": [
+          -1.6,
+          3.9,
+          0
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-mouri-night-reference.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 60,
+        "id": "mouri-office",
+        "key": "mouri",
+        "p": [
+          0.4,
+          4.92,
+          -0.48
+        ],
+        "t": [
+          -1.7,
+          4.12,
+          -5.1
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-mouri-office.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 55,
+        "id": "poirot-tables",
+        "key": "mouri",
+        "p": [
+          -1.65,
+          1.5,
+          -1.03
+        ],
+        "t": [
+          -0.2,
+          0.73,
+          -4.2
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-poirot-tables.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 60,
+        "id": "agasa-whole-plan",
+        "key": "agasa",
+        "p": [
+          4.8,
+          2.0,
+          5.9
+        ],
+        "t": [
+          -1.6,
+          1.45,
+          0.2
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-agasa-whole-plan.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 58,
+        "id": "agasa-kitchen",
+        "key": "agasa",
+        "p": [
+          -0.3,
+          1.65,
+          2.32
+        ],
+        "t": [
+          -1.55,
+          1.2,
+          -0.6
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-agasa-kitchen.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 59,
+        "id": "agasa-beds",
+        "key": "agasa",
+        "p": [
+          -3.5,
+          1.8,
+          3.45
+        ],
+        "t": [
+          -5.5,
+          0.87,
+          -0.1
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-agasa-beds.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 58,
+        "id": "agasa-living",
+        "key": "agasa",
+        "p": [
+          1.7,
+          1.75,
+          3.8
+        ],
+        "t": [
+          4.15,
+          0.85,
+          0.5
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-agasa-living.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 66,
+        "id": "agasa-gallery",
+        "key": "agasa",
+        "p": [
+          3.7,
+          4.63,
+          -3.05
+        ],
+        "t": [
+          -2,
+          0.68,
+          0.4
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-agasa-gallery.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 64,
+        "id": "agasa-research",
+        "key": "agasa",
+        "p": [
+          0.8,
+          -1.52,
+          0.12
+        ],
+        "t": [
+          -3.5,
+          -1.97,
+          2.55
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-agasa-research.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 58,
+        "id": "kudo-joinery",
+        "key": "kudo",
+        "p": [
+          4.0,
+          1.6,
+          3.7
+        ],
+        "t": [
+          6.3,
+          1.18,
+          -0.5
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-kudo-joinery.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.550000011920929,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 59,
+        "id": "kudo-dining",
+        "key": "kudo",
+        "p": [
+          -3.1,
+          1.7,
+          8.15
+        ],
+        "t": [
+          -6.7,
+          1.1,
+          0.2
+        ]
+      },
+      "daytime": 15.5,
+      "file": "day-kudo-dining.png",
+      "production_lighting": true,
+      "sun": 0.280000001192093
+    },
+    {
+      "ambient": 0.239999994635582,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 58,
+        "id": "mouri-street",
+        "key": "mouri",
+        "p": [
+          12,
+          7.3,
+          14
+        ],
+        "t": [
+          0,
+          4.6,
+          -4.0
+        ]
+      },
+      "daytime": 22,
+      "file": "night-mouri-street.png",
+      "production_lighting": true,
+      "sun": 0.0549999997019768
+    },
+    {
+      "ambient": 0.239999994635582,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 54,
+        "id": "mouri-windows",
+        "key": "mouri",
+        "p": [
+          3.5,
+          3.1,
+          9.5
+        ],
+        "t": [
+          -1.9,
+          3.35,
+          0
+        ]
+      },
+      "daytime": 22,
+      "file": "night-mouri-windows.png",
+      "production_lighting": true,
+      "sun": 0.0549999997019768
+    },
+    {
+      "ambient": 0.239999994635582,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 52,
+        "id": "mouri-night-reference",
+        "key": "mouri",
+        "p": [
+          -7.4,
+          3.1,
+          7.5
+        ],
+        "t": [
+          -1.6,
+          3.9,
+          0
+        ]
+      },
+      "daytime": 22,
+      "file": "night-mouri-night-reference.png",
+      "production_lighting": true,
+      "sun": 0.0549999997019768
+    },
+    {
+      "ambient": 0.239999994635582,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 60,
+        "id": "mouri-office",
+        "key": "mouri",
+        "p": [
+          0.4,
+          4.92,
+          -0.48
+        ],
+        "t": [
+          -1.7,
+          4.12,
+          -5.1
+        ]
+      },
+      "daytime": 22,
+      "file": "night-mouri-office.png",
+      "production_lighting": true,
+      "sun": 0.0549999997019768
+    },
+    {
+      "ambient": 0.239999994635582,
+      "architecture_visible": true,
+      "camera": {
+        "fov": 60,
+        "id": "agasa-whole-plan",
+        "key": "agasa",
+        "p": [
+          4.8,
+          2.0,
+          5.9
+        ],
+        "t": [
+          -1.6,
+          1.45,
+          0.2
+        ]
+      },
+      "daytime": 22,
+      "file": "night-agasa-whole-plan.png",
+      "production_lighting": true,
+      "sun": 0.0549999997019768
+    }
+  ]
+}

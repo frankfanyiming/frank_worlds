@@ -1,0 +1,78 @@
+{
+  "checks": {
+    "across_bridge": true,
+    "bridge_to_frog_home": true,
+    "camp_to_east_bridge": true,
+    "panda_house_to_camp": true
+  },
+  "notes": "Test drives the frog along paths sampled from static geometry; Panda follows actual frog breadcrumbs and still uses move_and_slide. No route teleport or collider disable.",
+  "panda_collision_frames": 3912,
+  "panda_travelled": 67.2923589332495,
+  "real_controller": true,
+  "routes": [
+    {
+      "frog": [
+        23.7985858917236,
+        -0.003613515291363,
+        5.42392492294312
+      ],
+      "label": "panda_house_to_camp",
+      "panda": [
+        23.7784175872803,
+        0.0143292034044862,
+        7.59113836288452
+      ],
+      "panda_gap": 2.16738152503967,
+      "path_points": 22,
+      "walk_complete": true
+    },
+    {
+      "frog": [
+        18.7648124694824,
+        0.168115898966789,
+        -9.07463359832764
+      ],
+      "label": "camp_to_east_bridge",
+      "panda": [
+        19.5780715942383,
+        0.154771015048027,
+        -7.25714826583862
+      ],
+      "panda_gap": 1.99118590354919,
+      "path_points": 21,
+      "walk_complete": true
+    },
+    {
+      "frog": [
+        10.8624029159546,
+        0.379474550485611,
+        -9.08000087738037
+      ],
+      "label": "across_bridge",
+      "panda": [
+        12.9690618515015,
+        0.985673725605011,
+        -9.07999515533447
+      ],
+      "panda_gap": 2.19214248657227,
+      "path_points": 12,
+      "walk_complete": true
+    },
+    {
+      "frog": [
+        -14.9759168624878,
+        0.0363082885742188,
+        -6.19939088821411
+      ],
+      "label": "bridge_to_frog_home",
+      "panda": [
+        -12.7843217849731,
+        0.116089873015881,
+        -6.19926977157593
+      ],
+      "panda_gap": 2.1930468082428,
+      "path_points": 37,
+      "walk_complete": true
+    }
+  ]
+}

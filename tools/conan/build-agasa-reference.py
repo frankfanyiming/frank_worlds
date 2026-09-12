@@ -3,8 +3,9 @@ import sys,math,json,random,bpy,bmesh
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).parent));import reference_geometry as g
 from reference_geometry import *
+import agasa_furniture as furniture
 S=init();clay='--grey' in sys.argv
-cream=mat('Agasa reference warm ivory facade','dfd0a4');pink=mat('Agasa reference dusty rose central spine','ad8794');floor=mat('Agasa reference teal floor','588a82',.76);oak=mat('Agasa reference honey joinery','997044',.65);walnut=mat('Agasa reference dark walnut','684b36',.7);silver=mat('Agasa reference satin aluminum','94a5a2',.35,.65);dark=mat('Agasa reference charcoal trim','33414b');glass=mat('Agasa reference blue clear Glass','9bbcc5',.1,0,.24);white=mat('Agasa reference enamel white','e8e6d5',.48);purple=mat('Agasa reference muted purple upholstery','79738b',.95);linen=mat('Agasa reference cream bed linen','d5ccab',.94);red=mat('Agasa reference warm rug','934b45',.96);solar=mat('Agasa reference solar cells','4d6476',.30,.25);stone=mat('Agasa reference cellar concrete','9d9e94',.92);tile=mat('Agasa reference cellar pale tiles','b4b4a4',.8);grass=mat('Agasa reference green lawn','658e50',.96);leaf=mat('Agasa reference garden foliage','406c43',.9);leaf2=mat('Agasa reference light foliage','71945a',.9);bark=mat('Agasa reference bark','75624b');brass=mat('Agasa reference brass','b79b50',.32,.6);blue=mat('Agasa reference lab blue equipment','597984');screen=mat('Agasa reference muted CRT display','334b49',.4);pages=mat('Agasa reference book paper','e0d7b8');bookm=[mat('Agasa reference book '+str(i),h) for i,h in enumerate(['736951','686853','886459','5c7580','9b997c'])]
+cream=mat('Agasa reference warm ivory facade','dfd0a4');pink=mat('Agasa reference dusty rose central spine','ad8794');floor=mat('Agasa reference teal floor','9bb4a8',.86);oak=mat('Agasa reference honey joinery','997044',.65);walnut=mat('Agasa reference dark walnut','684b36',.7);silver=mat('Agasa reference satin aluminum','94a5a2',.35,.65);dark=mat('Agasa reference charcoal trim','33414b');glass=mat('Agasa reference blue clear Glass','9bbcc5',.1,0,.24);white=mat('Agasa reference enamel white','e8e6d5',.48);purple=mat('Agasa reference muted purple upholstery','79738b',.95);linen=mat('Agasa reference cream bed linen','d5ccab',.94);red=mat('Agasa reference warm rug','934b45',.96);solar=mat('Agasa reference solar cells','4d6476',.30,.25);stone=mat('Agasa reference cellar concrete','9d9e94',.92);tile=mat('Agasa reference cellar pale tiles','b4b4a4',.8);grass=mat('Agasa reference green lawn','658e50',.96);leaf=mat('Agasa reference garden foliage','406c43',.9);leaf2=mat('Agasa reference light foliage','71945a',.9);bark=mat('Agasa reference bark','75624b');brass=mat('Agasa reference brass','b79b50',.32,.6);blue=mat('Agasa reference lab blue equipment','597984');screen=mat('Agasa reference muted CRT display','334b49',.4);pages=mat('Agasa reference book paper','e0d7b8');bookm=[mat('Agasa reference book '+str(i),h) for i,h in enumerate(['736951','686853','886459','5c7580','9b997c'])]
 # Capsule-like twin round wings. Keep a real central entrance and tall round rear stair tower.
 W=8.8;D=6.8;TOWER=(0,-5.9);TFLOOR=.06;UP=3.18;BASE=-3.12
 R={'origin':[64,0,-7],'yaw':0,'spawn':[0,.08,8.3],'rooms':[],'lights':[],'routes':[],'views':[],'colliders':[],'npcs':[],'windows':[],'interactions':[],'interior_zones':[]}
@@ -117,33 +118,12 @@ g.GROUP='AgasaReference_Hall'
 for x,z in [(-6,-2.5),(-6,3.25),(6,-2.5),(6,3.25)]:
  cyl('Full-height structural post',(x,3.12,z),.19,6.13,cream,24,True)
  for y in [.30,3.13,6.04]:cyl('Column collar',(x,y,z),.24,.10,silver,24)
-# Kitchen matching the circular plan; opening faces front, two concentric counter segments.
-g.GROUP='AgasaReference_Kitchen'
-KC=(-1.55,.05)
-ring('Circular kitchen outer lower cabinet',KC,1.54,2.30,.06,.98,white,a0=-pi*.20,a1=pi*1.50,segments=56,collision=True)
-ring('Circular kitchen rounded worktop',KC,1.47,2.36,.99,1.07,cream,a0=-pi*.20,a1=pi*1.50,segments=56)
-for j in range(23):
- a=-pi*.20+pi*1.70*j/22;rod('Kitchen inset cabinet door seam',(KC[0]+2.307*cos(a),.17,KC[1]+2.307*sin(a)),(KC[0]+2.307*cos(a),.91,KC[1]+2.307*sin(a)),.008,silver)
-# Cylindrical overhead extractor belongs inside the round counter.
-cyl('Central kitchen cylinder',(KC[0],1.11,KC[1]),.58,2.14,white,48,True)
-cyl('Kitchen suspended extraction hood',(KC[0],2.10,KC[1]),.86,.37,silver,48)
-cyl('Kitchen extractor chimney',(KC[0],3.71,KC[1]),.33,2.83,white,40)
-for a in [0,.8,1.7,2.5]:
- x,z=KC[0]+.67*cos(a),KC[1]+.67*sin(a);rod('Hanging pan hook',(x,1.71,z),(x,1.47,z),.014,dark);o=cyl('Hanging frying pan',(x,1.30,z),.16,.035,silver,24);o.rotation_euler.x=pi/2
-for j in range(4):
- a=pi*.03+j*.29;x,z=KC[0]+2.75*cos(a),KC[1]+2.75*sin(a);cyl('Kitchen round stool pedestal',(x,.39,z),.045,.61,silver,20);cyl('Kitchen stool foot',(x,.12,z),.32,.065,silver,24);cyl('Kitchen round upholstered stool',(x,.73,z),.34,.12,purple,32)
-box('Kitchen hob',(KC[0]-.28,1.087,KC[1]-1.96),(1.12,.025,.62),silver,.012)
-for xx in [-.26,.26]:
- for zz in [-.16,.16]:cyl('Hob burner',(KC[0]-.28+xx,1.11,KC[1]-1.96+zz),.10,.025,dark,20)
-# Two identical adjacent beds on left, as in the user's annotated bedroom reference.
-g.GROUP='AgasaReference_Bedroom'
-for z in [-.38,1.33]:
- box('Parallel bed dark frame',(-5.15,.29,z),(2.23,.35,1.20),walnut,.035,True)
- box('Parallel bed cream mattress',(-5.15,.53,z),(2.15,.28,1.14),linen,.085)
- box('Parallel bed quilt',(-4.91,.72,z),(1.53,.18,1.18),linen,.07)
- box('Parallel bed pillow',(-5.96,.76,z),(.40,.13,1.00),white,.075)
- box('Parallel bed headboard',(-6.33,.70,z),(.09,1.19,1.23),oak,.028)
-box('Shared bed side drawer',(-6.02,.42,.49),(.66,.74,.44),oak,.015,True)
+# Reference furniture shares one coordinate plan and scale. The central kitchen
+# has a visible service opening; paired beds face the entry instead of rotating
+# one sleeping area sideways into the counter zone.
+fm=furniture.palette()
+KC=furniture.kitchen(fm)
+furniture.bedroom(fm)
 # Bathroom occupies the upper-left sector shown in the supplied plan. The doorway is real.
 g.GROUP='AgasaReference_Bathroom'
 for p,s in [((-5.82,1.33,-4.14),(.13,2.54,2.75)),((-2.90,1.33,-4.94),(.13,2.54,1.15)),((-4.65,1.33,-2.77),(2.34,2.54,.13)),((-3.10,2.33,-2.77),(.80,.54,.13))]:box('Bathroom privacy wall beside door',p,s,white,.01,True)
@@ -154,29 +134,11 @@ rod('Tub brass tap',(-5.63,.82,-4.72),(-5.20,.82,-4.72),.026,silver)
 box('Bathroom small sink cabinet',(-3.65,.47,-4.99),(.9,.79,.62),cream,.035,True)
 ell('Bathroom ceramic basin',(-3.65,.91,-4.96),(.48,.10,.33),white)
 box('Bathroom mirror',(-3.65,1.63,-5.31),(.76,.82,.025),silver,.018)
-label('BATH',(-3.10,2.17,-2.682),.12,silver)
-# Sofa/table group in the right half of the ellipse.
-g.GROUP='AgasaReference_Living'
-box('Living rust rug',(4.15,.074,.50),(3.95,.026,3.54),red,.07)
-for z,ang in [(-.90,0),(2.05,pi)]:
- box('Living sofa base',(4.15,.31,z),(2.90,.42,.87),walnut,.07,True)
- box('Living sofa back',(4.15,.89,z-.37 if z<0 else z+.37),(2.97,.88,.20),purple,.09)
- for j in [-1,0,1]:box('Living sofa separate cushion',(4.15+j*.88,.61,z),(.85,.25,.79),purple,.085)
- for x in [2.75,5.55]:box('Living sofa arm',(x,.73,z),(.22,.50,.91),purple,.075)
-box('Living low coffee tabletop',(4.15,.56,.53),(1.60,.085,.80),oak,.06,True)
-for x in [3.48,4.82]:
- for z in [.24,.82]:box('Coffee table leg',(x,.28,z),(.09,.48,.09),walnut,.016)
-# Low bookcases follow the inner arc, leaving real gaps to the external corridor.
-g.GROUP='AgasaReference_Books'
-for i in range(30):
- a=tau*i/30
- if abs(math.atan2(sin(a-pi/2),cos(a-pi/2)))<.32 or abs(math.atan2(sin(a-3*pi/2),cos(a-3*pi/2)))<.40:continue
- x,z=7.52*cos(a),5.63*sin(a)
- box('Low curved-wall bookcase cabinet',(x,.51,z),(1.22,.91,.34),walnut,.012,False,angle=-a+pi/2)
- # Shelf books are real geometry, varied spines with restrained palette.
- for j in range(11):
-  tx,tz=-sin(a),cos(a);h=.19+random.random()*.15
-  box('Reference shelf book',(x+tx*(j-5)*.08,.97+h/2,z+tz*(j-5)*.08),(.065,h,.22),random.choice(bookm),.002,False,angle=-a+pi/2)
+label('浴室',(-3.10,2.17,-2.682),.12,silver)
+# The two facing sofas, set-in coffee table and book-filled cabinets read as
+# complete furniture assemblies rather than unrelated primitive placeholders.
+furniture.living(fm)
+furniture.bookcases(fm)
 # Real underground work spaces. Coordinate depth is explicit; external terrain hole supplied separately.
 g.GROUP='AgasaReference_Basement'
 prism('Basement actual tiled floor',[(-7,-8.50),(7,-8.50),(7,3.5),(-7,3.5)],BASE-.20,BASE,tile,True)
@@ -299,17 +261,17 @@ for p in [(-9.8,0,5.8),(8.6,0,7.0),(-9.9,0,-5.8)]:
    vv.extend([tuple(c-u),tuple(c+v),tuple(c+u),tuple(c-v),tuple(c+Vector((0,.025,0)))]);ff.extend([(n,n+1,n+4),(n+1,n+2,n+4),(n+2,n+3,n+4),(n+3,n,n+4)])
   mesh('Volumetric individually modeled garden leaves',vv,ff,leaf if dx<0 else leaf2)
 # Spatial contract, real walk routes and separate lighting zones.
-R['rooms']=[{'name':'阿笠宅 · 浴室','p':[-3.18,.08,-3.32]},{'name':'阿笠宅 · 环形厨房','p':[-1.55,.08,3.10]},{'name':'阿笠宅 · 双床休息区','p':[-3.65,.08,1.28]},{'name':'阿笠宅 · 客厅','p':[4.25,.08,3.08]},{'name':'阿笠宅 · 圆塔楼梯','p':[0,.08,-3.45]},{'name':'阿笠宅 · 二楼环廊','p':[3.8,UP+.02,-4.50]},{'name':'阿笠宅 · 地下研究室','p':[-3.45,BASE+.02,1.08]},{'name':'阿笠宅 · 发明工作间','p':[2.8,BASE+.02,-3.22]},{'name':'阿笠宅 · 后车库','p':[11.5,.06,-5.0]}]
+R['rooms']=[{'name':'阿笠宅 · 浴室','p':[-3.18,.08,-3.32]},{'name':'阿笠宅 · 环形厨房','p':[-1.15,.08,3.10]},{'name':'阿笠宅 · 双床休息区','p':[-4.70,.08,2.20]},{'name':'阿笠宅 · 客厅','p':[4.25,.08,3.08]},{'name':'阿笠宅 · 圆塔楼梯','p':[0,.08,-3.45]},{'name':'阿笠宅 · 二楼环廊','p':[3.8,UP+.02,-4.50]},{'name':'阿笠宅 · 地下研究室','p':[-3.45,BASE+.02,1.08]},{'name':'阿笠宅 · 发明工作间','p':[2.8,BASE+.02,-3.22]},{'name':'阿笠宅 · 后车库','p':[11.5,.06,-5.0]}]
 R['npcs']=[{'asset':'agasa','p':[.80,.08,3.40],'yaw':0},{'asset':'haibara','p':[-2.3,BASE+.02,1.6],'yaw':pi}]
 R['routes']=[{'name':'front_to_round_kitchen','points':[[0,.08,8.3],[0,.08,5.7],[0,.08,3.25],[-1.3,.08,3.10],[-1.55,.08,3.10]],'expected_y':TFLOOR},{'name':'main_to_tower','points':[[0,.08,3.25],[1.95,.08,2.50],[1.95,.08,-2.80],[0,.08,-3.45],[0,.08,-4.44]],'expected_y':TFLOOR}]+STAIR_ROUTES
 R['routes']+=[{'name':'cellar_to_research','points':[[0,BASE+.02,-4.44],[0,BASE+.02,-1.6],[-1.8,BASE+.02,-1.15],[-1.8,BASE+.02,.20],[-3.45,BASE+.02,1.08]],'expected_y':BASE}]
 R['routes']+=[{'name':'living_to_garage','points':[[6.4,.08,2.1],[7.25,.08,-1.65],[8.85,.08,-1.65],[10.3,.08,-1.65],[11.5,.06,-5.0]],'expected_y':.06}];R['lights']=[{'name':'Bathroom diffuse','p':[-4.15,2.30,-4.1],'energy':.55,'range':3.0,'color':'eef2ef'},{'name':'Living indirect','p':[4,3.7,.7],'energy':1.0,'range':7,'color':'f3f1e7'},{'name':'Kitchen diffuse','p':[-1.6,4.5,.2],'energy':.95,'range':6.5,'color':'f6f1df'},{'name':'Beds and library fill','p':[-5,2.7,.8],'energy':.70,'range':5,'color':'edf2f0'},{'name':'Gallery fill','p':[0,5.35,-3.7],'energy':.65,'range':7,'color':'eef2ef'},{'name':'Cellar workshop soft light','p':[2,BASE+2.30,-3.6],'energy':1.10,'range':7,'color':'f0f2eb'},{'name':'Research room soft light','p':[-2,BASE+2.30,1.6],'energy':1.0,'range':7,'color':'eef2ef'},{'name':'Rear garage soft light','p':[11.5,2.5,-4.0],'energy':.9,'range':6,'color':'f2f1e6'}]
 for lamp in R['lights']:lamp.update(shadow=False,attenuation=1.3)
-R['views']=[{'name':'双圆弧住宅与花园','p':[22,13,22],'target':[0,3.5,0],'lens':42},{'name':'入口正立面','p':[.2,5.2,25],'target':[0,3.45,0],'lens':43},{'name':'后塔与车库','p':[-19,12,-21],'target':[1,3,-1],'lens':39},{'name':'中央环形厨房','p':[3.85,2.1,4.8],'target':[-2,1.4,-.8],'lens':23},{'name':'并列双床','p':[-2.95,1.65,3.5],'target':[-5.5,.85,.2],'lens':30},{'name':'地下研究室','p':[.8,BASE+1.60,.12],'target':[-3.5,BASE+1.15,2.55],'lens':25}]
+R['views']=[{'name':'双圆弧住宅与花园','p':[22,13,22],'target':[0,3.5,0],'lens':42},{'name':'入口正立面','p':[.2,5.2,25],'target':[0,3.45,0],'lens':43},{'name':'后塔与车库','p':[-19,12,-21],'target':[1,3,-1],'lens':39},{'name':'中央环形厨房','p':[3.85,2.1,4.8],'target':[-1.15,1.3,-.1],'lens':23},{'name':'并列双床','p':[-3.5,1.8,3.45],'target':[-5.5,.87,-.1],'lens':30},{'name':'地下研究室','p':[.8,BASE+1.60,.12],'target':[-3.5,BASE+1.15,2.55],'lens':25}]
 R['views']+=[{'name':'阿笠发明工作台','p':[-.65,BASE+1.65,-1.30],'target':[-4.3,BASE+1.3,-3.3],'lens':28},{'name':'后塔真实地下楼梯','p':[2.6,BASE+1.7,-3.05],'target':[0,BASE+1.65,-5.9],'lens':26},{'name':'后车库与屋内通道','p':[11.4,1.7,-9.0],'target':[11.2,1.1,-3.4],'lens':28}]
 R['interior_zones']=[{'name':'main','min':[-8.8,0,-7.8],'max':[8.8,6.4,7.2]},{'name':'basement','min':[-7,BASE-.2,-8.6],'max':[7,0,3.6]},{'name':'garage','min':[8.4,-.15,-7.2],'max':[14.3,3.1,-.2]}]
 R['notes']={'source':'Blender native geometry, original Blender instrument subassemblies reused','references':'User images 3,6,9–12 and https://felicia1012.pixnet.net/blog/posts/14219272223','dimensions':'Inferred production dimensions, not a surveyed or official scale plan.','floor_levels':[BASE,TFLOOR,UP],'main_atrium_clear_height':6.17,'tower_stair_opening':{'center':[0,0,-5.9],'radius':2.18},'terrain_collision_cut_world':{'shape':'circle','center':[64,0,-12.9],'radius':2.18,'y_range':[-.4,.4]},'garage_beetle_position':[11.50,.065,-4.85],'glass':'Actual apertures, separate transparent glazing meshes, no whole-wall removal.'}
-R['floor_levels']={'basement':BASE,'ground':TFLOOR,'gallery':UP};R['stair_hole']={'center':[0,0,-5.9],'radius':2.18,'world_center':[64,0,-12.9]};R['interactions']=[{'id':'agasa-kitchen','name':'环形料理台','position':[-1.55,.8,2.38]},{'id':'haibara-research','name':'研究记录','position':[-4.25,BASE+1.1,2.60]},{'id':'agasa-inventions','name':'发明工作台','position':[4.6,BASE+.9,-5.50]},{'id':'agasa-garage','name':'博士的车库','position':[11.50,.7,-5.7]}]
+R['floor_levels']={'basement':BASE,'ground':TFLOOR,'gallery':UP};R['stair_hole']={'center':[0,0,-5.9],'radius':2.18,'world_center':[64,0,-12.9]};R['interactions']=[{'id':'agasa-kitchen','name':'环形料理台','position':[-1.15,.8,1.70]},{'id':'haibara-research','name':'研究记录','position':[-4.25,BASE+1.1,2.60]},{'id':'agasa-inventions','name':'发明工作台','position':[4.6,BASE+.9,-5.50]},{'id':'agasa-garage','name':'博士的车库','position':[11.50,.7,-5.7]}]
 R['routes']+=[{'name': 'kitchen_to_living', 'points': [[-1.55, 0.08, 3.1], [0, 0.08, 3.25], [3.8, 0.08, 3.1], [5.55, 0.08, 3.05], [5.95, 0.08, 2.62], [6.4, 0.08, 2.1]], 'expected_y': 0.06}, {'name': 'gallery_bridge', 'points': [[0, 3.205, -4.44], [3.8, 3.205, -4.44]], 'expected_y': 3.18}, {'name': 'kitchen_work_aisle', 'points': [[1.95, 0.08, -2.8], [-0.15, 0.08, -2.65], [-0.75, 0.08, -1.5], [-0.5, 0.08, -0.4]], 'expected_y': 0.06}]
 for rt in R['routes']:
  if rt['name']=='living_to_garage':rt['points'][-1]=[10.10,.06,-5.8]
@@ -317,6 +279,7 @@ for room in R['rooms']:
  if '车库' in room['name']:room['p']=[10.10,.06,-5.8]
 R['notes']['garage_beetle_yaw']=0
 for rt in R['routes']:
+ if rt['name']=='kitchen_work_aisle':rt['points']=[[1.95,.08,-2.8],[1.95,.08,2.50],[0,.08,3.25],[-1.15,.08,2.60],[-1.15,.08,1.30],[-.26,.08,.08]]
  if rt['name']=='main_to_tower':rt['points']=[[0,.08,3.25],[1.95,.08,2.50],[1.95,.08,-2.80],[0,.08,-3.0],[0,.08,-3.45],[0,.08,-4.44]]
  if rt['name']=='gallery_bridge':rt['points']=[[0,UP+.026,-4.44],[0,UP+.026,-3.0],[5.30,UP+.026,-3.0]]
 R['routes']=[rt for rt in R['routes'] if rt['name']!='gallery_perimeter']
@@ -330,6 +293,10 @@ for a in range(-30,241,15):
 R['routes'].append({'name':'gallery_perimeter','points':[[5.30,UP+.026,-3.0],[6.55,UP+.026,-2.84]]+perimeter+[[-4.20,UP+.026,-4.44],[-3.1,UP+.026,-4.44],[-3.1,UP+.026,-3.0],[0,UP+.026,-3.0],[0,UP+.026,-4.44]],'expected_y':UP})
 R['notes']['stair_connection']='Each spiral turn has first/last30degrees at the level landing; remaining300degrees rise continuously. Front radial bridge fits landing with full capsule clearance. Rear gallery radius2.40 headroom opening.'
 R['notes']['basement_clear_height']=2.56
+R['notes']['furniture_revision']='2026-09-13: paired beds share head wall and face entry; circular kitchen opening faces front with 1.3m clear gap; fitted shelf contents, sofa cushions and coffee service follow reference assemblies.'
+R['notes']['furniture_clearances']={'kitchen_front_opening_m':1.3,'kitchen_inner_radius_m':1.27,'extractor_base_radius_m':.48,'bed_between_gap_m':.23,'bed_foot_access_depth_m':1.3}
+R['views'] += [{'name':'客厅成套家具','p':[1.7,1.75,3.8],'target':[4.15,.85,.50],'lens':30},{'name':'厨房料理细节','p':[-.3,1.65,2.32],'target':[-1.55,1.2,-.6],'lens':30},{'name':'双床与书柜细节','p':[-5.0,1.45,2.58],'target':[-5.40,1.0,-1.0],'lens':32}]
+
 (OUT/'agasa.json').write_text(json.dumps(R,ensure_ascii=False,indent=2))
 setup_render()
 for li in R['lights']:

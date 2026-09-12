@@ -1,0 +1,59 @@
+{
+  "checks": {
+    "consecutive_refresh_keeps_stove_position": true,
+    "double_input_does_not_skip_cooking_step": true,
+    "food_gift_once_after_repeated_click": true,
+    "fresh_world_reload_keeps_memories_gifts_photos": true,
+    "frog_kitchen_route_0": true,
+    "frog_kitchen_route_1": true,
+    "frog_kitchen_route_2": true,
+    "frog_kitchen_route_3": true,
+    "frog_kitchen_route_4": true,
+    "frog_kitchen_route_5": true,
+    "gifts_display_after_return": true,
+    "invited_physics_actor": true,
+    "legacy_clovers_album_preserved": true,
+    "localized_friend_card_en": true,
+    "localized_friend_card_ja": true,
+    "localized_friend_card_ko": true,
+    "localized_friend_card_zh-CN": true,
+    "localized_friend_card_zh-TW": true,
+    "missing_legacy_photo_empty_album_keeps_record": true,
+    "outdoor_collision_layer": true,
+    "outdoor_follows_by_collisions": true,
+    "outdoor_walk": true,
+    "panda_reaches_kitchen_without_furniture_clip": true,
+    "picnic_real_props_and_single_consumption": true,
+    "refresh_resumes_exact_cooking_step": true,
+    "reload_keeps_companion_context": true,
+    "restored_position_replaces_door_checkpoint": true,
+    "second_recipe_two_tea_servings": true,
+    "shared_tea_saved": true,
+    "three_gift_types_saved": true,
+    "two_character_photo_and_memory": true,
+    "two_rice_servings_free": true,
+    "unfinished_cooking_written_for_refresh": true,
+    "walk_to_panda_tea": true
+  },
+  "notes": [
+    "Walking uses normal CharacterBody movement; doorway transitions use production handoff.",
+    "Separate kitchen tea and camp fixture positions are explicit to isolate recipe/photo tests, not claimed as complete map walking."
+  ],
+  "observations": {
+    "nav_points": 4276,
+    "outdoor_distance": 1.8908132314682,
+    "outdoor_end": [
+      26.6464729309082,
+      0.825267612934113,
+      21.1663455963135
+    ],
+    "outdoor_start": [
+      26.8500003814697,
+      0.549895882606506,
+      19.25
+    ],
+    "outdoor_travel": 5.30458933953196,
+    "photo": "friends-memory-4.png"
+  },
+  "real_engine": true
+}

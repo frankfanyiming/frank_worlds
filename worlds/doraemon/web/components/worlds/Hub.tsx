@@ -568,7 +568,7 @@ function NativeWorld({
         key={world + locale + retry}
         title={t(titleKey[world])}
         src={
-          assetPath('worlds/' + world + '/index.html') + '?v=' + (world === 'conan' ? 'arms-soft-20' : 'mobile-18') + '&lang=' +
+          assetPath('worlds/' + world + '/index.html') + '?v=' + 'friends-ui-21' + '&lang=' +
           locale +
           '&sound=' +
           (initialSound.current ? '1' : '0')
@@ -600,12 +600,7 @@ function NativeWorld({
           </div>
         </div>
       )}
-      <div className="native-controls">
-        <span>WASD · {t('walk')}</span>
-        <span>Shift · {t('run')}</span>
-        {world === 'frog' && <span>Space · {t('jump')}</span>}
-        <span>E · {t('interact')}</span>
-      </div>
+
     </div>
   );
 }

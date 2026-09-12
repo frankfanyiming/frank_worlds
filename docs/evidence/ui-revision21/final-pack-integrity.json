@@ -1,0 +1,34 @@
+[
+  {
+    "world": "frog",
+    "bytes": 239220876,
+    "chunks": 15,
+    "checks": [
+      "WASM header",
+      "loader API sequence",
+      "parallel chunk assembly",
+      "SHA-256 integrity",
+      "corrupt download retry",
+      "error retry UI",
+      "language",
+      "ready signal"
+    ],
+    "passed": true
+  },
+  {
+    "world": "conan",
+    "bytes": 181217000,
+    "chunks": 11,
+    "checks": [
+      "WASM header",
+      "loader API sequence",
+      "parallel chunk assembly",
+      "SHA-256 integrity",
+      "corrupt download retry",
+      "error retry UI",
+      "language",
+      "ready signal"
+    ],
+    "passed": true
+  }
+]

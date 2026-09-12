@@ -1,0 +1,127 @@
+{
+  "_save_sequence": 33,
+  "_saved_at": 1789242337.75758,
+  "camp_visits": 4.0,
+  "clovers": 57.0,
+  "friend_life": {
+    "checkpoint": {
+      "frog": [
+        22.0,
+        0.00380206108093262,
+        8.60000038146973
+      ],
+      "home": "",
+      "panda": [
+        23.2000007629395,
+        0.00682291202247143,
+        8.30000019073486
+      ]
+    },
+    "companion": true,
+    "cooked": [
+      {
+        "id": "cook:2:a",
+        "recipe": "tea"
+      },
+      {
+        "id": "cook:2:b",
+        "recipe": "tea"
+      }
+    ],
+    "cooking": {},
+    "events": {
+      "cook:1": {
+        "kind": "cook",
+        "value": "rice"
+      },
+      "cook:2": {
+        "kind": "cook",
+        "value": "tea"
+      },
+      "gift:cook:1:a": {
+        "kind": "gift",
+        "value": "food"
+      },
+      "gift:stone": {
+        "kind": "gift",
+        "value": "stone"
+      },
+      "gift:tea_jar": {
+        "kind": "gift",
+        "value": "tea_jar"
+      },
+      "invite:first": {
+        "kind": "invite",
+        "value": ""
+      },
+      "memory:friends-memory-4.png": {
+        "kind": "memory",
+        "value": "friends-memory-4.png"
+      },
+      "picnic:3": {
+        "kind": "picnic",
+        "value": ""
+      },
+      "tea:first": {
+        "kind": "tea",
+        "value": ""
+      }
+    },
+    "gifts": {
+      "food": {
+        "event": "gift:cook:1:a",
+        "shared": true,
+        "slot": "tea_table"
+      },
+      "stone": {
+        "event": "gift:stone",
+        "shared": true,
+        "slot": "window"
+      },
+      "tea_jar": {
+        "event": "gift:tea_jar",
+        "shared": true,
+        "slot": "cabinet"
+      }
+    },
+    "keepsakes": {
+      "stone": 0.0,
+      "tea_jar": 0.0
+    },
+    "memories": [
+      {
+        "friend": "panda",
+        "id": "memory:friends-memory-4.png",
+        "photo": "friends-memory-4.png",
+        "place": "camp",
+        "recipe": "rice"
+      }
+    ],
+    "picnic_item": {
+      "id": "cook:1:b",
+      "recipe": "rice"
+    },
+    "sequence": 4,
+    "shared_tea": true,
+    "stage": "remembered",
+    "version": 1
+  },
+  "harvest_at": 0.0,
+  "packed": true,
+  "panda_visits": 11.0,
+  "photos": [
+    {
+      "file": "old-photo.png",
+      "place": "old",
+      "time": "2026"
+    },
+    {
+      "event": "memory:friends-memory-4.png",
+      "file": "friends-memory-4.png",
+      "friend": "panda",
+      "place": "与熊猫的林间野餐",
+      "place_key": "friend_picnic",
+      "time": "2026-09-13T03:45:36"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+{
+  "url": "http://127.0.0.1:8791/frank_worlds/worlds/frog/index.html?lang=zh-CN",
+  "errors": [],
+  "checks": {
+    "initial_auto_save_created": true,
+    "normal_action_closed_save": true,
+    "after_completed_sync_reload_preserves_step": true,
+    "immediate_reload_observed_step": true,
+    "mirror_was_synchronous_before_reload": true,
+    "reload_preserves_clovers": true,
+    "completed_recipe_survives_immediate_reload": true,
+    "stale_mirror_does_not_override_newer_idb": true,
+    "quota_fallback_userfs_saved": false,
+    "quota_fallback_reloads_from_idb": false
+  },
+  "events": [
+    {
+      "type": "close",
+      "at": 3301.3000000715256,
+      "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
+      "data": {
+        "_save_sequence": 102,
+        "_saved_at": 1789242122.508,
+        "camp_visits": 0,
+        "clovers": 57,
+        "friend_life": {
+          "checkpoint": {
+            "frog": [
+              -12.3000001907349,
+              0.157343745231628,
+              -11.8000001907349
+            ],
+            "home": "frog",
+            "panda": [
+              -13.4841909408569,
+              0.177558600902557,
+              -11.8480405807495
+            ]
+          },
+          "companion": true,
+          "cooked": [],
+          "cooking": {
+            "id": "cook:1",
+            "recipe": "rice",
+            "step": 1
+          },
+          "events": {
+            "invite:first": {
+              "kind": "invite",
+              "value": ""
+            }
+          },
+          "gifts": {},
+          "keepsakes": {
+            "stone": 1,
+            "tea_jar": 1
+          },
+          "memories": [],
+          "picnic_item": {},
+          "sequence": 1,
+          "shared_tea": true,
+          "stage": "invited",
+          "version": 1
+        },
+        "harvest_at": 0,
+        "packed": false,
+        "panda_visits": 0,
+        "photos": []
+      }
+    },
+    {
+      "type": "sync-start",
+      "at": 3302.3000000715256,
+      "id": 1
+    },
+    {
+      "type": "sync-end",
+      "at": 3306.8000000715256,
+      "id": 1,
+      "error": ""
+    }
+  ],
+  "notes": [
+    "Instrumentation exists only in this isolated test browser response; exported source and files are unmodified.",
+    "A private save fixture is seeded once to reach the stove; measured saves use real friend cooking actions and production FileAccess."
+  ],
+  "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
+  "normalStep": 1,
+  "immediate": {
+    "events": [
+      {
+        "type": "close",
+        "at": 3120.7999999523163,
+        "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
+        "data": {
+          "_save_sequence": 104,
+          "_saved_at": 1789242125.66,
+          "camp_visits": 0,
+          "clovers": 57,
+          "friend_life": {
+            "checkpoint": {
+              "frog": [
+                -12.3000001907349,
+                0.157343745231628,
+                -11.8000001907349
+              ],
+              "home": "frog",
+              "panda": [
+                -13.4841909408569,
+                0.177558600902557,
+                -11.8480405807495
+              ]
+            },
+            "companion": true,
+            "cooked": [],
+            "cooking": {
+              "id": "cook:1",
+              "recipe": "rice",
+              "step": 2
+            },
+            "events": {
+              "invite:first": {
+                "kind": "invite",
+                "value": ""
+              }
+            },
+            "gifts": {},
+            "keepsakes": {
+              "stone": 1,
+              "tea_jar": 1
+            },
+            "memories": [],
+            "picnic_item": {},
+            "sequence": 1,
+            "shared_tea": true,
+            "stage": "invited",
+            "version": 1
+          },
+          "harvest_at": 0,
+          "packed": false,
+          "panda_visits": 0,
+          "photos": []
+        }
+      }
+    ],
+    "mirror": {
+      "_save_sequence": 104,
+      "_saved_at": 1789242125.66,
+      "camp_visits": 0,
+      "clovers": 57,
+      "friend_life": {
+        "checkpoint": {
+          "frog": [
+            -12.3000001907349,
+            0.157343745231628,
+            -11.8000001907349
+          ],
+          "home": "frog",
+          "panda": [
+            -13.4841909408569,
+            0.177558600902557,
+            -11.8480405807495
+          ]
+        },
+        "companion": true,
+        "cooked": [],
+        "cooking": {
+          "id": "cook:1",
+          "recipe": "rice",
+          "step": 2
+        },
+        "events": {
+          "invite:first": {
+            "kind": "invite",
+            "value": ""
+          }
+        },
+        "gifts": {},
+        "keepsakes": {
+          "stone": 1,
+          "tea_jar": 1
+        },
+        "memories": [],
+        "picnic_item": {},
+        "sequence": 1,
+        "shared_tea": true,
+        "stage": "invited",
+        "version": 1
+      },
+      "harvest_at": 0,
+      "packed": false,
+      "panda_visits": 0,
+      "photos": []
+    }
+  },
+  "immediateStep": 2,
+  "completed": {
+    "checkpoint": {
+      "frog": [
+        -15,
+        0.200000002980232,
+        -8.18000030517578
+      ],
+      "home": "frog",
+      "panda": [
+        -15.7799997329712,
+        0.25,
+        -8.73000049591064
+      ]
+    },
+    "companion": true,
+    "cooked": [
+      {
+        "id": "cook:1:a",
+        "recipe": "rice"
+      },
+      {
+        "id": "cook:1:b",
+        "recipe": "rice"
+      }
+    ],
+    "cooking": {},
+    "events": {
+      "cook:1": {
+        "kind": "cook",
+        "value": "rice"
+      },
+      "invite:first": {
+        "kind": "invite",
+        "value": ""
+      }
+    },
+    "gifts": {},
+    "keepsakes": {
+      "stone": 1,
+      "tea_jar": 1
+    },
+    "memories": [],
+    "picnic_item": {},
+    "sequence": 1,
+    "shared_tea": true,
+    "stage": "cooked",
+    "version": 1
+  },
+  "closeToCommitMs": 5.5
+}

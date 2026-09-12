@@ -1,0 +1,452 @@
+{
+  "missing": [],
+  "no_glb_dependencies": true,
+  "resources": [
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda mineral limestone detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda mineral limestone detailed roughness.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda mineral limestone detailed normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda golden bamboo detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda warm oak grain detailed roughness.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda warm oak grain detailed normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda warm oak grain detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda oak endgrain detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda unbleached linen detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda sage linen detailed roughness.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda sage linen detailed normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda ochre bed linen detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda sage linen detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda woven natural straw detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda glazed celadon detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda glazed celadon detailed roughness.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda glazed celadon detailed normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda flagstone 1 detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda flagstone 2 detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda flagstone 0 detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda flagstone 3 detailed albedo.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_panda-ink-landscape-runtime.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/panda-home_Panda soft garden beyond round windows.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/house-lighting/panda-day.exr"
+    },
+    {
+      "dependencies": [
+        "res://assets/house-lighting/panda-day.exr"
+      ],
+      "exists": true,
+      "path": "res://assets/house-lighting/panda-day.lmbake"
+    },
+    {
+      "dependencies": [
+        "res://assets/panda-home_Panda mineral limestone detailed albedo.jpg",
+        "res://assets/panda-home_Panda mineral limestone detailed roughness.png",
+        "res://assets/panda-home_Panda mineral limestone detailed normal.png",
+        "res://assets/panda-home_Panda golden bamboo detailed albedo.jpg",
+        "res://assets/panda-home_Panda warm oak grain detailed roughness.png",
+        "res://assets/panda-home_Panda warm oak grain detailed normal.png",
+        "res://assets/panda-home_Panda warm oak grain detailed albedo.jpg",
+        "res://assets/panda-home_Panda oak endgrain detailed albedo.jpg",
+        "res://assets/panda-home_Panda unbleached linen detailed albedo.jpg",
+        "res://assets/panda-home_Panda sage linen detailed roughness.png",
+        "res://assets/panda-home_Panda sage linen detailed normal.png",
+        "res://assets/panda-home_Panda ochre bed linen detailed albedo.jpg",
+        "res://assets/panda-home_Panda sage linen detailed albedo.jpg",
+        "res://assets/panda-home_Panda woven natural straw detailed albedo.jpg",
+        "res://assets/panda-home_Panda glazed celadon detailed albedo.jpg",
+        "res://assets/panda-home_Panda glazed celadon detailed roughness.png",
+        "res://assets/panda-home_Panda glazed celadon detailed normal.png",
+        "res://assets/panda-home_Panda flagstone 1 detailed albedo.jpg",
+        "res://assets/panda-home_Panda flagstone 2 detailed albedo.jpg",
+        "res://assets/panda-home_Panda flagstone 0 detailed albedo.jpg",
+        "res://assets/panda-home_Panda flagstone 3 detailed albedo.jpg",
+        "res://assets/panda-home_panda-ink-landscape-runtime.jpg",
+        "res://assets/panda-home_Panda soft garden beyond round windows.jpg",
+        "res://assets/house-lighting/panda-day.lmbake"
+      ],
+      "exists": true,
+      "path": "res://assets/house-lighting/panda-room.scn"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/house-lighting/panda-dusk.exr"
+    },
+    {
+      "dependencies": [
+        "res://assets/house-lighting/panda-dusk.exr"
+      ],
+      "exists": true,
+      "path": "res://assets/house-lighting/panda-dusk.lmbake"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home continuous warm grey rock mineral color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home continuous warm grey rock roughness.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home continuous warm grey rock mineral normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Soft distant garden window color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home flagstone 2 mineral color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home flagstone 2 roughness.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home flagstone 2 mineral normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home flagstone 1 mineral color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home flagstone 1 roughness.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home flagstone 1 mineral normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home flagstone 0 mineral color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home flagstone 0 roughness.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-enclosure_Home flagstone 0 mineral normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Honey wood color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Honey wood normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Chestnut trunk color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Chestnut trunk normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Stump endgrain color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Stump endgrain normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Cream shelf mushroom color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Cream shelf mushroom normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Warm grey mushroom gills color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Warm grey mushroom gills normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Soft moss patches color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Soft moss patches normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Moss leaf cloth color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Moss leaf cloth normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Oat linen color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Oat linen normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Blue sleeping quilt color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Blue sleeping quilt normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Rose woven mat color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Rose woven mat normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Deep green leaves color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Deep green leaves normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Earth pottery color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Earth pottery normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Cream pottery color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Cream pottery normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Warm carved hearth stone color.jpg"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/home-furnishings_R02 Warm carved hearth stone normal.png"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/house-lighting/frog-day.exr"
+    },
+    {
+      "dependencies": [
+        "res://assets/house-lighting/frog-day.exr"
+      ],
+      "exists": true,
+      "path": "res://assets/house-lighting/frog-day.lmbake"
+    },
+    {
+      "dependencies": [
+        "res://assets/home-enclosure_Home continuous warm grey rock mineral color.jpg",
+        "res://assets/home-enclosure_Home continuous warm grey rock roughness.png",
+        "res://assets/home-enclosure_Home continuous warm grey rock mineral normal.png",
+        "res://assets/home-enclosure_Soft distant garden window color.jpg",
+        "res://assets/home-enclosure_Home flagstone 2 mineral color.jpg",
+        "res://assets/home-enclosure_Home flagstone 2 roughness.png",
+        "res://assets/home-enclosure_Home flagstone 2 mineral normal.png",
+        "res://assets/home-enclosure_Home flagstone 1 mineral color.jpg",
+        "res://assets/home-enclosure_Home flagstone 1 roughness.png",
+        "res://assets/home-enclosure_Home flagstone 1 mineral normal.png",
+        "res://assets/home-enclosure_Home flagstone 0 mineral color.jpg",
+        "res://assets/home-enclosure_Home flagstone 0 roughness.png",
+        "res://assets/home-enclosure_Home flagstone 0 mineral normal.png",
+        "res://assets/home-furnishings_R02 Honey wood color.jpg",
+        "res://assets/home-furnishings_R02 Honey wood normal.png",
+        "res://assets/home-furnishings_R02 Chestnut trunk color.jpg",
+        "res://assets/home-furnishings_R02 Chestnut trunk normal.png",
+        "res://assets/home-furnishings_R02 Stump endgrain color.jpg",
+        "res://assets/home-furnishings_R02 Stump endgrain normal.png",
+        "res://assets/home-furnishings_R02 Cream shelf mushroom color.jpg",
+        "res://assets/home-furnishings_R02 Cream shelf mushroom normal.png",
+        "res://assets/home-furnishings_R02 Warm grey mushroom gills color.jpg",
+        "res://assets/home-furnishings_R02 Warm grey mushroom gills normal.png",
+        "res://assets/home-furnishings_R02 Soft moss patches color.jpg",
+        "res://assets/home-furnishings_R02 Soft moss patches normal.png",
+        "res://assets/home-furnishings_R02 Moss leaf cloth color.jpg",
+        "res://assets/home-furnishings_R02 Moss leaf cloth normal.png",
+        "res://assets/home-furnishings_R02 Oat linen color.jpg",
+        "res://assets/home-furnishings_R02 Oat linen normal.png",
+        "res://assets/home-furnishings_R02 Blue sleeping quilt color.jpg",
+        "res://assets/home-furnishings_R02 Blue sleeping quilt normal.png",
+        "res://assets/home-furnishings_R02 Rose woven mat color.jpg",
+        "res://assets/home-furnishings_R02 Rose woven mat normal.png",
+        "res://assets/home-furnishings_R02 Deep green leaves color.jpg",
+        "res://assets/home-furnishings_R02 Deep green leaves normal.png",
+        "res://assets/home-furnishings_R02 Earth pottery color.jpg",
+        "res://assets/home-furnishings_R02 Earth pottery normal.png",
+        "res://assets/home-furnishings_R02 Cream pottery color.jpg",
+        "res://assets/home-furnishings_R02 Cream pottery normal.png",
+        "res://assets/home-furnishings_R02 Warm carved hearth stone color.jpg",
+        "res://assets/home-furnishings_R02 Warm carved hearth stone normal.png",
+        "res://assets/house-lighting/frog-day.lmbake"
+      ],
+      "exists": true,
+      "path": "res://assets/house-lighting/frog-room.scn"
+    },
+    {
+      "dependencies": [],
+      "exists": true,
+      "path": "res://assets/house-lighting/frog-dusk.exr"
+    },
+    {
+      "dependencies": [
+        "res://assets/house-lighting/frog-dusk.exr"
+      ],
+      "exists": true,
+      "path": "res://assets/house-lighting/frog-dusk.lmbake"
+    }
+  ]
+}

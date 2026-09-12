@@ -1,0 +1,1422 @@
+{
+  "无法启动 3D 画面。请使用支持 WebGL 2 的浏览器，并开启图形加速。": [
+    "Enable graphics acceleration in a WebGL 2 browser to open this world.",
+    "WebGL 2 対応ブラウザーでグラフィックアクセラレーションを有効にしてください。",
+    "WebGL 2 지원 브라우저에서 그래픽 가속을 켜 주세요."
+  ],
+  "程序没有下载完成，请检查网络后重新载入。": [
+    "The download was interrupted. Check your connection and reload.",
+    "ダウンロードが中断されました。接続を確認して再読み込みしてください。",
+    "다운로드가 중단됐어요. 연결을 확인하고 새로고침해 주세요."
+  ],
+  "探索视角": [
+    "Camera view",
+    "視点",
+    "시점"
+  ],
+  "45° 小镇": [
+    "Town view",
+    "町を見渡す",
+    "마을 보기"
+  ],
+  "第一人称": [
+    "First person",
+    "一人称",
+    "1인칭"
+  ],
+  "调整时间和四季": [
+    "Time and seasons",
+    "時間と季節",
+    "시간과 계절"
+  ],
+  "夏": [
+    "Summer",
+    "夏",
+    "여름"
+  ],
+  "日 ·": [
+    " · ",
+    " · ",
+    " · "
+  ],
+  "夜色": [
+    "Night",
+    "夜",
+    "밤"
+  ],
+  "晴空": [
+    "Clear sky",
+    "晴れ",
+    "맑음"
+  ],
+  "探索工具": [
+    "Explore",
+    "探索ツール",
+    "탐험 도구"
+  ],
+  "道具与小冒险": [
+    "Gadgets and adventures",
+    "道具と小さな冒険",
+    "도구와 작은 모험"
+  ],
+  "口袋": [
+    "Pocket",
+    "ポケット",
+    "주머니"
+  ],
+  "查看大雄家剖面": [
+    "Look inside Nobita’s home",
+    "のび太の家の断面を見る",
+    "진구네 집 내부 보기"
+  ],
+  "剖面": [
+    "Cutaway",
+    "断面",
+    "단면"
+  ],
+  "鸟瞰全镇": [
+    "View the whole town",
+    "町全体を見る",
+    "마을 전체 보기"
+  ],
+  "全镇": [
+    "Town",
+    "町全体",
+    "마을 전체"
+  ],
+  "光照与画质": [
+    "Lighting and graphics",
+    "光と画質",
+    "조명과 화질"
+  ],
+  "设置": [
+    "Settings",
+    "設定",
+    "설정"
+  ],
+  "静香家": [
+    "Shizuka’s home",
+    "しずかの家",
+    "이슬이네 집"
+  ],
+  "野比家": [
+    "Nobi home",
+    "野比家",
+    "진구네 집"
+  ],
+  "一楼": [
+    "Ground floor",
+    "1階",
+    "1층"
+  ],
+  "二楼": [
+    "Upstairs",
+    "2階",
+    "2층"
+  ],
+  "行走": [
+    "Walk",
+    "歩く",
+    "걷기"
+  ],
+  "拖动环视 · 滚轮缩放": [
+    "Drag to look · Scroll to zoom",
+    "ドラッグで見回す · スクロールで拡大縮小",
+    "드래그로 둘러보기 · 스크롤로 확대"
+  ],
+  "拖动环视": [
+    "Drag to look",
+    "ドラッグで見回す",
+    "드래그로 둘러보기"
+  ],
+  "切换视角": [
+    "Switch view",
+    "視点切替",
+    "시점 전환"
+  ],
+  "查看完整操作": [
+    "All controls",
+    "操作一覧",
+    "조작 안내"
+  ],
+  "房间暂时没有打开": [
+    "The room could not open",
+    "部屋を開けませんでした",
+    "방을 열지 못했어요"
+  ],
+  "正在准备大雄的房间": [
+    "Preparing Nobita’s room",
+    "のび太の部屋を準備中",
+    "진구의 방을 준비하고 있어요"
+  ],
+  "稍等一下，窗帘、榻榻米和书桌正在就位。": [
+    "Arranging the curtains, tatami and desk…",
+    "カーテン、畳、机を用意しています…",
+    "커튼, 다다미, 책상을 준비하고 있어요…"
+  ],
+  "房间加载进度": [
+    "Room loading progress",
+    "部屋の読み込み状況",
+    "방 로딩 진행률"
+  ],
+  "重试": [
+    "Retry",
+    "再試行",
+    "다시 시도"
+  ],
+  "先逛小镇": [
+    "Explore the town first",
+    "先に町を散歩する",
+    "먼저 마을 둘러보기"
+  ],
+  "来一起共建有趣的小世界吧": [
+    "A little world to make our own",
+    "みんなでつくる小さな世界",
+    "함께 만드는 작은 세계"
+  ],
+  "正在打开小世界": [
+    "Opening the world",
+    "小さな世界を開いています",
+    "작은 세계를 열고 있어요"
+  ],
+  "小镇加载进度": [
+    "Town loading progress",
+    "町の読み込み状況",
+    "마을 로딩 진행률"
+  ],
+  "设备较慢？使用流畅模式": [
+    "Try smooth mode on slower devices",
+    "動作が重い場合は軽量モードへ",
+    "느리면 부드러운 모드로 전환하세요"
+  ],
+  "小镇暂时没有打开": [
+    "The town could not open",
+    "町を開けませんでした",
+    "마을을 열지 못했어요"
+  ],
+  "重新载入": [
+    "Reload",
+    "再読み込み",
+    "새로고침"
+  ],
+  "使用流畅模式": [
+    "Use smooth mode",
+    "軽量モード",
+    "부드러운 모드"
+  ],
+  "如果在聊天应用内打不开，可复制网址到 Safari、Chrome 或 Edge。若仍无响应，尝试切换 Wi-Fi / 移动网络。": [
+    "Try opening this link in Safari, Chrome or Edge. If needed, switch between Wi-Fi and mobile data.",
+    "Safari、Chrome、Edgeでリンクを開いてください。必要に応じてWi-Fiとモバイル回線を切り替えてください。",
+    "Safari, Chrome, Edge에서 링크를 열어 보세요. 필요하면 Wi-Fi와 모바일 데이터를 전환해 주세요."
+  ],
+  "小镇的此刻": [
+    "This moment in town",
+    "町のいま",
+    "지금 마을은"
+  ],
+  "四季、昼夜，还有街巷里的声音。": [
+    "Seasons, daylight and the sounds of the neighborhood.",
+    "季節、昼と夜、街角の音。",
+    "계절, 낮과 밤, 골목의 소리."
+  ],
+  "细腻光影": [
+    "Detailed lighting",
+    "きめ細かな陰影",
+    "섬세한 빛과 그림자"
+  ],
+  "接触阴影与更清晰的画面": [
+    "Contact shadows and clearer details",
+    "接地影と鮮明な描写",
+    "접촉 그림자와 선명한 화면"
+  ],
+  "回到大雄家门前": [
+    "Back to Nobita’s front door",
+    "のび太の家の前に戻る",
+    "진구네 집 앞으로"
+  ],
+  "再聊一句": [
+    "Keep chatting",
+    "もう少し話す",
+    "더 이야기하기"
+  ],
+  "继续散步": [
+    "Keep exploring",
+    "散歩に戻る",
+    "계속 산책하기"
+  ],
+  "在小镇里散步": [
+    "A walk around town",
+    "町を散歩する",
+    "마을 산책"
+  ],
+  "随时切换视角，按自己的节奏探索。": [
+    "Switch views and explore at your own pace.",
+    "視点を切り替えて、自分のペースで探索しよう。",
+    "시점을 바꾸며 내 속도로 탐험하세요."
+  ],
+  "或方向键行走，按住 Shift 跑步": [
+    "or arrow keys to walk; hold Shift to run",
+    "または矢印キーで歩く。Shift長押しで走る",
+    "또는 방향키로 걷기, Shift를 눌러 달리기"
+  ],
+  "鼠标拖动": [
+    "Mouse drag",
+    "マウスドラッグ",
+    "마우스 드래그"
+  ],
+  "转动视角，俯视时滚轮缩放": [
+    "Look around; scroll to zoom in town view",
+    "見回す。俯瞰ではスクロールで拡大縮小",
+    "둘러보기, 마을 시점에서 스크롤로 확대"
+  ],
+  "点击地面": [
+    "Click the ground",
+    "地面をクリック",
+    "바닥 클릭"
+  ],
+  "向那个位置行走，遇到障碍停下": [
+    "Walk there, stopping at obstacles",
+    "その場所まで歩く。障害物の前で止まる",
+    "그곳으로 걷기, 장애물 앞에서 멈추기"
+  ],
+  "切换第一人称与 45° 视角": [
+    "Switch between first person and town view",
+    "一人称と俯瞰を切り替える",
+    "1인칭과 마을 시점 전환"
+  ],
+  "与身边的人聊天、进屋、上下楼": [
+    "Talk, enter houses or use the stairs",
+    "話す、家に入る、階段を使う",
+    "대화, 집 출입, 계단 이용"
+  ],
+  "查看大雄家的屋内剖面": [
+    "See a cutaway of Nobita’s home",
+    "のび太の家の断面を見る",
+    "진구네 집 단면 보기"
+  ],
+  "空格 / Ctrl": [
+    "Space / Ctrl",
+    "Space / Ctrl",
+    "Space / Ctrl"
+  ],
+  "竹蜻蜓上升 / 下降，C 安全着陆": [
+    "Fly up / down; C to land safely",
+    "タケコプターで上昇／下降。Cで着陸",
+    "대나무 헬리콥터 상승/하강, C로 착륙"
+  ],
+  "空格": [
+    "Space",
+    "Space",
+    "Space"
+  ],
+  "棒球挑战里挥棒或投球": [
+    "Swing or throw in ball games",
+    "ボール遊びで打つ・投げる",
+    "공놀이에서 치기 또는 던지기"
+  ],
+  "靠近门口按 E 进出房屋；口袋里的任意门可以前往其他地点。": [
+    "Press E near a door to enter or leave. The Anywhere Door in your pocket reaches other places.",
+    "ドアの近くでEを押して出入り。ポケットのどこでもドアで別の場所へ。",
+    "문 근처에서 E로 출입하세요. 주머니의 어디로든 문으로 다른 장소에 갈 수 있어요."
+  ],
+  "今天的小冒险": [
+    "Today’s little adventure",
+    "今日の小さな冒険",
+    "오늘의 작은 모험"
+  ],
+  "找哆啦A梦领取道具，再到空地和伙伴玩一会儿。": [
+    "Borrow gadgets from Doraemon, then play with friends at the empty lot.",
+    "ドラえもんに道具を借りて、空き地で仲間と遊ぼう。",
+    "도라에몽에게 도구를 빌리고 공터에서 친구들과 놀아요."
+  ],
+  "竹蜻蜓": [
+    "Take-copter",
+    "タケコプター",
+    "대나무 헬리콥터"
+  ],
+  "飞过屋顶，从空中看看熟悉的街区。": [
+    "Fly over the rooftops and see your neighborhood from above.",
+    "屋根の上を飛んで、空からいつもの町を眺めよう。",
+    "지붕 위를 날며 하늘에서 익숙한 마을을 둘러봐요."
+  ],
+  "安全着陆": [
+    "Land safely",
+    "安全に着陸",
+    "안전하게 착륙"
+  ],
+  "戴上，起飞": [
+    "Put it on and fly",
+    "つけて飛ぶ",
+    "쓰고 날아가기"
+  ],
+  "和哆啦A梦聊聊解锁": [
+    "Talk to Doraemon to unlock",
+    "ドラえもんと話して借りる",
+    "도라에몽과 대화해 받기"
+  ],
+  "任意门": [
+    "Anywhere Door",
+    "どこでもドア",
+    "어디로든 문"
+  ],
+  "打开一扇门，让想去的地方就在眼前。": [
+    "Open a door to the place you want to be.",
+    "ドアを開けば、行きたい場所が目の前に。",
+    "문을 열면 가고 싶은 곳이 눈앞에 펼쳐져요."
+  ],
+  "门的另一边": [
+    "On the other side",
+    "ドアの向こう",
+    "문 너머"
+  ],
+  "任意门目的地": [
+    "Anywhere Door destination",
+    "どこでもドアの行き先",
+    "어디로든 문 목적지"
+  ],
+  "打开任意门": [
+    "Open the Anywhere Door",
+    "どこでもドアを開く",
+    "어디로든 문 열기"
+  ],
+  "等待领取道具": [
+    "Borrow this gadget first",
+    "まず道具を借りよう",
+    "먼저 도구를 빌려 주세요"
+  ],
+  "书桌里的时光机": [
+    "The time machine in the desk",
+    "机の中のタイムマシン",
+    "책상 속 타임머신"
+  ],
+  "去二楼书桌前，按 E 拉开浅抽屉，再进入时光机。": [
+    "At the upstairs desk, press E to open the drawer and enter the time machine.",
+    "2階の机の前でEを押し、引き出しを開けてタイムマシンへ。",
+    "2층 책상 앞에서 E로 서랍을 열고 타임머신에 타세요."
+  ],
+  "去二楼 ↗": [
+    "Go upstairs ↗",
+    "2階へ ↗",
+    "2층으로 ↗"
+  ],
+  "小花 ×": [
+    "Flowers × ",
+    "お花 × ",
+    "꽃 × "
+  ],
+  "· 静香好感": [
+    " · Friendship ",
+    " · しずかとの仲 ",
+    " · 이슬이와 친밀도 "
+  ],
+  "在家门口或静香家的花园取花，送给她、聊聊天，再约她散步。": [
+    "Pick a flower by either garden, give it to Shizuka, chat and invite her for a walk.",
+    "家やしずかの庭で花を摘んで渡し、おしゃべりして散歩に誘おう。",
+    "집 앞이나 이슬이네 정원에서 꽃을 따서 건네고, 이야기하고 산책을 청해 보세요."
+  ],
+  "取一朵花": [
+    "Pick a flower",
+    "花を一輪摘む",
+    "꽃 한 송이 따기"
+  ],
+  "找": [
+    "Visit ",
+    "会いに行く：",
+    "만나러 가기: "
+  ],
+  "空地里的胖虎和小夫有棒球练习和投球对决。最好成绩：": [
+    "Play ball with Gian and Suneo at the lot. Best: ",
+    "空き地でジャイアンやスネ夫とボール遊び。最高記録：",
+    "공터에서 퉁퉁이, 비실이와 공놀이. 최고 기록: "
+  ],
+  "次命中。": [
+    " hits.",
+    "回命中。",
+    "회 명중."
+  ],
+  "借我两件秘密道具": [
+    "May I borrow two gadgets?",
+    "ひみつ道具を2つ貸して",
+    "비밀 도구 두 개 빌려줘"
+  ],
+  "分享今天的趣事": [
+    "Share a story from today",
+    "今日の楽しい話をする",
+    "오늘의 재미있는 일 나누기"
+  ],
+  "送她一朵花": [
+    "Give her a flower",
+    "花を一輪贈る",
+    "꽃 한 송이 주기"
+  ],
+  "约她一起散步 ↗": [
+    "Invite her for a walk ↗",
+    "散歩に誘う ↗",
+    "산책에 초대하기 ↗"
+  ],
+  "⚾ 一起练习挥棒": [
+    "⚾ Practice batting",
+    "⚾ 一緒にバッティング練習",
+    "⚾ 함께 타격 연습"
+  ],
+  "⚾ 来一场投球对决": [
+    "⚾ Play a ball match",
+    "⚾ ボール対決",
+    "⚾ 공 던지기 대결"
+  ],
+  "关闭音乐与环境音": [
+    "Mute music and ambience",
+    "音楽と環境音を消す",
+    "음악과 환경음 끄기"
+  ],
+  "开启音乐与环境音": [
+    "Enable music and ambience",
+    "音楽と環境音をつける",
+    "음악과 환경음 켜기"
+  ],
+  "小镇的声音": [
+    "Town sounds",
+    "町の音",
+    "마을의 소리"
+  ],
+  "开启声音": [
+    "Enable sound",
+    "音をつける",
+    "소리 켜기"
+  ],
+  "离地": [
+    "Height ",
+    "高度 ",
+    "높이 "
+  ],
+  "向上飞": [
+    "Fly up",
+    "上昇",
+    "상승"
+  ],
+  "向下飞": [
+    "Fly down",
+    "下降",
+    "하강"
+  ],
+  "着陆 · C": [
+    "Land · C",
+    "着陸 · C",
+    "착륙 · C"
+  ],
+  "门的那边是": [
+    "Beyond the door",
+    "ドアの向こうは",
+    "문 너머에는"
+  ],
+  "走到门前，跨进这一次冒险。": [
+    "Walk to the door and step into your next adventure.",
+    "ドアの前へ歩いて、次の冒険に踏み出そう。",
+    "문 앞으로 걸어가 다음 모험에 발을 내디뎌요."
+  ],
+  "穿过任意门 ↗": [
+    "Step through ↗",
+    "どこでもドアをくぐる ↗",
+    "어디로든 문 통과 ↗"
+  ],
+  "和静香一起散步": [
+    "A walk with Shizuka",
+    "しずかと散歩",
+    "이슬이와 산책"
+  ],
+  "棒球练习": [
+    "Batting practice",
+    "野球の練習",
+    "야구 연습"
+  ],
+  "空地投球对决": [
+    "A match at the lot",
+    "空き地でボール対決",
+    "공터 공 던지기 대결"
+  ],
+  "♥ 一起走一段放学路": [
+    "♥ Walk home together",
+    "♥ 一緒に帰り道を歩こう",
+    "♥ 함께 하굣길 걷기"
+  ],
+  "准备好了吗？": [
+    "Ready?",
+    "準備はいい？",
+    "준비됐나요?"
+  ],
+  "挥棒": [
+    "Swing",
+    "バットを振る",
+    "스윙"
+  ],
+  "投球": [
+    "Throw",
+    "投げる",
+    "던지기"
+  ],
+  "· 空格": [
+    " · Space",
+    " · Space",
+    " · Space"
+  ],
+  "等球靠近身体再挥棒，击中时球会飞回空地。": [
+    "Wait for the ball to come close, then swing it back into the lot.",
+    "ボールが近づいたら打ち返そう。",
+    "공이 가까이 오면 쳐서 공터로 돌려보내세요."
+  ],
+  "WASD 左右闪避来球，按空格向伙伴投球。": [
+    "Dodge with WASD; press Space to throw.",
+    "WASDでよけて、Spaceで投げよう。",
+    "WASD로 피하고 Space로 던지세요."
+  ],
+  "结束活动": [
+    "Finish activity",
+    "遊びを終える",
+    "활동 마치기"
+  ],
+  "进入抽屉时光机": [
+    "Enter the time machine",
+    "タイムマシンに乗る",
+    "서랍 타임머신 타기"
+  ],
+  "打开书桌抽屉": [
+    "Open the desk drawer",
+    "机の引き出しを開ける",
+    "책상 서랍 열기"
+  ],
+  "穿过时间的隧道…": [
+    "Through the time tunnel…",
+    "時のトンネルを通って…",
+    "시간 터널을 지나서…"
+  ],
+  "下一站，哪个季节？": [
+    "Which season next?",
+    "次はどの季節？",
+    "다음은 어떤 계절?"
+  ],
+  "坐在抽屉后的时光机上，去另一个季节的小镇。": [
+    "Take a seat and visit the town in another season.",
+    "タイムマシンで、違う季節の町へ。",
+    "타임머신에 앉아 다른 계절의 마을로 가요."
+  ],
+  "回到房间": [
+    "Back to the room",
+    "部屋に戻る",
+    "방으로 돌아가기"
+  ],
+  "四季": [
+    "Seasons",
+    "四季",
+    "계절"
+  ],
+  "小镇时间 · 第": [
+    "Town time · Day ",
+    "町の時間 · ",
+    "마을 시간 · "
+  ],
+  "天 ·": [
+    " · ",
+    "日目 · ",
+    "일째 · "
+  ],
+  "小镇时间": [
+    "Town time",
+    "町の時間",
+    "마을 시간"
+  ],
+  "让时间自然流逝，四天后换季": [
+    "Let time pass; seasons change every four days",
+    "時間を進める。4日ごとに季節が変わる",
+    "시간 흐르기, 4일마다 계절 변경"
+  ],
+  "音乐与环境音": [
+    "Music and ambience",
+    "音楽と環境音",
+    "음악과 환경음"
+  ],
+  "关闭": [
+    "Off",
+    "オフ",
+    "끄기"
+  ],
+  "开启": [
+    "On",
+    "オン",
+    "켜기"
+  ],
+  "背景音乐": [
+    "Background music",
+    "BGM",
+    "배경 음악"
+  ],
+  "风、鸟鸣与虫鸣": [
+    "Wind, birds and insects",
+    "風、鳥、虫の声",
+    "바람, 새, 풀벌레 소리"
+  ],
+  "背景音乐音量": [
+    "Music volume",
+    "BGMの音量",
+    "음악 음량"
+  ],
+  "环境音量": [
+    "Ambience volume",
+    "環境音の音量",
+    "환경음 음량"
+  ],
+  "导入哆啦A梦 BGM 或自己的音乐": [
+    "Import Doraemon BGM or your own music",
+    "ドラえもんのBGMや自分の音楽を読み込む",
+    "도라에몽 BGM이나 내 음악 가져오기"
+  ],
+  "默认播放原创童趣配乐。导入的音乐仅在本机播放。": [
+    "Original music plays by default. Imported files play only on this device.",
+    "標準はオリジナル曲です。読み込んだ音楽はこの端末だけで再生します。",
+    "기본으로 창작 음악이 재생돼요. 가져온 음악은 이 기기에서만 재생돼요."
+  ],
+  "春日清晨": [
+    "Spring morning",
+    "春の朝",
+    "봄 아침"
+  ],
+  "盛夏午后": [
+    "Summer afternoon",
+    "真夏の午後",
+    "한여름 오후"
+  ],
+  "秋日黄昏": [
+    "Autumn evening",
+    "秋の夕暮れ",
+    "가을 저녁"
+  ],
+  "飘雪冬夜": [
+    "Snowy winter night",
+    "雪降る冬の夜",
+    "눈 내리는 겨울밤"
+  ],
+  "A POCKET FULL OF WONDERS": [
+    "POCKET WONDERS",
+    "ポケットのひみつ",
+    "주머니 속 신비"
+  ],
+  "AFTER SCHOOL CLUB": [
+    "AFTER SCHOOL",
+    "放課後の仲間",
+    "방과 후 친구들"
+  ],
+  "THE TIME MACHINE": [
+    "TIME MACHINE",
+    "タイムマシン",
+    "타임머신"
+  ],
+  "先到哆啦A梦身边，和他聊聊吧。": [
+    "Go and talk to Doraemon first.",
+    "まずドラえもんと話そう。",
+    "먼저 도라에몽과 이야기해요."
+  ],
+  "获得竹蜻蜓和任意门！二楼书桌的抽屉里，还藏着时光机。": [
+    "You borrowed the Take-copter and Anywhere Door! A time machine awaits in the upstairs desk.",
+    "タケコプターとどこでもドアを借りた！2階の机にはタイムマシンもあるよ。",
+    "대나무 헬리콥터와 어디로든 문을 받았어요! 2층 책상에는 타임머신도 있어요."
+  ],
+  "和哆啦A梦聊天，可以获得竹蜻蜓。": [
+    "Talk to Doraemon to borrow the Take-copter.",
+    "ドラえもんと話してタケコプターを借りよう。",
+    "도라에몽과 이야기하면 대나무 헬리콥터를 빌릴 수 있어요."
+  ],
+  "先走到室外的开阔处，再戴上竹蜻蜓。": [
+    "Find an open space outdoors before taking off.",
+    "外の広い場所に出てから飛ぼう。",
+    "야외의 넓은 곳으로 나간 뒤 날아오르세요."
+  ],
+  "竹蜻蜓启动 · WASD 飞行，空格上升，Ctrl 下降，C 安全着陆": [
+    "Take-copter on · WASD to fly, Space up, Ctrl down, C to land",
+    "タケコプター起動 · WASDで飛行、Spaceで上昇、Ctrlで下降、Cで着陸",
+    "대나무 헬리콥터 작동 · WASD 비행, Space 상승, Ctrl 하강, C 착륙"
+  ],
+  "下方没有安全落脚处，往街道上空飞一点。": [
+    "No safe landing below. Fly towards the street.",
+    "下に着陸できません。道路の上に移動してね。",
+    "아래에 착륙할 곳이 없어요. 도로 위로 이동하세요."
+  ],
+  "已安全着陆。": [
+    "Landed safely.",
+    "無事に着陸したよ。",
+    "안전하게 착륙했어요."
+  ],
+  "任意门还在哆啦A梦的口袋里。": [
+    "The Anywhere Door is still in Doraemon’s pocket.",
+    "どこでもドアはまだドラえもんのポケットの中。",
+    "어디로든 문은 아직 도라에몽의 주머니에 있어요."
+  ],
+  "先结束当前活动，再打开任意门。": [
+    "Finish this activity before opening the door.",
+    "今の遊びを終えてからドアを開こう。",
+    "현재 활동을 마친 뒤 문을 여세요."
+  ],
+  "这里放不下任意门，去街道或空地的开阔处试试。": [
+    "There isn’t room here. Try an open part of the street or lot.",
+    "ここには置けません。道路や空き地の広い場所で試そう。",
+    "여기에는 놓을 수 없어요. 도로나 공터의 넓은 곳에서 시도해요."
+  ],
+  "任意门通往": [
+    "The door leads to ",
+    "行き先：",
+    "문 목적지: "
+  ],
+  "，走进门或点击“穿过任意门”。": [
+    ". Walk through or choose “Step through”.",
+    "。ドアをくぐるか、ボタンを押そう。",
+    ". 걸어 들어가거나 통과 버튼을 누르세요."
+  ],
+  "任意门已抵达：": [
+    "Arrived: ",
+    "到着：",
+    "도착: "
+  ],
+  "到二楼书桌前，打开中间的浅抽屉。": [
+    "Open the shallow middle drawer at the upstairs desk.",
+    "2階の机で、真ん中の浅い引き出しを開けよう。",
+    "2층 책상에서 가운데 얕은 서랍을 여세요."
+  ],
+  "抽屉里出现了时光隧道。进入时光机，选择想去的季节吧。": [
+    "A time tunnel! Step inside and choose a season.",
+    "時のトンネルが現れた！乗り込んで季節を選ぼう。",
+    "시간 터널이 나타났어요! 타임머신에 타고 계절을 고르세요."
+  ],
+  "轻轻合上了抽屉。": [
+    "You gently closed the drawer.",
+    "引き出しをそっと閉めた。",
+    "서랍을 살며시 닫았어요."
+  ],
+  "先打开二楼书桌的抽屉。": [
+    "Open the upstairs desk drawer first.",
+    "まず2階の机の引き出しを開けよう。",
+    "먼저 2층 책상 서랍을 여세요."
+  ],
+  "坐稳啦！选择一次春、夏、秋、冬的时光旅行。": [
+    "Take a seat! Choose a journey to another season.",
+    "しっかり座って！旅したい季節を選ぼう。",
+    "잘 앉아요! 시간 여행을 떠날 계절을 고르세요."
+  ],
+  "今天已经取过一朵花了，给花园留一些吧。": [
+    "You picked a flower today. Let’s leave some in the garden.",
+    "今日はもう摘んだね。庭にも残しておこう。",
+    "오늘은 이미 꽃을 땄어요. 정원에도 남겨 두어요."
+  ],
+  "大雄家或静香家的花园边，有可以送给朋友的小花。": [
+    "Pick a flower for a friend by Nobita’s or Shizuka’s garden.",
+    "のび太やしずかの家の庭に、友達に贈れる花があるよ。",
+    "진구네나 이슬이네 정원에 친구에게 줄 꽃이 있어요."
+  ],
+  "得到一朵小花，可以送给静香。": [
+    "A little flower for Shizuka.",
+    "しずかに贈れる花を一輪摘んだ。",
+    "이슬이에게 줄 꽃 한 송이를 얻었어요."
+  ],
+  "静香：今天聊得很开心，我们再去走走吧。": [
+    "Shizuka: That was fun. Shall we walk some more?",
+    "しずか：お話できて楽しかったわ。また散歩しましょう。",
+    "이슬이: 이야기 즐거웠어. 좀 더 걸을까?"
+  ],
+  "静香笑着听你说完今天的趣事，好感 +1。": [
+    "Shizuka smiles at your story. Friendship +1.",
+    "しずかが笑顔で話を聞いてくれた。仲良し度 +1。",
+    "이슬이가 웃으며 이야기를 들어요. 친밀도 +1."
+  ],
+  "先到家门口的花园取一朵小花。": [
+    "Pick a flower in the garden by the front door first.",
+    "まず玄関そばの庭で花を一輪摘もう。",
+    "먼저 집 앞 정원에서 꽃을 따세요."
+  ],
+  "静香：今天这朵花就已经很开心啦。": [
+    "Shizuka: Today’s flower already made me happy.",
+    "しずか：今日もらったお花だけで十分うれしいわ。",
+    "이슬이: 오늘 준 꽃만으로도 정말 기뻐."
+  ],
+  "静香：谢谢你，大雄。明天也一起走回家吧。好感 +1。": [
+    "Shizuka: Thanks, Nobita. Let’s walk home tomorrow too. Friendship +1.",
+    "しずか：ありがとう、のび太さん。明日も一緒に帰りましょう。仲良し度 +1。",
+    "이슬이: 고마워, 진구야. 내일도 함께 집에 가자. 친밀도 +1."
+  ],
+  "先多聊聊或送一朵花，好感达到 2 后就能约她散步。": [
+    "Chat or give her a flower. At friendship 2, invite her for a walk.",
+    "話したり花を贈ったりして、仲良し度2で散歩に誘えるよ。",
+    "이야기하거나 꽃을 주세요. 친밀도 2부터 산책에 초대할 수 있어요."
+  ],
+  "和静香一起散步 · 带她慢慢走 25 米，她会跟着你。": [
+    "Walk with Shizuka · Take a gentle 25 m stroll together.",
+    "しずかと散歩 · 一緒にゆっくり25m歩こう。",
+    "이슬이와 산책 · 함께 천천히 25m 걸어요."
+  ],
+  "先和胖虎或小夫说一声，再开始挑战。": [
+    "Talk to Gian or Suneo to start a game.",
+    "ジャイアンかスネ夫に声をかけて始めよう。",
+    "퉁퉁이나 비실이에게 말하고 시작하세요."
+  ],
+  "棒球练习 · 看球靠近，空格挥棒！一共 5 球。": [
+    "Batting practice · Wait for the ball, then press Space! Five pitches.",
+    "野球の練習 · ボールが近づいたらSpace！全部で5球。",
+    "타격 연습 · 공이 가까워지면 Space! 총 5구예요."
+  ],
+  "空地投球对决 · WASD 闪避来球，空格向胖虎和小夫投球。": [
+    "Ball match · Dodge with WASD and throw with Space.",
+    "ボール対決 · WASDでよけて、Spaceで投げよう。",
+    "공 던지기 대결 · WASD로 피하고 Space로 던져요."
+  ],
+  "好球！": [
+    "Great hit!",
+    "ナイスバッティング！",
+    "멋진 타격!"
+  ],
+  "挥空了，等球再近一点": [
+    "Missed! Let it come a little closer.",
+    "空振り！もう少し引きつけよう。",
+    "빗나갔어요! 조금 더 가까이 올 때까지 기다려요."
+  ],
+  "挑战结束 · 命中": [
+    "Game finished · Hits: ",
+    "終了 · 命中：",
+    "게임 종료 · 명중: "
+  ],
+  "次，个人最佳": [
+    " · Personal best: ",
+    "回、自己ベスト：",
+    "회, 최고 기록: "
+  ],
+  "次。": [
+    " hits.",
+    "回。",
+    "회."
+  ],
+  "时光旅行抵达：": [
+    "Time travel destination: ",
+    "タイムトラベル到着：",
+    "시간 여행 도착: "
+  ],
+  "。走下楼看看小镇的变化吧。": [
+    ". Go downstairs and see what changed.",
+    "。下に降りて、変わった町を見てみよう。",
+    ". 아래층으로 내려가 달라진 마을을 보세요."
+  ],
+  "一起散步": [
+    "Walking together ",
+    "一緒に散歩 ",
+    "함께 산책 "
+  ],
+  "/ 25 米": [
+    " / 25 m",
+    " / 25 m",
+    " / 25 m"
+  ],
+  "静香：和你散步真开心。我们明天还一起回家，好吗？好感 +1。": [
+    "Shizuka: I loved our walk. Shall we go home together tomorrow? Friendship +1.",
+    "しずか：一緒に散歩できて楽しかったわ。明日も一緒に帰ろうね。仲良し度 +1。",
+    "이슬이: 함께 걸어서 즐거웠어. 내일도 같이 집에 가자. 친밀도 +1."
+  ],
+  "球来了！": [
+    "Here comes the ball!",
+    "ボールが来た！",
+    "공이 와요!"
+  ],
+  "现在挥棒！": [
+    "Swing now!",
+    "今、打とう！",
+    "지금 스윙!"
+  ],
+  "被碰到啦，左右闪避！": [
+    "Tagged! Dodge left or right.",
+    "当たっちゃった！左右によけよう。",
+    "맞았어요! 좌우로 피하세요."
+  ],
+  "命中！": [
+    "Hit!",
+    "命中！",
+    "명중!"
+  ],
+  "大雄的家": [
+    "Nobita’s home",
+    "のび太の家",
+    "진구네 집"
+  ],
+  "大雄的房间": [
+    "Nobita’s room",
+    "のび太の部屋",
+    "진구의 방"
+  ],
+  "那片空地": [
+    "The empty lot",
+    "いつもの空き地",
+    "익숙한 공터"
+  ],
+  "小夫家": [
+    "Suneo’s home",
+    "スネ夫の家",
+    "비실이네 집"
+  ],
+  "胖虎家": [
+    "Gian’s home",
+    "ジャイアンの家",
+    "퉁퉁이네 집"
+  ],
+  "小学": [
+    "School",
+    "小学校",
+    "초등학교"
+  ],
+  "月见台站": [
+    "Tsukimidai Station",
+    "月見台駅",
+    "달맞이역"
+  ],
+  "学校后的河岸": [
+    "Riverside behind school",
+    "学校裏の川辺",
+    "학교 뒤 강변"
+  ],
+  "通往后山的桥": [
+    "Bridge to the hill",
+    "裏山へ続く橋",
+    "뒷산으로 가는 다리"
+  ],
+  "后山": [
+    "The wooded hill",
+    "裏山",
+    "뒷산"
+  ],
+  "哆啦A梦": [
+    "Doraemon",
+    "ドラえもん",
+    "도라에몽"
+  ],
+  "大雄，今天想去哪里？先回房间看看，还是去空地找大家？": [
+    "Nobita, where shall we go? Your room, or the lot to see everyone?",
+    "のび太くん、今日はどこへ行く？部屋を見る？それとも空き地でみんなに会う？",
+    "진구야, 오늘은 어디 갈까? 방에 가 볼까, 아니면 공터에서 친구들을 만날까?"
+  ],
+  "二楼的窗边很舒服哦。走到楼梯前，就能上去。": [
+    "The upstairs window is a lovely spot. You can go up by the stairs.",
+    "2階の窓辺は気持ちいいよ。階段から上がれるよ。",
+    "2층 창가가 참 좋아. 계단 앞으로 가면 올라갈 수 있어."
+  ],
+  "竹蜻蜓能带你飞过屋顶，任意门能去想去的地方。时光机藏在你书桌的抽屉里哦。": [
+    "The Take-copter flies over roofs, and the Anywhere Door takes you places. The time machine is in your desk drawer!",
+    "タケコプターで屋根の上を飛んで、どこでもドアで好きな場所へ。タイムマシンは机の引き出しだよ！",
+    "대나무 헬리콥터로 지붕 위를 날고 어디로든 문으로 원하는 곳에 갈 수 있어. 타임머신은 책상 서랍에 있어!"
+  ],
+  "静香": [
+    "Shizuka",
+    "しずか",
+    "이슬이"
+  ],
+  "大雄，你也放学啦。今天的风真舒服。": [
+    "School’s out for you too, Nobita? What a lovely breeze today.",
+    "のび太さんも帰りなのね。今日は風が気持ちいいわ。",
+    "진구야, 너도 학교 끝났구나. 오늘 바람이 참 좋다."
+  ],
+  "大家好像都在空地，我们一起去看看吧。": [
+    "Everyone seems to be at the lot. Shall we go together?",
+    "みんな空き地にいるみたい。一緒に行きましょう。",
+    "다들 공터에 있는 것 같아. 같이 가 볼까?"
+  ],
+  "胖虎": [
+    "Gian",
+    "ジャイアン",
+    "퉁퉁이"
+  ],
+  "喂，大雄！今天要不要一起打棒球？": [
+    "Hey, Nobita! Want to play baseball today?",
+    "おい、のび太！今日は一緒に野球やろうぜ！",
+    "야, 진구! 오늘 같이 야구할래?"
+  ],
+  "这三根水泥管，是我们的老地方。": [
+    "These three concrete pipes mark our usual spot.",
+    "この土管3本が、いつもの集合場所だ。",
+    "이 콘크리트 파이프 세 개가 우리 아지트잖아."
+  ],
+  "小夫": [
+    "Suneo",
+    "スネ夫",
+    "비실이"
+  ],
+  "你看见我家的新阳台了吗？从这条街走过去就到了。": [
+    "Seen our new balcony? My house is just along this street.",
+    "うちの新しいベランダ見た？この道を行けばすぐだよ。",
+    "우리 집 새 발코니 봤어? 이 길로 가면 금방이야."
+  ],
+  "今天我们先在空地玩，晚一点再回家。": [
+    "Let’s play at the lot and head home a little later.",
+    "今日は空き地で遊んで、もう少し後で帰ろう。",
+    "오늘은 공터에서 놀다가 조금 이따 집에 가자."
+  ],
+  "妈妈": [
+    "Mom",
+    "ママ",
+    "엄마"
+  ],
+  "大雄，回来了呀。别忘了先去把作业写完。": [
+    "Welcome home, Nobita. Don’t forget to finish your homework first.",
+    "おかえり、のび太。先に宿題を終わらせるのよ。",
+    "진구야, 왔구나. 먼저 숙제 끝내는 거 잊지 마."
+  ],
+  "饭快做好了，记得洗手。": [
+    "Dinner’s almost ready. Remember to wash your hands.",
+    "もうすぐご飯よ。手を洗ってね。",
+    "곧 밥 다 돼. 손 씻는 거 잊지 마."
+  ],
+  "爸爸": [
+    "Dad",
+    "パパ",
+    "아빠"
+  ],
+  "今天过得怎么样？过来喝杯茶吧。": [
+    "How was your day? Come have some tea.",
+    "今日はどうだった？お茶でも飲もうか。",
+    "오늘 어땠니? 와서 차 한 잔 마시자."
+  ],
+  "这条街没有什么大事，但每天都很热闹。": [
+    "Nothing big happens here, but there’s life in these streets every day.",
+    "大きな事件はないけれど、この町は毎日賑やかだね。",
+    "큰일은 없어도 이 동네는 매일 활기차지."
+  ],
+  "春": [
+    "Spring",
+    "春",
+    "봄"
+  ],
+  "花瓣与新绿": [
+    "Blossoms and new leaves",
+    "花びらと新緑",
+    "꽃잎과 새잎"
+  ],
+  "蝉鸣与浓荫": [
+    "Cicadas and leafy shade",
+    "蝉の声と木陰",
+    "매미 소리와 짙은 그늘"
+  ],
+  "秋": [
+    "Autumn",
+    "秋",
+    "가을"
+  ],
+  "落叶与金色傍晚": [
+    "Falling leaves and golden evenings",
+    "落ち葉と金色の夕暮れ",
+    "낙엽과 황금빛 저녁"
+  ],
+  "冬": [
+    "Winter",
+    "冬",
+    "겨울"
+  ],
+  "细雪与安静街巷": [
+    "Soft snow and quiet streets",
+    "粉雪と静かな路地",
+    "가랑눈과 조용한 골목"
+  ],
+  "原创 · 夏日口袋散步": [
+    "Original · A Summer Pocket Walk",
+    "オリジナル · 夏のポケット散歩",
+    "창작곡 · 여름 주머니 산책"
+  ],
+  "部分声音未开始，可关闭后重新开启。": [
+    "Some sounds could not start. Try turning sound off and on.",
+    "一部の音を再生できません。音を入れ直してください。",
+    "일부 소리를 재생하지 못했어요. 껐다 켜 보세요."
+  ],
+  "声音未开始，请点开启重试。": [
+    "Sound did not start. Tap enable to retry.",
+    "音が出ません。オンを押して再試行してください。",
+    "소리가 시작되지 않았어요. 켜기를 눌러 다시 시도해요."
+  ],
+  "请选择音频文件": [
+    "Choose an audio file.",
+    "音声ファイルを選んでください。",
+    "오디오 파일을 선택하세요."
+  ],
+  "可探索的三维哆啦A梦小镇。WASD 移动，V 切换视角，E 互动。": [
+    "Explore Doraemon’s 3D town. WASD to move, V to change view, E to interact.",
+    "ドラえもんの3Dの町。WASDで移動、Vで視点切替、Eで交流。",
+    "도라에몽 3D 마을. WASD 이동, V 시점 전환, E 상호작용."
+  ],
+  "正在打开街道和房屋": [
+    "Opening streets and houses",
+    "道と家を読み込み中",
+    "길과 집을 열고 있어요"
+  ],
+  "小镇地图数据不完整": [
+    "Town map data is incomplete.",
+    "町のマップデータが不完全です。",
+    "마을 지도 데이터가 불완전해요."
+  ],
+  "加载已取消": [
+    "Loading cancelled",
+    "読み込みを中止しました",
+    "로딩이 취소됐어요"
+  ],
+  "模型解码": [
+    "Decoding models",
+    "モデルを展開中",
+    "모델을 해석하고 있어요"
+  ],
+  "部分小镇资源没有下载完成，请检查网络后重试。": [
+    "Some world files could not download. Check your connection and retry.",
+    "一部のファイルを取得できません。接続を確認して再試行してください。",
+    "일부 마을 파일을 받지 못했어요. 연결을 확인하고 다시 시도해요."
+  ],
+  "正在布置房间和伙伴": [
+    "Arranging rooms and friends",
+    "部屋と仲間を準備中",
+    "방과 친구들을 준비하고 있어요"
+  ],
+  "正在准备第一幅画面": [
+    "Preparing your first view",
+    "最初の景色を準備中",
+    "첫 화면을 준비하고 있어요"
+  ],
+  "画面准备": [
+    "Preparing the scene",
+    "画面を準備中",
+    "화면 준비"
+  ],
+  "当前设备无法绘制小镇，请使用流畅模式重试。": [
+    "This device could not render the town. Try smooth mode.",
+    "この端末では描画できません。軽量モードを試してください。",
+    "이 기기에서 마을을 표시하지 못했어요. 부드러운 모드로 시도하세요."
+  ],
+  "小镇没有完整载入，请检查网络后重试。": [
+    "The town did not finish loading. Check your connection and retry.",
+    "読み込みが完了しませんでした。接続を確認して再試行してください。",
+    "마을 로딩을 마치지 못했어요. 연결을 확인하고 다시 시도해요."
+  ],
+  "房间模型解码": [
+    "Decoding the room",
+    "部屋のモデルを展開中",
+    "방 모델 해석 중"
+  ],
+  "房间画面准备": [
+    "Preparing the room view",
+    "部屋の画面を準備中",
+    "방 화면 준비 중"
+  ],
+  "房间画面暂时无法绘制": [
+    "The room could not render.",
+    "部屋を描画できませんでした。",
+    "방을 표시하지 못했어요."
+  ],
+  "大雄的房间还没准备好，请重试。": [
+    "Nobita’s room isn’t ready. Please retry.",
+    "のび太の部屋を準備できませんでした。再試行してください。",
+    "진구의 방을 준비하지 못했어요. 다시 시도해 주세요."
+  ],
+  "图形资源不足或画面被系统暂停，请用流畅模式重新打开。": [
+    "Graphics resources ran low or the system paused the scene. Reopen in smooth mode.",
+    "描画リソースの不足かシステムの一時停止です。軽量モードで開き直してください。",
+    "그래픽 자원이 부족하거나 시스템이 화면을 멈췄어요. 부드러운 모드로 다시 여세요."
+  ],
+  "上楼 · 大雄的房间": [
+    "Upstairs · Nobita’s room",
+    "2階へ · のび太の部屋",
+    "위층 · 진구의 방"
+  ],
+  "下楼 · 客厅": [
+    "Downstairs · Living room",
+    "1階へ · リビング",
+    "아래층 · 거실"
+  ],
+  "推门 · 回家": [
+    "Open door · Home",
+    "ドアを開ける · 帰宅",
+    "문 열기 · 집으로"
+  ],
+  "出门 · 街道": [
+    "Outside · Street",
+    "外へ · 通り",
+    "밖으로 · 거리"
+  ],
+  "进屋 · 静香家": [
+    "Enter · Shizuka’s home",
+    "入る · しずかの家",
+    "들어가기 · 이슬이네 집"
+  ],
+  "出门 · 静香家": [
+    "Leave Shizuka’s home",
+    "しずかの家から出る",
+    "이슬이네 집에서 나가기"
+  ],
+  "下楼 · 静香家": [
+    "Downstairs · Shizuka’s home",
+    "1階へ · しずかの家",
+    "아래층 · 이슬이네 집"
+  ],
+  "上楼 · 静香家": [
+    "Upstairs · Shizuka’s home",
+    "2階へ · しずかの家",
+    "위층 · 이슬이네 집"
+  ],
+  "开合 · 房间推拉门": [
+    "Slide the room door",
+    "部屋の引き戸を開け閉め",
+    "방 미닫이문 열고 닫기"
+  ],
+  "开合 · 哆啦A梦的壁橱": [
+    "Slide Doraemon’s closet door",
+    "ドラえもんの押入れを開け閉め",
+    "도라에몽의 벽장 문 열고 닫기"
+  ],
+  "进入抽屉里的时光机": [
+    "Enter the time machine",
+    "引き出しのタイムマシンへ",
+    "서랍 속 타임머신 타기"
+  ],
+  "拉开书桌抽屉": [
+    "Open the desk drawer",
+    "机の引き出しを開ける",
+    "책상 서랍 열기"
+  ],
+  "哆啦A梦的壁橱": [
+    "Doraemon’s closet",
+    "ドラえもんの押入れ",
+    "도라에몽의 벽장"
+  ],
+  "叠好的被褥和小枕头。原来，哆啦A梦每天就睡在这里。": [
+    "Folded bedding and a small pillow. This is where Doraemon sleeps.",
+    "畳んだ布団と小さな枕。ドラえもんは毎日ここで眠るんだね。",
+    "개어 놓은 이불과 작은 베개. 도라에몽은 매일 여기서 자는구나."
+  ],
+  "图形绘制失败，请切换流畅模式。": [
+    "Rendering failed. Try smooth mode.",
+    "描画に失敗しました。軽量モードを試してください。",
+    "화면 표시에 실패했어요. 부드러운 모드로 전환하세요."
+  ],
+  "画面暂时无法绘制，请使用流畅模式重试。": [
+    "The scene could not render. Try smooth mode.",
+    "画面を描画できません。軽量モードで再試行してください。",
+    "화면을 표시할 수 없어요. 부드러운 모드로 다시 시도하세요."
+  ],
+  "野比家 · 庭院与一楼": [
+    "Nobi home · Garden and ground floor",
+    "野比家 · 庭と1階",
+    "진구네 · 정원과 1층"
+  ],
+  "穿过石板小路，推开熟悉的木门。客厅的茶还温着。": [
+    "Follow the stone path home. The tea in the living room is still warm.",
+    "石畳を歩いて家へ。リビングのお茶はまだ温かい。",
+    "돌길을 따라 집으로. 거실의 차는 아직 따뜻해요."
+  ],
+  "二楼 · 窗边的书桌": [
+    "Upstairs · Desk by the window",
+    "2階 · 窓辺の机",
+    "2층 · 창가의 책상"
+  ],
+  "绿窗帘、摊开的作业本，还有藏着童年秘密的壁橱。": [
+    "Green curtains, an open workbook and a closet full of childhood secrets.",
+    "緑のカーテン、開いたノート、子どもの秘密が詰まった押入れ。",
+    "초록 커튼, 펼쳐진 숙제장, 어린 시절 비밀을 간직한 벽장."
+  ],
+  "三根水泥管 · 伙伴的集合点": [
+    "Three concrete pipes · A place to meet",
+    "土管3本 · 仲間の集合場所",
+    "파이프 세 개 · 친구들의 모임터"
+  ],
+  "胖虎和小夫已经到了。再玩一会儿，太阳还没下山。": [
+    "Gian and Suneo are here. There’s still time to play before sunset.",
+    "ジャイアンとスネ夫が来ている。日が暮れるまでもう少し遊ぼう。",
+    "퉁퉁이와 비실이가 와 있어요. 해가 지기 전에 조금 더 놀아요."
+  ],
+  "源家 · 花开的街角": [
+    "Minamoto home · A flowery corner",
+    "源家 · 花咲く街角",
+    "이슬이네 · 꽃 핀 골목"
+  ],
+  "粉色的门檐下，静香在等放学回家的朋友。": [
+    "Shizuka waits for her friends beneath the pink porch roof.",
+    "ピンクの庇の下で、しずかが放課後の友達を待っている。",
+    "분홍 처마 아래에서 이슬이가 학교에서 돌아올 친구들을 기다려요."
+  ],
+  "骨川家 · 红瓦与喷泉": [
+    "Honekawa home · Red tiles and a fountain",
+    "骨川家 · 赤い瓦と噴水",
+    "비실이네 · 붉은 기와와 분수"
+  ],
+  "宽宽的阳台和修整过的庭院，是街区里很好认的一户。": [
+    "A broad balcony and tidy garden make this home easy to spot.",
+    "広いベランダと手入れされた庭が目印の家。",
+    "넓은 발코니와 잘 가꾼 정원이 눈에 띄는 집이에요."
+  ],
+  "刚田商店 · 街角杂货铺": [
+    "Goda shop · The corner store",
+    "剛田商店 · 角の雑貨屋",
+    "만퉁퉁 상점 · 골목 가게"
+  ],
+  "橙绿相间的遮阳棚下面，整齐摆着今天的蔬果。": [
+    "Fresh fruit and vegetables sit beneath an orange-and-green awning.",
+    "オレンジと緑の庇の下に、今日の野菜と果物が並ぶ。",
+    "주황과 초록 차양 아래 오늘의 과일과 채소가 가지런히 놓여 있어요."
+  ],
+  "操场 · 放学之后": [
+    "Playground · After school",
+    "校庭 · 放課後",
+    "운동장 · 방과 후"
+  ],
+  "走过操场，绕过球门，这就是每天往返的放学路。": [
+    "Past the playground and goalposts lies the familiar walk home.",
+    "校庭を通り、ゴールを回れば、いつもの帰り道。",
+    "운동장을 지나 골대를 돌아가는 익숙한 하굣길이에요."
+  ],
+  "电车 · 小镇的另一端": [
+    "Train · The far end of town",
+    "電車 · 町のもう一方へ",
+    "전철 · 마을 반대편"
+  ],
+  "绿白电车停在站台旁，远处的电线一直伸向天空。": [
+    "A green-and-white train waits by the platform beneath overhead wires.",
+    "緑と白の電車がホームに停まり、架線が空へ続く。",
+    "초록과 흰색 전철이 플랫폼에 서 있고 전선이 하늘로 이어져요."
+  ],
+  "沿河散步 · 芦苇与水声": [
+    "Riverside walk · Reeds and water",
+    "川辺の散歩 · 葦と水音",
+    "강변 산책 · 갈대와 물소리"
+  ],
+  "沿着学校旁的小路走来，河水从桥下缓缓流过。": [
+    "Follow the path beside the school to water flowing under the bridge.",
+    "学校脇の小道を進むと、橋の下を川がゆっくり流れる。",
+    "학교 옆 오솔길을 따라가면 다리 아래로 강물이 천천히 흘러요."
+  ],
+  "过桥 · 去树林里看看": [
+    "Cross the bridge · Into the trees",
+    "橋を渡って · 林の中へ",
+    "다리 건너 · 숲속으로"
+  ],
+  "走过有石护岸的小河，顺着另一边的小路往山上去。": [
+    "Cross the stone-lined stream, then follow the path uphill.",
+    "石の護岸の川を渡り、向こう側の小道を山へ登ろう。",
+    "돌로 둘러싸인 개울을 건너 반대편 길로 산에 올라요."
+  ],
+  "林间步道 · 俯瞰小镇": [
+    "Woodland trail · A view of town",
+    "林の小道 · 町を見渡す",
+    "숲길 · 마을 전망"
+  ],
+  "穿过树林来到山顶，熟悉的屋顶、学校和河流都在脚下。": [
+    "Above the woodland, the rooftops, school and river spread out below.",
+    "林を抜けて山頂へ。屋根も学校も川も足元に広がる。",
+    "숲을 지나 정상에 오르면 지붕, 학교, 강이 발아래 펼쳐져요."
+  ],
+  "房间材质清单不完整": [
+    "The room material list is incomplete.",
+    "部屋の材質一覧が不完全です。",
+    "방 재질 목록이 불완전해요."
+  ],
+  "房间材质解码": [
+    "Decoding room materials",
+    "部屋の材質を展開中",
+    "방 재질 해석 중"
+  ],
+  "本地缓存": [
+    "Local cache",
+    "ローカルキャッシュ",
+    "로컬 캐시"
+  ]
+}

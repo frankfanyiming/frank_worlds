@@ -2,7 +2,7 @@
   "version": 2,
   "revision": "approved-concept-02",
   "authoring": "Blender scenery / original Tripo frog unchanged",
-  "detail_revision": "natural-rock-felt-willow-01",
+  "detail_revision": "continuous-caps-crafted-stumps-21",
   "windows": [
     {
       "name": "FrogWindow0",
@@ -928,6 +928,6 @@
   "export": {
     "furnishing_materials": 23,
     "furnishing_meshes": 23,
-    "furnishing_bytes": 17610180
+    "furnishing_bytes": 19489104
   }
 }

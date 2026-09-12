@@ -1,4 +1,5 @@
 'use client';
+import { localizeTownUI, townText } from '@/lib/town/ui-i18n';
 import { assetPath } from '@/lib/town/asset-path';
 import { useEffect, useRef, useState } from 'react';
 import {
@@ -79,6 +80,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
     [quality, setQuality] = useState(false),
     [dialogLine, setDialogLine] = useState(0),
     [help, setHelp] = useState(false);
+  const uiOpen = !!panel || help || !!s.actor || !!s.bedroom?.requested;
   useEffect(() => {
     let disposed = false;
     let unregister = () => {};
@@ -115,14 +117,26 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
   useEffect(() => {
     if (s.ready) void engine.current?.sound.enable(sound);
   }, [sound, s.ready]);
-  useEffect(() => engine.current?.setPaused(!!panel || help), [panel, help]);
-  useEffect(() => setDialogLine(0), [s.actor?.id]);
+  useEffect(() => engine.current?.setPaused(uiOpen), [uiOpen]);
+  useEffect(() => {
+    engine.current?.renderer.domElement.setAttribute('aria-label', townText(locale, '可探索的三维哆啦A梦小镇。WASD 移动，V 切换视角，E 互动。'));
+  }, [locale, s.ready]);
+  useEffect(() => {
+    setDialogLine(0);
+    if (s.actor) { setPanel(null); setHelp(false); }
+  }, [s.actor?.id]);
+  const showPanel = (next: 'settings' | 'pocket') => {
+    engine.current?.closeDialogue(); setHelp(false); setPanel(next);
+  };
+  const showHelp = () => {
+    engine.current?.closeDialogue(); setPanel(null); setHelp(true);
+  };
   const go = (id: PlaceId) => {
     engine.current?.teleport(id);
     setPanel(null);
   };
-  return (
-    <main className={'town-app ' + (s.mode === 'first' ? 'first-person' : '')}>
+  return localizeTownUI((
+    <main className={'town-app ' + (s.mode === 'first' ? 'first-person ' : '') + (uiOpen ? 'ui-layer-open' : '')}>
       <div className="world-canvas" ref={canvas} />
       <div className="viewport-shade" aria-hidden="true" />
       <header className="topbar">
@@ -147,7 +161,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
         </div>
         <button
           className="day-chip"
-          onClick={() => setPanel('settings')}
+          onClick={() => showPanel('settings')}
           aria-label="调整时间和四季"
         >
           {s.weather?.night ? <Moon size={23} /> : <Sun size={23} />}{' '}
@@ -165,7 +179,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
       {s.ready && (
         <>
           <nav className="side-tools" aria-label="探索工具">
-            <button onClick={() => setPanel('pocket')} title="道具与小冒险">
+            <button onClick={() => showPanel('pocket')} title="道具与小冒险">
               <Gift />
               <span>口袋</span>
             </button>
@@ -182,7 +196,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
               <Maximize />
               <span>全镇</span>
             </button>
-            <button onClick={() => setPanel('settings')} title="光照与画质">
+            <button onClick={() => showPanel('settings')} title="光照与画质">
               <SlidersHorizontal />
               <span>设置</span>
             </button>
@@ -204,7 +218,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
               </button>
             </div>
           )}
-          <AdventureHUD s={s} engine={engine.current} />
+          <AdventureHUD locale={locale} s={s} engine={engine.current} />
           <div className="walk-guide">
             <span>
               <kbd>W</kbd>
@@ -221,7 +235,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
             <span>
               <kbd>V</kbd>切换视角
             </span>
-            <button title="查看完整操作" onClick={() => setHelp(true)}>
+            <button title="查看完整操作" onClick={showHelp}>
               ?
             </button>
           </div>
@@ -240,7 +254,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
               +
             </div>
           )}
-          <TouchControls locale={locale} disabled={!!panel || help || !!s.actor || !!s.bedroom?.requested}
+          <TouchControls locale={locale} disabled={uiOpen}
             onMove={(x, y) => engine.current?.setTouch(x, y)}
             onRun={pressed => engine.current?.setTouchRun(pressed)}
             onInteract={() => engine.current?.interact()}
@@ -339,7 +353,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
           </p>
         </div>
       )}
-      <Pocket
+      <Pocket locale={locale}
         open={panel === 'pocket'}
         onClose={() => setPanel(null)}
         s={s}
@@ -350,14 +364,14 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
         open={panel === 'settings'}
         onOpenChange={(v) => !v && setPanel(null)}
       >
-        <DialogContent className="settings-dialog">
+        <DialogContent closeLabel="关闭" className="settings-dialog">
           <DialogHeader>
             <DialogTitle>小镇的此刻</DialogTitle>
             <DialogDescription>
               四季、昼夜，还有街巷里的声音。
             </DialogDescription>
           </DialogHeader>
-          <WorldSettings s={s} engine={engine.current} />
+          <WorldSettings locale={locale} s={s} engine={engine.current} />
           <div className="setting-row">
             <div>
               <b>细腻光影</b>
@@ -391,7 +405,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
           if (!v) engine.current?.closeDialogue();
         }}
       >
-        <DialogContent className="dialogue-box">
+        <DialogContent closeLabel="关闭" className="dialogue-box">
           <DialogHeader>
             <div className="dialogue-name">
               <span style={{ background: s.actor?.color }}>
@@ -403,7 +417,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
               {s.actor?.lines[dialogLine % s.actor.lines.length]}
             </DialogDescription>
           </DialogHeader>
-          <TalkActions s={s} engine={engine.current} />
+          <TalkActions locale={locale} s={s} engine={engine.current} />
           <div className="dialogue-footer">
             <span>
               {dialogLine + 1} / {s.actor?.lines.length}
@@ -425,7 +439,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
         </DialogContent>
       </Dialog>
       <Dialog open={help} onOpenChange={setHelp}>
-        <DialogContent className="settings-dialog">
+        <DialogContent closeLabel="关闭" className="settings-dialog">
           <DialogHeader>
             <DialogTitle>在小镇里散步</DialogTitle>
             <DialogDescription>
@@ -462,5 +476,5 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
         </DialogContent>
       </Dialog>
     </main>
-  );
+  ), locale);
 }

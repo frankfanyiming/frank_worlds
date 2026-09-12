@@ -1,0 +1,1765 @@
+{
+  "checks": [
+    {
+      "case": "zh-CN interaction uses semantic source",
+      "pass": true
+    },
+    {
+      "case": "zh-CN dynamic album counter",
+      "pass": true
+    },
+    {
+      "case": "zh-CN dynamic inventory counts",
+      "pass": true
+    },
+    {
+      "case": "zh-CN photo caption composition",
+      "pass": true
+    },
+    {
+      "case": "zh-TW interaction uses semantic source",
+      "pass": true
+    },
+    {
+      "case": "zh-TW dynamic album counter",
+      "pass": true
+    },
+    {
+      "case": "zh-TW dynamic inventory counts",
+      "pass": true
+    },
+    {
+      "case": "zh-TW photo caption composition",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 共创拓展区",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 旅行青蛙 · 林间来信",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 俯看小世界",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 相册",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 行囊",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 拍一张 P",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 午后 / 黄昏",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 关闭",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 回到小径",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 家门口  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 家门开着，今天也适合出门走走。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry WASD 移动   ·   Space 跳跃   ·   鼠标右键环视   ·   E 互动   ·   P 拍照   ·   C 视角",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 米花町 · frank 小世界",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫家",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 拜访熊猫",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry E  ·  拜访熊猫",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 和熊猫喝杯茶",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry E  ·  和熊猫喝杯茶",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹木茶室",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹床",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫泡好了茶，过来坐坐。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫：山路慢慢走，茶也慢慢喝。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹木茶室  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹木茶室  ·  午后  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹木茶室  ·  黄昏",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹木茶室  ·  黄昏  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹床  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹床  ·  午后  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹床  ·  黄昏",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 熊猫的竹床  ·  黄昏  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 三叶草",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 午后",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 黄昏",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 家门口",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 树干小屋",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 夹层睡铺",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 巨叶森林",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 溪上木桥",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 林间营地",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 归途池塘",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 跟着小青蛙",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 蛙眼看世界",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 准备行囊",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 翻看旅行相册",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 在小圆桌旁歇一会儿",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 喝一口热茶，再翻翻旅途中带回来的明信片。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 家里布置好了，熊猫也搬到了营地旁。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 一封森林来信",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 沿着巨叶旁的小径出发，越过木桥，就能找到橙色帐篷。\n\n沿营地旁的新小路向南走，熊猫家有一壶热茶。\n\n溪水下游有一块漂流木片。累了就坐一会儿，带张照片回家。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 采收三叶草",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 查看来信",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 在水边歇一会儿",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 在营地吃便当",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 坐上木片漂流",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 继续散步",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 今天的行囊",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 还没有照片。按 P，留住眼前的小世界。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 叶片还在慢慢长大，再去散会儿步。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 收到了 18 枚三叶草。可以回屋准备便当了。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 便当和小包袱装好了。今天，去林间营地吧。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 准备便当需要 8 枚三叶草。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 行囊已经装好。带着便当去营地吧。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 吃完便当，蝴蝶也来了。把这一刻拍下来吧。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 在帐篷边坐一会儿。下次可以从家里带份便当。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 木片缓缓离岸了。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 顺着水流，慢慢漂一会儿。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 水面映着树影。回家的路就在身后。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 漂到了池塘边。沿小径慢慢回家吧。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 照片放进相册了：",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 照片暂时没有保存成功。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 便当已经备好，叶帽也带上了。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 到林间营地坐下吃饭，蝴蝶会在附近飞舞。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 行囊还是空的。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 回小屋找到木箱，使用 8 枚三叶草准备一份便当。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 旅行相册 {n}",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 行囊统计 {n} {m}",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 交谈",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 毛利小五郎",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 毛利兰",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 灰原哀",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 阿笠博士",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 街坊",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 下午好。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 街巷与住宅",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 晴朗午后",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 夜间",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 来坐坐吧。事务所在二楼，从右边楼梯就能上去。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 先仔细观察现场，答案往往藏在小细节里。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 新发明快做好了！工作台上的小零件别弄丢。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 窗边的光线很好，我在整理今天的实验记录。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 午后好，河边和车站都可以步行过去。",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 毛利事务所",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 毛利家客厅",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 小兰卧室",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 中央环形厨房",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 环形料理台",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 并列双床",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 发明工作台",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 实验区",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 地下研究室",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 博士的车库",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 研究记录",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 米花町",
+      "pass": true
+    },
+    {
+      "case": "zh-TW entry 目的地 · 设置",
+      "pass": true
+    },
+    {
+      "case": "en interaction uses semantic source",
+      "pass": true
+    },
+    {
+      "case": "en dynamic album counter",
+      "pass": true
+    },
+    {
+      "case": "en dynamic inventory counts",
+      "pass": true
+    },
+    {
+      "case": "en photo caption composition",
+      "pass": true
+    },
+    {
+      "case": "en entry 共创拓展区",
+      "pass": true
+    },
+    {
+      "case": "en entry 旅行青蛙 · 林间来信",
+      "pass": true
+    },
+    {
+      "case": "en entry 俯看小世界",
+      "pass": true
+    },
+    {
+      "case": "en entry 相册",
+      "pass": true
+    },
+    {
+      "case": "en entry 行囊",
+      "pass": true
+    },
+    {
+      "case": "en entry 拍一张 P",
+      "pass": true
+    },
+    {
+      "case": "en entry 午后 / 黄昏",
+      "pass": true
+    },
+    {
+      "case": "en entry 关闭",
+      "pass": true
+    },
+    {
+      "case": "en entry 回到小径",
+      "pass": true
+    },
+    {
+      "case": "en entry 家门口  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "en entry 家门开着，今天也适合出门走走。",
+      "pass": true
+    },
+    {
+      "case": "en entry WASD 移动   ·   Space 跳跃   ·   鼠标右键环视   ·   E 互动   ·   P 拍照   ·   C 视角",
+      "pass": true
+    },
+    {
+      "case": "en entry 米花町 · frank 小世界",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫家",
+      "pass": true
+    },
+    {
+      "case": "en entry 拜访熊猫",
+      "pass": true
+    },
+    {
+      "case": "en entry E  ·  拜访熊猫",
+      "pass": true
+    },
+    {
+      "case": "en entry 和熊猫喝杯茶",
+      "pass": true
+    },
+    {
+      "case": "en entry E  ·  和熊猫喝杯茶",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹木茶室",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹床",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫泡好了茶，过来坐坐。",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫：山路慢慢走，茶也慢慢喝。",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹木茶室  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹木茶室  ·  午后  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹木茶室  ·  黄昏",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹木茶室  ·  黄昏  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹床  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹床  ·  午后  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹床  ·  黄昏",
+      "pass": true
+    },
+    {
+      "case": "en entry 熊猫的竹床  ·  黄昏  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "en entry 三叶草",
+      "pass": true
+    },
+    {
+      "case": "en entry 午后",
+      "pass": true
+    },
+    {
+      "case": "en entry 黄昏",
+      "pass": true
+    },
+    {
+      "case": "en entry 行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "en entry 家门口",
+      "pass": true
+    },
+    {
+      "case": "en entry 树干小屋",
+      "pass": true
+    },
+    {
+      "case": "en entry 夹层睡铺",
+      "pass": true
+    },
+    {
+      "case": "en entry 巨叶森林",
+      "pass": true
+    },
+    {
+      "case": "en entry 溪上木桥",
+      "pass": true
+    },
+    {
+      "case": "en entry 林间营地",
+      "pass": true
+    },
+    {
+      "case": "en entry 归途池塘",
+      "pass": true
+    },
+    {
+      "case": "en entry 跟着小青蛙",
+      "pass": true
+    },
+    {
+      "case": "en entry 蛙眼看世界",
+      "pass": true
+    },
+    {
+      "case": "en entry 准备行囊",
+      "pass": true
+    },
+    {
+      "case": "en entry 翻看旅行相册",
+      "pass": true
+    },
+    {
+      "case": "en entry 在小圆桌旁歇一会儿",
+      "pass": true
+    },
+    {
+      "case": "en entry 喝一口热茶，再翻翻旅途中带回来的明信片。",
+      "pass": true
+    },
+    {
+      "case": "en entry 家里布置好了，熊猫也搬到了营地旁。",
+      "pass": true
+    },
+    {
+      "case": "en entry 一封森林来信",
+      "pass": true
+    },
+    {
+      "case": "en entry 沿着巨叶旁的小径出发，越过木桥，就能找到橙色帐篷。\n\n沿营地旁的新小路向南走，熊猫家有一壶热茶。\n\n溪水下游有一块漂流木片。累了就坐一会儿，带张照片回家。",
+      "pass": true
+    },
+    {
+      "case": "en entry 采收三叶草",
+      "pass": true
+    },
+    {
+      "case": "en entry 查看来信",
+      "pass": true
+    },
+    {
+      "case": "en entry 在水边歇一会儿",
+      "pass": true
+    },
+    {
+      "case": "en entry 在营地吃便当",
+      "pass": true
+    },
+    {
+      "case": "en entry 坐上木片漂流",
+      "pass": true
+    },
+    {
+      "case": "en entry 继续散步",
+      "pass": true
+    },
+    {
+      "case": "en entry 今天的行囊",
+      "pass": true
+    },
+    {
+      "case": "en entry 还没有照片。按 P，留住眼前的小世界。",
+      "pass": true
+    },
+    {
+      "case": "en entry 叶片还在慢慢长大，再去散会儿步。",
+      "pass": true
+    },
+    {
+      "case": "en entry 收到了 18 枚三叶草。可以回屋准备便当了。",
+      "pass": true
+    },
+    {
+      "case": "en entry 便当和小包袱装好了。今天，去林间营地吧。",
+      "pass": true
+    },
+    {
+      "case": "en entry 准备便当需要 8 枚三叶草。",
+      "pass": true
+    },
+    {
+      "case": "en entry 行囊已经装好。带着便当去营地吧。",
+      "pass": true
+    },
+    {
+      "case": "en entry 吃完便当，蝴蝶也来了。把这一刻拍下来吧。",
+      "pass": true
+    },
+    {
+      "case": "en entry 在帐篷边坐一会儿。下次可以从家里带份便当。",
+      "pass": true
+    },
+    {
+      "case": "en entry 木片缓缓离岸了。",
+      "pass": true
+    },
+    {
+      "case": "en entry 顺着水流，慢慢漂一会儿。",
+      "pass": true
+    },
+    {
+      "case": "en entry 水面映着树影。回家的路就在身后。",
+      "pass": true
+    },
+    {
+      "case": "en entry 漂到了池塘边。沿小径慢慢回家吧。",
+      "pass": true
+    },
+    {
+      "case": "en entry 照片放进相册了：",
+      "pass": true
+    },
+    {
+      "case": "en entry 照片暂时没有保存成功。",
+      "pass": true
+    },
+    {
+      "case": "en entry 便当已经备好，叶帽也带上了。",
+      "pass": true
+    },
+    {
+      "case": "en entry 到林间营地坐下吃饭，蝴蝶会在附近飞舞。",
+      "pass": true
+    },
+    {
+      "case": "en entry 行囊还是空的。",
+      "pass": true
+    },
+    {
+      "case": "en entry 回小屋找到木箱，使用 8 枚三叶草准备一份便当。",
+      "pass": true
+    },
+    {
+      "case": "en entry 旅行相册 {n}",
+      "pass": true
+    },
+    {
+      "case": "en entry 行囊统计 {n} {m}",
+      "pass": true
+    },
+    {
+      "case": "en entry 交谈",
+      "pass": true
+    },
+    {
+      "case": "en entry 毛利小五郎",
+      "pass": true
+    },
+    {
+      "case": "en entry 毛利兰",
+      "pass": true
+    },
+    {
+      "case": "en entry 灰原哀",
+      "pass": true
+    },
+    {
+      "case": "en entry 阿笠博士",
+      "pass": true
+    },
+    {
+      "case": "en entry 街坊",
+      "pass": true
+    },
+    {
+      "case": "en entry 下午好。",
+      "pass": true
+    },
+    {
+      "case": "en entry 街巷与住宅",
+      "pass": true
+    },
+    {
+      "case": "en entry 晴朗午后",
+      "pass": true
+    },
+    {
+      "case": "en entry 夜间",
+      "pass": true
+    },
+    {
+      "case": "en entry 来坐坐吧。事务所在二楼，从右边楼梯就能上去。",
+      "pass": true
+    },
+    {
+      "case": "en entry 先仔细观察现场，答案往往藏在小细节里。",
+      "pass": true
+    },
+    {
+      "case": "en entry 新发明快做好了！工作台上的小零件别弄丢。",
+      "pass": true
+    },
+    {
+      "case": "en entry 窗边的光线很好，我在整理今天的实验记录。",
+      "pass": true
+    },
+    {
+      "case": "en entry 午后好，河边和车站都可以步行过去。",
+      "pass": true
+    },
+    {
+      "case": "en entry 毛利事务所",
+      "pass": true
+    },
+    {
+      "case": "en entry 毛利家客厅",
+      "pass": true
+    },
+    {
+      "case": "en entry 小兰卧室",
+      "pass": true
+    },
+    {
+      "case": "en entry 中央环形厨房",
+      "pass": true
+    },
+    {
+      "case": "en entry 环形料理台",
+      "pass": true
+    },
+    {
+      "case": "en entry 并列双床",
+      "pass": true
+    },
+    {
+      "case": "en entry 发明工作台",
+      "pass": true
+    },
+    {
+      "case": "en entry 实验区",
+      "pass": true
+    },
+    {
+      "case": "en entry 地下研究室",
+      "pass": true
+    },
+    {
+      "case": "en entry 博士的车库",
+      "pass": true
+    },
+    {
+      "case": "en entry 研究记录",
+      "pass": true
+    },
+    {
+      "case": "en entry 米花町",
+      "pass": true
+    },
+    {
+      "case": "en entry 目的地 · 设置",
+      "pass": true
+    },
+    {
+      "case": "ja interaction uses semantic source",
+      "pass": true
+    },
+    {
+      "case": "ja dynamic album counter",
+      "pass": true
+    },
+    {
+      "case": "ja dynamic inventory counts",
+      "pass": true
+    },
+    {
+      "case": "ja photo caption composition",
+      "pass": true
+    },
+    {
+      "case": "ja entry 共创拓展区",
+      "pass": true
+    },
+    {
+      "case": "ja entry 旅行青蛙 · 林间来信",
+      "pass": true
+    },
+    {
+      "case": "ja entry 俯看小世界",
+      "pass": true
+    },
+    {
+      "case": "ja entry 相册",
+      "pass": true
+    },
+    {
+      "case": "ja entry 行囊",
+      "pass": true
+    },
+    {
+      "case": "ja entry 拍一张 P",
+      "pass": true
+    },
+    {
+      "case": "ja entry 午后 / 黄昏",
+      "pass": true
+    },
+    {
+      "case": "ja entry 关闭",
+      "pass": true
+    },
+    {
+      "case": "ja entry 回到小径",
+      "pass": true
+    },
+    {
+      "case": "ja entry 家门口  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "ja entry 家门开着，今天也适合出门走走。",
+      "pass": true
+    },
+    {
+      "case": "ja entry WASD 移动   ·   Space 跳跃   ·   鼠标右键环视   ·   E 互动   ·   P 拍照   ·   C 视角",
+      "pass": true
+    },
+    {
+      "case": "ja entry 米花町 · frank 小世界",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫家",
+      "pass": true
+    },
+    {
+      "case": "ja entry 拜访熊猫",
+      "pass": true
+    },
+    {
+      "case": "ja entry E  ·  拜访熊猫",
+      "pass": true
+    },
+    {
+      "case": "ja entry 和熊猫喝杯茶",
+      "pass": true
+    },
+    {
+      "case": "ja entry E  ·  和熊猫喝杯茶",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹木茶室",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹床",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫泡好了茶，过来坐坐。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫：山路慢慢走，茶也慢慢喝。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹木茶室  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹木茶室  ·  午后  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹木茶室  ·  黄昏",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹木茶室  ·  黄昏  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹床  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹床  ·  午后  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹床  ·  黄昏",
+      "pass": true
+    },
+    {
+      "case": "ja entry 熊猫的竹床  ·  黄昏  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ja entry 三叶草",
+      "pass": true
+    },
+    {
+      "case": "ja entry 午后",
+      "pass": true
+    },
+    {
+      "case": "ja entry 黄昏",
+      "pass": true
+    },
+    {
+      "case": "ja entry 行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ja entry 家门口",
+      "pass": true
+    },
+    {
+      "case": "ja entry 树干小屋",
+      "pass": true
+    },
+    {
+      "case": "ja entry 夹层睡铺",
+      "pass": true
+    },
+    {
+      "case": "ja entry 巨叶森林",
+      "pass": true
+    },
+    {
+      "case": "ja entry 溪上木桥",
+      "pass": true
+    },
+    {
+      "case": "ja entry 林间营地",
+      "pass": true
+    },
+    {
+      "case": "ja entry 归途池塘",
+      "pass": true
+    },
+    {
+      "case": "ja entry 跟着小青蛙",
+      "pass": true
+    },
+    {
+      "case": "ja entry 蛙眼看世界",
+      "pass": true
+    },
+    {
+      "case": "ja entry 准备行囊",
+      "pass": true
+    },
+    {
+      "case": "ja entry 翻看旅行相册",
+      "pass": true
+    },
+    {
+      "case": "ja entry 在小圆桌旁歇一会儿",
+      "pass": true
+    },
+    {
+      "case": "ja entry 喝一口热茶，再翻翻旅途中带回来的明信片。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 家里布置好了，熊猫也搬到了营地旁。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 一封森林来信",
+      "pass": true
+    },
+    {
+      "case": "ja entry 沿着巨叶旁的小径出发，越过木桥，就能找到橙色帐篷。\n\n沿营地旁的新小路向南走，熊猫家有一壶热茶。\n\n溪水下游有一块漂流木片。累了就坐一会儿，带张照片回家。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 采收三叶草",
+      "pass": true
+    },
+    {
+      "case": "ja entry 查看来信",
+      "pass": true
+    },
+    {
+      "case": "ja entry 在水边歇一会儿",
+      "pass": true
+    },
+    {
+      "case": "ja entry 在营地吃便当",
+      "pass": true
+    },
+    {
+      "case": "ja entry 坐上木片漂流",
+      "pass": true
+    },
+    {
+      "case": "ja entry 继续散步",
+      "pass": true
+    },
+    {
+      "case": "ja entry 今天的行囊",
+      "pass": true
+    },
+    {
+      "case": "ja entry 还没有照片。按 P，留住眼前的小世界。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 叶片还在慢慢长大，再去散会儿步。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 收到了 18 枚三叶草。可以回屋准备便当了。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 便当和小包袱装好了。今天，去林间营地吧。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 准备便当需要 8 枚三叶草。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 行囊已经装好。带着便当去营地吧。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 吃完便当，蝴蝶也来了。把这一刻拍下来吧。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 在帐篷边坐一会儿。下次可以从家里带份便当。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 木片缓缓离岸了。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 顺着水流，慢慢漂一会儿。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 水面映着树影。回家的路就在身后。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 漂到了池塘边。沿小径慢慢回家吧。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 照片放进相册了：",
+      "pass": true
+    },
+    {
+      "case": "ja entry 照片暂时没有保存成功。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 便当已经备好，叶帽也带上了。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 到林间营地坐下吃饭，蝴蝶会在附近飞舞。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 行囊还是空的。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 回小屋找到木箱，使用 8 枚三叶草准备一份便当。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 旅行相册 {n}",
+      "pass": true
+    },
+    {
+      "case": "ja entry 行囊统计 {n} {m}",
+      "pass": true
+    },
+    {
+      "case": "ja entry 交谈",
+      "pass": true
+    },
+    {
+      "case": "ja entry 毛利小五郎",
+      "pass": true
+    },
+    {
+      "case": "ja entry 毛利兰",
+      "pass": true
+    },
+    {
+      "case": "ja entry 灰原哀",
+      "pass": true
+    },
+    {
+      "case": "ja entry 阿笠博士",
+      "pass": true
+    },
+    {
+      "case": "ja entry 街坊",
+      "pass": true
+    },
+    {
+      "case": "ja entry 下午好。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 街巷与住宅",
+      "pass": true
+    },
+    {
+      "case": "ja entry 晴朗午后",
+      "pass": true
+    },
+    {
+      "case": "ja entry 夜间",
+      "pass": true
+    },
+    {
+      "case": "ja entry 来坐坐吧。事务所在二楼，从右边楼梯就能上去。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 先仔细观察现场，答案往往藏在小细节里。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 新发明快做好了！工作台上的小零件别弄丢。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 窗边的光线很好，我在整理今天的实验记录。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 午后好，河边和车站都可以步行过去。",
+      "pass": true
+    },
+    {
+      "case": "ja entry 毛利事务所",
+      "pass": true
+    },
+    {
+      "case": "ja entry 毛利家客厅",
+      "pass": true
+    },
+    {
+      "case": "ja entry 小兰卧室",
+      "pass": true
+    },
+    {
+      "case": "ja entry 中央环形厨房",
+      "pass": true
+    },
+    {
+      "case": "ja entry 环形料理台",
+      "pass": true
+    },
+    {
+      "case": "ja entry 并列双床",
+      "pass": true
+    },
+    {
+      "case": "ja entry 发明工作台",
+      "pass": true
+    },
+    {
+      "case": "ja entry 实验区",
+      "pass": true
+    },
+    {
+      "case": "ja entry 地下研究室",
+      "pass": true
+    },
+    {
+      "case": "ja entry 博士的车库",
+      "pass": true
+    },
+    {
+      "case": "ja entry 研究记录",
+      "pass": true
+    },
+    {
+      "case": "ja entry 米花町",
+      "pass": true
+    },
+    {
+      "case": "ja entry 目的地 · 设置",
+      "pass": true
+    },
+    {
+      "case": "ko interaction uses semantic source",
+      "pass": true
+    },
+    {
+      "case": "ko dynamic album counter",
+      "pass": true
+    },
+    {
+      "case": "ko dynamic inventory counts",
+      "pass": true
+    },
+    {
+      "case": "ko photo caption composition",
+      "pass": true
+    },
+    {
+      "case": "ko entry 共创拓展区",
+      "pass": true
+    },
+    {
+      "case": "ko entry 旅行青蛙 · 林间来信",
+      "pass": true
+    },
+    {
+      "case": "ko entry 俯看小世界",
+      "pass": true
+    },
+    {
+      "case": "ko entry 相册",
+      "pass": true
+    },
+    {
+      "case": "ko entry 行囊",
+      "pass": true
+    },
+    {
+      "case": "ko entry 拍一张 P",
+      "pass": true
+    },
+    {
+      "case": "ko entry 午后 / 黄昏",
+      "pass": true
+    },
+    {
+      "case": "ko entry 关闭",
+      "pass": true
+    },
+    {
+      "case": "ko entry 回到小径",
+      "pass": true
+    },
+    {
+      "case": "ko entry 家门口  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "ko entry 家门开着，今天也适合出门走走。",
+      "pass": true
+    },
+    {
+      "case": "ko entry WASD 移动   ·   Space 跳跃   ·   鼠标右键环视   ·   E 互动   ·   P 拍照   ·   C 视角",
+      "pass": true
+    },
+    {
+      "case": "ko entry 米花町 · frank 小世界",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫家",
+      "pass": true
+    },
+    {
+      "case": "ko entry 拜访熊猫",
+      "pass": true
+    },
+    {
+      "case": "ko entry E  ·  拜访熊猫",
+      "pass": true
+    },
+    {
+      "case": "ko entry 和熊猫喝杯茶",
+      "pass": true
+    },
+    {
+      "case": "ko entry E  ·  和熊猫喝杯茶",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹木茶室",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹床",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫泡好了茶，过来坐坐。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫：山路慢慢走，茶也慢慢喝。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹木茶室  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹木茶室  ·  午后  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹木茶室  ·  黄昏",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹木茶室  ·  黄昏  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹床  ·  午后",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹床  ·  午后  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹床  ·  黄昏",
+      "pass": true
+    },
+    {
+      "case": "ko entry 熊猫的竹床  ·  黄昏  ·  行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ko entry 三叶草",
+      "pass": true
+    },
+    {
+      "case": "ko entry 午后",
+      "pass": true
+    },
+    {
+      "case": "ko entry 黄昏",
+      "pass": true
+    },
+    {
+      "case": "ko entry 行囊已备好",
+      "pass": true
+    },
+    {
+      "case": "ko entry 家门口",
+      "pass": true
+    },
+    {
+      "case": "ko entry 树干小屋",
+      "pass": true
+    },
+    {
+      "case": "ko entry 夹层睡铺",
+      "pass": true
+    },
+    {
+      "case": "ko entry 巨叶森林",
+      "pass": true
+    },
+    {
+      "case": "ko entry 溪上木桥",
+      "pass": true
+    },
+    {
+      "case": "ko entry 林间营地",
+      "pass": true
+    },
+    {
+      "case": "ko entry 归途池塘",
+      "pass": true
+    },
+    {
+      "case": "ko entry 跟着小青蛙",
+      "pass": true
+    },
+    {
+      "case": "ko entry 蛙眼看世界",
+      "pass": true
+    },
+    {
+      "case": "ko entry 准备行囊",
+      "pass": true
+    },
+    {
+      "case": "ko entry 翻看旅行相册",
+      "pass": true
+    },
+    {
+      "case": "ko entry 在小圆桌旁歇一会儿",
+      "pass": true
+    },
+    {
+      "case": "ko entry 喝一口热茶，再翻翻旅途中带回来的明信片。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 家里布置好了，熊猫也搬到了营地旁。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 一封森林来信",
+      "pass": true
+    },
+    {
+      "case": "ko entry 沿着巨叶旁的小径出发，越过木桥，就能找到橙色帐篷。\n\n沿营地旁的新小路向南走，熊猫家有一壶热茶。\n\n溪水下游有一块漂流木片。累了就坐一会儿，带张照片回家。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 采收三叶草",
+      "pass": true
+    },
+    {
+      "case": "ko entry 查看来信",
+      "pass": true
+    },
+    {
+      "case": "ko entry 在水边歇一会儿",
+      "pass": true
+    },
+    {
+      "case": "ko entry 在营地吃便当",
+      "pass": true
+    },
+    {
+      "case": "ko entry 坐上木片漂流",
+      "pass": true
+    },
+    {
+      "case": "ko entry 继续散步",
+      "pass": true
+    },
+    {
+      "case": "ko entry 今天的行囊",
+      "pass": true
+    },
+    {
+      "case": "ko entry 还没有照片。按 P，留住眼前的小世界。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 叶片还在慢慢长大，再去散会儿步。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 收到了 18 枚三叶草。可以回屋准备便当了。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 便当和小包袱装好了。今天，去林间营地吧。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 准备便当需要 8 枚三叶草。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 行囊已经装好。带着便当去营地吧。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 吃完便当，蝴蝶也来了。把这一刻拍下来吧。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 在帐篷边坐一会儿。下次可以从家里带份便当。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 木片缓缓离岸了。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 顺着水流，慢慢漂一会儿。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 水面映着树影。回家的路就在身后。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 漂到了池塘边。沿小径慢慢回家吧。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 照片放进相册了：",
+      "pass": true
+    },
+    {
+      "case": "ko entry 照片暂时没有保存成功。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 便当已经备好，叶帽也带上了。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 到林间营地坐下吃饭，蝴蝶会在附近飞舞。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 行囊还是空的。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 回小屋找到木箱，使用 8 枚三叶草准备一份便当。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 旅行相册 {n}",
+      "pass": true
+    },
+    {
+      "case": "ko entry 行囊统计 {n} {m}",
+      "pass": true
+    },
+    {
+      "case": "ko entry 交谈",
+      "pass": true
+    },
+    {
+      "case": "ko entry 毛利小五郎",
+      "pass": true
+    },
+    {
+      "case": "ko entry 毛利兰",
+      "pass": true
+    },
+    {
+      "case": "ko entry 灰原哀",
+      "pass": true
+    },
+    {
+      "case": "ko entry 阿笠博士",
+      "pass": true
+    },
+    {
+      "case": "ko entry 街坊",
+      "pass": true
+    },
+    {
+      "case": "ko entry 下午好。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 街巷与住宅",
+      "pass": true
+    },
+    {
+      "case": "ko entry 晴朗午后",
+      "pass": true
+    },
+    {
+      "case": "ko entry 夜间",
+      "pass": true
+    },
+    {
+      "case": "ko entry 来坐坐吧。事务所在二楼，从右边楼梯就能上去。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 先仔细观察现场，答案往往藏在小细节里。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 新发明快做好了！工作台上的小零件别弄丢。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 窗边的光线很好，我在整理今天的实验记录。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 午后好，河边和车站都可以步行过去。",
+      "pass": true
+    },
+    {
+      "case": "ko entry 毛利事务所",
+      "pass": true
+    },
+    {
+      "case": "ko entry 毛利家客厅",
+      "pass": true
+    },
+    {
+      "case": "ko entry 小兰卧室",
+      "pass": true
+    },
+    {
+      "case": "ko entry 中央环形厨房",
+      "pass": true
+    },
+    {
+      "case": "ko entry 环形料理台",
+      "pass": true
+    },
+    {
+      "case": "ko entry 并列双床",
+      "pass": true
+    },
+    {
+      "case": "ko entry 发明工作台",
+      "pass": true
+    },
+    {
+      "case": "ko entry 实验区",
+      "pass": true
+    },
+    {
+      "case": "ko entry 地下研究室",
+      "pass": true
+    },
+    {
+      "case": "ko entry 博士的车库",
+      "pass": true
+    },
+    {
+      "case": "ko entry 研究记录",
+      "pass": true
+    },
+    {
+      "case": "ko entry 米花町",
+      "pass": true
+    },
+    {
+      "case": "ko entry 目的地 · 设置",
+      "pass": true
+    }
+  ],
+  "passed": true
+}

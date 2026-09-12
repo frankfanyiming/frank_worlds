@@ -18,6 +18,8 @@ var motion_review=false
 var signals:Array=[]
 var lamps:Array=[]
 var window_lights:Array=[]
+var architectural_lights:Array=[]
+var architectural_emission:Array=[]
 var ui:CanvasLayer
 var info:Label
 var hint:Label
@@ -38,6 +40,7 @@ var inspection_views:Array=[]
 var current_view=0
 var photo_mode=false
 var gi_ready=false
+var web_ui_locked=false
 var mobile_ui=false
 var mobile_menu:MenuButton
 var character_motion:Dictionary={}
@@ -146,6 +149,8 @@ func build_houses()->void:
 		var spec:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(path));specs[key]=spec
 		var root=Node3D.new();root.name="Blender_"+key;add_child(root);root.position=vec(spec.origin);root.rotation.y=float(spec.get("yaw",0));homes[key]=root
 		var architecture=model("buildings/"+key,root,Vector3.ZERO);collision_meshes(architecture)
+		for detail in spec.get("detail_assets",[]):model("buildings/"+str(detail),root,Vector3.ZERO)
+		configure_architecture_accents(root,spec)
 		for c in spec.get("colliders",[]):collision(root,vec(c.p),vec(c.s),float(c.get("r",0)),float(c.get("rx",0)))
 		for r in spec.get("ramps",[]):collision(root,vec(r.p),vec(r.s),float(r.get("r",0)),float(r.get("rx",0)))
 		# These overlapping ceiling points supply weak diffuse fill.
@@ -153,7 +158,8 @@ func build_houses()->void:
 		for item in spec.get("lights",[]):
 			var l=OmniLight3D.new();l.position=vec(item.p);l.omni_range=float(item.get("range",5));l.light_energy=float(item.get("energy",.8))*(.4 if key=="agasa" else .22);l.light_color=Color(.98,.97,.93);l.light_size=.18;l.shadow_enabled=false;l.omni_attenuation=float(item.get("attenuation",1.3 if key=="agasa" else .85));l.light_specular=.08;root.add_child(l)
 			if key=="kudo":l.position.y-=.36 if l.position.y<3 else .40
-			l.set_meta("base_energy",l.light_energy);lamps.append(l)
+			l.light_color=Color(str(item.get("color","faf7ed")));l.set_meta("day_color",l.light_color);l.set_meta("night_color",Color(str(item.get("night_color",item.get("color","faf7ed")))))
+			l.set_meta("base_energy",l.light_energy);l.set_meta("night_energy_multiplier",float(item.get("night_energy_multiplier",1.0)));lamps.append(l)
 		add_window_lights(key,root)
 		if key=="agasa" and doctor_car and spec.get("notes",{}).has("garage_beetle_position"):
 			doctor_car.global_position=root.to_global(vec(spec.notes.garage_beetle_position));doctor_car.rotation.y=PI
@@ -163,6 +169,21 @@ func build_houses()->void:
 			if view.name=="毛利事务所":view.p=[.4,4.92,-.48];view.target=[-1.7,4.12,-5.1]
 			if key=="agasa" and view.name=="实验区":view.p=[-4.4,1.65,-2.9];view.target=[-2.0,1.25,-5.72]
 			inspection_views.append({"name":view.name,"p":root.to_global(vec(view.p)),"target":root.to_global(vec(view.target))})
+# Authored accent lighting and sign faces have separate daytime/nighttime values.
+func configure_architecture_accents(house:Node3D,spec:Dictionary)->void:
+	for item in spec.get("accent_lights",[]):
+		var lamp=OmniLight3D.new();lamp.name=str(item.get("name","FacadeAccent"));lamp.position=vec(item.p)
+		lamp.light_color=Color(str(item.color));lamp.light_energy=float(item.day_energy);lamp.omni_range=float(item.range)
+		lamp.light_specular=float(item.get("specular",.08));lamp.light_size=.5;lamp.shadow_enabled=false
+		lamp.set_meta("day_energy",float(item.day_energy));lamp.set_meta("night_energy",float(item.night_energy));house.add_child(lamp);architectural_lights.append(lamp)
+	var definitions:Dictionary=spec.get("emissive_materials",{});var seen={}
+	for node in house.find_children("*","MeshInstance3D",true,false):
+		for index in node.mesh.get_surface_count():
+			var material=node.get_active_material(index)
+			if material is StandardMaterial3D and definitions.has(material.resource_name) and not seen.has(material.get_instance_id()):
+				var settings:Dictionary=definitions[material.resource_name];material.emission_enabled=true;material.emission=Color(str(settings.color))
+				architectural_emission.append({"material":material,"day":float(settings.day_energy),"night":float(settings.night_energy)})
+				seen[material.get_instance_id()]=true
 func build_player()->void:
 	player=CharacterBody3D.new();player.name="Player";player.floor_snap_length=.32;player.floor_max_angle=deg_to_rad(48);add_child(player)
 	var shape=CollisionShape3D.new();var capsule=CapsuleShape3D.new();capsule.radius=.23;capsule.height=1.02;shape.shape=capsule;shape.position.y=.515;player.add_child(shape)
@@ -212,7 +233,7 @@ func _mobile_destination(id:int)->void:
 	var popup=mobile_menu.get_popup();var item=popup.get_item_metadata(popup.get_item_index(id))
 	if item is Dictionary:travel(world_point(item.home,item.p)+Vector3(0,.12,0),float(specs[item.home].get("yaw",0)))
 func _touch_look(delta:Vector2)->void:
-	if testing or photo_mode:return
+	if testing or photo_mode or web_ui_locked:return
 	yaw-=delta.x*.004;pitch=clamp(pitch-delta.y*.004,-1.15,1.0)
 func _mobile_layout(viewport_size:Vector2)->void:
 	if not ui:return
@@ -228,17 +249,17 @@ func _mobile_layout(viewport_size:Vector2)->void:
 func travel(p:Vector3,angle:float=0)->void:
 	photo_mode=false;player.position=p;player.velocity=Vector3.ZERO;yaw=angle;pitch=-.06;camera.position=p+Vector3(0,1.05,0)
 func _unhandled_input(event:InputEvent)->void:
-	if testing:return
+	if testing or web_ui_locked:return
 	if event is InputEventMouseButton and event.button_index==MOUSE_BUTTON_RIGHT:mouse_drag=event.pressed;Input.mouse_mode=Input.MOUSE_MODE_CAPTURED if mouse_drag else Input.MOUSE_MODE_VISIBLE
 	if event is InputEventMouseMotion and (mouse_drag or Input.mouse_mode==Input.MOUSE_MODE_CAPTURED):yaw-=event.relative.x*.003;pitch=clamp(pitch-event.relative.y*.003,-1.15,1.0)
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode==KEY_ESCAPE:Input.mouse_mode=Input.MOUSE_MODE_VISIBLE;mouse_drag=false
 		if event.keycode==KEY_V:first_person=not first_person
 		if event.keycode==KEY_N:daytime=21.0 if daytime<18 else 15.5
-		if event.keycode==KEY_F:ui.visible=not ui.visible
+		if event.keycode==KEY_F and not OS.has_feature("web"):ui.visible=not ui.visible
 		if event.keycode==KEY_E and not nearest.is_empty():hint.text=nearest.name+"："+nearest.dialog;message_until=elapsed+7;play(nearest.anim,"Talk")
 func _physics_process(delta:float)->void:
-	if not player or testing or photo_mode:return
+	if not player or testing or photo_mode or web_ui_locked:return
 	var input=audit_input if auditing else Input.get_vector("left","right","forward","back");var dir=Vector3(input.x,0,input.y).rotated(Vector3.UP,yaw);var speed=1.85 if Input.is_action_pressed("run") else .85
 	player.velocity.x=move_toward(player.velocity.x,dir.x*speed,delta*12);player.velocity.z=move_toward(player.velocity.z,dir.z*speed,delta*12)
 	var before_move=player.position
@@ -305,6 +326,12 @@ func update_nearby()->void:
 	info.text=title;clock_text.text="%02d:%02d　·　%s"%[int(daytime),int(fmod(daytime,1)*60),"夜间" if daytime>=18 or daytime<6 else "晴朗午后"]
 func update_life(delta:float)->void:
 	var night=daytime>=18 or daytime<6;
+	for lamp in lamps:
+		if lamp.has_meta("day_color"):
+			lamp.light_color=lamp.get_meta("night_color" if night else "day_color")
+			lamp.light_energy=float(lamp.get_meta("base_energy"))*(float(lamp.get_meta("night_energy_multiplier",1.0)) if night else 1.0)
+	for lamp in architectural_lights:lamp.light_energy=float(lamp.get_meta("night_energy" if night else "day_energy"))
+	for item in architectural_emission:item.material.emission_energy_multiplier=item.night if night else item.day
 	for light in window_lights:light.light_energy=.04 if night else float(light.get_meta("day_energy"))
 	sun.light_energy=.055 if night else .28;sun.light_color=Color(.64,.72,.90) if night else Color(1,.98,.94)
 	env.ambient_light_energy=.24 if night else .55;env.ambient_light_color=Color(.76,.81,.88) if night else Color(.88,.90,.92)

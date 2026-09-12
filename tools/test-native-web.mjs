@@ -19,8 +19,11 @@ for(const world of ['frog','conan']){
   async preloadFile(buffer,path){assert.equal(path,'index.pck');assembled=Buffer.from(buffer);calls.push('preload');}
   async start(options){assert.deepEqual([...options.args],['--main-pack','index.pck']);calls.push('start');this.options.onPrint(world.toUpperCase()+'_WORLD_READY');}
  };
+ // Layout and input are checked in the real-browser suite; these nodes let
+ // the shared shell initialize while this test checks transport and integrity.
+ const node=()=>({dataset:{},style:{},children:[],classList:{add(){},remove(){},toggle(){}},append(...xs){this.children.push(...xs)},setAttribute(){},addEventListener(){},focus(){},replaceChildren(...xs){this.children=xs}});
  const parent={postMessage:m=>messages.push(m)},window={addEventListener(){},xlandsSound(){}};
- const sandbox={URLSearchParams,Uint8Array,Response,DecompressionStream,AbortController,setTimeout,clearTimeout,crypto,console:{log(){},warn(){},error(){throw Error('Loader unexpectedly failed');}},location:{search:'?lang=ja&sound=1'},document:{documentElement:{},body:{classList:{add(){}}},querySelector:element,querySelectorAll:()=>[]},window,parent,Engine,fetch:async file=>{
+ const sandbox={URLSearchParams,Uint8Array,Response,DecompressionStream,AbortController,setTimeout,clearTimeout,crypto,console:{log(){},warn(){},error(){throw Error('Loader unexpectedly failed');}},location:{search:'?lang=ja&sound=1',pathname:'/worlds/'+world+'/index.html'},document:{documentElement:{},body:node(),createElement:node,addEventListener(){},querySelector:element,querySelectorAll:()=>[]},window,parent,Engine,fetch:async file=>{
   file=file.split('?')[0];
   if(file==='world-pack.json')return Response.json(descriptor);
   let bytes=await readFile(join(dir,file));

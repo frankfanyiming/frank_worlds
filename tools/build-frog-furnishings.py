@@ -3,7 +3,7 @@ Blender Z-up authoring; runtime metadata is Godot Y-up. No new frog model is gen
 Run build-frog-home.py first, then this script with Blender --background --python.
 """
 from pathlib import Path
-import bpy, math, json, random, numpy as np
+import bpy, bmesh, math, json, random, numpy as np, os
 from mathutils import Vector
 ROOT=Path(__file__).resolve().parents[1]
 ASSETS=ROOT/'worlds/frog/source/assets'
@@ -44,8 +44,8 @@ def mat(name,c1,c2=None,kind='noise',rough=.84,emission=0):
    f=.36+.26*coarse+.18*detail+.12*micro;h=.0018*fine+.00075*micro
   elif kind=='rings':
    rad=np.sqrt(((xx-.47)*1.03)**2+((yy-.51)*.96)**2)
-   f=.52+.12*np.sin(rad*171+np.sin(xx*21)*.9+np.sin(yy*9)*.8)+.045*micro
-   h=.008*f+.001*micro
+   f=.52+.065*np.sin(rad*171+np.sin(xx*21)*.9+np.sin(yy*9)*.8)+.025*micro
+   h=.002*f+.0003*micro
   elif kind=='pottery':
    glaze=np.clip((.6*coarse+.4*detail-.34)*2.3,0,1)
    f=.22+.62*glaze+.025*micro;h=.0008*micro+.00035*np.sin(yy*math.tau*41)+.001*detail
@@ -66,7 +66,7 @@ wood=mat('Honey wood',(.18,.089,.032),(.34,.195,.077),'wood')
 bark=mat('Chestnut trunk',(.105,.048,.016),(.235,.12,.040),'bark')
 cut=mat('Stump endgrain',(.35,.22,.082),(.54,.37,.17),'rings')
 mushroom_under=mat('Warm grey mushroom gills',(.29,.255,.19),(.48,.42,.305),'limestone')
-mushroom=mat('Cream shelf mushroom',(.50,.365,.195),(.75,.625,.405),'rings')
+mushroom=mat('Cream shelf mushroom',(.48,.395,.275),(.66,.57,.425),'limestone')
 blue=mat('Blue sleeping quilt',(.12,.25,.34),(.22,.38,.48),'cloth')
 rose=mat('Rose woven mat',(.36,.13,.14),(.56,.27,.25),'cloth')
 linen=mat('Oat linen',(.60,.53,.38),(.78,.71,.55),'cloth')
@@ -181,20 +181,31 @@ step_count=21;start=-math.pi/2;end=start+math.radians(510)
 for i in range(step_count):
  a=start+(end-start)*i/(step_count-1);top=FLOOR+(LOFT-FLOOR)*(i+1)/step_count
  px=tx+1.04*math.cos(a);py=ty+1.04*math.sin(a)
- o=sphere('Mushroom tread %02d'%i,(px,py,top-.078),(.69,.39,.087),mushroom,32,10);o.rotation_euler.z=a
- for vert in o.data.vertices:
-  aa=math.atan2(vert.co.y,vert.co.x);factor=1+.020*math.sin(aa*9+i*.37)+.012*math.sin(aa*15);vert.co.x*=factor;vert.co.y*=factor
- for loop in o.data.loops:
-  co=o.data.vertices[loop.vertex_index].co;o.data.uv_layers.active.data[loop.index].uv=(co.x*.5+.5,co.y*.5+.5)
- under=sphere('Mushroom warm layered underside',(px,py,top-.122),(.677,.379,.071),mushroom_under,28,10);under.rotation_euler.z=a
- beam('Mushroom woody stem',(tx+.28*math.cos(a),ty+.28*math.sin(a),top-.12),(px,py,top-.10),.065,bark)
- # Rippled cap rim and a few fine radial gills underneath.
- ringpts=[]
- for j in range(33):
-  q=j*math.tau/32;u=.665*math.cos(q);v=.374*math.sin(q);ringpts.append((px+u*math.cos(a)-v*math.sin(a),py+u*math.sin(a)+v*math.cos(a),top-.07+.008*math.sin(q*5)))
- tube('Mushroom cream rim',ringpts,.012,cut)
- for q in [-.6,-.3,0,.3,.6]:
-  tube('Mushroom underside gill',[(tx+.38*math.cos(a+q*.3),ty+.38*math.sin(a+q*.3),top-.13),(px+.48*math.cos(a+q),py+.48*math.sin(a+q),top-.10)],.008,cut)
+ # One watertight cap: separate overlapping ellipsoids used to break the rim.
+ sectors=64;profile=[(0,0),(.25,-.002),(.55,-.009),(.80,-.024),(.95,-.044),(1,-.067),(.98,-.086),(.84,-.113),(.52,-.132),(.20,-.140),(0,-.145)]
+ pts=[];uvs=[];faces=[]
+ for radius,dz in profile:
+  for j in range(sectors):
+   q=j*math.tau/sectors;wobble=1+.009*math.sin(q*7+i*.37)+.006*math.sin(q*13)
+   u=.69*radius*math.cos(q)*wobble;v=.39*radius*math.sin(q)*wobble
+   pts.append((px+u*math.cos(a)-v*math.sin(a),py+u*math.sin(a)+v*math.cos(a),top+dz));uvs.append((u/.69*.5+.5,v/.39*.5+.5))
+ for k in range(len(profile)-1):
+  for j in range(sectors):
+   q=k*sectors+j;nextj=k*sectors+(j+1)%sectors
+   faces.append((q,nextj,nextj+sectors,q+sectors))
+ cap=smooth(mesh('Mushroom continuous sculpted cap %02d'%i,pts,[tuple(reversed(f)) for f in faces],mushroom,uvs));cap.data.materials.append(mushroom_under)
+ for f in cap.data.polygons:
+  if f.index>=6*sectors:f.material_index=1
+ bm=bmesh.new();bm.from_mesh(cap.data);bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=.000001);bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces));bm.to_mesh(cap.data);bm.free()
+ beam('Mushroom woody stem',(tx+.28*math.cos(a),ty+.28*math.sin(a),top-.13),(px,py,top-.13),.052,bark)
+ # Gills sit below the lower face, never cutting through the cap's upper surface.
+ for j in range(14):
+  q=-1.35+j*2.7/13;points=[]
+  for radius in [.24,.48,.69,.84]:
+   u=.69*radius*math.cos(q);v=.39*radius*math.sin(q)
+   dz=-.141+.028*((radius-.20)/.64)
+   points.append((px+u*math.cos(a)-v*math.sin(a),py+u*math.sin(a)+v*math.cos(a),top+dz-.007))
+  tube('Mushroom fine lower gill',points,.0035,mushroom_under)
  stairs.append({'name':'MushroomTread%02d'%i,'position':godot((px,py,top-.08)),'size':[1.27,.16,.70],'yaw':-a,'top':round(top,5)})
  route.append(godot((px,py,top)))
 # A real landing meets the shared rear deck.
@@ -204,24 +215,34 @@ for i in range(step_count):
 
 # Stump dining set and visible endgrain.
 def stump(name,x,y,z,r,h):
- n=48;v=[];u=[];faces=[]
- for j,t in enumerate([0,.11,.5,.92,1]):
+ n=96;v=[];u=[];faces=[]
+ # One shared rim prevents the old disk and jagged annulus from z-fighting.
+ profile=[(0,1.01),(.07,1.0),(.45,.985),(.88,.974),(.967,.965),(1,.938)]
+ for j,(t,rrbase) in enumerate(profile):
   for i in range(n+1):
-   a=i*math.tau/n;rr=r*(1-.035*t+.033*math.sin(a*13)+.02*math.sin(a*23+t*2));v.append((x+rr*math.cos(a),y+rr*math.sin(a),z+h*t));u.append((i/n,z+h*t))
- for j in range(4):
+   a=i*math.tau/n;rr=r*(rrbase+.010*math.sin(a*13)+.007*math.sin(a*23+t))
+   v.append((x+rr*math.cos(a),y+rr*math.sin(a),z+h*t));u.append((i/n,h*t/.7))
+ for j in range(len(profile)-1):
   for i in range(n):q=j*(n+1)+i;faces.append((q,q+1,q+n+2,q+n+1))
- smooth(mesh(name+' uneven bark',v,faces,bark,u))
- rim=[]
- for i in range(n):rim.append(v[4*(n+1)+i])
- for i in range(n):
-  a=i*math.tau/n;rim.append((x+math.cos(a)*r*.943,y+math.sin(a)*r*.943,z+h))
- mesh(name+' irregular bark top rim',rim,[(i,(i+1)%n,(i+1)%n+n,i+n) for i in range(n)],cut)
- cap=beam(name+' endgrain',(x,y,z+h-.025),(x,y,z+h),r*.945,cut,seg=64)
- for loop in cap.data.loops:
-  co=cap.data.vertices[loop.vertex_index].co
-  cap.data.uv_layers.active.data[loop.index].uv=(co.x/(2*r*.945)+.5,co.y/(2*r*.945)+.5)
- for k in range(5):
-  a=k*math.tau/5+.32;tube(name+' radial drying split',[(x+math.cos(a)*r*.74,y+math.sin(a)*r*.74,z+h+.006),(x+math.cos(a+.04)*r*.87,y+math.sin(a+.04)*r*.87,z+h+.006),(x+math.cos(a+.035)*r*.94,y+math.sin(a+.035)*r*.94,z+h-.01)],.0016,bark)
+ sides=len(faces);center=len(v);v.append((x,y,z+h));u.append((.5,.5))
+ for i in range(n):faces.append(((len(profile)-1)*(n+1)+i,(len(profile)-1)*(n+1)+i+1,center))
+ o=mesh(name+' hand finished continuous stump',v,faces,bark,u);o.data.materials.append(cut)
+ for f in o.data.polygons:
+  f.use_smooth=f.index<sides
+  if f.index>=sides:
+   f.material_index=1
+   for li in f.loop_indices:
+    co=o.data.vertices[o.data.loops[li].vertex_index].co
+    o.data.uv_layers.active.data[li].uv=((co.x-cx-x)/(r*1.876)+.5,(co.y-cy-y)/(r*1.876)+.5)
+ for k in range(3):
+  a=k*math.tau/3+.32;tube(name+' fine drying split',[(x+math.cos(a)*r*.78,y+math.sin(a)*r*.78,z+h+.0018),(x+math.cos(a+.02)*r*.91,y+math.sin(a+.02)*r*.91,z+h+.0018)],.0009,bark)
+ # Short vertical grooves make the bark read at player distance without jagged ends.
+ for k in range(22):
+  a=k*math.tau/22;points=[]
+  for t in [.13,.32,.56,.81]:
+   aa=a+.014*math.sin(t*9+k);rr=r*(1.01-.039*t+.010*math.sin(aa*13)+.007*math.sin(aa*23+t))+.001
+   points.append((x+rr*math.cos(aa),y+rr*math.sin(aa),z+h*t))
+  tube(name+' sculpted bark groove',points,.002,bark)
  collision(name,(x,y,z+h*.5),(r*1.9,r*1.9,h))
 stump('Round stump table',.58,-1.33,FLOOR,.86,.50)
 stump('Left guest stool',-.70,-1.60,FLOOR,.30,.29)
@@ -253,8 +274,8 @@ for i,(x,y,ang,L,w) in enumerate([(-.75,-2.3,-.15,2.0,.70),(.55,-2.65,1.00,2.2,.
 # Soft moss silhouette, with a small number of genuine geometry tufts.
 for k in range(240):
  a=rng.random()*math.tau;r=1+.032*math.sin(a*11)+.023*math.sin(a*19)+rng.uniform(-.018,.021);x=.52+2.10*r*math.cos(a);y=-1.42+1.71*r*math.sin(a)
- bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=1,radius=1,location=world((x,y,FLOOR+.024)))
- o=tag(bpy.context.object,'Soft carpet edge tuft',leaflight);o.scale=(.018+rng.random()*.039,.016+rng.random()*.031,.014+rng.random()*.023)
+ bpy.ops.mesh.primitive_uv_sphere_add(segments=8,ring_count=6,radius=1,location=world((x,y,FLOOR+.024)))
+ o=smooth(tag(bpy.context.object,'Soft carpet edge tuft',leaflight));o.scale=(.020+rng.random()*.024,.018+rng.random()*.022,.007+rng.random()*.009)
 # Short curled fibre tufts lie within the moss area rather than blocking walking.
 for k in range(140):
  a=rng.random()*math.tau;r=math.sqrt(rng.random());x=.52+2.00*r*math.cos(a);y=-1.42+1.57*r*math.sin(a);z=FLOOR+.040
@@ -304,7 +325,10 @@ def jar(name,x,y,z,r=.16,h=.37,m=terra,lid=False):
  [(0,0),(.78,0),(.96,.10),(1,.32),(.94,.62),(.60,.72),(.48,.92),(.58,.96),(.58,1),(.42,1),(.42,.83)],
  [(0,0),(.60,0),(.91,.16),(1,.36),(.85,.59),(.57,.73),(.53,.95),(.60,.98),(.60,1),(.45,1),(.43,.83)],
  [(0,0),(.78,0),(.94,.11),(1,.43),(.91,.70),(.85,.84),(.81,.94),(.87,.96),(.87,1),(.73,1),(.72,.85)]]
- profile=profiles[style];pts=[];faces=[];uvc=[];n=32
+ profile=profiles[style]
+ if name=='Green tea cup':profile=[(0,0),(.60,0),(.74,.04),(.80,.18),(.94,.80),(1,.94),(.98,1),(.86,1),(.82,.91),(.65,.19),(0,.17)]
+ elif name=='Round rice bowl':profile=[(0,0),(.52,0),(.82,.12),(1,.83),(1,.96),(.91,1),(.87,.85),(.57,.25),(0,.23)]
+ pts=[];faces=[];uvc=[];n=48
  for rr,zz in profile:
   for i in range(n+1):
    a=i*math.tau/n;irr=1+.014*math.sin(a*7+zz*5);pts.append((x+rr*r*math.cos(a)*irr,y+rr*r*math.sin(a)*irr,z+zz*h));uvc.append((i/n,zz))
@@ -488,7 +512,7 @@ route.insert(0,godot((tx,-1.03,FLOOR)))
 route.append(godot((-3.03,2.02,LOFT)))
 layout={
  'version':2,'revision':'approved-concept-02','authoring':'Blender scenery / original Tripo frog unchanged',
- 'detail_revision':'natural-rock-felt-willow-01',
+ 'detail_revision':'continuous-caps-crafted-stumps-21',
  'windows':json.loads((ASSETS/'home-window-lighting.json').read_text()),
  'coordinate_system':'Godot Y-up; authored Blender(-15,12,0) maps to Godot(-15,0,-12)',
  'frog_height':1.08,'center':[-15,0,-12],'floor_y':FLOOR,
@@ -556,6 +580,7 @@ layout['export']={'furnishing_materials':len(groups),'furnishing_meshes':len([o 
 (ASSETS/'home-layout.json').write_text(json.dumps(layout,ensure_ascii=False,indent=2)+'\n')
 (NATIVE/'frog-home-layout.json').write_text(json.dumps(layout,ensure_ascii=False,indent=2)+'\n')
 print('FROG_LAYOUT_WRITTEN',json.dumps(layout['export']),flush=True)
+if os.environ.get('XLANDS_SKIP_REVIEW')=='1':raise SystemExit(0)
 bpy.ops.wm.open_mainfile(filepath=str(NATIVE/'frog-home-furnishings.blend'))
 # Same physical enclosure for both views, no disappearing walls or ceiling.
 with bpy.data.libraries.load(str(NATIVE/'frog-home-enclosure.blend'),link=False) as (data_from,data_to):data_to.objects=data_from.objects

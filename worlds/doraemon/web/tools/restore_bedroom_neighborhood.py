@@ -103,15 +103,32 @@ def table(x,y,z,w=1.4,d=.8,height=.68):
  box('table top',x,y,z+height,w,d,.085,'floor',.035,True)
  for a in [-1,1]:
   for b in [-1,1]:box('table leg',x+a*(w/2-.09),y+b*(d/2-.09),z+height/2,.085,.085,height,'wood')
+ for sign in [-1,1]:
+  box('table aproned long rail',x,y+sign*(d/2-.075),z+height-.12,w-.12,.035,.13,'wood',.009)
+  box('table aproned end rail',x+sign*(w/2-.075),y,z+height-.12,.035,d-.12,.13,'wood',.009)
+  for sx in [-1,1]:
+   ell('table rounded dowel',x+sx*(w/2-.10),y+sign*(d/2-.052),z+height-.12,.014,.004,.014,'trim')
+ for sign in [-1,1]:
+  rod('table lower stretcher',(x-w/2+.09,y+sign*(d/2-.09),z+.20),(x+w/2-.09,y+sign*(d/2-.09),z+.20),.019,'wood')
 def chair(x,y,z,material='wood'):
  box('seat',x,y,z+.40,.42,.43,.08,material,.04)
  for a in [-1,1]:
   for b in [-1,1]:box('chair leg',x+a*.16,y+b*.16,z+.21,.045,.045,.40,'wood')
- box('chair back',x,y+.18,z+.70,.42,.075,.5,material,.05)
+ box('chair top rail',x,y+.18,z+.905,.42,.075,.08,material,.022)
+ for dx in [-.17,0,.17]:box('chair shaped back slat',x+dx,y+.18,z+.67,.045,.049,.41,material,.015)
+ for side in [-1,1]:rod('chair lower side stretcher',(x+side*.16,y-.16,z+.18),(x+side*.16,y+.16,z+.18),.016,'wood')
+ box('chair soft seat pad',x,y-.015,z+.451,.35,.345,.041,'linen',.018)
+ for sy in [-1,1]:rod('chair seat piping',(x-.148,y-.015+sy*.14,z+.463),(x+.148,y-.015+sy*.14,z+.463),.0025,'cream')
 def sofa(x,y,z,w=1.8,rot=0):
  start=len(groups[G]);box('sofa frame',x,y,z+.22,w,.73,.31,'wood',.08,True)
  for i in range(3):box('upholstery seat',x-w/3+i*w/3,y-.06,z+.43,w/3-.025,.57,.18,'sofa',.065)
  box('sofa back',x,y+.30,z+.68,w,.18,.61,'sofa',.065)
+ for i in range(3):
+  xx=x-w/3+i*w/3;box('sofa separate back cushion',xx,y+.183,z+.71,w/3-.038,.094,.40,'sofa',.040)
+  for sy in [-1,1]:rod('sofa cushion stitched piping',(xx-w/6+.035,y-.06+sy*.225,z+.508),(xx+w/6-.035,y-.06+sy*.225,z+.508),.0025,'cream')
+ for sx in [-1,1]:
+  for sy in [-1,1]:box('sofa tapered foot',x+sx*(w/2-.16),y+sy*.245,z+.08,.095,.095,.16,'wood',.015)
+
  for a in [-1,1]:box('sofa arm',x+a*(w/2-.07),y,z+.55,.18,.70,.3,'sofa',.055)
  if rot:
   for o in groups[G][start:]:dx,dy=o.location.x-x,o.location.y-y;o.location.x=x+math.cos(rot)*dx-math.sin(rot)*dy;o.location.y=y+math.sin(rot)*dx+math.cos(rot)*dy;o.rotation_euler.z+=rot
@@ -331,7 +348,7 @@ def export_groups(path):
  for o in exports:o.select_set(True)
  bpy.ops.export_scene.gltf(filepath=str(path),export_format='GLB',use_selection=True,export_apply=True,export_cameras=False,export_lights=False,export_image_format='JPEG',export_image_quality=82,export_draco_mesh_compression_enable=True,export_draco_position_quantization=16)
  return exports
-export_groups(OUT/'neighborhood-v12.glb')
+export_groups(OUT/'neighborhood-v21.glb')
 (OUT/'neighborhood-v12.json').write_text(json.dumps({'colliders':colliders,'home':{'entry':[-11.5,.35],'stairs':[-13.15,1.30,4.75]},'shizuka':{'entry':[-10.775,-22],'stairs':[-12.13,-20.5,-17.3]}}))
 # Native file contains editable original objects plus named runtime batches.
 bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'tools/neighborhood-v12.blend'))

@@ -1,0 +1,38 @@
+{
+  "camp_visits": 0,
+  "clovers": 24,
+  "friend_life": {
+    "checkpoint": {
+      "frog": [
+        -11.2199897766113,
+        0.109340190887451,
+        -6.198899269104
+      ],
+      "home": "",
+      "panda": [
+        -9.29196739196777,
+        0.0697908326983452,
+        -6.93850803375244
+      ]
+    },
+    "companion": true,
+    "cooked": [],
+    "cooking": {},
+    "events": {},
+    "gifts": {},
+    "keepsakes": {
+      "stone": 1,
+      "tea_jar": 1
+    },
+    "memories": [],
+    "picnic_item": {},
+    "sequence": 0,
+    "shared_tea": false,
+    "stage": "outing",
+    "version": 1
+  },
+  "harvest_at": 0.0,
+  "packed": false,
+  "panda_visits": 0,
+  "photos": []
+}

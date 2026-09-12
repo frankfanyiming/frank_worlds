@@ -14,14 +14,14 @@ page.on('pageerror',e=>report.errors.push(e.message));
 page.on('console',m=>{if(/READY|ERROR|SCRIPT ERROR|WebGL/.test(m.text()))report.console.push(m.text())});
 try{
  const start=Date.now();
- await page.goto(base+'/'+world+'/index.html?lang=zh-CN&v=mobile-18',{waitUntil:'domcontentloaded'});
+ await page.goto(base+'/'+world+'/index.html?lang=zh-CN&v=interface-21',{waitUntil:'domcontentloaded'});
  await page.screenshot({path:out+'loading.png'});
- await page.waitForFunction(()=>document.body.classList.contains('world-ready'),{},{timeout:180000});
+ await page.waitForFunction(()=>document.body.classList.contains('world-ready'),{},{timeout:180000,polling:250});
  report.checks.push({case:'real exported scene ready',seconds:(Date.now()-start)/1000,pass:true});
  for(const size of [{width:390,height:844},{width:844,height:390}]){
   await page.setViewportSize(size);await page.waitForTimeout(700);
   const dimensions=await page.evaluate(()=>({w:innerWidth,h:innerHeight,scroll:document.documentElement.scrollWidth,canvas:{w:document.querySelector('canvas').getBoundingClientRect().width,h:document.querySelector('canvas').getBoundingClientRect().height},controls:[...document.querySelectorAll('.touch-stick,.touch-actions button')].map(el=>{const b=el.getBoundingClientRect();return{x:b.x,y:b.y,w:b.width,h:b.height}})}));
-  assert.equal(dimensions.w,dimensions.scroll);assert.equal(dimensions.h,dimensions.canvas.h);assert(dimensions.controls.every(b=>b.w>=44&&b.h>=44&&b.x>=0&&b.y>=0&&b.x+b.w<=dimensions.w&&b.y+b.h<=dimensions.h));
+  assert.equal(dimensions.w,size.width);assert.equal(dimensions.h,size.height);assert.equal(dimensions.w,dimensions.scroll);assert.equal(dimensions.h,dimensions.canvas.h);assert(dimensions.controls.every(b=>b.w>=44&&b.h>=44&&b.x>=0&&b.y>=0&&b.x+b.w<=dimensions.w&&b.y+b.h<=dimensions.h));
   report.checks.push({case:'viewport '+size.width+'x'+size.height,pass:true,...dimensions});
   await page.screenshot({path:out+'viewport-'+size.width+'.png'});
  }

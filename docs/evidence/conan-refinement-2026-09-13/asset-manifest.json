@@ -1,0 +1,102 @@
+{
+  "status": "Frozen local building assets; pass04 production Compatibility rendered; routes03 actual character physics 41 checks, 295 segments, 0 failures. Webpage packaging and deployment are a separate root task.",
+  "assets": {
+    "worlds/conan/source/assets/buildings/mouri.glb": {
+      "sha256": "f788671af41f8ea4c6d14a5102716680ebaae845279510adac7d8d6c923fea76",
+      "bytes": 202280552
+    },
+    "worlds/conan/source/assets/buildings/mouri.json": {
+      "sha256": "6276e3bc6894489373f8f9b160685759bdc094a290e5389a512cb2d7538ced96",
+      "bytes": 73765
+    },
+    "worlds/conan/source/assets/buildings/mouri-details.glb": {
+      "sha256": "e2d3934ec0b2e93c8bd957cf16bcecc2c6fc28d766d3e55451a8532c2c048615",
+      "bytes": 2101872
+    },
+    "worlds/conan/source/assets/buildings/kudo.glb": {
+      "sha256": "28142d681f574c1c07a907d98ae2d2d2c4854abe207472d5e5ada4f64ba6a7f2",
+      "bytes": 265493676
+    },
+    "worlds/conan/source/assets/buildings/kudo.json": {
+      "sha256": "6d25e1e06f8706e4d79ac81b2e56f6f3dc8f614791d29f72aeffcf25cda5fa72",
+      "bytes": 63922
+    },
+    "worlds/conan/source/assets/buildings/kudo-details.glb": {
+      "sha256": "f902168f98d1bc1bd67702dafa2adaa60be42fea295330fe7d74e308554fd752",
+      "bytes": 531292
+    },
+    "worlds/conan/source/assets/buildings/agasa.glb": {
+      "sha256": "bd263d0ebf28022ed3be4a3f683668291dd27d2c1e7d9d33cd948f7f795ec444",
+      "bytes": 67939092
+    },
+    "worlds/conan/source/assets/buildings/agasa.json": {
+      "sha256": "69bc567e169f560324b1dae170021bfdf659b3ae23a46f6139acb623b481b745",
+      "bytes": 40605
+    },
+    "worlds/conan/source/assets/buildings/street-block.glb": {
+      "sha256": "dd19142a87a39463a8f42840b7052cdf849acad0d3ac2b3a5ea9f22f28687991",
+      "bytes": 10235480
+    },
+    "worlds/conan/web-project/assets/buildings/mouri.glb": {
+      "sha256": "3df0e3f86c82c184263f03a03391f6ed1b567179975c488114ff23f5235a3844",
+      "bytes": 31439528
+    },
+    "worlds/conan/web-project/assets/buildings/mouri.json": {
+      "sha256": "6276e3bc6894489373f8f9b160685759bdc094a290e5389a512cb2d7538ced96",
+      "bytes": 73765
+    },
+    "worlds/conan/web-project/assets/buildings/mouri-details.glb": {
+      "sha256": "e2d3934ec0b2e93c8bd957cf16bcecc2c6fc28d766d3e55451a8532c2c048615",
+      "bytes": 2101872
+    },
+    "worlds/conan/web-project/assets/buildings/kudo.glb": {
+      "sha256": "b06a2a859c3efa59096d45ebc9a93cceed9fe37ae460db7a35a49f8b5106ad09",
+      "bytes": 26080720
+    },
+    "worlds/conan/web-project/assets/buildings/kudo.json": {
+      "sha256": "6d25e1e06f8706e4d79ac81b2e56f6f3dc8f614791d29f72aeffcf25cda5fa72",
+      "bytes": 63922
+    },
+    "worlds/conan/web-project/assets/buildings/kudo-details.glb": {
+      "sha256": "f902168f98d1bc1bd67702dafa2adaa60be42fea295330fe7d74e308554fd752",
+      "bytes": 531292
+    },
+    "worlds/conan/web-project/assets/buildings/agasa.glb": {
+      "sha256": "c564cd3e97a905b3a108da9e715e6c215196bea913b71beafb170a7528d86fd0",
+      "bytes": 31972428
+    },
+    "worlds/conan/web-project/assets/buildings/agasa.json": {
+      "sha256": "69bc567e169f560324b1dae170021bfdf659b3ae23a46f6139acb623b481b745",
+      "bytes": 40605
+    },
+    "worlds/conan/web-project/assets/buildings/street-block.glb": {
+      "sha256": "cd8d9725b256efde0751d05b1eb3e674ca06f6ed1ac3ca67f7f9d8d5ce6d4dcb",
+      "bytes": 8447352
+    },
+    "worlds/conan/web-project/assets/conan.glb": {
+      "sha256": "0fda5f9f9d35433a6c418ad2841a0c6d569f43616948cd6c708a7b34f85abc8d",
+      "bytes": 1463756,
+      "scope": "character unchanged by architecture work"
+    },
+    "worlds/conan/web-project/assets/kogoro.glb": {
+      "sha256": "a10cd7fb7c774579af8529a9dd146b42235d32e8ff0d570c6eba2cdf09a48be3",
+      "bytes": 9935836,
+      "scope": "character unchanged by architecture work"
+    },
+    "worlds/conan/web-project/assets/agasa.glb": {
+      "sha256": "28230b5871c5cb0c2775e2d0dcbc377f01c78e9c69b7425cc359462325eb0985",
+      "bytes": 1184556,
+      "scope": "character unchanged by architecture work"
+    },
+    "worlds/conan/source/world.gd": {
+      "sha256": "349d976c75971711736a92469d6f2ad04252ebb4c8ab51e857aa43457aa6367d",
+      "bytes": 44102
+    },
+    "worlds/conan/web-project/world.gd": {
+      "sha256": "401d09fbcf70b5aff03bbd0e102204a1ede53bf2b0236b52be80af473b602cf0",
+      "bytes": 44151
+    }
+  },
+  "final_visual_evidence": "pass04/capture-report.json",
+  "route_evidence": "routes03/physical-routes.json"
+}

@@ -1,0 +1,96 @@
+{
+  "world": "conan",
+  "environment": "Exported Godot WebGL2 in desktop Chrome, mobile viewport and touch emulation",
+  "errors": [],
+  "console": [
+    "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+    "BLENDER_TOWN_READY buildings=3 tripo_characters=11 cars=6 remote_rooms=0"
+  ],
+  "checks": [
+    {
+      "case": "real exported scene ready",
+      "seconds": 6.987,
+      "pass": true
+    },
+    {
+      "case": "viewport 390x844",
+      "pass": true,
+      "w": 390,
+      "h": 844,
+      "scroll": 390,
+      "canvas": {
+        "w": 390,
+        "h": 844
+      },
+      "controls": [
+        {
+          "x": 20,
+          "y": 700,
+          "w": 116,
+          "h": 116
+        },
+        {
+          "x": 253,
+          "y": 699,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "x": 318,
+          "y": 699,
+          "w": 56,
+          "h": 56
+        },
+        {
+          "x": 253,
+          "y": 764,
+          "w": 56,
+          "h": 56
+        }
+      ]
+    },
+    {
+      "case": "viewport 844x390",
+      "pass": true,
+      "w": 844,
+      "h": 390,
+      "scroll": 844,
+      "canvas": {
+        "w": 844,
+        "h": 390
+      },
+      "controls": [
+        {
+          "x": 20,
+          "y": 274,
+          "w": 96,
+          "h": 96
+        },
+        {
+          "x": 668,
+          "y": 326,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "x": 724,
+          "y": 326,
+          "w": 48,
+          "h": 48
+        },
+        {
+          "x": 780,
+          "y": 326,
+          "w": 48,
+          "h": 48
+        }
+      ]
+    },
+    {
+      "case": "simultaneous joystick, view drag and run then release",
+      "pass": true,
+      "render_changed": true,
+      "held_buttons_after_release": 0
+    }
+  ]
+}

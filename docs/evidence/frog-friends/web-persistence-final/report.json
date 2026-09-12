@@ -1,0 +1,261 @@
+{
+  "url": "http://127.0.0.1:8791/frank_worlds/worlds/frog/index.html?lang=zh-CN",
+  "errors": [],
+  "checks": {
+    "initial_auto_save_created": true,
+    "normal_action_closed_save": true,
+    "after_completed_sync_reload_preserves_step": true,
+    "immediate_reload_observed_step": true,
+    "mirror_was_synchronous_before_reload": true,
+    "reload_preserves_clovers": true,
+    "completed_recipe_survives_immediate_reload": true,
+    "consecutive_reload_keeps_stove_checkpoint": true,
+    "stale_mirror_does_not_override_newer_idb": true,
+    "quota_fallback_userfs_saved": true,
+    "quota_fallback_reloads_from_idb": true,
+    "missing_friend_png_restores_photo_retry": true,
+    "missing_png_recovery_keeps_food_and_legacy_records": true,
+    "missing_ordinary_png_displays_zero_count_empty_state": true
+  },
+  "events": [
+    {
+      "type": "close",
+      "at": 3579,
+      "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
+      "data": {
+        "_save_sequence": 103,
+        "_saved_at": 1789242514.988,
+        "camp_visits": 0,
+        "clovers": 57,
+        "friend_life": {
+          "checkpoint": {
+            "frog": [
+              -12.3000001907349,
+              0.157343745231628,
+              -11.8000001907349
+            ],
+            "home": "frog",
+            "panda": [
+              -13.4841909408569,
+              0.177558600902557,
+              -11.8480405807495
+            ]
+          },
+          "companion": true,
+          "cooked": [],
+          "cooking": {
+            "id": "cook:1",
+            "recipe": "rice",
+            "step": 1
+          },
+          "events": {
+            "invite:first": {
+              "kind": "invite",
+              "value": ""
+            }
+          },
+          "gifts": {},
+          "keepsakes": {
+            "stone": 1,
+            "tea_jar": 1
+          },
+          "memories": [],
+          "picnic_item": {},
+          "sequence": 1,
+          "shared_tea": true,
+          "stage": "invited",
+          "version": 1
+        },
+        "harvest_at": 0,
+        "packed": false,
+        "panda_visits": 0,
+        "photos": []
+      }
+    },
+    {
+      "type": "sync-start",
+      "at": 3591.399999976158,
+      "id": 1
+    },
+    {
+      "type": "sync-end",
+      "at": 3595.3000000715256,
+      "id": 1,
+      "error": ""
+    }
+  ],
+  "notes": [
+    "Instrumentation exists only in this isolated test browser response; exported source and files are unmodified.",
+    "A private save fixture is seeded once to reach the stove; measured saves use real friend cooking actions and production FileAccess."
+  ],
+  "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
+  "normalStep": 1,
+  "immediate": {
+    "events": [
+      {
+        "type": "close",
+        "at": 3144.5999999046326,
+        "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
+        "data": {
+          "_save_sequence": 106,
+          "_saved_at": 1789242518.161,
+          "camp_visits": 0,
+          "clovers": 57,
+          "friend_life": {
+            "checkpoint": {
+              "frog": [
+                -12.3000001907349,
+                0.157343745231628,
+                -11.8000001907349
+              ],
+              "home": "frog",
+              "panda": [
+                -13.4841909408569,
+                0.177558600902557,
+                -11.8480405807495
+              ]
+            },
+            "companion": true,
+            "cooked": [],
+            "cooking": {
+              "id": "cook:1",
+              "recipe": "rice",
+              "step": 2
+            },
+            "events": {
+              "invite:first": {
+                "kind": "invite",
+                "value": ""
+              }
+            },
+            "gifts": {},
+            "keepsakes": {
+              "stone": 1,
+              "tea_jar": 1
+            },
+            "memories": [],
+            "picnic_item": {},
+            "sequence": 1,
+            "shared_tea": true,
+            "stage": "invited",
+            "version": 1
+          },
+          "harvest_at": 0,
+          "packed": false,
+          "panda_visits": 0,
+          "photos": []
+        }
+      }
+    ],
+    "mirror": {
+      "_save_sequence": 106,
+      "_saved_at": 1789242518.161,
+      "camp_visits": 0,
+      "clovers": 57,
+      "friend_life": {
+        "checkpoint": {
+          "frog": [
+            -12.3000001907349,
+            0.157343745231628,
+            -11.8000001907349
+          ],
+          "home": "frog",
+          "panda": [
+            -13.4841909408569,
+            0.177558600902557,
+            -11.8480405807495
+          ]
+        },
+        "companion": true,
+        "cooked": [],
+        "cooking": {
+          "id": "cook:1",
+          "recipe": "rice",
+          "step": 2
+        },
+        "events": {
+          "invite:first": {
+            "kind": "invite",
+            "value": ""
+          }
+        },
+        "gifts": {},
+        "keepsakes": {
+          "stone": 1,
+          "tea_jar": 1
+        },
+        "memories": [],
+        "picnic_item": {},
+        "sequence": 1,
+        "shared_tea": true,
+        "stage": "invited",
+        "version": 1
+      },
+      "harvest_at": 0,
+      "packed": false,
+      "panda_visits": 0,
+      "photos": []
+    }
+  },
+  "immediateStep": 2,
+  "completed": {
+    "checkpoint": {
+      "frog": [
+        -12.3000001907349,
+        0.157343745231628,
+        -11.8000001907349
+      ],
+      "home": "frog",
+      "panda": [
+        -13.4841909408569,
+        0.177558600902557,
+        -11.8480405807495
+      ]
+    },
+    "companion": true,
+    "cooked": [
+      {
+        "id": "cook:1:a",
+        "recipe": "rice"
+      },
+      {
+        "id": "cook:1:b",
+        "recipe": "rice"
+      }
+    ],
+    "cooking": {},
+    "events": {
+      "cook:1": {
+        "kind": "cook",
+        "value": "rice"
+      },
+      "invite:first": {
+        "kind": "invite",
+        "value": ""
+      }
+    },
+    "gifts": {},
+    "keepsakes": {
+      "stone": 1,
+      "tea_jar": 1
+    },
+    "memories": [],
+    "picnic_item": {},
+    "sequence": 1,
+    "shared_tea": true,
+    "stage": "cooked",
+    "version": 1
+  },
+  "album": {
+    "actions": [],
+    "blocks": [
+      {
+        "text": "还没有照片。按 P，留住眼前的小世界。",
+        "type": "text"
+      }
+    ],
+    "kind": "album",
+    "title": "旅行相册  ·  0 张"
+  },
+  "closeToCommitMs": 16.300000071525574
+}

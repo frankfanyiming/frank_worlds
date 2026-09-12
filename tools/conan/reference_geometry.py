@@ -1,5 +1,5 @@
 """Blender-native, metre-scaled Beika reference geometry. Author points are Godot Y-up."""
-import bpy,bmesh,math,json,random
+import bpy,bmesh,math,json,random,unicodedata
 from pathlib import Path
 from mathutils import Vector
 from math import sin,cos,pi,tau
@@ -68,11 +68,18 @@ def line(n,pts,r,m,group=None,closed=False):
  for p,v in zip(sp.points,pts):p.co=(*G(v),1)
  sp.use_cyclic_u=closed;o=bpy.data.objects.new(n,cu);bpy.context.scene.collection.objects.link(o);return mark(o,m,False,group)
 
-def label(txt,p,size,m,angle=0,group=None):
+def label(txt,p,size,m,angle=0,group=None,weight='W6',max_width=None):
  cu=bpy.data.curves.new('Sign '+txt,'FONT');cu.body=txt;cu.align_x='CENTER';cu.align_y='CENTER';cu.size=size;cu.extrude=.001
- path='/System/Library/Fonts/ヒラギノ角ゴシック W3.ttc'
- if Path(path).exists():cu.font=bpy.data.fonts.load(path)
- o=bpy.data.objects.new('Sign '+txt,cu);bpy.context.scene.collection.objects.link(o);o.location=G(p);o.rotation_euler=(pi/2,0,angle);return mark(o,m,False,group)
+ # macOS stores these names in decomposed Unicode. A literal NFC path silently
+ # fell through to Blender's default font in earlier reference generators.
+ candidates=[p for p in Path('/System/Library/Fonts').glob('*.ttc') if unicodedata.normalize('NFC',p.name)=='ヒラギノ角ゴシック '+weight+'.ttc']
+ if candidates:cu.font=bpy.data.fonts.load(str(candidates[0]))
+ else:raise RuntimeError('Required Japanese sign font is missing: Hiragino '+weight)
+ o=bpy.data.objects.new('Sign '+txt,cu);bpy.context.scene.collection.objects.link(o);o.location=G(p);o.rotation_euler=(pi/2,0,angle)
+ if max_width:
+  bpy.context.view_layer.update()
+  if o.dimensions.x>max_width:o.scale.x*=max_width/o.dimensions.x
+ return mark(o,m,False,group)
 
 def prism(n,polygon,low,high,m,collision=False,group=None):
  count=len(polygon);v=[(x,y,z) for y in [low,high] for x,z in polygon];f=[tuple(reversed(range(count))),tuple(range(count,2*count))]+[(i,(i+1)%count,(i+1)%count+count,i+count) for i in range(count)]

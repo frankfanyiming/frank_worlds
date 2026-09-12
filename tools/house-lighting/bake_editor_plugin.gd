@@ -19,8 +19,11 @@ func run_bake():
    gi.environment_custom_energy=.45 if state=="day" else .18
    var buttons=[]
    for c in EditorInterface.get_base_control().find_children("*","Button",true,false):
-    if c.is_visible_in_tree() and "Bake Lightmaps" in c.text:buttons.append(c)
-   if buttons.size()!=1:push_error("Bake button unavailable");get_tree().quit(2);return
+    if c.is_visible_in_tree() and ("Bake Lightmaps" in c.text or "烘焙光照贴图" in c.text or "烘焙光照貼圖" in c.text):buttons.append(c)
+   if buttons.size()!=1:
+    for c in EditorInterface.get_base_control().find_children("*","Button",true,false):
+     if c.is_visible_in_tree() and c.text:print("VISIBLE_EDITOR_BUTTON ",c.text)
+    push_error("Bake button unavailable");get_tree().quit(2);return
    print("HOUSE_BAKE_START ",kind," ",state)
    buttons[0].pressed.emit()
    await get_tree().create_timer(1).timeout

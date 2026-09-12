@@ -55,3 +55,20 @@
 门户外层与独立游戏页都要测试。最后一轮发现 Godot PopupMenu 在触屏只打开、不接收列表行点击/拖动；HTML 摇杆还盖住下方项目，canvas 的转视角回调绕过引擎 UI 消费事件。鼠标滚轮能滚不代表手机能用。
 
 本轮手机菜单使用同一 Godot 条目 ID 和位置 metadata，由网页滚动面板承接显示与触摸，点选回调原 `id_pressed`。条目逐项显式翻译；MenuButton 的内部 PopupMenu 不在普通子节点遍历中，不能假设已翻译。菜单及相册/行囊打开时隐藏触控、清空所有轴并暂停视角，关闭恢复。引擎碰撞与物理控制不变。
+
+
+## 2026-09-13：网页界面只能由一层负责绘制
+
+用户截图出现原生 Godot PopupMenu 与 HTML 菜单同时展开、原生相册盖住整屏、外层又叠键盘帮助。逐个加 z-index 不能解决双重拥有者。本轮网页由 `native-loader.js` 的同一个 HUD 和同一个 sheet 绘制；Godot CanvasLayer 保留节点与动作回调但在 Web 隐藏。相册、行囊、朋友日记和目的地共用面板；切换时关闭上一面板，遮罩、Esc、焦点循环、滚动区与输入锁共享。非网页的引擎检查仍可用原生 UI。
+
+桥接读取世界的源状态再渲染，不再每隔 0.4 秒递归改写整棵场景的 Label。动态相册数字、行囊计数、照片地点、区域和 NPC 对话均按固定源词条/格式模板翻译；朋友模块直接提供指定语言的语义卡片。仅补静态按钮词表仍会漏掉互动提示。
+
+### 实际画布还会改变浏览器的 CSS 视口
+
+隔离 HTML 的五语言 × 三尺寸测试通过后，真实 Godot 导出包从 1440px 改到 390px 时，引擎保留了 `canvas style="width:1440px"`。移动 Chromium 因此把 `innerWidth` 扩到1440、`innerHeight`扩到3117，UI整体缩小；`document.scrollWidth == innerWidth` 此时仍然为真。通过检查实际 canvas 内联样式定位，最后给 canvas 施加视口内的 CSS 宽高与尺寸包含约束，保持绘图 buffer 独立，才恢复390×844。测试必须断言 CSS 视口等于目标设备尺寸，并真的做横竖屏切换；只看截图能打开或文档不横滚不能算通过。
+
+### 长弹窗要把关闭与内容滚动分开
+
+哆啦A梦使用 Base UI 的 `data-open`，不是 Radix 的 `data-state=open`。首次检查误用后者得到超时，修正选择器后才验证真实弹窗。口袋、设置、交谈和帮助采用统一暂停状态，打开新面板前关闭已有对话；固定关闭按钮放在独立滚动内容外。逐项测量发现旧按钮只有35–42px，已统一44px，再滚到底检查关闭按钮仍在视口内。滚动区域中未滚到的项目可以在可见边界外；关键是可滚达、命中尺寸正确，且关闭入口不被卷走。
+
+本轮可复验入口：`tools/test-native-ui-bridge.gd`、`tools/test-native-interface-browser.mjs`、`tools/test-doraemon-interface-browser.mjs`。`--shell-only` 只是隔离 HTML 布局检查，不能当世界运行证据。实际记录见 `docs/evidence/ui-revision21/`，设备均为桌面 Chrome 触屏模拟，尚未覆盖真机 Safari。

@@ -298,5 +298,341 @@
     "en": "Follow the path beside the giant leaves and cross the wooden bridge to find the orange tent.\n\nTake the new path south from the campsite. A pot of hot tea is waiting at Panda’s home.\n\nA little wooden raft rests downstream. Take a break when you’re tired, and bring a photo home.",
     "ja": "大きな葉のそばの小道を進み、木の橋を渡ると、オレンジ色のテントが見えてきます。\n\nキャンプのそばの新しい小道を南へ進むと、パンダの家で温かいお茶が待っています。\n\n小川の下流には、小さな木のいかだがあります。疲れたらひと休みして、写真を一枚、家に持ち帰りましょう。",
     "ko": "커다란 잎 옆의 오솔길을 따라 나무다리를 건너면 주황색 텐트가 보여요.\n\n캠프 옆의 새 오솔길을 따라 남쪽으로 가 보세요. 판다의 집에 따뜻한 차가 준비되어 있어요.\n\n개울 하류에는 작은 나무 뗏목이 있어요. 피곤하면 잠깐 쉬었다가 사진 한 장을 집에 가져가세요."
+  },
+  "采收三叶草": {
+    "zh-TW": "採收三葉草",
+    "en": "Gather clovers",
+    "ja": "みつばを摘む",
+    "ko": "클로버 모으기"
+  },
+  "查看来信": {
+    "zh-TW": "查看來信",
+    "en": "Read the letter",
+    "ja": "手紙を読む",
+    "ko": "편지 읽기"
+  },
+  "在水边歇一会儿": {
+    "zh-TW": "在水邊歇一會兒",
+    "en": "Rest beside the water",
+    "ja": "水辺でひと休み",
+    "ko": "물가에서 쉬기"
+  },
+  "在营地吃便当": {
+    "zh-TW": "在營地吃便當",
+    "en": "Have lunch at camp",
+    "ja": "キャンプでお弁当",
+    "ko": "캠프에서 도시락 먹기"
+  },
+  "坐上木片漂流": {
+    "zh-TW": "坐上木片漂流",
+    "en": "Drift on the little raft",
+    "ja": "いかだで川を下る",
+    "ko": "작은 뗏목 타기"
+  },
+  "继续散步": {
+    "zh-TW": "繼續散步",
+    "en": "Keep wandering",
+    "ja": "散歩を続ける",
+    "ko": "계속 산책하기"
+  },
+  "今天的行囊": {
+    "zh-TW": "今天的行囊",
+    "en": "Today’s travel bag",
+    "ja": "今日の旅じたく",
+    "ko": "오늘의 여행 가방"
+  },
+  "还没有照片。按 P，留住眼前的小世界。": {
+    "zh-TW": "還沒有照片。按 P，留住眼前的小世界。",
+    "en": "No photos yet. Press P to keep a moment from this little world.",
+    "ja": "まだ写真がありません。Pで小さな世界の瞬間を残しましょう。",
+    "ko": "아직 사진이 없어요. P를 눌러 작은 세계의 순간을 남겨 보세요."
+  },
+  "叶片还在慢慢长大，再去散会儿步。": {
+    "zh-TW": "葉片還在慢慢長大，再去散會兒步。",
+    "en": "The leaves are still growing. Enjoy another little walk.",
+    "ja": "葉っぱはまだ育っています。もう少し散歩しましょう。",
+    "ko": "잎이 아직 자라고 있어요. 조금 더 산책해 볼까요."
+  },
+  "收到了 18 枚三叶草。可以回屋准备便当了。": {
+    "zh-TW": "收到了 18 枚三葉草。可以回屋準備便當了。",
+    "en": "You gathered 18 clovers. You can pack lunch at home.",
+    "ja": "みつばを18枚摘みました。家でお弁当を用意できます。",
+    "ko": "클로버 18개를 모았어요. 집에서 도시락을 준비할 수 있어요."
+  },
+  "便当和小包袱装好了。今天，去林间营地吧。": {
+    "zh-TW": "便當和小包袱裝好了。今天，去林間營地吧。",
+    "en": "Lunch and your bundle are packed. Let’s visit the forest camp.",
+    "ja": "お弁当と荷物の準備ができました。森のキャンプ場へ行きましょう。",
+    "ko": "도시락과 보따리를 챙겼어요. 숲속 캠프로 떠나 볼까요."
+  },
+  "准备便当需要 8 枚三叶草。": {
+    "zh-TW": "準備便當需要 8 枚三葉草。",
+    "en": "Packing lunch takes 8 clovers.",
+    "ja": "お弁当にはみつばが8枚必要です。",
+    "ko": "도시락을 준비하려면 클로버 8개가 필요해요."
+  },
+  "行囊已经装好。带着便当去营地吧。": {
+    "zh-TW": "行囊已經裝好。帶著便當去營地吧。",
+    "en": "Your bag is ready. Take your lunch to camp.",
+    "ja": "旅じたくはできています。お弁当を持ってキャンプへ。",
+    "ko": "가방이 준비됐어요. 도시락을 들고 캠프로 가요."
+  },
+  "吃完便当，蝴蝶也来了。把这一刻拍下来吧。": {
+    "zh-TW": "吃完便當，蝴蝶也來了。把這一刻拍下來吧。",
+    "en": "Lunch is finished and butterflies have arrived. Take a photo.",
+    "ja": "お弁当を食べたら、チョウもやってきました。写真を一枚。",
+    "ko": "도시락을 다 먹으니 나비도 찾아왔어요. 사진을 남겨 볼까요."
+  },
+  "在帐篷边坐一会儿。下次可以从家里带份便当。": {
+    "zh-TW": "在帳篷邊坐一會兒。下次可以從家裡帶份便當。",
+    "en": "Rest by the tent. Next time, bring a lunch from home.",
+    "ja": "テントのそばでひと休み。今度は家からお弁当を持ってきましょう。",
+    "ko": "텐트 옆에서 쉬어 가요. 다음에는 집에서 도시락을 가져와 봐요."
+  },
+  "木片缓缓离岸了。": {
+    "zh-TW": "木片緩緩離岸了。",
+    "en": "The little raft drifts away from the bank.",
+    "ja": "小さないかだが岸を離れました。",
+    "ko": "작은 뗏목이 천천히 강가를 떠나요."
+  },
+  "顺着水流，慢慢漂一会儿。": {
+    "zh-TW": "順著水流，慢慢漂一會兒。",
+    "en": "Let the gentle current carry you.",
+    "ja": "流れに身をまかせて、のんびり。",
+    "ko": "잔잔한 물결을 따라 떠가요."
+  },
+  "水面映着树影。回家的路就在身后。": {
+    "zh-TW": "水面映著樹影。回家的路就在身後。",
+    "en": "Trees reflect on the water. The path home is just behind you.",
+    "ja": "水面には木の影。帰り道はすぐ後ろです。",
+    "ko": "물 위로 나무 그림자가 비쳐요. 집으로 가는 길이 바로 뒤에 있어요."
+  },
+  "漂到了池塘边。沿小径慢慢回家吧。": {
+    "zh-TW": "漂到了池塘邊。沿小徑慢慢回家吧。",
+    "en": "You reached the pond. Follow the little path home.",
+    "ja": "池に着きました。小道をゆっくり家まで。",
+    "ko": "연못에 도착했어요. 오솔길을 따라 천천히 집으로 돌아가요."
+  },
+  "照片放进相册了：": {
+    "zh-TW": "照片放進相簿了：",
+    "en": "Photo saved: ",
+    "ja": "写真を保存しました：",
+    "ko": "사진을 저장했어요: "
+  },
+  "照片暂时没有保存成功。": {
+    "zh-TW": "照片暫時沒有儲存成功。",
+    "en": "The photo could not be saved this time.",
+    "ja": "写真を保存できませんでした。",
+    "ko": "사진을 저장하지 못했어요."
+  },
+  "便当已经备好，叶帽也带上了。": {
+    "zh-TW": "便當已經備好，葉帽也帶上了。",
+    "en": "Lunch is packed, and your leaf hat is ready.",
+    "ja": "お弁当も葉っぱの帽子も準備できました。",
+    "ko": "도시락도 잎사귀 모자도 챙겼어요."
+  },
+  "到林间营地坐下吃饭，蝴蝶会在附近飞舞。": {
+    "zh-TW": "到林間營地坐下吃飯，蝴蝶會在附近飛舞。",
+    "en": "Sit down for lunch at camp, with butterflies nearby.",
+    "ja": "森のキャンプ場でお弁当を。近くにはチョウも飛んでいます。",
+    "ko": "숲속 캠프에서 나비를 바라보며 도시락을 먹어요."
+  },
+  "行囊还是空的。": {
+    "zh-TW": "行囊還是空的。",
+    "en": "Your travel bag is still empty.",
+    "ja": "旅のかばんはまだ空です。",
+    "ko": "여행 가방이 아직 비어 있어요."
+  },
+  "回小屋找到木箱，使用 8 枚三叶草准备一份便当。": {
+    "zh-TW": "回小屋找到木箱，使用 8 枚三葉草準備一份便當。",
+    "en": "Find the wooden chest at home and pack lunch with 8 clovers.",
+    "ja": "家の木箱でみつば8枚を使い、お弁当を用意しましょう。",
+    "ko": "집의 나무 상자에서 클로버 8개로 도시락을 준비해요."
+  },
+  "旅行相册 {n}": {
+    "zh-TW": "旅行相簿 · {n} 張",
+    "en": "Travel album · {n} photos",
+    "ja": "旅のアルバム · {n} 枚",
+    "ko": "여행 앨범 · {n}장"
+  },
+  "行囊统计 {n} {m}": {
+    "zh-TW": "三葉草 {n} · 營地休息 {m} 次",
+    "en": "Clovers {n} · Camp visits {m}",
+    "ja": "みつば {n} 枚 · キャンプ {m} 回",
+    "ko": "클로버 {n}개 · 캠프 방문 {m}회"
+  },
+  "交谈": {
+    "zh-TW": "交談",
+    "en": "Talk",
+    "ja": "話す",
+    "ko": "대화"
+  },
+  "毛利小五郎": {
+    "zh-TW": "毛利小五郎",
+    "en": "Kogoro Mouri",
+    "ja": "毛利小五郎",
+    "ko": "모리 코고로"
+  },
+  "毛利兰": {
+    "zh-TW": "毛利蘭",
+    "en": "Ran Mouri",
+    "ja": "毛利蘭",
+    "ko": "모리 란"
+  },
+  "灰原哀": {
+    "zh-TW": "灰原哀",
+    "en": "Ai Haibara",
+    "ja": "灰原哀",
+    "ko": "하이바라 아이"
+  },
+  "阿笠博士": {
+    "zh-TW": "阿笠博士",
+    "en": "Professor Agasa",
+    "ja": "阿笠博士",
+    "ko": "아가사 박사"
+  },
+  "街坊": {
+    "zh-TW": "街坊",
+    "en": "Neighbour",
+    "ja": "街の人",
+    "ko": "이웃"
+  },
+  "下午好。": {
+    "zh-TW": "下午好。",
+    "en": "Good afternoon.",
+    "ja": "こんにちは。",
+    "ko": "안녕하세요."
+  },
+  "街巷与住宅": {
+    "zh-TW": "街巷與住宅",
+    "en": "Streets & homes",
+    "ja": "街並みと住宅",
+    "ko": "거리와 집"
+  },
+  "晴朗午后": {
+    "zh-TW": "晴朗午後",
+    "en": "Sunny afternoon",
+    "ja": "晴れた午後",
+    "ko": "맑은 오후"
+  },
+  "夜间": {
+    "zh-TW": "夜間",
+    "en": "Night",
+    "ja": "夜",
+    "ko": "밤"
+  },
+  "来坐坐吧。事务所在二楼，从右边楼梯就能上去。": {
+    "zh-TW": "來坐坐吧。事務所在二樓，從右邊樓梯就能上去。",
+    "en": "Come in. The agency is upstairs, via the stairs on the right.",
+    "ja": "どうぞ。事務所は二階、右の階段から上がれます。",
+    "ko": "어서 오세요. 사무소는 오른쪽 계단으로 올라가면 2층에 있어요."
+  },
+  "先仔细观察现场，答案往往藏在小细节里。": {
+    "zh-TW": "先仔細觀察現場，答案往往藏在小細節裡。",
+    "en": "Look carefully. The answer is often hidden in the smallest detail.",
+    "ja": "よく観察してみよう。答えは小さなところに隠れている。",
+    "ko": "자세히 살펴보세요. 답은 작은 단서에 숨어 있을 때가 많아요."
+  },
+  "新发明快做好了！工作台上的小零件别弄丢。": {
+    "zh-TW": "新發明快做好了！工作臺上的小零件別弄丟。",
+    "en": "My new invention is almost ready! Mind the little parts on the bench.",
+    "ja": "新発明はもうすぐ完成じゃ！作業台の小さな部品に気をつけて。",
+    "ko": "새 발명품이 거의 완성됐네! 작업대의 작은 부품을 잃어버리지 않게 조심하게."
+  },
+  "窗边的光线很好，我在整理今天的实验记录。": {
+    "zh-TW": "窗邊的光線很好，我在整理今天的實驗記錄。",
+    "en": "The light by the window is lovely. I’m organising today’s experiment notes.",
+    "ja": "窓辺は明るいわ。今日の実験記録をまとめているの。",
+    "ko": "창가의 햇빛이 좋네요. 오늘의 실험 기록을 정리하고 있어요."
+  },
+  "午后好，河边和车站都可以步行过去。": {
+    "zh-TW": "午後好，河邊和車站都可以步行過去。",
+    "en": "Good afternoon. You can walk to the river and the station.",
+    "ja": "こんにちは。川も駅も歩いて行けますよ。",
+    "ko": "안녕하세요. 강가와 역까지 걸어갈 수 있어요."
+  },
+  "毛利事务所": {
+    "zh-TW": "毛利事務所",
+    "en": "Mouri Detective Agency",
+    "ja": "毛利探偵事務所",
+    "ko": "모리 탐정 사무소"
+  },
+  "毛利家客厅": {
+    "zh-TW": "毛利家客廳",
+    "en": "Mouri living room",
+    "ja": "毛利家の居間",
+    "ko": "모리 가 거실"
+  },
+  "小兰卧室": {
+    "zh-TW": "小蘭臥室",
+    "en": "Ran’s bedroom",
+    "ja": "蘭の部屋",
+    "ko": "란의 침실"
+  },
+  "中央环形厨房": {
+    "zh-TW": "中央環形廚房",
+    "en": "Circular kitchen",
+    "ja": "中央の円形キッチン",
+    "ko": "중앙 원형 주방"
+  },
+  "环形料理台": {
+    "zh-TW": "環形料理臺",
+    "en": "Circular counter",
+    "ja": "円形カウンター",
+    "ko": "원형 조리대"
+  },
+  "并列双床": {
+    "zh-TW": "並列雙床",
+    "en": "Twin bedrooms",
+    "ja": "並んだ二つのベッド",
+    "ko": "나란한 침대"
+  },
+  "发明工作台": {
+    "zh-TW": "發明工作臺",
+    "en": "Invention workbench",
+    "ja": "発明の作業台",
+    "ko": "발명 작업대"
+  },
+  "实验区": {
+    "zh-TW": "實驗區",
+    "en": "Laboratory",
+    "ja": "実験エリア",
+    "ko": "실험 구역"
+  },
+  "地下研究室": {
+    "zh-TW": "地下研究室",
+    "en": "Basement laboratory",
+    "ja": "地下研究室",
+    "ko": "지하 연구실"
+  },
+  "博士的车库": {
+    "zh-TW": "博士的車庫",
+    "en": "Agasa’s garage",
+    "ja": "博士のガレージ",
+    "ko": "박사의 차고"
+  },
+  "研究记录": {
+    "zh-TW": "研究記錄",
+    "en": "Research notes",
+    "ja": "研究記録",
+    "ko": "연구 기록"
+  },
+  "米花町": {
+    "zh-TW": "米花町",
+    "en": "Beika",
+    "ja": "米花町",
+    "ko": "베이카"
+  },
+  "目的地 · 设置": {
+    "zh-TW": "目的地 · 設定",
+    "en": "Places & settings",
+    "ja": "行き先と設定",
+    "ko": "목적지와 설정"
+  },
+  "切换视角": {
+    "zh-TW": "切換視角",
+    "en": "Change view",
+    "ja": "視点を切り替える",
+    "ko": "시점 바꾸기"
   }
 }

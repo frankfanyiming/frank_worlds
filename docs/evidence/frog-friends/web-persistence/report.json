@@ -1,0 +1,149 @@
+{
+  "url": "http://127.0.0.1:8791/frank_worlds/worlds/frog/index.html?lang=zh-CN",
+  "errors": [],
+  "checks": {
+    "initial_auto_save_created": true,
+    "normal_action_closed_save": true,
+    "after_completed_sync_reload_preserves_step": true,
+    "immediate_reload_observed_step": false
+  },
+  "events": [
+    {
+      "type": "close",
+      "at": 6380.899999976158,
+      "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
+      "data": {
+        "camp_visits": 0,
+        "clovers": 57,
+        "friend_life": {
+          "checkpoint": {
+            "frog": [
+              -12.3000001907349,
+              0.157343745231628,
+              -11.8000001907349
+            ],
+            "home": "frog",
+            "panda": [
+              -13.4841909408569,
+              0.177558600902557,
+              -11.8480405807495
+            ]
+          },
+          "companion": true,
+          "cooked": [],
+          "cooking": {
+            "id": "cook:1",
+            "recipe": "rice",
+            "step": 1
+          },
+          "events": {
+            "invite:first": {
+              "kind": "invite",
+              "value": ""
+            }
+          },
+          "gifts": {},
+          "keepsakes": {
+            "stone": 1,
+            "tea_jar": 1
+          },
+          "memories": [],
+          "picnic_item": {},
+          "sequence": 1,
+          "shared_tea": true,
+          "stage": "invited",
+          "version": 1
+        },
+        "harvest_at": 0,
+        "packed": false,
+        "panda_visits": 0,
+        "photos": []
+      }
+    },
+    {
+      "type": "sync-start",
+      "at": 6385.300000071526,
+      "id": 1
+    },
+    {
+      "type": "sync-end",
+      "at": 6389.899999976158,
+      "id": 1,
+      "error": ""
+    }
+  ],
+  "notes": [
+    "Instrumentation exists only in this isolated test browser response; exported source and files are unmodified.",
+    "A private save fixture is seeded once to reach the stove; measured saves use real friend cooking actions and production FileAccess."
+  ],
+  "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
+  "normalStep": 1,
+  "immediateEvents": [
+    {
+      "type": "close",
+      "at": 3138.6999999284744,
+      "path": "/userfs/godot/app_userdata/旅行青蛙 · 林间来信/woodland-save.json",
+      "data": {
+        "camp_visits": 0,
+        "clovers": 57,
+        "friend_life": {
+          "checkpoint": {
+            "frog": [
+              -12.3000001907349,
+              0.157343745231628,
+              -11.8000001907349
+            ],
+            "home": "frog",
+            "panda": [
+              -13.4841909408569,
+              0.177558600902557,
+              -11.8480405807495
+            ]
+          },
+          "companion": true,
+          "cooked": [],
+          "cooking": {
+            "id": "cook:1",
+            "recipe": "rice",
+            "step": 2
+          },
+          "events": {
+            "invite:first": {
+              "kind": "invite",
+              "value": ""
+            }
+          },
+          "gifts": {},
+          "keepsakes": {
+            "stone": 1,
+            "tea_jar": 1
+          },
+          "memories": [],
+          "picnic_item": {},
+          "sequence": 1,
+          "shared_tea": true,
+          "stage": "invited",
+          "version": 1
+        },
+        "harvest_at": 0,
+        "packed": false,
+        "panda_visits": 0,
+        "photos": []
+      }
+    }
+  ],
+  "immediateStep": 1,
+  "closeToCommitMs": 9,
+  "engineScriptSha256": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
+  "engineMechanismSource": "https://raw.githubusercontent.com/godotengine/godot/4.7.2-stable/platform/web/os_web.cpp",
+  "engineMechanismLines": {
+    "close_sets_dirty": [
+      213,
+      225
+    ],
+    "main_loop_starts_sync": [
+      74,
+      81
+    ]
+  }
+}

@@ -1036,8 +1036,8 @@
   "runtime": {
     "home": {
       "mesh_batches": 28,
-      "triangles": 300344,
-      "bytes": 14953816
+      "triangles": 315256,
+      "bytes": 15822436
     },
     "exterior": {
       "mesh_batches": 13,
@@ -1570,5 +1570,5 @@
       "range": 2.2
     }
   ],
-  "detail_revision": 2
+  "detail_revision": 21
 }

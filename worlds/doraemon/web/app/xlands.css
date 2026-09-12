@@ -1677,3 +1677,8 @@
     min-height: 44px;
   }
 }
+
+/* A calm shared navigation frame; native game controls live inside their canvas. */
+.xl-world{--world-nav-height:calc(54px + env(safe-area-inset-top));background:#f8faf4}.world-nav{background:#f8faf4;border-bottom:1px solid #e3e9df;gap:20px;padding-right:max(20px,env(safe-area-inset-right));padding-left:max(20px,env(safe-area-inset-left))}.world-nav>strong{font-size:12px;font-weight:500;letter-spacing:.015em;color:#4e665d}.world-nav button{font-size:12px;color:#5c7267}.world-language{border-color:#e1e7db;border-radius:10px}.world-language select{font-size:11px;background:transparent}.world-nav>.world-expand{font-size:11px}.native-controls{display:none!important}
+@media(max-width:600px){.world-nav{gap:9px;padding-left:max(10px,env(safe-area-inset-left));padding-right:max(10px,env(safe-area-inset-right))}.world-nav>strong{font-size:10px}.world-nav>button{font-size:0;gap:0}.world-language select{max-width:75px;font-size:10px}.world-nav>div{gap:2px}.world-nav>div>button{min-width:36px;padding:8px}.world-nav>div>button>svg{width:17px}.xl-world{--world-nav-height:calc(50px + env(safe-area-inset-top))}}
+@media(max-height:500px) and (orientation:landscape){.xl-world{--world-nav-height:calc(46px + env(safe-area-inset-top))}.world-nav>strong{font-size:11px}}

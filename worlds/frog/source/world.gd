@@ -1,4 +1,5 @@
 extends Node3D
+const SaveRecovery = preload("res://friends/save_recovery.gd")
 
 var data: Dictionary
 var stage: Node3D
@@ -58,7 +59,7 @@ var prompt_label: Label
 var toast_label: Label
 var album_panel: PanelContainer
 var mode_button: Button
-var state := {"clovers":24,"packed":false,"harvest_at":0.0,"photos":[],"camp_visits":0,"panda_visits":0}
+var state := {"clovers":24,"packed":false,"harvest_at":0.0,"photos":[],"camp_visits":0,"panda_visits":0,"friend_life":{},"_save_sequence":0,"_saved_at":0.0}
 var nearest := ""
 var mode := 0
 var yaw := -0.53
@@ -86,6 +87,8 @@ var locale := "zh-CN"
 var translations: Dictionary = {}
 var mobile_ui := false
 var mobile_menu: MenuButton
+var friend_life
+
 
 func vec(a: Array) -> Vector3:
  return Vector3(float(a[0]),float(a[1]),float(a[2]))
@@ -125,6 +128,7 @@ func _ready():
  _setup_camera()
  _setup_ui()
  _setup_butterfly()
+ friend_life=load("res://friends/friend_life.gd").new();add_child(friend_life);friend_life.setup(self)
  boat_curve=Curve3D.new()
  for p in data.boat_path:boat_curve.add_point(vec(p))
  _refresh_hud()
@@ -364,6 +368,7 @@ func _enter_home(id: String):
   home_light.position=Vector3(-14.8,4.8,-11.3)
   window_light.position=Vector3(-10.2,3.0,-13.3);window_light.look_at(Vector3(-17.2,.2,-10))
  _apply_lighting();_camera_update(1)
+ if friend_life:friend_life.room_changed()
 
 func _leave_home():
  jump_prepare=0.0;jump_takeoff=0.0;landing_time=0.0;was_grounded=false
@@ -378,6 +383,7 @@ func _leave_home():
  if butterfly:butterfly.visible=true
  _apply_lighting()
  camera.position=frog.position+Vector3(0,8,10);_camera_update(1)
+ if friend_life:friend_life.room_changed()
 
 func _update_home():
  if home_cooldown>0:return
@@ -573,7 +579,8 @@ func _process(delta):
 func _physics_process(delta):
  if not ready_world:return
  if capture_dir!="":return
- _panda_motion(delta)
+ if friend_life:friend_life.physics(delta)
+ if not friend_life or not friend_life.save.companion:_panda_motion(delta)
  if riding:
   boat_time+=delta;var length=boat_curve.get_baked_length();var t=min(length,boat_time*1.10);var p=boat_curve.sample_baked(t)
   boat.position=p;frog.position=p+Vector3(0,.085,0);frog.velocity=Vector3.ZERO;_animate("Sit")
@@ -785,6 +792,11 @@ func _home_follow_camera():
  interior_camera_initialized=true
 
 func _unhandled_input(event):
+ if event is InputEventKey and event.pressed and event.physical_keycode==KEY_ESCAPE:
+  if friend_life and friend_life.panel!="":friend_life.action("close")
+  else:_close_panel()
+  return
+ if input_locked:return
  if event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
   if inside_home and mode==1:home_orbit-=event.relative.x*.006
   if not inside_home or mode==2:
@@ -825,9 +837,11 @@ func _update_nearest():
   if d<zone_best:zone_best=d;current_zone=z.label
  if active_home=="frog":current_zone="树干小屋" if frog.position.y<2.7 else "夹层睡铺"
  elif active_home=="panda":current_zone="熊猫的竹木茶室" if frog.position.y<2.7 else "熊猫的竹床"
+ if friend_life:friend_life.nearest_hint()
 
 func _interact():
  if input_locked or riding:return
+ if friend_life and friend_life.context_interact(nearest):return
  match nearest:
   "clover":
    if Time.get_unix_time_from_system()-float(state.harvest_at)<100:_toast("叶片还在慢慢长大，再去散会儿步。",4)
@@ -864,16 +878,27 @@ func _refresh_hud():
  zone_label.text=_tr(current_zone)+"  ·  "+_tr("黄昏" if night else "午后")+("  ·  "+_tr("行囊已备好") if state.packed else "")
 
 func _load_state():
+ var disk={}
  if FileAccess.file_exists(save_path):
-  var saved=JSON.parse_string(FileAccess.get_file_as_string(save_path))
-  if saved is Dictionary:
-   for key in state:
-    if key in saved:state[key]=saved[key]
+  var value=JSON.parse_string(FileAccess.get_file_as_string(save_path))
+  if value is Dictionary:disk=value
+ var modified=float(FileAccess.get_modified_time(save_path)) if FileAccess.file_exists(save_path) else 0.0
+ var recovered=SaveRecovery.choose(disk,SaveRecovery.read_mirror(),modified)
+ for key in state:
+  if key in recovered:state[key]=recovered[key]
  DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(photo_directory))
+ SaveRecovery.repair_photos(state,photo_directory)
 
 func _save():
+ state["_save_sequence"]=int(state.get("_save_sequence",0))+1
+ state["_saved_at"]=Time.get_unix_time_from_system()
+ var serialized=JSON.stringify(state,"  ")
+ # localStorage is synchronous, unlike the engine's next-frame IndexedDB sync.
+ # A blocked/quota-limited browser falls back to the existing userfs pathway.
+ SaveRecovery.mirror(serialized)
  var file=FileAccess.open(save_path,FileAccess.WRITE)
- if file:file.store_string(JSON.stringify(state,"  "))
+ if file:
+  file.store_string(serialized);file.close()
 
 func _take_photo():
  if input_locked or not ready_world:return
@@ -903,12 +928,19 @@ func _message(title: String,body: String):
 func _show_bag():
  _message("今天的行囊",("便当已经备好，叶帽也带上了。\n\n到林间营地坐下吃饭，蝴蝶会在附近飞舞。" if state.packed else "行囊还是空的。\n\n回小屋找到木箱，使用 8 枚三叶草准备一份便当。")+"\n\n三叶草：%d　　营地休息：%d 次"%[int(state.clovers),int(state.camp_visits)])
 
+ if friend_life and is_instance_valid(album_panel):
+  var box=album_panel.get_child(0)
+  var note=friend_life.text("bag_count").replace("{n}",str(friend_life.save.cooked.size())).replace("{m}",str(friend_life.save.memories.size()))
+  box.add_child(_label(note,18));box.add_child(_button(friend_life.text("friends"),friend_life.open_journal))
+
 func _open_album():
- var box=_panel("旅行相册  ·  %d 张"%state.photos.size())
- if state.photos.is_empty():
+ # Keep legacy records, but never count a PNG that did not reach browser storage.
+ var available=state.photos.filter(func(item):return item is Dictionary and FileAccess.file_exists(photo_directory.path_join(str(item.get("file","")))))
+ var box=_panel("旅行相册  ·  %d 张"%available.size())
+ if available.is_empty():
   var empty=_label("还没有照片。按 P，留住眼前的小世界。",18 if mobile_ui else 21);empty.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;box.add_child(empty);return
  var scroll=ScrollContainer.new();scroll.size_flags_vertical=Control.SIZE_EXPAND_FILL;box.add_child(scroll);var grid=GridContainer.new();grid.columns=1 if mobile_ui else 3;grid.add_theme_constant_override("h_separation",12);grid.add_theme_constant_override("v_separation",15);scroll.add_child(grid)
- for item in state.photos:
+ for item in available:
   var path=ProjectSettings.globalize_path(photo_directory+"/"+item.file);var im=Image.load_from_file(path)
   if im==null:continue
   var card=VBoxContainer.new();grid.add_child(card);var pic=TextureRect.new();pic.custom_minimum_size=Vector2(270,180);pic.expand_mode=TextureRect.EXPAND_IGNORE_SIZE;pic.stretch_mode=TextureRect.STRETCH_KEEP_ASPECT_CENTERED;pic.texture=ImageTexture.create_from_image(im);card.add_child(pic);card.add_child(_label(item.place,17))
@@ -1018,3 +1050,13 @@ func _verify_interactions():
  var skins=[];_inspect_skin(actor,skins);checks["skinned_meshes"]=skins;checks["animations"]=animator.get_animation_list() if animator else [];checks["butterfly_loaded"]=butterfly!=null
  var f=FileAccess.open("res://../玩法验收.json",FileAccess.WRITE);f.store_string(JSON.stringify(checks,"  "));print("INTERACTION_VERIFY ",JSON.stringify(checks))
  get_tree().quit()
+
+# The native and browser front ends call the same semantic friend actions.
+func get_friend_ui_state(language: String="") -> Dictionary:
+ return friend_life.ui_state(language if language!="" else locale) if friend_life else {"open":false}
+
+func get_friend_hud_state(language: String="") -> Dictionary:
+ return friend_life.hud_state(language if language!="" else locale) if friend_life else {}
+
+func friend_ui_action(id: String):
+ if friend_life:friend_life.action(id)

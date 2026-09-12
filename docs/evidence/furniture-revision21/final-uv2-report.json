@@ -1,0 +1,316 @@
+{
+  "frog": [
+    {
+      "path": "home-enclosure/EnclosureCeiling",
+      "surfaces": 1,
+      "uv2": 528
+    },
+    {
+      "path": "home-enclosure/EnclosureFloorUnderlay",
+      "surfaces": 1,
+      "uv2": 768
+    },
+    {
+      "path": "home-enclosure/EnclosureWall",
+      "surfaces": 1,
+      "uv2": 2914
+    },
+    {
+      "path": "home-enclosure/FrogWindowBackground",
+      "surfaces": 1,
+      "uv2": 206
+    },
+    {
+      "path": "home-enclosure/HomeDetails_00",
+      "surfaces": 1,
+      "uv2": 880
+    },
+    {
+      "path": "home-enclosure/HomeDetails_01",
+      "surfaces": 1,
+      "uv2": 20084
+    },
+    {
+      "path": "home-enclosure/HomeDetails_02",
+      "surfaces": 1,
+      "uv2": 18860
+    },
+    {
+      "path": "home-enclosure/HomeDetails_03",
+      "surfaces": 1,
+      "uv2": 15628
+    },
+    {
+      "path": "home-enclosure/HomeDetails_04",
+      "surfaces": 1,
+      "uv2": 1728
+    },
+    {
+      "path": "home-enclosure/HomeDetails_05",
+      "surfaces": 1,
+      "uv2": 3950
+    },
+    {
+      "path": "home-enclosure/HomeDetails_07",
+      "surfaces": 1,
+      "uv2": 1536
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_00",
+      "surfaces": 1,
+      "uv2": 29656
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_01",
+      "surfaces": 1,
+      "uv2": 37024
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_02",
+      "surfaces": 2,
+      "uv2": 31582
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_03",
+      "surfaces": 2,
+      "uv2": 9429
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_04",
+      "surfaces": 1,
+      "uv2": 48432
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_05",
+      "surfaces": 1,
+      "uv2": 29475
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_06",
+      "surfaces": 1,
+      "uv2": 7225
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_07",
+      "surfaces": 1,
+      "uv2": 9353
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_08",
+      "surfaces": 1,
+      "uv2": 12596
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_09",
+      "surfaces": 1,
+      "uv2": 3947
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_10",
+      "surfaces": 1,
+      "uv2": 704
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_11",
+      "surfaces": 1,
+      "uv2": 7572
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_12",
+      "surfaces": 1,
+      "uv2": 4382
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_13",
+      "surfaces": 1,
+      "uv2": 22198
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_14",
+      "surfaces": 1,
+      "uv2": 706
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_15",
+      "surfaces": 1,
+      "uv2": 474
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_16",
+      "surfaces": 1,
+      "uv2": 6207
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_17",
+      "surfaces": 1,
+      "uv2": 1251
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_18",
+      "surfaces": 1,
+      "uv2": 7005
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_19",
+      "surfaces": 2,
+      "uv2": 1890
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_20",
+      "surfaces": 1,
+      "uv2": 4282
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_21",
+      "surfaces": 1,
+      "uv2": 742
+    },
+    {
+      "path": "home-furnishings/HomeFurniture_22",
+      "surfaces": 1,
+      "uv2": 242
+    }
+  ],
+  "panda": [
+    {
+      "path": "panda-home/EnclosureFloorUnderlay",
+      "surfaces": 1,
+      "uv2": 576
+    },
+    {
+      "path": "panda-home/EnclosureWall",
+      "surfaces": 1,
+      "uv2": 6149
+    },
+    {
+      "path": "panda-home/PandaHome_01",
+      "surfaces": 1,
+      "uv2": 11864
+    },
+    {
+      "path": "panda-home/PandaHome_02",
+      "surfaces": 1,
+      "uv2": 4754
+    },
+    {
+      "path": "panda-home/PandaHome_03",
+      "surfaces": 1,
+      "uv2": 23312
+    },
+    {
+      "path": "panda-home/PandaHome_04",
+      "surfaces": 1,
+      "uv2": 18444
+    },
+    {
+      "path": "panda-home/PandaHome_05",
+      "surfaces": 1,
+      "uv2": 14572
+    },
+    {
+      "path": "panda-home/PandaHome_06",
+      "surfaces": 1,
+      "uv2": 384
+    },
+    {
+      "path": "panda-home/PandaHome_07",
+      "surfaces": 1,
+      "uv2": 2776
+    },
+    {
+      "path": "panda-home/PandaHome_08",
+      "surfaces": 1,
+      "uv2": 131291
+    },
+    {
+      "path": "panda-home/PandaHome_09",
+      "surfaces": 1,
+      "uv2": 4561
+    },
+    {
+      "path": "panda-home/PandaHome_10",
+      "surfaces": 1,
+      "uv2": 1650
+    },
+    {
+      "path": "panda-home/PandaHome_11",
+      "surfaces": 1,
+      "uv2": 3282
+    },
+    {
+      "path": "panda-home/PandaHome_12",
+      "surfaces": 1,
+      "uv2": 1080
+    },
+    {
+      "path": "panda-home/PandaHome_13",
+      "surfaces": 1,
+      "uv2": 540
+    },
+    {
+      "path": "panda-home/PandaHome_14",
+      "surfaces": 1,
+      "uv2": 815
+    },
+    {
+      "path": "panda-home/PandaHome_15",
+      "surfaces": 1,
+      "uv2": 828
+    },
+    {
+      "path": "panda-home/PandaHome_16",
+      "surfaces": 1,
+      "uv2": 312
+    },
+    {
+      "path": "panda-home/PandaHome_17",
+      "surfaces": 1,
+      "uv2": 11018
+    },
+    {
+      "path": "panda-home/PandaHome_18",
+      "surfaces": 1,
+      "uv2": 16738
+    },
+    {
+      "path": "panda-home/PandaHome_19",
+      "surfaces": 1,
+      "uv2": 16654
+    },
+    {
+      "path": "panda-home/PandaHome_20",
+      "surfaces": 1,
+      "uv2": 12716
+    },
+    {
+      "path": "panda-home/PandaHome_21",
+      "surfaces": 1,
+      "uv2": 784
+    },
+    {
+      "path": "panda-home/PandaHome_22",
+      "surfaces": 1,
+      "uv2": 10526
+    },
+    {
+      "path": "panda-home/PandaHome_23",
+      "surfaces": 1,
+      "uv2": 9230
+    },
+    {
+      "path": "panda-home/PandaHome_24",
+      "surfaces": 1,
+      "uv2": 799
+    },
+    {
+      "path": "panda-home/PandaHome_25",
+      "surfaces": 1,
+      "uv2": 4
+    },
+    {
+      "path": "panda-home/PandaWindowBackground",
+      "surfaces": 1,
+      "uv2": 576
+    }
+  ]
+}

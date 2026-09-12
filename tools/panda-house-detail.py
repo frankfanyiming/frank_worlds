@@ -373,3 +373,32 @@ for o in list(bpy.context.scene.objects):
  if o.type=='MESH' and not o.name.startswith(('Panda ink painting','Panda sage draped','Panda cabinet embroidered','Panda hewn rock face')):
   if not o.data.uv_layers or o.name.startswith(('Panda tea table','Panda loft','Panda detailed layered')):make_uv_world(o)
 print('PANDA_DETAIL_PASS_COMPLETE',len(bpy.context.scene.objects),flush=True)
+
+# Revision 21: construction details belong to the furniture, with no floor-route changes.
+for y in [-.48,.48]:
+ bam('Panda tea table lower stretcher',(-.77,y,.39),(.77,y,.39),.028)
+ for x in [-.76,.76]:
+  for dz in [-.012,.012]:
+   curve('Panda table hand tied flax joint',[(x+.083*math.cos(a),y+.083*math.sin(a),.57+dz) for a in np.linspace(0,TAU,33)],.006,straw)
+for x in [-.76,.76]:bam('Panda table transverse stretcher',(x,-.49,.42),(x,.49,.42),.027)
+# Shallow tray wall and slatted tea drainage, below the cups rather than through them.
+for y in [-.239,.139]:box('Panda tea tray raised lip',(-.34,y,.867),(.68,.019,.026),edge,.007)
+for x in [-.67,-.01]:box('Panda tea tray raised end',(x,-.05,.867),(.020,.40,.026),edge,.007)
+for i in range(8):box('Panda tray inset drainage slat',(-.62+i*.08,-.05,.851),(.042,.32,.007),edge,.003)
+# Tea is visible inside hollow cups and retains a dark, calm surface.
+for x,y in [(-.52,-.05),(-.21,-.11)]:
+ lathe('Panda tea in cup',(x,y,.855),[(0,.085),(.081,.085)],teapot_mat,48)
+# Cabinet frame, recessed door panels and working hardware read in silhouette.
+for y in [-.55,.05,.65]:
+ for dz in [-.30,.30]:box('Panda cabinet door horizontal frame',(-3.119,y,.73+dz),(.024,.465,.034),edge,.008)
+ for side in [-1,1]:
+  box('Panda cabinet door vertical frame',(-3.119,y+side*.223,.73),(.024,.031,.625),edge,.008)
+ for zz in [.54,.97]:
+  box('Panda cabinet small hinge',(-3.105,y-.205,zz),(.013,.052,.068),grain_dark,.006)
+  beam('Panda cabinet hinge pin',(-3.092,y-.205,zz-.038),(-3.092,y-.205,zz+.038),.010,grain_light,12)
+# Rolled fabric napkins with tied bands on the pantry: larger details, not random clutter.
+for i in range(3):
+ x=-1.55+i*.20;y=3.62;z=1.16
+ beam('Panda neatly rolled pantry linen',(x,y-.18,z),(x,y+.18,z),.075,cream,32)
+ for angle in [0,1.2,2.4]:
+  curve('Panda linen fold end',[(x+.048*t*math.cos(t*TAU+angle),y-.185,z+.048*t*math.sin(t*TAU+angle)) for t in np.linspace(.1,1,24)],.003,thread_cream)
