@@ -1,9 +1,9 @@
 {
-  "sourceCommit": "6bb26c81802bd98ae1f326538ba41a8ef0f6725c",
-  "revision": 19,
-  "assetRevision": 18,
-  "date": "2026-09-12",
-  "summary": "XLands: mobile controls, reference-built Conan and Agasa, connected Mouri block, brighter interiors",
+  "sourceCommit": "86a5996bac1d06f674f608e51ef59a6a29873c08",
+  "revision": 20,
+  "assetRevision": 20,
+  "date": "2026-09-13",
+  "summary": "Conan and Kogoro natural arms, repaired skin weights and softer interior lighting",
   "worlds": [
     "doraemon",
     "frog",
@@ -11,10 +11,10 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-12T11:58:02.147826+00:00",
+  "updatedAt": "2026-09-12T18:03:34.671131+00:00",
   "frogHome": "detailed-frog-and-panda-homes-baked-lighting-grounded-motion",
   "mobile": "Portrait and landscape touch controls; multilingual destination menu; responsive portal",
-  "conan": "Tripo Conan and Agasa with grounded motion; Blender connected street block and Agasa reference house; APTX loading",
+  "conan": "Tripo characters with repaired elbows, wrists and sleeve skinning; contralateral arm swing; relaxed Kogoro idle; neutral fill and gentle color grade",
   "nativePacks": {
     "frog": {
       "sha256": "62315a4aada6d92396cede73a43baeee4072fa815b429a95e2e299bb7c1720e7",
@@ -23,10 +23,10 @@
       "chunks": 17
     },
     "conan": {
-      "sha256": "fd65d93a474508308b12940b5b9e9f0e88297af78af158cbd316b55c0cf564aa",
-      "rawBytes": 155470076,
-      "downloadBytes": 152534134,
-      "chunks": 10
+      "sha256": "ac447d35bd30efa3ded9ab7a18088efa862baaeaf5a585306c47602de56132c8",
+      "rawBytes": 175675684,
+      "downloadBytes": 172709882,
+      "chunks": 11
     }
   },
   "guestbookLayout": "Narrow-screen single-column fields; all form bounds and touch targets checked at 360, 390 and 844 CSS px"
