@@ -1,0 +1,23 @@
+{
+  "exportOnlyExclusions": [
+    "assets/buildings/agasa_book_encyclopedia_set_01_cover_arm_1k.png",
+    "assets/buildings/agasa_book_encyclopedia_set_01_cover_diff_1k.png",
+    "assets/buildings/agasa_book_encyclopedia_set_01_paper_diff_1k.png",
+    "assets/buildings/agasa_book_encyclopedia_set_01_paper_roughness_1k.png",
+    "assets/buildings/agasa_desk_lamp_arm_01_arm_1k.png",
+    "assets/buildings/agasa_desk_lamp_arm_01_diff_1k.png",
+    "assets/buildings/agasa_metal_office_desk_arm_1k.png",
+    "assets/buildings/agasa_metal_office_desk_diff_1k.png",
+    "assets/buildings/agasa_modern_wooden_cabinet_arm_1k.png",
+    "assets/buildings/agasa_modern_wooden_cabinet_diff_1k.png",
+    "assets/buildings/agasa_vintage_radio_transceiver_accessories_arm_1k.png",
+    "assets/buildings/agasa_vintage_radio_transceiver_accessories_diff_1k.png",
+    "assets/buildings/agasa_vintage_radio_transceiver_arm_1k.png",
+    "assets/buildings/agasa_vintage_radio_transceiver_diff_1k.png",
+    "assets/buildings/mouri-open-furniture_desk_lamp_arm_01_arm_1k.jpg",
+    "assets/buildings/mouri-open-furniture_desk_lamp_arm_01_diff_1k.jpg",
+    "assets/buildings/mouri-open-furniture_desk_lamp_arm_01_nor_gl_1k.jpg"
+  ],
+  "sourceFilesPreserved": true,
+  "sceneResourceDependenciesChecked": 135
+}
