@@ -1,0 +1,44 @@
+{
+  "initialImports": [
+    "assets/index-DqNx17ew.js"
+  ],
+  "initialThreeDependency": false,
+  "heroRemoved": true,
+  "guestbookRemoved": true,
+  "originalCoversPreserved": true,
+  "coreAssets": [
+    {
+      "path": "index.html",
+      "bytes": 6649,
+      "gzipBytes": 2883
+    },
+    {
+      "path": "assets/index-DqNx17ew.js",
+      "bytes": 255987,
+      "gzipBytes": 83233
+    },
+    {
+      "path": "assets/index-BLhFQO2q.css",
+      "bytes": 248029,
+      "gzipBytes": 42330
+    },
+    {
+      "path": "covers/doraemon.webp",
+      "bytes": 119838,
+      "gzipBytes": 119838
+    },
+    {
+      "path": "covers/frog.webp",
+      "bytes": 136332,
+      "gzipBytes": 136332
+    },
+    {
+      "path": "covers/conan.webp",
+      "bytes": 128700,
+      "gzipBytes": 128700
+    }
+  ],
+  "coreAssetBytes": 895535,
+  "gzipEstimateBytes": 513316,
+  "scope": "Build graph and bytes; gzip estimate only, not measured CDN timing or phone FPS."
+}

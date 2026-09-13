@@ -1,0 +1,60 @@
+{
+  "unchangedFiles": [
+    {
+      "file": "covers/doraemon.webp",
+      "bytes": 119838,
+      "sha256": "2db8e1914dc19790c90e2bf26f4d9db440f1cc50a0574f9368515f91f2d4ddea",
+      "unchangedFrom": "687a5af"
+    },
+    {
+      "file": "covers/frog.webp",
+      "bytes": 136332,
+      "sha256": "3cf058a6b3d4db94c1909ba37c8dcad77136f7cc0154f8196b066a36baae9e60",
+      "unchangedFrom": "687a5af"
+    },
+    {
+      "file": "covers/conan.webp",
+      "bytes": 128700,
+      "sha256": "75a84b2b7caa5bd560873e0235a29d666ad0fdeffdb9abba46dd6de655b9c7ef",
+      "unchangedFrom": "687a5af"
+    },
+    {
+      "file": "models/neighborhood-v21.glb",
+      "bytes": 1654204,
+      "sha256": "b72a3825607276f99a9d7ad29889186ab06b25b9f8dda61de9571ca7dd72017f",
+      "unchangedFrom": "687a5af"
+    },
+    {
+      "file": "models/mobile-v23/neighborhood-v21.glb",
+      "bytes": 1860600,
+      "sha256": "7e3514f60502d1fb8751b31311fe61f0948c2218c999ec436af7c0098c765580",
+      "unchangedFrom": "687a5af"
+    },
+    {
+      "file": "models/bedroom-v12.glb",
+      "bytes": 48063076,
+      "sha256": "5a0a93b46ddb34ceffae011e0c437a1c4e2657368f9ceffb8ce434f086cb5cf4",
+      "unchangedFrom": "687a5af"
+    },
+    {
+      "file": "models/mobile-v23/bedroom-v12.glb",
+      "bytes": 7937444,
+      "sha256": "a34116797d4b954abc94b69d13d790c6ff96b2d5dc07d4086b6c82b73b890a79",
+      "unchangedFrom": "687a5af"
+    },
+    {
+      "file": "models/world-v11.glb",
+      "bytes": 2300524,
+      "sha256": "74be93e666cccdf0f1a18a682dad9d62c87747038ce6cddf370021576a19d040",
+      "unchangedFrom": "687a5af"
+    },
+    {
+      "file": "models/world.json",
+      "bytes": 848678,
+      "sha256": "8bf217581772fab23d654290107efa1eb97e9a1fa4027e817b7b0cc0912878d3",
+      "unchangedFrom": "687a5af"
+    }
+  ],
+  "unchangedNonNobiColliders": 249,
+  "terrainAndOtherActorsUnchanged": true
+}

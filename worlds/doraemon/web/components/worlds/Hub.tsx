@@ -26,7 +26,6 @@ import {
 import type { World } from '@/lib/community/merge';
 import type { AgentConnection } from '@/lib/community/agent';
 import { Modal, WorldSelect, WORLDS, titleKey, worldKey } from './Common';
-import Guestbook from './Guestbook';
 import CreatorLinks from './CreatorLinks';
 import { CREATOR } from '@/lib/community/creator';
 import AgentDialog from './AgentDialog';
@@ -213,19 +212,6 @@ export default function WorldHub() {
           </a>
           <nav>
             <a href="#resources">{t('resources')}</a>
-            <a
-              className="guest-link"
-              href="#guestbook"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById('guestbook')
-                  ?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              <BookOpen size={17} />
-              {t('guestbook')}
-            </a>
             <button
               onClick={() => setAgentOpen(true)}
               className={connection ? 'agent-connected' : ''}
@@ -258,14 +244,7 @@ export default function WorldHub() {
           </nav>
         </header>
         <main>
-          <section className="comic-hero" aria-labelledby="home-title">
-            <img className="hero-art" src={assetPath('home-art/coastal-hero.webp')} width={1400} height={467} alt="" decoding="async" />
-            <div className="hero-copy">
-              <p className="hero-eyebrow">{t('heroEyebrow')}</p>
-              <h1 id="home-title">{t('heroTitle')}</h1>
-              <p className="hero-description">{t('heroDescription')}</p>
-            </div>
-          </section>
+          <h1 className="sr-only">{t('brand')}</h1>
           <section className="world-grid" aria-label={t('world')}>
             {WORLDS.map((w, i) => (
               <article className={'world-card world-' + w} key={w}>
@@ -422,7 +401,6 @@ export default function WorldHub() {
               </div>
             )}
           </section>
-          <Guestbook t={t} locale={locale} admin={meta.admin} />
         </main>
         <footer className="hub-footer">
           <span>{t('brand')}</span>

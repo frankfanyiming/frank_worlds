@@ -55,7 +55,7 @@ export const ACTORS:Actor[]=[
 export function collides(x:number,y:number,z:number,cs:Collider[],radius=.18){
  return cs.some(c=>z<c.z+c.h/2-.05 && z+1.30>c.z-c.h/2+.08 && Math.abs(x-c.x)<c.w/2+radius && Math.abs(y-c.y)<c.d/2+radius);
 }
-export const HOUSE={lower:.48,upper:3.15,stairX:-13.15,stairY0:1.30,stairY1:4.75};
+export const HOUSE={lower:.48,upper:3.15,stairX:-13.05,stairY0:1.20,stairY1:4.80};
 export type GroundSurface={x0:number;x1:number;y0:number;y1:number;height:number;name:string;baseHeight?:number;edgeFalloff?:number;slopeY0?:number;slopeY1?:number};
 export function surfaceHeight(x:number,y:number,s:GroundSurface){
  const smooth=(v:number)=>{const t=Math.max(0,Math.min(1,v));return t*t*(3-2*t);};
@@ -71,7 +71,7 @@ export function groundHeight(x:number,y:number,previous:number,surfaces:GroundSu
   return HOUSE.lower+(y-HOUSE.stairY0)/(HOUSE.stairY1-HOUSE.stairY0)*(HOUSE.upper-HOUSE.lower);
  if(houseAt(x,y)==='shizuka'){if(x>-12.56&&x<-11.70&&y>=-20.5&&y<=-17.3)return .24+(y+20.5)/3.2*2.70;return previous>2.60?2.94:.24;}
  if(houseAt(x,y)==='home'){
-  if(previous>2.75&&y<6.85)return HOUSE.upper;
+  if(previous>2.75&&y<6.75)return HOUSE.upper;
   return HOUSE.lower;
  }
  const land=terrainHeight(x,y);

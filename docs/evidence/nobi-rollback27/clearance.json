@@ -1,0 +1,12 @@
+[
+  {
+    "profile": "desktop",
+    "clearanceProbes": 9,
+    "passed": true
+  },
+  {
+    "profile": "mobile",
+    "clearanceProbes": 9,
+    "passed": true
+  }
+]

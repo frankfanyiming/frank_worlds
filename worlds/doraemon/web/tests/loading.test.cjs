@@ -4,7 +4,7 @@ global.document={documentElement:{dataset:{assetBase:'/frank_worlds/'}},exitPoin
 const {fetchBytes,settleAssetCache,evictCachedAsset,assetCacheStats}=require('../lib/town/loading.ts');
 const {TownEngine}=require('../lib/town/engine.ts');
 const {GLTFLoader}=require('three/addons/loaders/GLTFLoader.js');
-const {MODEL_PARTS,STARTUP_PARTS,BEDROOM_PART,ASSET_VERSION}=require('../lib/town/model-manifest.ts');
+const {MODEL_PARTS,STARTUP_PARTS,BEDROOM_PART,ASSET_VERSION,WORLD_DATA_FILE}=require('../lib/town/model-manifest.ts');
 const {HOUSE,groundHeight}=require('../lib/town/world.ts');
 const realFetch=global.fetch,realDecode=THREE.TextureLoader.prototype.loadAsync,realParse=GLTFLoader.prototype.parseAsync;
 const delay=ms=>new Promise(r=>setTimeout(r,ms));
@@ -38,7 +38,7 @@ function engine(){const e=Object.create(TownEngine.prototype);Object.assign(e,{
  const paths=new Map();
  global.fetch=async url=>{
   requested.push(url);const relative=new URL(url,'https://test.invalid').pathname.replace('/frank_worlds/','');const file=path.join('public',relative);paths.set(relative,fs.statSync(file).size);
-  if(relative==='models/world.json'||relative.endsWith('manifest.json'))return new Response(fs.readFileSync(file));
+  if(relative==='models/'+WORLD_DATA_FILE||relative.endsWith('manifest.json'))return new Response(fs.readFileSync(file));
   if(relative.startsWith('bedroom-materials/')){materialRequests.push(url);if(holdMaterials)await materialGate;return new Response('exact-image-decoder-fixture');}
   return new Response(JSON.stringify({part:relative.slice(7,-4)}));
  };
@@ -49,6 +49,16 @@ function engine(){const e=Object.create(TownEngine.prototype);Object.assign(e,{
  e.state.ready=true;e.queueBedroom();assert(!requested.some(url=>url.includes(BEDROOM_PART)));await delay(1550);assert.equal(e.state.bedroom.status,'loading');assert.equal(e.state.ready,true);assert.equal(e.world.getObjectByName('hero_props'),undefined);
  const entry=e.teleport('bedroom');assert.equal(e.state.floor,0);assert.equal(e.state.bedroom.requested,true);e.cancelBedroomEntry();releaseMaterials();holdMaterials=false;assert.equal(await entry,false);assert.equal(e.state.floor,0);assert.equal(e.state.bedroom.status,'ready');assert(e.world.getObjectByName('hero_props'));assert.equal(e.slidingDoors.length,2);
  const total=requested.length;assert(await e.teleport('bedroom'));assert.equal(e.state.floor,1);assert.equal(e.yaw,Math.PI);e.enterHome();assert(await e.teleport('bedroom'));assert.equal(requested.length,total);assert.equal(e.slidingDoors.length,2);
+ // Drive the real controller continuously through the restored staircase in
+ // both directions, using the new collision data and an already loaded room.
+ e.state.mode='first';e.state.actor=null;e.state.bedroom.requested=false;e.yaw=0;
+ e.playerPosition.set(HOUSE.stairX,HOUSE.lower,-(HOUSE.stairY0-.15));e.keys.add('KeyW');
+ const stairFrames=Math.ceil((HOUSE.stairY1-HOUSE.stairY0+.35)/1.05*60);
+ for(let i=0;i<stairFrames;i++)e.move(1/60);
+ assert(e.playerPosition.z<-HOUSE.stairY1);assert.equal(e.playerPosition.y,HOUSE.upper);
+ e.yaw=Math.PI;for(let i=0;i<stairFrames;i++)e.move(1/60);e.keys.clear();
+ assert(e.playerPosition.z>-(HOUSE.stairY0+.01));assert.equal(e.playerPosition.y,HOUSE.lower);
+ console.log('PASS: actual controller continuously ascends and descends the restored Nobi staircase');
  // Slow room: a newer destination wins, including a staircase attempt.
  const slow=engine();slow.state.ready=true;slow.modelLoader={};let resolveRoom;let attempts=0;slow.loadBedroom=async()=>{attempts++;return await new Promise(r=>resolveRoom=()=>{slow.state.bedroom.status='ready';slow.state.bedroom.requested=false;r(true);});};
  const pending=slow.teleport('bedroom');assert.equal(slow.state.floor,0);slow.enterShizuka();resolveRoom();assert.equal(await pending,false);assert.equal(slow.state.house,'shizuka');assert.equal(attempts,1);
@@ -59,7 +69,7 @@ function engine(){const e=Object.create(TownEngine.prototype);Object.assign(e,{
  // Invalid cached metadata is evicted so a retry can recover without clearing storage.
  cache=memoryCache();global.caches={open:async()=>cache};const manifestUrl='/frank_worlds/bedroom-materials/manifest.json?v='+ASSET_VERSION;await cache.put(manifestUrl,new Response('invalid json'));
  const badManifest=engine();badManifest.state.ready=true;badManifest.modelLoader=new GLTFLoader();console.warn=()=>{};assert.equal(await badManifest.teleport('bedroom'),false);console.warn=warn;assert(!cache.saved.has(manifestUrl));assert(await badManifest.teleport('bedroom'));await settleAssetCache();
- const startupModelBytes=STARTUP_PARTS.reduce((n,p)=>n+fs.statSync('public/models/'+p+'.glb').size,fs.statSync('public/models/world.json').size);
+ const startupModelBytes=STARTUP_PARTS.reduce((n,p)=>n+fs.statSync('public/models/'+p+'.glb').size,fs.statSync('public/models/'+WORLD_DATA_FILE).size);
  const uniqueMaterials=[...new Set(materialRequests)].map(url=>new URL(url,'https://test.invalid').pathname.replace('/frank_worlds/',''));
  const deferredMaterialBytes=uniqueMaterials.reduce((n,p)=>n+fs.statSync('public/'+p).size,fs.statSync('public/bedroom-materials/manifest.json').size);
  const previousBlockingBytes=startupModelBytes+b.length+deferredMaterialBytes;

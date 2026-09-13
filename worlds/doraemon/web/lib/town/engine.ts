@@ -1,5 +1,5 @@
 import {restoreBedroomMaterials} from './bedroom-materials';
-import {STARTUP_PARTS,BEDROOM_PART,ASSET_VERSION,modelFile,modelVersion} from './model-manifest';
+import {STARTUP_PARTS,BEDROOM_PART,WORLD_DATA_FILE,NOBI_ASSET_VERSION,modelFile,modelVersion} from './model-manifest';
 import {RenderBudget} from './render-budget';
 import {TownVisibility} from './visibility';
 import {LoadProgress,boundedMap,withDeadline,fetchBytes,evictCachedAsset} from './loading';
@@ -77,7 +77,7 @@ export class TownEngine {
   const parts=STARTUP_PARTS;
   const tracker=new LoadProgress(parts.length+1,p=>{this.state.progress=p;this.emit();});
   this.state.loadingStage='正在打开街道和房屋';this.emit();
-  const dataTask=fetchBytes(assetPath('/models/world.json?v='+ASSET_VERSION),this.loadAbort.signal).then(async bytes=>{try{const value=JSON.parse(new TextDecoder().decode(bytes));if(!Array.isArray(value.colliders)||!value.actors)throw new Error('小镇地图数据不完整');tracker.update(parts.length,1);return value;}catch(e){await evictCachedAsset(assetPath('/models/world.json?v='+ASSET_VERSION));throw e;}});
+  const dataTask=fetchBytes(assetPath('/models/'+WORLD_DATA_FILE+'?v='+NOBI_ASSET_VERSION),this.loadAbort.signal).then(async bytes=>{try{const value=JSON.parse(new TextDecoder().decode(bytes));if(!Array.isArray(value.colliders)||!value.actors)throw new Error('小镇地图数据不完整');tracker.update(parts.length,1);return value;}catch(e){await evictCachedAsset(assetPath('/models/'+WORLD_DATA_FILE+'?v='+NOBI_ASSET_VERSION));throw e;}});
   const [gltfs,data]=await Promise.all([boundedMap(parts,this.quality?3:2,async(part,i)=>{
    let failure:unknown;
    for(let attempt=0;attempt<2;attempt++){
@@ -91,7 +91,10 @@ export class TownEngine {
   tracker.stage(92);this.state.loadingStage='正在布置房间和伙伴';this.emit();
 
   if(this.dead)return;this.assetRevision=(data as {revision:number}).revision;this.colliders=(data as {colliders:Collider[]}).colliders;this.groundSurfaces=(data as {walkableSurfaces?:GroundSurface[]}).walkableSurfaces??[];const landscape=data as {heightfield?:Heightfield;walkableOverlays?:WalkMesh[]};if(landscape.heightfield)setExpansionTerrain(landscape.heightfield,landscape.walkableOverlays);this.playerPosition.y=groundHeight(this.playerPosition.x,-this.playerPosition.z,.23,this.groundSurfaces);this.player.position.copy(this.playerPosition);this.world=new THREE.Group();this.ecosystem=new TownEcosystem(this.colliders,this.groundSurfaces,(id,clip)=>{const m=this.motions.get(id);if(m&&m.oneShotUntil<=this.elapsed)this.playClip(id,clip);});for(let i=0;i<gltfs.length;i++){
-   const gltf=gltfs[i];if(parts[i].startsWith('vehicles/')||parts[i].startsWith('gadgets/'))continue;if(parts[i].startsWith('fauna/')){this.ecosystem.addFauna(gltf,parts[i]==='fauna/cat'?'cat':'bird',this.world,parts[i].endsWith('_ash')?1:0);continue;}this.world.add(gltf.scene);
+   const gltf=gltfs[i];
+   // Keep cached neighbours intact; replace only the seven rebuilt Nobi layers.
+   if(parts[i]==='neighborhood-v21'){const removed:THREE.Object3D[]=[];gltf.scene.traverse(o=>{if(o.name.startsWith('v11_home_'))removed.push(o);});for(const o of removed)o.removeFromParent();}
+   if(parts[i].startsWith('vehicles/')||parts[i].startsWith('gadgets/'))continue;if(parts[i].startsWith('fauna/')){this.ecosystem.addFauna(gltf,parts[i]==='fauna/cat'?'cat':'bird',this.world,parts[i].endsWith('_ash')?1:0);continue;}this.world.add(gltf.scene);
    if(parts[i].startsWith('actors/')){const id=parts[i].split('/')[1].replace('-v11','');const root=gltf.scene.getObjectByName('actor_'+id);if(!root)throw new Error('Missing actor '+id);
     if(id!=='nobita'){const origin=(data as {actors:Record<string,[number,number,number]>}).actors['actor_'+id];if(origin)root.position.set(origin[0],origin[2],-origin[1]);}
     const mixer=new THREE.AnimationMixer(root);const actions=new Map(gltf.animations.filter(clip=>clip.name!=="Wave").map(clip=>[clip.name,mixer.clipAction(clip)]));
@@ -214,17 +217,16 @@ export class TownEngine {
  enterShizuka(floor=0){this.cancelBedroomEntry();this.adventure.onTeleport();this.playerPosition.set(-10.78,floor?2.94:.24,floor?19:21.0);this.player.position.copy(this.playerPosition);this.state.house='shizuka';this.state.inside=true;this.state.floor=floor;this.state.cutaway=true;this.state.actor=null;this.walkTarget=null;this.targetGoal.copy(this.playerPosition).set(-11.95,floor?3.3:1.3,18);this.target.copy(this.targetGoal);this.distance=15;this.layers();this.emit();}
  toggleSlidingDoor(name:string){const door=this.slidingDoors.find(d=>d.object.name===name);if(!door)return;door.target=door.target===0?door.travel:0;this.emit();}
  updateDoors(dt:number){for(const d of this.slidingDoors){const offset=THREE.MathUtils.damp(d.object.position[d.axis],d.target,10,dt);const key=d.axis==='x'?'x':'y';const next={...d.collider,[key]:d.origin+d.sign*offset};if(collides(this.playerPosition.x,-this.playerPosition.z,this.playerPosition.y,[next],.23))continue;d.object.position[d.axis]=offset;d.collider[key]=next[key];}}
- layers(){if(!this.world)return;const indoor=this.state.inside;const doll=this.state.mode==='orbit'&&(indoor||this.state.cutaway);const lower=doll&&this.state.floor===0;const bedroomDoll=doll&&this.state.house==='home',bedroomLower=bedroomDoll&&this.state.floor===0;this.player.visible=this.state.mode==='orbit';
+ layers(){if(!this.world)return;const indoor=this.state.inside;const doll=this.state.mode==='orbit'&&(indoor||this.state.cutaway);const homeDoll=doll&&this.state.house!=='shizuka',shizukaDoll=doll&&this.state.house==='shizuka';const lower=homeDoll&&this.state.floor===0;const bedroomDoll=doll&&this.state.house==='home',bedroomLower=bedroomDoll&&this.state.floor===0;this.player.visible=this.state.mode==='orbit';
   // A visited bedroom must not keep rendering in every outdoor shadow/refraction pass.
   if(this.bedroomRoot)this.bedroomRoot.visible=!this.mobile||(this.state.house==='home'&&this.state.floor===1);
   this.interiorLight?.setZone(this.state.house??null,this.state.floor,indoor||doll);
   const set=(name:string,v:boolean)=>{const o=this.world!.getObjectByName(name);if(o)o.visible=v;};
-  set('facade_roof',!doll);set('facade_upper',!doll&&!lower);set('facade_ground',!doll);set('home_roof',!doll);set('home_ceiling',!doll);set('home_eaves',!doll);
+  set('facade_roof',!homeDoll);set('facade_upper',!homeDoll&&!lower);set('facade_ground',!homeDoll);set('home_roof',!homeDoll);set('home_ceiling',!homeDoll);set('home_eaves',!homeDoll);
   set('home_upper',!lower);set('furniture_upper',!lower);set('actor_closet_toy',!lower);
-  set('home_front_upper',!doll);set('home_front_ground',!doll);
+  set('home_front_upper',!homeDoll);set('home_front_ground',!homeDoll);
   set('hero_floor',!bedroomLower);set('hero_props',!bedroomLower);set('hero_closet',!bedroomLower);set('hero_shell',!bedroomDoll);set('hero_front',!bedroomDoll);set('hero_ceiling',!bedroomDoll);
-  for(const [name,visible] of [['v9_hero_front_window',!doll&&!lower],['v9_hero_shell_window',!doll&&!lower],['v9_home_front_ground_window',!doll],['v9_home_front_upper_window',!doll],['v9_home_upper_window',!lower],['v9_furniture_upper',!lower]] as const)set(name,visible);
-  const homeDoll=doll&&this.state.house!=='shizuka',shizukaDoll=doll&&this.state.house==='shizuka';
+  for(const [name,visible] of [['v9_hero_front_window',!homeDoll&&!lower],['v9_hero_shell_window',!homeDoll&&!lower],['v9_home_front_ground_window',!homeDoll],['v9_home_front_upper_window',!homeDoll],['v9_home_upper_window',!lower],['v9_furniture_upper',!lower]] as const)set(name,visible);
   for(const id of ['home','shizuka']){
    const view=id==='home'?homeDoll:shizukaDoll;const hideUpper=view&&this.state.floor===0;
    for(const suffix of ['roof','front','upper_front'])set('v11_'+id+'_'+suffix,!view);

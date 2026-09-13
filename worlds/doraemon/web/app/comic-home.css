@@ -12,13 +12,7 @@
 .comic-home .hub-brand span { font: 700 clamp(23px, 2.6vw, 32px)/1.3 'Kaiti SC', STKaiti, KaiTi, 'Songti SC', serif; letter-spacing: .4px; }
 .comic-home .hub-header nav { flex-wrap: wrap; gap: 20px; }
 .comic-home .hub-header nav a { min-height: 44px; font-size: 14px; }
-.comic-hero { position: relative; isolation: isolate; min-height: 282px; display: flex; align-items: center; margin: 4px -12px 25px; padding: 30px 24px 36px; }
-.hero-art { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; object-fit: cover; object-position: right center; border-radius: 8px; }
-.hero-copy { width: min(790px, 70%); }
-.hero-eyebrow { font-size: 13px; letter-spacing: 2.5px; color: #516b70; margin-bottom: 14px !important; }
-.comic-home .comic-hero h1 { font: 700 clamp(32px, 3.7vw, 55px)/1.35 'Kaiti SC', STKaiti, KaiTi, 'Songti SC', Georgia, serif; text-wrap: balance; display: inline; background: linear-gradient(transparent 85%, #e9ac995d 85%, #e9ac995d 96%, transparent 96%); }
-.hero-description { max-width: 540px; margin-top: 20px !important; font-size: 16px; line-height: 1.8; color: #435f65; text-wrap: pretty; }
-.comic-home .world-grid { gap: 23px; }
+.comic-home .world-grid { gap: 23px; margin-top: 20px; }
 .comic-home .world-card { position: relative; border: 1.5px solid #52656a; border-radius: 3px 7px 4px 8px / 7px 3px 8px 3px; box-shadow: 3px 4px 0 #c3c7b929; background: #fffdf5; }
 .chapter-number { position: absolute; top: 12px; left: 12px; z-index: 1; display: grid; place-items: center; width: 35px; height: 34px; background: #fffdf2eb; border: 1px solid #607174; border-radius: 45% 55% 46% 54%; font: italic 700 18px/1 Georgia,serif; pointer-events: none; }
 .comic-home .world-image { aspect-ratio: 4/3; }
@@ -70,17 +64,9 @@
   .comic-home .hub-header { padding-top: calc(18px + env(safe-area-inset-top)); padding-bottom: 10px; gap: 10px; }
   .comic-home .hub-header nav { width: 100%; justify-content: flex-start; gap: 12px; }
   .comic-home .hub-header nav > a { font-size: 14px; }
-  .comic-home .hub-header .guest-link { display: inline-flex; }
   .comic-home .hub-header nav > button { font-size: 14px; }
   .comic-home .hub-header nav > .icon-button { display: inline-flex; }
   .comic-home .language-select { margin-left: auto; }
-  .comic-hero { min-height: 245px; margin: 0 -8px 22px; padding: 22px 12px; }
-  .hero-art { opacity: .64; object-position: 60% center; }
-  .comic-hero:after { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg,#faf9f4dc,transparent); }
-  .hero-copy { width: 100%; }
-  .comic-home .comic-hero h1 { font-size: clamp(29px,7.5vw,40px); line-height: 1.5; }
-  .hero-eyebrow { font-size: 12px; letter-spacing: 1.5px; }
-  .hero-description { font-size: 16px; max-width: 340px; }
   .comic-home .world-grid { grid-template-columns: minmax(0,1fr); gap: 22px; }
   .comic-home .world-image { aspect-ratio: 1.6; }
   .comic-home .world-card h2 { min-height: 0; font-size: 23px; }
