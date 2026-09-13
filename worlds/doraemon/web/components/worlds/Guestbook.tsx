@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowUpRight, Feather, Trash2 } from 'lucide-react';

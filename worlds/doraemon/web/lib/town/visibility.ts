@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 import * as THREE from 'three';
 
 /** Preserve gameplay/visibility flags while keeping distant geometry out of room passes. */

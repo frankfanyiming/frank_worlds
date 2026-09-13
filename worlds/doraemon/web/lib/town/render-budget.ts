@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 /** Keep touch resolution independent of expensive lighting and device DPR. */
 export class RenderBudget {
  readonly mobile:boolean;

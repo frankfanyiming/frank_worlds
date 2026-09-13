@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 export type ViewMode = 'orbit' | 'first';
 export type PlaceId = 'home' | 'bedroom' | 'lot' | 'shizuka' | 'suneo' | 'gian' | 'school' | 'station' | 'river' | 'bridge' | 'hill';
 export const TOWN_BOUNDS={x0:-42.7,x1:42.7,y0:-98.5,y1:38.1};

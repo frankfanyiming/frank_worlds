@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 /** Progress follows completed downloads AND decoding, never compressed Content-Length. */
 export class LoadProgress {
  private values:number[]; private last=0;

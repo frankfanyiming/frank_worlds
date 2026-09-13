@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+# SPDX-License-Identifier: MIT
+# XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 extends Node
 # Runtime-only mobile policy. Collision, animation speed and authored resources
 # stay intact. The browser's HTML UI has its own full-resolution surface.

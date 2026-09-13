@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+# SPDX-License-Identifier: MIT
+# XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 extends RefCounted
 ## Synchronous, small JSON mirror closes the Web frame-to-IDB commit window.
 ## Photos remain in userfs/IndexedDB; no image bytes are stored in localStorage.

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 // Embedded by export-native-web.py. Keep startup errors visible before loading Godot.
 const lang = new URLSearchParams(location.search).get('lang') || 'zh-CN';
 const copy = {
@@ -8,6 +11,15 @@ const copy = {
   ko: ['세계를 내려받고 있어요…', '연결이 끊겼어요. 다시 시도해 주세요.', '다시 시도', '장면을 여는 중…', '엔진을 불러오는 중…'],
 }[lang] || ['Downloading…', 'Unable to connect. Please retry.', 'Retry', 'Opening…', 'Loading engine…'];
 document.documentElement.lang = lang;
+const mobilePerformanceTip = {
+  "zh-CN": "手机操作卡顿时，建议用电脑打开，体验通常更流畅。",
+  "zh-TW": "手機操作卡頓時，建議用電腦開啟，體驗通常更流暢。",
+  "en": "Controls lagging on your phone? Try opening on a computer for a smoother experience.",
+  "ja": "スマートフォンで操作が重い場合は、パソコンで開くと快適に遊べることがあります。",
+  "ko": "휴대폰 조작이 버벅이면 컴퓨터에서 열어 보세요. 더 원활하게 즐길 수 있어요."
+}[lang] || 'Controls lagging on your phone? Try opening on a computer for a smoother experience.';
+const performanceNote = document.querySelector('#performance-note');
+if (performanceNote) performanceNote.textContent = mobilePerformanceTip;
 const statusPanel = document.querySelector('#status');
 const label = document.querySelector('#label');
 const progressBar = document.querySelector('#progress');
@@ -225,6 +237,7 @@ function installWorldUI() {
       for(const choice of data.actions||[]){const b=el('button','sheet-choice',choice.label);b.addEventListener('click',()=>action(data.kind==='friend'?'friend':'panel-button',choice.id));footer.append(b);}
     }
     if(!footer.children.length&&data.kind!=='menu'){const done=el('button','sheet-secondary',words[10]);done.addEventListener('click',closeSheet);footer.append(done);}
+    if(data.kind==='menu'||data.kind==='help') footer.append(el('p','mobile-performance-note',mobilePerformanceTip));
     if(!wasOpen)close.focus({preventScroll:true});
   }
   function showHelp(){helpOpen=true;action('external-lock',true);renderSheet({kind:'help',title:words[12],blocks:[{type:'text',text:`W A S D  ·  ${words[13]}\nShift  ·  ${words[14]}\n${words[15]}  ·  ◉ ↔\nE  ·  ${words[17]}\n${isFrog?'C':'V'}  ·  ${words[18]}${isFrog?'\nSpace  ·  '+words[16]:''}`} ]});}

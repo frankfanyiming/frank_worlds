@@ -10,9 +10,9 @@
 - **探索旅行蛙的小世界** — 青蛙与熊猫、两户住宅、串门、做饭、送礼、同行野餐与共同照片；进度保存在当前浏览器。
 - **欢迎光临侦探事务所** — 最新 Blender 普通车流版本的米花町。
 
-首页提供简体中文、繁體中文、日本語、한국어、English。来访本支持文字留言和非公开联系邮箱。个人分支可改造、发布、复制，并提交主世界合并提案。
+首页提供简体中文、繁體中文、日本語、한국어、English。留言板已下线，交流反馈请到作者的 X 账号。个人分支可改造、发布、复制，并提交主世界合并提案。
 
-共享服务目前部分请求收到上游 403，留言尚未恢复。首页、世界和本地朋友玩法不依赖该接口；问题可在 [X @FrankFYM001](https://x.com/FrankFYM001) 交流。抖音号：`frank001`；[小红书号：150015050](https://www.xiaohongshu.com/user/profile/55d96ee558944639c3ce03f1)。
+共创共享服务目前部分请求仍收到上游 403。首页、世界和本地朋友玩法不依赖该接口；问题可在 [X @FrankFYM001](https://x.com/FrankFYM001) 交流。抖音号：`frank001`；[小红书号：150015050](https://www.xiaohongshu.com/user/profile/55d96ee558944639c3ce03f1)。
 
 ## 共创
 
@@ -52,3 +52,14 @@ npm run build:pages
 纯热爱分享，不涉及任何商业组织，不涉及盈利。相关 IP 未取得授权，权利归各自权利人所有。希望大家基于热爱交流和使用；本声明不构成 IP 使用授权。
 
 旅行蛙与柯南的完整源模型压缩包已整理，公开上传待确认；当前 Git 包含可读源码和清单，网页运行包单独发布在 gh-pages。确认公开后会更新清单并开放自动下载。
+
+## 手机提示与代码出处
+
+手机控制卡顿时建议用电脑打开，通常会更流畅。首页和三个世界的手机入口均有提示，游戏上方提示可在当前页签收起；这不代表手机性能问题已经解决。
+
+本仓库已加入源码署名与构建来源标识：`xlands-frankfym001`。查看 [SOURCE.json](SOURCE.json)、[NOTICE](NOTICE) 和 [来源追溯说明](PROVENANCE.md)。发布包的 JS 保留作者、原始仓库和构建提交，`provenance.json` 可核对文件散列；无访客追踪，删除标识后的副本无法保证追溯。
+
+```sh
+python3 tools/stamp-source-provenance.py --check
+node tools/verify-build-provenance.mjs worlds/doraemon/web/dist-pages
+```

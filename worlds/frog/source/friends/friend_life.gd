@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+# SPDX-License-Identifier: MIT
+# XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 extends Node
 const Store = preload("res://friends/friend_state.gd")
 const Follow = preload("res://friends/friend_follow.gd")

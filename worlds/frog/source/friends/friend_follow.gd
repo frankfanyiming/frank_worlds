@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+# SPDX-License-Identifier: MIT
+# XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 extends RefCounted
 ## A ground graph sampled from the current room's actual static collision. The
 ## actor still uses move_and_slide; a graph path never writes its world position.

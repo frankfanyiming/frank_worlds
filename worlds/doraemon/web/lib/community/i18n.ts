@@ -1,5 +1,12 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 export const dictionaries = {
   'zh-CN': {
+    mobilePerformanceTip: "手机操作卡顿时，建议用电脑打开，体验通常更流畅。",
+    mobileTipTitle: "手机体验提示",
+    sourceAttribution: "项目出处",
+
     heroEyebrow: "三个故事，同一份热爱",
     heroTitle: "把喜欢的世界，走一遍。",
     heroDescription: "从熟悉的故事出发，在小世界里散步、探索，遇见朋友。",
@@ -216,6 +223,10 @@ export const dictionaries = {
     select: '选择',
   },
   'zh-TW': {
+    mobilePerformanceTip: "手機操作卡頓時，建議用電腦開啟，體驗通常更流暢。",
+    mobileTipTitle: "手機體驗提示",
+    sourceAttribution: "專案出處",
+
     heroEyebrow: "三個故事，同一份熱愛",
     heroTitle: "把喜歡的世界，走一遍。",
     heroDescription: "從熟悉的故事出發，在小世界裡散步、探索，遇見朋友。",
@@ -432,6 +443,10 @@ export const dictionaries = {
     select: '選擇',
   },
   en: {
+    mobilePerformanceTip: "Controls lagging on your phone? Try opening on a computer for a smoother experience.",
+    mobileTipTitle: "Mobile experience tip",
+    sourceAttribution: "Project origins",
+
     heroEyebrow: "Three stories. A shared love.",
     heroTitle: "Step into the worlds you love.",
     heroDescription: "Wander through familiar stories, explore little places and meet a friend along the way.",
@@ -653,6 +668,10 @@ export const dictionaries = {
     select: 'Select',
   },
   ja: {
+    mobilePerformanceTip: "スマートフォンで操作が重い場合は、パソコンで開くと快適に遊べることがあります。",
+    mobileTipTitle: "スマートフォンでのヒント",
+    sourceAttribution: "プロジェクトの出典",
+
     heroEyebrow: "三つの物語、同じ「好き」。",
     heroTitle: "好きな世界を、歩いてみよう。",
     heroDescription: "懐かしい物語から、小さな世界の散歩と探索へ。友だちにも会いに。",
@@ -873,6 +892,10 @@ export const dictionaries = {
     select: '選択',
   },
   ko: {
+    mobilePerformanceTip: "휴대폰 조작이 버벅이면 컴퓨터에서 열어 보세요. 더 원활하게 즐길 수 있어요.",
+    mobileTipTitle: "모바일 이용 안내",
+    sourceAttribution: "프로젝트 출처",
+
     heroEyebrow: "세 가지 이야기, 같은 애정.",
     heroTitle: "좋아하는 세계를 걸어 보세요.",
     heroDescription: "익숙한 이야기 속 작은 세계를 산책하고 탐험하며 친구를 만나세요.",

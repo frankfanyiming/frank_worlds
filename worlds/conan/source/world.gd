@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+# SPDX-License-Identifier: MIT
+# XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 extends Node3D
 const BUILDINGS=["mouri","kudo","agasa"]
 var specs:Dictionary={}

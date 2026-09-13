@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 import {restoreBedroomMaterials} from './bedroom-materials';
 import {STARTUP_PARTS,BEDROOM_PART,WORLD_DATA_FILE,NOBI_ASSET_VERSION,modelFile,modelVersion} from './model-manifest';
 import {RenderBudget} from './render-budget';

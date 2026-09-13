@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 import * as THREE from 'three';
 import {ASSET_VERSION,MOBILE_ASSET_VERSION} from './model-manifest';
 import {assetPath} from './asset-path';

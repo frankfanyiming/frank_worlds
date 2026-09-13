@@ -2,7 +2,8 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {runInNewContext} from 'node:vm';
 const source=await readFile(new URL('./native-loader.js',import.meta.url),'utf8');
-const install=source.slice(source.indexOf('function installTouchControls()'),source.indexOf('installWorldUI();')+'installWorldUI();'.length);
+const copy=source.slice(source.indexOf('const mobilePerformanceTip ='),source.indexOf('const performanceNote ='));
+const install=copy+source.slice(source.indexOf('function installTouchControls()'),source.indexOf('installWorldUI();')+'installWorldUI();'.length);
 class Surface {
  constructor(action){this.dataset=action?{action}:{};this.handlers={};this.style={};this.classes=new Set();this.classList={add:n=>this.classes.add(n),remove:n=>this.classes.delete(n),toggle:(n,on)=>on?this.classes.add(n):this.classes.delete(n)};this.captured=new Set();}
  addEventListener(type,fn){(this.handlers[type]??=[]).push(fn);}

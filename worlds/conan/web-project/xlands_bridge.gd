@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+# SPDX-License-Identifier: MIT
+# XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 extends Node
 # The browser owns one interface layer. Native controls keep their callbacks but
 # never paint behind a web sheet. Gameplay remains in the world scripts.

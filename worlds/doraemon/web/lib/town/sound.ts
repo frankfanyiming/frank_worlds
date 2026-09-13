@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 import {assetPath} from './asset-path';
 export type AudioState={enabled:boolean;music:number;ambience:number;track:string;error:string};
 export const INITIAL_AUDIO:AudioState={enabled:false,music:.28,ambience:.45,track:'原创 · 夏日口袋散步',error:''};

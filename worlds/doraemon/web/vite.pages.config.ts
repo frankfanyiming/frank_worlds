@@ -5,9 +5,10 @@ import {readdirSync,rmSync,statSync,writeFileSync,readFileSync} from 'node:fs';
 import {resolve,relative} from 'node:path';
 import {fileURLToPath,URL} from 'node:url';
 import {SHIPPED_MODEL_PARTS,STARTUP_PARTS,WORLD_DATA_FILE,modelFile} from './lib/town/model-manifest';
+import {buildProvenance} from './build/provenance';
 export default defineConfig({
  base:process.env.SITE_BASE || '/frank_worlds/',
- plugins:[react(),{name:'ship-runtime-assets-only',closeBundle(){
+ plugins:[react(),buildProvenance(),{name:'ship-runtime-assets-only',closeBundle(){
   const models=new Set(SHIPPED_MODEL_PARTS.map(name=>name+'.glb'));models.add('world.json');models.add(WORLD_DATA_FILE);
   rmSync(resolve('dist-pages/textures'),{recursive:true,force:true});
   const folder=resolve('dist-pages/models');

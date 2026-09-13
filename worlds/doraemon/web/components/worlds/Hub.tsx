@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
+// SPDX-License-Identifier: MIT
+// XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 'use client';
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import {
@@ -27,6 +30,7 @@ import type { World } from '@/lib/community/merge';
 import type { AgentConnection } from '@/lib/community/agent';
 import { Modal, WorldSelect, WORLDS, titleKey, worldKey } from './Common';
 import CreatorLinks from './CreatorLinks';
+import MobilePerformanceTip from './MobilePerformanceTip';
 import { CREATOR } from '@/lib/community/creator';
 import AgentDialog from './AgentDialog';
 import AdminPanel from './AdminPanel';
@@ -185,6 +189,7 @@ export default function WorldHub() {
             </button>
           </div>
         </div>
+        <MobilePerformanceTip t={t} />
         {world === 'doraemon' ? (
           <Suspense
             fallback={<div className="xl-full-loading">{t('preparing')}</div>}
@@ -245,6 +250,7 @@ export default function WorldHub() {
         </header>
         <main>
           <h1 className="sr-only">{t('brand')}</h1>
+          <p className="mobile-performance-home">{t('mobilePerformanceTip')}</p>
           <section className="world-grid" aria-label={t('world')}>
             {WORLDS.map((w, i) => (
               <article className={'world-card world-' + w} key={w}>
@@ -403,7 +409,7 @@ export default function WorldHub() {
           </section>
         </main>
         <footer className="hub-footer">
-          <span>{t('brand')}</span>
+          <span>{t('brand')} · Frank / @FrankFYM001</span>
           <div>
             <a
               href="https://github.com/frankfanyiming/frank_worlds"
@@ -414,6 +420,7 @@ export default function WorldHub() {
               <ArrowUpRight size={14} />
             </a>
             <a href="#creator">{t('socialTitle')}<ArrowUpRight size={14}/></a>
+            <a href="https://github.com/frankfanyiming/frank_worlds/blob/main/PROVENANCE.md" target="_blank" rel="noopener noreferrer">{t('sourceAttribution')}<ArrowUpRight size={14}/></a>
             <button
               className="link-button"
               onClick={async () => {
@@ -547,7 +554,7 @@ function NativeWorld({
         key={world + locale + retry}
         title={t(titleKey[world])}
         src={
-          assetPath('worlds/' + world + '/index.html') + '?v=' + 'mobile-speed-24' + '&lang=' +
+          assetPath('worlds/' + world + '/index.html') + '?v=' + 'mobile-tip-28' + '&lang=' +
           locale +
           '&sound=' +
           (initialSound.current ? '1' : '0')
