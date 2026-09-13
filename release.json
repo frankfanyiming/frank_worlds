@@ -1,9 +1,9 @@
 {
-  "sourceCommit": "82ee053d8116f322f38db2ebe9a38aa1c5cdc032",
-  "revision": 25,
+  "sourceCommit": "b6b8a0010a74107bf817b8d433dc99e152cf9f32",
+  "revision": 26,
   "assetRevision": 24,
   "date": "2026-09-13",
-  "summary": "Separate mobile speed from desktop visuals across all three worlds; lighter native packs, lower render budgets, retained character motion and visible graphics recovery",
+  "summary": "Comic homepage with the original covers, making-of notes and Skills, social links and explicit failure recovery; revision 24 world assets retained",
   "worlds": [
     "doraemon",
     "frog",
@@ -11,7 +11,7 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-13T09:51:57.379717+00:00",
+  "updatedAt": "2026-09-13T12:46:52.137080+00:00",
   "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
   "mobile": "30 fps target, bounded adaptive drawing pixels, reduced local shadow passes and mobile visual derivatives; PC original assets retained",
   "conan": "Pavement-to-Mouri stair access, supported Agasa garage and continuous rear apron; fitted CC0 furniture with recorded provenance",
@@ -29,7 +29,7 @@
       "chunks": 13
     }
   },
-  "guestbookLayout": "Narrow-screen single-column fields; all form bounds and touch targets checked at 360, 390 and 844 CSS px",
+  "guestbookLayout": "Responsive form retained; explicit unavailable state and manual X contact route. Revision 26 has not been browser visually tested.",
   "friendLife": "Continuous collision-aware companion following across the creek and outside the former navigation bounds; daily cooking, gifts, picnic and immediate-refresh save recovery retained",
   "openFurniture": "https://github.com/frankfanyiming/frank_worlds/blob/main/docs/conan-open-furniture.md",
   "doraemonMobile": {
@@ -59,14 +59,21 @@
     }
   },
   "physicalPhoneTested": false,
-  "homepageRevision": 25,
+  "homepageRevision": 26,
   "worldSourceCommit": "e9955b0344e8989fee1b419af86a09fd186f1fca",
   "homepage": {
     "socialUrl": "https://x.com/FrankFYM001",
+    "xiaohongshuUrl": "https://www.xiaohongshu.com/user/profile/55d96ee558944639c3ce03f1",
+    "douyinHandle": "frank001",
+    "makingOf": "https://xgenlabs.feishu.cn/docx/EHsmd08qGo3T7nxWKIMchlcGnvb",
     "coverBytes": 384870,
-    "coreAssetBytes": 881695,
-    "gzipEstimateBytes": 509816,
+    "originalCoversPreserved": true,
+    "coreAssetBytes": 1005234,
+    "gzipEstimateBytes": 617412,
     "staticFallback": true,
-    "worldAssetsChanged": false
+    "runtimeRecovery": true,
+    "worldAssetsChanged": false,
+    "guestbookBackendFixed": false,
+    "browserVisualTested": false
   }
 }
