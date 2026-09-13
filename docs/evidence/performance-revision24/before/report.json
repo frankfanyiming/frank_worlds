@@ -1,0 +1,458 @@
+{
+  "environment": "Desktop Chrome Metal; touch emulation, DPR 3; not a physical phone",
+  "cpuThrottle": 4,
+  "url": "http://127.0.0.1:8795/frank_worlds/",
+  "worlds": [
+    {
+      "world": "frog",
+      "views": [
+        {
+          "name": "street-portrait",
+          "elapsedMs": 8016,
+          "paintedFps": 59.9,
+          "browserP95Ms": 16.700000000000728,
+          "meanDrawCalls": 472,
+          "meanTriangles": 19278336,
+          "maxTriangles": 19278336,
+          "canvas": {
+            "width": 1170,
+            "height": 2532,
+            "cssWidth": 390,
+            "cssHeight": 844
+          },
+          "buffers": [
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            },
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            }
+          ],
+          "diagnostics": null
+        },
+        {
+          "name": "street-landscape",
+          "elapsedMs": 8016,
+          "paintedFps": 59.9,
+          "browserP95Ms": 16.700000000004366,
+          "meanDrawCalls": 365,
+          "meanTriangles": 8528411,
+          "maxTriangles": 8528411,
+          "canvas": {
+            "width": 2532,
+            "height": 1170,
+            "cssWidth": 844,
+            "cssHeight": 390
+          },
+          "buffers": [
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            },
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            },
+            {
+              "samples": 4,
+              "width": 2532,
+              "height": 1170
+            },
+            {
+              "samples": 4,
+              "width": 2532,
+              "height": 1170
+            }
+          ],
+          "diagnostics": null
+        }
+      ],
+      "errors": [],
+      "startupMs": 12194
+    },
+    {
+      "world": "conan",
+      "views": [
+        {
+          "name": "street-portrait",
+          "elapsedMs": 8283,
+          "paintedFps": 43.3,
+          "browserP95Ms": 33.400000000001455,
+          "meanDrawCalls": 3754,
+          "meanTriangles": 7949489,
+          "maxTriangles": 8955023,
+          "canvas": {
+            "width": 1170,
+            "height": 2532,
+            "cssWidth": 390,
+            "cssHeight": 844
+          },
+          "buffers": [
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            },
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            }
+          ],
+          "diagnostics": null
+        },
+        {
+          "name": "street-landscape",
+          "elapsedMs": 8050,
+          "paintedFps": 34.5,
+          "browserP95Ms": 33.400000000001455,
+          "meanDrawCalls": 4671,
+          "meanTriangles": 10792196,
+          "maxTriangles": 11249548,
+          "canvas": {
+            "width": 2532,
+            "height": 1170,
+            "cssWidth": 844,
+            "cssHeight": 390
+          },
+          "buffers": [
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            },
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            },
+            {
+              "samples": 4,
+              "width": 2532,
+              "height": 1170
+            },
+            {
+              "samples": 4,
+              "width": 2532,
+              "height": 1170
+            }
+          ],
+          "diagnostics": null
+        },
+        {
+          "name": "office",
+          "elapsedMs": 8016,
+          "paintedFps": 53,
+          "browserP95Ms": 33.400000000001455,
+          "meanDrawCalls": 2857,
+          "meanTriangles": 7201220,
+          "maxTriangles": 7201220,
+          "canvas": {
+            "width": 2532,
+            "height": 1170,
+            "cssWidth": 844,
+            "cssHeight": 390
+          },
+          "buffers": [
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            },
+            {
+              "samples": 4,
+              "width": 1170,
+              "height": 2532
+            },
+            {
+              "samples": 4,
+              "width": 2532,
+              "height": 1170
+            },
+            {
+              "samples": 4,
+              "width": 2532,
+              "height": 1170
+            }
+          ],
+          "diagnostics": null
+        }
+      ],
+      "errors": [],
+      "startupMs": 23580,
+      "destinations": "街区\n↗\n切换视角\n↗\n昼夜\n↗\n毛利楼\n门外\n↗\n白罗咖啡厅\n↗\n咖啡厅后仓库\n↗\n咖啡厅洗手间\n↗\n毛利侦探事务所\n↗\n事务所茶水间与档案\n↗\n毛利家客厅与厨房\n↗\n小五郎和柯南的卧室\n↗\n小兰的卧室\n↗\n毛利家洗漱间\n↗\n工藤家\n门外\n↗\n工藤家 · 玄关\n↗\n工藤家 · 厨房餐厅\n↗\n工藤家 · 客厅\n↗\n工藤家 · 主卧\n↗\n工藤家 · 新一卧室\n↗\n工藤家 · 二楼客卧\n↗\n工藤家 · 后翼客房\n↗\n工藤家 · 后翼卧室\n↗\n工藤家 · 后翼上层客房\n↗\n工藤家 · 挑空书房\n↗\n博士家\n门外\n↗\n阿笠宅 · 浴室\n↗\n阿笠宅 · 环形厨房\n↗\n阿笠宅 · 双床休息区\n↗\n阿笠宅 · 客厅\n↗\n阿笠宅 · 圆塔楼梯\n↗\n阿笠宅 · 二楼环廊\n↗\n阿笠宅 · 地下研究室\n↗\n阿笠宅 · 发明工作间\n↗\n阿笠宅 · 后车库\n↗"
+    },
+    {
+      "world": "doraemon",
+      "views": [
+        {
+          "name": "street-portrait",
+          "elapsedMs": 8000,
+          "paintedFps": 59.9,
+          "browserP95Ms": 16.700000000000728,
+          "meanDrawCalls": 488,
+          "meanTriangles": 1199172,
+          "maxTriangles": 2578519,
+          "canvas": {
+            "width": 526,
+            "height": 1071,
+            "cssWidth": 390,
+            "cssHeight": 794
+          },
+          "buffers": [],
+          "diagnostics": {
+            "rangeCulledMeshes": 0,
+            "visibleTriangles": 1046171,
+            "heaviestMeshes": [
+              {
+                "name": "nobita_skin",
+                "triangles": 95000
+              },
+              {
+                "name": "doraemon_UV_topology",
+                "triangles": 67921
+              },
+              {
+                "name": "tamako_skin",
+                "triangles": 65000
+              },
+              {
+                "name": "nobisuke_skin",
+                "triangles": 65000
+              },
+              {
+                "name": "roof_town_runtime_cell_-1,-2",
+                "triangles": 39123
+              },
+              {
+                "name": "球体003",
+                "triangles": 36022
+              },
+              {
+                "name": "doraemon_UV_topology_1",
+                "triangles": 27078
+              },
+              {
+                "name": "camellia_fluted_trunk_V7001_1",
+                "triangles": 26622
+              },
+              {
+                "name": "camellia_fluted_trunk_V7001_1",
+                "triangles": 26622
+              },
+              {
+                "name": "v9_garden_3",
+                "triangles": 22572
+              },
+              {
+                "name": "v9_garden_13",
+                "triangles": 20735
+              },
+              {
+                "name": "camellia_fluted_trunk001_V7001_1",
+                "triangles": 16861
+              }
+            ],
+            "refractive": [],
+            "profile": "mobile",
+            "pixelRatio": 1.35,
+            "antialias": true,
+            "textures": 144,
+            "geometries": 582,
+            "estimatedMaterialTextureMiB": 234,
+            "bedroomVisible": false,
+            "averageCalls": 496,
+            "averageTriangles": 1238930,
+            "averageSubmissionMs": 7.11,
+            "peakTriangles": 2550523,
+            "estimatedFps": 60,
+            "shaderErrors": [],
+            "calls": 409,
+            "triangles": 1051559
+          }
+        },
+        {
+          "name": "street-landscape",
+          "elapsedMs": 8000,
+          "paintedFps": 59.9,
+          "browserP95Ms": 16.799999999999272,
+          "meanDrawCalls": 793,
+          "meanTriangles": 1849665,
+          "maxTriangles": 3197807,
+          "canvas": {
+            "width": 1139,
+            "height": 464,
+            "cssWidth": 844,
+            "cssHeight": 344
+          },
+          "buffers": [],
+          "diagnostics": {
+            "rangeCulledMeshes": 0,
+            "visibleTriangles": 1706194,
+            "heaviestMeshes": [
+              {
+                "name": "nobita_skin",
+                "triangles": 95000
+              },
+              {
+                "name": "shizuka_skin",
+                "triangles": 94999
+              },
+              {
+                "name": "suneo_skin",
+                "triangles": 94999
+              },
+              {
+                "name": "doraemon_UV_topology",
+                "triangles": 67921
+              },
+              {
+                "name": "tamako_skin",
+                "triangles": 65000
+              },
+              {
+                "name": "nobisuke_skin",
+                "triangles": 65000
+              },
+              {
+                "name": "roof_town_runtime_cell_-1,-2",
+                "triangles": 39123
+              },
+              {
+                "name": "球体003",
+                "triangles": 36022
+              },
+              {
+                "name": "doraemon_UV_topology_1",
+                "triangles": 27078
+              },
+              {
+                "name": "camellia_fluted_trunk_V7001_1",
+                "triangles": 26622
+              },
+              {
+                "name": "camellia_fluted_trunk_V7001_1",
+                "triangles": 26622
+              },
+              {
+                "name": "v9_garden_3",
+                "triangles": 22572
+              }
+            ],
+            "refractive": [],
+            "profile": "mobile",
+            "pixelRatio": 1.35,
+            "antialias": true,
+            "textures": 217,
+            "geometries": 710,
+            "estimatedMaterialTextureMiB": 234,
+            "bedroomVisible": false,
+            "averageCalls": 813,
+            "averageTriangles": 1888994,
+            "averageSubmissionMs": 10.3,
+            "peakTriangles": 3182958,
+            "estimatedFps": 60,
+            "shaderErrors": [],
+            "calls": 731,
+            "triangles": 1711880
+          }
+        },
+        {
+          "name": "bedroom",
+          "elapsedMs": 8017,
+          "paintedFps": 59.1,
+          "browserP95Ms": 16.799999999999272,
+          "meanDrawCalls": 655,
+          "meanTriangles": 1364261,
+          "maxTriangles": 2885371,
+          "canvas": {
+            "width": 1139,
+            "height": 464,
+            "cssWidth": 844,
+            "cssHeight": 344
+          },
+          "buffers": [],
+          "diagnostics": {
+            "rangeCulledMeshes": 796,
+            "visibleTriangles": 1202697,
+            "heaviestMeshes": [
+              {
+                "name": "suneo_skin",
+                "triangles": 94999
+              },
+              {
+                "name": "doraemon_UV_topology",
+                "triangles": 67921
+              },
+              {
+                "name": "nobisuke_skin",
+                "triangles": 65000
+              },
+              {
+                "name": "curved_cast_aluminium_leg005_5",
+                "triangles": 52001
+              },
+              {
+                "name": "V9_extruded_lower_sliding_rail027_1",
+                "triangles": 35664
+              },
+              {
+                "name": "V9_extruded_lower_sliding_rail030_1",
+                "triangles": 32102
+              },
+              {
+                "name": "doraemon_UV_topology_1",
+                "triangles": 27078
+              },
+              {
+                "name": "camellia_fluted_trunk_V7001_1",
+                "triangles": 26622
+              },
+              {
+                "name": "v9_garden_3",
+                "triangles": 22572
+              },
+              {
+                "name": "v9_garden_13",
+                "triangles": 20735
+              },
+              {
+                "name": "camellia_fluted_trunk001_V7001_1",
+                "triangles": 16861
+              },
+              {
+                "name": "camellia_fluted_trunk001_V7001_1",
+                "triangles": 16861
+              }
+            ],
+            "refractive": [],
+            "profile": "mobile",
+            "pixelRatio": 1.35,
+            "antialias": true,
+            "textures": 289,
+            "geometries": 895,
+            "estimatedMaterialTextureMiB": 365,
+            "bedroomVisible": true,
+            "averageCalls": 643,
+            "averageTriangles": 1358144,
+            "averageSubmissionMs": 11.96,
+            "peakTriangles": 2883153,
+            "estimatedFps": 60,
+            "shaderErrors": [],
+            "calls": 548,
+            "triangles": 1203618
+          }
+        }
+      ],
+      "errors": [],
+      "startupMs": 3294
+    }
+  ],
+  "errors": []
+}

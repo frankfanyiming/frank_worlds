@@ -1,0 +1,165 @@
+{
+  "url": "http://127.0.0.1:8796/frank_worlds/",
+  "world": "conan",
+  "environment": "Desktop Chrome; touch emulation",
+  "physicalPhone": false,
+  "checks": [
+    {
+      "name": "correct resource and rendering profile",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 878,
+        "fps": 8,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 740575,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.669532775879,
+        "videoMemoryMiB": 366.065553665161
+      },
+      "place": "街巷与住宅\n15:30"
+    },
+    {
+      "name": "毛利侦探事务所",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 537,
+        "fps": 29,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 703689,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.669532775879,
+        "videoMemoryMiB": 370.081697463989
+      },
+      "place": "毛利侦探事务所\n15:30"
+    },
+    {
+      "name": "阿笠宅 · 环形厨房",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 441,
+        "fps": 30,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 560376,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.669532775879,
+        "videoMemoryMiB": 370.081697463989
+      },
+      "place": "阿笠宅 · 环形厨房\n15:30"
+    },
+    {
+      "name": "阿笠宅 · 后车库",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 118,
+        "fps": 17,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 295584,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.669532775879,
+        "videoMemoryMiB": 370.081697463989
+      },
+      "place": "阿笠宅 · 后车库\n15:30"
+    },
+    {
+      "name": "landscape",
+      "coarse": true,
+      "canvas": [
+        844,
+        344
+      ],
+      "css": [
+        844,
+        344
+      ],
+      "health": {
+        "drawCalls": 351,
+        "fps": 30,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 453180,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.079811096191,
+        "videoMemoryMiB": 369.491975784302
+      },
+      "place": "阿笠宅 · 后车库\n15:30"
+    },
+    {
+      "name": "real context loss and retry",
+      "coarse": true,
+      "canvas": [
+        844,
+        344
+      ],
+      "css": [
+        844,
+        344
+      ],
+      "health": {
+        "drawCalls": 1094,
+        "fps": 1,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 894414,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.079811096191,
+        "videoMemoryMiB": 365.475831985474
+      },
+      "place": "街巷与住宅\n15:30"
+    }
+  ],
+  "manifests": [
+    "http://127.0.0.1:8796/frank_worlds/worlds/conan/mobile/world-pack.json",
+    "http://127.0.0.1:8796/frank_worlds/worlds/conan/mobile/world-pack.json"
+  ],
+  "errors": [],
+  "environmentErrors": [],
+  "passed": true
+}

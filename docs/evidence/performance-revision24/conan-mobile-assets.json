@@ -1,0 +1,1335 @@
+{
+  "world": "conan",
+  "source": "/Users/frank/Documents/Codex/2026-09-10/kan/work/frank_worlds/worlds/conan/web-project",
+  "dest": "/Users/frank/Documents/Codex/2026-09-10/kan/work/native-mobile24/conan",
+  "sourceFilesPreserved": true,
+  "geometryAndAnimationPreserved": true,
+  "images": [
+    {
+      "file": "assets/agasa_Color_0ab52d1c-e1b8-4d61-b5d1-5034297fd660.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/agasa_NormalGL_0ab52d1c-e1b8-4d61-b5d1-5034297fd660.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/agasa_ORM_0ab52d1c-e1b8-4d61-b5d1-5034297fd660.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/beetle_tripo_model_basecolor.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/beetle_tripo_model_metallic-tripo_model_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/beetle_tripo_model_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_bed_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_bed_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_bed_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_bed_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_cover_arm_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_cover_arm_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_cover_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_cover_diff_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_cover_nor_gl_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_paper_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_paper_diff_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_paper_nor_gl_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_paper_roughness_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_book_encyclopedia_set_01_paper_roughness_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_desk_lamp_arm_01_arm_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_desk_lamp_arm_01_arm_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_desk_lamp_arm_01_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_desk_lamp_arm_01_diff_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_desk_lamp_arm_01_nor_gl_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_floor_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_floor_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_floor_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_floor_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_floor_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_floor_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_garden_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_garden_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_garden_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_garden_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_garden_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_garden_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_leaf_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_leaf_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_leaf_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_leaf_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_leaf_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_leaf_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_metal_office_desk_arm_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_metal_office_desk_arm_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_metal_office_desk_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_metal_office_desk_diff_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_metal_office_desk_nor_gl_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_mineral_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_mineral_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_mineral_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_mineral_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_mineral_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_mineral_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_modern_wooden_cabinet_arm_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_modern_wooden_cabinet_arm_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_modern_wooden_cabinet_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_modern_wooden_cabinet_diff_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_modern_wooden_cabinet_nor_gl_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_oak_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_oak_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_oak_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_oak_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_oak_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_oak_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_plaster_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_plaster_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_plaster_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_plaster_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_plaster_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_plaster_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_purple_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_purple_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_purple_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_purple_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_rug_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_rug_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_rug_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_rug_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_tile_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_tile_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_tile_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_tile_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_tile_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_tile_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_accessories_arm_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_accessories_arm_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_accessories_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_accessories_diff_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_accessories_nor_gl_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_arm_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_arm_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_diff_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_vintage_radio_transceiver_nor_gl_1k.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_walnut_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_walnut_albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/agasa_walnut_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_walnut_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_walnut_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/agasa_walnut_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo-open-furniture_book_encyclopedia_set_01_cover_arm_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo-open-furniture_book_encyclopedia_set_01_cover_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo-open-furniture_book_encyclopedia_set_01_cover_nor_gl_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo-open-furniture_book_encyclopedia_set_01_paper_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo-open-furniture_book_encyclopedia_set_01_paper_nor_gl_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo-open-furniture_book_encyclopedia_set_01_paper_roughness_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_10.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_13.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_16.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_19.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_22.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_25.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_28.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_4.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_6.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_8.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_albedo_8.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/kudo_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_12.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_12.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_15.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_15.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_18.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_18.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_21.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_21.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_24.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_24.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_27.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_27.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_3.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_3.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_5.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_5.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_9.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_normal_9.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_11.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_11.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_14.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_14.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_17.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_17.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_20.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_20.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_23.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_23.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_26.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_26.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_29.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_29.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_7.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/kudo_roughness_7.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture_book_encyclopedia_set_01_cover_arm_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture_book_encyclopedia_set_01_cover_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture_book_encyclopedia_set_01_cover_nor_gl_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture_book_encyclopedia_set_01_paper_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture_book_encyclopedia_set_01_paper_nor_gl_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture_book_encyclopedia_set_01_paper_roughness_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture_desk_lamp_arm_01_arm_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture_desk_lamp_arm_01_diff_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture_desk_lamp_arm_01_nor_gl_1k.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Exterior_warm_stucco.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Exterior_warm_stucco.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Mouri_Cream_interior.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Mouri_Cream_interior.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Mouri_Home_pale_green.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Mouri_Home_pale_green.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Mouri_Red_lacquer_wood.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Mouri_Red_lacquer_wood.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_V3_Polished_oak.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_V3_Polished_oak.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Wall_powder_blue.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_M_Wall_powder_blue.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/mouri_albedo_14.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/mouri_albedo_16.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/mouri_albedo_19.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/mouri_albedo_5.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/mouri_albedo_6.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/mouri_albedo_8.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/buildings/mouri_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_10.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_10.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_13.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_13.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_15.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_15.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_18.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_18.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_3.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_4.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_7.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_normal_7.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_12.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_12.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_17.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_17.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_20.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_20.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_5.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_6.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_9.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/buildings/mouri_roughness_9.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/conan_tripo_model_basecolor.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/conan_tripo_model_metallic-tripo_model_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/conan_tripo_model_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/haibara_Color_072e8ad2-5f56-49b9-92c8-83b8ce291aa1.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/haibara_NormalGL_072e8ad2-5f56-49b9-92c8-83b8ce291aa1.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/haibara_ORM_072e8ad2-5f56-49b9-92c8-83b8ce291aa1.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/kogoro_Color_efc231ac-2159-4fe1-9eab-8c3db4e88534.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/kogoro_NormalGL_efc231ac-2159-4fe1-9eab-8c3db4e88534.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/kogoro_ORM_efc231ac-2159-4fe1-9eab-8c3db4e88534.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/asphalt_02/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/asphalt_02/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/asphalt_02/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/beika_upholstery/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/beika_upholstery/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/beika_upholstery/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/brown_leather/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/brown_leather/ao.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/brown_leather/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/brown_leather/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/brown_mud_dry/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/brown_mud_dry/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/brown_mud_dry/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/concrete_wall_005/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/concrete_wall_005/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/concrete_wall_005/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/fine_grained_wood/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/fine_grained_wood/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/fine_grained_wood/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/japanese_cedar_planks/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/japanese_cedar_planks/ao.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/japanese_cedar_planks/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/japanese_cedar_planks/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/japanese_zelkova_bark/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/japanese_zelkova_bark/ao.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/japanese_zelkova_bark/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/japanese_zelkova_bark/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/leafy_grass/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/leafy_grass/ao.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/leafy_grass/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/leafy_grass/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/library_heritage_rug/albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/library_heritage_rug/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/library_heritage_rug/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/oak_veneer_02/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/oak_veneer_02/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/oak_veneer_02/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/painted_plaster_wall/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/painted_plaster_wall/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/painted_plaster_wall/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/rough_linen/albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pbr/rough_linen/normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pbr/rough_linen/roughness.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pedestrian_f_tripo_model_basecolor.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pedestrian_f_tripo_model_metallic-tripo_model_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pedestrian_f_tripo_model_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pedestrian_m_tripo_model_basecolor.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/pedestrian_m_tripo_model_metallic-tripo_model_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/pedestrian_m_tripo_model_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/ran_Color_da1cc9e8-248d-437e-beaf-51773d1b78e3.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/ran_NormalGL_da1cc9e8-248d-437e-beaf-51773d1b78e3.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/ran_ORM_da1cc9e8-248d-437e-beaf-51773d1b78e3.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/sedan_tripo_model_basecolor.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/sedan_tripo_model_metallic-tripo_model_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/sedan_tripo_model_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/hatchback_paint_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/hatchback_paint_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/hatchback_rubber_basecolor.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/vehicles/hatchback_rubber_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/hatchback_rubber_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/hatchback_seat_fabric_basecolor.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/vehicles/hatchback_seat_fabric_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/hatchback_seat_fabric_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/pickup_paint_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/pickup_paint_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/pickup_rubber_basecolor.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/vehicles/pickup_rubber_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/pickup_rubber_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/pickup_seat_fabric_basecolor.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/vehicles/pickup_seat_fabric_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/pickup_seat_fabric_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/van_Vehicle_ceramic_cream_paint_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/van_Vehicle_ceramic_cream_paint_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/van_Vehicle_dashboard_vinyl_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/van_Vehicle_dashboard_vinyl_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/van_Vehicle_seat_woven_cloth_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/van_Vehicle_seat_woven_cloth_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/van_Vehicle_tyre_rubber_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/vehicles/van_Vehicle_tyre_rubber_roughness.png.import",
+      "maxDimension": 512
+    }
+  ],
+  "glbs": [
+    {
+      "file": "assets/agasa.glb",
+      "before": 1184556,
+      "after": 1039256,
+      "images": 2,
+      "sourceSha256": "28230b5871c5cb0c2775e2d0dcbc377f01c78e9c69b7425cc359462325eb0985",
+      "sha256": "7d98b19d1acf2ecb7fbbd884463f5002d2acb175bec9ddd9f51446839015d9ff"
+    },
+    {
+      "file": "assets/beetle.glb",
+      "before": 13124584,
+      "after": 2522460,
+      "images": 3,
+      "sourceSha256": "3e5ddfd72286f0c807e7c41ecde8ba914ebaf4c483a57bd07093d7240f68756e",
+      "sha256": "8149a947f435a020572dafb7c2d2898db6be6e33e118d0d6d4ac3402f5dc91c5"
+    },
+    {
+      "file": "assets/buildings/agasa.glb",
+      "before": 45209344,
+      "after": 37107452,
+      "images": 29,
+      "sourceSha256": "571eee95fda4b10ed55357c8f0d68e3518c52eedacc0ceea9f9ebddbb083ee02",
+      "sha256": "830a4c4203e22a111f1c64725bd22e1bc53eb50f2bcb0fe8d60191349a71b094"
+    },
+    {
+      "file": "assets/buildings/kudo-open-furniture.glb",
+      "before": 2820988,
+      "after": 2409108,
+      "images": 6,
+      "sourceSha256": "07e57430c3a599f79994042ba6f1009e9b8685971af15b62790040bf56bb7d6a",
+      "sha256": "26bd0f50209cd79272bb969891f556016debd7eb3897bd52d0cdc74dc27f142c"
+    },
+    {
+      "file": "assets/buildings/kudo.glb",
+      "before": 26080720,
+      "after": 23268864,
+      "images": 30,
+      "sourceSha256": "b06a2a859c3efa59096d45ebc9a93cceed9fe37ae460db7a35a49f8b5106ad09",
+      "sha256": "19095dffe812be81d5a3a9e23e853555f210cd6b40c4d37de917c69cf5f30c16"
+    },
+    {
+      "file": "assets/buildings/mouri-open-furniture.glb",
+      "before": 2905828,
+      "after": 2493944,
+      "images": 6,
+      "sourceSha256": "f8375d6d08bf5cee3271ac3da9b0717df580130d28999b355c5008d33d4bd450",
+      "sha256": "67ecbcefe28d1e16c9c492c1b569a2deef5eca9cc164314a266650503bff5e0e"
+    },
+    {
+      "file": "assets/buildings/mouri.glb",
+      "before": 31647668,
+      "after": 29962976,
+      "images": 25,
+      "sourceSha256": "16a7d16978d82d456a80818d5abc3e0f371b0bd8d0ed28be81472f37a9d1a6d2",
+      "sha256": "30a2125089dc24f6793e58e14e8b9260baab38ce72b624dbfec19e27f83030ca"
+    },
+    {
+      "file": "assets/conan.glb",
+      "before": 1463756,
+      "after": 1321852,
+      "images": 2,
+      "sourceSha256": "0fda5f9f9d35433a6c418ad2841a0c6d569f43616948cd6c708a7b34f85abc8d",
+      "sha256": "1d39d4d58a197508a164bb423d4ac6cb74464516fe5fdade1b7cadb9282bb332"
+    },
+    {
+      "file": "assets/haibara.glb",
+      "before": 7643748,
+      "after": 5956012,
+      "images": 3,
+      "sourceSha256": "f88524d1d4d9cf3354ae5a6091acaffe934f4ab0af160fe7dc0682281adc8e90",
+      "sha256": "932b0965ebfc4a670272c5b4ede30f2783ee16803e07f842be9589567ad9aa1c"
+    },
+    {
+      "file": "assets/kogoro.glb",
+      "before": 9935836,
+      "after": 8267248,
+      "images": 3,
+      "sourceSha256": "a10cd7fb7c774579af8529a9dd146b42235d32e8ff0d570c6eba2cdf09a48be3",
+      "sha256": "f32317f61bc2275e1b5e7ea8227f47d8dacd67775037f630d00894f785bcfaef"
+    },
+    {
+      "file": "assets/pedestrian_f.glb",
+      "before": 9924748,
+      "after": 4082260,
+      "images": 3,
+      "sourceSha256": "11cf2c7a531350cfbdb5731158d28e688cb581140f8db60a66d87a21be6bc6a9",
+      "sha256": "a750a2505e220654250b243ba7bb3105fd904bf239bb5a89da93a65b22dc3205"
+    },
+    {
+      "file": "assets/pedestrian_m.glb",
+      "before": 9070804,
+      "after": 4052200,
+      "images": 3,
+      "sourceSha256": "12ddca9900fdf26019e49e573a6159030a9a1bc825d7135df2005786361b54eb",
+      "sha256": "8be3f2560d4e1685992e625345aa7d6dde3ce6a43b6c9e8a4a652f031c0e8bf8"
+    },
+    {
+      "file": "assets/ran.glb",
+      "before": 7325160,
+      "after": 5851056,
+      "images": 3,
+      "sourceSha256": "7a9972edc48dac7c4236d915d9c975df64be2aad52af2af87f9efc69bb837336",
+      "sha256": "c175fd27adff39617736802f4b516aa1a8bf4d2dbb6f3e8ccc5e2055bd7a9fb4"
+    },
+    {
+      "file": "assets/vehicles/hatchback.glb",
+      "before": 13689628,
+      "after": 11928704,
+      "images": 8,
+      "sourceSha256": "bafb9c4ff454915d3641b2c550e7240b7a64fc60b64f0deae13e74cf4a3f45c6",
+      "sha256": "ad1558d330b3448847e7c39324236c0baeb547d0fb4933df028930d990a5aa7a"
+    },
+    {
+      "file": "assets/vehicles/pickup.glb",
+      "before": 14666500,
+      "after": 12905576,
+      "images": 8,
+      "sourceSha256": "65d461c65960c972ec5e7583148440db1e6d2d2f7c05b7bcbd88582687b12776",
+      "sha256": "b342919cca74ae83c2e7a72e9508ba09e247a60c25e85b45fc2ffaaa3a214eb7"
+    },
+    {
+      "file": "assets/vehicles/van.glb",
+      "before": 14043628,
+      "after": 9022696,
+      "images": 8,
+      "sourceSha256": "5d4bdd666d07503331317bc4a5fdb7ca8ea9a99b0a5bef8c4eee824ce6753bf4",
+      "sha256": "466060febb8d477f6e7679b6beb684a295835788deeff1c35a04fb9ccfe5ced4"
+    }
+  ]
+}
