@@ -26,5 +26,5 @@ export default defineConfig({
  }}],
  resolve:{alias:{'@':fileURLToPath(new URL('.',import.meta.url))}},
  css:{postcss:{plugins:[tailwindcss()]}},
- build:{outDir:'dist-pages',emptyOutDir:true},
+ build:{outDir:'dist-pages',emptyOutDir:true,manifest:true},
 });

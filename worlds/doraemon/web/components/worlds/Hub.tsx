@@ -275,10 +275,11 @@ export default function WorldHub() {
                   aria-label={t(titleKey[w])}
                 >
                   <img
-                    src={assetPath('covers/' + w + '.png')}
+                    src={assetPath('covers/' + w + '.webp')}
                     alt={t(worldKey[w])}
-                    width={1448}
-                    height={1086}
+                    width={960}
+                    height={720}
+                    decoding="async"
                     fetchPriority={w === 'doraemon' ? 'high' : 'auto'}
                   />
                   <span className="image-enter">
@@ -307,12 +308,17 @@ export default function WorldHub() {
               </article>
             ))}
           </section>
-          <div className="coming-worlds" aria-label={t('coming')}>
-            <span className="mini-door" aria-hidden="true" />
-            <p>{t('coming')}</p>
-            <span className="waiting-dots" aria-hidden="true">
-              · · · · ·
-            </span>
+          <div className="world-updates">
+            <div className="coming-worlds" aria-label={t('coming')}>
+              <span className="mini-door" aria-hidden="true" />
+              <p>{t('coming')}</p>
+              <span className="waiting-dots" aria-hidden="true">· · ·</span>
+            </div>
+            <a className="creator-card" href="https://x.com/FrankFYM001" target="_blank" rel="noopener noreferrer" aria-label={t('followOnX') + ' @FrankFYM001'}>
+              <span className="creator-monogram" aria-hidden="true">X</span>
+              <span className="creator-copy"><strong>{t('followCreator')}</strong><span>@FrankFYM001 · {t('creatorUpdates')}</span></span>
+              <ArrowUpRight size={21} aria-hidden="true" />
+            </a>
           </div>
           <section className="community-section">
             <div className="section-heading">

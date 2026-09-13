@@ -4,6 +4,8 @@
 
 `worlds/doraemon/web/public/community-config.json` 的 `apiOrigin` 指向部署后的服务地址。Sites 的界面使用同一 GitHub 地址加载模型资源，避免重复保存大型文件。
 
+线上留言存储核验、截图中 Ubuntu 服务器的迁移步骤及当前尚未执行的部分，见 [首页与留言服务部署方案](self-hosting-plan.md)。第 25 版保持现有 API 与数据库，只发布首页独立入口和作者 X 链接。
+
 ## 数据
 
 数据库结构由 `db/schema.ts` 和 `drizzle/` 中的追加迁移定义，不在请求期间创建表。留言和联系邮箱分表存储；公开接口仅投影留言字段。公开作品与提案保留不可变快照，主世界变更使用带版本条件的事务更新。

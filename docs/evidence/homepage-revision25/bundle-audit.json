@@ -1,0 +1,48 @@
+{
+  "revision": 25,
+  "checks": {
+    "staticHomeSurvivesMissingScripts": true,
+    "staticWorldLinks": 3,
+    "plainXLink": true,
+    "homepageExcludes3DEngines": true,
+    "worldsRemainLazy": true
+  },
+  "covers": [
+    {
+      "world": "doraemon",
+      "originalBytes": 2356277,
+      "homepageBytes": 119838
+    },
+    {
+      "world": "frog",
+      "originalBytes": 2554171,
+      "homepageBytes": 136332
+    },
+    {
+      "world": "conan",
+      "originalBytes": 2368110,
+      "homepageBytes": 128700
+    }
+  ],
+  "initialTextAssets": [
+    {
+      "file": "index.html",
+      "bytes": 4301,
+      "gzipEstimate": 1957
+    },
+    {
+      "file": "assets/index-CV8yGTk9.js",
+      "bytes": 250436,
+      "gzipEstimate": 81679
+    },
+    {
+      "file": "assets/index-AfE_hF8f.css",
+      "bytes": 242088,
+      "gzipEstimate": 41310
+    }
+  ],
+  "initialBytesExcludingApi": 881695,
+  "gzipEstimateExcludingApi": 509816,
+  "scope": "Build graph, static HTML, asset sizes and source typecheck. No browser or device performance claim.",
+  "passed": true
+}
