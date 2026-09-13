@@ -1,12 +1,12 @@
 {
-  "startupModelBytes": 28727242,
+  "startupModelBytes": 50839670,
   "deferredModelBytes": 48063076,
-  "mobileStartupModelBytes": 19372938,
+  "mobileStartupModelBytes": 22950138,
   "mobileBedroomModelBytes": 7937444,
   "mobileRoomMaterialBytes": 5088476,
-  "totalModelBytes": 101562278,
+  "totalModelBytes": 128086048,
   "roomMaterialBytes": 211105656,
-  "totalModelAndMaterialBytes": 317756410,
+  "totalModelAndMaterialBytes": 344280180,
   "models": [
     {
       "name": "world-v11.glb",
@@ -15,6 +15,10 @@
     {
       "name": "neighborhood-v21.glb",
       "bytes": 1654204
+    },
+    {
+      "name": "nobi-home-v27.glb",
+      "bytes": 22097892
     },
     {
       "name": "bedroom-v12.glb",
@@ -141,6 +145,10 @@
       "bytes": 1860600
     },
     {
+      "name": "mobile-v27/nobi-home-v27.glb",
+      "bytes": 3562664
+    },
+    {
       "name": "mobile-v23/bedroom-v12.glb",
       "bytes": 7937444
     },
@@ -239,6 +247,10 @@
     {
       "name": "world.json",
       "bytes": 848678
+    },
+    {
+      "name": "world-v27.json",
+      "bytes": 863214
     }
   ]
 }

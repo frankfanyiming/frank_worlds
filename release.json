@@ -1,9 +1,9 @@
 {
-  "sourceCommit": "b6b8a0010a74107bf817b8d433dc99e152cf9f32",
-  "revision": 26,
+  "sourceCommit": "1787441fbd449e6f3b04d8a9527c02b3df750b31",
+  "revision": 27,
   "assetRevision": 24,
   "date": "2026-09-13",
-  "summary": "Comic homepage with the original covers, making-of notes and Skills, social links and explicit failure recovery; revision 24 world assets retained",
+  "summary": "Homepage opens directly on the original world covers; guestbook and hero removed. Only Nobita house restored from v10, with independent mobile geometry and current controls retained.",
   "worlds": [
     "doraemon",
     "frog",
@@ -11,7 +11,7 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-13T12:46:52.137080+00:00",
+  "updatedAt": "2026-09-13T13:24:14.386971+00:00",
   "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
   "mobile": "30 fps target, bounded adaptive drawing pixels, reduced local shadow passes and mobile visual derivatives; PC original assets retained",
   "conan": "Pavement-to-Mouri stair access, supported Agasa garage and continuous rear apron; fitted CC0 furniture with recorded provenance",
@@ -29,18 +29,21 @@
       "chunks": 13
     }
   },
-  "guestbookLayout": "Responsive form retained; explicit unavailable state and manual X contact route. Revision 26 has not been browser visually tested.",
+  "guestbookLayout": "Removed from the homepage; historical backend records unchanged.",
   "friendLife": "Continuous collision-aware companion following across the creek and outside the former navigation bounds; daily cooking, gifts, picnic and immediate-refresh save recovery retained",
   "openFurniture": "https://github.com/frankfanyiming/frank_worlds/blob/main/docs/conan-open-furniture.md",
   "doraemonMobile": {
     "assetVersion": "20260913-mobile23",
-    "startupBytes": 19372938,
+    "startupBytes": 22950138,
     "firstBedroomBytes": 11646005,
     "bedroomModelBytes": 7937444,
     "desktopAssetVersion": "20260910-12",
     "physicalPhoneTested": false,
     "actorAssetVersion": "20260913-mobile24",
-    "targetFps": 30
+    "targetFps": 30,
+    "nobitaHouseVersion": "20260913-nobi27",
+    "nobitaHouseBytes": 3562664,
+    "nobitaHouseTriangles": 240251
   },
   "nativeMobilePacks": {
     "frog": {
@@ -59,8 +62,8 @@
     }
   },
   "physicalPhoneTested": false,
-  "homepageRevision": 26,
-  "worldSourceCommit": "e9955b0344e8989fee1b419af86a09fd186f1fca",
+  "homepageRevision": 27,
+  "worldSourceCommit": "1787441fbd449e6f3b04d8a9527c02b3df750b31",
   "homepage": {
     "socialUrl": "https://x.com/FrankFYM001",
     "xiaohongshuUrl": "https://www.xiaohongshu.com/user/profile/55d96ee558944639c3ce03f1",
@@ -68,12 +71,25 @@
     "makingOf": "https://xgenlabs.feishu.cn/docx/EHsmd08qGo3T7nxWKIMchlcGnvb",
     "coverBytes": 384870,
     "originalCoversPreserved": true,
-    "coreAssetBytes": 1005234,
-    "gzipEstimateBytes": 617412,
+    "coreAssetBytes": 895535,
+    "gzipEstimateBytes": 513316,
     "staticFallback": true,
     "runtimeRecovery": true,
-    "worldAssetsChanged": false,
+    "worldAssetsChanged": true,
     "guestbookBackendFixed": false,
-    "browserVisualTested": false
+    "browserVisualTested": false,
+    "heroRemoved": true,
+    "guestbookRemoved": true
+  },
+  "nobitaHouse": {
+    "restoredFrom": "bafe7f3fa6f9aa63a9e02a3729c77432335ef885",
+    "version": "20260913-nobi27",
+    "desktopBytes": 22097892,
+    "mobileBytes": 3562664,
+    "otherHousesUnchanged": true,
+    "bedroomV12Retained": true,
+    "collisionFile": "world-v27.json",
+    "browserVisualTested": false,
+    "physicalPhoneTested": false
   }
 }
