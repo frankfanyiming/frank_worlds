@@ -1,9 +1,9 @@
 {
-  "sourceCommit": "4ff3f692951958c42cb265087fc666f2c271f8fa",
-  "revision": 22,
-  "assetRevision": 22,
+  "sourceCommit": "3f366d6d18fc6085f2e3b9d2f1a0ad2e4c8ef26a",
+  "revision": 23,
+  "assetRevision": 23,
   "date": "2026-09-13",
-  "summary": "Repair trail shadows, responsive panda following, Mouri access and Agasa garage; integrate five CC0 furniture collections",
+  "summary": "Optimize Doraemon mobile upstairs loading, reduce moire and render cost; preserve desktop room and native worlds",
   "worlds": [
     "doraemon",
     "frog",
@@ -11,9 +11,9 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-13T06:13:34.074390+00:00",
+  "updatedAt": "2026-09-13T08:25:24.060934+00:00",
   "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
-  "mobile": "Single modal per world, compact HUD, scrolling sheets, 44px touch targets and fixed canvas viewport",
+  "mobile": "Doraemon mobile derivative assets, mip-safe surfaces, MSAA and adaptive DPR; bounded room views, active-room lighting, real download progress, cancel/retry and cache reuse",
   "conan": "Pavement-to-Mouri stair access, supported Agasa garage and continuous rear apron; fitted CC0 furniture with recorded provenance",
   "nativePacks": {
     "frog": {
@@ -31,5 +31,13 @@
   },
   "guestbookLayout": "Narrow-screen single-column fields; all form bounds and touch targets checked at 360, 390 and 844 CSS px",
   "friendLife": "Continuous collision-aware companion following across the creek and outside the former navigation bounds; daily cooking, gifts, picnic and immediate-refresh save recovery retained",
-  "openFurniture": "https://github.com/frankfanyiming/frank_worlds/blob/main/docs/conan-open-furniture.md"
+  "openFurniture": "https://github.com/frankfanyiming/frank_worlds/blob/main/docs/conan-open-furniture.md",
+  "doraemonMobile": {
+    "assetVersion": "20260913-mobile23",
+    "startupBytes": 24920418,
+    "firstBedroomBytes": 11646005,
+    "bedroomModelBytes": 7937444,
+    "desktopAssetVersion": "20260910-12",
+    "physicalPhoneTested": false
+  }
 }
