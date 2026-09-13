@@ -1,0 +1,218 @@
+{
+  "verified_on": "2026-09-13",
+  "provider": "Poly Haven",
+  "license_url": "https://polyhaven.com/license",
+  "assets": [
+    {
+      "id": "book_encyclopedia_set_01",
+      "author": {
+        "John Malcolm": "All"
+      },
+      "page": "https://polyhaven.com/a/book_encyclopedia_set_01",
+      "license": "CC0-1.0",
+      "download": {
+        "include": {
+          "textures/book_encyclopedia_set_01_cover_diff_1k.jpg": {
+            "size": 126794,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_diff_1k.jpg",
+            "md5": "00a10b1b5a28efa4670d68a089a64ef3"
+          },
+          "book_encyclopedia_set_01.bin": {
+            "size": 2547932,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/book_encyclopedia_set_01/book_encyclopedia_set_01.bin",
+            "md5": "ac617be6503e537c5d1a16a94313e866"
+          },
+          "textures/book_encyclopedia_set_01_paper_nor_gl_1k.jpg": {
+            "size": 193390,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_nor_gl_1k.jpg",
+            "md5": "816a51a0b6520cf5e08751089722fc46"
+          },
+          "textures/book_encyclopedia_set_01_cover_arm_1k.jpg": {
+            "size": 189997,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_arm_1k.jpg",
+            "md5": "0e5788b0ee9ce810823356e187c31a8c"
+          },
+          "textures/book_encyclopedia_set_01_cover_nor_gl_1k.jpg": {
+            "size": 19941,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_cover_nor_gl_1k.jpg",
+            "md5": "488fa9696ad4f1773a2d81f3af7b6c76"
+          },
+          "textures/book_encyclopedia_set_01_paper_diff_1k.jpg": {
+            "size": 115297,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_diff_1k.jpg",
+            "md5": "7798b8e38721a4fc1ed45319ecc81b67"
+          },
+          "textures/book_encyclopedia_set_01_paper_roughness_1k.jpg": {
+            "size": 12684,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_paper_roughness_1k.jpg",
+            "md5": "b8e5b8431b0c53b20d83ec0bcff51747"
+          }
+        },
+        "size": 55011,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/book_encyclopedia_set_01/book_encyclopedia_set_01_1k.gltf",
+        "md5": "d0a77d421a6ea2c9d82bcaaa64e8479b"
+      },
+      "local_directory": "work/open-assets-r22/book_encyclopedia_set_01"
+    },
+    {
+      "id": "vintage_radio_transceiver",
+      "author": {
+        "Mateusz Sadek": "All"
+      },
+      "page": "https://polyhaven.com/a/vintage_radio_transceiver",
+      "license": "CC0-1.0",
+      "download": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/vintage_radio_transceiver/vintage_radio_transceiver_1k.gltf",
+        "md5": "abe85407660ef17f41faab948c7833ac",
+        "size": 25848,
+        "include": {
+          "textures/vintage_radio_transceiver_nor_gl_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_radio_transceiver/vintage_radio_transceiver_nor_gl_1k.jpg",
+            "md5": "854e6576a2f1e61ca311071baa89a435",
+            "size": 575198
+          },
+          "textures/vintage_radio_transceiver_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_radio_transceiver/vintage_radio_transceiver_diff_1k.jpg",
+            "md5": "368967f76872933710e77959659bda95",
+            "size": 754292
+          },
+          "textures/vintage_radio_transceiver_arm_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_radio_transceiver/vintage_radio_transceiver_arm_1k.jpg",
+            "md5": "0bd1286f0c4cebbea0f3498e4453f72e",
+            "size": 943816
+          },
+          "textures/vintage_radio_transceiver_accessories_nor_gl_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_radio_transceiver/vintage_radio_transceiver_accessories_nor_gl_1k.jpg",
+            "md5": "f61ff0918376a7f7a0b40ab3ccbc20ef",
+            "size": 591038
+          },
+          "textures/vintage_radio_transceiver_accessories_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_radio_transceiver/vintage_radio_transceiver_accessories_diff_1k.jpg",
+            "md5": "858f7c7cf0c1ab38457b4dc70abbd82b",
+            "size": 739039
+          },
+          "textures/vintage_radio_transceiver_accessories_arm_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/vintage_radio_transceiver/vintage_radio_transceiver_accessories_arm_1k.jpg",
+            "md5": "1951d58a87ae545213f642a0f4b30148",
+            "size": 932225
+          },
+          "vintage_radio_transceiver.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/vintage_radio_transceiver/vintage_radio_transceiver.bin",
+            "md5": "81b1c00a7fe0254f6d507bb80111368f",
+            "size": 1740024
+          }
+        }
+      },
+      "local_directory": "work/open-assets-r22/vintage_radio_transceiver"
+    },
+    {
+      "id": "modern_wooden_cabinet",
+      "author": {
+        "Patrik Pangerl": "All"
+      },
+      "page": "https://polyhaven.com/a/modern_wooden_cabinet",
+      "license": "CC0-1.0",
+      "download": {
+        "include": {
+          "modern_wooden_cabinet.bin": {
+            "size": 1170136,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/modern_wooden_cabinet/modern_wooden_cabinet.bin",
+            "md5": "0a619e6311e6b04b92e9f226f3d0978d"
+          },
+          "textures/modern_wooden_cabinet_nor_gl_1k.jpg": {
+            "size": 430053,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modern_wooden_cabinet/modern_wooden_cabinet_nor_gl_1k.jpg",
+            "md5": "62477103e44ac1b2746c9bb201f89e06"
+          },
+          "textures/modern_wooden_cabinet_arm_1k.jpg": {
+            "size": 574020,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modern_wooden_cabinet/modern_wooden_cabinet_arm_1k.jpg",
+            "md5": "bb821c89979d89ce2421df13af67fb07"
+          },
+          "textures/modern_wooden_cabinet_diff_1k.jpg": {
+            "size": 670353,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/modern_wooden_cabinet/modern_wooden_cabinet_diff_1k.jpg",
+            "md5": "9c7e897741dd9aea6382f04e710d739b"
+          }
+        },
+        "size": 10960,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/modern_wooden_cabinet/modern_wooden_cabinet_1k.gltf",
+        "md5": "623406579e948eb75ff52ec1498085c8"
+      },
+      "local_directory": "work/open-assets-r22/modern_wooden_cabinet"
+    },
+    {
+      "id": "metal_office_desk",
+      "author": {
+        "Ulan Cabanilla": "All"
+      },
+      "page": "https://polyhaven.com/a/metal_office_desk",
+      "license": "CC0-1.0",
+      "download": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/metal_office_desk/metal_office_desk_1k.gltf",
+        "md5": "723956efef6da35ad41494efa5c3b820",
+        "size": 13510,
+        "include": {
+          "textures/metal_office_desk_nor_gl_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_office_desk/metal_office_desk_nor_gl_1k.jpg",
+            "md5": "bcf6793df61d9b5f097f2b9518866c45",
+            "size": 170875
+          },
+          "textures/metal_office_desk_diff_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_office_desk/metal_office_desk_diff_1k.jpg",
+            "md5": "6a27263c95811fa902ddea6476d610e9",
+            "size": 470831
+          },
+          "textures/metal_office_desk_arm_1k.jpg": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/metal_office_desk/metal_office_desk_arm_1k.jpg",
+            "md5": "fb76b1e17f07592608d3f144fce4bfce",
+            "size": 721614
+          },
+          "metal_office_desk.bin": {
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/metal_office_desk/metal_office_desk.bin",
+            "md5": "96f258b9a64d36ca011f44de23da7c65",
+            "size": 229700
+          }
+        }
+      },
+      "local_directory": "work/open-assets-r22/metal_office_desk"
+    },
+    {
+      "id": "desk_lamp_arm_01",
+      "author": {
+        "Yann Kervran": "Rigging",
+        "Kuutti Siitonen": "Modeling & texturing"
+      },
+      "page": "https://polyhaven.com/a/desk_lamp_arm_01",
+      "license": "CC0-1.0",
+      "download": {
+        "include": {
+          "textures/desk_lamp_arm_01_nor_gl_1k.jpg": {
+            "size": 651826,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/desk_lamp_arm_01/desk_lamp_arm_01_nor_gl_1k.jpg",
+            "md5": "5aabbfe920ea6726d5299be7d6224551"
+          },
+          "textures/desk_lamp_arm_01_arm_1k.jpg": {
+            "size": 780379,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/desk_lamp_arm_01/desk_lamp_arm_01_arm_1k.jpg",
+            "md5": "0b887af80f561216baa3da94d001d51a"
+          },
+          "textures/desk_lamp_arm_01_diff_1k.jpg": {
+            "size": 702522,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/desk_lamp_arm_01/desk_lamp_arm_01_diff_1k.jpg",
+            "md5": "a5c1bf5465da39ca6ca9039dd4e3fd66"
+          },
+          "desk_lamp_arm_01.bin": {
+            "size": 736804,
+            "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/desk_lamp_arm_01/desk_lamp_arm_01.bin",
+            "md5": "29ffa5bb6bee35b066e46073124fee1a"
+          }
+        },
+        "size": 4453,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/desk_lamp_arm_01/desk_lamp_arm_01_1k.gltf",
+        "md5": "29b204485d30e66ee3f183ef45bf4bb3"
+      },
+      "local_directory": "work/open-assets-r22/desk_lamp_arm_01"
+    }
+  ]
+}

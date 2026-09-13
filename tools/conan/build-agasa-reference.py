@@ -297,6 +297,8 @@ R['notes']['furniture_revision']='2026-09-13: paired beds share head wall and fa
 R['notes']['furniture_clearances']={'kitchen_front_opening_m':1.3,'kitchen_inner_radius_m':1.27,'extractor_base_radius_m':.48,'bed_between_gap_m':.23,'bed_foot_access_depth_m':1.3}
 R['views'] += [{'name':'客厅成套家具','p':[1.7,1.75,3.8],'target':[4.15,.85,.50],'lens':30},{'name':'厨房料理细节','p':[-.3,1.65,2.32],'target':[-1.55,1.2,-.6],'lens':30},{'name':'双床与书柜细节','p':[-5.0,1.45,2.58],'target':[-5.40,1.0,-1.0],'lens':32}]
 
+import open_furniture
+open_furniture.agasa(R)
 (OUT/'agasa.json').write_text(json.dumps(R,ensure_ascii=False,indent=2))
 setup_render()
 for li in R['lights']:

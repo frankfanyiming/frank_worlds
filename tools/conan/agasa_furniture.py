@@ -189,6 +189,8 @@ def living(m):
 def bookcases(m):
     g.GROUP='AgasaReference_Books'
     for i in range(30):
+        # These two bays are replaced by the measured CC0 console assembly.
+        if i in [4,5]:continue
         a=tau*i/30
         if abs(math.atan2(sin(a-pi/2),cos(a-pi/2)))<.32 or abs(math.atan2(sin(a-3*pi/2),cos(a-3*pi/2)))<.40:continue
         x,z=7.52*cos(a),5.63*sin(a);t=(-sin(a),cos(a));inside=(-cos(a),-sin(a));rot=-a+pi/2

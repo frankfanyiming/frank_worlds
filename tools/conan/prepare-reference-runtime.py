@@ -14,6 +14,20 @@ for name in ['agasa','street-block']:
  for im in bpy.data.images:
   if max(im.size[:])>768:
    before=list(im.size[:]);ratio=768/max(before);im.scale(max(1,round(before[0]*ratio)),max(1,round(before[1]*ratio)));im.pack();changes.append({'texture':im.name,'before':before,'after':list(im.size[:])})
+ # Keep the new CC0 color/packed maps in JPEG instead of expanding every
+ # imported JPEG into a large PNG. Normal maps stay lossless and existing
+ # architectural images follow the established 768px pipeline.
+ texture_cache=OUT/'web-cc0-textures';texture_cache.mkdir(exist_ok=True)
+ for im in list(bpy.data.images):
+  if not any(im.name.startswith(key) for key in ['metal_office_desk','desk_lamp_arm_01','book_encyclopedia_set_01','modern_wooden_cabinet','vintage_radio_transceiver']):continue
+  if '_nor_' in im.name:continue
+  target=texture_cache/(im.name.replace('/','_')+'.jpg')
+  im.file_format='JPEG';im.filepath_raw=str(target);im.save()
+  replacement=bpy.data.images.load(str(target),check_existing=False);replacement.colorspace_settings.name=im.colorspace_settings.name;replacement.pack()
+  for material in bpy.data.materials:
+   if material.use_nodes:
+    for node in material.node_tree.nodes:
+     if node.type=='TEX_IMAGE' and node.image==im:node.image=replacement
  decimated=[]
  for o in objs:
   if '_Collision' in o.name:continue

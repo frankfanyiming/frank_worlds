@@ -245,7 +245,7 @@ func physics(delta: float):
  checkpoint_clock+=delta
  if checkpoint_clock>5 and not world.riding and world.frog.is_on_floor():checkpoint_clock=0;_persist()
  if save.companion and world.active_home=="" and not bridge_seen and world.frog.position.distance_to(Vector3(14,1,-9))<2.6 and near():
-  bridge_seen=true;tea_pause=3;world._toast(text("bridge"),5)
+  bridge_seen=true;world._toast(text("bridge"),5)
  if cooking_props:cooking_props.rotation.y=sin(world.time*.5)*.04
 
 func nearest_hint():
