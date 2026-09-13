@@ -73,4 +73,17 @@ node tools/build-doraemon-mobile-actors.mjs
 
 ## 状态
 
-设计取舍已实施；PC 模型源文件保留，手机派生文件已生成；浏览器引擎验证完成，真实手机仍未测。网页发布记录在本文件后续追加，以公开 `release.json`、实际分块校验和 Pages 工作流为准。
+设计取舍已实施；PC 模型源文件保留，手机派生文件已生成；浏览器引擎验证及网页发布完成，真实手机仍未测。
+
+## 公开发布与复验
+
+- 运行时代码：`e9955b0344e8989fee1b419af86a09fd186f1fca`，已同步到 `main` 与 `feat/xlands-worlds-community`。本记录后续的文档提交不改变公开资源的 `sourceCommit`。
+- Pages 发布：`cb7e644f3ad88ec69f08843b1d28be6aabdb1d18`，文件树 `89b3f354c44fa5d413b9685d8031ebd306fcc94b`；[部署工作流](https://github.com/frankfanyiming/frank_worlds/actions/runs/34751340259) 成功。
+- [公开 release.json](https://frankfanyiming.github.io/frank_worlds/release.json?v=24) 为第 24 版。重新下载两个手机世界全部 35 个分块，检查压缩长度、解压长度、逐块 SHA-256 和完整包 SHA-256；另核对 12 个手机角色、动物、车辆 GLB 摘要，均通过：[公网资源完整性](public-integrity.json)。
+- [公网柯南 Chrome 入口](public-conan/report.json)：从门户进入后实际请求 `/worlds/conan/mobile/world-pack.json`，事务所、博士厨房、后车库及横屏均正常显示；真实触发图形上下文丢失后，通过门户“重试”重新进入。该次 Chrome 检查没有场景或社区 API 错误。
+- [公网柯南 WebKit 入口](public-conan-webkit/report.json)：同样读取手机资源，事务所、博士厨房、后车库及横屏均正常显示，无场景错误；三个社区 API 错误在 `environmentErrors` 保留。
+- [公网哆啦 WebKit 原始记录](public-doraemon-webkit/report.json)：实际点击“去二楼”后房间进入完成，横屏、返回街道与缓存重入均完成，着色器错误为空。不过总检查为失败，原因是三个社区 API 跨域错误；原始结果保留，不能改写成全通过。[独立判读](public-doraemon-webkit/assessment.json) 记录场景成功与社区失败的边界。
+
+社区 API 的独立 HTTP 探测得到 Cloudflare `403` HTML 保护页（`Attention Required!`），并非应用 JSON 响应；请求使用的是公开 GitHub Pages 的 Origin。此轮没有修改后端或绕过访问保护。该问题影响此次 WebKit 环境中的社区列表/来访本，实测未阻止柯南和哆啦场景进入。
+
+公开入口检查只在进入后短暂读取渲染诊断，初始和重试后的 FPS 包含启动期，不能作为稳定性能结果。稳定绘制测量见上文 `final/report.json`；全部浏览器验证仍为桌面触屏模拟。

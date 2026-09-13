@@ -1,0 +1,27 @@
+{
+  "rawReport": "report.json",
+  "rawReportPassed": false,
+  "worldEntryAndBedroomChecksPassed": true,
+  "checked": [
+    "Street loads mobile-speed profile",
+    "Touch Go upstairs opens bedroom",
+    "Landscape bedroom renders",
+    "Return to street and cached reentry",
+    "No shader errors"
+  ],
+  "remainingFailures": [
+    "/nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/branches? due to access control checks.",
+    "/nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/meta due to access control checks.",
+    "/nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/notes due to access control checks."
+  ],
+  "upstreamProbe": {
+    "url": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/meta",
+    "origin": "https://frankfanyiming.github.io",
+    "status": 403,
+    "contentType": "text/html; charset=UTF-8",
+    "server": "cloudflare",
+    "title": "Attention Required! | Cloudflare"
+  },
+  "assessment": "The full browser check remains failed due to three community API access-control errors. World and bedroom checks completed independently. The upstream returned an HTML protection page, not the JSON application API; no backend or access-control changes were made.",
+  "physicalPhone": false
+}

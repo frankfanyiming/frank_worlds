@@ -1,0 +1,140 @@
+{
+  "release": {
+    "sourceCommit": "e9955b0344e8989fee1b419af86a09fd186f1fca",
+    "revision": 24,
+    "assetRevision": 24,
+    "date": "2026-09-13",
+    "summary": "Separate mobile speed from desktop visuals across all three worlds; lighter native packs, lower render budgets, retained character motion and visible graphics recovery",
+    "worlds": [
+      "doraemon",
+      "frog",
+      "conan"
+    ],
+    "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
+    "loadingFix": "stream-progress-range-retry",
+    "updatedAt": "2026-09-13T09:51:57.379717+00:00",
+    "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
+    "mobile": "30 fps target, bounded adaptive drawing pixels, reduced local shadow passes and mobile visual derivatives; PC original assets retained",
+    "conan": "Pavement-to-Mouri stair access, supported Agasa garage and continuous rear apron; fitted CC0 furniture with recorded provenance",
+    "nativePacks": {
+      "frog": {
+        "sha256": "9cb7b46dbbbf611a3c274f7198d02b9091939b3d301c76d9ce5563a95e6b55e7",
+        "rawBytes": 239253036,
+        "downloadBytes": 177985792,
+        "chunks": 15
+      },
+      "conan": {
+        "sha256": "7c0334227f442d37cfc445ac7fd599d35cbbf7bc025cec35abb793c7f8972f40",
+        "rawBytes": 210271740,
+        "downloadBytes": 206713911,
+        "chunks": 13
+      }
+    },
+    "guestbookLayout": "Narrow-screen single-column fields; all form bounds and touch targets checked at 360, 390 and 844 CSS px",
+    "friendLife": "Continuous collision-aware companion following across the creek and outside the former navigation bounds; daily cooking, gifts, picnic and immediate-refresh save recovery retained",
+    "openFurniture": "https://github.com/frankfanyiming/frank_worlds/blob/main/docs/conan-open-furniture.md",
+    "doraemonMobile": {
+      "assetVersion": "20260913-mobile23",
+      "startupBytes": 19372938,
+      "firstBedroomBytes": 11646005,
+      "bedroomModelBytes": 7937444,
+      "desktopAssetVersion": "20260910-12",
+      "physicalPhoneTested": false,
+      "actorAssetVersion": "20260913-mobile24",
+      "targetFps": 30
+    },
+    "nativeMobilePacks": {
+      "frog": {
+        "sha256": "1fab21f1f03f411ff9c1a2515b83b92b438d76247b1f6f3e5afb11b7b0797601",
+        "rawBytes": 113689300,
+        "downloadBytes": 102592624,
+        "chunks": 19,
+        "path": "worlds/frog/mobile/"
+      },
+      "conan": {
+        "sha256": "bf0d8d904e1ef93a1907e7f4afbd96280fa46186bf9530c6638c373ea43dd880",
+        "rawBytes": 99202944,
+        "downloadBytes": 96843529,
+        "chunks": 16,
+        "path": "worlds/conan/mobile/"
+      }
+    },
+    "physicalPhoneTested": false
+  },
+  "native": {
+    "conan": {
+      "sha256": "bf0d8d904e1ef93a1907e7f4afbd96280fa46186bf9530c6638c373ea43dd880",
+      "rawBytes": 99202944,
+      "chunksVerified": 16
+    },
+    "frog": {
+      "sha256": "1fab21f1f03f411ff9c1a2515b83b92b438d76247b1f6f3e5afb11b7b0797601",
+      "rawBytes": 113689300,
+      "chunksVerified": 19
+    }
+  },
+  "doraemonAssets": [
+    {
+      "path": "models/mobile-v24/actors/nobita.glb",
+      "bytes": 484092,
+      "sha256": "1e8e2a0e27f5def1e1c87cb5d8b232dd31fc57b6e65efe90cee3ff0da19d3549"
+    },
+    {
+      "path": "models/mobile-v24/actors/doraemon-v11.glb",
+      "bytes": 416488,
+      "sha256": "4166184a9b5a3433b95d043d648ef6d2f010217f94632def9b386ffd798945ec"
+    },
+    {
+      "path": "models/mobile-v24/actors/shizuka.glb",
+      "bytes": 410760,
+      "sha256": "8b312dc1708d9b48a57b3e28ee6a984ddb7f6a2bcf899d6f1b5d2e3f44c42e0b"
+    },
+    {
+      "path": "models/mobile-v24/actors/gian.glb",
+      "bytes": 438148,
+      "sha256": "ee4fe8e42fa1502eed5bac8415c84885c3fc64592e71b2b4d4406048810020c5"
+    },
+    {
+      "path": "models/mobile-v24/actors/suneo.glb",
+      "bytes": 427600,
+      "sha256": "5a50259976e3b516c8046bcb1f68b6dbdbbdc31b61cd2fe472035bd12074e7e4"
+    },
+    {
+      "path": "models/mobile-v24/actors/tamako.glb",
+      "bytes": 331216,
+      "sha256": "4c1d7fb29e952c07abf3a9bd0995c7c8822ae6e366d0752096e8641ebdf8918b"
+    },
+    {
+      "path": "models/mobile-v24/actors/nobisuke.glb",
+      "bytes": 325848,
+      "sha256": "74cc58392a012a610aef6564543681db9dd09026ebb3fb58ad3808739d62d36d"
+    },
+    {
+      "path": "models/mobile-v24/fauna/cat.glb",
+      "bytes": 245200,
+      "sha256": "11b46dfe2478096ddc4bb5e7f67a6849ee1f062c09ceb40c20770f701c48be41"
+    },
+    {
+      "path": "models/mobile-v24/fauna/sparrow.glb",
+      "bytes": 125860,
+      "sha256": "99e3aaa2584781323efef07082a3d3c5c36b7d719852e19ddbc15c1110cbd3f2"
+    },
+    {
+      "path": "models/mobile-v24/fauna/sparrow_ash.glb",
+      "bytes": 124928,
+      "sha256": "0c1447f8e22e4d5ce4090d94a04eeb01020a5ca50521f8f58123821963da3a0d"
+    },
+    {
+      "path": "models/mobile-v24/vehicles/kei_hatchback-v11.glb",
+      "bytes": 336120,
+      "sha256": "0ca18d79005dfa6af96744d5476ee141155f41f44000fe78a3b8bcb88339bc8c"
+    },
+    {
+      "path": "models/mobile-v24/vehicles/kei_truck-v11.glb",
+      "bytes": 353428,
+      "sha256": "b0cb890364d2fc5fe81fe69bdcb3997372c5ce3a2d2ae8a9cf241776592b4a36"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}
