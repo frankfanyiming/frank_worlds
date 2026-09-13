@@ -1,0 +1,100 @@
+{
+  "sourceCommit": "b6b8a0010a74107bf817b8d433dc99e152cf9f32",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 7187,
+      "sha256": "5cd7c3599c514cff647a60edca05c26687d25ccbad00ca94bb633ad5a05b08f0"
+    },
+    {
+      "path": "assets/DoraemonWorld-q--tfPOG.js",
+      "bytes": 210627,
+      "sha256": "9a54b9c4c480c512cbdd67ad44a648258f2200c51e80d92b7af69ee17d5a1339"
+    },
+    {
+      "path": "assets/GLTFLoader-RQIXFVo5.js",
+      "bytes": 44336,
+      "sha256": "240f590376a1f89d79ace8ff40e94058ddf4ebdea49dfb48ea8b1272c187d9d5"
+    },
+    {
+      "path": "assets/OrbitControls-zJ_blRvi.js",
+      "bytes": 19064,
+      "sha256": "a489446c874924dde7f7774defa909cf598ffb1f4c39d94a586e06c774fdec64"
+    },
+    {
+      "path": "assets/SceneCanvas-Crif__rf.js",
+      "bytes": 6085,
+      "sha256": "d361d8aa229ec0d88ad604265d0ee37550e8faaddc1ad1b6bebd428180f65813"
+    },
+    {
+      "path": "assets/Studio-D4tuVju2.js",
+      "bytes": 22747,
+      "sha256": "f33cdf019c7ab8e634ed5e7b30d349d6a00a2e8c1e8e8bcca20656f91fe8b056"
+    },
+    {
+      "path": "assets/arrow-up-CvVa2H_M.js",
+      "bytes": 263,
+      "sha256": "c5d619fc8b1dbc1027d5276d4c1ad9c3b4c3edfd437e24adaa913180bda1ca79"
+    },
+    {
+      "path": "assets/engine-C6Wgnxyw.js",
+      "bytes": 354498,
+      "sha256": "4c05cb3a538c693f1b7de347b80164237f244512b6c33795abd94dd2d4de92fe"
+    },
+    {
+      "path": "assets/index-B473Y773.js",
+      "bytes": 261722,
+      "sha256": "385de058048847d59b424728faaa12a901727a679384e49e746e9e474fa77a19"
+    },
+    {
+      "path": "assets/index-OxbN52SP.css",
+      "bytes": 249245,
+      "sha256": "f15508a837bcbb8b97405c0f6ab6c389e476dba49e68c473b246a905f73dd082"
+    },
+    {
+      "path": "assets/sound-DLeJ9eiM.js",
+      "bytes": 31742,
+      "sha256": "36cac3a4c0768f7822dc5f8956ca831f39909ed8b67758440eb8413713743fd9"
+    },
+    {
+      "path": "assets/three.module-GgI__174.js",
+      "bytes": 696461,
+      "sha256": "55ee72b9c1361d4e6bad55efc7ebed8b35b71f59da01d47fbc2419382f5d5134"
+    },
+    {
+      "path": "home-art/coastal-hero.webp",
+      "bytes": 102210,
+      "sha256": "1b7693f7acbd11df317d19496039407f275832ef74a684b13482ece38f44ca4b"
+    },
+    {
+      "path": "resources/making-of.html",
+      "bytes": 20829,
+      "sha256": "98566220ce0d9a9cd91ac63488363bb0573aa30b1e3021c68b2383c35a641178"
+    },
+    {
+      "path": "resources/xlands-skills.zip",
+      "bytes": 9312,
+      "sha256": "c609230dd30540448784e31511863eb5ffe021822eaeff885b5a0c40f9a90834"
+    },
+    {
+      "path": "release.json",
+      "bytes": 3248,
+      "sha256": "1a2f1934e1b2263b58144af6625c9e6ef05b563223d1efc1385ab8fdb813208b"
+    },
+    {
+      "path": "covers/doraemon.webp",
+      "bytes": 119838,
+      "sha256": "2db8e1914dc19790c90e2bf26f4d9db440f1cc50a0574f9368515f91f2d4ddea"
+    },
+    {
+      "path": "covers/frog.webp",
+      "bytes": 136332,
+      "sha256": "3cf058a6b3d4db94c1909ba37c8dcad77136f7cc0154f8196b066a36baae9e60"
+    },
+    {
+      "path": "covers/conan.webp",
+      "bytes": 128700,
+      "sha256": "75a84b2b7caa5bd560873e0235a29d666ad0fdeffdb9abba46dd6de655b9c7ef"
+    }
+  ]
+}

@@ -22,6 +22,11 @@
 
 ## 发布状态
 
-构建候选已完成；源码推送、Pages 工作流和公网校验完成后在此记录对应提交。发布范围限首页 HTML、编译模块、横幅、文章及 Skills，保留旧哈希模块供尚未关闭的旧页面使用。
+- 运行时代码 `b6b8a0010a74107bf817b8d433dc99e152cf9f32` 已推送到 `main` 与 `feat/xlands-worlds-community`。
+- Pages 提交 `9c0b0e2204a0f3bfdde9e93b5a84b15bcce97e5b`；[部署工作流](https://github.com/frankfanyiming/frank_worlds/actions/runs/34758137020) 成功，公开 `release.json` 对应第 26 版与上述源码。
+- [公开首页](https://frankfanyiming.github.io/frank_worlds/?v=26#)、[飞书手记](https://xgenlabs.feishu.cn/docx/EHsmd08qGo3T7nxWKIMchlcGnvb)、[网页手记](https://frankfanyiming.github.io/frank_worlds/resources/making-of.html) 与 [Skills ZIP](https://frankfanyiming.github.io/frank_worlds/resources/xlands-skills.zip) 已提供。
+- [公网校验](public-audit.json) 从正式域名读取 19 份首页相关文件与 4 份保留的世界清单，HTTP 200、长度与 SHA-256 均一致。本地结果另见 [本地 HTTP 校验](local-http-audit.json)，不混为公网或浏览器结果。
+- 首次公网校验有一笔读取超时；第二次重新完整核验通过。没有修改发布字节来消除网络失败，也不因此承诺任意网络都无超时。
+- 发布范围限首页 HTML、编译模块、横幅、文章及 Skills；旧哈希模块保留，供尚未关闭的旧页面使用。
 
 另见 [原房屋恢复证据](../doraemon-house-recovery26/README.md)：已找回并单独保存，未把旧房屋或旧控制器上线。
