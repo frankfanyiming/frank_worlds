@@ -1,0 +1,104 @@
+{
+  "sourceCommit": "5a2d00919b67eab3ac8a042b52b5e479c43539eb",
+  "revision": 28,
+  "assetRevision": 24,
+  "date": "2026-09-13",
+  "summary": "Mobile guidance across all three world entry points; public source attribution, retained minified build notices and verifiable build provenance. World models and packs unchanged.",
+  "worlds": [
+    "doraemon",
+    "frog",
+    "conan"
+  ],
+  "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
+  "loadingFix": "stream-progress-range-retry",
+  "updatedAt": "2026-09-13T14:29:00.611843+00:00",
+  "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
+  "mobile": "30 fps target, bounded adaptive drawing pixels, reduced local shadow passes and mobile visual derivatives; PC original assets retained",
+  "conan": "Pavement-to-Mouri stair access, supported Agasa garage and continuous rear apron; fitted CC0 furniture with recorded provenance",
+  "nativePacks": {
+    "frog": {
+      "sha256": "9cb7b46dbbbf611a3c274f7198d02b9091939b3d301c76d9ce5563a95e6b55e7",
+      "rawBytes": 239253036,
+      "downloadBytes": 177985792,
+      "chunks": 15
+    },
+    "conan": {
+      "sha256": "7c0334227f442d37cfc445ac7fd599d35cbbf7bc025cec35abb793c7f8972f40",
+      "rawBytes": 210271740,
+      "downloadBytes": 206713911,
+      "chunks": 13
+    }
+  },
+  "guestbookLayout": "Removed from the homepage; historical backend records unchanged.",
+  "friendLife": "Continuous collision-aware companion following across the creek and outside the former navigation bounds; daily cooking, gifts, picnic and immediate-refresh save recovery retained",
+  "openFurniture": "https://github.com/frankfanyiming/frank_worlds/blob/main/docs/conan-open-furniture.md",
+  "doraemonMobile": {
+    "assetVersion": "20260913-mobile23",
+    "startupBytes": 22950138,
+    "firstBedroomBytes": 11646005,
+    "bedroomModelBytes": 7937444,
+    "desktopAssetVersion": "20260910-12",
+    "physicalPhoneTested": false,
+    "actorAssetVersion": "20260913-mobile24",
+    "targetFps": 30,
+    "nobitaHouseVersion": "20260913-nobi27",
+    "nobitaHouseBytes": 3562664,
+    "nobitaHouseTriangles": 240251
+  },
+  "nativeMobilePacks": {
+    "frog": {
+      "sha256": "1fab21f1f03f411ff9c1a2515b83b92b438d76247b1f6f3e5afb11b7b0797601",
+      "rawBytes": 113689300,
+      "downloadBytes": 102592624,
+      "chunks": 19,
+      "path": "worlds/frog/mobile/"
+    },
+    "conan": {
+      "sha256": "bf0d8d904e1ef93a1907e7f4afbd96280fa46186bf9530c6638c373ea43dd880",
+      "rawBytes": 99202944,
+      "downloadBytes": 96843529,
+      "chunks": 16,
+      "path": "worlds/conan/mobile/"
+    }
+  },
+  "physicalPhoneTested": false,
+  "homepageRevision": 28,
+  "worldSourceCommit": "1787441fbd449e6f3b04d8a9527c02b3df750b31",
+  "homepage": {
+    "socialUrl": "https://x.com/FrankFYM001",
+    "xiaohongshuUrl": "https://www.xiaohongshu.com/user/profile/55d96ee558944639c3ce03f1",
+    "douyinHandle": "frank001",
+    "makingOf": "https://xgenlabs.feishu.cn/docx/EHsmd08qGo3T7nxWKIMchlcGnvb",
+    "coverBytes": 384870,
+    "originalCoversPreserved": true,
+    "coreAssetBytes": 899567,
+    "gzipEstimateBytes": 514782,
+    "staticFallback": true,
+    "runtimeRecovery": true,
+    "worldAssetsChanged": false,
+    "guestbookBackendFixed": false,
+    "browserVisualTested": false,
+    "heroRemoved": true,
+    "guestbookRemoved": true,
+    "mobilePerformanceTip": true
+  },
+  "nobitaHouse": {
+    "restoredFrom": "bafe7f3fa6f9aa63a9e02a3729c77432335ef885",
+    "version": "20260913-nobi27",
+    "desktopBytes": 22097892,
+    "mobileBytes": 3562664,
+    "otherHousesUnchanged": true,
+    "bedroomV12Retained": true,
+    "collisionFile": "world-v27.json",
+    "browserVisualTested": false,
+    "physicalPhoneTested": false
+  },
+  "provenance": {
+    "manifest": "provenance.json",
+    "projectId": "xlands-frankfym001",
+    "sourceHeaders": 56,
+    "minifiedBannersRetained": true,
+    "trackingEnabled": false,
+    "license": "MIT for original code; third-party rights unchanged"
+  }
+}

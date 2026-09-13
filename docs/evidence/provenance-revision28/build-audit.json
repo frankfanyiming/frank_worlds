@@ -1,0 +1,25 @@
+{
+  "revision": 28,
+  "sourceCommit": "5a2d00919b67eab3ac8a042b52b5e479c43539eb",
+  "checks": {
+    "commitMatchesBuild": true,
+    "cleanTrackedSource": true,
+    "htmlIncluded": true,
+    "fiveLocales": true,
+    "staticFallbackTip": true,
+    "noHeroOrGuestbook": true,
+    "modifiedFileRejected": true,
+    "nativeConfigsUnchanged": true
+  },
+  "bundleFilesVerified": 15,
+  "browserVisualTested": false,
+  "physicalPhoneTested": false,
+  "pagesBundleFilesVerified": 23,
+  "sitesClientFilesVerified": 24,
+  "sourceHeadersVerified": 56,
+  "sourceLicensePreserved": true,
+  "coreAssetBytes": 899567,
+  "previousCoreAssetBytes": 895535,
+  "coreIncreaseBytes": 4032,
+  "worldAssetsChanged": false
+}

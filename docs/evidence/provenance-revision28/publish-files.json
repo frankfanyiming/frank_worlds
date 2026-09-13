@@ -1,0 +1,170 @@
+{
+  "sourceCommit": "5a2d00919b67eab3ac8a042b52b5e479c43539eb",
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1096,
+      "sha256": "220096262f439f744b0371f420ea458de7dcf34e2e1efb1293f4358d5fbea3f6"
+    },
+    {
+      "path": "NOTICE.txt",
+      "bytes": 1796,
+      "sha256": "5e4b52f3c4cfecd747d4fc67cce79253b37545b2056b0b719b5192219970e212"
+    },
+    {
+      "path": "SOURCE.json",
+      "bytes": 479,
+      "sha256": "dbaef9015185896d63b29d7751fa4ac431ed31364a7e42d874759b3cc2954d28"
+    },
+    {
+      "path": "assets/DoraemonWorld-oyFtb24S.js",
+      "bytes": 210946,
+      "sha256": "10eba96df03f6daf436b8f4aefd5a5b8f594c18e9aba470e68973bb4f70d7b09"
+    },
+    {
+      "path": "assets/GLTFLoader-BT4p8Sr7.js",
+      "bytes": 44655,
+      "sha256": "5fd66fefe4bd4bc4618dab5abc69abbdf1a33535c152b1e4a1baacc5deb27ab9"
+    },
+    {
+      "path": "assets/OrbitControls-3vfz2Aty.js",
+      "bytes": 19383,
+      "sha256": "30c50d46afb1b1843906a89095e732923655482669be7fbeb2c2f86526514ea4"
+    },
+    {
+      "path": "assets/SceneCanvas-r2JDyd2E.js",
+      "bytes": 6404,
+      "sha256": "ad17d9dd45d6d56ec4bdd01b1cc0c091737d4110424808809ffc1e1e382fb065"
+    },
+    {
+      "path": "assets/Studio-BTW-j7JH.js",
+      "bytes": 23328,
+      "sha256": "45e3b2a1b3aa4a1d39fb4e0dace7460d81e61809016617620bbd4b869fc1a64c"
+    },
+    {
+      "path": "assets/arrow-up-pv8DCZF8.js",
+      "bytes": 582,
+      "sha256": "b246b3a493b6300417215d8d339ce331b09e115f65e29303a576d38f0a2e8bdf"
+    },
+    {
+      "path": "assets/engine-CadqguWF.js",
+      "bytes": 355100,
+      "sha256": "aee801e8f863cf0e4f7cd5e36df77ffcd843a0c1bd96d1f0b336b4b4c94dbaa1"
+    },
+    {
+      "path": "assets/index-8Yas8puv.css",
+      "bytes": 248967,
+      "sha256": "b5e5b4185fb523658a75f36656779b94e33c0ef210347329d2c4a8677cad0caf"
+    },
+    {
+      "path": "assets/index-BIGm0RNm.js",
+      "bytes": 258345,
+      "sha256": "55e9bb9796148e19df65592c5593d90084ffce9361293c05dd30d694eead0a57"
+    },
+    {
+      "path": "assets/sound-ByAvpfM8.js",
+      "bytes": 32060,
+      "sha256": "c7028e83bbfd1cb4c80b51a8fe5ae8e291e3dcf58022606db01c6f263f4d4124"
+    },
+    {
+      "path": "assets/three.module-CACaK4zb.js",
+      "bytes": 696780,
+      "sha256": "e3ead03b9e465f1d68fe8803dc18a7cdcff941302dfce2f68295722151572a5b"
+    },
+    {
+      "path": "covers/conan.webp",
+      "bytes": 128700,
+      "sha256": "75a84b2b7caa5bd560873e0235a29d666ad0fdeffdb9abba46dd6de655b9c7ef"
+    },
+    {
+      "path": "covers/doraemon.webp",
+      "bytes": 119838,
+      "sha256": "2db8e1914dc19790c90e2bf26f4d9db440f1cc50a0574f9368515f91f2d4ddea"
+    },
+    {
+      "path": "covers/frog.webp",
+      "bytes": 136332,
+      "sha256": "3cf058a6b3d4db94c1909ba37c8dcad77136f7cc0154f8196b066a36baae9e60"
+    },
+    {
+      "path": "index.html",
+      "bytes": 7385,
+      "sha256": "9f77e2f262253162654bacd8d8ecece36e70cca57144ae66f645caea90185e07"
+    },
+    {
+      "path": "models/mobile-v27/nobi-home-v27.glb",
+      "bytes": 3562664,
+      "sha256": "af6fb4ed5e1b7451186c9c865d018b81084b569b2bcdcbecaeb15af22e72614a"
+    },
+    {
+      "path": "models/nobi-home-v27.glb",
+      "bytes": 22097892,
+      "sha256": "01fce55c1069d9790a8ea746c68bca8db6b657737707d361c69e77b64d485e6b"
+    },
+    {
+      "path": "models/world-v27.json",
+      "bytes": 863214,
+      "sha256": "8ce200e7bf4c9d49366f24faf1c5e08611b0c073afb743c0aa7fa9c52a3baa0d"
+    },
+    {
+      "path": "provenance.json",
+      "bytes": 4528,
+      "sha256": "8a615ef3ab44fcffb9d21f7f6b328bc71b245204a2c1b39c83cc40571faa6c5d"
+    },
+    {
+      "path": "release.json",
+      "bytes": 4026,
+      "sha256": "e0ee5823dbb366ab4c7ae7feaeabd3c24cf026eaf0405a56dddf3b9cc0f60917"
+    },
+    {
+      "path": "resources/making-of.html",
+      "bytes": 20829,
+      "sha256": "98566220ce0d9a9cd91ac63488363bb0573aa30b1e3021c68b2383c35a641178"
+    },
+    {
+      "path": "resources/xlands-skills.zip",
+      "bytes": 9312,
+      "sha256": "c609230dd30540448784e31511863eb5ffe021822eaeff885b5a0c40f9a90834"
+    },
+    {
+      "path": "worlds/conan/LICENSE.txt",
+      "bytes": 1096,
+      "sha256": "220096262f439f744b0371f420ea458de7dcf34e2e1efb1293f4358d5fbea3f6"
+    },
+    {
+      "path": "worlds/conan/NOTICE.txt",
+      "bytes": 1796,
+      "sha256": "5e4b52f3c4cfecd747d4fc67cce79253b37545b2056b0b719b5192219970e212"
+    },
+    {
+      "path": "worlds/conan/SOURCE.json",
+      "bytes": 479,
+      "sha256": "dbaef9015185896d63b29d7751fa4ac431ed31364a7e42d874759b3cc2954d28"
+    },
+    {
+      "path": "worlds/conan/index.html",
+      "bytes": 43553,
+      "sha256": "1004af60b66a977d297df31eac0c3ca173e8819a407637e697fd8f032bf085c2"
+    },
+    {
+      "path": "worlds/frog/LICENSE.txt",
+      "bytes": 1096,
+      "sha256": "220096262f439f744b0371f420ea458de7dcf34e2e1efb1293f4358d5fbea3f6"
+    },
+    {
+      "path": "worlds/frog/NOTICE.txt",
+      "bytes": 1796,
+      "sha256": "5e4b52f3c4cfecd747d4fc67cce79253b37545b2056b0b719b5192219970e212"
+    },
+    {
+      "path": "worlds/frog/SOURCE.json",
+      "bytes": 479,
+      "sha256": "dbaef9015185896d63b29d7751fa4ac431ed31364a7e42d874759b3cc2954d28"
+    },
+    {
+      "path": "worlds/frog/index.html",
+      "bytes": 43610,
+      "sha256": "7afc94d6c2b525caed2c6a9332b3cb748abeed2714ccb493e5a322b4f2a28bb6"
+    }
+  ]
+}
