@@ -33,3 +33,6 @@ worlds/frog/source/ui-font.otf
 # Local Blender/Python inspection caches.
 __pycache__/
 *.pyc
+
+# Exact CC0 downloads are reproducible from the checked furniture manifest.
+/work/open-assets-r22/

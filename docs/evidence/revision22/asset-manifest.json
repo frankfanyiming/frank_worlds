@@ -1,0 +1,113 @@
+{
+  "frog": [
+    {
+      "path": "worlds/frog/source/world.gd",
+      "bytes": 62534,
+      "sha256": "b8448e276b1b6c50c789bcb2db0f9f70941e9c37b0347e6216670c85e09b6d16"
+    },
+    {
+      "path": "worlds/frog/source/friends/friend_follow.gd",
+      "bytes": 8138,
+      "sha256": "aaf9dcf4df9cd585167ee2daae739419a8b2e96a63d81aba5f93fac8d66860ed"
+    },
+    {
+      "path": "worlds/frog/source/friends/friend_life.gd",
+      "bytes": 20144,
+      "sha256": "fe8bbd18dd64a1a216e4386085e8b506cc85df4e7482dcdca9fdd67ae8a85b29"
+    },
+    {
+      "path": "worlds/frog/source/assets/woodland.glb",
+      "bytes": 46577220,
+      "sha256": "9567dd7855dd3b7ada97248eb65d7a1f63d53af1f861575af89fa1462ca4d1dd"
+    },
+    {
+      "path": "worlds/frog/source/assets/bridge-approaches.glb",
+      "bytes": 45812,
+      "sha256": "7845052752c9a4b0756d6004d400067f83bf462b64d6c75ca1357e026eec4d2a"
+    },
+    {
+      "path": "worlds/frog/source/assets/frog.glb",
+      "bytes": 9472852,
+      "sha256": "d02f3bedea63cfd65f3406660b2f950377439fa58c60ce9937ebb649e6564f68"
+    },
+    {
+      "path": "worlds/frog/source/assets/panda.glb",
+      "bytes": 2719648,
+      "sha256": "b7ee5da7c6010cc45a5e02736bedac637b06def09cc4d31f4e01d3a63cf05c20"
+    }
+  ],
+  "conan": [
+    {
+      "path": "worlds/conan/web-project/world.gd",
+      "bytes": 44199,
+      "sha256": "2cd88aaa274c0185cd7e7a2779b76bb33ca25ae4f6a5d82556d229ce04f7113a"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/street.glb",
+      "bytes": 24736656,
+      "sha256": "4b5166af1b2f7c6ca1b87bd5fe49744a19df6c1fec2065233705c969fb41fc29"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/mouri.glb",
+      "bytes": 31647668,
+      "sha256": "16a7d16978d82d456a80818d5abc3e0f371b0bd8d0ed28be81472f37a9d1a6d2"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/mouri.json",
+      "bytes": 73940,
+      "sha256": "ef32c0afc2f216f885134d66824a719e5739d1ead1bd1e0379874d6ad9b124fc"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/agasa.glb",
+      "bytes": 45209344,
+      "sha256": "571eee95fda4b10ed55357c8f0d68e3518c52eedacc0ceea9f9ebddbb083ee02"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/agasa.json",
+      "bytes": 42107,
+      "sha256": "02556fc0b22132bb44b526a0a8e978304c000cc5f5e345e6348c1614a0a7a170"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/site-access.glb",
+      "bytes": 420940,
+      "sha256": "c5005bad703b233fb1abb7bcd1fc444c276081cf0e6f4ac1221f92b7852a35e0"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/mouri-open-furniture.glb",
+      "bytes": 2905828,
+      "sha256": "f8375d6d08bf5cee3271ac3da9b0717df580130d28999b355c5008d33d4bd450"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/buildings/kudo-open-furniture.glb",
+      "bytes": 2820988,
+      "sha256": "07e57430c3a599f79994042ba6f1009e9b8685971af15b62790040bf56bb7d6a"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/conan.glb",
+      "bytes": 1463756,
+      "sha256": "0fda5f9f9d35433a6c418ad2841a0c6d569f43616948cd6c708a7b34f85abc8d"
+    },
+    {
+      "path": "worlds/conan/web-project/assets/kogoro.glb",
+      "bytes": 9935836,
+      "sha256": "a10cd7fb7c774579af8529a9dd146b42235d32e8ff0d570c6eba2cdf09a48be3"
+    }
+  ],
+  "unchanged_character_checks": [
+    {
+      "file": "worlds/conan/web-project/assets/conan.glb",
+      "unchanged": true,
+      "sha256": "0fda5f9f9d35433a6c418ad2841a0c6d569f43616948cd6c708a7b34f85abc8d"
+    },
+    {
+      "file": "worlds/conan/web-project/assets/kogoro.glb",
+      "unchanged": true,
+      "sha256": "a10cd7fb7c774579af8529a9dd146b42235d32e8ff0d570c6eba2cdf09a48be3"
+    },
+    {
+      "file": "worlds/conan/web-project/assets/agasa.glb",
+      "unchanged": true,
+      "sha256": "28230b5871c5cb0c2775e2d0dcbc377f01c78e9c69b7425cc359462325eb0985"
+    }
+  ]
+}

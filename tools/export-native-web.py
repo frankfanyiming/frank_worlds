@@ -52,6 +52,28 @@ if args.world=='conan':
   preset_export,count=re.subn(r'^exclude_filter="([^"]*)"$',lambda m:'exclude_filter="'+m.group(1)+','+duplicates+'"',preset_export,count=1,flags=re.M)
   if count!=1:raise SystemExit('Cannot safely exclude duplicate embedded textures.')
   print('EXPORT_ONLY_LEGACY_TEXTURE_EXCLUSIONS '+duplicates)
+ # Godot's extractor leaves the old image behind when a GLB changes from PNG
+ # to JPEG, or a removed furniture part used it. all_resources would ship both.
+ # Limit exclusions to the five new CC0 assemblies, and require absence from
+ # every imported scene/resource dependency and every authored text reference.
+ dependency_script=root/'tools/list-native-resource-dependencies.gd'
+ result=subprocess.run([args.godot,'--headless','--path',str(project),'--script',str(dependency_script)],check=True,capture_output=True,text=True)
+ lines=[line.split('NATIVE_RESOURCE_DEPENDENCIES ',1)[1] for line in result.stdout.splitlines() if line.startswith('NATIVE_RESOURCE_DEPENDENCIES ')]
+ if len(lines)!=1:raise RuntimeError('Cannot safely inspect furniture map dependencies')
+ used=set(json.loads(lines[0]));ids=['metal_office_desk','desk_lamp_arm_01','book_encyclopedia_set_01','modern_wooden_cabinet','vintage_radio_transceiver']
+ candidates=[]
+ for path in (project/'assets/buildings').iterdir():
+  if path.suffix.lower() not in ['.png','.jpg','.jpeg']:continue
+  if not any(path.name.startswith(prefix+'_'+key) for prefix in ['agasa','mouri-open-furniture','kudo-open-furniture'] for key in ids):continue
+  if 'res://'+str(path.relative_to(project)) not in used:candidates.append(path)
+ texts=[p.read_text(errors='replace') for p in project.rglob('*') if p.suffix in ('.gd','.gdshader','.tscn','.tres','.json') and '.godot' not in p.parts]
+ unused=[p for p in candidates if not any(p.name in text for text in texts)]
+ if unused:
+  duplicates=','.join(str(p.relative_to(project)) for p in sorted(unused))
+  preset_export,count=re.subn(r'^exclude_filter="([^"]*)"$',lambda m:'exclude_filter="'+m.group(1)+','+duplicates+'"',preset_export,count=1,flags=re.M)
+  if count!=1:raise SystemExit('Cannot safely exclude unused extracted furniture maps')
+  (output/'unused-furniture-map-report.json').write_text(json.dumps({'exportOnlyExclusions':[str(p.relative_to(project)) for p in sorted(unused)],'sourceFilesPreserved':True,'sceneResourceDependenciesChecked':len(used)},indent=2)+'\n')
+  print('EXPORT_ONLY_UNUSED_FURNITURE_MAPS',len(unused))
 try:
  if preset_export!=preset_original:preset_path.write_text(preset_export)
  subprocess.run([args.godot,'--headless','--path',str(project),'--export-release','Web',str(output/'index.html')],check=True)

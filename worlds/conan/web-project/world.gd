@@ -150,7 +150,8 @@ func build_houses()->void:
 		var spec:Dictionary=JSON.parse_string(FileAccess.get_file_as_string(path));specs[key]=spec
 		var root=Node3D.new();root.name="Blender_"+key;add_child(root);root.position=vec(spec.origin);root.rotation.y=float(spec.get("yaw",0));homes[key]=root
 		var architecture=model("buildings/"+key,root,Vector3.ZERO);collision_meshes(architecture)
-		for detail in spec.get("detail_assets",[]):model("buildings/"+str(detail),root,Vector3.ZERO)
+		for detail in spec.get("detail_assets",[]):
+			var furnishing=model("buildings/"+str(detail),root,Vector3.ZERO);collision_meshes(furnishing)
 		configure_architecture_accents(root,spec)
 		for c in spec.get("colliders",[]):collision(root,vec(c.p),vec(c.s),float(c.get("r",0)),float(c.get("rx",0)))
 		for r in spec.get("ramps",[]):collision(root,vec(r.p),vec(r.s),float(r.get("r",0)),float(r.get("rx",0)))

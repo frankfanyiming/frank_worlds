@@ -568,7 +568,7 @@ function NativeWorld({
         key={world + locale + retry}
         title={t(titleKey[world])}
         src={
-          assetPath('worlds/' + world + '/index.html') + '?v=' + 'friends-ui-21' + '&lang=' +
+          assetPath('worlds/' + world + '/index.html') + '?v=' + 'access-furniture-22' + '&lang=' +
           locale +
           '&sound=' +
           (initialSound.current ? '1' : '0')

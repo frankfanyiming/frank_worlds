@@ -203,6 +203,8 @@ func test_agasa():
 		if case_name=="garage":
 			await authored("kitchen_to_living")
 			await authored("living_to_garage")
+			await authored("garage_to_rear_apron")
+			await authored("garage_to_rear_apron",true)
 			await authored("living_to_garage",true)
 			await authored("kitchen_to_living",true)
 		else:
@@ -232,12 +234,24 @@ func test_agasa():
 			await follow("hall_to_kitchen_front","agasa",[[0,.08,3.25],[-1.3,.08,3.1],[-1.55,.08,3.1]])
 		await authored("front_to_round_kitchen",true)
 
+func test_mouri():
+	await start_at_door("mouri","stairs_from_pavement")
+	await follow("pavement_to_stairwell","mouri",[[2.68,.18,1.20],[2.68,.04,-.62]])
+	var stairs:Array=world.specs.mouri.routes
+	await follow("first_floor_to_office","mouri",stairs[0].points)
+	await follow("office_to_stair_landing","mouri",[[1.7,3.3,-5.58],[1.7,3.3,-.58],[2.68,3.3,-.62]])
+	await follow("office_to_home","mouri",stairs[1].points)
+	await follow("home_back_to_office","mouri",stairs[1].points,true)
+	await follow("office_landing_to_first_stair","mouri",[[1.7,3.3,-.58],[3.83,3.3,-.58]])
+	await follow("stairs_back_to_ground","mouri",stairs[0].points.slice(0,5),true)
+	await follow("stairwell_back_to_pavement","mouri",[[2.68,.18,1.20]])
+
 func run():
 	var args=OS.get_cmdline_user_args()
 	folder=args[0] if not args.is_empty() else ProjectSettings.globalize_path("res://route-evidence")
 	for arg in args:
 		if arg.begins_with("--only="):only=arg.trim_prefix("--only=")
-	if not only.is_empty() and not ["frontage","basement","gallery","kitchen","garage"].has(only):
+	if not only.is_empty() and not ["frontage","mouri","basement","gallery","kitchen","garage"].has(only):
 		push_error("Unknown route scenario: "+only);quit(2);return
 	DirAccess.make_dir_recursive_absolute(folder)
 	save_images=args.has("--pictures") and DisplayServer.get_name()!="headless"
@@ -257,6 +271,7 @@ func run():
 	notes.append("Headless results establish actual controller movement/collision only. They do not establish rendered appearance, mobile performance, or release status.")
 	notes.append("Outdoor scenario reset is explicitly listed. No player position is assigned inside walk/follow and no raycast substitutes for movement.")
 	if only.is_empty() or only=="frontage":await test_frontage()
+	if only.is_empty() or only=="mouri":await test_mouri()
 	await test_agasa()
 	world.audit_input=Vector2.ZERO;Input.action_release("run")
 	persist(true)

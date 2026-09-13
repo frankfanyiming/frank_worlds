@@ -113,6 +113,7 @@ func _ready():
  var room=stage.find_child("InteriorRoot",true,false)
  if room:room.get_parent().remove_child(room);room.queue_free()
  add_child(load("res://assets/navigation.glb").instantiate())
+ add_child(load("res://assets/bridge-approaches.glb").instantiate())
  _setup_homes()
  shell=stage.find_child("HouseShellRoot",true,false)
  for name in ["HouseShell_Blue_grey_shelter_stone","Architecture_Blue_grey_shelter_stone"]:
@@ -192,6 +193,10 @@ void fragment(){float w=sin(world.x*3.0+TIME*.6+sin(world.z*2.0))*sin(world.z*2.
 """
    var sm=ShaderMaterial.new();sm.shader=sh;mi.material_override=sm;mi.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
   elif "flame" in mi.name.to_lower() or "Candle_flame" in mi.name:
+   mi.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+  elif str(mi.name) in ["Landscape_Soft_sand_footpath", "PandaTrail"]:
+   # These thin ground overlays still receive tree/actor shadows. They should
+   # not shadow the terrain 28 mm below and create rectangular self-shadow bands.
    mi.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
  for child in node.get_children():_configure_materials(child)
 

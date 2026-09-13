@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "across_bridge": true,
+    "bridge_to_frog_home": true,
+    "camp_to_east_bridge": true,
+    "no_wait_for_follower_in_route": true,
+    "panda_house_to_camp": true,
+    "past_old_navigation_boundary": true
+  },
+  "max_gap_m": 1.97590494155884,
+  "notes": "Test drives the frog along paths sampled from static geometry; Panda follows actual frog breadcrumbs and still uses move_and_slide. No waiting inserted along the route. Includes sprint and an excursion past the former navigation boundary. No route teleport or collider disable.",
+  "panda_collision_frames": 1665,
+  "panda_travelled": 73.5302015450434,
+  "real_controller": true,
+  "routes": [
+    {
+      "frog": [
+        26.3599967956543,
+        1.56599283218384,
+        25.2038021087646
+      ],
+      "label": "past_old_navigation_boundary",
+      "panda": [
+        26.364315032959,
+        1.30197238922119,
+        23.8811206817627
+      ],
+      "panda_gap": 1.34878146648407,
+      "path_points": 7,
+      "walk_complete": true
+    },
+    {
+      "frog": [
+        24.1994495391846,
+        0.0162994749844074,
+        5.26034927368164
+      ],
+      "label": "panda_house_to_camp",
+      "panda": [
+        24.1317119598389,
+        0.0276484582573175,
+        6.57867527008057
+      ],
+      "panda_gap": 1.32011389732361,
+      "path_points": 29,
+      "walk_complete": true
+    },
+    {
+      "frog": [
+        19.1601505279541,
+        0.164064988493919,
+        -9.13093852996826
+      ],
+      "label": "camp_to_east_bridge",
+      "panda": [
+        19.4080486297607,
+        0.166429281234741,
+        -7.85173988342285
+      ],
+      "panda_gap": 1.30299973487854,
+      "path_points": 21,
+      "walk_complete": true
+    },
+    {
+      "frog": [
+        11.3560600280762,
+        0.546999275684357,
+        -9.2400016784668
+      ],
+      "label": "across_bridge",
+      "panda": [
+        12.6775789260864,
+        0.932594656944275,
+        -9.2375659942627
+      ],
+      "panda_gap": 1.37662696838379,
+      "path_points": 12,
+      "walk_complete": true
+    },
+    {
+      "frog": [
+        -14.5718441009521,
+        0.0497742630541325,
+        -6.35928344726562
+      ],
+      "label": "bridge_to_frog_home",
+      "panda": [
+        -13.2674217224121,
+        0.109963640570641,
+        -6.38197422027588
+      ],
+      "panda_gap": 1.30600738525391,
+      "path_points": 37,
+      "walk_complete": true
+    }
+  ],
+  "worst_stopped_while_frog_moves_s": 0.0
+}
