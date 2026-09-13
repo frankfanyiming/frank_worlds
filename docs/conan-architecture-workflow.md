@@ -34,7 +34,9 @@ Blender 5.2.1 从空工厂场景创建时 `scene.world` 可能为空，先创建
 
 `lights` 给每个房间有范围的低能量 Omni 填光，含 `p/energy/range/color/shadow/attenuation`。这些补光默认无阴影，窗口另承担方向性照明。`windows` 提供真实窗孔位置和朝内法线；`interior_zones` 提供包围区域。不能靠移除整面墙或全局加曝光修室内黑。新增材质用 `Agasa reference` / `BeikaRow` 前缀，避免引擎按旧同名材料误覆盖颜色。
 
-甲壳虫停在车库局部 `[11.5,.065,-4.85]`，沿车库纵深摆正；行走目标在车旁 `[10.1,.06,-5.8]`。把车中心当路线终点会造成角色撞车，不能把这种失败归因于寻路。
+甲壳虫停在车库局部 `[11.5,.041,-4.85]`（第 22 轮按实际车轮落点从 `.065` 下调），沿车库纵深摆正；行走目标在车旁 `[10.1,.06,-5.8]`。把车中心当路线终点会造成角色撞车，不能把这种失败归因于寻路。
+
+第 22 轮追加了 `repair-site-access.py` 的门槛与旧岸边栏杆修补，以及 `build-site-access.py` 的完整车库地基、排水和同标高车道。带新家具的重建步骤见 [开放家具记录](conan-open-furniture.md)；`prepare-reference-runtime.py` 会重写博士住宅元数据，因此场地构建必须在它之后执行。最终 [51 项真实行走检查](evidence/revision22/conan-physical-routes-final/physical-routes.json)包含从街道走入毛利楼、上下两层后返回，以及从博士家走出后车库再进入。
 
 ## 本轮实际发现的坑
 

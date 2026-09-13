@@ -1,0 +1,54 @@
+{
+  "url": "https://frankfanyiming.github.io/frank_worlds/",
+  "environment": "Desktop Chrome WebGL2 with mobile touch emulation",
+  "errors": [],
+  "worlds": [
+    {
+      "world": "frog",
+      "console": [
+        "FROG_WORLD_READY {\"actor\":\"Tripo\",\"animations\":[\"Greet\",\"Idle\",\"JumpAir\",\"JumpStart\",\"Land\",\"Run\",\"Sit\",\"Walk\"],\"scenery\":\"Blender\"}"
+      ],
+      "views": [
+        {
+          "w": 390,
+          "h": 844,
+          "scroll": 390
+        },
+        {
+          "w": 844,
+          "h": 390,
+          "scroll": 844
+        }
+      ],
+      "iframe": "/frank_worlds/worlds/frog/index.html?v=access-furniture-22&lang=zh-CN&sound=0",
+      "sha256": "9cb7b46dbbbf611a3c274f7198d02b9091939b3d301c76d9ce5563a95e6b55e7",
+      "friendText": "和熊猫的小记\n\n顺着营地旁的小路去熊猫家。靠近熊猫，就能邀请它来做客。\n\n手作料理 0 份 · 共同回忆 0 段\n\n继续散步"
+    },
+    {
+      "world": "conan",
+      "console": [
+        "BLENDER_TOWN_READY buildings=3 tripo_characters=11 cars=6 remote_rooms=0"
+      ],
+      "views": [
+        {
+          "w": 390,
+          "h": 844,
+          "scroll": 390
+        },
+        {
+          "w": 844,
+          "h": 390,
+          "scroll": 844
+        }
+      ],
+      "iframe": "/frank_worlds/worlds/conan/index.html?v=access-furniture-22&lang=zh-CN&sound=0",
+      "sha256": "7c0334227f442d37cfc445ac7fd599d35cbbf7bc025cec35abb793c7f8972f40"
+    },
+    {
+      "world": "doraemon",
+      "ready": true,
+      "dialog": true
+    }
+  ],
+  "passed": true
+}

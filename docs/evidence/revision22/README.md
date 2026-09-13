@@ -23,6 +23,16 @@
 
 手机结果来自桌面 Chrome 的触屏及视口模拟，未声称是在实体手机测得。定位过程中的失败记录保留在其他目录，不作为最终通过证据。
 
+## 公开发布核对
+
+第 22 版已发布至 [GitHub Pages](https://frankfanyiming.github.io/frank_worlds/?v=22#world/frog)。运行代码提交为 `4ff3f692951958c42cb265087fc666f2c271f8fa`，已推送至 `main` 和 `feat/xlands-worlds-community`；网页提交为 `1261db919addf86c40bf06353db2b0b1d1743f28`。[发布工作流 34742958091](https://github.com/frankfanyiming/frank_worlds/actions/runs/34742958091) 的构建与部署均成功。
+
+- [公开文件核对](public-browser/release22-public-integrity.json)：8 个页面、脚本和清单的 SHA-256 与发布文件一致；28 个运行包分块均可访问且大小一致。
+- [公开浏览器报告](public-browser/browser-report.json)：三个世界均实际加载，青蛙和柯南运行包摘要与最终验收包相同，没有页面脚本异常；390×844 和 844×390 视口下的菜单、朋友入口与哆啦 A 梦口袋均检查通过。
+- [青蛙公开手机版画面](public-browser/frog-390.png)、[柯南公开手机版画面](public-browser/conan-390.png)来自已发布页面的 Chrome WebGL 实际加载。
+
+后续仅补充本报告和制作经验的文档提交不改变 `release.json` 中对应运行代码的 `sourceCommit`。
+
 ## 实机画面
 
 ![原路面分段阴影](frog-before/path-before.png)

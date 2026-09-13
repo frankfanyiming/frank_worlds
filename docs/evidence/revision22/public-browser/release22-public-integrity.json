@@ -1,0 +1,231 @@
+{
+  "checkedAt": "2026-09-13T06:37:27.107985+00:00",
+  "checks": [
+    {
+      "path": "release.json",
+      "status": 200,
+      "sha256": "df2b95cb1620937d330db1e1414ffa6c90a643d44e8d816917a3d856b694ab94",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "3ccf886377e745741c6932d42e8ecbb7aec944902bae4cf0800ccc3279962a9f",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "assets/index-DfLmdZlx.js",
+      "status": 200,
+      "sha256": "c890c72fa0c49c3d35734b653d76c327d38437cfacd0b8ca0352916e055617f3",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "assets/index-CJS_ceXF.css",
+      "status": 200,
+      "sha256": "6ebf67d4935d8397d6dd31feb59dca70959ec2ed0759a3794b3c93a10a10f820",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/conan/index.html",
+      "status": 200,
+      "sha256": "82e1bd0cb2aff6de358b48cd21a2708ede7162fd7d3df1a9ee1111666a1afce5",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/conan/world-pack.json",
+      "status": 200,
+      "sha256": "a8a3c998bfb680a95827fb7c9d2caac3b067b39330863f31bba909ca137a7cca",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/frog/index.html",
+      "status": 200,
+      "sha256": "8459599ff713d033ea17e241dabe593d60d37f9977452e7d41624e5253ab0378",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/frog/world-pack.json",
+      "status": 200,
+      "sha256": "4043598923567fe53c7fd7c7fa57731b25ff733ac122cbed7a9a06c7dbd42ad1",
+      "matchesPublishedCandidate": true
+    }
+  ],
+  "release": {
+    "sourceCommit": "4ff3f692951958c42cb265087fc666f2c271f8fa",
+    "revision": 22,
+    "assetRevision": 22,
+    "date": "2026-09-13",
+    "summary": "Repair trail shadows, responsive panda following, Mouri access and Agasa garage; integrate five CC0 furniture collections",
+    "worlds": [
+      "doraemon",
+      "frog",
+      "conan"
+    ],
+    "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
+    "loadingFix": "stream-progress-range-retry",
+    "updatedAt": "2026-09-13T06:13:34.074390+00:00",
+    "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
+    "mobile": "Single modal per world, compact HUD, scrolling sheets, 44px touch targets and fixed canvas viewport",
+    "conan": "Pavement-to-Mouri stair access, supported Agasa garage and continuous rear apron; fitted CC0 furniture with recorded provenance",
+    "nativePacks": {
+      "frog": {
+        "sha256": "9cb7b46dbbbf611a3c274f7198d02b9091939b3d301c76d9ce5563a95e6b55e7",
+        "rawBytes": 239253036,
+        "downloadBytes": 177985792,
+        "chunks": 15
+      },
+      "conan": {
+        "sha256": "7c0334227f442d37cfc445ac7fd599d35cbbf7bc025cec35abb793c7f8972f40",
+        "rawBytes": 210271740,
+        "downloadBytes": 206713911,
+        "chunks": 13
+      }
+    },
+    "guestbookLayout": "Narrow-screen single-column fields; all form bounds and touch targets checked at 360, 390 and 844 CSS px",
+    "friendLife": "Continuous collision-aware companion following across the creek and outside the former navigation bounds; daily cooking, gifts, picnic and immediate-refresh save recovery retained",
+    "openFurniture": "https://github.com/frankfanyiming/frank_worlds/blob/main/docs/conan-open-furniture.md"
+  },
+  "allChunksAvailable": [
+    {
+      "path": "worlds/conan/world-000.bin.gz",
+      "status": 200,
+      "bytes": 16222039
+    },
+    {
+      "path": "worlds/conan/world-001.bin.gz",
+      "status": 200,
+      "bytes": 16270547
+    },
+    {
+      "path": "worlds/conan/world-002.bin.gz",
+      "status": 200,
+      "bytes": 16706570
+    },
+    {
+      "path": "worlds/conan/world-003.bin.gz",
+      "status": 200,
+      "bytes": 16683289
+    },
+    {
+      "path": "worlds/conan/world-004.bin.gz",
+      "status": 200,
+      "bytes": 16495148
+    },
+    {
+      "path": "worlds/conan/world-005.bin.gz",
+      "status": 200,
+      "bytes": 16534069
+    },
+    {
+      "path": "worlds/conan/world-006.bin.gz",
+      "status": 200,
+      "bytes": 16379800
+    },
+    {
+      "path": "worlds/conan/world-007.bin.gz",
+      "status": 200,
+      "bytes": 16399692
+    },
+    {
+      "path": "worlds/conan/world-008.bin.gz",
+      "status": 200,
+      "bytes": 16285634
+    },
+    {
+      "path": "worlds/conan/world-009.bin.gz",
+      "status": 200,
+      "bytes": 16468244
+    },
+    {
+      "path": "worlds/conan/world-010.bin.gz",
+      "status": 200,
+      "bytes": 16676365
+    },
+    {
+      "path": "worlds/conan/world-011.bin.gz",
+      "status": 200,
+      "bytes": 16730893
+    },
+    {
+      "path": "worlds/conan/world-012.bin.gz",
+      "status": 200,
+      "bytes": 8861621
+    },
+    {
+      "path": "worlds/frog/world-000.bin.gz",
+      "status": 200,
+      "bytes": 6237936
+    },
+    {
+      "path": "worlds/frog/world-001.bin.gz",
+      "status": 200,
+      "bytes": 4267360
+    },
+    {
+      "path": "worlds/frog/world-002.bin.gz",
+      "status": 200,
+      "bytes": 4573181
+    },
+    {
+      "path": "worlds/frog/world-003.bin.gz",
+      "status": 200,
+      "bytes": 14854331
+    },
+    {
+      "path": "worlds/frog/world-004.bin.gz",
+      "status": 200,
+      "bytes": 6146393
+    },
+    {
+      "path": "worlds/frog/world-005.bin.gz",
+      "status": 200,
+      "bytes": 6304844
+    },
+    {
+      "path": "worlds/frog/world-006.bin.gz",
+      "status": 200,
+      "bytes": 15208127
+    },
+    {
+      "path": "worlds/frog/world-007.bin.gz",
+      "status": 200,
+      "bytes": 16754408
+    },
+    {
+      "path": "worlds/frog/world-008.bin.gz",
+      "status": 200,
+      "bytes": 16524621
+    },
+    {
+      "path": "worlds/frog/world-009.bin.gz",
+      "status": 200,
+      "bytes": 16645975
+    },
+    {
+      "path": "worlds/frog/world-010.bin.gz",
+      "status": 200,
+      "bytes": 16592131
+    },
+    {
+      "path": "worlds/frog/world-011.bin.gz",
+      "status": 200,
+      "bytes": 16348610
+    },
+    {
+      "path": "worlds/frog/world-012.bin.gz",
+      "status": 200,
+      "bytes": 16494623
+    },
+    {
+      "path": "worlds/frog/world-013.bin.gz",
+      "status": 200,
+      "bytes": 16746552
+    },
+    {
+      "path": "worlds/frog/world-014.bin.gz",
+      "status": 200,
+      "bytes": 4286700
+    }
+  ],
+  "pass": true
+}
