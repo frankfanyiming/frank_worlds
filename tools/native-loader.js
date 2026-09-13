@@ -30,6 +30,19 @@ let progress = 0, lastPublished = 0, failed = false, ready = false;
 let queuedSound = new URLSearchParams(location.search).get('sound') === '1';
 const controllers = new Set();
 let packPrefix = '';
+const analyticsStartedAt = Date.now();
+let analyticsLoaded = false;
+function trackStandaloneWorld(name, reason) {
+  if (window.parent !== window) return; // Embedded worlds are measured by their parent once.
+  const world = location.pathname.match(/\/worlds\/(frog|conan)\//)?.[1];
+  if (!world) return;
+  const data = {world, load_ms: Date.now() - analyticsStartedAt, ...(reason ? {reason} : {})};
+  try {
+    if (window.xlandsAnalytics) window.xlandsAnalytics.event(name, data);
+    else { const queue = window.__xlandsAnalyticsEvents ||= []; if (queue.length < 60) queue.push({name, data}); }
+  } catch (_) {}
+}
+trackStandaloneWorld('world_enter');
 
 // CSS pixels and the Godot drawing buffer must be owned separately. At DPR 3,
 // the old full-window policy allocated nine times as many pixels on a phone.
@@ -77,6 +90,7 @@ function fail(error) {
   if (!statusPanel.isConnected) document.body.append(statusPanel);
   for (const controller of controllers) controller.abort();
   console.error(error);
+  trackStandaloneWorld(analyticsLoaded ? 'world_runtime_error' : 'world_load_error', 'engine');
   const graphics=/WebGL|context lost|memory|allocation|out of bounds/i.test(String(error));
   label.textContent = graphics?({'zh-CN':'图形加载失败，请关闭其它页面后重试。','zh-TW':'圖形載入失敗，請關閉其他頁面後重試。',en:'Graphics could not load. Close other tabs and retry.',ja:'描画を開始できません。他のタブを閉じて再試行してください。',ko:'화면을 불러오지 못했어요. 다른 탭을 닫고 다시 시도해 주세요.'}[lang]||copy[1]):copy[1];
   retryButton.hidden = false;
@@ -361,6 +375,8 @@ async function load() {
         document.body.classList.add('world-ready');
         statusPanel.remove();
         window.xlandsSound?.(queuedSound);
+        analyticsLoaded = true;
+        trackStandaloneWorld('world_ready');
         parent.postMessage({type: 'xlands-ready'}, '*');
       }
     },

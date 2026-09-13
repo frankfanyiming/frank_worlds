@@ -8,5 +8,5 @@ export const metadata: Metadata = {
   authors: [{name: 'Frank', url: 'https://github.com/frankfanyiming/frank_worlds'}],
 };
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
-  return <html lang="zh-CN"><body>{children}</body></html>;
+  return <html lang="zh-CN"><body>{children}<script defer src="/analytics.js" /></body></html>;
 }

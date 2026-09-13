@@ -63,3 +63,5 @@ npm run build:pages
 python3 tools/stamp-source-provenance.py --check
 node tools/verify-build-provenance.mjs worlds/doraemon/web/dist-pages
 ```
+
+访问统计维护与指标说明见 [docs/analytics.md](docs/analytics.md)。Fork 后请替换为自己的 Umami 网站配置或关闭统计。

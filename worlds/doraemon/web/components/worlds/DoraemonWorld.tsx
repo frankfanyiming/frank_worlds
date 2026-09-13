@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 // XLands / xlands-frankfym001 — https://github.com/frankfanyiming/frank_worlds
 'use client';
+import { beginWorldLoad } from '@/lib/community/analytics';
 import { localizeTownUI, townText } from '@/lib/town/ui-i18n';
 import { assetPath } from '@/lib/town/asset-path';
 import { useEffect, useRef, useState } from 'react';
@@ -86,15 +87,21 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
   const uiOpen = !!panel || help || !!s.actor || !!s.bedroom?.requested;
   useEffect(() => {
     let disposed = false;
+    const attempt = beginWorldLoad('doraemon');
     let unregister = () => {};
     import('@/lib/town/engine')
       .then(({ TownEngine }) => {
         if (disposed || !canvas.current) return;
         try {
-          engine.current = new TownEngine(canvas.current, setS);
+          engine.current = new TownEngine(canvas.current, snapshot => {
+            if (snapshot.error) attempt.error('engine');
+            else if (snapshot.ready) attempt.ready();
+            setS(snapshot);
+          });
           setQuality(engine.current.quality);
           unregister = registerTownTools(engine.current);
         } catch (e) {
+          attempt.error('graphics');
           console.error(e);
           setS((v) => ({
             ...v,
@@ -104,6 +111,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
         }
       })
       .catch((e) => {
+        attempt.error('download');
         console.error(e);
         setS((v) => ({
           ...v,
@@ -112,6 +120,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
       });
     return () => {
       disposed = true;
+      attempt.dispose();
       unregister();
       engine.current?.destroy();
       engine.current = null;

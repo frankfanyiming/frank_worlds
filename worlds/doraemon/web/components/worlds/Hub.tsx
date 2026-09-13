@@ -32,6 +32,7 @@ import { Modal, WorldSelect, WORLDS, titleKey, worldKey } from './Common';
 import CreatorLinks from './CreatorLinks';
 import MobilePerformanceTip from './MobilePerformanceTip';
 import { CREATOR } from '@/lib/community/creator';
+import { beginWorldLoad } from '@/lib/community/analytics';
 import AgentDialog from './AgentDialog';
 import AdminPanel from './AdminPanel';
 const Doraemon = lazy(() => import('./DoraemonWorld'));
@@ -500,7 +501,8 @@ function NativeWorld({
   const frame = useRef<HTMLIFrameElement>(null),
     soundRef = useRef(sound),
     initialSound = useRef(sound),
-    lastActivity = useRef(Date.now());
+    lastActivity = useRef(Date.now()),
+    analytics = useRef<ReturnType<typeof beginWorldLoad> | null>(null);
   soundRef.current = sound;
   const [progress, setProgress] = useState(0),
     [detail, setDetail] = useState(''),
@@ -513,14 +515,17 @@ function NativeWorld({
     setProgress(0);
     setDetail('');
     lastActivity.current = Date.now();
+    const attempt = beginWorldLoad(world);
+    analytics.current = attempt;
     let started = false;
     const watchdog = window.setInterval(() => {
-      if (!started && Date.now() - lastActivity.current > 90000) setError(true);
+      if (!started && Date.now() - lastActivity.current > 90000) { attempt.error('timeout'); setError(true); }
     }, 5000);
     const fn = (e: MessageEvent) => {
       if (e.source !== frame.current?.contentWindow) return;
       lastActivity.current = Date.now();
       if (e.data?.type === 'xlands-ready') {
+        attempt.ready();
         started = true;
         setReady(true);
         frame.current?.contentWindow?.postMessage(
@@ -532,13 +537,14 @@ function NativeWorld({
         setProgress(e.data.progress);
         if (typeof e.data.detail === 'string') setDetail(e.data.detail);
       }
-      if (e.data?.type === 'xlands-error') {setError(true);setReady(false);if(typeof e.data.detail==='string')setDetail(e.data.detail);}
+      if (e.data?.type === 'xlands-error') {attempt.error('engine');setError(true);setReady(false);if(typeof e.data.detail==='string')setDetail(e.data.detail);}
       if (e.data?.type === 'xlands-expansion') onExpansion();
     };
     window.addEventListener('message', fn);
     return () => {
       window.removeEventListener('message', fn);
       window.clearInterval(watchdog);
+      attempt.dispose();
     };
   }, [world, retry, locale]);
   useEffect(() => {
@@ -561,7 +567,7 @@ function NativeWorld({
         }
         allow="autoplay; fullscreen; gamepad"
         allowFullScreen
-        onError={() => setError(true)}
+        onError={() => { analytics.current?.error('frame'); setError(true); }}
       />}
       {!ready && (
         <div className={'native-loading ' + (world === 'conan' ? 'conan-loading' : '')}>
