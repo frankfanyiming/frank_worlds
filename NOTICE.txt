@@ -1,0 +1,34 @@
+XLands小世界 — source attribution / 来源署名
+Project ID: xlands-frankfym001
+Creator: Frank (frankfanyiming) / @FrankFYM001
+Original repository: https://github.com/frankfanyiming/frank_worlds
+Creator contact: https://x.com/FrankFYM001
+
+Original project code is licensed under MIT; the complete notice follows.
+Third-party dependencies and assets retain their own licenses and rights.
+See CREDITS.md in the original repository for asset provenance and IP scope.
+This notice does not relicense third-party material or grant IP permissions.
+Forks may record their own changes and authors without removing existing notices.
+Public source/version markers contain no visitor tracking or callback.
+
+MIT License
+
+Copyright (c) 2026 Frank (frankfanyiming) and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

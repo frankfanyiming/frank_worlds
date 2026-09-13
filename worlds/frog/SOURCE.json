@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "projectId": "xlands-frankfym001",
+  "project": "XLands小世界",
+  "creator": "Frank (frankfanyiming)",
+  "repository": "https://github.com/frankfanyiming/frank_worlds",
+  "homepage": "https://frankfanyiming.github.io/frank_worlds/",
+  "contact": "https://x.com/FrankFYM001",
+  "codeLicense": "MIT",
+  "licenseScope": "Original project code only; third-party dependencies and assets retain their own rights and licenses.",
+  "credits": "CREDITS.md"
+}
