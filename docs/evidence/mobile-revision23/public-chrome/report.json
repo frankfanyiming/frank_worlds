@@ -1,0 +1,11 @@
+{
+  "url": "https://frankfanyiming.github.io/frank_worlds/?v=23",
+  "environment": "Desktop Chrome Metal, 390×844, DPR 3, touch emulation",
+  "cpuThrottle": 1,
+  "checks": [],
+  "errors": [
+    "TimeoutError: page.waitForFunction: Timeout 120000ms exceeded."
+  ],
+  "environmentErrors": [],
+  "passed": false
+}

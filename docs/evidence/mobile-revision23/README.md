@@ -58,3 +58,16 @@ node tools/build-doraemon-mobile-assets.mjs
 ## 状态区分
 
 模型源文件保留；移动派生文件已生成；引擎验收为桌面 Chrome/WebKit 的真实 WebGL 场景及触屏模拟；网页已正式构建。公开发布以随后记录的 `release.json`、源代码提交及 Pages 工作流结果为准。青蛙、柯南原生包保留第 22 版摘要。
+
+
+## 公开发布确认
+
+第 23 版已发布至 [GitHub Pages](https://frankfanyiming.github.io/frank_worlds/?v=23#world/doraemon)。运行源码 `3f366d6d18fc6085f2e3b9d2f1a0ad2e4c8ef26a` 已推至 `main` 与 `feat/xlands-worlds-community`；Pages 为 `9db0ad7411f694e408eef9031d7b62c79a7a47d0`。[工作流 34747740476](https://github.com/frankfanyiming/frank_worlds/actions/runs/34747740476) 的构建与部署均成功。
+
+[公开资源完整性](public-browser/release23-public-integrity.json)核对了 61 个入口、脚本、移动模型和材质的完整 SHA-256，28 个原生运行包分块可访问且大小一致。第一次验证遇到网络 `IncompleteRead`，完整重读后散列一致，没有使用收到的部分内容当作通过。
+
+[公网场景复验摘要](public-runtime-summary.json)：Chrome 与 WebKit 都以手机尺寸真正进入二楼，新资源总下载 36,566,423 B，包含首屏 24,920,418 B。WebKit 另完成横竖屏、返回街道和重入。[Chrome 请求级跟踪](public-chrome-trace/trace.json)和[WebKit 原始报告](public-webkit/report.json)完整保留；Chrome 首次首屏等待超时也保存在 [初次报告](public-chrome/report.json)，重新运行时进度由 49% 到 100%、二楼正常完成，不将初次失败计作通过。
+
+整页检查有一项明确限制：[社区 API 自动化请求](public-community-check.json)收到 Cloudflare 403 HTML 响应，缺少 CORS 头，WebKit 的全局错误断言因此未通过。没有绕过访问保护，也没有把这一项改成绿色。它与 GitHub Pages 场景资源分属不同服务；上述模型、材质和二楼状态校验已通过。本轮不能宣称社区服务或真手机全部验收通过。
+
+后续仅提交这些验收文档，不改变 `release.json.sourceCommit` 对应的运行代码。

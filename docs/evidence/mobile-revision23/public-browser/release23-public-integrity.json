@@ -1,0 +1,557 @@
+{
+  "checkedAt": "2026-09-13T08:36:06.708920+00:00",
+  "checks": [
+    {
+      "path": "release.json",
+      "status": 200,
+      "sha256": "268be8ad86cb9c000276bdb4564b11dd5fcacf68c508cbff05a48a44850451a8",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "5cd17c32d70e4640986e898b2d0090d5d0e9b6078af13f3ffd57fa408f5dbc41",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "assets/index-BnHP8LWp.js",
+      "status": 200,
+      "sha256": "d75e087960484531bc19bd9c7d2ce84866bff6350d60fe7498f55ed436c33a22",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "assets/index-EYOseIgt.css",
+      "status": 200,
+      "sha256": "09ee5e692cce599f1d78b68ffa72c13dc21f1b59c49639ffa603bcd202388ac0",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/surface-v11-lite.glb",
+      "status": 200,
+      "sha256": "5fb49f43019135d1aa72684085cfd27f12c0b21112983941ef98d2aa32bfb8ae",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/vegetation-v3-lite.glb",
+      "status": 200,
+      "sha256": "57cf067c2d62733eefa0616598ce18e987db1e8c97efb660156dc1990d94a128",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/bedroom-v12.glb",
+      "status": 200,
+      "sha256": "a34116797d4b954abc94b69d13d790c6ff96b2d5dc07d4086b6c82b73b890a79",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/neighborhood-v21.glb",
+      "status": 200,
+      "sha256": "7e3514f60502d1fb8751b31311fe61f0948c2218c999ec436af7c0098c765580",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/details/connector-v9-lite.glb",
+      "status": 200,
+      "sha256": "46821ac9e757ce1e3eaf7e4c94ef076296d1803c404c6ba2c0bd66c317c657d4",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/streets-v7-lite.glb",
+      "status": 200,
+      "sha256": "3b9bf9aecd9dccce035f918a325f35d81b012518a2466a9702094902b406d00c",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/terrain-v6.glb",
+      "status": 200,
+      "sha256": "dfb3adb9eed3383c03442edd5cba345f0b4defc904c95939d3185e71d5eba993",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/details/house-v11.glb",
+      "status": 200,
+      "sha256": "bcf0f9cf692e2d0577be4d760f8367a20dbab0095faf2b6f84f0d62f07665426",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/expansion/expansion-trees-east.glb",
+      "status": 200,
+      "sha256": "939f5ecb748d8114db41bb42b7d897b957c98dd201870086119070018c42044b",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/world-v11.glb",
+      "status": 200,
+      "sha256": "9e1064d8f1beff40fd11429ae2ea1e54329f3e04d047c7370e16a8d170e32b27",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/expansion/expansion-terrain.glb",
+      "status": 200,
+      "sha256": "fe774528dd2fb18bf86c671f474699d9660c4dca7d030dbf5fededdf630c254f",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/expansion/expansion-groundcover-lite.glb",
+      "status": 200,
+      "sha256": "431e87bee335ddec66643a8abf66be75f7cf33db0dc52291d1dd34774a1fffe1",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/expansion/expansion-river-bridge.glb",
+      "status": 200,
+      "sha256": "98fcf389024804c5c42f9c0484ba922c42b3dd02f85332b39788669a44ef7de2",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/WarmPaperWall/orm.webp",
+      "status": 200,
+      "sha256": "bc76f626a7d59a428cd7cacaa056d2218d1906828068b3222941bb78efedead8",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "models/mobile-v23/expansion/expansion-trees-west.glb",
+      "status": 200,
+      "sha256": "fe02c0446a52efd1b56b76eff6d17c937804ca80e501b6f83b1f563968e0c453",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/WarmPaperWall/normal.png",
+      "status": 200,
+      "sha256": "2f80b184121747902b440e9e2a2e2971ec4989e0d5e3c490a71ffb5b3ec313d6",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/WarmPaperWall/albedo.webp",
+      "status": 200,
+      "sha256": "507a3f60feb5fe4bb50048968496c773e0a67f9885285108b3bb96efe7e74f0f",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/GreenLinen/orm.webp",
+      "status": 200,
+      "sha256": "d6d5ab26b495deef0a3f2b9cc28f17dfc3f5d05ed9db35ef41ca412fd6e86cf5",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/GreenLinen/albedo.webp",
+      "status": 200,
+      "sha256": "0d014f5cb6e9fa9c8b6e8a7f1bde3f2b7c4a6fb9a07563173f855d815b413f30",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/manifest.json",
+      "status": 200,
+      "sha256": "6b0994dd826fb7385d5a6ac8ab5a1f67714ce5bd042108b37f386ed981596073",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/BlueLinen/orm.webp",
+      "status": 200,
+      "sha256": "b8628cd1ccf9e013bfa90882f58ea4d5507526b91d2308c401609f8a71b94df1",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/GreenLinen/normal.png",
+      "status": 200,
+      "sha256": "bdebea2f7c7c43d5d3ad11e4849c82f5e9fb482536a3f6c7e20bb2ea03e6740d",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/BlueLinen/normal.png",
+      "status": 200,
+      "sha256": "cf9a8ad76b1eb3aa1c5568436c880bce5d42ef7dd4fbc8153d8f9dc9a2e6be89",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/DarkWood/orm.webp",
+      "status": 200,
+      "sha256": "f31b8bbe5a3d28fd5fe5f3f82c163f1349a4e77e33a41475b31ebd0e366f9663",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/DarkWood/normal.png",
+      "status": 200,
+      "sha256": "1a167727abe5c0fb1bb3e0a8771d08f73d4a384160c6d4d962f119d88836bedf",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/DarkWood/albedo.webp",
+      "status": 200,
+      "sha256": "59756f676d0b7b38b70507ee5b257aa2d28ea9e2e9b13f35ad35fa48b5ca3155",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/DeskHoneyWood/orm.webp",
+      "status": 200,
+      "sha256": "a770ad04bd666380a48e57f4104bbee18015ef2d5473eda9e61cfb895485f105",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/DeskHoneyWood/normal.png",
+      "status": 200,
+      "sha256": "b27311dd9093b6f4f7dab9bf56187dbab3f089deb9d6d05db48e4e9b0edb9466",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/DeskHoneyWood/albedo.webp",
+      "status": 200,
+      "sha256": "121ed15d2426e4a79ee6afc1c2ca29609d74611ae7eaaf05c1eac7e26737a67c",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/IndoorLeaf/orm.webp",
+      "status": 200,
+      "sha256": "80b975523bac86b529b80d280595fdf0a3ee4d7cc68682a0397edffc0f985c3e",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/IndoorLeaf/normal.png",
+      "status": 200,
+      "sha256": "119cbafbbc06d16e2dd73084ffae42263f4f6c9be58d83c9a6c8791f8d233390",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/fine_grained_wood/orm.webp",
+      "status": 200,
+      "sha256": "d122da1022c8e456f590acd058aa92d61ac42531feabb213996f17e4835fdb85",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/IndoorLeaf/albedo.webp",
+      "status": 200,
+      "sha256": "f76a28a51db514884da7d82838027b159502ac5da408cf57d2eb32f006237677",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/painted_plaster_wall/orm.webp",
+      "status": 200,
+      "sha256": "e6117747fd87a2614efb200b8fbe6bca6e90777db586a9e6d260c6e65674cd51",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/fine_grained_wood/normal.png",
+      "status": 200,
+      "sha256": "11d8584bcf3d7b05d02dd7150b0093c834d6dd8bc926c3db683a722a6fe65720",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/fine_grained_wood/albedo.webp",
+      "status": 200,
+      "sha256": "d68b4cd4186a7081386546aab9e08c55947e0798c438e1571ee648f4796cc283",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/materials/BlueLinen/albedo.webp",
+      "status": 200,
+      "sha256": "5bd4c57219425802de64bf92bee40aa290a28693b72370790d5cde30e6be726f",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/painted_plaster_wall/normal.png",
+      "status": 200,
+      "sha256": "ffe0190461568b1282caa40770af54c4797a5bbd81024c4cbe839b44862260b5",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/painted_plaster_wall/albedo.webp",
+      "status": 200,
+      "sha256": "985dff89b661cbe743b547d8c36d12ee17cc3f24329dfe850129a865beb840f4",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/rough_linen/normal.png",
+      "status": 200,
+      "sha256": "d0fa8b1602f6eecdfeb52b1cff78c983fc51ec38852a4743b5d0eb72badf0a0b",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/japanese_cedar_planks/orm.webp",
+      "status": 200,
+      "sha256": "25f5814e8c6a3d49b29a3ed0358e31f0d8b1948e231cba6ca01fe4f8499a6251",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/japanese_cedar_planks/normal.png",
+      "status": 200,
+      "sha256": "ea0b7c9be1a603d4b4dae18127238595eab9b802b382474ec4f9ec2d02fe97dd",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/rough_linen/orm.webp",
+      "status": 200,
+      "sha256": "df0f58529305a3ef17b669e0950ebbafd043336d0a5db10d721f4a1ad825aa7a",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/oak_veneer_02/orm.webp",
+      "status": 200,
+      "sha256": "9878aaaab5148e53aafeaf089c65f2b089162e3fdb663e9a24dad9f04cb58cbe",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/oak_veneer_02/normal.png",
+      "status": 200,
+      "sha256": "8eed0b8dedfa01c1205dfc7ec412b1bea3304f99e920f62177fc13f2a6876e35",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/japanese_cedar_planks/albedo.webp",
+      "status": 200,
+      "sha256": "2a1d2abe14405a8dc9860f62d2a5d6e67bfaad5dabcdc6a1ade1c29614287c14",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/oak_veneer_02/albedo.webp",
+      "status": 200,
+      "sha256": "13d6b23b1d225e350916753516e5e746fd02b9e21c426a58e118e56cb842e1bc",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/tatami_mat/orm.webp",
+      "status": 200,
+      "sha256": "2c89ce15790c28b26ea4f70f6c15510d53ae8308f5e8aea6dd0ce8adc70601ea",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "assets/GLTFLoader-B7KWhX31.js",
+      "status": 200,
+      "sha256": "1ac74f69bf7356e39ede4b2c65b9751280e9fd75c216955c26fbcae885e2ece3",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/tatami_mat/normal.png",
+      "status": 200,
+      "sha256": "41bd986bb32ce3e2ce7d930f08da61b9f2028cfb1411bdab5cef0cb0cac5f5bc",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "assets/DoraemonWorld-BYRktfI7.js",
+      "status": 200,
+      "sha256": "89b9af0d26e9f96c6ddae56df59e9b9e903095951c358fbf71750812e9e8d875",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "bedroom-materials/mobile-v23/scans/tatami_mat/albedo.webp",
+      "status": 200,
+      "sha256": "89b0e6cb7022cf233c9e844a6c9f8d1392d80b175d6501f244353a1314062393",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "assets/engine-DutHXXw7.js",
+      "status": 200,
+      "sha256": "4e3b1cb0dc34e2416c810c362bad3ef58b2c7c2ba81f31fb74d24aadd14fc900",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/conan/index.html",
+      "status": 200,
+      "sha256": "82e1bd0cb2aff6de358b48cd21a2708ede7162fd7d3df1a9ee1111666a1afce5",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/conan/world-pack.json",
+      "status": 200,
+      "sha256": "a8a3c998bfb680a95827fb7c9d2caac3b067b39330863f31bba909ca137a7cca",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/frog/index.html",
+      "status": 200,
+      "sha256": "8459599ff713d033ea17e241dabe593d60d37f9977452e7d41624e5253ab0378",
+      "matchesPublishedCandidate": true
+    },
+    {
+      "path": "worlds/frog/world-pack.json",
+      "status": 200,
+      "sha256": "4043598923567fe53c7fd7c7fa57731b25ff733ac122cbed7a9a06c7dbd42ad1",
+      "matchesPublishedCandidate": true
+    }
+  ],
+  "release": {
+    "sourceCommit": "3f366d6d18fc6085f2e3b9d2f1a0ad2e4c8ef26a",
+    "revision": 23,
+    "assetRevision": 23,
+    "date": "2026-09-13",
+    "summary": "Optimize Doraemon mobile upstairs loading, reduce moire and render cost; preserve desktop room and native worlds",
+    "worlds": [
+      "doraemon",
+      "frog",
+      "conan"
+    ],
+    "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
+    "loadingFix": "stream-progress-range-retry",
+    "updatedAt": "2026-09-13T08:25:24.060934+00:00",
+    "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
+    "mobile": "Doraemon mobile derivative assets, mip-safe surfaces, MSAA and adaptive DPR; bounded room views, active-room lighting, real download progress, cancel/retry and cache reuse",
+    "conan": "Pavement-to-Mouri stair access, supported Agasa garage and continuous rear apron; fitted CC0 furniture with recorded provenance",
+    "nativePacks": {
+      "frog": {
+        "sha256": "9cb7b46dbbbf611a3c274f7198d02b9091939b3d301c76d9ce5563a95e6b55e7",
+        "rawBytes": 239253036,
+        "downloadBytes": 177985792,
+        "chunks": 15
+      },
+      "conan": {
+        "sha256": "7c0334227f442d37cfc445ac7fd599d35cbbf7bc025cec35abb793c7f8972f40",
+        "rawBytes": 210271740,
+        "downloadBytes": 206713911,
+        "chunks": 13
+      }
+    },
+    "guestbookLayout": "Narrow-screen single-column fields; all form bounds and touch targets checked at 360, 390 and 844 CSS px",
+    "friendLife": "Continuous collision-aware companion following across the creek and outside the former navigation bounds; daily cooking, gifts, picnic and immediate-refresh save recovery retained",
+    "openFurniture": "https://github.com/frankfanyiming/frank_worlds/blob/main/docs/conan-open-furniture.md",
+    "doraemonMobile": {
+      "assetVersion": "20260913-mobile23",
+      "startupBytes": 24920418,
+      "firstBedroomBytes": 11646005,
+      "bedroomModelBytes": 7937444,
+      "desktopAssetVersion": "20260910-12",
+      "physicalPhoneTested": false
+    }
+  },
+  "allChunksAvailable": [
+    {
+      "path": "worlds/conan/world-000.bin.gz",
+      "status": 200,
+      "bytes": 16222039
+    },
+    {
+      "path": "worlds/conan/world-001.bin.gz",
+      "status": 200,
+      "bytes": 16270547
+    },
+    {
+      "path": "worlds/conan/world-002.bin.gz",
+      "status": 200,
+      "bytes": 16706570
+    },
+    {
+      "path": "worlds/conan/world-003.bin.gz",
+      "status": 200,
+      "bytes": 16683289
+    },
+    {
+      "path": "worlds/conan/world-004.bin.gz",
+      "status": 200,
+      "bytes": 16495148
+    },
+    {
+      "path": "worlds/conan/world-005.bin.gz",
+      "status": 200,
+      "bytes": 16534069
+    },
+    {
+      "path": "worlds/conan/world-006.bin.gz",
+      "status": 200,
+      "bytes": 16379800
+    },
+    {
+      "path": "worlds/conan/world-007.bin.gz",
+      "status": 200,
+      "bytes": 16399692
+    },
+    {
+      "path": "worlds/conan/world-008.bin.gz",
+      "status": 200,
+      "bytes": 16285634
+    },
+    {
+      "path": "worlds/conan/world-009.bin.gz",
+      "status": 200,
+      "bytes": 16468244
+    },
+    {
+      "path": "worlds/conan/world-010.bin.gz",
+      "status": 200,
+      "bytes": 16676365
+    },
+    {
+      "path": "worlds/conan/world-011.bin.gz",
+      "status": 200,
+      "bytes": 16730893
+    },
+    {
+      "path": "worlds/conan/world-012.bin.gz",
+      "status": 200,
+      "bytes": 8861621
+    },
+    {
+      "path": "worlds/frog/world-000.bin.gz",
+      "status": 200,
+      "bytes": 6237936
+    },
+    {
+      "path": "worlds/frog/world-001.bin.gz",
+      "status": 200,
+      "bytes": 4267360
+    },
+    {
+      "path": "worlds/frog/world-002.bin.gz",
+      "status": 200,
+      "bytes": 4573181
+    },
+    {
+      "path": "worlds/frog/world-003.bin.gz",
+      "status": 200,
+      "bytes": 14854331
+    },
+    {
+      "path": "worlds/frog/world-004.bin.gz",
+      "status": 200,
+      "bytes": 6146393
+    },
+    {
+      "path": "worlds/frog/world-005.bin.gz",
+      "status": 200,
+      "bytes": 6304844
+    },
+    {
+      "path": "worlds/frog/world-006.bin.gz",
+      "status": 200,
+      "bytes": 15208127
+    },
+    {
+      "path": "worlds/frog/world-007.bin.gz",
+      "status": 200,
+      "bytes": 16754408
+    },
+    {
+      "path": "worlds/frog/world-008.bin.gz",
+      "status": 200,
+      "bytes": 16524621
+    },
+    {
+      "path": "worlds/frog/world-009.bin.gz",
+      "status": 200,
+      "bytes": 16645975
+    },
+    {
+      "path": "worlds/frog/world-010.bin.gz",
+      "status": 200,
+      "bytes": 16592131
+    },
+    {
+      "path": "worlds/frog/world-011.bin.gz",
+      "status": 200,
+      "bytes": 16348610
+    },
+    {
+      "path": "worlds/frog/world-012.bin.gz",
+      "status": 200,
+      "bytes": 16494623
+    },
+    {
+      "path": "worlds/frog/world-013.bin.gz",
+      "status": 200,
+      "bytes": 16746552
+    },
+    {
+      "path": "worlds/frog/world-014.bin.gz",
+      "status": 200,
+      "bytes": 4286700
+    }
+  ],
+  "pass": true
+}

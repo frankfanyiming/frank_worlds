@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-09-13T08:42:06.910402+00:00",
+  "sceneChecksPassed": true,
+  "wholePageChecksPassed": false,
+  "sourceCommit": "3f366d6d18fc6085f2e3b9d2f1a0ad2e4c8ef26a",
+  "pagesCommit": "9db0ad7411f694e408eef9031d7b62c79a7a47d0",
+  "workflow": "https://github.com/frankfanyiming/frank_worlds/actions/runs/34747740476",
+  "contentHashChecks": 61,
+  "nativeChunksAvailable": 28,
+  "chrome": {
+    "startupReady": true,
+    "bedroomReady": true,
+    "renderProfile": "mobile",
+    "totalDownloadedBytes": 36566423,
+    "initialAttempt": "Timed out at startup; retained in public-chrome/report.json. A fresh browser run with per-request tracing completed."
+  },
+  "webkit": {
+    "stages": [
+      "street",
+      "bedroom",
+      "bedroom-landscape",
+      "returned-street"
+    ],
+    "bedroomReady": true,
+    "roomReentryMs": 3,
+    "sceneShaderErrors": []
+  },
+  "communityIssue": "Community API requests returned Cloudflare 403 without CORS headers during automated verification. Whole-page error assertions did not pass; no edge-protection bypass attempted.",
+  "physicalPhoneTested": false
+}

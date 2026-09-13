@@ -1,0 +1,856 @@
+{
+  "sourceCommit": "3f366d6d18fc6085f2e3b9d2f1a0ad2e4c8ef26a",
+  "nativePacksUnchanged": true,
+  "files": [
+    {
+      "file": "index.html",
+      "sha256": "5cd17c32d70e4640986e898b2d0090d5d0e9b6078af13f3ffd57fa408f5dbc41",
+      "bytes": 1092
+    },
+    {
+      "file": "asset-sizes.json",
+      "sha256": "477bb17e7e7375deffaf7f38a6308feab8f55d494ef8f28d0d2ac2a4969e35ec",
+      "bytes": 3959
+    },
+    {
+      "file": "community-config.json",
+      "sha256": "c152c4ebaf167883bb30d04fe58f6782a75b42ae8cd685eed9a4d4e71ad90c37",
+      "bytes": 183
+    },
+    {
+      "file": "doraemon-loading.png",
+      "sha256": "0acb8a540c37e3235a73524d174a90086cdcb0c28e8bafe867a0823df54b0073",
+      "bytes": 28441
+    },
+    {
+      "file": "favicon.svg",
+      "sha256": "e6d2e59b7b5bbb0342e0fb496dfc262decbfe4426bbb7b047aec8d467d1dc6f7",
+      "bytes": 712
+    },
+    {
+      "file": "covers/frog.png",
+      "sha256": "90b1d5609873cc0abc4e35d97d14309f357c72049c3ed42a8077c0f0cbd2c978",
+      "bytes": 2554171
+    },
+    {
+      "file": "covers/doraemon.png",
+      "sha256": "001200d028c83364b44e36f33471336146bbf4048eb8fbb8d14cbc48d35c40da",
+      "bytes": 2356277
+    },
+    {
+      "file": "covers/conan.png",
+      "sha256": "e638a8a475bfda8432b67a781447df72f9862ec9a665d00165a2c06c92e492b4",
+      "bytes": 2368110
+    },
+    {
+      "file": "models/surface-v11-lite.glb",
+      "sha256": "3593af1fd316112e4779fe45155597a46fc805994ed094355ed2f5dab7b316e8",
+      "bytes": 2914880
+    },
+    {
+      "file": "models/vegetation-v3-lite.glb",
+      "sha256": "0b3811a42550a3d7e592d4210a23cedf9f55c9458fe945190e0493a8b75e0ff4",
+      "bytes": 2792712
+    },
+    {
+      "file": "models/bedroom-v12.glb",
+      "sha256": "5a0a93b46ddb34ceffae011e0c437a1c4e2657368f9ceffb8ce434f086cb5cf4",
+      "bytes": 48063076
+    },
+    {
+      "file": "models/neighborhood-v21.glb",
+      "sha256": "b72a3825607276f99a9d7ad29889186ab06b25b9f8dda61de9571ca7dd72017f",
+      "bytes": 1654204
+    },
+    {
+      "file": "models/streets-v7-lite.glb",
+      "sha256": "bc136fb58a559b29121c7f3c4a8bb9412fb4ea33f7a326b3bcfb3147bdd67ae4",
+      "bytes": 1243572
+    },
+    {
+      "file": "models/world.json",
+      "sha256": "8bf217581772fab23d654290107efa1eb97e9a1fa4027e817b7b0cc0912878d3",
+      "bytes": 848678
+    },
+    {
+      "file": "models/world-v11.glb",
+      "sha256": "74be93e666cccdf0f1a18a682dad9d62c87747038ce6cddf370021576a19d040",
+      "bytes": 2300524
+    },
+    {
+      "file": "models/terrain-v6.glb",
+      "sha256": "9d4f613ddc3263da570824e768900a68f83a9ff537e09fe054b9925abbcfd3ef",
+      "bytes": 404008
+    },
+    {
+      "file": "models/mobile-v23/surface-v11-lite.glb",
+      "sha256": "5fb49f43019135d1aa72684085cfd27f12c0b21112983941ef98d2aa32bfb8ae",
+      "bytes": 1179468
+    },
+    {
+      "file": "models/mobile-v23/vegetation-v3-lite.glb",
+      "sha256": "57cf067c2d62733eefa0616598ce18e987db1e8c97efb660156dc1990d94a128",
+      "bytes": 1561280
+    },
+    {
+      "file": "models/mobile-v23/bedroom-v12.glb",
+      "sha256": "a34116797d4b954abc94b69d13d790c6ff96b2d5dc07d4086b6c82b73b890a79",
+      "bytes": 7937444
+    },
+    {
+      "file": "models/mobile-v23/neighborhood-v21.glb",
+      "sha256": "7e3514f60502d1fb8751b31311fe61f0948c2218c999ec436af7c0098c765580",
+      "bytes": 1860600
+    },
+    {
+      "file": "models/mobile-v23/streets-v7-lite.glb",
+      "sha256": "3b9bf9aecd9dccce035f918a325f35d81b012518a2466a9702094902b406d00c",
+      "bytes": 1412812
+    },
+    {
+      "file": "models/mobile-v23/world-v11.glb",
+      "sha256": "9e1064d8f1beff40fd11429ae2ea1e54329f3e04d047c7370e16a8d170e32b27",
+      "bytes": 2507076
+    },
+    {
+      "file": "models/mobile-v23/terrain-v6.glb",
+      "sha256": "dfb3adb9eed3383c03442edd5cba345f0b4defc904c95939d3185e71d5eba993",
+      "bytes": 453900
+    },
+    {
+      "file": "models/mobile-v23/details/connector-v9-lite.glb",
+      "sha256": "46821ac9e757ce1e3eaf7e4c94ef076296d1803c404c6ba2c0bd66c317c657d4",
+      "bytes": 404124
+    },
+    {
+      "file": "models/mobile-v23/details/house-v11.glb",
+      "sha256": "bcf0f9cf692e2d0577be4d760f8367a20dbab0095faf2b6f84f0d62f07665426",
+      "bytes": 730776
+    },
+    {
+      "file": "models/mobile-v23/expansion/expansion-trees-east.glb",
+      "sha256": "939f5ecb748d8114db41bb42b7d897b957c98dd201870086119070018c42044b",
+      "bytes": 500916
+    },
+    {
+      "file": "models/mobile-v23/expansion/expansion-terrain.glb",
+      "sha256": "fe774528dd2fb18bf86c671f474699d9660c4dca7d030dbf5fededdf630c254f",
+      "bytes": 723340
+    },
+    {
+      "file": "models/mobile-v23/expansion/expansion-groundcover-lite.glb",
+      "sha256": "431e87bee335ddec66643a8abf66be75f7cf33db0dc52291d1dd34774a1fffe1",
+      "bytes": 628184
+    },
+    {
+      "file": "models/mobile-v23/expansion/expansion-trees-west.glb",
+      "sha256": "fe02c0446a52efd1b56b76eff6d17c937804ca80e501b6f83b1f563968e0c453",
+      "bytes": 497312
+    },
+    {
+      "file": "models/mobile-v23/expansion/expansion-river-bridge.glb",
+      "sha256": "98fcf389024804c5c42f9c0484ba922c42b3dd02f85332b39788669a44ef7de2",
+      "bytes": 355040
+    },
+    {
+      "file": "models/fauna/sparrow.glb",
+      "sha256": "4f02607fa3358bc040498c0582766898473543fe20337ae87e3acc80d18a6051",
+      "bytes": 1047032
+    },
+    {
+      "file": "models/fauna/cat.glb",
+      "sha256": "b8902ffea1b99996782318c6767faabb0932d85c481dddab5b7b572db5eeda7b",
+      "bytes": 1885716
+    },
+    {
+      "file": "models/fauna/sparrow_ash.glb",
+      "sha256": "aed895f9078867a68f1c172e8fb8ea93555236442f6dd007ce8399adc3d60fe4",
+      "bytes": 1046684
+    },
+    {
+      "file": "models/details/connector-v9-lite.glb",
+      "sha256": "149dca679b6fcb414086f4f7e8796b9bbbab0a00800e6d66829699768f4c870b",
+      "bytes": 414152
+    },
+    {
+      "file": "models/details/house-v11.glb",
+      "sha256": "39fbbc768a7b75522194506736955b09e2d9171e1982ec43a99c707641f76075",
+      "bytes": 1088516
+    },
+    {
+      "file": "models/expansion/expansion-trees-east.glb",
+      "sha256": "d8b6a352aaad3ca5dfccadd816c4ddcf2a86e4e3069db6214db0c5f67c7dfc08",
+      "bytes": 887060
+    },
+    {
+      "file": "models/expansion/expansion-terrain.glb",
+      "sha256": "3876f9d9624578136a673f166e0f18ea277d74fdf345f7523e7f3a68937a02c5",
+      "bytes": 657444
+    },
+    {
+      "file": "models/expansion/expansion-groundcover-lite.glb",
+      "sha256": "d77f05ce918f49d54bbe311b9fbedfdb3faa182c49a0f57ea75f49a689d449ea",
+      "bytes": 1083528
+    },
+    {
+      "file": "models/expansion/expansion-trees-west.glb",
+      "sha256": "581dee99a154b7c4b0680c63ddfcb69bb3cf18a758ac69cd36c17595b8058f26",
+      "bytes": 883456
+    },
+    {
+      "file": "models/expansion/expansion-river-bridge.glb",
+      "sha256": "07719624772978030c80b712d1041c69da9923e3d4a0b38d1a502d2b2ea4b6af",
+      "bytes": 297596
+    },
+    {
+      "file": "models/actors/tamako.glb",
+      "sha256": "872d5a269903ebba055bbd1ee6c4fc942013fb7401a00669a8d6ea2a79ed5c73",
+      "bytes": 510832
+    },
+    {
+      "file": "models/actors/suneo.glb",
+      "sha256": "de1c17c07c933a2f3ba4ac00b8b628a635627df0a2836d71854dc11e278a2703",
+      "bytes": 760824
+    },
+    {
+      "file": "models/actors/doraemon-v11.glb",
+      "sha256": "db72917671abc4f0e637e8e1bd88719473cd8339f655da910614ec554b35e0a3",
+      "bytes": 753512
+    },
+    {
+      "file": "models/actors/nobita.glb",
+      "sha256": "9059313fb27a1275d3087e49ac02633ad169ffd022e90a4a23f8454d35595be3",
+      "bytes": 782340
+    },
+    {
+      "file": "models/actors/nobisuke.glb",
+      "sha256": "5e34eecfe95cd92beeb226e8bf2955a23392316e62b841e7f5e5e48357625a13",
+      "bytes": 508316
+    },
+    {
+      "file": "models/actors/gian.glb",
+      "sha256": "6affd57272be98b43aa9e72cf40e6a806e849869b3e02bcd68577e2fbe68d13b",
+      "bytes": 796396
+    },
+    {
+      "file": "models/actors/shizuka.glb",
+      "sha256": "306c43d98002011320c61f3ccb39ed594da62f7deb8a0f1682ed9bd9dfdfedb6",
+      "bytes": 729324
+    },
+    {
+      "file": "models/vehicles/kei_truck-v11.glb",
+      "sha256": "5dd8ce08fd785b10a23d3d5aeb6f10e450fcec7f80f609a19e366148533cfa55",
+      "bytes": 383608
+    },
+    {
+      "file": "models/vehicles/kei_hatchback-v11.glb",
+      "sha256": "8a21320c6b6d5335210ad21092f763c59a3a5e2c6aac96e42d61bc96a4bfd03a",
+      "bytes": 362584
+    },
+    {
+      "file": "models/gadgets/door.glb",
+      "sha256": "df23e9e156771014030b15589e6bd093d1c0478006465f52e9c802fefc7aa708",
+      "bytes": 183712
+    },
+    {
+      "file": "models/gadgets/time-machine.glb",
+      "sha256": "9603451dae7cc73fc4b6331e18378ea8cf1463647b8f3c757a8ab731770e0aa9",
+      "bytes": 825524
+    },
+    {
+      "file": "models/gadgets/bamboo.glb",
+      "sha256": "de63bfcf4dfee8888ec5a02f2e000a9c6dfdb591521710085655225d68118fd3",
+      "bytes": 100212
+    },
+    {
+      "file": "models/gadgets/season-extras.glb",
+      "sha256": "06d5532ed28cc20f842d9843d5b908d2c86a39270a07d4be8652e6a28ddc10d0",
+      "bytes": 327920
+    },
+    {
+      "file": "models/gadgets/drawer.glb",
+      "sha256": "787d87ce7533dba042ee6d7c178ccb1f005f60568e291df74970704cf9940e46",
+      "bytes": 252376
+    },
+    {
+      "file": "draco/draco_decoder.js",
+      "sha256": "8625489da79a805f4f2a7d511c3e52d8b4085608a9d2a4d5f4f9de5db0aea04f",
+      "bytes": 512465
+    },
+    {
+      "file": "draco/LICENSE",
+      "sha256": "d3709b0fb4b8a94bbb1d02b8a2e484f258b0d9c5c5a01f940391f3fe662cd1a4",
+      "bytes": 13898
+    },
+    {
+      "file": "draco/draco_decoder.wasm",
+      "sha256": "a680d927bed9cb864ddbd63521868891af2bfbe755092761b4837487618df8ac",
+      "bytes": 192420
+    },
+    {
+      "file": "draco/draco_wasm_wrapper.js",
+      "sha256": "8bb2952d2ba7d67e1414f8df819410cb0434a666be53f671fff75f68843d76f6",
+      "bytes": 58456
+    },
+    {
+      "file": "audio/treasure.m4a",
+      "sha256": "5f085d2d737f310815c385cc90d5bb19a0dd4d879b58b331589d924cd22a7196",
+      "bytes": 24759
+    },
+    {
+      "file": "audio/wind.m4a",
+      "sha256": "d5333c215ba28f529ebccac1c3f15e6d3f76344543b6be7f2cadd46bd6196d0e",
+      "bytes": 579019
+    },
+    {
+      "file": "audio/crickets.m4a",
+      "sha256": "0a4fd452aa5433789376b47d21a57ed4bf09fd3ac956db04794bf82f9394acfd",
+      "bytes": 128200
+    },
+    {
+      "file": "audio/music.m4a",
+      "sha256": "baed2424cb01c9f5d1f93ab312c1d43ba1eb980d2fcde4a1cd9814968849504c",
+      "bytes": 777469
+    },
+    {
+      "file": "audio/baseball.m4a",
+      "sha256": "03709272f42935ae591306afae4bf12cb5a3fe1a95c320ce25839a6f7d4275f3",
+      "bytes": 7755
+    },
+    {
+      "file": "audio/portal.m4a",
+      "sha256": "9e87258d2018667a75d2df781f0bef034f74515e442531239f07e48e8aeb68a7",
+      "bytes": 41447
+    },
+    {
+      "file": "audio/bamboo.m4a",
+      "sha256": "1ee63a9ee3d94086ac089c810eaea8005d03f81d47c07f0bfbb4bbe0122c9665",
+      "bytes": 105186
+    },
+    {
+      "file": "audio/birds.m4a",
+      "sha256": "e8e326e0d15cfacd0a69bc1338ea08b127e8030f59e86d07ae660ea8b78ddbb0",
+      "bytes": 93424
+    },
+    {
+      "file": "audio/cicadas.m4a",
+      "sha256": "3ed69321b8cc69ef69ce4603cdca00f708cba98b045feb74c2eec8b9fdc1e351",
+      "bytes": 502862
+    },
+    {
+      "file": "community-models/chair.glb",
+      "sha256": "1a70d2c672d7e65792c7329a815d29078b09a04128f29affa29ad5b568270b28",
+      "bytes": 93460
+    },
+    {
+      "file": "community-models/table.glb",
+      "sha256": "814214f5dac584d7dbbfe7a506a462468623feb301e016a1668a1729e69a3ad2",
+      "bytes": 67976
+    },
+    {
+      "file": "community-models/tile-sand.glb",
+      "sha256": "fc9d304dacf44fc3fbdcc2c8908846fc780633571ddd600e492c78bc8e8764a7",
+      "bytes": 41724
+    },
+    {
+      "file": "community-models/planter.glb",
+      "sha256": "070a74b7f5b63af6347a770b6524b45e0b7a9d042f5b91c128879dc8d7b7291d",
+      "bytes": 68596
+    },
+    {
+      "file": "community-models/lamp.glb",
+      "sha256": "b1461257a7965f8608348811e19a6bed125d98b852b77f4c5f86e2b1f0526e1e",
+      "bytes": 75432
+    },
+    {
+      "file": "community-models/fence.glb",
+      "sha256": "d6816619d05f8e0bad0fbe7777561dac34aa8f71f6d2d46f15a16d55497141ae",
+      "bytes": 47092
+    },
+    {
+      "file": "community-models/tile-grass.glb",
+      "sha256": "2ca95a81a9f05c4529af765130e9f7a058754a8dba604b2f4e24626d1e78ae76",
+      "bytes": 41924
+    },
+    {
+      "file": "community-models/tent.glb",
+      "sha256": "4163a9c53f218cc1ca9f762fd97db302f574d894f974a02ee704ccdbb5214bee",
+      "bytes": 33176
+    },
+    {
+      "file": "community-models/crate.glb",
+      "sha256": "7d72c693bec71468b231682380b76bb198e076a6b36e95ec4006137ee52a5822",
+      "bytes": 113224
+    },
+    {
+      "file": "community-models/stump.glb",
+      "sha256": "2f46a7799a9f2aa99190f0bd9e914e594ce40da28c17fb8513f8753fb18e827e",
+      "bytes": 37992
+    },
+    {
+      "file": "community-models/flowers.glb",
+      "sha256": "8d70486674549c3eb478a7e1e21185d8be75456791ddf136770412dbb6e1fb5d",
+      "bytes": 371068
+    },
+    {
+      "file": "community-models/rock.glb",
+      "sha256": "bd5790f3dc4d7b25db7c30b918b0997ca716ece6fd2b7af711111867dad2a08f",
+      "bytes": 9480
+    },
+    {
+      "file": "community-models/sign.glb",
+      "sha256": "7c9f57bff0bc3c281cb7a883347280f12439fd751e3597bc0caedb51a2d442fb",
+      "bytes": 32404
+    },
+    {
+      "file": "community-models/mat.glb",
+      "sha256": "a6329d475f1cad9ec64567fedd576ff052f2c9f67086c8767ada299d83f72456",
+      "bytes": 15152
+    },
+    {
+      "file": "assets/arrow-up-l6HPl1Fu.js",
+      "sha256": "2cb70c1ca30c8b3736a7c86b116ddd66792e7c346737b925c28657f4928a4d8f",
+      "bytes": 263
+    },
+    {
+      "file": "assets/sound-DL96wlkG.js",
+      "sha256": "b56a1c1d7812eb877eaea242e9db9629f6391f6542d8f57b411df48fc05fd4c5",
+      "bytes": 31742
+    },
+    {
+      "file": "assets/Studio-BeYraGgu.js",
+      "sha256": "9e8ddeed7b4fe38705a4054b5b0ef3c1141661669c8421b685946523fd9d9ae9",
+      "bytes": 22747
+    },
+    {
+      "file": "assets/GLTFLoader-B7KWhX31.js",
+      "sha256": "1ac74f69bf7356e39ede4b2c65b9751280e9fd75c216955c26fbcae885e2ece3",
+      "bytes": 44336
+    },
+    {
+      "file": "assets/DoraemonWorld-BYRktfI7.js",
+      "sha256": "89b9af0d26e9f96c6ddae56df59e9b9e903095951c358fbf71750812e9e8d875",
+      "bytes": 210627
+    },
+    {
+      "file": "assets/OrbitControls-C6zITbK4.js",
+      "sha256": "dcd11cc31f1b0a9ecc3666b6e4b6a18c4efa4479bc5265f393c13498a3b66282",
+      "bytes": 19064
+    },
+    {
+      "file": "assets/index-EYOseIgt.css",
+      "sha256": "09ee5e692cce599f1d78b68ffa72c13dc21f1b59c49639ffa603bcd202388ac0",
+      "bytes": 241250
+    },
+    {
+      "file": "assets/three.module-DmBZ-1Ip.js",
+      "sha256": "3ae668dddf0bdf49dd57a7c174b125e4341b2880f2edec4efcbcb2106e48fb8d",
+      "bytes": 696461
+    },
+    {
+      "file": "assets/SceneCanvas-trqJnrIv.js",
+      "sha256": "38c4d0a728ce5eff29594b923e7e6d82d2535f2b8e9a5fd6780f905ce424f5e8",
+      "bytes": 6085
+    },
+    {
+      "file": "assets/index-BnHP8LWp.js",
+      "sha256": "d75e087960484531bc19bd9c7d2ce84866bff6350d60fe7498f55ed436c33a22",
+      "bytes": 248952
+    },
+    {
+      "file": "assets/engine-DutHXXw7.js",
+      "sha256": "4e3b1cb0dc34e2416c810c362bad3ef58b2c7c2ba81f31fb74d24aadd14fc900",
+      "bytes": 353627
+    },
+    {
+      "file": "bedroom-materials/GreenLinen_albedo.png",
+      "sha256": "f11c50c2e46202de0a82ebc22b1d06d7b33f6c3bc7f7ff7e2bb963441d4b5ad1",
+      "bytes": 880511
+    },
+    {
+      "file": "bedroom-materials/IndoorLeaf_normal.png",
+      "sha256": "37acef39020343990894845510060470d4d96926ec155bdf0d6cab2438494201",
+      "bytes": 1280558
+    },
+    {
+      "file": "bedroom-materials/BlueLinen_albedo.png",
+      "sha256": "b2ca71938ce71ecebf9aa0813ccf8d655088e032d99bfbdbca489a25059d6eee",
+      "bytes": 942441
+    },
+    {
+      "file": "bedroom-materials/DarkWood_normal.png",
+      "sha256": "544211ca79915f83d5d5cf5276aa06a799714123beabf8fbd9da9085e496f004",
+      "bytes": 770165
+    },
+    {
+      "file": "bedroom-materials/DarkWood_roughness.png",
+      "sha256": "8908f2d5e298f0611a4da81a795c09ee86134b950bcfe9e1d4a4faadacc0adb8",
+      "bytes": 320694
+    },
+    {
+      "file": "bedroom-materials/GreenLinen_roughness.png",
+      "sha256": "a27b08738b8ecb8eb9a2a38ece6fa9c64b7018607ed83e81a1e41fa247f8819f",
+      "bytes": 576817
+    },
+    {
+      "file": "bedroom-materials/IndoorLeaf_roughness.png",
+      "sha256": "9fbf0a32059de9a1b3eddc86ac67f32130c871b9486a91b391be890c39e24b4a",
+      "bytes": 512287
+    },
+    {
+      "file": "bedroom-materials/WarmPaperWall_normal.png",
+      "sha256": "6f02c4bd4dd96a51cd746b3f0c2fe9bb398fdf784922fa6a64fe5bc4584c1244",
+      "bytes": 903816
+    },
+    {
+      "file": "bedroom-materials/DeskHoneyWood_normal.png",
+      "sha256": "2c37194e0224e58778f4ec55bc7a1fc1040fb65dbad9d2a9f0ac16f9202d1042",
+      "bytes": 657995
+    },
+    {
+      "file": "bedroom-materials/WarmPaperWall_roughness.png",
+      "sha256": "347f17072766110eae29ca2ec0759b8fcb93f16e09a6f96f40f1c6282220560a",
+      "bytes": 263456
+    },
+    {
+      "file": "bedroom-materials/GreenLinen_normal.png",
+      "sha256": "b700aabefbb0d5ce7518c16cd46f8de199b8f5331cc52e18113eaac8cc6bdc4d",
+      "bytes": 1427914
+    },
+    {
+      "file": "bedroom-materials/manifest.json",
+      "sha256": "9a21b5116c434a466967b27d8cec0c28b52e30cda39daa4143c5fb0a6b3a0c70",
+      "bytes": 35581
+    },
+    {
+      "file": "bedroom-materials/IndoorLeaf_albedo.png",
+      "sha256": "a4f845b2783893f215f4c812fd165f8360ef0733c750ceef6a8d1d13d72fc669",
+      "bytes": 5438123
+    },
+    {
+      "file": "bedroom-materials/BlueLinen_normal.png",
+      "sha256": "3b9b0a4cc4cebd8db5aad74018c6ac4bc80a797b67dcbcdc9635ec0f35a9c14f",
+      "bytes": 1427916
+    },
+    {
+      "file": "bedroom-materials/DarkWood_albedo.png",
+      "sha256": "facc6ad884c5a1830ff4049f30278a182c16fa38f41d8e0ae9af755174a69ff2",
+      "bytes": 3285505
+    },
+    {
+      "file": "bedroom-materials/BlueLinen_roughness.png",
+      "sha256": "4842fd1ffaa011c830fc0e320543729823b5bae702701733f53d5ee7490c3b19",
+      "bytes": 576779
+    },
+    {
+      "file": "bedroom-materials/DeskHoneyWood_roughness.png",
+      "sha256": "e0479c2b2356c7b05828744a47479eaf20e38111e9b05c4e46fe3586134194f2",
+      "bytes": 375903
+    },
+    {
+      "file": "bedroom-materials/WarmPaperWall_albedo.png",
+      "sha256": "62ae4c44cf4bb8bfae55800c4f3126a9d2fa43fe89eea1bf23a9ddcd8751f38e",
+      "bytes": 572117
+    },
+    {
+      "file": "bedroom-materials/DeskHoneyWood_albedo.png",
+      "sha256": "8c2961bcbae26fc09c182a516116ea06944d8a9f4d9304207a04597c006bfd39",
+      "bytes": 3348695
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/manifest.json",
+      "sha256": "6b0994dd826fb7385d5a6ac8ab5a1f67714ce5bd042108b37f386ed981596073",
+      "bytes": 18273
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/WarmPaperWall/orm.webp",
+      "sha256": "bc76f626a7d59a428cd7cacaa056d2218d1906828068b3222941bb78efedead8",
+      "bytes": 3230
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/WarmPaperWall/normal.png",
+      "sha256": "2f80b184121747902b440e9e2a2e2971ec4989e0d5e3c490a71ffb5b3ec313d6",
+      "bytes": 124469
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/WarmPaperWall/albedo.webp",
+      "sha256": "507a3f60feb5fe4bb50048968496c773e0a67f9885285108b3bb96efe7e74f0f",
+      "bytes": 4994
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/GreenLinen/orm.webp",
+      "sha256": "d6d5ab26b495deef0a3f2b9cc28f17dfc3f5d05ed9db35ef41ca412fd6e86cf5",
+      "bytes": 8244
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/GreenLinen/normal.png",
+      "sha256": "bdebea2f7c7c43d5d3ad11e4849c82f5e9fb482536a3f6c7e20bb2ea03e6740d",
+      "bytes": 333585
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/GreenLinen/albedo.webp",
+      "sha256": "0d014f5cb6e9fa9c8b6e8a7f1bde3f2b7c4a6fb9a07563173f855d815b413f30",
+      "bytes": 31364
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/BlueLinen/orm.webp",
+      "sha256": "b8628cd1ccf9e013bfa90882f58ea4d5507526b91d2308c401609f8a71b94df1",
+      "bytes": 8232
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/BlueLinen/normal.png",
+      "sha256": "cf9a8ad76b1eb3aa1c5568436c880bce5d42ef7dd4fbc8153d8f9dc9a2e6be89",
+      "bytes": 333585
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/BlueLinen/albedo.webp",
+      "sha256": "5bd4c57219425802de64bf92bee40aa290a28693b72370790d5cde30e6be726f",
+      "bytes": 32638
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/DarkWood/orm.webp",
+      "sha256": "f31b8bbe5a3d28fd5fe5f3f82c163f1349a4e77e33a41475b31ebd0e366f9663",
+      "bytes": 17466
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/DarkWood/normal.png",
+      "sha256": "1a167727abe5c0fb1bb3e0a8771d08f73d4a384160c6d4d962f119d88836bedf",
+      "bytes": 190970
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/DarkWood/albedo.webp",
+      "sha256": "59756f676d0b7b38b70507ee5b257aa2d28ea9e2e9b13f35ad35fa48b5ca3155",
+      "bytes": 88716
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/DeskHoneyWood/orm.webp",
+      "sha256": "a770ad04bd666380a48e57f4104bbee18015ef2d5473eda9e61cfb895485f105",
+      "bytes": 22028
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/DeskHoneyWood/normal.png",
+      "sha256": "b27311dd9093b6f4f7dab9bf56187dbab3f089deb9d6d05db48e4e9b0edb9466",
+      "bytes": 167753
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/DeskHoneyWood/albedo.webp",
+      "sha256": "121ed15d2426e4a79ee6afc1c2ca29609d74611ae7eaaf05c1eac7e26737a67c",
+      "bytes": 94916
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/IndoorLeaf/orm.webp",
+      "sha256": "80b975523bac86b529b80d280595fdf0a3ee4d7cc68682a0397edffc0f985c3e",
+      "bytes": 55062
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/IndoorLeaf/normal.png",
+      "sha256": "119cbafbbc06d16e2dd73084ffae42263f4f6c9be58d83c9a6c8791f8d233390",
+      "bytes": 231254
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/materials/IndoorLeaf/albedo.webp",
+      "sha256": "f76a28a51db514884da7d82838027b159502ac5da408cf57d2eb32f006237677",
+      "bytes": 239502
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/fine_grained_wood/orm.webp",
+      "sha256": "d122da1022c8e456f590acd058aa92d61ac42531feabb213996f17e4835fdb85",
+      "bytes": 96652
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/fine_grained_wood/normal.png",
+      "sha256": "11d8584bcf3d7b05d02dd7150b0093c834d6dd8bc926c3db683a722a6fe65720",
+      "bytes": 244299
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/fine_grained_wood/albedo.webp",
+      "sha256": "d68b4cd4186a7081386546aab9e08c55947e0798c438e1571ee648f4796cc283",
+      "bytes": 143122
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/painted_plaster_wall/orm.webp",
+      "sha256": "e6117747fd87a2614efb200b8fbe6bca6e90777db586a9e6d260c6e65674cd51",
+      "bytes": 10756
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/painted_plaster_wall/normal.png",
+      "sha256": "ffe0190461568b1282caa40770af54c4797a5bbd81024c4cbe839b44862260b5",
+      "bytes": 471289
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/painted_plaster_wall/albedo.webp",
+      "sha256": "985dff89b661cbe743b547d8c36d12ee17cc3f24329dfe850129a865beb840f4",
+      "bytes": 209768
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/rough_linen/orm.webp",
+      "sha256": "df0f58529305a3ef17b669e0950ebbafd043336d0a5db10d721f4a1ad825aa7a",
+      "bytes": 125288
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/rough_linen/normal.png",
+      "sha256": "d0fa8b1602f6eecdfeb52b1cff78c983fc51ec38852a4743b5d0eb72badf0a0b",
+      "bytes": 444601
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/japanese_cedar_planks/orm.webp",
+      "sha256": "25f5814e8c6a3d49b29a3ed0358e31f0d8b1948e231cba6ca01fe4f8499a6251",
+      "bytes": 32018
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/japanese_cedar_planks/normal.png",
+      "sha256": "ea0b7c9be1a603d4b4dae18127238595eab9b802b382474ec4f9ec2d02fe97dd",
+      "bytes": 427274
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/japanese_cedar_planks/albedo.webp",
+      "sha256": "2a1d2abe14405a8dc9860f62d2a5d6e67bfaad5dabcdc6a1ade1c29614287c14",
+      "bytes": 155958
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/oak_veneer_02/orm.webp",
+      "sha256": "9878aaaab5148e53aafeaf089c65f2b089162e3fdb663e9a24dad9f04cb58cbe",
+      "bytes": 72378
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/oak_veneer_02/normal.png",
+      "sha256": "8eed0b8dedfa01c1205dfc7ec412b1bea3304f99e920f62177fc13f2a6876e35",
+      "bytes": 125390
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/oak_veneer_02/albedo.webp",
+      "sha256": "13d6b23b1d225e350916753516e5e746fd02b9e21c426a58e118e56cb842e1bc",
+      "bytes": 120584
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/tatami_mat/orm.webp",
+      "sha256": "2c89ce15790c28b26ea4f70f6c15510d53ae8308f5e8aea6dd0ce8adc70601ea",
+      "bytes": 16038
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/tatami_mat/normal.png",
+      "sha256": "41bd986bb32ce3e2ce7d930f08da61b9f2028cfb1411bdab5cef0cb0cac5f5bc",
+      "bytes": 265969
+    },
+    {
+      "file": "bedroom-materials/mobile-v23/scans/tatami_mat/albedo.webp",
+      "sha256": "89b0e6cb7022cf233c9e844a6c9f8d1392d80b175d6501f244353a1314062393",
+      "bytes": 139084
+    },
+    {
+      "file": "bedroom-materials/fine_grained_wood/albedo.jpg",
+      "sha256": "0c71b4505412216bbe7b2dc2b2bcfe414dfd319d13e48992cdaeb2961f44146f",
+      "bytes": 4744081
+    },
+    {
+      "file": "bedroom-materials/fine_grained_wood/normal.png",
+      "sha256": "8bf311cca68565541749b32c91960e6e40fd9bfce651b923512394d571e21759",
+      "bytes": 3210822
+    },
+    {
+      "file": "bedroom-materials/fine_grained_wood/ao.jpg",
+      "sha256": "fc44d72b3b3131a888194f0048ed28ad2ac328401f2719c3a17410731efb95b1",
+      "bytes": 2360200
+    },
+    {
+      "file": "bedroom-materials/fine_grained_wood/roughness.jpg",
+      "sha256": "7e8f5fc146ae7accd3b9deb2a173c1cf253707ccdee5070ce16cefd4ee68f1b7",
+      "bytes": 871792
+    },
+    {
+      "file": "bedroom-materials/painted_plaster_wall/albedo.jpg",
+      "sha256": "0d175fb5bdcb8e8a1eedc87cd5ab41fbfd01de84ee7c4f8907017011181e3990",
+      "bytes": 12556766
+    },
+    {
+      "file": "bedroom-materials/painted_plaster_wall/normal.png",
+      "sha256": "322041257ab0dad1a1a1c18d98bc28689136103f6a64d4849f7aa3ae5b8b090f",
+      "bytes": 22789885
+    },
+    {
+      "file": "bedroom-materials/painted_plaster_wall/ao.jpg",
+      "sha256": "3d89b5ea1f9d93d611ab0015d887b620ec9c6623e19effadba84ee9345c4c6fc",
+      "bytes": 2176195
+    },
+    {
+      "file": "bedroom-materials/painted_plaster_wall/roughness.jpg",
+      "sha256": "35aad595469533cc3b7cc209cc6c7e065d660211f02c867f4492d3b371b1fee1",
+      "bytes": 1595466
+    },
+    {
+      "file": "bedroom-materials/rough_linen/normal.png",
+      "sha256": "1de2d1e782a54340b9a047a78382c1a0218cc1933bdffb331d6ed5fa2164e932",
+      "bytes": 22196908
+    },
+    {
+      "file": "bedroom-materials/rough_linen/ao.jpg",
+      "sha256": "277399dfd364393c506fb35f7b868a2d3c0c388400439c327829cf787bc7c315",
+      "bytes": 3969492
+    },
+    {
+      "file": "bedroom-materials/rough_linen/roughness.jpg",
+      "sha256": "48400d48fa203882bf5d984d5beb2f95edb1550309924601c018f2c4f3f80731",
+      "bytes": 4655974
+    },
+    {
+      "file": "bedroom-materials/japanese_cedar_planks/albedo.jpg",
+      "sha256": "37d5acc6cfeee1908701a2d2d8ee08addae4446e91cfb917f332e9e15f787ea4",
+      "bytes": 10221817
+    },
+    {
+      "file": "bedroom-materials/japanese_cedar_planks/normal.png",
+      "sha256": "7b56cf81683d32e1cfbaa15b170c59e451ceb0eeb5bdd2892d11b2dbdf3db49f",
+      "bytes": 23012005
+    },
+    {
+      "file": "bedroom-materials/japanese_cedar_planks/ao.jpg",
+      "sha256": "1b7524411345dc96cfd8eb9a67f0d631d2008b99cd9ffb2b144ea6db4a744316",
+      "bytes": 3189312
+    },
+    {
+      "file": "bedroom-materials/japanese_cedar_planks/roughness.jpg",
+      "sha256": "4599cdbbdcc86b5c2bef6744fdaf662cb3742d05ae6f47515af545653e72a1d0",
+      "bytes": 2807174
+    },
+    {
+      "file": "bedroom-materials/oak_veneer_02/albedo.jpg",
+      "sha256": "bc19644b49bc66efaa84346247fa1294431d2a898dd0dd66462f3b18343f416d",
+      "bytes": 9748186
+    },
+    {
+      "file": "bedroom-materials/oak_veneer_02/normal.png",
+      "sha256": "42e8d32864eb3ecbfc3da5c5e4627a00bf7b1a0ce431c4f789eab23890936914",
+      "bytes": 18576832
+    },
+    {
+      "file": "bedroom-materials/oak_veneer_02/ao.jpg",
+      "sha256": "da9d2156ed039e7fc438d249fc1ad1fed8610e481f416471e92056b4fe95438d",
+      "bytes": 2252912
+    },
+    {
+      "file": "bedroom-materials/oak_veneer_02/roughness.jpg",
+      "sha256": "31dce770142513800781464754bcd248d6f8ac79984dff26c81593195f3f9e6f",
+      "bytes": 3167619
+    },
+    {
+      "file": "bedroom-materials/tatami_mat/albedo.jpg",
+      "sha256": "cfe8deb47e9ebd1add4bc81bee436311b6fb21b8d148b6b3534c97f5822f367b",
+      "bytes": 9478853
+    },
+    {
+      "file": "bedroom-materials/tatami_mat/normal.png",
+      "sha256": "65a89e1357fe5181638d44ad6150fa3e5e21438a13a196feff2e10a781a20404",
+      "bytes": 20436403
+    },
+    {
+      "file": "bedroom-materials/tatami_mat/ao.jpg",
+      "sha256": "7b9bd02ba0ba9805683dcd61ce8fdff9820a269be79cb6a88920528e937aa7dd",
+      "bytes": 2374019
+    },
+    {
+      "file": "bedroom-materials/tatami_mat/roughness.jpg",
+      "sha256": "39e132424cf4c5a9dbedd167893d39eb3eeb2a5e8450ee7cde396ddc4777c8d8",
+      "bytes": 1151251
+    }
+  ]
+}

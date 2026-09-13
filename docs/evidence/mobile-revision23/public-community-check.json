@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-09-13T08:36:07.797146+00:00",
+  "endpoint": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/meta",
+  "method": "HEAD",
+  "origin": "https://frankfanyiming.github.io",
+  "status": 403,
+  "server": "cloudflare",
+  "responseType": "text/html; charset=UTF-8",
+  "scope": "Community service request from automated verification; scene GLB, material requests and room navigation completed in WebKit. No attempt to bypass edge protection."
+}
