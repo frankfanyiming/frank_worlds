@@ -25,9 +25,10 @@ canvas{position:fixed!important;inset:0!important;width:100%!important;height:10
 .album-photo img{height:auto;aspect-ratio:auto;max-height:380px;object-fit:contain}.has-photos:has(.album-photo:only-child){grid-template-columns:1fr}.native-menu-card[data-kind=album]:has(.album-photo:only-child){width:min(540px,100%)}@media(max-height:500px) and (orientation:landscape){.album-photo img{max-height:170px}}
 
 .mobile-performance-note{display:none}@media(any-pointer:coarse),(max-width:700px){.mobile-performance-note{display:block;font-size:12px;line-height:1.8;color:var(--muted);max-width:340px;margin:4px 0}}
-</style><meta name="xlands-source-commit" content="5a2d00919b67eab3ac8a042b52b5e479c43539eb"></head><body><canvas id="canvas" tabindex="0"></canvas>
+</style><meta name="xlands-source-commit" content="2aad24e5ea7ab0b2cad7b56a1b90fa3f6f1dbf47"></head><body><canvas id="canvas" tabindex="0"></canvas>
 <div id="status" role="status"><div class="aptx-capsule" aria-hidden="true"><i></i><b>APTX</b><span>4869</span></div><span id="label">正在准备世界…</span><progress id="progress" value="0" max="100"></progress><span id="percent">0%</span><p id="performance-note" class="mobile-performance-note">手机操作卡顿时，建议用电脑打开，体验通常更流畅。</p><button id="retry" hidden onclick="location.reload()">重新载入</button></div>
 <div class="touch-controls"><div class="touch-stick" id="touch-stick" role="group" aria-label="移动"><span class="touch-stick-knob"></span><small data-touch-copy="0">移动</small></div><span class="touch-look-hint" data-touch-copy="1">拖动画面转视角</span><div class="touch-actions"><button data-action="run" data-touch-copy="2">跑步</button><button data-action="view" data-touch-copy="5">视角</button><button data-action="jump" aria-label="Jump">↑</button><button data-action="interact" data-touch-copy="3">互动</button></div></div>
+<script defer src="../../analytics.js"></script>
 <script>const config={"args": [], "canvasResizePolicy": 2, "emscriptenPoolSize": 8, "ensureCrossOriginIsolationHeaders": true, "executable": "index", "experimentalVK": false, "fileSizes": {"index.pck": 239253036, "index.wasm": 39514754}, "focusCanvas": true, "gdextensionLibs": [], "godotPoolSize": 4};
 // SPDX-FileCopyrightText: 2026 Frank (frankfanyiming) and contributors
 // SPDX-License-Identifier: MIT
@@ -61,6 +62,19 @@ let progress = 0, lastPublished = 0, failed = false, ready = false;
 let queuedSound = new URLSearchParams(location.search).get('sound') === '1';
 const controllers = new Set();
 let packPrefix = '';
+const analyticsStartedAt = Date.now();
+let analyticsLoaded = false;
+function trackStandaloneWorld(name, reason) {
+  if (window.parent !== window) return; // Embedded worlds are measured by their parent once.
+  const world = location.pathname.match(/\/worlds\/(frog|conan)\//)?.[1];
+  if (!world) return;
+  const data = {world, load_ms: Date.now() - analyticsStartedAt, ...(reason ? {reason} : {})};
+  try {
+    if (window.xlandsAnalytics) window.xlandsAnalytics.event(name, data);
+    else { const queue = window.__xlandsAnalyticsEvents ||= []; if (queue.length < 60) queue.push({name, data}); }
+  } catch (_) {}
+}
+trackStandaloneWorld('world_enter');
 
 // CSS pixels and the Godot drawing buffer must be owned separately. At DPR 3,
 // the old full-window policy allocated nine times as many pixels on a phone.
@@ -108,6 +122,7 @@ function fail(error) {
   if (!statusPanel.isConnected) document.body.append(statusPanel);
   for (const controller of controllers) controller.abort();
   console.error(error);
+  trackStandaloneWorld(analyticsLoaded ? 'world_runtime_error' : 'world_load_error', 'engine');
   const graphics=/WebGL|context lost|memory|allocation|out of bounds/i.test(String(error));
   label.textContent = graphics?({'zh-CN':'图形加载失败，请关闭其它页面后重试。','zh-TW':'圖形載入失敗，請關閉其他頁面後重試。',en:'Graphics could not load. Close other tabs and retry.',ja:'描画を開始できません。他のタブを閉じて再試行してください。',ko:'화면을 불러오지 못했어요. 다른 탭을 닫고 다시 시도해 주세요.'}[lang]||copy[1]):copy[1];
   retryButton.hidden = false;
@@ -392,6 +407,8 @@ async function load() {
         document.body.classList.add('world-ready');
         statusPanel.remove();
         window.xlandsSound?.(queuedSound);
+        analyticsLoaded = true;
+        trackStandaloneWorld('world_ready');
         parent.postMessage({type: 'xlands-ready'}, '*');
       }
     },

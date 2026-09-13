@@ -1,0 +1,8 @@
+{
+  "enabled": true,
+  "websiteId": "6adb4308-a6f6-484a-9bf2-efaffb380a25",
+  "scriptUrl": "https://cloud.umami.is/script.js",
+  "domains": [
+    "frankfanyiming.github.io"
+  ]
+}

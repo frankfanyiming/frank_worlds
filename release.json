@@ -1,9 +1,9 @@
 {
-  "sourceCommit": "5a2d00919b67eab3ac8a042b52b5e479c43539eb",
-  "revision": 28,
+  "sourceCommit": "2aad24e5ea7ab0b2cad7b56a1b90fa3f6f1dbf47",
+  "revision": 29,
   "assetRevision": 24,
-  "date": "2026-09-13",
-  "summary": "Mobile guidance across all three world entry points; public source attribution, retained minified build notices and verifiable build provenance. World models and packs unchanged.",
+  "date": "2026-09-14",
+  "summary": "Umami Cloud analytics for homepage and three worlds, explicit loading outcomes, iframe deduplication and asynchronous failure isolation. Models and game packs retained.",
   "worlds": [
     "doraemon",
     "frog",
@@ -11,7 +11,7 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-13T14:29:00.611843+00:00",
+  "updatedAt": "2026-09-13T20:10:09.747917+00:00",
   "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
   "mobile": "30 fps target, bounded adaptive drawing pixels, reduced local shadow passes and mobile visual derivatives; PC original assets retained",
   "conan": "Pavement-to-Mouri stair access, supported Agasa garage and continuous rear apron; fitted CC0 furniture with recorded provenance",
@@ -62,7 +62,7 @@
     }
   },
   "physicalPhoneTested": false,
-  "homepageRevision": 28,
+  "homepageRevision": 29,
   "worldSourceCommit": "1787441fbd449e6f3b04d8a9527c02b3df750b31",
   "homepage": {
     "socialUrl": "https://x.com/FrankFYM001",
@@ -71,8 +71,8 @@
     "makingOf": "https://xgenlabs.feishu.cn/docx/EHsmd08qGo3T7nxWKIMchlcGnvb",
     "coverBytes": 384870,
     "originalCoversPreserved": true,
-    "coreAssetBytes": 899567,
-    "gzipEstimateBytes": 514782,
+    "coreAssetBytes": 906077,
+    "gzipEstimateBytes": 517612,
     "staticFallback": true,
     "runtimeRecovery": true,
     "worldAssetsChanged": false,
@@ -80,7 +80,8 @@
     "browserVisualTested": false,
     "heroRemoved": true,
     "guestbookRemoved": true,
-    "mobilePerformanceTip": true
+    "mobilePerformanceTip": true,
+    "analytics": true
   },
   "nobitaHouse": {
     "restoredFrom": "bafe7f3fa6f9aa63a9e02a3729c77432335ef885",
@@ -96,9 +97,24 @@
   "provenance": {
     "manifest": "provenance.json",
     "projectId": "xlands-frankfym001",
-    "sourceHeaders": 56,
+    "sourceHeaders": 57,
     "minifiedBannersRetained": true,
     "trackingEnabled": false,
     "license": "MIT for original code; third-party rights unchanged"
+  },
+  "analytics": {
+    "provider": "Umami Cloud",
+    "enabled": true,
+    "websiteId": "6adb4308-a6f6-484a-9bf2-efaffb380a25",
+    "configuration": "analytics-config.json",
+    "events": [
+      "world_enter",
+      "world_ready",
+      "world_load_error",
+      "world_runtime_error"
+    ],
+    "runtimeReplay": false,
+    "respectsDNT": true,
+    "respectsGPC": true
   }
 }

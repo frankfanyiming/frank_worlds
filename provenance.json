@@ -3,7 +3,7 @@
   "origin": {
     "schemaVersion": 1,
     "projectId": "xlands-frankfym001",
-    "project": "XLands小世界",
+    "project": "XLands\u5c0f\u4e16\u754c",
     "creator": "Frank (frankfanyiming)",
     "repository": "https://github.com/frankfanyiming/frank_worlds",
     "homepage": "https://frankfanyiming.github.io/frank_worlds/",
@@ -14,10 +14,10 @@
   },
   "build": {
     "repository": "https://github.com/frankfanyiming/frank_worlds",
-    "commit": "5a2d00919b67eab3ac8a042b52b5e479c43539eb",
+    "commit": "2aad24e5ea7ab0b2cad7b56a1b90fa3f6f1dbf47",
     "trackedSourceModified": false
   },
-  "scope": "Frontend bundle, native HTML wrappers and included notices; models, engine and texture packs keep their existing release manifests.",
+  "scope": "Frontend bundle and included notices; model, engine and texture packs keep separate release manifests.",
   "files": [
     {
       "path": "LICENSE.txt",
@@ -35,39 +35,49 @@
       "sha256": "dbaef9015185896d63b29d7751fa4ac431ed31364a7e42d874759b3cc2954d28"
     },
     {
-      "path": "assets/DoraemonWorld-oyFtb24S.js",
-      "bytes": 210946,
-      "sha256": "10eba96df03f6daf436b8f4aefd5a5b8f594c18e9aba470e68973bb4f70d7b09"
+      "path": "analytics-config.json",
+      "bytes": 179,
+      "sha256": "245f0eeab1331258e9dcba9a6a0de6bab436eb3f078d7f7e39b7b593996642d4"
     },
     {
-      "path": "assets/GLTFLoader-BT4p8Sr7.js",
+      "path": "analytics.js",
+      "bytes": 5662,
+      "sha256": "92a311c12ec417f4a4a9c5469da4d7434b40e966c6482f94baea2e574d648876"
+    },
+    {
+      "path": "assets/DoraemonWorld-BcInqd5t.js",
+      "bytes": 211083,
+      "sha256": "f8899ded327977ef4bd833f2964b052a4034d3a6bd24263ccd4d67e487f7ad74"
+    },
+    {
+      "path": "assets/GLTFLoader-CTwJsvAQ.js",
       "bytes": 44655,
-      "sha256": "5fd66fefe4bd4bc4618dab5abc69abbdf1a33535c152b1e4a1baacc5deb27ab9"
+      "sha256": "b7f5d469c37563509470b2682b2197c943979ffa7e6d57a4016b53e8d64860d3"
     },
     {
-      "path": "assets/OrbitControls-3vfz2Aty.js",
+      "path": "assets/OrbitControls-iRg11RtF.js",
       "bytes": 19383,
-      "sha256": "30c50d46afb1b1843906a89095e732923655482669be7fbeb2c2f86526514ea4"
+      "sha256": "ba30a35742f5f05b4cc21f191dc1f42df3c58ce20181d548d5d4bcb340f85df9"
     },
     {
-      "path": "assets/SceneCanvas-r2JDyd2E.js",
+      "path": "assets/SceneCanvas-MP7C7vQZ.js",
       "bytes": 6404,
-      "sha256": "ad17d9dd45d6d56ec4bdd01b1cc0c091737d4110424808809ffc1e1e382fb065"
+      "sha256": "de93a594fa7d02a53785af3361ef3f0c9df799b1a64d0a144b299aa02344be8e"
     },
     {
-      "path": "assets/Studio-BTW-j7JH.js",
-      "bytes": 23328,
-      "sha256": "45e3b2a1b3aa4a1d39fb4e0dace7460d81e61809016617620bbd4b869fc1a64c"
+      "path": "assets/Studio-D5zYLyMb.js",
+      "bytes": 23323,
+      "sha256": "2f5dd13497d13e04d6b034cca8f4a460da53c6b8f5934e832b3092300281da3d"
     },
     {
-      "path": "assets/arrow-up-pv8DCZF8.js",
+      "path": "assets/arrow-up-Dybwj6l2.js",
       "bytes": 582,
-      "sha256": "b246b3a493b6300417215d8d339ce331b09e115f65e29303a576d38f0a2e8bdf"
+      "sha256": "87f9eb874d34b87228c7eb773297adf8618b234952ce0e0a6ba67c2851cb2661"
     },
     {
-      "path": "assets/engine-CadqguWF.js",
+      "path": "assets/engine-B3pitpTT.js",
       "bytes": 355100,
-      "sha256": "aee801e8f863cf0e4f7cd5e36df77ffcd843a0c1bd96d1f0b336b4b4c94dbaa1"
+      "sha256": "5a300be770d4f72d0b8a85aacc1fc9bbcfd0c52164511c268027f355ca5477dc"
     },
     {
       "path": "assets/index-8Yas8puv.css",
@@ -75,24 +85,24 @@
       "sha256": "b5e5b4185fb523658a75f36656779b94e33c0ef210347329d2c4a8677cad0caf"
     },
     {
-      "path": "assets/index-BIGm0RNm.js",
-      "bytes": 258345,
-      "sha256": "55e9bb9796148e19df65592c5593d90084ffce9361293c05dd30d694eead0a57"
+      "path": "assets/index-CrGH2bES.js",
+      "bytes": 258955,
+      "sha256": "9faa12ff69d95c709df269e5c6c3fc4798194da9473949f389ab6a72a98578d4"
     },
     {
-      "path": "assets/sound-ByAvpfM8.js",
+      "path": "assets/sound-gotkyQDk.js",
       "bytes": 32060,
-      "sha256": "c7028e83bbfd1cb4c80b51a8fe5ae8e291e3dcf58022606db01c6f263f4d4124"
+      "sha256": "3376370fa6b988bc879ceed3456d7a25b04c3c1db376176c57432bdddb55b62a"
     },
     {
-      "path": "assets/three.module-CACaK4zb.js",
+      "path": "assets/three.module-CcpQC9SF.js",
       "bytes": 696780,
-      "sha256": "e3ead03b9e465f1d68fe8803dc18a7cdcff941302dfce2f68295722151572a5b"
+      "sha256": "2cdc3b4ed2e279af82012a3ad8d8d818890bfb2e412d9fa5cdf0e7f1469a7ed3"
     },
     {
       "path": "index.html",
-      "bytes": 7385,
-      "sha256": "9f77e2f262253162654bacd8d8ecece36e70cca57144ae66f645caea90185e07"
+      "bytes": 7444,
+      "sha256": "7f9ee410dd556904fc06ddbadcc7ef6bddd59edddd29c88fcd09261fb80b09a6"
     },
     {
       "path": "worlds/conan/LICENSE.txt",
@@ -111,8 +121,8 @@
     },
     {
       "path": "worlds/conan/index.html",
-      "bytes": 43553,
-      "sha256": "1004af60b66a977d297df31eac0c3ca173e8819a407637e697fd8f032bf085c2"
+      "bytes": 44427,
+      "sha256": "2b9f04a2b5e98222ce456d3115cbb94c7a6ac506f062f07a89006f8b903b6cc3"
     },
     {
       "path": "worlds/frog/LICENSE.txt",
@@ -131,8 +141,8 @@
     },
     {
       "path": "worlds/frog/index.html",
-      "bytes": 43610,
-      "sha256": "7afc94d6c2b525caed2c6a9332b3cb748abeed2714ccb493e5a322b4f2a28bb6"
+      "bytes": 44484,
+      "sha256": "9b727be3b30839d254e8aeef6e4e15c343c718f1ec099a3a13b1b43b850698c9"
     }
   ]
 }
