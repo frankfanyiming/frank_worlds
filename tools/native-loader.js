@@ -17,6 +17,35 @@ retryButton.textContent = copy[2];
 let progress = 0, lastPublished = 0, failed = false, ready = false;
 let queuedSound = new URLSearchParams(location.search).get('sound') === '1';
 const controllers = new Set();
+let packPrefix = '';
+
+// CSS pixels and the Godot drawing buffer must be owned separately. At DPR 3,
+// the old full-window policy allocated nine times as many pixels on a phone.
+function installRenderBudget() {
+  const mobile = window.matchMedia?.('(any-pointer: coarse)').matches ?? false;
+  if (!mobile) return {mobile:false,resizePolicy:2};
+  const canvas = document.querySelector('#canvas');
+  let ratio = 1, slow = 0, healthy = 0;
+  const resize = () => {
+    const ceiling = Math.min(1.1, window.devicePixelRatio || 1, Math.sqrt(480000 / Math.max(1,innerWidth*innerHeight)));
+    ratio = Math.min(ratio,ceiling);
+    const w=Math.max(1,Math.round(innerWidth*ratio)),h=Math.max(1,Math.round(innerHeight*ratio));
+    if(canvas.width!==w)canvas.width=w;
+    if(canvas.height!==h)canvas.height=h;
+    window.__xlandsPixelRatio=ratio;
+  };
+  resize();window.addEventListener('resize',resize);
+  const timer=setInterval(()=>{
+    if(!ready||document.hidden||document.body.classList.contains('world-ui-open'))return;
+    const health=window.xlandsReadPerformance?.();if(!health)return;
+    slow=health.fps>0&&health.fps<24?slow+1:0;
+    healthy=health.fps>=29?healthy+1:0;
+    if(slow>=4){ratio=Math.max(.65,ratio-.1);slow=0;healthy=0;resize();}
+    else if(healthy>=30){ratio=Math.min(1,ratio+.05);healthy=0;resize();}
+  },1000);
+  window.addEventListener('pagehide',()=>clearInterval(timer),{once:true});
+  return {mobile:true,resizePolicy:0};
+}
 
 function update(value, stage, force = false) {
   if (failed || ready) return;
@@ -32,11 +61,14 @@ function update(value, stage, force = false) {
 function fail(error) {
   if (failed || ready) return;
   failed = true;
+  document.body.classList.remove('world-ready');
+  if (!statusPanel.isConnected) document.body.append(statusPanel);
   for (const controller of controllers) controller.abort();
   console.error(error);
-  label.textContent = copy[1];
+  const graphics=/WebGL|context lost|memory|allocation|out of bounds/i.test(String(error));
+  label.textContent = graphics?({'zh-CN':'图形加载失败，请关闭其它页面后重试。','zh-TW':'圖形載入失敗，請關閉其他頁面後重試。',en:'Graphics could not load. Close other tabs and retry.',ja:'描画を開始できません。他のタブを閉じて再試行してください。',ko:'화면을 불러오지 못했어요. 다른 탭을 닫고 다시 시도해 주세요.'}[lang]||copy[1]):copy[1];
   retryButton.hidden = false;
-  parent.postMessage({type: 'xlands-error'}, '*');
+  parent.postMessage({type: 'xlands-error',detail:label.textContent}, '*');
 }
 function deadline(promise, ms, onTimeout = () => {}) {
   let timer;
@@ -50,6 +82,9 @@ function deadline(promise, ms, onTimeout = () => {}) {
 window.addEventListener('error', e => fail(e.error || Error(e.message || 'Engine error')));
 window.addEventListener('unhandledrejection', e => fail(e.reason));
 window.addEventListener('pagehide', () => { for (const c of controllers) c.abort(); });
+document.querySelector('#canvas')?.addEventListener?.('webglcontextlost', e => {
+  e.preventDefault();ready=false;fail(Error('WebGL context lost'));
+});
 window.addEventListener('message', e => {
   if (e.source !== parent) return;
   if (e.data?.type === 'xlands-sound') {
@@ -233,7 +268,7 @@ async function loadEngineScript() {
 async function downloadChunk(chunk, onProgress) {
   const encoded = new Uint8Array(chunk.bytes);
   let received = 0;
-  const url = chunk.file + '?v=' + chunk.sha256;
+  const url = packPrefix + chunk.file + '?v=' + chunk.sha256;
   for (let attempt = 0; attempt < 3; attempt++) {
     const controller = new AbortController();
     controllers.add(controller);
@@ -280,6 +315,8 @@ async function downloadChunk(chunk, onProgress) {
 }
 
 async function load() {
+  const rendering=installRenderBudget();
+  packPrefix=rendering.mobile?'mobile/':'';
   update(1, copy[4], true);
   await loadEngineScript();
   if (Engine.getMissingFeatures({threads: false}).length) throw Error('WebGL2 unavailable');
@@ -287,12 +324,12 @@ async function load() {
   controllers.add(controller);
   let descriptor;
   try {
-    descriptor = await deadline(fetch('world-pack.json', {signal: controller.signal, cache: 'no-store'}).then(r => {
+    descriptor = await deadline(fetch(packPrefix+'world-pack.json', {signal: controller.signal, cache: 'no-store'}).then(r => {
       if (!r.ok) throw Error('World manifest unavailable');
       return r.json();
     }), 20000, () => controller.abort());
   } finally { controllers.delete(controller); }
-  const bytes = new Uint8Array(descriptor.totalBytes);
+  let bytes = new Uint8Array(descriptor.totalBytes);
   const downloaded = descriptor.chunks.map(() => 0);
   const totalDownload = descriptor.chunks.reduce((sum, chunk) => sum + chunk.bytes, 0);
   let cursor = 0, engineProgress = 0;
@@ -302,11 +339,11 @@ async function load() {
       copy[0] + ' ' + (complete / 1048576).toFixed(1) + ' / ' + (totalDownload / 1048576).toFixed(1) + ' MB');
   }
   const engine = new Engine({...config, canvas: document.querySelector('#canvas'), locale: lang,
-    canvasResizePolicy: 2,
+    canvasResizePolicy: rendering.resizePolicy,
     onProgress: (loaded, total) => { engineProgress = total ? Math.min(1, loaded / total) : 0; report(); },
     onPrint: text => {
       console.log(text);
-      if (text.includes('_READY')) {
+      if (text.includes('_READY') && !failed) {
         ready = true;
         document.body.classList.add('world-ready');
         statusPanel.remove();
@@ -315,7 +352,7 @@ async function load() {
       }
     },
     onPrintError: text => console.warn(text),
-    onExit: code => { if (code !== 0) fail(Error('Engine exited: ' + code)); },
+    onExit: code => { if (code !== 0) {ready=false;fail(Error('Engine exited: ' + code));} },
   });
   async function next() {
     while (cursor < descriptor.chunks.length && !failed) {
@@ -325,11 +362,12 @@ async function load() {
     }
   }
   await Promise.all([
-    deadline(engine.init('index'), 180000), next(), next(), next(),
+    deadline(engine.init('index'), 180000), next(), ...(rendering.mobile?[]:[next(),next()]),
   ]);
   if (failed) return;
   update(94, copy[3], true);
   await engine.preloadFile(bytes.buffer, 'index.pck');
+  bytes = null; // Release the JS assembly after the engine has accepted it.
   update(96, copy[3], true);
   await deadline(engine.start({args: ['--main-pack', 'index.pck']}), 90000);
 }

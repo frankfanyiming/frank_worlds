@@ -1,0 +1,89 @@
+{
+  "url": "http://127.0.0.1:8796/frank_worlds/",
+  "world": "frog",
+  "environment": "Desktop Chrome; touch emulation",
+  "physicalPhone": false,
+  "checks": [
+    {
+      "name": "correct resource and rendering profile",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 72,
+        "fps": 15,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 388469,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 122.647398948669,
+        "videoMemoryMiB": 199.238638877869
+      },
+      "place": "家门口\n午后"
+    },
+    {
+      "name": "frog doorway approach",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 18,
+        "fps": 30,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 114458,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 122.647398948669,
+        "videoMemoryMiB": 199.238638877869
+      },
+      "place": "树干小屋\n午后"
+    },
+    {
+      "name": "landscape",
+      "coarse": true,
+      "canvas": [
+        844,
+        344
+      ],
+      "css": [
+        844,
+        344
+      ],
+      "health": {
+        "drawCalls": 32,
+        "fps": 16,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 117076,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 121.960265159607,
+        "videoMemoryMiB": 198.551505088806
+      },
+      "place": "树干小屋\n午后"
+    }
+  ],
+  "manifests": [
+    "http://127.0.0.1:8796/frank_worlds/worlds/frog/mobile/world-pack.json"
+  ],
+  "errors": [],
+  "environmentErrors": [],
+  "passed": true
+}

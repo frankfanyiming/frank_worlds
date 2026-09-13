@@ -22,7 +22,7 @@ export class TownVisibility {
    this.meshes.add(o);
   });
  }
- update(center:THREE.Vector3,roomView:boolean){
+ update(center:THREE.Vector3,roomView:boolean,overview=false){
   if(!this.mobile)return;
   this.culled=0;
   for(const mesh of this.meshes){
@@ -31,7 +31,7 @@ export class TownVisibility {
    this.sphere.copy(bounds).applyMatrix4(mesh.matrixWorld);
    // The near neighbourhood stays visible through windows. The distant forest
    // is completely occluded by the house at these interior camera positions.
-   const hidden=roomView&&this.sphere.distanceToPoint(center)>32;
+   const hidden=!overview&&this.sphere.distanceToPoint(center)>(roomView?24:48);
    mesh.layers.set(hidden?1:0);if(hidden)this.culled++;
   }
  }

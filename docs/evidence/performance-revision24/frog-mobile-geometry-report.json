@@ -1,0 +1,93 @@
+[
+  {
+    "file": "assets/bridge-approaches.glb",
+    "before": 880,
+    "after": 448,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/butterfly.glb",
+    "before": 7256,
+    "after": 7256,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/frog-gear.glb",
+    "before": 2396,
+    "after": 2396,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/frog.glb",
+    "before": 88000,
+    "after": 39600,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/home-enclosure.glb",
+    "before": 37894,
+    "after": 32962,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/home-furnishings.glb",
+    "before": 323466,
+    "after": 100538,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/interior.glb",
+    "before": 47100,
+    "after": 22114,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/navigation.glb",
+    "before": 328,
+    "after": 328,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/panda-exterior.glb",
+    "before": 13555,
+    "after": 6086,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/panda-home.glb",
+    "before": 315256,
+    "after": 124535,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/panda.glb",
+    "before": 22777,
+    "after": 13372,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/stone-shell.glb",
+    "before": 13272,
+    "after": 5126,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/woodland.glb",
+    "before": 1102042,
+    "after": 376725,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  }
+]

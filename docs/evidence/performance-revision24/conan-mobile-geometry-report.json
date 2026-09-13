@@ -1,0 +1,163 @@
+[
+  {
+    "file": "assets/agasa.glb",
+    "before": 14866,
+    "after": 8894,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/beetle.glb",
+    "before": 89999,
+    "after": 26998,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/buildings/agasa.glb",
+    "before": 519293,
+    "after": 380205,
+    "protectedCollisionPrimitives": 26,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/buildings/kudo-details.glb",
+    "before": 10256,
+    "after": 7463,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/buildings/kudo-open-furniture.glb",
+    "before": 32285,
+    "after": 19606,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/buildings/kudo.glb",
+    "before": 305229,
+    "after": 191221,
+    "protectedCollisionPrimitives": 11,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/buildings/mouri-details.glb",
+    "before": 47364,
+    "after": 20334,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/buildings/mouri-open-furniture.glb",
+    "before": 32285,
+    "after": 21925,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/buildings/mouri.glb",
+    "before": 377715,
+    "after": 273967,
+    "protectedCollisionPrimitives": 4,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/buildings/site-access.glb",
+    "before": 5952,
+    "after": 5952,
+    "protectedCollisionPrimitives": 2,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/buildings/street-block.glb",
+    "before": 133403,
+    "after": 97896,
+    "protectedCollisionPrimitives": 10,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/conan.glb",
+    "before": 14632,
+    "after": 11155,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/haibara.glb",
+    "before": 110000,
+    "after": 49500,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/kogoro.glb",
+    "before": 109999,
+    "after": 49498,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/pedestrian_f.glb",
+    "before": 109999,
+    "after": 49498,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/pedestrian_m.glb",
+    "before": 109999,
+    "after": 49498,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/props/grass.glb",
+    "before": 56,
+    "after": 56,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/props/signal.glb",
+    "before": 18636,
+    "after": 18636,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/ran.glb",
+    "before": 109999,
+    "after": 49499,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/street.glb",
+    "before": 276573,
+    "after": 94388,
+    "protectedCollisionPrimitives": 24,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/vehicles/hatchback.glb",
+    "before": 140384,
+    "after": 78778,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/vehicles/pickup.glb",
+    "before": 149100,
+    "after": 85333,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  },
+  {
+    "file": "assets/vehicles/van.glb",
+    "before": 156752,
+    "after": 63060,
+    "protectedCollisionPrimitives": 0,
+    "animationAndTransformsUnchanged": true
+  }
+]

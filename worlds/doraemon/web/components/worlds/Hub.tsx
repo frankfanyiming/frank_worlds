@@ -546,7 +546,7 @@ function NativeWorld({
         setProgress(e.data.progress);
         if (typeof e.data.detail === 'string') setDetail(e.data.detail);
       }
-      if (e.data?.type === 'xlands-error') setError(true);
+      if (e.data?.type === 'xlands-error') {setError(true);setReady(false);if(typeof e.data.detail==='string')setDetail(e.data.detail);}
       if (e.data?.type === 'xlands-expansion') onExpansion();
     };
     window.addEventListener('message', fn);
@@ -568,7 +568,7 @@ function NativeWorld({
         key={world + locale + retry}
         title={t(titleKey[world])}
         src={
-          assetPath('worlds/' + world + '/index.html') + '?v=' + 'access-furniture-22' + '&lang=' +
+          assetPath('worlds/' + world + '/index.html') + '?v=' + 'mobile-speed-24' + '&lang=' +
           locale +
           '&sound=' +
           (initialSound.current ? '1' : '0')
@@ -585,7 +585,7 @@ function NativeWorld({
             <h2>{error ? t('error') : t('preparing')}</h2>
             <progress value={progress} max={100} aria-label={t('loading')} />
             <span>{Math.round(progress)}%</span>
-            {!error && detail && <p>{detail}</p>}
+            {detail && <p>{detail}</p>}
             {error && (
               <button
                 onClick={() => {

@@ -1,0 +1,268 @@
+{
+  "environment": "Desktop Chrome Metal; touch emulation, DPR 3; not a physical phone",
+  "cpuThrottle": 4,
+  "url": "http://127.0.0.1:8796/frank_worlds/",
+  "worlds": [
+    {
+      "world": "frog",
+      "views": [
+        {
+          "name": "street-portrait",
+          "elapsedMs": 8000,
+          "paintedFps": 30,
+          "browserP95Ms": 16.799999999999272,
+          "meanDrawCalls": 132,
+          "meanTriangles": 2244145,
+          "maxTriangles": 2244145,
+          "canvas": {
+            "width": 390,
+            "height": 844,
+            "cssWidth": 390,
+            "cssHeight": 844
+          },
+          "buffers": [
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            },
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          "diagnostics": {
+            "drawCalls": 83,
+            "fps": 30,
+            "hidden": false,
+            "lodThreshold": 4,
+            "msaa": 1,
+            "primitives": 1653169,
+            "profile": "mobile-speed",
+            "targetFps": 30,
+            "textureMiB": 165.341658592224,
+            "videoMemoryMiB": 282.505530357361
+          }
+        },
+        {
+          "name": "street-landscape",
+          "elapsedMs": 8033,
+          "paintedFps": 29.9,
+          "browserP95Ms": 33.400000000001455,
+          "meanDrawCalls": 144,
+          "meanTriangles": 2119195,
+          "maxTriangles": 2119195,
+          "canvas": {
+            "width": 844,
+            "height": 390,
+            "cssWidth": 844,
+            "cssHeight": 390
+          },
+          "buffers": [
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            },
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            },
+            {
+              "samples": 2,
+              "width": 844,
+              "height": 390
+            },
+            {
+              "samples": 2,
+              "width": 844,
+              "height": 390
+            }
+          ],
+          "diagnostics": {
+            "drawCalls": 91,
+            "fps": 30,
+            "hidden": false,
+            "lodThreshold": 4,
+            "msaa": 1,
+            "primitives": 1573119,
+            "profile": "mobile-speed",
+            "targetFps": 30,
+            "textureMiB": 165.341658592224,
+            "videoMemoryMiB": 282.505530357361
+          }
+        }
+      ],
+      "errors": [],
+      "startupMs": 13365
+    },
+    {
+      "world": "conan",
+      "views": [
+        {
+          "name": "street-portrait",
+          "elapsedMs": 7966,
+          "paintedFps": 28.4,
+          "browserP95Ms": 33.29999999999927,
+          "meanDrawCalls": 2536,
+          "meanTriangles": 3933047,
+          "maxTriangles": 4014665,
+          "canvas": {
+            "width": 390,
+            "height": 844,
+            "cssWidth": 390,
+            "cssHeight": 844
+          },
+          "buffers": [
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            },
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            }
+          ],
+          "diagnostics": {
+            "drawCalls": 2161,
+            "fps": 19,
+            "hidden": false,
+            "lodThreshold": 4,
+            "msaa": 1,
+            "primitives": 2829238,
+            "profile": "mobile-speed",
+            "targetFps": 30,
+            "textureMiB": 242.264625549316,
+            "videoMemoryMiB": 434.855821609497
+          }
+        },
+        {
+          "name": "street-landscape",
+          "elapsedMs": 8000,
+          "paintedFps": 28.4,
+          "browserP95Ms": 33.400000000001455,
+          "meanDrawCalls": 3076,
+          "meanTriangles": 4739308,
+          "maxTriangles": 4789349,
+          "canvas": {
+            "width": 760,
+            "height": 351,
+            "cssWidth": 844,
+            "cssHeight": 390
+          },
+          "buffers": [
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            },
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            },
+            {
+              "samples": 2,
+              "width": 844,
+              "height": 390
+            },
+            {
+              "samples": 2,
+              "width": 844,
+              "height": 390
+            },
+            {
+              "samples": 2,
+              "width": 760,
+              "height": 351
+            },
+            {
+              "samples": 2,
+              "width": 760,
+              "height": 351
+            }
+          ],
+          "diagnostics": {
+            "drawCalls": 2551,
+            "fps": 30,
+            "hidden": false,
+            "lodThreshold": 4,
+            "msaa": 1,
+            "primitives": 3003969,
+            "profile": "mobile-speed",
+            "targetFps": 30,
+            "textureMiB": 240.360328674316,
+            "videoMemoryMiB": 432.951524734497
+          }
+        },
+        {
+          "name": "office",
+          "elapsedMs": 8000,
+          "paintedFps": 30,
+          "browserP95Ms": 16.700000000004366,
+          "meanDrawCalls": 2433,
+          "meanTriangles": 5570004,
+          "maxTriangles": 5570004,
+          "canvas": {
+            "width": 760,
+            "height": 351,
+            "cssWidth": 844,
+            "cssHeight": 390
+          },
+          "buffers": [
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            },
+            {
+              "samples": 2,
+              "width": 390,
+              "height": 844
+            },
+            {
+              "samples": 2,
+              "width": 844,
+              "height": 390
+            },
+            {
+              "samples": 2,
+              "width": 844,
+              "height": 390
+            },
+            {
+              "samples": 2,
+              "width": 760,
+              "height": 351
+            },
+            {
+              "samples": 2,
+              "width": 760,
+              "height": 351
+            }
+          ],
+          "diagnostics": {
+            "drawCalls": 2120,
+            "fps": 30,
+            "hidden": false,
+            "lodThreshold": 4,
+            "msaa": 1,
+            "primitives": 3569528,
+            "profile": "mobile-speed",
+            "targetFps": 30,
+            "textureMiB": 240.360328674316,
+            "videoMemoryMiB": 432.951524734497
+          }
+        }
+      ],
+      "errors": [],
+      "startupMs": 22864,
+      "destinations": "街区\n↗\n切换视角\n↗\n昼夜\n↗\n毛利楼\n门外\n↗\n白罗咖啡厅\n↗\n咖啡厅后仓库\n↗\n咖啡厅洗手间\n↗\n毛利侦探事务所\n↗\n事务所茶水间与档案\n↗\n毛利家客厅与厨房\n↗\n小五郎和柯南的卧室\n↗\n小兰的卧室\n↗\n毛利家洗漱间\n↗\n工藤家\n门外\n↗\n工藤家 · 玄关\n↗\n工藤家 · 厨房餐厅\n↗\n工藤家 · 客厅\n↗\n工藤家 · 主卧\n↗\n工藤家 · 新一卧室\n↗\n工藤家 · 二楼客卧\n↗\n工藤家 · 后翼客房\n↗\n工藤家 · 后翼卧室\n↗\n工藤家 · 后翼上层客房\n↗\n工藤家 · 挑空书房\n↗\n博士家\n门外\n↗\n阿笠宅 · 浴室\n↗\n阿笠宅 · 环形厨房\n↗\n阿笠宅 · 双床休息区\n↗\n阿笠宅 · 客厅\n↗\n阿笠宅 · 圆塔楼梯\n↗\n阿笠宅 · 二楼环廊\n↗\n阿笠宅 · 地下研究室\n↗\n阿笠宅 · 发明工作间\n↗\n阿笠宅 · 后车库\n↗"
+    }
+  ],
+  "errors": []
+}

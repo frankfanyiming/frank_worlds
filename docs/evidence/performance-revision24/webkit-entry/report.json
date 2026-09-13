@@ -1,0 +1,143 @@
+{
+  "url": "http://127.0.0.1:8796/frank_worlds/",
+  "world": "conan",
+  "environment": "Desktop WebKit; touch emulation",
+  "physicalPhone": false,
+  "checks": [
+    {
+      "name": "correct resource and rendering profile",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 900,
+        "fps": 1,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 745527,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.669532775879,
+        "videoMemoryMiB": 366.065553665161
+      },
+      "place": "街巷与住宅\n15:30"
+    },
+    {
+      "name": "毛利侦探事务所",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 537,
+        "fps": 15,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 703689,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.669532775879,
+        "videoMemoryMiB": 366.065553665161
+      },
+      "place": "毛利侦探事务所\n15:30"
+    },
+    {
+      "name": "阿笠宅 · 环形厨房",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 441,
+        "fps": 30,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 560376,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.669532775879,
+        "videoMemoryMiB": 366.065553665161
+      },
+      "place": "阿笠宅 · 环形厨房\n15:30"
+    },
+    {
+      "name": "阿笠宅 · 后车库",
+      "coarse": true,
+      "canvas": [
+        390,
+        794
+      ],
+      "css": [
+        390,
+        794
+      ],
+      "health": {
+        "drawCalls": 118,
+        "fps": 18,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 295584,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.669532775879,
+        "videoMemoryMiB": 366.065553665161
+      },
+      "place": "阿笠宅 · 后车库\n15:30"
+    },
+    {
+      "name": "landscape",
+      "coarse": true,
+      "canvas": [
+        844,
+        344
+      ],
+      "css": [
+        844,
+        344
+      ],
+      "health": {
+        "drawCalls": 351,
+        "fps": 18,
+        "hidden": false,
+        "lodThreshold": 4,
+        "msaa": 1,
+        "primitives": 453180,
+        "profile": "mobile-speed",
+        "targetFps": 30,
+        "textureMiB": 241.079811096191,
+        "videoMemoryMiB": 365.475831985474
+      },
+      "place": "阿笠宅 · 后车库\n15:30"
+    }
+  ],
+  "manifests": [
+    "http://127.0.0.1:8796/frank_worlds/worlds/conan/mobile/world-pack.json"
+  ],
+  "errors": [],
+  "environmentErrors": [
+    "/nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/branches? due to access control checks.",
+    "/nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/notes due to access control checks.",
+    "/nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/meta due to access control checks."
+  ],
+  "passed": true
+}

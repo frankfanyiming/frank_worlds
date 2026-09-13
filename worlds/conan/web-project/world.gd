@@ -31,6 +31,7 @@ var pitch=-.08
 var first_person=false
 var elapsed=0.0
 var daytime=15.5
+var last_lighting_night=-1
 var mouse_drag=false
 var nearest:Dictionary={}
 var message_until=0.0
@@ -328,16 +329,18 @@ func update_nearby()->void:
 	info.text=title;clock_text.text="%02d:%02d　·　%s"%[int(daytime),int(fmod(daytime,1)*60),"夜间" if daytime>=18 or daytime<6 else "晴朗午后"]
 func update_life(delta:float)->void:
 	var night=daytime>=18 or daytime<6;
-	for lamp in lamps:
-		if lamp.has_meta("day_color"):
-			lamp.light_color=lamp.get_meta("night_color" if night else "day_color")
-			lamp.light_energy=float(lamp.get_meta("base_energy"))*(float(lamp.get_meta("night_energy_multiplier",1.0)) if night else 1.0)
-	for lamp in architectural_lights:lamp.light_energy=float(lamp.get_meta("night_energy" if night else "day_energy"))
-	for item in architectural_emission:item.material.emission_energy_multiplier=item.night if night else item.day
-	for light in window_lights:light.light_energy=.04 if night else float(light.get_meta("day_energy"))
-	sun.light_energy=.055 if night else .28;sun.light_color=Color(.64,.72,.90) if night else Color(1,.98,.94)
-	env.ambient_light_energy=.24 if night else .55;env.ambient_light_color=Color(.76,.81,.88) if night else Color(.88,.90,.92)
-	if env.sky.sky_material is ShaderMaterial:env.sky.sky_material.set_shader_parameter("night_mix",1.0 if night else 0.0)
+	if last_lighting_night!=int(night):
+		last_lighting_night=int(night)
+		for lamp in lamps:
+			if lamp.has_meta("day_color"):
+				lamp.light_color=lamp.get_meta("night_color" if night else "day_color")
+				lamp.light_energy=float(lamp.get_meta("base_energy"))*(float(lamp.get_meta("night_energy_multiplier",1.0)) if night else 1.0)
+		for lamp in architectural_lights:lamp.light_energy=float(lamp.get_meta("night_energy" if night else "day_energy"))
+		for item in architectural_emission:item.material.emission_energy_multiplier=item.night if night else item.day
+		for light in window_lights:light.light_energy=.04 if night else float(light.get_meta("day_energy"))
+		sun.light_energy=.055 if night else .28;sun.light_color=Color(.64,.72,.90) if night else Color(1,.98,.94)
+		env.ambient_light_energy=.24 if night else .55;env.ambient_light_color=Color(.76,.81,.88) if night else Color(.88,.90,.92)
+		if env.sky.sky_material is ShaderMaterial:env.sky.sky_material.set_shader_parameter("night_mix",1.0 if night else 0.0)
 	for a in actors:
 		if a.walking:
 			var phase=elapsed*.075+a.phase;a.node.position=a.home+Vector3(0,0,sin(phase)*5.5);a.node.rotation.y=lerp_angle(a.node.rotation.y,0 if cos(phase)>0 else PI,delta*4);a.anim.speed_scale=max(.3,abs(cos(phase))*.6)

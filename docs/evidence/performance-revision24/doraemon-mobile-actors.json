@@ -1,0 +1,170 @@
+[
+  {
+    "part": "actors/nobita",
+    "before": {
+      "triangles": 95000,
+      "bytes": 782340,
+      "sha256": "9059313fb27a1275d3087e49ac02633ad169ffd022e90a4a23f8454d35595be3"
+    },
+    "after": {
+      "triangles": 33248,
+      "bytes": 484092,
+      "sha256": "1e8e2a0e27f5def1e1c87cb5d8b232dd31fc57b6e65efe90cee3ff0da19d3549"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "actors/doraemon-v11",
+    "before": {
+      "triangles": 95223,
+      "bytes": 753512,
+      "sha256": "db72917671abc4f0e637e8e1bd88719473cd8339f655da910614ec554b35e0a3"
+    },
+    "after": {
+      "triangles": 33471,
+      "bytes": 416488,
+      "sha256": "4166184a9b5a3433b95d043d648ef6d2f010217f94632def9b386ffd798945ec"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "actors/shizuka",
+    "before": {
+      "triangles": 94999,
+      "bytes": 729324,
+      "sha256": "306c43d98002011320c61f3ccb39ed594da62f7deb8a0f1682ed9bd9dfdfedb6"
+    },
+    "after": {
+      "triangles": 33248,
+      "bytes": 410760,
+      "sha256": "8b312dc1708d9b48a57b3e28ee6a984ddb7f6a2bcf899d6f1b5d2e3f44c42e0b"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "actors/gian",
+    "before": {
+      "triangles": 94999,
+      "bytes": 796396,
+      "sha256": "6affd57272be98b43aa9e72cf40e6a806e849869b3e02bcd68577e2fbe68d13b"
+    },
+    "after": {
+      "triangles": 33248,
+      "bytes": 438148,
+      "sha256": "ee4fe8e42fa1502eed5bac8415c84885c3fc64592e71b2b4d4406048810020c5"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "actors/suneo",
+    "before": {
+      "triangles": 94999,
+      "bytes": 760824,
+      "sha256": "de1c17c07c933a2f3ba4ac00b8b628a635627df0a2836d71854dc11e278a2703"
+    },
+    "after": {
+      "triangles": 33248,
+      "bytes": 427600,
+      "sha256": "5a50259976e3b516c8046bcb1f68b6dbdbbdc31b61cd2fe472035bd12074e7e4"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "actors/tamako",
+    "before": {
+      "triangles": 65000,
+      "bytes": 510832,
+      "sha256": "872d5a269903ebba055bbd1ee6c4fc942013fb7401a00669a8d6ea2a79ed5c73"
+    },
+    "after": {
+      "triangles": 22750,
+      "bytes": 331216,
+      "sha256": "4c1d7fb29e952c07abf3a9bd0995c7c8822ae6e366d0752096e8641ebdf8918b"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "actors/nobisuke",
+    "before": {
+      "triangles": 65000,
+      "bytes": 508316,
+      "sha256": "5e34eecfe95cd92beeb226e8bf2955a23392316e62b841e7f5e5e48357625a13"
+    },
+    "after": {
+      "triangles": 22749,
+      "bytes": 325848,
+      "sha256": "74cc58392a012a610aef6564543681db9dd09026ebb3fb58ad3808739d62d36d"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "fauna/cat",
+    "before": {
+      "triangles": 46516,
+      "bytes": 1885716,
+      "sha256": "b8902ffea1b99996782318c6767faabb0932d85c481dddab5b7b572db5eeda7b"
+    },
+    "after": {
+      "triangles": 16855,
+      "bytes": 245200,
+      "sha256": "11b46dfe2478096ddc4bb5e7f67a6849ee1f062c09ceb40c20770f701c48be41"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "fauna/sparrow",
+    "before": {
+      "triangles": 27996,
+      "bytes": 1047032,
+      "sha256": "4f02607fa3358bc040498c0582766898473543fe20337ae87e3acc80d18a6051"
+    },
+    "after": {
+      "triangles": 10899,
+      "bytes": 125860,
+      "sha256": "99e3aaa2584781323efef07082a3d3c5c36b7d719852e19ddbc15c1110cbd3f2"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "fauna/sparrow_ash",
+    "before": {
+      "triangles": 27996,
+      "bytes": 1046684,
+      "sha256": "aed895f9078867a68f1c172e8fb8ea93555236442f6dd007ce8399adc3d60fe4"
+    },
+    "after": {
+      "triangles": 10891,
+      "bytes": 124928,
+      "sha256": "0c1447f8e22e4d5ce4090d94a04eeb01020a5ca50521f8f58123821963da3a0d"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "vehicles/kei_hatchback-v11",
+    "before": {
+      "triangles": 16844,
+      "bytes": 362584,
+      "sha256": "8a21320c6b6d5335210ad21092f763c59a3a5e2c6aac96e42d61bc96a4bfd03a"
+    },
+    "after": {
+      "triangles": 16130,
+      "bytes": 336120,
+      "sha256": "0ca18d79005dfa6af96744d5476ee141155f41f44000fe78a3b8bcb88339bc8c"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  },
+  {
+    "part": "vehicles/kei_truck-v11",
+    "before": {
+      "triangles": 17890,
+      "bytes": 383608,
+      "sha256": "5dd8ce08fd785b10a23d3d5aeb6f10e450fcec7f80f609a19e366148533cfa55"
+    },
+    "after": {
+      "triangles": 17038,
+      "bytes": 353428,
+      "sha256": "b0cb890364d2fc5fe81fe69bdcb3997372c5ce3a2d2ae8a9cf241776592b4a36"
+    },
+    "animationSkeletonAndTransformsUnchanged": true
+  }
+]
