@@ -1,6 +1,6 @@
 {
-  "sourceCommit": "e9955b0344e8989fee1b419af86a09fd186f1fca",
-  "revision": 24,
+  "sourceCommit": "82ee053d8116f322f38db2ebe9a38aa1c5cdc032",
+  "revision": 25,
   "assetRevision": 24,
   "date": "2026-09-13",
   "summary": "Separate mobile speed from desktop visuals across all three worlds; lighter native packs, lower render budgets, retained character motion and visible graphics recovery",
@@ -58,5 +58,15 @@
       "path": "worlds/conan/mobile/"
     }
   },
-  "physicalPhoneTested": false
+  "physicalPhoneTested": false,
+  "homepageRevision": 25,
+  "worldSourceCommit": "e9955b0344e8989fee1b419af86a09fd186f1fca",
+  "homepage": {
+    "socialUrl": "https://x.com/FrankFYM001",
+    "coverBytes": 384870,
+    "coreAssetBytes": 881695,
+    "gzipEstimateBytes": 509816,
+    "staticFallback": true,
+    "worldAssetsChanged": false
+  }
 }
