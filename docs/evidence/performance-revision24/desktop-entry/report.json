@@ -1,0 +1,70 @@
+{
+  "url": "http://127.0.0.1:8796/frank_worlds/",
+  "world": "conan",
+  "environment": "Desktop Chrome; mouse/desktop profile",
+  "physicalPhone": false,
+  "checks": [
+    {
+      "name": "correct resource and rendering profile",
+      "coarse": false,
+      "canvas": [
+        2880,
+        1692
+      ],
+      "css": [
+        1440,
+        846
+      ],
+      "health": null,
+      "place": "街巷与住宅\n15:30"
+    },
+    {
+      "name": "毛利侦探事务所",
+      "coarse": false,
+      "canvas": [
+        2880,
+        1692
+      ],
+      "css": [
+        1440,
+        846
+      ],
+      "health": null,
+      "place": "毛利侦探事务所\n15:30"
+    },
+    {
+      "name": "阿笠宅 · 环形厨房",
+      "coarse": false,
+      "canvas": [
+        2880,
+        1692
+      ],
+      "css": [
+        1440,
+        846
+      ],
+      "health": null,
+      "place": "阿笠宅 · 环形厨房\n15:30"
+    },
+    {
+      "name": "阿笠宅 · 后车库",
+      "coarse": false,
+      "canvas": [
+        2880,
+        1692
+      ],
+      "css": [
+        1440,
+        846
+      ],
+      "health": null,
+      "place": "阿笠宅 · 后车库\n15:30"
+    }
+  ],
+  "manifests": [
+    "http://127.0.0.1:8796/frank_worlds/worlds/conan/world-pack.json"
+  ],
+  "errors": [],
+  "environmentErrors": [],
+  "passed": true
+}

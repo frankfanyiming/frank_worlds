@@ -1,0 +1,25 @@
+{
+  "environment": "Desktop Chrome touch emulation; real asset decode; 6 Mbps / 150 ms latency / 4× CPU slowdown after startup",
+  "checks": [
+    {
+      "cancelledBytes": 943500,
+      "progressBeforeCompletion": 2
+    },
+    {
+      "slowNetworkRetryMs": 16118
+    },
+    {
+      "touchWalk": true,
+      "walkDistance": 0.9449999999999908
+    },
+    {
+      "offlineBedroomFromCache": true,
+      "additionalCacheHits": 24
+    },
+    {
+      "serverFailureRetry": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}
