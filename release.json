@@ -1,9 +1,9 @@
 {
-  "sourceCommit": "3f366d6d18fc6085f2e3b9d2f1a0ad2e4c8ef26a",
-  "revision": 23,
-  "assetRevision": 23,
+  "sourceCommit": "e9955b0344e8989fee1b419af86a09fd186f1fca",
+  "revision": 24,
+  "assetRevision": 24,
   "date": "2026-09-13",
-  "summary": "Optimize Doraemon mobile upstairs loading, reduce moire and render cost; preserve desktop room and native worlds",
+  "summary": "Separate mobile speed from desktop visuals across all three worlds; lighter native packs, lower render budgets, retained character motion and visible graphics recovery",
   "worlds": [
     "doraemon",
     "frog",
@@ -11,9 +11,9 @@
   ],
   "communityApi": "https://nobita-summer-neighborhood.frankfanyiming.chatgpt.site",
   "loadingFix": "stream-progress-range-retry",
-  "updatedAt": "2026-09-13T08:25:24.060934+00:00",
+  "updatedAt": "2026-09-13T09:51:57.379717+00:00",
   "frogHome": "Continuous mushroom stairs and crafted furniture, refreshed day/dusk lightmaps",
-  "mobile": "Doraemon mobile derivative assets, mip-safe surfaces, MSAA and adaptive DPR; bounded room views, active-room lighting, real download progress, cancel/retry and cache reuse",
+  "mobile": "30 fps target, bounded adaptive drawing pixels, reduced local shadow passes and mobile visual derivatives; PC original assets retained",
   "conan": "Pavement-to-Mouri stair access, supported Agasa garage and continuous rear apron; fitted CC0 furniture with recorded provenance",
   "nativePacks": {
     "frog": {
@@ -34,10 +34,29 @@
   "openFurniture": "https://github.com/frankfanyiming/frank_worlds/blob/main/docs/conan-open-furniture.md",
   "doraemonMobile": {
     "assetVersion": "20260913-mobile23",
-    "startupBytes": 24920418,
+    "startupBytes": 19372938,
     "firstBedroomBytes": 11646005,
     "bedroomModelBytes": 7937444,
     "desktopAssetVersion": "20260910-12",
-    "physicalPhoneTested": false
-  }
+    "physicalPhoneTested": false,
+    "actorAssetVersion": "20260913-mobile24",
+    "targetFps": 30
+  },
+  "nativeMobilePacks": {
+    "frog": {
+      "sha256": "1fab21f1f03f411ff9c1a2515b83b92b438d76247b1f6f3e5afb11b7b0797601",
+      "rawBytes": 113689300,
+      "downloadBytes": 102592624,
+      "chunks": 19,
+      "path": "worlds/frog/mobile/"
+    },
+    "conan": {
+      "sha256": "bf0d8d904e1ef93a1907e7f4afbd96280fa46186bf9530c6638c373ea43dd880",
+      "rawBytes": 99202944,
+      "downloadBytes": 96843529,
+      "chunks": 16,
+      "path": "worlds/conan/mobile/"
+    }
+  },
+  "physicalPhoneTested": false
 }

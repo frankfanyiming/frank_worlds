@@ -1,12 +1,12 @@
 {
   "startupModelBytes": 28727242,
   "deferredModelBytes": 48063076,
-  "mobileStartupModelBytes": 24920418,
+  "mobileStartupModelBytes": 19372938,
   "mobileBedroomModelBytes": 7937444,
   "mobileRoomMaterialBytes": 5088476,
-  "totalModelBytes": 97542590,
+  "totalModelBytes": 101562278,
   "roomMaterialBytes": 211105656,
-  "totalModelAndMaterialBytes": 313736722,
+  "totalModelAndMaterialBytes": 317756410,
   "models": [
     {
       "name": "world-v11.glb",
@@ -187,6 +187,54 @@
     {
       "name": "mobile-v23/expansion/expansion-groundcover-lite.glb",
       "bytes": 628184
+    },
+    {
+      "name": "mobile-v24/actors/nobita.glb",
+      "bytes": 484092
+    },
+    {
+      "name": "mobile-v24/actors/doraemon-v11.glb",
+      "bytes": 416488
+    },
+    {
+      "name": "mobile-v24/actors/shizuka.glb",
+      "bytes": 410760
+    },
+    {
+      "name": "mobile-v24/actors/gian.glb",
+      "bytes": 438148
+    },
+    {
+      "name": "mobile-v24/actors/suneo.glb",
+      "bytes": 427600
+    },
+    {
+      "name": "mobile-v24/actors/tamako.glb",
+      "bytes": 331216
+    },
+    {
+      "name": "mobile-v24/actors/nobisuke.glb",
+      "bytes": 325848
+    },
+    {
+      "name": "mobile-v24/fauna/cat.glb",
+      "bytes": 245200
+    },
+    {
+      "name": "mobile-v24/fauna/sparrow.glb",
+      "bytes": 125860
+    },
+    {
+      "name": "mobile-v24/fauna/sparrow_ash.glb",
+      "bytes": 124928
+    },
+    {
+      "name": "mobile-v24/vehicles/kei_hatchback-v11.glb",
+      "bytes": 336120
+    },
+    {
+      "name": "mobile-v24/vehicles/kei_truck-v11.glb",
+      "bytes": 353428
     },
     {
       "name": "world.json",
