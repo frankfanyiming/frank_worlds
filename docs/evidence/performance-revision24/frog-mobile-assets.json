@@ -1,0 +1,847 @@
+{
+  "world": "frog",
+  "source": "/Users/frank/Documents/Codex/2026-09-10/kan/work/frank_worlds/worlds/frog/source",
+  "dest": "/Users/frank/Documents/Codex/2026-09-10/kan/work/native-mobile24/frog",
+  "sourceFilesPreserved": true,
+  "geometryAndAnimationPreserved": true,
+  "images": [
+    {
+      "file": "assets/frog-gear_Leaf 2_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/frog-gear_Leaf 2_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/frog-gear_Twisted flax rope_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/frog-gear_Twisted flax rope_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/frog_tripo_model_basecolor.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/frog_tripo_model_metallic-tripo_model_roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/frog_tripo_model_normal.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Home continuous warm grey rock mineral color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-enclosure_Home continuous warm grey rock mineral color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-enclosure_Home continuous warm grey rock mineral normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Home continuous warm grey rock roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 0 mineral color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 0 mineral color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 0 mineral normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 0 roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 1 mineral color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 1 mineral color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 1 mineral normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 1 roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 2 mineral color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 2 mineral color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 2 mineral normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 2 roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 3 mineral color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-enclosure_Home flagstone 3 mineral normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-enclosure_Soft distant garden window color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Blue sleeping quilt color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Blue sleeping quilt color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Blue sleeping quilt normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Chestnut trunk color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Chestnut trunk color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Chestnut trunk normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Cream pottery color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Cream pottery color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Cream pottery normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Cream shelf mushroom color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Cream shelf mushroom color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Cream shelf mushroom normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Deep green leaves color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Deep green leaves color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Deep green leaves normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Earth pottery color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Earth pottery color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Earth pottery normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Honey wood color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Honey wood color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Honey wood normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Moss leaf cloth color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Moss leaf cloth color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Moss leaf cloth normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Oat linen color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Oat linen color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Oat linen normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Rose woven mat color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Rose woven mat color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Rose woven mat normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Soft moss patches color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Soft moss patches color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Soft moss patches normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Stump endgrain color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Stump endgrain color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Stump endgrain normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Warm carved hearth stone color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Warm carved hearth stone normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/home-furnishings_R02 Warm grey mushroom gills color.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/home-furnishings_R02 Warm grey mushroom gills normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Blue grey shelter stone_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Blue grey shelter stone_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Blue woven bedding_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Blue woven bedding_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Chestnut bark_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Chestnut bark_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Cut endgrain warm_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Cut endgrain warm_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Dusty rose woven rug_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Dusty rose woven rug_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Glazed cream clay_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Glazed cream clay_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Honey ash wood_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Honey ash wood_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Leaf 0_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Leaf 0_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Leaf 2_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Leaf 2_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Leaf 3_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Leaf 3_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Linen sack_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Linen sack_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Ochre tent canvas_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Ochre tent canvas_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Soft moss_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Soft moss_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Terracotta_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Terracotta_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/interior_Twisted flax rope_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/interior_Twisted flax rope_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/navigation_Leaf 2_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/navigation_Leaf 2_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/navigation_Moss meadow_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/navigation_Moss meadow_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/navigation_Twisted flax rope_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/navigation_Twisted flax rope_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-exterior_Panda flagstone 0 packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-exterior_Panda flagstone 1 packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-exterior_Panda flagstone 2 packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-exterior_Panda flagstone 3 packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-exterior_Panda golden bamboo packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-exterior_Panda mineral limestone packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-exterior_Panda sage linen packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-exterior_Panda warm oak grain packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda flagstone 0 detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda flagstone 0 packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda flagstone 1 detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda flagstone 1 packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda flagstone 2 detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda flagstone 2 packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda flagstone 3 detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda flagstone 3 packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda glazed celadon detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda glazed celadon detailed normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-home_Panda glazed celadon detailed roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-home_Panda golden bamboo detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda golden bamboo packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda mineral limestone detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda mineral limestone detailed normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-home_Panda mineral limestone detailed roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-home_Panda mineral limestone packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda oak endgrain detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda oak endgrain packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda ochre bed linen detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda ochre bed linen packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda sage linen detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda sage linen detailed normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-home_Panda sage linen detailed roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-home_Panda sage linen packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda soft garden beyond round windows.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-home_Panda unbleached linen detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda unbleached linen packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda warm oak grain detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda warm oak grain detailed normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-home_Panda warm oak grain detailed roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda-home_Panda warm oak grain packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda woven natural straw detailed albedo.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_Panda woven natural straw packed albedo.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda-home_panda-ink-landscape-runtime.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_BaseColor.jpg.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Metallic-tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Roughness.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/panda_tripo_node_e1d93848-311b-45c4-b298-1cee5a0628d3_Normal_Bake.jpg.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/stone-shell_Natural limestone mineral color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Blue grey shelter stone_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Blue grey shelter stone_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Blue woven bedding_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Blue woven bedding_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Chestnut bark_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Chestnut bark_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Cut endgrain warm_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Cut endgrain warm_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Dusty rose woven rug_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Dusty rose woven rug_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Garden earth_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Garden earth_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Glazed cream clay_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Glazed cream clay_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Honey ash wood_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Honey ash wood_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Leaf 0_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Leaf 0_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Leaf 1_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Leaf 1_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Leaf 2_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Leaf 2_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Leaf 3_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Leaf 3_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Linen sack_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Linen sack_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Moss meadow_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Moss meadow_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Ochre tent canvas_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Ochre tent canvas_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_River stones_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_River stones_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Soft moss_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Soft moss_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Soft sand footpath_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Soft sand footpath_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Terracotta_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Terracotta_normal.png.import",
+      "maxDimension": 512
+    },
+    {
+      "file": "assets/woodland_Twisted flax rope_color.png.import",
+      "maxDimension": 768
+    },
+    {
+      "file": "assets/woodland_Twisted flax rope_normal.png.import",
+      "maxDimension": 512
+    }
+  ],
+  "glbs": [
+    {
+      "file": "assets/frog-gear.glb",
+      "before": 1050248,
+      "after": 143856,
+      "images": 4,
+      "sourceSha256": "8991d9f85cc4c184b66ec3f0194ddae73f6e67d697b7f7cc4b540450a90e9069",
+      "sha256": "ec07545cbf355bada7f8dadf9a8c32549ed7c0e9e92b8452ee763b4ac8bfca38"
+    },
+    {
+      "file": "assets/frog.glb",
+      "before": 9472852,
+      "after": 3468320,
+      "images": 3,
+      "sourceSha256": "d02f3bedea63cfd65f3406660b2f950377439fa58c60ce9937ebb649e6564f68",
+      "sha256": "a613cd02d570d66720739301ea74086ac99414db3dfe96ac0800dd274877575e"
+    },
+    {
+      "file": "assets/home-enclosure.glb",
+      "before": 6682540,
+      "after": 3034652,
+      "images": 13,
+      "sourceSha256": "9bce017c78a3ce5b72b2a88b83c2e8cfc831d25ace50f1fc9a4ad823b34fdc3b",
+      "sha256": "d0f008c611b4777c7b1b3e0fb313b1d4a2c718b6b66a8db7827aaf85fe8deab3"
+    },
+    {
+      "file": "assets/home-furnishings.glb",
+      "before": 19489104,
+      "after": 11707148,
+      "images": 28,
+      "sourceSha256": "b495494a28c383d9e60949e8effcfdc3ffce4b88ee7c4827b20d2b5b7b1bddff",
+      "sha256": "4f34134d71ede2c075f93d6b4f099d1d66f360a37361f00dcef70b7050e26be7"
+    },
+    {
+      "file": "assets/interior.glb",
+      "before": 10124148,
+      "after": 2511868,
+      "images": 30,
+      "sourceSha256": "7774a205a1c44f5c2b450c4eb5e55a888fe19e2764f3264a4d044de62dda77b7",
+      "sha256": "58c4bbe404722cdc0c53d38820f84a792608a3fae2a04952819cec9c09302d46"
+    },
+    {
+      "file": "assets/panda-exterior.glb",
+      "before": 1222144,
+      "after": 628332,
+      "images": 8,
+      "sourceSha256": "cdc0215215663a1a157f9146e4a55e101accae5577da51ac28f16ebb35a2c5e2",
+      "sha256": "0275e3d884d531aee83aaf927c258977ab28b9559341feb3e4d84e236221e3b8"
+    },
+    {
+      "file": "assets/panda-home.glb",
+      "before": 15822436,
+      "after": 13936672,
+      "images": 23,
+      "sourceSha256": "a274c18e00d941187a078680a49855a452b842d1c515691b8e20dc5da0ab1c99",
+      "sha256": "a5cf43500cad507c0d6abe8241e9cb583e18289cc8c3cf6b9c870efe2ed04f5d"
+    },
+    {
+      "file": "assets/panda.glb",
+      "before": 2719648,
+      "after": 1739240,
+      "images": 2,
+      "sourceSha256": "b7ee5da7c6010cc45a5e02736bedac637b06def09cc4d31f4e01d3a63cf05c20",
+      "sha256": "4bdd480dd30bf7c99e2ee2dab6157c540261a9db989577e97e73f2e40560d8be"
+    },
+    {
+      "file": "assets/stone-shell.glb",
+      "before": 668344,
+      "after": 523884,
+      "images": 1,
+      "sourceSha256": "db738bca620cae7f626a3ced6495081321c26fc4b1be6b545a2242618b3ed49c",
+      "sha256": "a1737e835433bf58f33ea90d24358616a6fe4787dc3690c8b9885e924a6efa26"
+    },
+    {
+      "file": "assets/woodland.glb",
+      "before": 46577220,
+      "after": 36486848,
+      "images": 40,
+      "sourceSha256": "9567dd7855dd3b7ada97248eb65d7a1f63d53af1f861575af89fa1462ca4d1dd",
+      "sha256": "f05f5b7580cec07ec073ce8cd13ec868e98225d74b859972d40e83c71a74732c"
+    }
+  ]
+}

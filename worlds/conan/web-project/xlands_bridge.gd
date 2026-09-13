@@ -26,6 +26,7 @@ func _ready():
   for pair in [["xlandsInput",_web_input],["xlandsSound",_web_sound],["xlandsMove",_web_move],["xlandsLook",_web_look],["xlandsMenuAction",_web_menu_action],["xlandsUIAction",_web_ui_action]]:
    var cb=JavaScriptBridge.create_callback(pair[1]);callbacks.append(cb);win[pair[0]]=cb
   _update_mobile_layout()
+  if ResourceLoader.exists("res://render_budget.gd"):get_parent().add_child(load("res://render_budget.gd").new())
   var canvas=get_parent().get("hud" if is_frog else "ui")
   if is_instance_valid(canvas):canvas.hide()
   JavaScriptBridge.eval("window.parent.postMessage({type:'xlands-ready'},'*')")

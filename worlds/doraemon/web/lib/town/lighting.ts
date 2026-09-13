@@ -23,7 +23,7 @@ export class TownInteriorLight {
   this.bedroomSun=new THREE.SpotLight('#fff1db',12,5.8,Math.PI*62/180,.45,2);this.bedroomSun.position.set(-10.775,5.18,-.5);this.bedroomSun.target.position.set(-10.6,3.3,-3.8);this.bedroomSun.castShadow=true;this.bedroomSun.shadow.mapSize.set(2048,2048);this.bedroomSun.shadow.bias=-.00008;this.bedroomSun.shadow.normalBias=.003;scene.add(this.bedroomSun,this.bedroomSun.target);
   for(const p of [[-13.05,5.08,-5.75],[-12.69,2.55,-1.5],[-10.9,2.7,-6.6],[-11.95,2.35,18.5],[-11.95,4.9,18.3]]){const light=new THREE.PointLight('#ffdfb2',2.2,4.2,2);light.position.fromArray(p);scene.add(light);this.practicals.push(light);}
   this.bedroomSun.shadow.autoUpdate=false;
-  this.bedroomSun.shadow.mapSize.set(mobile?1024:2048,mobile?1024:2048);
+  this.bedroomSun.shadow.mapSize.set(mobile?512:2048,mobile?512:2048);
   this.setZone(null,0,false);
  }
  setZone(house:'home'|'shizuka'|null,floor:number,inside:boolean){

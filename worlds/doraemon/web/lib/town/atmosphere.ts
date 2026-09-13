@@ -17,6 +17,7 @@ vec4 groundTexture(sampler2D tex,vec2 uv){
 // A single world-space breeze drives the visible foliage and its shadow pass.
 // Weight comes from distance along each modeled blade, keeping the root fixed.
 export class TownAtmosphere {
+ mobile=false;
  time={value:0};strength={value:1};seasonAmount={value:0};materials=new Set<THREE.Material>();windMeshes=0;
  install(mesh:THREE.Mesh){
   const mats=Array.isArray(mesh.material)?mesh.material:[mesh.material];
@@ -69,7 +70,8 @@ export class TownAtmosphere {
     if(groundPattern.test(m.name)){
      // Crossfade hashed offsets in every PBR channel together. Adjacent cells
      // share the same corner samples, eliminating a visible tile/grid boundary.
-     shader.fragmentShader=groundSampling+'\n'+shader.fragmentShader;
+     const sampling=this.mobile?`vec4 groundTexture(sampler2D tex,vec2 uv){return textureGrad(tex,uv,dFdx(uv),dFdy(uv));}`:groundSampling;
+     shader.fragmentShader=sampling+'\n'+shader.fragmentShader;
      for(const [chunk,sampler,uv] of [['map_fragment','map','vMapUv'],['normal_fragment_maps','normalMap','vNormalMapUv'],['roughnessmap_fragment','roughnessMap','vRoughnessMapUv']] as const){
       const source=THREE.ShaderChunk[chunk].replaceAll(`texture2D( ${sampler}, ${uv} )`,`groundTexture( ${sampler}, ${uv} )`);
       shader.fragmentShader=shader.fragmentShader.replace(`#include <${chunk}>`,source);
@@ -84,7 +86,7 @@ export class TownAtmosphere {
      `);
     }
    };
-   m.customProgramCacheKey=()=>`town-v7-${foliage?'breeze':'static'}-${groundPattern.test(m.name)?'stochastic-ground':'foliage'}-${/BotanicalLeaf/.test(m.name)?'season-leaf':'base'}`;m.needsUpdate=true;
+   m.customProgramCacheKey=()=>`town-v24-${this.mobile?'mobile':'desktop'}-${foliage?'breeze':'static'}-${groundPattern.test(m.name)?'stochastic-ground':'foliage'}-${/BotanicalLeaf/.test(m.name)?'season-leaf':'base'}`;m.needsUpdate=true;
   }
   if(foliage){
    const depth=new THREE.MeshDepthMaterial({depthPacking:THREE.RGBADepthPacking,side:THREE.DoubleSide});depth.onBeforeCompile=deform;depth.customProgramCacheKey=()=> 'town-v6-breeze-depth';mesh.customDepthMaterial=depth;

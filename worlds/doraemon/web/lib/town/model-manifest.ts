@@ -7,6 +7,8 @@ export const ASSET_VERSION='20260910-12';
 // Mobile derivatives keep the source scene hierarchy, doors, UVs and coordinates.
 export const MOBILE_ASSET_VERSION='20260913-mobile23';
 export const MOBILE_MODEL_PARTS=new Set(MODEL_PARTS.filter(p=>!p.startsWith('actors/')&&!p.startsWith('fauna/')&&!p.startsWith('vehicles/')&&!p.startsWith('gadgets/')));
-export const SHIPPED_MODEL_PARTS=[...MODEL_PARTS,...[...MOBILE_MODEL_PARTS].map(p=>'mobile-v23/'+p)];
-export function modelFile(part:string,mobile=false){return mobile&&MOBILE_MODEL_PARTS.has(part)?'mobile-v23/'+part:part;}
-export function modelVersion(part:string,mobile=false){return mobile&&MOBILE_MODEL_PARTS.has(part)?MOBILE_ASSET_VERSION:ASSET_VERSION;}
+export const MOBILE_ACTOR_VERSION='20260913-mobile24';
+export const MOBILE_ACTOR_PARTS=new Set(MODEL_PARTS.filter(p=>p.startsWith('actors/')||p.startsWith('fauna/')||p.startsWith('vehicles/')));
+export const SHIPPED_MODEL_PARTS=[...MODEL_PARTS,...[...MOBILE_MODEL_PARTS].map(p=>'mobile-v23/'+p),...[...MOBILE_ACTOR_PARTS].map(p=>'mobile-v24/'+p)];
+export function modelFile(part:string,mobile=false){return mobile&&MOBILE_ACTOR_PARTS.has(part)?'mobile-v24/'+part:mobile&&MOBILE_MODEL_PARTS.has(part)?'mobile-v23/'+part:part;}
+export function modelVersion(part:string,mobile=false){return mobile&&MOBILE_ACTOR_PARTS.has(part)?MOBILE_ACTOR_VERSION:mobile&&MOBILE_MODEL_PARTS.has(part)?MOBILE_ASSET_VERSION:ASSET_VERSION;}
