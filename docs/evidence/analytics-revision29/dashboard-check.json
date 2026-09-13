@@ -1,0 +1,12 @@
+{
+  "observedAt": "2026-09-13T20:15:50.665479+00:00",
+  "dashboard": "https://cloud.umami.is/analytics/us/websites/6adb4308-a6f6-484a-9bf2-efaffb380a25",
+  "observedVia": "Umami management UI after navigation to published homepage; no game DOM inspection or screenshots",
+  "visitors": 1,
+  "visits": 1,
+  "views": 1,
+  "page": "/frank_worlds/",
+  "visitSource": "installation-check",
+  "scope": "Live homepage collection confirmed. World load events verified by source tests, not by claiming a new full gameplay run.",
+  "privateDashboard": true
+}

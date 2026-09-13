@@ -2,7 +2,8 @@
 
 2026-09-14：使用用户本人注册的 Umami Cloud 账号。后台只向登录的账号开放，没有启用公开分享链接。
 
-- [统计后台](https://cloud.umami.is/analytics/us/websites/6adb4308-a6f6-484a-9bf2-efaffb380a25)
+- [统计总览](https://cloud.umami.is/analytics/us/websites/6adb4308-a6f6-484a-9bf2-efaffb380a25)
+- [世界加载事件](https://cloud.umami.is/analytics/us/websites/6adb4308-a6f6-484a-9bf2-efaffb380a25/events)
 - 统计站点：`frankfanyiming.github.io`；页面路径限定为本项目首页和三个世界。
 - 网站 ID 和脚本地址是公开配置，不是 API 密钥。账号、密码、会话凭据均不写入仓库。
 

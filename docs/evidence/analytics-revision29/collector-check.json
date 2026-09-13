@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-09-13T20:11:28.212529+00:00",
+  "status": 200,
+  "event": "integration_check",
+  "synthetic": true,
+  "pageview": false,
+  "responseFields": [
+    "beep"
+  ],
+  "accepted": false
+}

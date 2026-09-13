@@ -1,0 +1,18 @@
+{
+  "sourceCommit": "2aad24e5ea7ab0b2cad7b56a1b90fa3f6f1dbf47",
+  "corePaths": [
+    "analytics-config.json",
+    "analytics.js",
+    "assets/index-8Yas8puv.css",
+    "assets/index-CrGH2bES.js",
+    "covers/conan.webp",
+    "covers/doraemon.webp",
+    "covers/frog.webp",
+    "index.html"
+  ],
+  "coreAssetBytes": 906077,
+  "collectorScriptBytes": 5662,
+  "thirdPartyScriptSizeExcluded": true,
+  "modelsAndPacksUnchanged": true,
+  "browserGameTested": false
+}
