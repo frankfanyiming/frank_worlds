@@ -28,4 +28,8 @@
 - TypeScript、Sites 正式构建、Pages 构建通过。首页入口仍不静态加载 Three.js 或世界引擎，资源审计见 `bundle-audit.json`。
 - PNG 是 Blender 模型预览，不是网页截图。本轮没有浏览器视觉测试或实体手机帧率测试。
 
-发布完成后，在此追加公网校验结果。复现模型工具使用 `tools/mobile-assets/package-lock.json` 固定版本，可通过 `MOBILE_ASSET_TOOLS` 指向安装目录。
+运行源码提交 `1787441`，网页提交 `4ecc9b91fcce24bfb3677722152885bfcc4ea165`；两者已推送到原 GitHub 仓库。[第 27 版部署工作流](https://github.com/frankfanyiming/frank_worlds/actions/runs/34759837221) 已成功。
+
+[公开首页](https://frankfanyiming.github.io/frank_worlds/?v=27#) 已更新。`public-audit.json` 从正式域名读取 25 份首页、模型与资料文件，HTTP 状态、长度、SHA-256 均与发布包一致，并核验另外 4 份保留的 PC/手机原生世界清单。核验范围不包含实体手机性能。
+
+复现模型工具使用 `tools/mobile-assets/package-lock.json` 固定版本，可通过 `MOBILE_ASSET_TOOLS` 指向安装目录。

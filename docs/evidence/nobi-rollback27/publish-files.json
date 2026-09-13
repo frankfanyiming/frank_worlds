@@ -1,0 +1,130 @@
+{
+  "sourceCommit": "1787441fbd449e6f3b04d8a9527c02b3df750b31",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 6649,
+      "sha256": "68f623ee4805e571afa1f668656f0387606c4113afd30ac5f9c714cc8faf34c8"
+    },
+    {
+      "path": "asset-sizes.json",
+      "bytes": 5181,
+      "sha256": "d5a02f67933036519630bc21013a21729c552541514cc5a9e45abd81647778b9"
+    },
+    {
+      "path": "assets/SceneCanvas-DrBBl7Q7.js",
+      "bytes": 6085,
+      "sha256": "05566e5499caf6e3940a1588fa6e7c325967221553460efc5d563aef09b21448"
+    },
+    {
+      "path": "assets/sound-BH0CvXPD.js",
+      "bytes": 31741,
+      "sha256": "b93b22347a5fd07887205e510e2971f925e0f3c10748c58781effb4556b55df5"
+    },
+    {
+      "path": "assets/DoraemonWorld-Ct5beMZP.js",
+      "bytes": 210627,
+      "sha256": "a2f91f08b40d9edbd44d573c845fa53c349fbb4826edb0cc43eb0147d09d62d8"
+    },
+    {
+      "path": "assets/arrow-up-CTo6HTry.js",
+      "bytes": 263,
+      "sha256": "2623cb2fd4abd4d4e8d5c0cf9b89fd1bacba749dcb581c3593c5adb2a4eea409"
+    },
+    {
+      "path": "assets/index-BLhFQO2q.css",
+      "bytes": 248029,
+      "sha256": "94eb007876e6048552f3aa05b276a6d5810d0a45f2ded24350c9f1fac26f631f"
+    },
+    {
+      "path": "assets/engine-ChJVQU7c.js",
+      "bytes": 354781,
+      "sha256": "16a15685349a5c8dd2100b02f672f74ad51caac0877ce77c607017819d3f1df0"
+    },
+    {
+      "path": "assets/index-DqNx17ew.js",
+      "bytes": 255987,
+      "sha256": "6cd602afd2683b3bc4497188b872948a8173f9bfb5bf8455824a658f28253c5b"
+    },
+    {
+      "path": "assets/GLTFLoader-DTFPP_xt.js",
+      "bytes": 44336,
+      "sha256": "bf7a6cc601d8f22177a21ea49f89c9010c76a7198e9b91d219ac30eb159c089c"
+    },
+    {
+      "path": "assets/Studio-Dbr4Dzwm.js",
+      "bytes": 23009,
+      "sha256": "0db35c37eb508fde230c029d6bc551c05ac60110f574cfc5198292794b3bb89c"
+    },
+    {
+      "path": "assets/three.module-BTFWRktK.js",
+      "bytes": 696461,
+      "sha256": "76673341f7cd95e8bb94793927f7c59f728c40e124386fa1579512a6c9ffc4af"
+    },
+    {
+      "path": "assets/OrbitControls-Dy6vlbzM.js",
+      "bytes": 19064,
+      "sha256": "e0a3fdc5899a19f3466a1f00b6a040d75a48ab9327adbfdcca4e8d45347055d4"
+    },
+    {
+      "path": "models/nobi-home-v27.glb",
+      "bytes": 22097892,
+      "sha256": "01fce55c1069d9790a8ea746c68bca8db6b657737707d361c69e77b64d485e6b"
+    },
+    {
+      "path": "models/mobile-v27/nobi-home-v27.glb",
+      "bytes": 3562664,
+      "sha256": "af6fb4ed5e1b7451186c9c865d018b81084b569b2bcdcbecaeb15af22e72614a"
+    },
+    {
+      "path": "models/world-v27.json",
+      "bytes": 863214,
+      "sha256": "8ce200e7bf4c9d49366f24faf1c5e08611b0c073afb743c0aa7fa9c52a3baa0d"
+    },
+    {
+      "path": "release.json",
+      "bytes": 3737,
+      "sha256": "1a782596f0c1e17252c942eeccb0f011815da234bb92dab84e7ac63a4bba1766"
+    },
+    {
+      "path": "covers/doraemon.webp",
+      "bytes": 119838,
+      "sha256": "2db8e1914dc19790c90e2bf26f4d9db440f1cc50a0574f9368515f91f2d4ddea"
+    },
+    {
+      "path": "covers/frog.webp",
+      "bytes": 136332,
+      "sha256": "3cf058a6b3d4db94c1909ba37c8dcad77136f7cc0154f8196b066a36baae9e60"
+    },
+    {
+      "path": "covers/conan.webp",
+      "bytes": 128700,
+      "sha256": "75a84b2b7caa5bd560873e0235a29d666ad0fdeffdb9abba46dd6de655b9c7ef"
+    },
+    {
+      "path": "resources/making-of.html",
+      "bytes": 20829,
+      "sha256": "98566220ce0d9a9cd91ac63488363bb0573aa30b1e3021c68b2383c35a641178"
+    },
+    {
+      "path": "resources/xlands-skills.zip",
+      "bytes": 9312,
+      "sha256": "c609230dd30540448784e31511863eb5ffe021822eaeff885b5a0c40f9a90834"
+    },
+    {
+      "path": "models/world.json",
+      "bytes": 848678,
+      "sha256": "8bf217581772fab23d654290107efa1eb97e9a1fa4027e817b7b0cc0912878d3"
+    },
+    {
+      "path": "models/neighborhood-v21.glb",
+      "bytes": 1654204,
+      "sha256": "b72a3825607276f99a9d7ad29889186ab06b25b9f8dda61de9571ca7dd72017f"
+    },
+    {
+      "path": "models/mobile-v23/neighborhood-v21.glb",
+      "bytes": 1860600,
+      "sha256": "7e3514f60502d1fb8751b31311fe61f0948c2218c999ec436af7c0098c765580"
+    }
+  ]
+}

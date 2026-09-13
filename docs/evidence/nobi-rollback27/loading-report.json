@@ -1,0 +1,20 @@
+{
+  "startupModelBytes": 50839670,
+  "deferredModelBytes": 48063076,
+  "deferredMaterialBytes": 196633465,
+  "previousBlockingBytes": 295536211,
+  "blockingByteReduction": 0.8279748196406294,
+  "materialFiles": 28,
+  "cacheColdWarmOffline": true,
+  "cacheQuotaFallback": true,
+  "failedResponsesNotCached": true,
+  "abortSupported": true,
+  "startupDoesNotRequestBedroom": true,
+  "backgroundDoesNotBlockTown": true,
+  "noPartialRoom": true,
+  "cancelAndNewDestinationWin": true,
+  "stairsWaitSafely": true,
+  "repeatedEntryReusesScene": true,
+  "roomFailureAndRetry": true,
+  "originalBedroomAssetVersion": "20260910-12"
+}
