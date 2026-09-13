@@ -1,0 +1,2149 @@
+{
+  "url": "http://127.0.0.1:8795/frank_worlds/",
+  "environment": "Desktop WebKit, 390×844, DPR 3, touch emulation",
+  "cpuThrottle": 1,
+  "checks": [
+    {
+      "name": "street",
+      "timing": {
+        "frames": 361,
+        "medianMs": 17,
+        "p95Ms": 18,
+        "over50ms": 0
+      },
+      "state": {
+        "ready": true,
+        "progress": 100,
+        "bedroom": {
+          "status": "idle",
+          "progress": 0,
+          "requested": false,
+          "error": null
+        },
+        "assetCache": {
+          "hits": 0,
+          "cachedBytes": 0,
+          "downloads": 31,
+          "downloadedBytes": 24920418,
+          "writeFailures": 0
+        },
+        "error": null,
+        "house": null,
+        "quality": false,
+        "assetRevision": 12,
+        "adventure": {
+          "inventory": [],
+          "flowers": 0,
+          "friendship": 0,
+          "flying": false,
+          "altitude": 0,
+          "portal": false,
+          "portalTarget": "lot",
+          "drawer": false,
+          "activity": "none",
+          "score": 0,
+          "round": 0,
+          "remaining": 0,
+          "cue": "",
+          "message": "",
+          "best": 0,
+          "travel": false
+        },
+        "weather": {
+          "season": "summer",
+          "hour": 15.680650000000124,
+          "day": 1,
+          "auto": true,
+          "time": "15:40",
+          "night": false
+        },
+        "audio": {
+          "enabled": false,
+          "music": 0.28,
+          "ambience": 0.45,
+          "track": "原创 · 夏日口袋散步",
+          "error": ""
+        },
+        "playAssets": [
+          "bamboo",
+          "door",
+          "drawer",
+          "time-machine",
+          "baseball",
+          "bat"
+        ],
+        "environmentLife": {
+          "residents": [
+            {
+              "id": "doraemon",
+              "x": -12.212,
+              "y": -3.732,
+              "moving": true,
+              "distanceWalked": 1.71
+            },
+            {
+              "id": "shizuka",
+              "x": -11.801,
+              "y": -24,
+              "moving": true,
+              "distanceWalked": 2.8
+            },
+            {
+              "id": "gian",
+              "x": 18.875,
+              "y": 3.875,
+              "moving": true,
+              "distanceWalked": 2.65
+            },
+            {
+              "id": "suneo",
+              "x": 14.419,
+              "y": -0.419,
+              "moving": true,
+              "distanceWalked": 2.01
+            },
+            {
+              "id": "tamako",
+              "x": -12.188,
+              "y": 6.948,
+              "moving": false,
+              "distanceWalked": 0.61
+            },
+            {
+              "id": "nobisuke",
+              "x": -16.443,
+              "y": 2.591,
+              "moving": false,
+              "distanceWalked": 0.39
+            }
+          ],
+          "animals": [
+            {
+              "id": "fauna_cat_0_0",
+              "action": "Walk",
+              "x": -18.18,
+              "y": -1.53
+            },
+            {
+              "id": "fauna_bird_0_0",
+              "action": "Idle",
+              "x": 20.65,
+              "y": 5.59
+            },
+            {
+              "id": "fauna_bird_0_1",
+              "action": "Idle",
+              "x": 19.58,
+              "y": -1.62
+            },
+            {
+              "id": "fauna_bird_0_2",
+              "action": "Idle",
+              "x": -14.4,
+              "y": -7.11
+            },
+            {
+              "id": "fauna_bird_1_0",
+              "action": "Idle",
+              "x": 20.28,
+              "y": 4.77
+            },
+            {
+              "id": "fauna_bird_1_1",
+              "action": "Fly",
+              "x": -16.85,
+              "y": -9.54
+            },
+            {
+              "id": "fauna_bird_1_2",
+              "action": "Idle",
+              "x": -7.8,
+              "y": 32
+            }
+          ]
+        },
+        "traffic": {
+          "leftHandTraffic": true,
+          "phase": {
+            "EW": "green",
+            "NS": "red"
+          },
+          "signalHeads": 4,
+          "signalMaterials": 6,
+          "cars": [
+            {
+              "name": "moving_car",
+              "parked": false,
+              "visible": true,
+              "position": {
+                "x": -23.429931349999887,
+                "y": -6.86,
+                "height": 0.133
+              },
+              "dimensions": {
+                "length": 3.328430652618408,
+                "width": 1.759982705116272
+              },
+              "speed": 2.3,
+              "distanceTravelled": 12.570068649999975,
+              "waiting": "pedestrian",
+              "wheelPivots": 4
+            },
+            {
+              "name": "parked_car",
+              "parked": true,
+              "visible": true,
+              "position": {
+                "x": -36,
+                "y": -23.8,
+                "height": 0.054
+              },
+              "dimensions": {
+                "length": 3.328430652618408,
+                "width": 1.759982705116272
+              },
+              "speed": 0,
+              "distanceTravelled": 0,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "moving_truck",
+              "parked": false,
+              "visible": true,
+              "position": {
+                "x": 24.24885475000011,
+                "y": -9.14,
+                "height": 0.133
+              },
+              "dimensions": {
+                "length": 3.538300037384033,
+                "width": 1.76002037525177
+              },
+              "speed": 1.85,
+              "distanceTravelled": 10.751145250000015,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "parked_truck",
+              "parked": true,
+              "visible": true,
+              "position": {
+                "x": -32,
+                "y": -3.65,
+                "height": 0.054
+              },
+              "dimensions": {
+                "length": 3.538300037384033,
+                "width": 1.76002037525177
+              },
+              "speed": 0,
+              "distanceTravelled": 0,
+              "waiting": "",
+              "wheelPivots": 4
+            }
+          ]
+        },
+        "sky": {
+          "atmosphericScattering": true,
+          "cloudLayers": 2,
+          "cloudTime": 7.626000000000011
+        },
+        "river": {
+          "surfaces": 1,
+          "flowTime": 7.626000000000011
+        },
+        "interiorLight": {
+          "windowSources": 7,
+          "practicals": 5,
+          "activeWindows": 0,
+          "activePracticals": 0,
+          "bedroomShadowActive": false,
+          "daylightIntensity": 1.9
+        },
+        "detailAssets": {
+          "neighborhood": true,
+          "shizuka": true,
+          "garden": true,
+          "stairs": true,
+          "closet": false,
+          "hill": true
+        },
+        "renderHealth": {
+          "rangeCulledMeshes": 0,
+          "visibleTriangles": 1046171,
+          "heaviestMeshes": [
+            {
+              "name": "nobita_skin",
+              "triangles": 95000
+            },
+            {
+              "name": "doraemon_UV_topology",
+              "triangles": 67921
+            },
+            {
+              "name": "tamako_skin",
+              "triangles": 65000
+            },
+            {
+              "name": "nobisuke_skin",
+              "triangles": 65000
+            },
+            {
+              "name": "roof_town_runtime_cell_-1,-2",
+              "triangles": 39123
+            },
+            {
+              "name": "球体003",
+              "triangles": 36022
+            },
+            {
+              "name": "doraemon_UV_topology_1",
+              "triangles": 27078
+            },
+            {
+              "name": "camellia_fluted_trunk_V7001_1",
+              "triangles": 26622
+            },
+            {
+              "name": "camellia_fluted_trunk_V7001_1",
+              "triangles": 26622
+            },
+            {
+              "name": "v9_garden_3",
+              "triangles": 22572
+            },
+            {
+              "name": "v9_garden_13",
+              "triangles": 20735
+            },
+            {
+              "name": "camellia_fluted_trunk001_V7001_1",
+              "triangles": 16861
+            }
+          ],
+          "refractive": [],
+          "profile": "mobile",
+          "pixelRatio": 1.35,
+          "antialias": true,
+          "textures": 144,
+          "geometries": 582,
+          "estimatedMaterialTextureMiB": 234,
+          "bedroomVisible": false,
+          "averageCalls": 487,
+          "averageTriangles": 1216953,
+          "averageSubmissionMs": 1.54,
+          "peakTriangles": 2577344,
+          "estimatedFps": 60,
+          "shaderErrors": [],
+          "calls": 409,
+          "triangles": 1051559
+        },
+        "wind": {
+          "meshes": 58,
+          "time": 7.626000000000011
+        },
+        "surfaceDetailLoaded": true,
+        "facadeDetailLoaded": false,
+        "characterActions": [
+          {
+            "id": "nobita",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "doraemon",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Run",
+              "Walk"
+            ]
+          },
+          {
+            "id": "shizuka",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "gian",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "suneo",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "tamako",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "nobisuke",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          }
+        ],
+        "place": "home",
+        "mode": "orbit",
+        "floor": 0,
+        "position": {
+          "x": -9.6,
+          "y": -6.3,
+          "height": 0.133
+        },
+        "places": [
+          {
+            "id": "home",
+            "title": "大雄的家"
+          },
+          {
+            "id": "bedroom",
+            "title": "大雄的房间"
+          },
+          {
+            "id": "lot",
+            "title": "那片空地"
+          },
+          {
+            "id": "shizuka",
+            "title": "静香家"
+          },
+          {
+            "id": "suneo",
+            "title": "小夫家"
+          },
+          {
+            "id": "gian",
+            "title": "胖虎家"
+          },
+          {
+            "id": "school",
+            "title": "小学"
+          },
+          {
+            "id": "station",
+            "title": "月见台站"
+          },
+          {
+            "id": "river",
+            "title": "学校后的河岸"
+          },
+          {
+            "id": "bridge",
+            "title": "通往后山的桥"
+          },
+          {
+            "id": "hill",
+            "title": "后山"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bedroom",
+      "timing": {
+        "frames": 361,
+        "medianMs": 17,
+        "p95Ms": 18,
+        "over50ms": 0
+      },
+      "state": {
+        "ready": true,
+        "progress": 100,
+        "bedroom": {
+          "status": "ready",
+          "progress": 100,
+          "requested": false,
+          "error": null,
+          "downloadedBytes": 7937444
+        },
+        "assetCache": {
+          "hits": 0,
+          "cachedBytes": 0,
+          "downloads": 55,
+          "downloadedBytes": 36566423,
+          "writeFailures": 0
+        },
+        "error": null,
+        "house": "home",
+        "quality": false,
+        "assetRevision": 12,
+        "adventure": {
+          "inventory": [],
+          "flowers": 0,
+          "friendship": 0,
+          "flying": false,
+          "altitude": 0,
+          "portal": false,
+          "portalTarget": "lot",
+          "drawer": false,
+          "activity": "none",
+          "score": 0,
+          "round": 0,
+          "remaining": 0,
+          "cue": "",
+          "message": "",
+          "best": 0,
+          "travel": false
+        },
+        "weather": {
+          "season": "summer",
+          "hour": 15.5,
+          "day": 1,
+          "auto": false,
+          "time": "15:30",
+          "night": false
+        },
+        "audio": {
+          "enabled": false,
+          "music": 0.28,
+          "ambience": 0.45,
+          "track": "原创 · 夏日口袋散步",
+          "error": ""
+        },
+        "playAssets": [
+          "bamboo",
+          "door",
+          "drawer",
+          "time-machine",
+          "baseball",
+          "bat"
+        ],
+        "environmentLife": {
+          "residents": [
+            {
+              "id": "doraemon",
+              "x": -12.823,
+              "y": -3.665,
+              "moving": true,
+              "distanceWalked": 2.57
+            },
+            {
+              "id": "shizuka",
+              "x": -12.944,
+              "y": -24,
+              "moving": false,
+              "distanceWalked": 3.94
+            },
+            {
+              "id": "gian",
+              "x": 19.698,
+              "y": 2.886,
+              "moving": true,
+              "distanceWalked": 4.07
+            },
+            {
+              "id": "suneo",
+              "x": 14.959,
+              "y": -0.959,
+              "moving": false,
+              "distanceWalked": 2.77
+            },
+            {
+              "id": "tamako",
+              "x": -12.685,
+              "y": 7.041,
+              "moving": true,
+              "distanceWalked": 1.12
+            },
+            {
+              "id": "nobisuke",
+              "x": -16.443,
+              "y": 2.591,
+              "moving": false,
+              "distanceWalked": 0.39
+            }
+          ],
+          "animals": [
+            {
+              "id": "fauna_cat_0_0",
+              "action": "Walk",
+              "x": -18.15,
+              "y": 0.72
+            },
+            {
+              "id": "fauna_bird_0_0",
+              "action": "Fly",
+              "x": 18.25,
+              "y": 3.12
+            },
+            {
+              "id": "fauna_bird_0_1",
+              "action": "Idle",
+              "x": 19.58,
+              "y": -1.62
+            },
+            {
+              "id": "fauna_bird_0_2",
+              "action": "Idle",
+              "x": -14.4,
+              "y": -7.11
+            },
+            {
+              "id": "fauna_bird_1_0",
+              "action": "Idle",
+              "x": 20.5,
+              "y": 5.02
+            },
+            {
+              "id": "fauna_bird_1_1",
+              "action": "Idle",
+              "x": -16.88,
+              "y": -10.4
+            },
+            {
+              "id": "fauna_bird_1_2",
+              "action": "Idle",
+              "x": -7.85,
+              "y": 31.78
+            }
+          ]
+        },
+        "traffic": {
+          "leftHandTraffic": true,
+          "phase": {
+            "EW": "green",
+            "NS": "red"
+          },
+          "signalHeads": 4,
+          "signalMaterials": 6,
+          "cars": [
+            {
+              "name": "moving_car",
+              "parked": false,
+              "visible": true,
+              "position": {
+                "x": -6.140831349999899,
+                "y": -6.86,
+                "height": 0.133
+              },
+              "dimensions": {
+                "length": 3.328430652618408,
+                "width": 1.759982705116272
+              },
+              "speed": 2.3,
+              "distanceTravelled": 29.85916865000011,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "parked_car",
+              "parked": true,
+              "visible": true,
+              "position": {
+                "x": -36,
+                "y": -23.8,
+                "height": 0.054
+              },
+              "dimensions": {
+                "length": 3.328430652618408,
+                "width": 1.759982705116272
+              },
+              "speed": 0,
+              "distanceTravelled": 0,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "moving_truck",
+              "parked": false,
+              "visible": true,
+              "position": {
+                "x": 10.342404750000247,
+                "y": -9.14,
+                "height": 0.133
+              },
+              "dimensions": {
+                "length": 3.538300037384033,
+                "width": 1.76002037525177
+              },
+              "speed": 1.85,
+              "distanceTravelled": 24.65759524999986,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "parked_truck",
+              "parked": true,
+              "visible": true,
+              "position": {
+                "x": -32,
+                "y": -3.65,
+                "height": 0.054
+              },
+              "dimensions": {
+                "length": 3.538300037384033,
+                "width": 1.76002037525177
+              },
+              "speed": 0,
+              "distanceTravelled": 0,
+              "waiting": "",
+              "wheelPivots": 4
+            }
+          ]
+        },
+        "sky": {
+          "atmosphericScattering": true,
+          "cloudLayers": 2,
+          "cloudTime": 15.292999999999958
+        },
+        "river": {
+          "surfaces": 1,
+          "flowTime": 15.292999999999958
+        },
+        "interiorLight": {
+          "windowSources": 7,
+          "practicals": 5,
+          "activeWindows": 2,
+          "activePracticals": 1,
+          "bedroomShadowActive": true,
+          "daylightIntensity": 1.9
+        },
+        "detailAssets": {
+          "neighborhood": true,
+          "shizuka": true,
+          "garden": true,
+          "stairs": true,
+          "closet": true,
+          "hill": true
+        },
+        "renderHealth": {
+          "rangeCulledMeshes": 796,
+          "visibleTriangles": 596218,
+          "heaviestMeshes": [
+            {
+              "name": "curved_cast_aluminium_leg005_5",
+              "triangles": 52001
+            },
+            {
+              "name": "V9_extruded_lower_sliding_rail030_1",
+              "triangles": 32102
+            },
+            {
+              "name": "v9_garden_3",
+              "triangles": 22572
+            },
+            {
+              "name": "v9_garden_13",
+              "triangles": 20735
+            },
+            {
+              "name": "camellia_fluted_trunk001_V7001_1",
+              "triangles": 16861
+            },
+            {
+              "name": "camellia_fluted_trunk001_V7001_1",
+              "triangles": 16861
+            },
+            {
+              "name": "surface_detail_runtime",
+              "triangles": 15792
+            },
+            {
+              "name": "surface_detail_runtime_1",
+              "triangles": 15672
+            },
+            {
+              "name": "file_box_label001",
+              "triangles": 12332
+            },
+            {
+              "name": "open_side_flap001_4",
+              "triangles": 11508
+            },
+            {
+              "name": "street_detail_runtime_cell_-1,-1",
+              "triangles": 10320
+            },
+            {
+              "name": "street_detail_runtime_cell_-1,0",
+              "triangles": 10304
+            }
+          ],
+          "refractive": [],
+          "profile": "mobile",
+          "pixelRatio": 1.35,
+          "antialias": true,
+          "textures": 232,
+          "geometries": 780,
+          "estimatedMaterialTextureMiB": 365,
+          "bedroomVisible": true,
+          "averageCalls": 423,
+          "averageTriangles": 844110,
+          "averageSubmissionMs": 1.58,
+          "peakTriangles": 2597900,
+          "estimatedFps": 60,
+          "shaderErrors": [],
+          "calls": 313,
+          "triangles": 596626
+        },
+        "wind": {
+          "meshes": 60,
+          "time": 15.292999999999958
+        },
+        "surfaceDetailLoaded": true,
+        "facadeDetailLoaded": false,
+        "characterActions": [
+          {
+            "id": "nobita",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "doraemon",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Run",
+              "Walk"
+            ]
+          },
+          {
+            "id": "shizuka",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "gian",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "suneo",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "tamako",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "nobisuke",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          }
+        ],
+        "place": "bedroom",
+        "mode": "first",
+        "floor": 1,
+        "position": {
+          "x": -10.775,
+          "y": 3.3,
+          "height": 3.15
+        },
+        "places": [
+          {
+            "id": "home",
+            "title": "大雄的家"
+          },
+          {
+            "id": "bedroom",
+            "title": "大雄的房间"
+          },
+          {
+            "id": "lot",
+            "title": "那片空地"
+          },
+          {
+            "id": "shizuka",
+            "title": "静香家"
+          },
+          {
+            "id": "suneo",
+            "title": "小夫家"
+          },
+          {
+            "id": "gian",
+            "title": "胖虎家"
+          },
+          {
+            "id": "school",
+            "title": "小学"
+          },
+          {
+            "id": "station",
+            "title": "月见台站"
+          },
+          {
+            "id": "river",
+            "title": "学校后的河岸"
+          },
+          {
+            "id": "bridge",
+            "title": "通往后山的桥"
+          },
+          {
+            "id": "hill",
+            "title": "后山"
+          }
+        ]
+      }
+    },
+    {
+      "name": "bedroom-landscape",
+      "timing": {
+        "frames": 361,
+        "medianMs": 17,
+        "p95Ms": 18,
+        "over50ms": 0
+      },
+      "state": {
+        "ready": true,
+        "progress": 100,
+        "bedroom": {
+          "status": "ready",
+          "progress": 100,
+          "requested": false,
+          "error": null,
+          "downloadedBytes": 7937444
+        },
+        "assetCache": {
+          "hits": 0,
+          "cachedBytes": 0,
+          "downloads": 55,
+          "downloadedBytes": 36566423,
+          "writeFailures": 0
+        },
+        "error": null,
+        "house": "home",
+        "quality": false,
+        "assetRevision": 12,
+        "adventure": {
+          "inventory": [],
+          "flowers": 0,
+          "friendship": 0,
+          "flying": false,
+          "altitude": 0,
+          "portal": false,
+          "portalTarget": "lot",
+          "drawer": false,
+          "activity": "none",
+          "score": 0,
+          "round": 0,
+          "remaining": 0,
+          "cue": "",
+          "message": "",
+          "best": 0,
+          "travel": false
+        },
+        "weather": {
+          "season": "summer",
+          "hour": 15.5,
+          "day": 1,
+          "auto": false,
+          "time": "15:30",
+          "night": false
+        },
+        "audio": {
+          "enabled": false,
+          "music": 0.28,
+          "ambience": 0.45,
+          "track": "原创 · 夏日口袋散步",
+          "error": ""
+        },
+        "playAssets": [
+          "bamboo",
+          "door",
+          "drawer",
+          "time-machine",
+          "baseball",
+          "bat"
+        ],
+        "environmentLife": {
+          "residents": [
+            {
+              "id": "doraemon",
+              "x": -11.052,
+              "y": -3.116,
+              "moving": false,
+              "distanceWalked": 4.43
+            },
+            {
+              "id": "shizuka",
+              "x": -15.431,
+              "y": -24,
+              "moving": true,
+              "distanceWalked": 6.43
+            },
+            {
+              "id": "gian",
+              "x": 20.967,
+              "y": 1.048,
+              "moving": false,
+              "distanceWalked": 6.3
+            },
+            {
+              "id": "suneo",
+              "x": 17.951,
+              "y": -1.983,
+              "moving": false,
+              "distanceWalked": 5.93
+            },
+            {
+              "id": "tamako",
+              "x": -12.947,
+              "y": 7.09,
+              "moving": false,
+              "distanceWalked": 1.39
+            },
+            {
+              "id": "nobisuke",
+              "x": -14.543,
+              "y": 2.347,
+              "moving": true,
+              "distanceWalked": 2.38
+            }
+          ],
+          "animals": [
+            {
+              "id": "fauna_cat_0_0",
+              "action": "Idle",
+              "x": -18.14,
+              "y": 1.23
+            },
+            {
+              "id": "fauna_bird_0_0",
+              "action": "Fly",
+              "x": 17.11,
+              "y": 5.64
+            },
+            {
+              "id": "fauna_bird_0_1",
+              "action": "Idle",
+              "x": 18.23,
+              "y": 0.43
+            },
+            {
+              "id": "fauna_bird_0_2",
+              "action": "Idle",
+              "x": -14.29,
+              "y": -7.35
+            },
+            {
+              "id": "fauna_bird_1_0",
+              "action": "Idle",
+              "x": 20.5,
+              "y": 5.02
+            },
+            {
+              "id": "fauna_bird_1_1",
+              "action": "Idle",
+              "x": -19.17,
+              "y": -9.09
+            },
+            {
+              "id": "fauna_bird_1_2",
+              "action": "Idle",
+              "x": -7.85,
+              "y": 31.78
+            }
+          ]
+        },
+        "traffic": {
+          "leftHandTraffic": true,
+          "phase": {
+            "EW": "red",
+            "NS": "green"
+          },
+          "signalHeads": 4,
+          "signalMaterials": 6,
+          "cars": [
+            {
+              "name": "moving_car",
+              "parked": false,
+              "visible": true,
+              "position": {
+                "x": 10.651468650000105,
+                "y": -6.86,
+                "height": 0.133
+              },
+              "dimensions": {
+                "length": 3.328430652618408,
+                "width": 1.759982705116272
+              },
+              "speed": 2.3,
+              "distanceTravelled": 46.65146864999992,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "parked_car",
+              "parked": true,
+              "visible": true,
+              "position": {
+                "x": -36,
+                "y": -23.8,
+                "height": 0.054
+              },
+              "dimensions": {
+                "length": 3.328430652618408,
+                "width": 1.759982705116272
+              },
+              "speed": 0,
+              "distanceTravelled": 0,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "moving_truck",
+              "parked": false,
+              "visible": true,
+              "position": {
+                "x": -3.1644452499997744,
+                "y": -9.14,
+                "height": 0.133
+              },
+              "dimensions": {
+                "length": 3.538300037384033,
+                "width": 1.76002037525177
+              },
+              "speed": 1.85,
+              "distanceTravelled": 38.16444524999967,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "parked_truck",
+              "parked": true,
+              "visible": true,
+              "position": {
+                "x": -32,
+                "y": -3.65,
+                "height": 0.054
+              },
+              "dimensions": {
+                "length": 3.538300037384033,
+                "width": 1.76002037525177
+              },
+              "speed": 0,
+              "distanceTravelled": 0,
+              "waiting": "",
+              "wheelPivots": 4
+            }
+          ]
+        },
+        "sky": {
+          "atmosphericScattering": true,
+          "cloudLayers": 2,
+          "cloudTime": 22.593999999999667
+        },
+        "river": {
+          "surfaces": 1,
+          "flowTime": 22.593999999999667
+        },
+        "interiorLight": {
+          "windowSources": 7,
+          "practicals": 5,
+          "activeWindows": 2,
+          "activePracticals": 1,
+          "bedroomShadowActive": true,
+          "daylightIntensity": 1.9
+        },
+        "detailAssets": {
+          "neighborhood": true,
+          "shizuka": true,
+          "garden": true,
+          "stairs": true,
+          "closet": true,
+          "hill": true
+        },
+        "renderHealth": {
+          "rangeCulledMeshes": 776,
+          "visibleTriangles": 1146846,
+          "heaviestMeshes": [
+            {
+              "name": "doraemon_UV_topology",
+              "triangles": 67921
+            },
+            {
+              "name": "nobisuke_skin",
+              "triangles": 65000
+            },
+            {
+              "name": "curved_cast_aluminium_leg005_5",
+              "triangles": 52001
+            },
+            {
+              "name": "V9_extruded_lower_sliding_rail027_1",
+              "triangles": 35664
+            },
+            {
+              "name": "V9_extruded_lower_sliding_rail030_1",
+              "triangles": 32102
+            },
+            {
+              "name": "doraemon_UV_topology_1",
+              "triangles": 27078
+            },
+            {
+              "name": "camellia_fluted_trunk_V7001_1",
+              "triangles": 26622
+            },
+            {
+              "name": "v9_garden_3",
+              "triangles": 22572
+            },
+            {
+              "name": "v9_garden_13",
+              "triangles": 20735
+            },
+            {
+              "name": "camellia_fluted_trunk001_V7001_1",
+              "triangles": 16861
+            },
+            {
+              "name": "camellia_fluted_trunk001_V7001_1",
+              "triangles": 16861
+            },
+            {
+              "name": "surface_detail_runtime",
+              "triangles": 15792
+            }
+          ],
+          "refractive": [],
+          "profile": "mobile",
+          "pixelRatio": 1.35,
+          "antialias": true,
+          "textures": 266,
+          "geometries": 804,
+          "estimatedMaterialTextureMiB": 365,
+          "bedroomVisible": true,
+          "averageCalls": 623,
+          "averageTriangles": 1382225,
+          "averageSubmissionMs": 2.16,
+          "peakTriangles": 2908355,
+          "estimatedFps": 60,
+          "shaderErrors": [],
+          "calls": 529,
+          "triangles": 1147727
+        },
+        "wind": {
+          "meshes": 60,
+          "time": 22.593999999999667
+        },
+        "surfaceDetailLoaded": true,
+        "facadeDetailLoaded": false,
+        "characterActions": [
+          {
+            "id": "nobita",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "doraemon",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Run",
+              "Walk"
+            ]
+          },
+          {
+            "id": "shizuka",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "gian",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "suneo",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "tamako",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "nobisuke",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          }
+        ],
+        "place": "bedroom",
+        "mode": "first",
+        "floor": 1,
+        "position": {
+          "x": -10.775,
+          "y": 3.3,
+          "height": 3.15
+        },
+        "places": [
+          {
+            "id": "home",
+            "title": "大雄的家"
+          },
+          {
+            "id": "bedroom",
+            "title": "大雄的房间"
+          },
+          {
+            "id": "lot",
+            "title": "那片空地"
+          },
+          {
+            "id": "shizuka",
+            "title": "静香家"
+          },
+          {
+            "id": "suneo",
+            "title": "小夫家"
+          },
+          {
+            "id": "gian",
+            "title": "胖虎家"
+          },
+          {
+            "id": "school",
+            "title": "小学"
+          },
+          {
+            "id": "station",
+            "title": "月见台站"
+          },
+          {
+            "id": "river",
+            "title": "学校后的河岸"
+          },
+          {
+            "id": "bridge",
+            "title": "通往后山的桥"
+          },
+          {
+            "id": "hill",
+            "title": "后山"
+          }
+        ]
+      }
+    },
+    {
+      "name": "returned-street",
+      "timing": {
+        "frames": 362,
+        "medianMs": 17,
+        "p95Ms": 18,
+        "over50ms": 0
+      },
+      "state": {
+        "ready": true,
+        "progress": 100,
+        "bedroom": {
+          "status": "ready",
+          "progress": 100,
+          "requested": false,
+          "error": null,
+          "downloadedBytes": 7937444
+        },
+        "assetCache": {
+          "hits": 0,
+          "cachedBytes": 0,
+          "downloads": 55,
+          "downloadedBytes": 36566423,
+          "writeFailures": 0
+        },
+        "error": null,
+        "house": null,
+        "quality": false,
+        "assetRevision": 12,
+        "adventure": {
+          "inventory": [],
+          "flowers": 0,
+          "friendship": 0,
+          "flying": false,
+          "altitude": 0,
+          "portal": false,
+          "portalTarget": "lot",
+          "drawer": false,
+          "activity": "none",
+          "score": 0,
+          "round": 0,
+          "remaining": 0,
+          "cue": "",
+          "message": "",
+          "best": 0,
+          "travel": false
+        },
+        "weather": {
+          "season": "summer",
+          "hour": 15.5,
+          "day": 1,
+          "auto": false,
+          "time": "15:30",
+          "night": false
+        },
+        "audio": {
+          "enabled": false,
+          "music": 0.28,
+          "ambience": 0.45,
+          "track": "原创 · 夏日口袋散步",
+          "error": ""
+        },
+        "playAssets": [
+          "bamboo",
+          "door",
+          "drawer",
+          "time-machine",
+          "baseball",
+          "bat"
+        ],
+        "environmentLife": {
+          "residents": [
+            {
+              "id": "doraemon",
+              "x": -10.077,
+              "y": -2.586,
+              "moving": true,
+              "distanceWalked": 5.54
+            },
+            {
+              "id": "shizuka",
+              "x": -15.948,
+              "y": -24,
+              "moving": false,
+              "distanceWalked": 6.95
+            },
+            {
+              "id": "gian",
+              "x": 19.039,
+              "y": -0.959,
+              "moving": false,
+              "distanceWalked": 9.09
+            },
+            {
+              "id": "suneo",
+              "x": 17.915,
+              "y": -1.87,
+              "moving": true,
+              "distanceWalked": 6.05
+            },
+            {
+              "id": "tamako",
+              "x": -15.51,
+              "y": 7.249,
+              "moving": true,
+              "distanceWalked": 4.02
+            },
+            {
+              "id": "nobisuke",
+              "x": -14.127,
+              "y": 2.555,
+              "moving": false,
+              "distanceWalked": 2.92
+            }
+          ],
+          "animals": [
+            {
+              "id": "fauna_cat_0_0",
+              "action": "Idle",
+              "x": -18.02,
+              "y": -0.69
+            },
+            {
+              "id": "fauna_bird_0_0",
+              "action": "Idle",
+              "x": 18.75,
+              "y": 1.01
+            },
+            {
+              "id": "fauna_bird_0_1",
+              "action": "Fly",
+              "x": 18.36,
+              "y": 0.76
+            },
+            {
+              "id": "fauna_bird_0_2",
+              "action": "Idle",
+              "x": -14.72,
+              "y": -7.34
+            },
+            {
+              "id": "fauna_bird_1_0",
+              "action": "Idle",
+              "x": 23.16,
+              "y": 3.91
+            },
+            {
+              "id": "fauna_bird_1_1",
+              "action": "Idle",
+              "x": -19.17,
+              "y": -9.09
+            },
+            {
+              "id": "fauna_bird_1_2",
+              "action": "Idle",
+              "x": -8.02,
+              "y": 32.02
+            }
+          ]
+        },
+        "traffic": {
+          "leftHandTraffic": true,
+          "phase": {
+            "EW": "red",
+            "NS": "green"
+          },
+          "signalHeads": 4,
+          "signalMaterials": 6,
+          "cars": [
+            {
+              "name": "moving_car",
+              "parked": false,
+              "visible": true,
+              "position": {
+                "x": 27.464468650000168,
+                "y": -6.86,
+                "height": 0.133
+              },
+              "dimensions": {
+                "length": 3.328430652618408,
+                "width": 1.759982705116272
+              },
+              "speed": 2.3,
+              "distanceTravelled": 63.46446864999967,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "parked_car",
+              "parked": true,
+              "visible": true,
+              "position": {
+                "x": -36,
+                "y": -23.8,
+                "height": 0.054
+              },
+              "dimensions": {
+                "length": 3.328430652618408,
+                "width": 1.759982705116272
+              },
+              "speed": 0,
+              "distanceTravelled": 0,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "moving_truck",
+              "parked": false,
+              "visible": true,
+              "position": {
+                "x": -16.68794524999978,
+                "y": -9.14,
+                "height": 0.133
+              },
+              "dimensions": {
+                "length": 3.538300037384033,
+                "width": 1.76002037525177
+              },
+              "speed": 1.85,
+              "distanceTravelled": 51.687945249999636,
+              "waiting": "",
+              "wheelPivots": 4
+            },
+            {
+              "name": "parked_truck",
+              "parked": true,
+              "visible": true,
+              "position": {
+                "x": -32,
+                "y": -3.65,
+                "height": 0.054
+              },
+              "dimensions": {
+                "length": 3.538300037384033,
+                "width": 1.76002037525177
+              },
+              "speed": 0,
+              "distanceTravelled": 0,
+              "waiting": "",
+              "wheelPivots": 4
+            }
+          ]
+        },
+        "sky": {
+          "atmosphericScattering": true,
+          "cloudLayers": 2,
+          "cloudTime": 29.90399999999937
+        },
+        "river": {
+          "surfaces": 1,
+          "flowTime": 29.90399999999937
+        },
+        "interiorLight": {
+          "windowSources": 7,
+          "practicals": 5,
+          "activeWindows": 0,
+          "activePracticals": 0,
+          "bedroomShadowActive": false,
+          "daylightIntensity": 1.9
+        },
+        "detailAssets": {
+          "neighborhood": true,
+          "shizuka": true,
+          "garden": true,
+          "stairs": true,
+          "closet": true,
+          "hill": true
+        },
+        "renderHealth": {
+          "rangeCulledMeshes": 0,
+          "visibleTriangles": 1656371,
+          "heaviestMeshes": [
+            {
+              "name": "nobita_skin",
+              "triangles": 95000
+            },
+            {
+              "name": "shizuka_skin",
+              "triangles": 94999
+            },
+            {
+              "name": "suneo_skin",
+              "triangles": 94999
+            },
+            {
+              "name": "doraemon_UV_topology",
+              "triangles": 67921
+            },
+            {
+              "name": "tamako_skin",
+              "triangles": 65000
+            },
+            {
+              "name": "nobisuke_skin",
+              "triangles": 65000
+            },
+            {
+              "name": "roof_town_runtime_cell_-1,-2",
+              "triangles": 39123
+            },
+            {
+              "name": "球体003",
+              "triangles": 36022
+            },
+            {
+              "name": "doraemon_UV_topology_1",
+              "triangles": 27078
+            },
+            {
+              "name": "camellia_fluted_trunk_V7001_1",
+              "triangles": 26622
+            },
+            {
+              "name": "camellia_fluted_trunk_V7001_1",
+              "triangles": 26622
+            },
+            {
+              "name": "v9_garden_3",
+              "triangles": 22572
+            }
+          ],
+          "refractive": [],
+          "profile": "mobile",
+          "pixelRatio": 1.35,
+          "antialias": true,
+          "textures": 297,
+          "geometries": 876,
+          "estimatedMaterialTextureMiB": 365,
+          "bedroomVisible": false,
+          "averageCalls": 803,
+          "averageTriangles": 1753086,
+          "averageSubmissionMs": 2.19,
+          "peakTriangles": 3151442,
+          "estimatedFps": 60,
+          "shaderErrors": [],
+          "calls": 718,
+          "triangles": 1662049
+        },
+        "wind": {
+          "meshes": 60,
+          "time": 29.90399999999937
+        },
+        "surfaceDetailLoaded": true,
+        "facadeDetailLoaded": false,
+        "characterActions": [
+          {
+            "id": "nobita",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "doraemon",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Run",
+              "Walk"
+            ]
+          },
+          {
+            "id": "shizuka",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "gian",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "suneo",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "tamako",
+            "current": "Walk",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          },
+          {
+            "id": "nobisuke",
+            "current": "Idle",
+            "clips": [
+              "Idle",
+              "Walk",
+              "Run"
+            ]
+          }
+        ],
+        "place": "home",
+        "mode": "orbit",
+        "floor": 0,
+        "position": {
+          "x": -9.6,
+          "y": -6.3,
+          "height": 0.133
+        },
+        "places": [
+          {
+            "id": "home",
+            "title": "大雄的家"
+          },
+          {
+            "id": "bedroom",
+            "title": "大雄的房间"
+          },
+          {
+            "id": "lot",
+            "title": "那片空地"
+          },
+          {
+            "id": "shizuka",
+            "title": "静香家"
+          },
+          {
+            "id": "suneo",
+            "title": "小夫家"
+          },
+          {
+            "id": "gian",
+            "title": "胖虎家"
+          },
+          {
+            "id": "school",
+            "title": "小学"
+          },
+          {
+            "id": "station",
+            "title": "月见台站"
+          },
+          {
+            "id": "river",
+            "title": "学校后的河岸"
+          },
+          {
+            "id": "bridge",
+            "title": "通往后山的桥"
+          },
+          {
+            "id": "hill",
+            "title": "后山"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "environmentErrors": [
+    "/nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/branches? due to access control checks.",
+    "/nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/meta due to access control checks.",
+    "/nobita-summer-neighborhood.frankfanyiming.chatgpt.site/api/community/notes due to access control checks."
+  ],
+  "startupMs": 1811,
+  "bedroomEntryMs": 893,
+  "repeatEntryMs": 2,
+  "longTasks": [],
+  "resources": [
+    {
+      "path": "/frank_worlds/models/mobile-v23/neighborhood-v21.glb",
+      "bytes": 1860600,
+      "ms": 7
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/world-v11.glb",
+      "bytes": 2507076,
+      "ms": 12
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/vegetation-v3-lite.glb",
+      "bytes": 1561280,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/terrain-v6.glb",
+      "bytes": 453900,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/streets-v7-lite.glb",
+      "bytes": 1412812,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/surface-v11-lite.glb",
+      "bytes": 1179468,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/details/house-v11.glb",
+      "bytes": 730776,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/details/connector-v9-lite.glb",
+      "bytes": 404124,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/expansion/expansion-river-bridge.glb",
+      "bytes": 355040,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/expansion/expansion-terrain.glb",
+      "bytes": 723340,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/expansion/expansion-trees-west.glb",
+      "bytes": 497312,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/expansion/expansion-trees-east.glb",
+      "bytes": 500916,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/expansion/expansion-groundcover-lite.glb",
+      "bytes": 628184,
+      "ms": 6
+    },
+    {
+      "path": "/frank_worlds/models/actors/nobita.glb",
+      "bytes": 782340,
+      "ms": 7
+    },
+    {
+      "path": "/frank_worlds/models/actors/doraemon-v11.glb",
+      "bytes": 753512,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/models/actors/shizuka.glb",
+      "bytes": 729324,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/actors/gian.glb",
+      "bytes": 796396,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/models/actors/suneo.glb",
+      "bytes": 760824,
+      "ms": 9
+    },
+    {
+      "path": "/frank_worlds/models/actors/tamako.glb",
+      "bytes": 510832,
+      "ms": 9
+    },
+    {
+      "path": "/frank_worlds/models/actors/nobisuke.glb",
+      "bytes": 508316,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/models/fauna/cat.glb",
+      "bytes": 1885716,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/fauna/sparrow.glb",
+      "bytes": 1047032,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/models/fauna/sparrow_ash.glb",
+      "bytes": 1046684,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/models/vehicles/kei_hatchback-v11.glb",
+      "bytes": 362584,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/vehicles/kei_truck-v11.glb",
+      "bytes": 383608,
+      "ms": 3
+    },
+    {
+      "path": "/frank_worlds/models/gadgets/bamboo.glb",
+      "bytes": 100212,
+      "ms": 3
+    },
+    {
+      "path": "/frank_worlds/models/gadgets/door.glb",
+      "bytes": 183712,
+      "ms": 2
+    },
+    {
+      "path": "/frank_worlds/models/gadgets/drawer.glb",
+      "bytes": 252376,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/models/gadgets/time-machine.glb",
+      "bytes": 825524,
+      "ms": 6
+    },
+    {
+      "path": "/frank_worlds/models/gadgets/season-extras.glb",
+      "bytes": 327920,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/models/mobile-v23/bedroom-v12.glb",
+      "bytes": 7937444,
+      "ms": 14
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/manifest.json",
+      "bytes": 18273,
+      "ms": 3
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/oak_veneer_02/albedo.webp",
+      "bytes": 120584,
+      "ms": 3
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/oak_veneer_02/normal.png",
+      "bytes": 125390,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/oak_veneer_02/orm.webp",
+      "bytes": 72378,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/fine_grained_wood/albedo.webp",
+      "bytes": 143122,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/fine_grained_wood/normal.png",
+      "bytes": 244299,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/fine_grained_wood/orm.webp",
+      "bytes": 96652,
+      "ms": 6
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/japanese_cedar_planks/albedo.webp",
+      "bytes": 155958,
+      "ms": 3
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/japanese_cedar_planks/orm.webp",
+      "bytes": 32018,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/japanese_cedar_planks/normal.png",
+      "bytes": 427274,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/painted_plaster_wall/albedo.webp",
+      "bytes": 209768,
+      "ms": 6
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/painted_plaster_wall/orm.webp",
+      "bytes": 10756,
+      "ms": 7
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/painted_plaster_wall/normal.png",
+      "bytes": 471289,
+      "ms": 8
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/tatami_mat/albedo.webp",
+      "bytes": 139084,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/tatami_mat/normal.png",
+      "bytes": 265969,
+      "ms": 6
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/tatami_mat/orm.webp",
+      "bytes": 16038,
+      "ms": 6
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/materials/GreenLinen/albedo.webp",
+      "bytes": 31364,
+      "ms": 3
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/rough_linen/orm.webp",
+      "bytes": 125288,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/scans/rough_linen/normal.png",
+      "bytes": 444601,
+      "ms": 4
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/materials/BlueLinen/albedo.webp",
+      "bytes": 32638,
+      "ms": 6
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/materials/IndoorLeaf/albedo.webp",
+      "bytes": 239502,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/materials/IndoorLeaf/normal.png",
+      "bytes": 231254,
+      "ms": 5
+    },
+    {
+      "path": "/frank_worlds/bedroom-materials/mobile-v23/materials/IndoorLeaf/orm.webp",
+      "bytes": 55062,
+      "ms": 4
+    }
+  ],
+  "passed": true
+}

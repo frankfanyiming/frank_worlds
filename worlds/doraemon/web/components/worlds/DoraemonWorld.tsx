@@ -273,7 +273,7 @@ export default function Page({ sound = false, locale = 'zh-CN' }: { sound?: bool
           {s.bedroom.status !== 'error' && (
             <>
               <Progress value={s.bedroom.progress} aria-label="房间加载进度" />
-              <span>{s.bedroom.progress}%</span>
+              <span>{s.bedroom.progress}%{s.bedroom.progress<20&&!!s.bedroom.downloadedBytes&&` · ${(s.bedroom.downloadedBytes/1048576).toFixed(1)} MB`}</span>
             </>
           )}
           <div>

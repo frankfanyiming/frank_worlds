@@ -1,0 +1,707 @@
+{
+  "errors": [],
+  "state": {
+    "ready": true,
+    "progress": 100,
+    "bedroom": {
+      "status": "ready",
+      "progress": 100,
+      "requested": false,
+      "error": null,
+      "downloadedBytes": 48063076
+    },
+    "assetCache": {
+      "hits": 0,
+      "cachedBytes": 0,
+      "downloads": 61,
+      "downloadedBytes": 273423783,
+      "writeFailures": 0
+    },
+    "error": null,
+    "house": "home",
+    "quality": true,
+    "assetRevision": 12,
+    "adventure": {
+      "inventory": [],
+      "flowers": 0,
+      "friendship": 0,
+      "flying": false,
+      "altitude": 0,
+      "portal": false,
+      "portalTarget": "lot",
+      "drawer": false,
+      "activity": "none",
+      "score": 0,
+      "round": 0,
+      "remaining": 0,
+      "cue": "",
+      "message": "",
+      "best": 0,
+      "travel": false
+    },
+    "weather": {
+      "season": "summer",
+      "hour": 15.501900000000001,
+      "day": 1,
+      "auto": true,
+      "time": "15:30",
+      "night": false
+    },
+    "audio": {
+      "enabled": false,
+      "music": 0.28,
+      "ambience": 0.45,
+      "track": "原创 · 夏日口袋散步",
+      "error": ""
+    },
+    "playAssets": [
+      "bamboo",
+      "door",
+      "drawer",
+      "time-machine",
+      "baseball",
+      "bat"
+    ],
+    "environmentLife": {
+      "residents": [
+        {
+          "id": "doraemon",
+          "x": -10.5,
+          "y": -3.8,
+          "moving": false,
+          "distanceWalked": 0
+        },
+        {
+          "id": "shizuka",
+          "x": -9,
+          "y": -24,
+          "moving": false,
+          "distanceWalked": 0
+        },
+        {
+          "id": "gian",
+          "x": 17,
+          "y": 2,
+          "moving": false,
+          "distanceWalked": 0
+        },
+        {
+          "id": "suneo",
+          "x": 13,
+          "y": 1,
+          "moving": false,
+          "distanceWalked": 0
+        },
+        {
+          "id": "tamako",
+          "x": -12.05,
+          "y": 6.35,
+          "moving": false,
+          "distanceWalked": 0
+        },
+        {
+          "id": "nobisuke",
+          "x": -16.4,
+          "y": 2.2,
+          "moving": false,
+          "distanceWalked": 0
+        }
+      ],
+      "animals": [
+        {
+          "id": "fauna_cat_0_0",
+          "action": "Idle",
+          "x": -18.2,
+          "y": -3.1
+        },
+        {
+          "id": "fauna_bird_0_0",
+          "action": "Idle",
+          "x": 18.5,
+          "y": 3.8
+        },
+        {
+          "id": "fauna_bird_0_1",
+          "action": "Idle",
+          "x": 21,
+          "y": 0.8
+        },
+        {
+          "id": "fauna_bird_0_2",
+          "action": "Idle",
+          "x": -14.5,
+          "y": -7.3
+        },
+        {
+          "id": "fauna_bird_1_0",
+          "action": "Idle",
+          "x": 20.5,
+          "y": 4.8
+        },
+        {
+          "id": "fauna_bird_1_1",
+          "action": "Idle",
+          "x": -16.8,
+          "y": -7.6
+        },
+        {
+          "id": "fauna_bird_1_2",
+          "action": "Idle",
+          "x": -7.8,
+          "y": 32
+        }
+      ]
+    },
+    "traffic": {
+      "leftHandTraffic": true,
+      "phase": {
+        "EW": "green",
+        "NS": "red"
+      },
+      "signalHeads": 4,
+      "signalMaterials": 6,
+      "cars": [
+        {
+          "name": "moving_car",
+          "parked": false,
+          "visible": true,
+          "position": {
+            "x": -35.9971937939998,
+            "y": -6.86,
+            "height": 0.133
+          },
+          "dimensions": {
+            "length": 3.328430652618408,
+            "width": 1.759982705116272
+          },
+          "speed": 0.0494,
+          "distanceTravelled": 0.0028062060001983642,
+          "waiting": "",
+          "wheelPivots": 4
+        },
+        {
+          "name": "parked_car",
+          "parked": true,
+          "visible": true,
+          "position": {
+            "x": -36,
+            "y": -23.8,
+            "height": 0.054
+          },
+          "dimensions": {
+            "length": 3.328430652618408,
+            "width": 1.759982705116272
+          },
+          "speed": 0,
+          "distanceTravelled": 0,
+          "waiting": "",
+          "wheelPivots": 4
+        },
+        {
+          "name": "moving_truck",
+          "parked": false,
+          "visible": true,
+          "position": {
+            "x": 34.9971937939998,
+            "y": -9.14,
+            "height": 0.133
+          },
+          "dimensions": {
+            "length": 3.538300037384033,
+            "width": 1.76002037525177
+          },
+          "speed": 0.0494,
+          "distanceTravelled": 0.0028062060001983642,
+          "waiting": "",
+          "wheelPivots": 4
+        },
+        {
+          "name": "parked_truck",
+          "parked": true,
+          "visible": true,
+          "position": {
+            "x": -32,
+            "y": -3.65,
+            "height": 0.054
+          },
+          "dimensions": {
+            "length": 3.538300037384033,
+            "width": 1.76002037525177
+          },
+          "speed": 0,
+          "distanceTravelled": 0,
+          "waiting": "",
+          "wheelPivots": 4
+        }
+      ]
+    },
+    "sky": {
+      "atmosphericScattering": true,
+      "cloudLayers": 5,
+      "cloudTime": 1.0402999999523166
+    },
+    "river": {
+      "surfaces": 1,
+      "flowTime": 1.0402999999523166
+    },
+    "interiorLight": {
+      "windowSources": 7,
+      "practicals": 5,
+      "activeWindows": 7,
+      "activePracticals": 5,
+      "bedroomShadowActive": true,
+      "daylightIntensity": 1.9
+    },
+    "detailAssets": {
+      "neighborhood": true,
+      "shizuka": true,
+      "garden": true,
+      "stairs": true,
+      "closet": true,
+      "hill": true
+    },
+    "renderHealth": {
+      "rangeCulledMeshes": 0,
+      "visibleTriangles": 13925033,
+      "heaviestMeshes": [
+        {
+          "name": "GrassBlade_Expansion_Tufts_and_Reeds",
+          "triangles": 220921
+        },
+        {
+          "name": "curved_cast_aluminium_leg005_5",
+          "triangles": 216672
+        },
+        {
+          "name": "surface_detail_runtime_1",
+          "triangles": 130603
+        },
+        {
+          "name": "camellia_fluted_trunk_V7001_1",
+          "triangles": 107799
+        },
+        {
+          "name": "street_detail_runtime",
+          "triangles": 107056
+        },
+        {
+          "name": "roof_town_runtime",
+          "triangles": 97056
+        },
+        {
+          "name": "shizuka_skin",
+          "triangles": 94999
+        },
+        {
+          "name": "gian_skin",
+          "triangles": 94999
+        },
+        {
+          "name": "suneo_skin",
+          "triangles": 94999
+        },
+        {
+          "name": "roof_town_runtime_4",
+          "triangles": 78924
+        },
+        {
+          "name": "Expansion_Shared_Camellia_Far_V7_1",
+          "triangles": 73200
+        },
+        {
+          "name": "Expansion_Shared_Camellia_Far_V7_1",
+          "triangles": 73200
+        }
+      ],
+      "refractive": [
+        "GrassBlade_V7",
+        "Connector_GrassBlade_V7",
+        "GrassBlade_V7.001",
+        "Window"
+      ],
+      "profile": "desktop",
+      "pixelRatio": 1,
+      "antialias": true,
+      "textures": 354,
+      "geometries": 663,
+      "estimatedMaterialTextureMiB": 1266,
+      "bedroomVisible": true,
+      "averageCalls": 1256,
+      "averageTriangles": 8651363,
+      "averageSubmissionMs": 377.03,
+      "peakTriangles": 47877790,
+      "estimatedFps": 9,
+      "shaderErrors": [],
+      "calls": 3353,
+      "triangles": 47877790
+    },
+    "wind": {
+      "meshes": 45,
+      "time": 1.0402999999523166
+    },
+    "surfaceDetailLoaded": true,
+    "facadeDetailLoaded": false,
+    "characterActions": [
+      {
+        "id": "nobita",
+        "current": "Idle",
+        "clips": [
+          "Idle",
+          "Walk",
+          "Run"
+        ]
+      },
+      {
+        "id": "doraemon",
+        "current": "Idle",
+        "clips": [
+          "Idle",
+          "Run",
+          "Walk"
+        ]
+      },
+      {
+        "id": "shizuka",
+        "current": "Idle",
+        "clips": [
+          "Idle",
+          "Walk",
+          "Run"
+        ]
+      },
+      {
+        "id": "gian",
+        "current": "Idle",
+        "clips": [
+          "Idle",
+          "Walk",
+          "Run"
+        ]
+      },
+      {
+        "id": "suneo",
+        "current": "Idle",
+        "clips": [
+          "Idle",
+          "Walk",
+          "Run"
+        ]
+      },
+      {
+        "id": "tamako",
+        "current": "Idle",
+        "clips": [
+          "Idle",
+          "Walk",
+          "Run"
+        ]
+      },
+      {
+        "id": "nobisuke",
+        "current": "Idle",
+        "clips": [
+          "Idle",
+          "Walk",
+          "Run"
+        ]
+      }
+    ],
+    "place": "bedroom",
+    "mode": "first",
+    "floor": 1,
+    "position": {
+      "x": -10.775,
+      "y": 3.3,
+      "height": 3.15
+    },
+    "places": [
+      {
+        "id": "home",
+        "title": "大雄的家"
+      },
+      {
+        "id": "bedroom",
+        "title": "大雄的房间"
+      },
+      {
+        "id": "lot",
+        "title": "那片空地"
+      },
+      {
+        "id": "shizuka",
+        "title": "静香家"
+      },
+      {
+        "id": "suneo",
+        "title": "小夫家"
+      },
+      {
+        "id": "gian",
+        "title": "胖虎家"
+      },
+      {
+        "id": "school",
+        "title": "小学"
+      },
+      {
+        "id": "station",
+        "title": "月见台站"
+      },
+      {
+        "id": "river",
+        "title": "学校后的河岸"
+      },
+      {
+        "id": "bridge",
+        "title": "通往后山的桥"
+      },
+      {
+        "id": "hill",
+        "title": "后山"
+      }
+    ]
+  },
+  "resources": [
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/neighborhood-v21.glb?v=20260910-12",
+      "bytes": 1654204
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/world-v11.glb?v=20260910-12",
+      "bytes": 2300524
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/vegetation-v3-lite.glb?v=20260910-12",
+      "bytes": 2792712
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/terrain-v6.glb?v=20260910-12",
+      "bytes": 404008
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/streets-v7-lite.glb?v=20260910-12",
+      "bytes": 1243572
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/surface-v11-lite.glb?v=20260910-12",
+      "bytes": 2914880
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/details/house-v11.glb?v=20260910-12",
+      "bytes": 1088516
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/details/connector-v9-lite.glb?v=20260910-12",
+      "bytes": 414152
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/expansion/expansion-terrain.glb?v=20260910-12",
+      "bytes": 657444
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/expansion/expansion-river-bridge.glb?v=20260910-12",
+      "bytes": 297596
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/expansion/expansion-trees-west.glb?v=20260910-12",
+      "bytes": 883456
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/expansion/expansion-trees-east.glb?v=20260910-12",
+      "bytes": 887060
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/expansion/expansion-groundcover-lite.glb?v=20260910-12",
+      "bytes": 1083528
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/actors/nobita.glb?v=20260910-12",
+      "bytes": 782340
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/actors/doraemon-v11.glb?v=20260910-12",
+      "bytes": 753512
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/actors/shizuka.glb?v=20260910-12",
+      "bytes": 729324
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/actors/gian.glb?v=20260910-12",
+      "bytes": 796396
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/actors/suneo.glb?v=20260910-12",
+      "bytes": 760824
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/actors/tamako.glb?v=20260910-12",
+      "bytes": 510832
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/actors/nobisuke.glb?v=20260910-12",
+      "bytes": 508316
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/fauna/cat.glb?v=20260910-12",
+      "bytes": 1885716
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/fauna/sparrow.glb?v=20260910-12",
+      "bytes": 1047032
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/fauna/sparrow_ash.glb?v=20260910-12",
+      "bytes": 1046684
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/vehicles/kei_hatchback-v11.glb?v=20260910-12",
+      "bytes": 362584
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/gadgets/bamboo.glb?v=20260910-12",
+      "bytes": 100212
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/vehicles/kei_truck-v11.glb?v=20260910-12",
+      "bytes": 383608
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/gadgets/door.glb?v=20260910-12",
+      "bytes": 183712
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/gadgets/drawer.glb?v=20260910-12",
+      "bytes": 252376
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/gadgets/time-machine.glb?v=20260910-12",
+      "bytes": 825524
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/gadgets/season-extras.glb?v=20260910-12",
+      "bytes": 327920
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/models/bedroom-v12.glb?v=20260910-12",
+      "bytes": 48063076
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/manifest.json?v=20260910-12",
+      "bytes": 35581
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/oak_veneer_02/albedo.jpg?v=20260910-12",
+      "bytes": 9748186
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/oak_veneer_02/roughness.jpg?v=20260910-12",
+      "bytes": 3167619
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/oak_veneer_02/normal.png?v=20260910-12",
+      "bytes": 18576832
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/oak_veneer_02/ao.jpg?v=20260910-12",
+      "bytes": 2252912
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/fine_grained_wood/albedo.jpg?v=20260910-12",
+      "bytes": 4744081
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/fine_grained_wood/normal.png?v=20260910-12",
+      "bytes": 3210822
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/fine_grained_wood/roughness.jpg?v=20260910-12",
+      "bytes": 871792
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/fine_grained_wood/ao.jpg?v=20260910-12",
+      "bytes": 2360200
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/japanese_cedar_planks/albedo.jpg?v=20260910-12",
+      "bytes": 10221817
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/japanese_cedar_planks/normal.png?v=20260910-12",
+      "bytes": 23012005
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/japanese_cedar_planks/roughness.jpg?v=20260910-12",
+      "bytes": 2807174
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/japanese_cedar_planks/ao.jpg?v=20260910-12",
+      "bytes": 3189312
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/painted_plaster_wall/albedo.jpg?v=20260910-12",
+      "bytes": 12556766
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/painted_plaster_wall/normal.png?v=20260910-12",
+      "bytes": 22789885
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/painted_plaster_wall/roughness.jpg?v=20260910-12",
+      "bytes": 1595466
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/painted_plaster_wall/ao.jpg?v=20260910-12",
+      "bytes": 2176195
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/tatami_mat/albedo.jpg?v=20260910-12",
+      "bytes": 9478853
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/tatami_mat/normal.png?v=20260910-12",
+      "bytes": 20436403
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/tatami_mat/roughness.jpg?v=20260910-12",
+      "bytes": 1151251
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/GreenLinen_albedo.png?v=20260910-12",
+      "bytes": 880511
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/tatami_mat/ao.jpg?v=20260910-12",
+      "bytes": 2374019
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/rough_linen/normal.png?v=20260910-12",
+      "bytes": 22196908
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/rough_linen/roughness.jpg?v=20260910-12",
+      "bytes": 4655974
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/rough_linen/ao.jpg?v=20260910-12",
+      "bytes": 3969492
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/BlueLinen_albedo.png?v=20260910-12",
+      "bytes": 942441
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/IndoorLeaf_albedo.png?v=20260910-12",
+      "bytes": 5438123
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/IndoorLeaf_roughness.png?v=20260910-12",
+      "bytes": 512287
+    },
+    {
+      "url": "http://127.0.0.1:8795/frank_worlds/bedroom-materials/IndoorLeaf_normal.png?v=20260910-12",
+      "bytes": 1280558
+    }
+  ],
+  "passed": true
+}

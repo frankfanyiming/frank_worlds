@@ -5,7 +5,9 @@ import {gzipSync} from 'node:zlib';
 import {createHash} from 'node:crypto';
 
 const source = await readFile(new URL('./native-loader.js', import.meta.url), 'utf8');
-const functions = source.slice(0, source.lastIndexOf('load().catch(fail);'));
+// This suite exercises network recovery. UI startup has its own DOM/pointer
+// fixture in test-mobile-input; do not execute it in a network-only VM.
+const functions = source.slice(0, source.lastIndexOf('load().catch(fail);')).replace(/^install(?:TouchControls|WorldUI)\(\);$/gm,'');
 const raw = Buffer.from('Verified world bytes. '.repeat(300));
 const encoded = gzipSync(raw), sha256 = createHash('sha256').update(raw).digest('hex');
 const chunk = {file: 'world-000.bin.gz', bytes: encoded.length, rawBytes: raw.length, sha256};

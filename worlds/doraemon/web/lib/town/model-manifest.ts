@@ -4,3 +4,9 @@ export const BEDROOM_PART='bedroom-v12';
 export const STARTUP_PARTS=MODEL_PARTS.filter(part=>part!==BEDROOM_PART);
 // Bump only when asset bytes change; app-only releases reuse the same cache.
 export const ASSET_VERSION='20260910-12';
+// Mobile derivatives keep the source scene hierarchy, doors, UVs and coordinates.
+export const MOBILE_ASSET_VERSION='20260913-mobile23';
+export const MOBILE_MODEL_PARTS=new Set(MODEL_PARTS.filter(p=>!p.startsWith('actors/')&&!p.startsWith('fauna/')&&!p.startsWith('vehicles/')&&!p.startsWith('gadgets/')));
+export const SHIPPED_MODEL_PARTS=[...MODEL_PARTS,...[...MOBILE_MODEL_PARTS].map(p=>'mobile-v23/'+p)];
+export function modelFile(part:string,mobile=false){return mobile&&MOBILE_MODEL_PARTS.has(part)?'mobile-v23/'+part:part;}
+export function modelVersion(part:string,mobile=false){return mobile&&MOBILE_MODEL_PARTS.has(part)?MOBILE_ASSET_VERSION:ASSET_VERSION;}

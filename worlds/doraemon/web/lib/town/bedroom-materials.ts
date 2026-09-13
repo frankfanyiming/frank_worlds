@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {ASSET_VERSION} from './model-manifest';
+import {ASSET_VERSION,MOBILE_ASSET_VERSION} from './model-manifest';
 import {assetPath} from './asset-path';
 import {boundedMap,fetchBytes,withDeadline,evictCachedAsset} from './loading';
 type Finish={scan?:string;family?:string;scale?:[number,number];tint?:[number,number,number];depth?:number;projection?:boolean;cloth?:boolean;rotate?:boolean};
@@ -26,8 +26,9 @@ function tatamiShader(mat:THREE.MeshStandardMaterial){
  };
  mat.customProgramCacheKey=()=> 'accepted-room-weave-v12';
 }
-export async function restoreBedroomMaterials(room:THREE.Object3D,signal:AbortSignal,anisotropy:number,onProgress:(fraction:number)=>void=()=>{}){
- const manifestUrl=assetPath('/bedroom-materials/manifest.json?v='+ASSET_VERSION);let manifest:Manifest;
+export async function restoreBedroomMaterials(room:THREE.Object3D,signal:AbortSignal,anisotropy:number,onProgress:(fraction:number)=>void=()=>{},mobile=false){
+ const directory='/bedroom-materials/'+(mobile?'mobile-v23/':''),version=mobile?MOBILE_ASSET_VERSION:ASSET_VERSION;
+ const manifestUrl=assetPath(directory+'manifest.json?v='+version);let manifest:Manifest;
  try{const bytes=await fetchBytes(manifestUrl,signal);manifest=JSON.parse(new TextDecoder().decode(bytes)) as Manifest;if(!manifest.scans||!manifest.materials)throw new Error('房间材质清单不完整');}catch(e){if(!signal.aborted)await evictCachedAsset(manifestUrl);throw e;}
  const mats=new Set<THREE.MeshStandardMaterial>();room.traverse(o=>{if(o instanceof THREE.Mesh)for(const m of Array.isArray(o.material)?o.material:[o.material])if(m instanceof THREE.MeshStandardMaterial)mats.add(m);});
  const assignments=new Map<THREE.MeshStandardMaterial,Finish>();const wanted=new Map<string,boolean>();
@@ -38,12 +39,12 @@ export async function restoreBedroomMaterials(room:THREE.Object3D,signal:AbortSi
  let complete=0;const textures=new Map<string,THREE.Texture>(),local=new AbortController();
  const abort=()=>local.abort();signal.addEventListener('abort',abort,{once:true});if(signal.aborted)abort();
  try{await boundedMap([...wanted],3,async([file,srgb])=>{
-  const path=assetPath('/bedroom-materials/'+file+'?v='+ASSET_VERSION);
+  const path=assetPath(directory+file+'?v='+version);
   try{
    const data=await fetchBytes(path,local.signal);local.signal.throwIfAborted();const url=URL.createObjectURL(new Blob([data]));
    try{
     let t:THREE.Texture;try{t=await withDeadline(new THREE.TextureLoader().loadAsync(url).then(t=>{if(local.signal.aborted){t.dispose();local.signal.throwIfAborted();}return t;}),45000,'房间材质解码');}catch(e){if(!local.signal.aborted)await evictCachedAsset(path);throw e;}
-    t.flipY=false;t.colorSpace=srgb?THREE.SRGBColorSpace:THREE.NoColorSpace;t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=anisotropy;textures.set(file,t);onProgress(++complete/wanted.size);
+    t.flipY=false;t.colorSpace=srgb?THREE.SRGBColorSpace:THREE.NoColorSpace;t.wrapS=t.wrapT=THREE.RepeatWrapping;t.anisotropy=anisotropy;t.minFilter=THREE.LinearMipmapLinearFilter;t.magFilter=THREE.LinearFilter;t.generateMipmaps=true;textures.set(file,t);onProgress(++complete/wanted.size);
    }finally{URL.revokeObjectURL(url);}
   }catch(e){local.abort();throw e;}
  });}catch(e){local.abort();for(const t of textures.values())t.dispose();throw e;}finally{signal.removeEventListener('abort',abort);}
@@ -54,6 +55,7 @@ export async function restoreBedroomMaterials(room:THREE.Object3D,signal:AbortSi
   if(c.scan){apply(manifest.scans[c.scan].maps,c.cloth);if(c.tint)m.color.setRGB(...c.tint,THREE.SRGBColorSpace);m.normalScale.setScalar(c.depth??1);m.roughness=1;m.metalness=0;m.metalnessMap=null;m.aoMapIntensity=.8;}
   if(m instanceof THREE.MeshPhysicalMaterial&&(c.scan||c.family)){m.clearcoat=0;m.specularIntensity=c.cloth?.23:.4;m.sheen=c.cloth?.08:0;}
   if(m.name==='V10_GreenLinen')m.color.set('#a5ae86');if(m.name==='V10_BlueLinen')m.color.setRGB(1.25,1.32,1.13);
+  if(mobile&&c.scan)m.normalScale.multiplyScalar(.55);
   if(m.name==='V10_Tatami')tatamiShader(m);
   if(/glass/i.test(m.name)){m.transparent=true;m.opacity=.10;m.roughness=.14;m.metalness=0;m.depthWrite=false;}
   m.needsUpdate=true;

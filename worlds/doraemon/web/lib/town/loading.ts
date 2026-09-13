@@ -13,7 +13,7 @@ export async function boundedMap<T,R>(items:T[],limit:number,run:(item:T,index:n
 export async function withDeadline<T>(work:Promise<T>,ms:number,label:string):Promise<T>{
  let timer:ReturnType<typeof setTimeout>;try{return await Promise.race([work,new Promise<T>((_,reject)=>{timer=setTimeout(()=>reject(new Error(label+'超时，请检查网络后重试。')),ms);})]);}finally{clearTimeout(timer!);}
 }
-export async function fetchBytes(url:string,signal:AbortSignal):Promise<ArrayBuffer>{
+export async function fetchBytes(url:string,signal:AbortSignal,onProgress?:(received:number,total?:number)=>void):Promise<ArrayBuffer>{
  // Abort the actual network request on timeout; a timed-out Promise alone leaks downloads.
  const local=new AbortController(),abort=()=>local.abort();signal.addEventListener('abort',abort,{once:true});
  const timer=setTimeout(abort,90000);try{
@@ -24,9 +24,19 @@ export async function fetchBytes(url:string,signal:AbortSignal):Promise<ArrayBuf
   if(/[?&]v=/.test(url)&&typeof caches!=='undefined')try{
    cache=await withDeadline(caches.open(ASSET_CACHE),1000,'本地缓存');
    const hit=await withDeadline(cache.match(url),1000,'本地缓存');
-   if(hit?.ok){const bytes=await withDeadline(hit.arrayBuffer(),5000,'本地缓存');local.signal.throwIfAborted();assetCacheStats.hits++;assetCacheStats.cachedBytes+=bytes.byteLength;return bytes;}
+   if(hit?.ok){const bytes=await withDeadline(hit.arrayBuffer(),5000,'本地缓存');local.signal.throwIfAborted();assetCacheStats.hits++;assetCacheStats.cachedBytes+=bytes.byteLength;onProgress?.(bytes.byteLength,bytes.byteLength);return bytes;}
   }catch{cache=undefined;}
-  local.signal.throwIfAborted();const r=await fetch(url,{signal:local.signal});if(!r.ok)throw new Error('资源请求失败（'+r.status+'）');const bytes=await r.arrayBuffer();local.signal.throwIfAborted();
+  local.signal.throwIfAborted();const r=await fetch(url,{signal:local.signal});if(!r.ok)throw new Error('资源请求失败（'+r.status+'）');
+  let bytes:ArrayBuffer;
+  if(onProgress&&r.body){
+   const encoding=r.headers.get('Content-Encoding'),length=Number(r.headers.get('Content-Length'));
+   // A compressed Content-Length cannot measure the decoded stream. In that
+   // case report actual bytes only; never invent a completion percentage.
+   const total=(!encoding||encoding==='identity')&&length>0?length:undefined;
+   const reader=r.body.getReader(),chunks:Uint8Array[]=[];let received=0;
+   try{while(true){const {done,value}=await reader.read();if(done)break;local.signal.throwIfAborted();chunks.push(value);received+=value.byteLength;onProgress(received,total);}}finally{reader.releaseLock();}
+   const joined=new Uint8Array(received);let offset=0;for(const chunk of chunks){joined.set(chunk,offset);offset+=chunk.byteLength;}bytes=joined.buffer;onProgress(received,received);
+  }else bytes=await r.arrayBuffer();local.signal.throwIfAborted();
   assetCacheStats.downloads++;assetCacheStats.downloadedBytes+=bytes.byteLength;
   // Save in the background: disk writes are outside the first-frame critical path.
   if(cache){const target=cache;const write=withDeadline(Promise.resolve().then(()=>target.put(url,new Response(bytes,{headers:{'Content-Type':r.headers.get('Content-Type')??'application/octet-stream'}}))),10000,'本地缓存').catch(()=>{assetCacheStats.writeFailures++;});cacheWrites.add(write);void write.finally(()=>cacheWrites.delete(write));}

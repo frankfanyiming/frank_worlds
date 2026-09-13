@@ -14,7 +14,10 @@ type Car={root:THREE.Group;wheels:THREE.Object3D[];direction:number;lane:number;
 
 export class TownTraffic {
  cars:Car[]=[];time=0;signals:{material:THREE.MeshStandardMaterial;axis:'EW'|'NS';color:SignalColor}[]=[];
- constructor(public world:THREE.Group){
+ constructor(public world:THREE.Group){this.refreshSignals();}
+ refreshSignals(){
+  this.signals=[];
+  const world=this.world;
   const seen=new Set<THREE.Material>();world.traverse(o=>{if(o instanceof THREE.Mesh){for(const m of Array.isArray(o.material)?o.material:[o.material]){
    const match=m.name.match(/^Signal_(EW|NS)_(red|amber|green)/);if(match&&m instanceof THREE.MeshStandardMaterial&&!seen.has(m)){seen.add(m);this.signals.push({material:m,axis:match[1] as 'EW'|'NS',color:match[2] as SignalColor});}
   }}});

@@ -43,7 +43,7 @@ function engine(){const e=Object.create(TownEngine.prototype);Object.assign(e,{
   return new Response(JSON.stringify({part:relative.slice(7,-4)}));
  };
  function room(){const root=new THREE.Group();for(const name of ['hero_floor','hero_props','hero_closet','hero_shell','hero_front','hero_ceiling','v12_nobita_slide','v12_closet_slide']){const group=new THREE.Group();group.name=name;root.add(group);}for(const m of roomJson.materials){const material=new THREE.MeshStandardMaterial();material.name=m.name;root.getObjectByName('hero_props').add(new THREE.Mesh(new THREE.BoxGeometry(.1,.1,.1),material));}return root;}
- GLTFLoader.prototype.parseAsync=async bytes=>{const {part}=JSON.parse(new TextDecoder().decode(bytes));if(part===BEDROOM_PART)return{scene:room(),animations:[]};const scene=new THREE.Group();const mesh=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshStandardMaterial());if(part.startsWith('actors/'))mesh.name='actor_'+part.split('/')[1].replace('-v11','');scene.add(mesh);return{scene,animations:[]};};
+ GLTFLoader.prototype.parseAsync=async bytes=>{const {part}=JSON.parse(new TextDecoder().decode(bytes));if(part===BEDROOM_PART||part==='mobile-v23/'+BEDROOM_PART)return{scene:room(),animations:[]};const scene=new THREE.Group();const mesh=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshStandardMaterial());if(part.startsWith('actors/'))mesh.name='actor_'+part.split('/')[1].replace('-v11','');scene.add(mesh);return{scene,animations:[]};};
  THREE.TextureLoader.prototype.loadAsync=async()=>new THREE.Texture();
  const e=engine();await e.load();assert.equal(e.state.error,null);assert.equal(e.loadedForFrame,true);assert.equal(e.state.ready,false);assert(!requested.some(url=>url.includes(BEDROOM_PART)||url.includes('bedroom-materials')));assert.equal(requested.filter(url=>url.includes('.glb')).length,STARTUP_PARTS.length);
  e.state.ready=true;e.queueBedroom();assert(!requested.some(url=>url.includes(BEDROOM_PART)));await delay(1550);assert.equal(e.state.bedroom.status,'loading');assert.equal(e.state.ready,true);assert.equal(e.world.getObjectByName('hero_props'),undefined);
@@ -66,4 +66,19 @@ function engine(){const e=Object.create(TownEngine.prototype);Object.assign(e,{
  const report={startupModelBytes,deferredModelBytes:b.length,deferredMaterialBytes,previousBlockingBytes,blockingByteReduction:1-startupModelBytes/previousBlockingBytes,materialFiles:uniqueMaterials.length,cacheColdWarmOffline:true,cacheQuotaFallback:true,failedResponsesNotCached:true,abortSupported:true,startupDoesNotRequestBedroom:true,backgroundDoesNotBlockTown:true,noPartialRoom:true,cancelAndNewDestinationWin:true,stairsWaitSafely:true,repeatedEntryReusesScene:true,roomFailureAndRetry:true,originalBedroomAssetVersion:ASSET_VERSION};
  fs.mkdirSync('.test-build',{recursive:true});fs.writeFileSync('.test-build/loading-report.json',JSON.stringify(report,null,2));console.log('PASS: asset cache and deferred room integration',report);
  for(const instance of [e,slow,fail])for(const dispose of instance.disposers)dispose();
+ // Mobile has its own room/maps and stops abandoned network requests. A retry
+ // arriving while cancellation settles must start exactly one clean attempt.
+ delete global.caches;const assetFetch=global.fetch;let heldFetch=false,mobileFetches=0;
+ global.fetch=async(url,options)=>{
+  if(String(url).includes('/mobile-v23/'+BEDROOM_PART+'.glb')){
+   mobileFetches++;if(heldFetch)return new Promise((_,reject)=>{const cancel=()=>reject(new DOMException('Cancelled','AbortError'));options.signal.addEventListener('abort',cancel,{once:true});if(options.signal.aborted)cancel();});
+  }
+  return assetFetch(url,options);
+ };
+ const mobile=engine();mobile.mobile=true;mobile.state.ready=true;mobile.modelLoader=new GLTFLoader();
+ heldFetch=true;const abandoned=mobile.teleport('bedroom');await delay(5);mobile.cancelBedroomEntry();heldFetch=false;
+ const retry=mobile.teleport('bedroom');assert.equal(await abandoned,false);assert(await retry);assert.equal(mobileFetches,2);assert.equal(mobile.state.floor,1);assert.equal(mobile.state.bedroom.status,'ready');assert.equal(mobile.slidingDoors.length,2);
+ assert(requested.some(url=>url.includes('/bedroom-materials/mobile-v23/manifest.json')));const downloaded=requested.length;mobile.enterHome();assert.equal(mobile.bedroomRoot.visible,false);assert(await mobile.teleport('bedroom'));assert.equal(requested.length,downloaded);assert.equal(mobile.bedroomRoot.visible,true);
+ const left=engine();left.mobile=true;left.state.ready=true;left.modelLoader=new GLTFLoader();heldFetch=true;const loading=left.teleport('bedroom');await delay(5);await left.teleport('lot');assert.equal(await loading,false);assert.equal(left.state.bedroom.status,'idle');assert.equal(left.state.place,'lot');assert.equal(left.state.error,null);
+ console.log('PASS: mobile derivative, cancel/immediate retry, destination wins and resident room reuse');
  }finally{global.fetch=realFetch;delete global.caches;THREE.TextureLoader.prototype.loadAsync=realDecode;GLTFLoader.prototype.parseAsync=realParse;}})().catch(e=>{console.error(e);process.exitCode=1;});

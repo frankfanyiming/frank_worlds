@@ -1,4 +1,4 @@
-import { cloneElement, isValidElement, type ReactNode, type ReactElement } from 'react';
+import { Children, cloneElement, isValidElement, type ReactNode, type ReactElement } from 'react';
 import type { Locale } from '../community/i18n';
 import translations from './ui-translations.json';
 import traditional from './ui-traditional.json';
@@ -36,7 +36,7 @@ export function townText(locale:Locale, source:string):string {
  * Clone only presentation children/labels, never callbacks, values, IDs or world data. */
 export function localizeTownUI(node:ReactNode, locale:Locale):ReactNode {
  if(typeof node==='string')return townText(locale,node);
- if(Array.isArray(node))return node.map(child=>localizeTownUI(child,locale));
+ if(Array.isArray(node))return Children.map(node,child=>localizeTownUI(child,locale));
  if(!isValidElement(node))return node;
  const el=node as ReactElement<Record<string,unknown>>;
  if(el.props['data-no-translate'])return node;

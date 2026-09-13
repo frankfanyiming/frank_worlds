@@ -5,10 +5,12 @@ const groundSampling=`
 vec2 groundHash(vec2 p){return fract(sin(vec2(dot(p,vec2(127.1,311.7)),dot(p,vec2(269.5,183.3))))*43758.5453)*17.43;}
 vec4 groundTexture(sampler2D tex,vec2 uv){
  vec2 cell=floor(uv*.31),f=fract(uv*.31);f=f*f*(3.-2.*f);
- vec4 a=texture2D(tex,uv+groundHash(cell));
- vec4 b=texture2D(tex,uv+groundHash(cell+vec2(1.,0.)));
- vec4 c=texture2D(tex,uv+groundHash(cell+vec2(0.,1.)));
- vec4 d=texture2D(tex,uv+groundHash(cell+vec2(1.,1.)));
+ // Derive mip selection from the continuous UV, not the discontinuous hash.
+ vec2 dx=dFdx(uv),dy=dFdy(uv);
+ vec4 a=textureGrad(tex,uv+groundHash(cell),dx,dy);
+ vec4 b=textureGrad(tex,uv+groundHash(cell+vec2(1.,0.)),dx,dy);
+ vec4 c=textureGrad(tex,uv+groundHash(cell+vec2(0.,1.)),dx,dy);
+ vec4 d=textureGrad(tex,uv+groundHash(cell+vec2(1.,1.)),dx,dy);
  return mix(mix(a,b,f.x),mix(c,d,f.x),f.y);
 }`;
 
