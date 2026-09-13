@@ -23,7 +23,8 @@ for (const file of manifest.files) {
   assert.equal(bytes.length, file.bytes, `${file.path}: size`);
   assert.equal(createHash('sha256').update(bytes).digest('hex'), file.sha256, `${file.path}: hash`);
   if (file.path.endsWith('.js')) {
-    assert.ok(bytes.toString().startsWith('/*! XLands build provenance'), `${file.path}: missing retained banner`);
+    // Vite may put its preload helper before the retained provenance comment.
+    assert.ok(bytes.toString().includes('/*! XLands build provenance | xlands-frankfym001'), `${file.path}: missing retained banner`);
     assert.ok(bytes.toString().includes(manifest.build.commit), `${file.path}: missing commit`);
   }
 }
