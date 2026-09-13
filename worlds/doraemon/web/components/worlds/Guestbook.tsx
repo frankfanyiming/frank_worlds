@@ -5,6 +5,7 @@ import { api, ApiError } from '@/lib/community/client';
 import { errorText, type Locale } from '@/lib/community/i18n';
 import { WorldSelect, worldKey, type Translate } from './Common';
 import type { World } from '@/lib/community/merge';
+import { CREATOR, copyPlainText } from '@/lib/community/creator';
 type Note = {
   id: string;
   world: World;
@@ -31,6 +32,7 @@ export default function Guestbook({
     [world, setWorld] = useState('frog'),
     [busy, setBusy] = useState(false),
     [notice, setNotice] = useState(''),
+    [submitFailed, setSubmitFailed] = useState(false),
     [failed, setFailed] = useState(false);
   const honeypot = useRef<HTMLInputElement>(null),
     message = useRef<HTMLTextAreaElement>(null);
@@ -61,6 +63,7 @@ export default function Guestbook({
     }
     setBusy(true);
     setNotice('');
+    setSubmitFailed(false);
     try {
       await api('notes', 'POST', {
         body,
@@ -76,7 +79,9 @@ export default function Guestbook({
       setNotice(t('sent'));
       await load();
     } catch (e) {
-      setNotice(errorText(e instanceof ApiError ? e.code : 'NETWORK', t));
+      const networkFailure = !(e instanceof ApiError) || e.code === 'NETWORK';
+      setSubmitFailed(networkFailure);
+      setNotice(networkFailure ? t('unsavedNote') : errorText(e.code, t));
     } finally {
       setBusy(false);
     }
@@ -175,14 +180,26 @@ export default function Guestbook({
               <ArrowUpRight size={17} />
             </button>
           </div>
+          {submitFailed && <div className="note-recovery">
+            <button type="button" onClick={async () => {
+              const copied = await copyPlainText(body);
+              if (!copied) { message.current?.focus(); message.current?.select(); }
+              setNotice(t(copied ? 'noteCopied' : 'copyFailed'));
+            }}>{t('copyNote')}</button>
+            <a className="contact-button" href={CREATOR.x} target="_blank" rel="noopener noreferrer">{t('contactOnX')} <ArrowUpRight size={17}/></a>
+          </div>}
         </form>
         <div className="note-pages" aria-live="polite">
           {loading ? (
             <p className="empty">{t('loading')}</p>
           ) : failed ? (
-            <p className="empty">
-              {t('serverPending')} <button onClick={load}>{t('retry')}</button>
-            </p>
+            <div className="guestbook-offline" role="status">
+              <Feather size={30} strokeWidth={1.4} aria-hidden="true" />
+              <h3>{t('guestbookUnavailable')}</h3>
+              <p>{t('guestbookHelp')}</p>
+              <a className="contact-button" href={CREATOR.x} target="_blank" rel="noopener noreferrer">{t('contactOnX')} <ArrowUpRight size={17}/></a>
+              <button onClick={load}>{t('retry')}</button>
+            </div>
           ) : notes.length === 0 ? (
             <div className="empty-page">
               <span className="book-lines" aria-hidden="true" />

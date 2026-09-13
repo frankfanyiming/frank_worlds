@@ -65,12 +65,12 @@ export default function AgentDialog({
         <button aria-pressed={tab === 'key'} onClick={() => setTab('key')}>
           {t('ownKey')}
         </button>
-        <button
+        {hostedEnabled && <button
           aria-pressed={tab === 'hosted'}
           onClick={() => setTab('hosted')}
         >
           {t('platform')}
-        </button>
+        </button>}
       </div>
       {tab === 'key' ? (
         <form className="agent-form" onSubmit={connect}>

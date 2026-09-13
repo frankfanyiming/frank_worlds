@@ -1,0 +1,63 @@
+{
+  "snapshot": "bafe7f3fa6f9aa63a9e02a3729c77432335ef885",
+  "runtimeVersion": "20260907-video10-final",
+  "rebuildCommit": "4732f812200b421f9984e36079602a2f14be78d9",
+  "files": [
+    {
+      "source": "worlds/doraemon/web/public/models/world-v3.glb",
+      "bytes": 16562876,
+      "sha256": "4c5afa7593b26e0a975bb20c15d14745f1596a4832776bb1bc9c372980e249bd"
+    },
+    {
+      "source": "worlds/doraemon/web/public/models/interiors-v3.glb",
+      "bytes": 5857288,
+      "sha256": "06e7d4e87081358670005cae73e90af81a920578eca5bf06a3a003542048a42c"
+    },
+    {
+      "source": "worlds/doraemon/web/public/models/furniture-ground-v10.glb",
+      "bytes": 9039432,
+      "sha256": "cff4a9983bebee86809e5b1e9fab3702919e4fbe8378282eb4a947c2dca5b6a5"
+    },
+    {
+      "source": "worlds/doraemon/web/public/models/furniture-upper-v10.glb",
+      "bytes": 24635344,
+      "sha256": "0cc96b78b83e57edb9163efe01406a113374cf4fb14c69384b6345faa580f9f5"
+    },
+    {
+      "source": "worlds/doraemon/web/public/models/details/house-v10.glb",
+      "bytes": 7610296,
+      "sha256": "00aea14c5d28a711ae3f09fbdfa1fb0928151ae3d92722e02d021c34cadf092d"
+    },
+    {
+      "source": "worlds/doraemon/web/public/models/details/life-v10.glb",
+      "bytes": 2237672,
+      "sha256": "4d1211697ba040c586f7aab685f42a2377b2c32bf8165965e11913d6db4d1364"
+    },
+    {
+      "source": "worlds/doraemon/web/public/models/details/stairs-support-v10.glb",
+      "bytes": 658084,
+      "sha256": "65003b965f379d65b8698444f0fa9daa4858b8309e36c1243f951ff240e729a3"
+    },
+    {
+      "source": "worlds/doraemon/web/public/models/world.json",
+      "bytes": 866219,
+      "sha256": "ad3f94c4fd37490df9fdd39772d40fa58b12386d813334b8492065b85193be7c"
+    },
+    {
+      "source": "worlds/doraemon/web/lib/town/engine.ts",
+      "bytes": 29195,
+      "sha256": "e85c2fe004232115ec4fa998e1fc53e34ff333117d468ddca1ff234c501dedf0"
+    },
+    {
+      "source": "worlds/doraemon/web/lib/town/weather.ts",
+      "bytes": 4857,
+      "sha256": "576bf12bd916ada311520ee4bfeb49530104ba43675c8b0110e963a0d389d2cd"
+    },
+    {
+      "source": "worlds/doraemon/web/lib/town/lighting.ts",
+      "bytes": 1887,
+      "sha256": "f1cb658e4a995413760eeda9a13b64e99bd3b59380e907a0191931e3a32c055d"
+    }
+  ],
+  "productionChanged": false
+}

@@ -1,0 +1,67 @@
+{
+  "initialImports": [
+    "assets/index-B473Y773.js"
+  ],
+  "initialThreeDependency": false,
+  "coreAssets": [
+    {
+      "path": "index.html",
+      "bytes": 7187,
+      "gzipBytes": 3073
+    },
+    {
+      "path": "assets/index-B473Y773.js",
+      "bytes": 261722,
+      "gzipBytes": 84627
+    },
+    {
+      "path": "assets/index-OxbN52SP.css",
+      "bytes": 249245,
+      "gzipBytes": 42632
+    },
+    {
+      "path": "covers/doraemon.webp",
+      "bytes": 119838,
+      "gzipBytes": 119838
+    },
+    {
+      "path": "covers/frog.webp",
+      "bytes": 136332,
+      "gzipBytes": 136332
+    },
+    {
+      "path": "covers/conan.webp",
+      "bytes": 128700,
+      "gzipBytes": 128700
+    },
+    {
+      "path": "home-art/coastal-hero.webp",
+      "bytes": 102210,
+      "gzipBytes": 102210
+    }
+  ],
+  "coreAssetBytes": 1005234,
+  "gzipEstimateBytes": 617412,
+  "coverBytes": 384870,
+  "covers": [
+    {
+      "path": "covers/doraemon.webp",
+      "bytes": 119838,
+      "sha256": "2db8e1914dc19790c90e2bf26f4d9db440f1cc50a0574f9368515f91f2d4ddea",
+      "sameAsRevision25": true
+    },
+    {
+      "path": "covers/frog.webp",
+      "bytes": 136332,
+      "sha256": "3cf058a6b3d4db94c1909ba37c8dcad77136f7cc0154f8196b066a36baae9e60",
+      "sameAsRevision25": true
+    },
+    {
+      "path": "covers/conan.webp",
+      "bytes": 128700,
+      "sha256": "75a84b2b7caa5bd560873e0235a29d666ad0fdeffdb9abba46dd6de655b9c7ef",
+      "sameAsRevision25": true
+    }
+  ],
+  "scope": "Build graph and exact bytes. Gzip is an estimate, not actual CDN transfer or device timing."
+}

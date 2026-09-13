@@ -1,0 +1,23 @@
+{
+  "method": "Read-only GET, no message or contact data queried",
+  "responses": [
+    {
+      "path": "/api/community/meta",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "server": "cloudflare",
+      "accessControlAllowOrigin": null,
+      "title": "Attention Required! | Cloudflare",
+      "bytes": 5487
+    },
+    {
+      "path": "/api/community/notes",
+      "status": 403,
+      "contentType": "text/html; charset=UTF-8",
+      "server": "cloudflare",
+      "accessControlAllowOrigin": null,
+      "title": "Attention Required! | Cloudflare",
+      "bytes": 5487
+    }
+  ]
+}

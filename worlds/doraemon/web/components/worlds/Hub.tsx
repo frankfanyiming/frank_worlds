@@ -7,12 +7,10 @@ import {
   BookOpen,
   GitFork,
   Globe2,
-  Home,
   KeyRound,
   Plus,
   Volume2,
   VolumeX,
-  LockKeyhole,
   GitMerge,
 } from 'lucide-react';
 import { assetPath } from '@/lib/town/asset-path';
@@ -29,6 +27,8 @@ import type { World } from '@/lib/community/merge';
 import type { AgentConnection } from '@/lib/community/agent';
 import { Modal, WorldSelect, WORLDS, titleKey, worldKey } from './Common';
 import Guestbook from './Guestbook';
+import CreatorLinks from './CreatorLinks';
+import { CREATOR } from '@/lib/community/creator';
 import AgentDialog from './AgentDialog';
 import AdminPanel from './AdminPanel';
 const Doraemon = lazy(() => import('./DoraemonWorld'));
@@ -79,7 +79,7 @@ export default function WorldHub() {
   }, []);
   useEffect(() => {
     document.documentElement.lang = locale;
-    document.title = t('brand') + ' · XLands';
+    document.title = t('brand');
     try { localStorage.setItem('xlands-language', locale); } catch {}
   }, [locale]);
   async function loadBranches() {
@@ -205,13 +205,14 @@ export default function WorldHub() {
     );
   return (
     <div className="xlands">
-      <div className="hub-shell">
+      <div className="hub-shell comic-home">
         <header className="hub-header">
           <a className="hub-brand" href="#" aria-label={t('brand')}>
-            <Home size={29} strokeWidth={1.6} />
+            <Globe2 size={32} strokeWidth={1.4} />
             <span>{t('brand')}</span>
           </a>
           <nav>
+            <a href="#resources">{t('resources')}</a>
             <a
               className="guest-link"
               href="#guestbook"
@@ -257,18 +258,18 @@ export default function WorldHub() {
           </nav>
         </header>
         <main>
-          <div className="creator-prompt">
-            <LockKeyhole size={19} />
-            <input
-              disabled
-              aria-label={t('prompt')}
-              placeholder={t('prompt')}
-            />
-            <span>{t('unavailable')}</span>
-          </div>
+          <section className="comic-hero" aria-labelledby="home-title">
+            <img className="hero-art" src={assetPath('home-art/coastal-hero.webp')} width={1400} height={467} alt="" decoding="async" />
+            <div className="hero-copy">
+              <p className="hero-eyebrow">{t('heroEyebrow')}</p>
+              <h1 id="home-title">{t('heroTitle')}</h1>
+              <p className="hero-description">{t('heroDescription')}</p>
+            </div>
+          </section>
           <section className="world-grid" aria-label={t('world')}>
-            {WORLDS.map((w) => (
+            {WORLDS.map((w, i) => (
               <article className={'world-card world-' + w} key={w}>
+                <span className="chapter-number" aria-hidden="true">0{i + 1}</span>
                 <button
                   className="world-image"
                   onClick={() => navigate('world/' + w)}
@@ -287,7 +288,7 @@ export default function WorldHub() {
                   </span>
                 </button>
                 <div className="world-card-bottom">
-                  <h1>{t(titleKey[w])}</h1>
+                  <h2>{t(titleKey[w])}</h2>
                   <div>
                     <button
                       className="link-button"
@@ -308,18 +309,23 @@ export default function WorldHub() {
               </article>
             ))}
           </section>
-          <div className="world-updates">
-            <div className="coming-worlds" aria-label={t('coming')}>
-              <span className="mini-door" aria-hidden="true" />
-              <p>{t('coming')}</p>
-              <span className="waiting-dots" aria-hidden="true">· · ·</span>
-            </div>
-            <a className="creator-card" href="https://x.com/FrankFYM001" target="_blank" rel="noopener noreferrer" aria-label={t('followOnX') + ' @FrankFYM001'}>
-              <span className="creator-monogram" aria-hidden="true">X</span>
-              <span className="creator-copy"><strong>{t('followCreator')}</strong><span>@FrankFYM001 · {t('creatorUpdates')}</span></span>
-              <ArrowUpRight size={21} aria-hidden="true" />
-            </a>
-          </div>
+          <p className="cover-note">{t('artNote')}</p>
+          <section className="home-notebook" id="resources" aria-label={t('resources')}>
+            <article className="making-card">
+              <div className="notebook-heading"><BookOpen size={25} strokeWidth={1.5}/><h2>{t('makingOf')}</h2><span>{t('resourceLanguage')}</span></div>
+              <p>{t('makingOfDescription')}</p>
+              <div className="resource-links">
+                <a href={CREATOR.makingOf} target="_blank" rel="noopener noreferrer">{t('readFeishu')} <ArrowUpRight size={16}/></a>
+                <a href={assetPath('resources/making-of.html')}>{t('readWeb')} <ArrowRight size={16}/></a>
+                <a href={assetPath('resources/xlands-skills.zip')} download>{t('downloadSkills')} <ArrowRight size={16} style={{transform: 'rotate(90deg)'}}/></a>
+              </div>
+            </article>
+            <article className="social-card" id="creator">
+              <h2>{t('socialTitle')}</h2>
+              <p>{t('socialDescription')}</p>
+              <CreatorLinks t={t}/>
+            </article>
+          </section>
           <section className="community-section">
             <div className="section-heading">
               <h2>
@@ -419,9 +425,7 @@ export default function WorldHub() {
           <Guestbook t={t} locale={locale} admin={meta.admin} />
         </main>
         <footer className="hub-footer">
-          <span>
-            XLands <span>·</span> {t('brand')}
-          </span>
+          <span>{t('brand')}</span>
           <div>
             <a
               href="https://github.com/frankfanyiming/frank_worlds"
@@ -431,17 +435,7 @@ export default function WorldHub() {
               {t('git')}
               <ArrowUpRight size={14} />
             </a>
-            {meta.companyUrl ? (
-              <a href={meta.companyUrl} target="_blank" rel="noreferrer">
-                {t('about')}
-                <ArrowUpRight size={14} />
-              </a>
-            ) : (
-              <span className="pending-about" aria-disabled="true">
-                {t('about')}
-                <ArrowUpRight size={14} />
-              </span>
-            )}
+            <a href="#creator">{t('socialTitle')}<ArrowUpRight size={14}/></a>
             <button
               className="link-button"
               onClick={async () => {
@@ -461,6 +455,7 @@ export default function WorldHub() {
             </button>
           </div>
         </footer>
+        <p className="fan-notice">{t('fanNotice')}</p>
       </div>
       {createOpen && (
         <Modal
@@ -585,7 +580,7 @@ function NativeWorld({
       />}
       {!ready && (
         <div className={'native-loading ' + (world === 'conan' ? 'conan-loading' : '')}>
-          <img src={assetPath('covers/' + world + '.png')} alt="" />
+          <img src={assetPath('covers/' + world + '.webp')} alt="" />
           <div>
             {world === 'conan' && <div className="aptx-capsule" aria-hidden="true" style={{ '--download': `${Math.max(0, Math.min(100, progress))}%` } as React.CSSProperties}><i /><b>APTX</b><span>4869</span></div>}
             <h2>{error ? t('error') : t('preparing')}</h2>
@@ -603,6 +598,7 @@ function NativeWorld({
                 {t('retry')}
               </button>
             )}
+            {error && <a className="contact-button" href={CREATOR.x} target="_blank" rel="noopener noreferrer">{t('contactOnX')} <ArrowUpRight size={17}/></a>}
           </div>
         </div>
       )}

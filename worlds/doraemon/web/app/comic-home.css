@@ -1,0 +1,104 @@
+/* The approved comic layout keeps the existing three world covers. */
+.comic-home {
+  --ink: #263e49;
+  --muted: #6d7b78;
+  --line: #d5d9cf;
+  --green: #355c4e;
+  max-width: 1490px;
+  padding-inline: clamp(18px, 3.4vw, 52px);
+}
+.comic-home .hub-header { height: auto; min-height: 94px; gap: 18px; flex-wrap: wrap; padding-block: 20px 10px; }
+.comic-home .hub-brand { color: #264959; }
+.comic-home .hub-brand span { font: 700 clamp(23px, 2.6vw, 32px)/1.3 'Kaiti SC', STKaiti, KaiTi, 'Songti SC', serif; letter-spacing: .4px; }
+.comic-home .hub-header nav { flex-wrap: wrap; gap: 20px; }
+.comic-home .hub-header nav a { min-height: 44px; font-size: 14px; }
+.comic-hero { position: relative; isolation: isolate; min-height: 282px; display: flex; align-items: center; margin: 4px -12px 25px; padding: 30px 24px 36px; }
+.hero-art { position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; object-fit: cover; object-position: right center; border-radius: 8px; }
+.hero-copy { width: min(790px, 70%); }
+.hero-eyebrow { font-size: 13px; letter-spacing: 2.5px; color: #516b70; margin-bottom: 14px !important; }
+.comic-home .comic-hero h1 { font: 700 clamp(32px, 3.7vw, 55px)/1.35 'Kaiti SC', STKaiti, KaiTi, 'Songti SC', Georgia, serif; text-wrap: balance; display: inline; background: linear-gradient(transparent 85%, #e9ac995d 85%, #e9ac995d 96%, transparent 96%); }
+.hero-description { max-width: 540px; margin-top: 20px !important; font-size: 16px; line-height: 1.8; color: #435f65; text-wrap: pretty; }
+.comic-home .world-grid { gap: 23px; }
+.comic-home .world-card { position: relative; border: 1.5px solid #52656a; border-radius: 3px 7px 4px 8px / 7px 3px 8px 3px; box-shadow: 3px 4px 0 #c3c7b929; background: #fffdf5; }
+.chapter-number { position: absolute; top: 12px; left: 12px; z-index: 1; display: grid; place-items: center; width: 35px; height: 34px; background: #fffdf2eb; border: 1px solid #607174; border-radius: 45% 55% 46% 54%; font: italic 700 18px/1 Georgia,serif; pointer-events: none; }
+.comic-home .world-image { aspect-ratio: 4/3; }
+.comic-home .world-card-bottom { padding: 20px 20px 19px; border-top: 1px solid #839085; }
+.comic-home .world-card h2 { font: 650 clamp(19px, 1.6vw, 25px)/1.5 'Kaiti SC', STKaiti, KaiTi, 'Songti SC', Georgia, serif; min-height: 3em; text-wrap: balance; }
+.comic-home .world-card-bottom > div { margin-top: 8px; flex-wrap: wrap; }
+.comic-home .enter-button { min-height: 44px; background: #fffef8; color: #365a4a; border: 1.5px solid #45665a; border-radius: 48% 45% 43% 15% / 48% 42% 45% 15%; padding: 8px 19px; font-weight: 650; }
+.comic-home .world-conan .enter-button { color: #a95646; border-color: #b26d60; }
+.comic-home .world-doraemon .enter-button { color: #346a90; border-color: #557e9d; }
+.comic-home .enter-button:hover { background: #f0f3e8; }
+.comic-home .cover-note { font-size: 12px; color: #69746c; padding: 11px 2px 18px; }
+.home-notebook { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-bottom: 54px; scroll-margin-top: 18px; }
+.making-card, .social-card { min-width: 0; padding: 23px; background: #fffdf5; border: 1px solid #c8cdbc; border-radius: 4px 8px 5px 4px; }
+.making-card { background: linear-gradient(100deg,#f6f2e7,#fffdf5 30%); }
+.notebook-heading { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.home-notebook h2 { font: 700 22px/1.4 'Kaiti SC', STKaiti, KaiTi, 'Songti SC', serif; }
+.notebook-heading > span { font-size: 12px; color: var(--muted); margin-left: auto; }
+.home-notebook article > p { font-size: 16px; line-height: 1.8; color: #56675f; margin-top: 9px; }
+.resource-links { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 16px; }
+.resource-links > a { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; border-bottom: 1px solid #a4b5a2; font-size: 14px; }
+.creator-links { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+.xlands .creator-links > a, .xlands .creator-links > button { display: flex; min-width: 0; padding: 10px 0; align-items: center; justify-content: flex-start; gap: 8px; border: 0; text-align: left; }
+.creator-links > a:hover, .xlands .creator-links > button:hover { background: #edf1e5; }
+.social-mark { flex: 0 0 25px; text-align: center; font: 600 25px/1 system-ui,sans-serif; }
+.social-mark.social-red { color: #bb5d58; font: 700 9px/1.5 sans-serif; }
+.creator-links strong { display: block; font-size: 14px; font-weight: 600; }
+.creator-links small { display: block; font-size: 12px; color: #586c63; line-height: 1.8; overflow-wrap: anywhere; }
+.creator-links > a > svg, .creator-links > button > svg { flex-shrink: 0; width: 13px; margin-left: auto; }
+.social-notice { grid-column: 1/-1; font-size: 12px; color: #436b55; }
+.comic-home .community-section { margin-bottom: 45px; }
+.comic-home .section-heading h2 { font-family: 'Kaiti SC', STKaiti, KaiTi, 'Songti SC', serif; font-size: 23px; }
+.comic-home .hub-footer { padding: 22px 0 14px; margin-top: 10px; flex-wrap: wrap; }
+.comic-home .fan-notice { font-size: 12px; line-height: 1.9; color: #758079; padding: 0 0 30px; max-width: 1020px; }
+.guestbook-offline { grid-column: 1/-1; align-self: start; background: #f3f3e8; border: 1px dashed #b9c8b2; border-radius: 8px; padding: 30px; margin: 0; }
+.guestbook-offline h3 { font: 600 21px/1.5 'Songti SC',serif; margin-top: 12px; }
+.guestbook-offline p { font-size: 14px; line-height: 1.8; margin: 12px 0 18px; color: #65766f; }
+.xlands .contact-button { display: inline-flex; justify-content: center; align-items: center; gap: 7px; background: #e9efe3; color: #244f43; border: 1px solid #9bad96; border-radius: 8px; padding: 10px 16px; min-height: 44px; }
+.guestbook-offline > button { margin-left: 10px; min-height: 44px; }
+.note-recovery { display: flex; gap: 10px; flex-wrap: wrap; padding-top: 14px; }
+.note-recovery > button { min-height: 44px; }
+@media(max-width: 1050px) {
+  .home-notebook { grid-template-columns: minmax(0,1fr); }
+  .creator-links { gap: 20px; }
+  .comic-home .hub-header nav { gap: 12px; }
+  .comic-home .world-card-bottom { padding: 17px 15px; }
+  .comic-home .world-card h2 { min-height: 3em; }
+}
+@media(max-width: 720px) {
+  .comic-home .hub-header { padding-top: calc(18px + env(safe-area-inset-top)); padding-bottom: 10px; gap: 10px; }
+  .comic-home .hub-header nav { width: 100%; justify-content: flex-start; gap: 12px; }
+  .comic-home .hub-header nav > a { font-size: 14px; }
+  .comic-home .hub-header .guest-link { display: inline-flex; }
+  .comic-home .hub-header nav > button { font-size: 14px; }
+  .comic-home .hub-header nav > .icon-button { display: inline-flex; }
+  .comic-home .language-select { margin-left: auto; }
+  .comic-hero { min-height: 245px; margin: 0 -8px 22px; padding: 22px 12px; }
+  .hero-art { opacity: .64; object-position: 60% center; }
+  .comic-hero:after { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg,#faf9f4dc,transparent); }
+  .hero-copy { width: 100%; }
+  .comic-home .comic-hero h1 { font-size: clamp(29px,7.5vw,40px); line-height: 1.5; }
+  .hero-eyebrow { font-size: 12px; letter-spacing: 1.5px; }
+  .hero-description { font-size: 16px; max-width: 340px; }
+  .comic-home .world-grid { grid-template-columns: minmax(0,1fr); gap: 22px; }
+  .comic-home .world-image { aspect-ratio: 1.6; }
+  .comic-home .world-card h2 { min-height: 0; font-size: 23px; }
+  .comic-home .world-card-bottom { padding: 18px 20px; }
+  .comic-home .world-card-bottom > div { margin-top: 13px; }
+  .home-notebook { gap: 16px; margin-bottom: 37px; }
+  .making-card,.social-card { padding: 20px 17px; }
+  .home-notebook h2 { font-size: 21px; }
+  .creator-links { grid-template-columns: minmax(0,1fr); gap: 0; }
+  .creator-links > a, .creator-links > button { border-bottom: 1px solid #e2e4d9 !important; padding: 12px 3px !important; }
+  .creator-links strong { font-size: 14px; }
+  .creator-links small { display: inline; font-size: 12px; margin-right: 10px; }
+  .social-mark { flex-basis: 32px; }
+  .creator-links .social-red { font-size: 10px; }
+  .guestbook-offline { padding: 23px; }
+  .comic-home .note-fields input { font-size: 16px; }
+  .comic-home .fan-notice { font-size: 12px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .comic-home .world-image img { transition: none; }
+}

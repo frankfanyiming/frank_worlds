@@ -1,14 +1,18 @@
-# 小世界 · XLands
+# XLands小世界
 
 [打开小世界](https://frankfanyiming.github.io/frank_worlds/)
+
+[制作手记 · 飞书](https://xgenlabs.feishu.cn/docx/EHsmd08qGo3T7nxWKIMchlcGnvb) · [网页阅读](https://frankfanyiming.github.io/frank_worlds/resources/making-of.html) · [5 个制作 Skills](skills/README.md)
 
 三个可探索的 3D 世界：
 
 - **机器猫在等你回家** — 原哆啦A梦小镇，保留室内、神奇道具、四季和昼夜。
-- **探索旅行蛙的小世界** — Tripo 青蛙与熊猫，Blender 自然场景、原作装修的蛙家和熊猫竹木茶室；可走动、跳跃、串门喝茶，带森林背景声音。
+- **探索旅行蛙的小世界** — 青蛙与熊猫、两户住宅、串门、做饭、送礼、同行野餐与共同照片；进度保存在当前浏览器。
 - **欢迎光临侦探事务所** — 最新 Blender 普通车流版本的米花町。
 
 首页提供简体中文、繁體中文、日本語、한국어、English。来访本支持文字留言和非公开联系邮箱。个人分支可改造、发布、复制，并提交主世界合并提案。
+
+共享服务目前部分请求收到上游 403，留言尚未恢复。首页、世界和本地朋友玩法不依赖该接口；问题可在 [X @FrankFYM001](https://x.com/FrankFYM001) 交流。抖音号：`frank001`；[小红书号：150015050](https://www.xiaohongshu.com/user/profile/55d96ee558944639c3ce03f1)。
 
 ## 共创
 
@@ -44,5 +48,7 @@ npm run build:pages
 用户自己的 OpenAI API Key 只留在页面内存，请求直接发往 OpenAI。平台 Agent 默认 GPT‑6 Astra，支付及服务密钥配置齐备后启用；未配置时禁止调用与扣款。
 
 代码授权与模型来源见 [LICENSE](LICENSE)、[CREDITS](CREDITS.md)。
+
+纯热爱分享，不涉及任何商业组织，不涉及盈利。相关 IP 未取得授权，权利归各自权利人所有。希望大家基于热爱交流和使用；本声明不构成 IP 使用授权。
 
 旅行蛙与柯南的完整源模型压缩包已整理，公开上传待确认；当前 Git 包含可读源码和清单，网页运行包单独发布在 gh-pages。确认公开后会更新清单并开放自动下载。
