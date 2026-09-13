@@ -32,9 +32,11 @@ export function buildProvenance(): Plugin {
     name: 'xlands-public-provenance',
     apply: 'build',
     outputOptions(options) {
-      const previous = options.banner;
-      return { ...options, banner: async chunk => banner + '\n' + (typeof previous === 'function' ? await previous(chunk) : previous || '') };
+      // Rolldown minifies ordinary banners. postBanner is applied after minification.
+      const previous = options.postBanner;
+      return { ...options, postBanner: async chunk => banner + '\n' + (typeof previous === 'function' ? await previous(chunk) : previous || '') };
     },
+    augmentChunkHash: () => banner,
     transformIndexHtml: {
       order: 'post',
       handler: () => [
@@ -43,7 +45,7 @@ export function buildProvenance(): Plugin {
         { tag: 'link', attrs: { rel: 'author', href: origin.repository }, injectTo: 'head' },
       ],
     },
-    generateBundle(_options, bundle) {
+    generateBundle: { order: 'post', handler(_options, bundle) {
       const files: { path: string; bytes: number; sha256: string }[] = [];
       const record = (path: string, value: string | Uint8Array) => {
         const bytes = typeof value === 'string' ? Buffer.from(value) : value;
@@ -61,6 +63,6 @@ export function buildProvenance(): Plugin {
         scope: 'Frontend bundle and included notices; model, engine and texture packs keep separate release manifests.',
         files: files.sort((a, b) => a.path.localeCompare(b.path)),
       }, null, 2) + '\n' });
-    },
+    } },
   };
 }
