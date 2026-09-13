@@ -18,4 +18,10 @@
 
 ## 发布
 
-保持既有 GitHub Pages 前端与 Sites API；仅发布首页 HTML、前端编译产物与新增封面，世界资源保持第 24 版。上线结果在实际 HTTP 核验后补充。
+保持既有 GitHub Pages 前端与 Sites API；仅发布首页 HTML、前端编译产物与新增封面，世界资源保持第 24 版。
+
+- 运行时代码：`82ee053d8116f322f38db2ebe9a38aa1c5cdc032`，已推送至 `main` 与 `feat/xlands-worlds-community`。
+- Pages 发布：`b0d0079cef80864684edda2938496f0469285cd6`；[部署工作流](https://github.com/frankfanyiming/frank_worlds/actions/runs/34754652849) 成功。
+- [公开首页](https://frankfanyiming.github.io/frank_worlds/?v=25#) 与 `release.json` 已更新至第 25 版。
+- 使用 [验证脚本](../../../tools/verify-homepage-release.py) 重新读取公开站点，16 份首页文件均返回 HTTP 200，长度及 SHA-256 与验收候选一致；另核对四份 PC/手机原生世界清单仍指向既有资源包：[公网校验](public-audit.json)。本地 HTTP 校验另存于 `local-http-audit.json`，不混为公网结果。
+- 编译器会因主入口哈希变化重新命名延迟模块，发布时保留旧哈希文件以支持尚未关闭的旧页面；没有重新上传世界模型包或改动留言 API。

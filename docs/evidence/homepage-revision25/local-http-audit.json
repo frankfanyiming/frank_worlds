@@ -1,0 +1,123 @@
+{
+  "revision": 25,
+  "base": "http://127.0.0.1:8797/frank_worlds/",
+  "sourceCommit": "82ee053d8116f322f38db2ebe9a38aa1c5cdc032",
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 4301,
+      "sha256": "821eeef984a04dcf087d6f22813b1fa7e93dc5665039f97bebc65968551ae0d1",
+      "status": 200
+    },
+    {
+      "path": "assets/DoraemonWorld-askAeWAZ.js",
+      "bytes": 210627,
+      "sha256": "a8c00154606b45c68074cd46b690bd94a566521b58c860b79fd08c4469847641",
+      "status": 200
+    },
+    {
+      "path": "assets/GLTFLoader-B5h-EY4f.js",
+      "bytes": 44336,
+      "sha256": "ea1ede795683ab8d856b0d19923d2df76ecac2792e43e2ca526353958e399dab",
+      "status": 200
+    },
+    {
+      "path": "assets/OrbitControls-IMCqGOwg.js",
+      "bytes": 19064,
+      "sha256": "6802cf8b7a8f09ec7e634a768197dab1d20d75bcdc8f68a8f050f6ecec343233",
+      "status": 200
+    },
+    {
+      "path": "assets/SceneCanvas-BwITNTyy.js",
+      "bytes": 6085,
+      "sha256": "8f7b89972c9a358ac60e123eba8a9c02d34e54532e62e7b41201547712d6b3ca",
+      "status": 200
+    },
+    {
+      "path": "assets/Studio-BQ3G0UNl.js",
+      "bytes": 22747,
+      "sha256": "ab0cea3ffd482612c072f6317594d1d85b33654fbe332ad7ce419447c0cb4d6d",
+      "status": 200
+    },
+    {
+      "path": "assets/arrow-up-D_EC3J0_.js",
+      "bytes": 263,
+      "sha256": "54e4a2c73267694e605ba6b6056aa1653138fc26bca674f53b0cab630000fb4c",
+      "status": 200
+    },
+    {
+      "path": "assets/engine-C9XTbGo7.js",
+      "bytes": 354498,
+      "sha256": "e1bb64184ee929138ec3b73549ebb776e32af2318e0ce2dfb7092ab988913ed5",
+      "status": 200
+    },
+    {
+      "path": "assets/index-AfE_hF8f.css",
+      "bytes": 242088,
+      "sha256": "fb97b080d0411baa7fd04e4413fb0aca86180f2c45c5e6e0692156044078a699",
+      "status": 200
+    },
+    {
+      "path": "assets/index-CV8yGTk9.js",
+      "bytes": 250436,
+      "sha256": "753b105dbddfef7cf5de673e100ab91d638b3e3502150cb4821a7f60dca03df1",
+      "status": 200
+    },
+    {
+      "path": "assets/sound-CqRTygWA.js",
+      "bytes": 31742,
+      "sha256": "06fade140d4028c7af951aab4c1413a0360bd769a6fd03591f0826bbc1291e5d",
+      "status": 200
+    },
+    {
+      "path": "assets/three.module-CDVxI3dO.js",
+      "bytes": 696461,
+      "sha256": "7880ab05557e7287251cfe502cfee3b16092ef3f7cd06ed2186be6bb58050684",
+      "status": 200
+    },
+    {
+      "path": "covers/conan.webp",
+      "bytes": 128700,
+      "sha256": "75a84b2b7caa5bd560873e0235a29d666ad0fdeffdb9abba46dd6de655b9c7ef",
+      "status": 200
+    },
+    {
+      "path": "covers/doraemon.webp",
+      "bytes": 119838,
+      "sha256": "2db8e1914dc19790c90e2bf26f4d9db440f1cc50a0574f9368515f91f2d4ddea",
+      "status": 200
+    },
+    {
+      "path": "covers/frog.webp",
+      "bytes": 136332,
+      "sha256": "3cf058a6b3d4db94c1909ba37c8dcad77136f7cc0154f8196b066a36baae9e60",
+      "status": 200
+    },
+    {
+      "path": "release.json",
+      "bytes": 2904,
+      "sha256": "864d73e2aa2cf32ccf892d195c896118845a9d8b7caddde2a31403f016987864",
+      "status": 200
+    }
+  ],
+  "retainedWorldManifests": [
+    {
+      "path": "worlds/frog/world-pack.json",
+      "sha256": "9cb7b46dbbbf611a3c274f7198d02b9091939b3d301c76d9ce5563a95e6b55e7"
+    },
+    {
+      "path": "worlds/frog/mobile/world-pack.json",
+      "sha256": "1fab21f1f03f411ff9c1a2515b83b92b438d76247b1f6f3e5afb11b7b0797601"
+    },
+    {
+      "path": "worlds/conan/world-pack.json",
+      "sha256": "7c0334227f442d37cfc445ac7fd599d35cbbf7bc025cec35abb793c7f8972f40"
+    },
+    {
+      "path": "worlds/conan/mobile/world-pack.json",
+      "sha256": "bf0d8d904e1ef93a1907e7f4afbd96280fa46186bf9530c6638c373ea43dd880"
+    }
+  ],
+  "passed": true,
+  "scope": "HTTP status, release identity and exact asset bytes; not a browser or load test."
+}
